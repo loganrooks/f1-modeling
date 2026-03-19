@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 Phase: 1 of 8 (Foundations and Scenario Schema)
 Plan: 0 of 3 in current phase
 Status: Ready to plan
-Last activity: 2026-03-19 - Deliberated full-system scope and educational platform; planning docs updated
+Last activity: 2026-03-19 - Added deliberation for estimation and control stack architecture
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -44,6 +44,7 @@ Recent decisions affecting current work:
 - Initialization: reduced-order, explainable models come before high-fidelity simulation
 - Clarification: MPC is now the preferred serious control baseline before RL
 - Clarification: observer methods, including EKF-style estimation, are now explicitly in-scope on the roadmap
+- Deliberation: estimation and control should be taught and built as an explicit layered stack from observer to MPC to later RL
 - Initialization: RL is a future extension, but only after the simulator is credible enough to support policy learning
 - Deliberation: platform scope is eventual full-system F1 coverage with staged subsystem delivery; electrical is early but not the sole defining focus
 - Clarification: environment interaction should be treated as explicit system coupling, not only as weather or preset metadata
@@ -65,5 +66,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-19 03:10
-Stopped at: Deliberation revised to reflect eventual full-system scope and staged delivery
+Stopped at: Estimation and control stack deliberation added to capture recent architecture discussion
 Resume file: None

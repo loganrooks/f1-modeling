@@ -85,6 +85,7 @@ Official context captured during initialization:
 | Interpret `quality` for this repo as a Codex-native GPT-5.4 profile | Shared GSD tooling still uses Claude-era labels, but the intended planning quality here is explicit | — Pending |
 | Use model-based control baselines, ideally MPC where tractable, before relying on RL for driver policy optimization | MPC is explainable, constraint-aware, and a better intermediate baseline for this educational platform | — Pending |
 | Include observer/state-estimation methods in the architecture and roadmap before advanced control work | Estimation is central to realistic motorsport modelling and helps connect telemetry, hidden state, and control | — Pending |
+| Use an explicit layered stack of plant and sensor model -> observer -> model-based control -> later RL | This captures the architecture discussed in deliberation and keeps estimation, control, and learning conceptually aligned | — Pending |
 | Defer RL policy optimization until after explainable control baselines and simulator calibration exist | RL without a credible environment will optimize simulator artifacts instead of useful driving behavior | — Pending |
 | Eventual platform scope is comprehensive across major F1 design and strategy systems, but delivery is staged by subsystem family | We need architecture and roadmap decisions that preserve the long-horizon end-state without trying to build everything immediately | — Pending |
 
