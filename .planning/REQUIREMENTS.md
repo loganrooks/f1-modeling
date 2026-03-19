@@ -66,6 +66,15 @@
 - [ ] **EDU-02**: User can view controller-intent, assumptions, and equation-level or rule-level explanations aimed at learning engineers.
   - *Motivation:* `user: wants learning engineers to understand the different control systems involved`
 
+### Estimation and Observers
+
+- [ ] **ESTM-01**: Application supports an observer layer for estimating hidden states from noisy or partial measurements.
+  - *Motivation:* `user: wants EKF and related mathematics included in the learning roadmap`
+- [ ] **ESTM-02**: Application includes an EKF-style estimator as an initial teachable baseline where the modeling assumptions are appropriate.
+  - *Motivation:* `user: wants to understand the mathematics behind EKF in context`
+- [ ] **ESTM-03**: User can compare true simulated state, measured state, and estimated state when an observer model is enabled.
+  - *Motivation:* `user: wants to understand estimation with respect to modeling and control`
+
 ### Data
 
 - [ ] **DATA-01**: User can import structured lap or session data from local files.
@@ -140,6 +149,9 @@
 | STRA-02 | Phase 4 | Pending |
 | STRA-03 | Phase 4 | Pending |
 | EDU-01 | Phase 4 | Pending |
+| ESTM-01 | Phase 4 | Pending |
+| ESTM-02 | Phase 4 | Pending |
+| ESTM-03 | Phase 4 | Pending |
 | CTRL-01 | Phase 5 | Pending |
 | CTRL-02 | Phase 5 | Pending |
 | CTRL-03 | Phase 5 | Pending |
@@ -154,8 +166,8 @@
 | ELEC-02 | Phase 3 | Pending |
 
 **Coverage:**
-- v1 requirements: 27 total
-- Mapped to phases: 27
+- v1 requirements: 30 total
+- Mapped to phases: 30
 - Unmapped: 0
 
 ---

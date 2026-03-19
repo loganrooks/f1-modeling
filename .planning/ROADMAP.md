@@ -13,7 +13,7 @@ The path to a useful F1 modeling product is to build a clear local-first learnin
 - [ ] **Phase 1: Foundations and Scenario Schema** - Create the local-first shell, domain schema, and reproducible run logging.
 - [ ] **Phase 2: Reduced-Order Lap Model** - Build the first transparent car and lap model.
 - [ ] **Phase 3: Tire, Electrical, Weather, Environment, and Energy Dynamics** - Add the core non-ideal dynamics, electrical subsystem behavior, and environment coupling that actually drive race behavior.
-- [ ] **Phase 4: Strategy, Explanations, and Learning Views** - Compare stints, compounds, and pit timing with explainable subsystem-oriented output.
+- [ ] **Phase 4: Strategy, Estimation, Explanations, and Learning Views** - Compare stints, compounds, and pit timing with explainable subsystem-oriented output and initial observer methods.
 - [ ] **Phase 5: Driver Style and Control Systems** - Model driver tendencies and explainable control-system tradeoffs.
 - [ ] **Phase 6: Data Import and Telemetry Alignment** - Ingest structured session data and compare it to simulation results.
 - [ ] **Phase 7: Calibration and Validation Workbench** - Measure confidence, calibrate parameters, and surface model limits.
@@ -69,21 +69,22 @@ Plans:
 - [ ] 03-03: Add weather, track temperature, surface, and environment-coupling dynamics
 - [ ] 03-04: Validate cross-subsystem interactions inside the simulation pipeline
 
-### Phase 4: Strategy, Explanations, and Learning Views
-**Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes and teaches subsystem interactions.
+### Phase 4: Strategy, Estimation, Explanations, and Learning Views
+**Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes, introduces observer methods, and teaches subsystem interactions.
 **Depends on**: Phase 3
-**Requirements**: [STRA-01, STRA-02, STRA-03, EDU-01]
+**Requirements**: [STRA-01, STRA-02, STRA-03, EDU-01, ESTM-01, ESTM-02, ESTM-03]
 **Success Criteria** (what must be TRUE):
   1. User can compare multiple pit and compound strategies across a race distance.
   2. Outputs explain why a strategy wins or loses with stint-level and event-level detail.
   3. User can inspect subsystem-level views showing how tires, electrical state, weather, and policy interact.
-  4. User can perturb assumptions and rerun sensitivity studies quickly.
+  4. User can enable an observer layer and inspect true, measured, and estimated state for selected subsystems.
+  5. User can perturb assumptions and rerun sensitivity studies quickly.
 **Plans**: 3 plans
 
 Plans:
 - [ ] 04-01: Implement race-distance and pit-strategy simulation
 - [ ] 04-02: Build explanation views for stint deltas and pit-window logic
-- [ ] 04-03: Add learning-oriented subsystem views and sensitivity-analysis workflows
+- [ ] 04-03: Add observer-aware learning views and sensitivity-analysis workflows
 
 ### Phase 5: Driver Style and Control Systems
 **Goal**: Model how different driving tendencies and control choices alter performance and degradation, establish a model-based control baseline, and make the control logic legible to learners.
@@ -173,7 +174,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 1. Foundations and Scenario Schema | 0/3 | Not started | - |
 | 2. Reduced-Order Lap Model | 0/3 | Not started | - |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 0/4 | Not started | - |
-| 4. Strategy, Explanations, and Learning Views | 0/3 | Not started | - |
+| 4. Strategy, Estimation, Explanations, and Learning Views | 0/3 | Not started | - |
 | 5. Driver Style and Control Systems | 0/4 | Not started | - |
 | 6. Data Import and Telemetry Alignment | 0/4 | Not started | - |
 | 7. Calibration and Validation Workbench | 0/3 | Not started | - |

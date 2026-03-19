@@ -17,6 +17,7 @@ The initial goal is not to recreate team-grade CFD or proprietary telemetry anal
 - Simulation core: reduced-order lap, stint, tire, aerodynamic, thermal, electrical, mechanical, environment-interaction, weather, and race-operations models, introduced incrementally
 - Strategy engine: pit windows, compound choices, safety-car and rain perturbations, sensitivity analysis
 - Driver/control layer: style parameters plus explainable policy logic for braking, traction, energy deployment, and mode switching, with a model-based control baseline such as MPC before a later path to RL-ready policy environments
+- Observer layer: latent-state estimation for quantities such as grip, tire condition, thermal state, and energy state, with EKF-style methods as an initial teaching and implementation target
 - Data adapters: CSV/JSON/parquet imports first, F1 TV Premium-compatible workflows later
 - Calibration layer: compare imported data against simulated outputs and record confidence/fit quality
 

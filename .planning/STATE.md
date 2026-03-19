@@ -43,6 +43,7 @@ Recent decisions affecting current work:
 - Initialization: quality profile intent for this repo is Codex-native GPT-5.4, not Claude-era labels
 - Initialization: reduced-order, explainable models come before high-fidelity simulation
 - Clarification: MPC is now the preferred serious control baseline before RL
+- Clarification: observer methods, including EKF-style estimation, are now explicitly in-scope on the roadmap
 - Initialization: RL is a future extension, but only after the simulator is credible enough to support policy learning
 - Deliberation: platform scope is eventual full-system F1 coverage with staged subsystem delivery; electrical is early but not the sole defining focus
 - Clarification: environment interaction should be treated as explicit system coupling, not only as weather or preset metadata
@@ -57,6 +58,7 @@ None yet.
 - Realistic telemetry import path is still unknown until actual subscription data workflow is tested.
 - The minimum viable electrical state set and educational UX surface for v1 still need to be decided during Phase 1 planning.
 - The minimum viable environment-interaction model for v1 still needs to be decided during Phase 1 planning.
+- The first observer targets and whether EKF is the right initial estimator for them still need to be decided during Phase 1 planning.
 - The minimum viable plant model, horizon, and solver strategy for an initial MPC baseline still need to be decided during Phase 1 planning.
 - Future milestone sequencing for non-electrical subsystem families is still undefined and should be made explicit as the roadmap evolves.
 
