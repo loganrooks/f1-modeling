@@ -42,6 +42,7 @@ Recent decisions affecting current work:
 
 - Initialization: quality profile intent for this repo is Codex-native GPT-5.4, not Claude-era labels
 - Initialization: reduced-order, explainable models come before high-fidelity simulation
+- Initialization: RL is a future extension, but only after the simulator is credible enough to support policy learning
 
 ### Pending Todos
 
@@ -57,4 +58,3 @@ None yet.
 Last session: 2026-03-19 02:58
 Stopped at: Project initialized and ready for Phase 1 planning
 Resume file: None
-

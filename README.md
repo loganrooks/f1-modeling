@@ -16,7 +16,7 @@ The initial goal is not to recreate team-grade CFD or proprietary telemetry anal
 - Browser UI: scenario builder, track/session controls, charts, comparisons, explanation panels
 - Simulation core: reduced-order lap, stint, tire, weather, and energy models
 - Strategy engine: pit windows, compound choices, safety-car and rain perturbations, sensitivity analysis
-- Driver/control layer: style parameters plus explainable policy logic for braking, traction, and energy deployment
+- Driver/control layer: style parameters plus explainable policy logic for braking, traction, and energy deployment, with a later path to RL-ready policy environments
 - Data adapters: CSV/JSON/parquet imports first, F1 TV Premium-compatible workflows later
 - Calibration layer: compare imported data against simulated outputs and record confidence/fit quality
 
@@ -24,3 +24,10 @@ The initial goal is not to recreate team-grade CFD or proprietary telemetry anal
 
 Build an interactive understanding tool first. Increase fidelity only when the added complexity improves explanation, calibration, or decision quality.
 
+## RL Direction
+
+Reinforcement learning is a sensible later-stage extension, but only after the simulator is good enough to support policy learning without teaching the agent the wrong physics. The practical sequence is:
+
+- start with explainable heuristics and parameterized driver styles
+- add an RL-compatible environment API once state, action, reward, and constraint definitions are stable
+- use RL only after calibration and domain randomization are credible enough to limit simulator overfitting

@@ -21,6 +21,7 @@ Make F1 design and strategy legible by coupling editable models with visual expl
 - [ ] Compare driver-style and control-policy assumptions in a way that is explainable and inspectable.
 - [ ] Prepare for future import of F1 TV Premium session data or other structured racing data through adapters.
 - [ ] Preserve a path to higher fidelity without forcing CFD-grade complexity into the first release.
+- [ ] Leave a clean path for later RL-based driver-policy experiments once the simulation environment is trustworthy enough.
 
 ### Out of Scope
 
@@ -44,6 +45,7 @@ The scope is intentionally broader than a race-strategy calculator. It needs to 
 - track and environmental conditions such as ambient temperature, track temperature, rain, and grip evolution
 - strategy decisions such as compound selection, pit timing, and energy deployment
 - driver-style differences such as braking aggression, traction usage, tire preservation, and deployment choices
+- future policy-learning workflows such as RL once environment fidelity and calibration justify them
 - validation workflows once outside data becomes available
 
 Official context captured during initialization:
@@ -68,6 +70,7 @@ Official context captured during initialization:
 | Treat regulation logic as configurable presets instead of hard-coded constants | New-rule exploration is central to the project and regulations evolve | — Pending |
 | Build telemetry ingestion behind adapters | Official platform capabilities may change and stable export paths may be limited | — Pending |
 | Interpret `quality` for this repo as a Codex-native GPT-5.4 profile | Shared GSD tooling still uses Claude-era labels, but the intended planning quality here is explicit | — Pending |
+| Defer RL policy optimization until after explainable control baselines and simulator calibration exist | RL without a credible environment will optimize simulator artifacts instead of useful driving behavior | — Pending |
 
 ## Open Questions
 
@@ -77,8 +80,8 @@ Official context captured during initialization:
 | Which modeling stack should own the simulation core first: Python service, shared library, or in-browser compute? | Affects developer velocity, numerical tooling, and future performance work | Medium | Pending |
 | What is the first acceptable fidelity target for lap-time and stint modeling? | Prevents overbuilding before there is a usable learning loop | Critical | Pending |
 | How should driver style be parameterized before introducing learned policies? | Shapes the control layer and determines whether outputs remain interpretable | Medium | Pending |
+| What state, action, reward, and safety-constraint interfaces would an eventual RL environment need? | Determines whether early simulator architecture can support later policy optimization without major rewrites | Medium | Pending |
 | Which circuits and sessions should serve as the first calibration baseline? | Needed for model validation once data import starts | Medium | Pending |
 
 ---
 *Last updated: 2026-03-19 after initialization*
-

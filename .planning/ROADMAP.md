@@ -98,6 +98,9 @@ Plans:
 - [ ] 05-03: Implement an explainable control-policy baseline
 - [ ] 05-04: Build comparative driver-style visualizations
 
+Future extension from this phase:
+- Once the control interface is stable and the simulator is calibrated, this phase becomes the launch point for an RL environment rather than a dead-end heuristic layer.
+
 ### Phase 6: Data Import and Telemetry Alignment
 **Goal**: Bring outside session data into the loop so simulation can be compared against reality.
 **Depends on**: Phase 5
@@ -159,4 +162,3 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 | 6. Data Import and Telemetry Alignment | 0/4 | Not started | - |
 | 7. Calibration and Validation Workbench | 0/3 | Not started | - |
 | 8. Regulation and Design Exploration | 0/3 | Not started | - |
-

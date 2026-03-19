@@ -73,12 +73,13 @@
 - **FIDL-01**: Add surrogate aerodynamic models informed by external CFD or literature data.
 - **FIDL-02**: Add richer multi-car racecraft, traffic interaction, and overtaking logic.
 - **FIDL-03**: Add setup optimization workflows beyond high-level parameter sweeps.
+- **FIDL-04**: Add an RL-compatible simulation environment with explicit state, action, reward, and safety-constraint interfaces for driver-policy experiments.
 
 ### Product Expansion
 
 - **PROD-01**: Add collaborative scenario sharing or hosted deployment.
 - **PROD-02**: Add richer telemetry connectors if a stable import workflow becomes available.
-- **PROD-03**: Add learned driver-policy experiments once explainable baselines are in place.
+- **PROD-03**: Add learned driver-policy experiments once explainable baselines and calibration workflows are in place.
 
 ## Out of Scope
 
@@ -122,4 +123,3 @@
 ---
 *Requirements defined: 2026-03-19*
 *Last updated: 2026-03-19 after initial definition*
-
