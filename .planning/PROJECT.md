@@ -17,6 +17,7 @@ Make F1 design and strategy legible by coupling editable models with visual expl
 ### Active
 
 - [ ] Explore lap, stint, and race behavior with interactive reduced-order models instead of opaque outputs.
+- [ ] Treat visualization as a progressive learning surface that grows with model complexity rather than as a separate polish layer.
 - [ ] Understand how tire state, weather, energy deployment, and regulation constraints change the optimal strategy.
 - [ ] Compare driver-style and control-policy assumptions in a way that is explainable and inspectable.
 - [ ] Treat every major subsystem involved in F1 design and race strategy as eventual in-scope platform coverage, even though delivery will be staged.
@@ -56,6 +57,7 @@ The scope is intentionally broader than a race-strategy calculator. It needs to 
 - race-operation effects such as traffic, pit loss, safety-car states, and multi-car interactions
 - driver-style differences such as braking aggression, traction usage, tire preservation, and deployment choices
 - educational interfaces that reveal subsystem states, couplings, and controller intent
+- progressive visual interfaces for track geometry, trajectories, racing lines, state traces, policy overlays, and model comparison as those outputs become justified
 - observer and estimation workflows such as EKF-style latent-state estimation from noisy measurements
 - model-based control workflows such as constrained optimal control or MPC before learned policies
 - future policy-learning workflows such as RL once environment fidelity and calibration justify them
@@ -83,6 +85,7 @@ Official context captured during initialization:
 | Treat regulation logic as configurable presets instead of hard-coded constants | New-rule exploration is central to the project and regulations evolve | — Pending |
 | Build telemetry ingestion behind adapters | Official platform capabilities may change and stable export paths may be limited | — Pending |
 | Interpret `quality` for this repo as a Codex-native GPT-5.4 profile | Shared GSD tooling still uses Claude-era labels, but the intended planning quality here is explicit | — Pending |
+| Develop visualization and simulation together, with reusable visual primitives that expand as models become richer | This product teaches through interactive visuals, so the visualizer is part of the architecture rather than decoration | — Pending |
 | Use model-based control baselines, ideally MPC where tractable, before relying on RL for driver policy optimization | MPC is explainable, constraint-aware, and a better intermediate baseline for this educational platform | — Pending |
 | Include observer/state-estimation methods in the architecture and roadmap before advanced control work | Estimation is central to realistic motorsport modelling and helps connect telemetry, hidden state, and control | — Pending |
 | Use an explicit layered stack of plant and sensor model -> observer -> model-based control -> later RL | This captures the architecture discussed in deliberation and keeps estimation, control, and learning conceptually aligned | — Pending |
@@ -95,6 +98,7 @@ Official context captured during initialization:
 |----------|----------------|-------------|--------|
 | What data format(s) will be realistically obtainable from F1 TV Premium or companion tooling? | Determines ingestion interfaces, legal boundaries, and calibration workflow | Critical | Pending |
 | Which modeling stack should own the simulation core first: Python service, shared library, or in-browser compute? | Affects developer velocity, numerical tooling, and future performance work | Medium | Pending |
+| What visualization primitives should exist in Phase 1 so later model layers can reuse them cleanly? | Prevents the visual learning surface from becoming ad hoc as the simulator grows | Critical | Pending |
 | What is the first acceptable fidelity target for lap-time and stint modeling? | Prevents overbuilding before there is a usable learning loop | Critical | Pending |
 | What reduced-order electrical state set belongs in v1? | Determines whether electrical modelling is meaningful without exploding scope | Critical | Pending |
 | What environment-interaction abstractions belong in v1 beyond simple weather presets? | Determines whether the simulator captures real car-environment coupling instead of treating the environment as static scenery | Critical | Pending |
@@ -104,6 +108,7 @@ Official context captured during initialization:
 | How should driver style be parameterized before introducing learned policies? | Shapes the control layer and determines whether outputs remain interpretable | Medium | Pending |
 | What state, action, reward, and safety-constraint interfaces would an eventual RL environment need? | Determines whether early simulator architecture can support later policy optimization without major rewrites | Medium | Pending |
 | Which educational surfaces matter most in v1: state-flow views, controller explanations, or equation/assumption panels? | Prevents the educational goal from staying vague and underbuilt | Medium | Pending |
+| Which Phase 2 outputs are stable enough to justify racing-line or trajectory visualization without implying false precision? | Keeps the visualizer honest about what the current simulator can really support | Medium | Pending |
 | Which circuits and sessions should serve as the first calibration baseline? | Needed for model validation once data import starts | Medium | Pending |
 
 ---

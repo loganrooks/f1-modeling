@@ -8,12 +8,14 @@ The initial goal is not to recreate team-grade CFD or proprietary telemetry anal
 
 - Start with a local web app for interaction and visualization.
 - Keep the simulation core numerical and inspectable, with equations, assumptions, and uncertainty exposed.
+- Develop the visualizer progressively with the models instead of treating UI as a separate later polish pass.
 - Treat regulation logic as configurable presets so 2026-era changes can be modeled without hard-coding one brittle interpretation.
 - Build telemetry ingestion behind adapters, because official subscription features may expose timing/telemetry views without offering a stable export API.
 
 ## Suggested Architecture
 
 - Browser UI: scenario builder, track/session controls, charts, comparisons, explanation panels, and educational subsystem views
+- Visualization layer: reusable primitives for track maps, trajectories, racing lines, state traces, policy overlays, and comparison views, introduced only when the underlying models support them
 - Simulation core: reduced-order lap, stint, tire, aerodynamic, thermal, electrical, mechanical, environment-interaction, weather, and race-operations models, introduced incrementally
 - Strategy engine: pit windows, compound choices, safety-car and rain perturbations, sensitivity analysis
 - Driver/control layer: style parameters plus explainable policy logic for braking, traction, energy deployment, and mode switching, with a model-based control baseline such as MPC before a later path to RL-ready policy environments
@@ -30,6 +32,8 @@ Build an interactive understanding tool first. Increase fidelity only when the a
 The end-state scope is broad: this platform should eventually cover the major technical and operational layers involved in F1 car design and racing strategy. The sequencing is deliberate, not comprehensive from day one. Each milestone should deepen one slice while preserving a path toward a fuller multi-domain system.
 
 Environment interaction is part of that scope. This means more than choosing weather presets: the platform should eventually model how the car and strategy interact with ambient conditions, track evolution, grip state, surface wetness, airflow context, and other external constraints that change the problem over time.
+
+Visualization is part of that sequencing too. The visual learning surface should grow with model complexity, so the user sees only views that are justified by the current simulator rather than polished graphics that imply nonexistent fidelity.
 
 ## RL Direction
 

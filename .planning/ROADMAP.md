@@ -29,12 +29,13 @@ The path to a useful F1 modeling product is to build a clear local-first learnin
   1. User can start the application locally and reach an initial interactive workspace.
   2. User can define a scenario with circuit, session type, regulation preset, weather preset, and driver profile placeholders.
   3. Each run stores enough metadata to reproduce or compare it later, and the architecture leaves room for educational subsystem views and later subsystem-family expansion.
+  4. The workspace includes reusable visual primitives that later models can plug into without redesigning the whole UI.
 **Plans**: 3 plans
 
 Plans:
 - [ ] 01-01: Scaffold the local-first app architecture and repository layout
 - [ ] 01-02: Define scenario, regulation, and run-record schemas
-- [ ] 01-03: Build the first workspace and local persistence path
+- [ ] 01-03: Build the first workspace, local persistence path, and reusable visualization primitives
 
 ### Phase 2: Reduced-Order Lap Model
 **Goal**: Deliver the first transparent lap model with editable vehicle and circuit parameters.
@@ -44,12 +45,13 @@ Plans:
   1. User can choose a circuit, regulation preset, and baseline car parameters before a run.
   2. The system produces a lap estimate with visible intermediate factors rather than only a final score.
   3. Parameter changes show which parts of the model caused the output shift.
+  4. Where justified by the model, the system can visualize trajectories, track-map context, or racing-line style outputs without implying unsupported fidelity.
 **Plans**: 3 plans
 
 Plans:
 - [ ] 02-01: Implement baseline vehicle and circuit abstractions
 - [ ] 02-02: Build the reduced-order lap-time model and intermediate state outputs
-- [ ] 02-03: Visualize sensitivities and parameter impacts
+- [ ] 02-03: Visualize sensitivities, trajectories, and racing-line-adjacent outputs where model support is honest
 
 ### Phase 3: Tire, Electrical, Weather, Environment, and Energy Dynamics
 **Goal**: Add the main non-ideal dynamics, reduced-order electrical subsystem behavior, and explicit car-environment coupling that shape stint evolution and regulation-era tradeoffs.
@@ -79,12 +81,13 @@ Plans:
   3. User can inspect subsystem-level views showing how tires, electrical state, weather, and policy interact.
   4. User can enable an observer layer and inspect true, measured, and estimated state for selected subsystems.
   5. User can perturb assumptions and rerun sensitivity studies quickly.
+  6. Visual learning views remain tied to model semantics and uncertainty instead of becoming disconnected dashboards.
 **Plans**: 3 plans
 
 Plans:
 - [ ] 04-01: Implement race-distance and pit-strategy simulation
 - [ ] 04-02: Build explanation views for stint deltas and pit-window logic
-- [ ] 04-03: Add observer-aware learning views and sensitivity-analysis workflows
+- [ ] 04-03: Add observer-aware learning views, policy overlays, and sensitivity-analysis workflows
 
 ### Phase 5: Driver Style and Control Systems
 **Goal**: Model how different driving tendencies and control choices alter performance and degradation, establish a model-based control baseline, and make the control logic legible to learners.
@@ -96,13 +99,14 @@ Plans:
   3. The policy logic remains explainable and inspectable.
   4. The system includes a model-based control baseline, ideally MPC where tractable, with visible state, constraint, and objective structure.
   5. The system can surface controller intent and constraint activation in a way that helps a learning engineer understand the control problem.
+  6. Comparative visualizations make policy differences, path choices, and control consequences intuitive to inspect.
 **Plans**: 4 plans
 
 Plans:
 - [ ] 05-01: Define driver-style parameterization
 - [ ] 05-02: Connect style parameters to tire, pace, and energy behavior
 - [ ] 05-03: Implement an explainable model-based control baseline, ideally MPC where tractable
-- [ ] 05-04: Build comparative driver-style and control-intent visualizations
+- [ ] 05-04: Build comparative driver-style, control-intent, and policy visualization workflows
 
 Future extension from this phase:
 - Once the control interface is stable and the simulator is calibrated, this phase becomes the launch point for RL to be compared against a serious model-based baseline rather than a dead-end heuristic layer.

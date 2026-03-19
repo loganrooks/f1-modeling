@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 Phase: 1 of 8 (Foundations and Scenario Schema)
 Plan: 0 of 3 in current phase
 Status: Ready to plan
-Last activity: 2026-03-19 - Added deliberation for estimation and control stack architecture
+Last activity: 2026-03-19 - Added deliberation for visualization as a progressive learning surface
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -48,6 +48,7 @@ Recent decisions affecting current work:
 - Initialization: RL is a future extension, but only after the simulator is credible enough to support policy learning
 - Deliberation: platform scope is eventual full-system F1 coverage with staged subsystem delivery; electrical is early but not the sole defining focus
 - Clarification: environment interaction should be treated as explicit system coupling, not only as weather or preset metadata
+- Deliberation: visualization should be a progressive, model-coupled learning surface rather than a disconnected later polish layer
 
 ### Pending Todos
 
@@ -61,10 +62,11 @@ None yet.
 - The minimum viable environment-interaction model for v1 still needs to be decided during Phase 1 planning.
 - The first observer targets and whether EKF is the right initial estimator for them still need to be decided during Phase 1 planning.
 - The minimum viable plant model, horizon, and solver strategy for an initial MPC baseline still need to be decided during Phase 1 planning.
+- The first reusable visualization primitives and the threshold for honest racing-line visualization still need to be decided during Phase 1 planning.
 - Future milestone sequencing for non-electrical subsystem families is still undefined and should be made explicit as the roadmap evolves.
 
 ## Session Continuity
 
 Last session: 2026-03-19 03:10
-Stopped at: Estimation and control stack deliberation added to capture recent architecture discussion
+Stopped at: Visualization deliberation added and planning docs updated
 Resume file: None

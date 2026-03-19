@@ -14,6 +14,17 @@
 - [ ] **PLAT-03**: User can save and reload scenario configurations and simulation runs locally.
   - *Motivation:* `user: wants to experiment and compare setups over time`
 
+### Visualization
+
+- [ ] **VISU-01**: Application provides a reusable visual workspace that can host progressively richer learning views as model fidelity grows.
+  - *Motivation:* `user: wants visualization capabilities to develop in accordance with model complexity`
+- [ ] **VISU-02**: User can inspect trajectories, track-map views, or racing-line style outputs when the underlying model supports them without implying unsupported precision.
+  - *Motivation:* `user: wants to visualize optimal policy and racing lines`
+- [ ] **VISU-03**: Visual views are explicitly tied to model assumptions, uncertainty, and subsystem context rather than presented as decorative dashboards.
+  - *Motivation:* `user: wants visuals that help build intuition about models and dynamics`
+- [ ] **VISU-04**: User can compare runs, policies, designs, or strategies side by side through interactive visual overlays and linked views.
+  - *Motivation:* `user: wants an interactive visualizer that helps relate design and dynamics to optimal policy`
+
 ### Modeling
 
 - [ ] **MODL-01**: Application provides a reduced-order lap and stint model with explicit inputs for mass, drag, downforce proxy, tire grip, and power-unit behavior.
@@ -138,8 +149,10 @@
 | PLAT-03 | Phase 1 | Pending |
 | VAL-02 | Phase 1 | Pending |
 | DESN-02 | Phase 1 | Pending |
+| VISU-01 | Phase 1 | Pending |
 | PLAT-02 | Phase 2 | Pending |
 | MODL-01 | Phase 2 | Pending |
+| VISU-02 | Phase 2 | Pending |
 | MODL-02 | Phase 3 | Pending |
 | MODL-03 | Phase 3 | Pending |
 | MODL-04 | Phase 3 | Pending |
@@ -152,11 +165,13 @@
 | ESTM-01 | Phase 4 | Pending |
 | ESTM-02 | Phase 4 | Pending |
 | ESTM-03 | Phase 4 | Pending |
+| VISU-03 | Phase 4 | Pending |
 | CTRL-01 | Phase 5 | Pending |
 | CTRL-02 | Phase 5 | Pending |
 | CTRL-03 | Phase 5 | Pending |
 | CTRL-04 | Phase 5 | Pending |
 | EDU-02 | Phase 5 | Pending |
+| VISU-04 | Phase 5 | Pending |
 | DATA-01 | Phase 6 | Pending |
 | DATA-02 | Phase 6 | Pending |
 | DATA-03 | Phase 6 | Pending |
@@ -166,8 +181,8 @@
 | ELEC-02 | Phase 3 | Pending |
 
 **Coverage:**
-- v1 requirements: 30 total
-- Mapped to phases: 30
+- v1 requirements: 34 total
+- Mapped to phases: 34
 - Unmapped: 0
 
 ---
