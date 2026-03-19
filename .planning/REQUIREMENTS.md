@@ -25,6 +25,13 @@
 - [ ] **MODL-04**: Application models non-ideal conditions including ambient temperature, track temperature, rain or wetness, and traffic or safety-car penalties.
   - *Motivation:* `user: wants to study non-ideal conditions rather than perfect-lap assumptions`
 
+### Environment Interaction
+
+- [ ] **ENVR-01**: Application models car-environment interaction explicitly, including grip evolution, surface state, ambient effects, and other external conditions that change vehicle and strategy behavior over time.
+  - *Motivation:* `user: wants interaction with the environment represented explicitly`
+- [ ] **ENVR-02**: Environment interaction is coupled into subsystem behavior rather than treated only as isolated scenario presets.
+  - *Motivation:* `user: clarified that environmental interaction should be part of the full-system scope`
+
 ### Electrical and Control Systems
 
 - [ ] **ELEC-01**: Application exposes electrical subsystem state variables and limits as inspectable model outputs instead of hiding them behind a single deployment scalar.
@@ -49,6 +56,8 @@
   - *Motivation:* `user: wants to understand style-specific differences`
 - [ ] **CTRL-03**: Initial driving policy logic is explainable, using heuristics or optimal-control style methods before any black-box learning approach.
   - *Motivation:* `user: wants to understand modeling and control, not just consume an opaque result`
+- [ ] **CTRL-04**: Application supports a model-based control baseline, preferably MPC where tractable, with explicit state, constraint, and cost-function definitions.
+  - *Motivation:* `user: MPC could be interesting and is a sensible baseline before RL`
 
 ### Education and Explainability
 
@@ -125,6 +134,8 @@
 | MODL-02 | Phase 3 | Pending |
 | MODL-03 | Phase 3 | Pending |
 | MODL-04 | Phase 3 | Pending |
+| ENVR-01 | Phase 3 | Pending |
+| ENVR-02 | Phase 3 | Pending |
 | STRA-01 | Phase 4 | Pending |
 | STRA-02 | Phase 4 | Pending |
 | STRA-03 | Phase 4 | Pending |
@@ -132,6 +143,7 @@
 | CTRL-01 | Phase 5 | Pending |
 | CTRL-02 | Phase 5 | Pending |
 | CTRL-03 | Phase 5 | Pending |
+| CTRL-04 | Phase 5 | Pending |
 | EDU-02 | Phase 5 | Pending |
 | DATA-01 | Phase 6 | Pending |
 | DATA-02 | Phase 6 | Pending |
@@ -142,10 +154,10 @@
 | ELEC-02 | Phase 3 | Pending |
 
 **Coverage:**
-- v1 requirements: 24 total
-- Mapped to phases: 24
+- v1 requirements: 27 total
+- Mapped to phases: 27
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-19*
-*Last updated: 2026-03-19 after deliberation on full-system scope and educational platform*
+*Last updated: 2026-03-19 after incorporating MPC as the preferred control baseline before RL*

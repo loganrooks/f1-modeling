@@ -20,7 +20,7 @@ The current project plan already values learning, explainability, and control-or
 |--------|--------------|---------------|-----------|
 | Conversation trigger | User clarified that electrical systems are important, but the actual scope target is eventual coverage of everything materially involved in F1 design and racing strategy | Yes, direct user clarification | informal |
 | Current planning docs after prior update | Electrical systems and educational views are now explicit in the project scope and roadmap | Yes, read file directly | informal |
-| `rg` search for `aero`, `suspension`, `brake`, `thermal`, `multi-car`, `setup`, `pit stop` across project docs | Broader subsystem coverage exists only partially and in scattered form; the project still lacks a clear, explicit statement that comprehensive system coverage is the eventual platform scope | Yes, searched relevant planning files and found only partial coverage | informal |
+| `rg` search for `aero`, `suspension`, `brake`, `thermal`, `multi-car`, `setup`, `pit stop`, `environment` across project docs | Broader subsystem coverage exists only partially and in scattered form; environment interaction is present but still easy to treat as passive context rather than active coupling | Yes, searched relevant planning files and found only partial coverage | informal |
 | `.planning/PROJECT.md`, `.planning/ROADMAP.md`, `README.md` | The product is still described more as a simulator with emphasized electrical/control learning than as a staged path toward comprehensive F1-system understanding | Yes, corroborated by direct reads | informal |
 
 ## Framing
@@ -30,7 +30,7 @@ The real question is not whether electrical systems matter. They do. The real qu
 **Core question:** Should F1 Modeling Lab explicitly declare eventual full-system F1 coverage as product scope, while sequencing delivery through reduced-order, teachable subsystem milestones?
 
 **Adjacent questions:**
-- Which subsystems deserve early emphasis because they offer the highest learning leverage under current regulations?
+- Which subsystems and cross-cutting interactions deserve early emphasis because they offer the highest learning leverage under current regulations?
 - How do we sequence subsystem coverage without turning the project into an unbounded science project?
 - Which educational surfaces belong in v1 versus later milestones?
 
