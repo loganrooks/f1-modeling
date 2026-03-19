@@ -89,6 +89,14 @@
 - **FIDL-03**: Add setup optimization workflows beyond high-level parameter sweeps.
 - **FIDL-04**: Add an RL-compatible simulation environment with explicit state, action, reward, and safety-constraint interfaces for driver-policy experiments.
 
+### Comprehensive System Coverage
+
+- **SYSC-01**: Add aerodynamic and active-aero subsystem models that couple directly to balance, drag, downforce, and deployment strategy.
+- **SYSC-02**: Add thermal and cooling subsystem models that couple tires, brakes, electrical state, ambient conditions, and pace limits.
+- **SYSC-03**: Add mechanical subsystem models for braking, chassis, suspension, and setup-sensitive handling tradeoffs.
+- **SYSC-04**: Add race-operations and multi-car interaction models covering traffic, overtaking constraints, pit execution, and field interruptions.
+- **SYSC-05**: Add explicit subsystem sequencing and interoperability standards so new domains can be introduced without rewriting the platform core.
+
 ### Product Expansion
 
 - **PROD-01**: Add collaborative scenario sharing or hosted deployment.
@@ -140,4 +148,4 @@
 
 ---
 *Requirements defined: 2026-03-19*
-*Last updated: 2026-03-19 after deliberation on electrical systems and educational scope*
+*Last updated: 2026-03-19 after deliberation on full-system scope and educational platform*

@@ -1,8 +1,8 @@
 # F1 Modeling Lab
 
-Local-first project for understanding Formula 1 car behavior, electrical and control-system dynamics, regulation tradeoffs, and race strategy through interactive models instead of opaque black boxes.
+Local-first project for understanding Formula 1 car behavior, subsystem interactions, regulation tradeoffs, and race strategy through interactive models instead of opaque black boxes.
 
-The initial goal is not to recreate team-grade CFD or proprietary telemetry analysis. The goal is to build an explainable learning environment that lets one technically literate user explore reduced-order vehicle dynamics, electrical and energy-management behavior, driver-style differences, control-system interactions, and race strategy under non-ideal conditions, then calibrate those models against imported session data later.
+The initial goal is not to recreate team-grade CFD or proprietary telemetry analysis. The goal is to build an explainable learning environment that lets one technically literate user explore reduced-order vehicle dynamics, electrical and energy-management behavior, driver-style differences, control-system interactions, and race strategy under non-ideal conditions, then calibrate those models against imported session data later. Over time, the platform should expand to cover the major interacting domains in F1 design and racing strategy rather than stopping at a narrow subsystem slice.
 
 ## Recommended Direction
 
@@ -14,7 +14,7 @@ The initial goal is not to recreate team-grade CFD or proprietary telemetry anal
 ## Suggested Architecture
 
 - Browser UI: scenario builder, track/session controls, charts, comparisons, explanation panels, and educational subsystem views
-- Simulation core: reduced-order lap, stint, tire, electrical, weather, and energy models
+- Simulation core: reduced-order lap, stint, tire, aerodynamic, thermal, electrical, mechanical, weather, and race-operations models, introduced incrementally
 - Strategy engine: pit windows, compound choices, safety-car and rain perturbations, sensitivity analysis
 - Driver/control layer: style parameters plus explainable policy logic for braking, traction, energy deployment, and mode switching, with a later path to RL-ready policy environments
 - Data adapters: CSV/JSON/parquet imports first, F1 TV Premium-compatible workflows later
@@ -23,6 +23,10 @@ The initial goal is not to recreate team-grade CFD or proprietary telemetry anal
 ## First Principle
 
 Build an interactive understanding tool first. Increase fidelity only when the added complexity improves explanation, calibration, or decision quality.
+
+## Scope Shape
+
+The end-state scope is broad: this platform should eventually cover the major technical and operational layers involved in F1 car design and racing strategy. The sequencing is deliberate, not comprehensive from day one. Each milestone should deepen one slice while preserving a path toward a fuller multi-domain system.
 
 ## RL Direction
 

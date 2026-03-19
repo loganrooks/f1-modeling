@@ -2,7 +2,7 @@
 
 ## Overview
 
-The path to a useful F1 modeling product is to build a clear local-first learning loop before chasing high fidelity: define scenarios, run reduced-order models, compare strategies and driver policies, expose subsystem explanations for learning, import real-world data, then calibrate and expand. This roadmap intentionally separates explainability, data interfaces, educational surfaces, calibration, and higher-fidelity design exploration so the project remains tractable.
+The path to a useful F1 modeling product is to build a clear local-first learning loop before chasing high fidelity: define scenarios, run reduced-order models, compare strategies and driver policies, expose subsystem explanations for learning, import real-world data, then calibrate and expand. This roadmap is the first staged milestone path toward broader eventual coverage of the major technical and operational systems involved in F1 design and racing strategy.
 
 ## Phases
 
@@ -28,7 +28,7 @@ The path to a useful F1 modeling product is to build a clear local-first learnin
 **Success Criteria** (what must be TRUE):
   1. User can start the application locally and reach an initial interactive workspace.
   2. User can define a scenario with circuit, session type, regulation preset, weather preset, and driver profile placeholders.
-  3. Each run stores enough metadata to reproduce or compare it later, and the architecture leaves room for educational subsystem views.
+  3. Each run stores enough metadata to reproduce or compare it later, and the architecture leaves room for educational subsystem views and later subsystem-family expansion.
 **Plans**: 3 plans
 
 Plans:
@@ -149,6 +149,16 @@ Plans:
 - [ ] 08-01: Build regulation and design parameter sweep workflows
 - [ ] 08-02: Add comparative visualizations for downstream tradeoffs
 - [ ] 08-03: Define extension points for higher-fidelity submodels
+
+## Subsequent Milestone Direction
+
+The current roadmap is not the full endpoint of the platform. Subsequent milestones remain in-scope for the product and should expand subsystem coverage deliberately, likely including:
+
+- aerodynamic and active-aero refinement
+- thermal and cooling dynamics
+- braking, chassis, suspension, and richer setup tradeoffs
+- race-operations and multi-car interaction models
+- higher-fidelity subsystem coupling once calibration supports it
 
 ## Progress
 

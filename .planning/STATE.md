@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 Phase: 1 of 8 (Foundations and Scenario Schema)
 Plan: 0 of 3 in current phase
 Status: Ready to plan
-Last activity: 2026-03-19 - Deliberated electrical systems and educational scope; planning docs updated
+Last activity: 2026-03-19 - Deliberated full-system scope and educational platform; planning docs updated
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -43,7 +43,7 @@ Recent decisions affecting current work:
 - Initialization: quality profile intent for this repo is Codex-native GPT-5.4, not Claude-era labels
 - Initialization: reduced-order, explainable models come before high-fidelity simulation
 - Initialization: RL is a future extension, but only after the simulator is credible enough to support policy learning
-- Deliberation: electrical-dynamical systems and educational/control-system understanding are now explicit first-class scope
+- Deliberation: platform scope is eventual full-system F1 coverage with staged subsystem delivery; electrical is early but not the sole defining focus
 
 ### Pending Todos
 
@@ -54,9 +54,10 @@ None yet.
 - Shared GSD tooling still resolves quality profiles to Claude-era labels; project-level Codex intent is documented but global tooling may still need adaptation later.
 - Realistic telemetry import path is still unknown until actual subscription data workflow is tested.
 - The minimum viable electrical state set and educational UX surface for v1 still need to be decided during Phase 1 planning.
+- Future milestone sequencing for non-electrical subsystem families is still undefined and should be made explicit as the roadmap evolves.
 
 ## Session Continuity
 
 Last session: 2026-03-19 03:10
-Stopped at: Deliberation recorded and planning docs updated for electrical systems and educational scope
+Stopped at: Deliberation revised to reflect eventual full-system scope and staged delivery
 Resume file: None
