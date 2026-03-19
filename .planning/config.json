@@ -1,0 +1,73 @@
+{
+  "model_profile": "quality",
+  "mode": "interactive",
+  "depth": "comprehensive",
+  "commit_docs": true,
+  "search_gitignored": false,
+  "branching_strategy": "none",
+  "phase_branch_template": "gsd/phase-{phase}-{slug}",
+  "milestone_branch_template": "gsd/{milestone}-{slug}",
+  "workflow": {
+    "research": true,
+    "plan_check": true,
+    "verifier": true
+  },
+  "parallelization": true,
+  "brave_search": false,
+  "runtime": {
+    "platform": "codex",
+    "default_model": "gpt-5.4",
+    "quality_profile_intent": "Map Claude-era quality to Codex-native GPT-5.4 settings for this repo.",
+    "agent_overrides": {
+      "gsdr-planner": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "xhigh"
+      },
+      "gsdr-roadmapper": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "xhigh"
+      },
+      "gsdr-executor": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "xhigh"
+      },
+      "gsdr-phase-researcher": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "xhigh"
+      },
+      "gsdr-project-researcher": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "xhigh"
+      },
+      "gsdr-debugger": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "xhigh"
+      },
+      "gsdr-research-synthesizer": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "high"
+      },
+      "gsdr-codebase-mapper": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "high"
+      },
+      "gsdr-verifier": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "high"
+      },
+      "gsdr-plan-checker": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "high"
+      },
+      "gsdr-integration-checker": {
+        "model": "gpt-5.4",
+        "reasoning_effort": "high"
+      }
+    },
+    "notes": [
+      "Use xhigh for agents that mapped to Opus under the original quality profile.",
+      "Use high for agents that mapped to Sonnet under the original quality profile.",
+      "If GSD shared tooling is patched later, these overrides remain the canonical intent for this project."
+    ]
+  }
+}
