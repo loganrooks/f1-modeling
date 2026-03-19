@@ -1,8 +1,8 @@
 # F1 Modeling Lab
 
-Local-first project for understanding Formula 1 car behavior, regulation tradeoffs, and race strategy through interactive models instead of opaque black boxes.
+Local-first project for understanding Formula 1 car behavior, electrical and control-system dynamics, regulation tradeoffs, and race strategy through interactive models instead of opaque black boxes.
 
-The initial goal is not to recreate team-grade CFD or proprietary telemetry analysis. The goal is to build an explainable learning environment that lets one technically literate user explore reduced-order vehicle dynamics, tire and energy management, driver-style differences, and race strategy under non-ideal conditions, then calibrate those models against imported session data later.
+The initial goal is not to recreate team-grade CFD or proprietary telemetry analysis. The goal is to build an explainable learning environment that lets one technically literate user explore reduced-order vehicle dynamics, electrical and energy-management behavior, driver-style differences, control-system interactions, and race strategy under non-ideal conditions, then calibrate those models against imported session data later.
 
 ## Recommended Direction
 
@@ -13,10 +13,10 @@ The initial goal is not to recreate team-grade CFD or proprietary telemetry anal
 
 ## Suggested Architecture
 
-- Browser UI: scenario builder, track/session controls, charts, comparisons, explanation panels
-- Simulation core: reduced-order lap, stint, tire, weather, and energy models
+- Browser UI: scenario builder, track/session controls, charts, comparisons, explanation panels, and educational subsystem views
+- Simulation core: reduced-order lap, stint, tire, electrical, weather, and energy models
 - Strategy engine: pit windows, compound choices, safety-car and rain perturbations, sensitivity analysis
-- Driver/control layer: style parameters plus explainable policy logic for braking, traction, and energy deployment, with a later path to RL-ready policy environments
+- Driver/control layer: style parameters plus explainable policy logic for braking, traction, energy deployment, and mode switching, with a later path to RL-ready policy environments
 - Data adapters: CSV/JSON/parquet imports first, F1 TV Premium-compatible workflows later
 - Calibration layer: compare imported data against simulated outputs and record confidence/fit quality
 

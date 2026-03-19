@@ -20,10 +20,17 @@
   - *Motivation:* `user: wants to understand the model and the modeling process itself`
 - [ ] **MODL-02**: Application models tire wear and tire temperature state across laps and stints.
   - *Motivation:* `user: explicitly wants to experiment with tire wear and tire temperature`
-- [ ] **MODL-03**: Application models energy state and deployment choices that affect lap time and straight-line performance.
+- [ ] **MODL-03**: Application models reduced-order electrical energy state, harvesting, deployment, and limiting logic that affect lap time and straight-line performance.
   - *Motivation:* `user: wants to study battery deployment policy under the new regulations`
 - [ ] **MODL-04**: Application models non-ideal conditions including ambient temperature, track temperature, rain or wetness, and traffic or safety-car penalties.
   - *Motivation:* `user: wants to study non-ideal conditions rather than perfect-lap assumptions`
+
+### Electrical and Control Systems
+
+- [ ] **ELEC-01**: Application exposes electrical subsystem state variables and limits as inspectable model outputs instead of hiding them behind a single deployment scalar.
+  - *Motivation:* `user: wants proper modelling of the electrical-dynamical systems`
+- [ ] **ELEC-02**: Application links electrical subsystem state to vehicle behavior, strategy choices, and driver-policy constraints.
+  - *Motivation:* `user: wants to understand the control systems involved`
 
 ### Strategy
 
@@ -42,6 +49,13 @@
   - *Motivation:* `user: wants to understand style-specific differences`
 - [ ] **CTRL-03**: Initial driving policy logic is explainable, using heuristics or optimal-control style methods before any black-box learning approach.
   - *Motivation:* `user: wants to understand modeling and control, not just consume an opaque result`
+
+### Education and Explainability
+
+- [ ] **EDU-01**: User can inspect subsystem-level explanations showing how mechanical, tire, electrical, aerodynamic, and driver-control states interact.
+  - *Motivation:* `user: wants this to be an educational platform`
+- [ ] **EDU-02**: User can view controller-intent, assumptions, and equation-level or rule-level explanations aimed at learning engineers.
+  - *Motivation:* `user: wants learning engineers to understand the different control systems involved`
 
 ### Data
 
@@ -106,20 +120,24 @@
 | STRA-01 | Phase 4 | Pending |
 | STRA-02 | Phase 4 | Pending |
 | STRA-03 | Phase 4 | Pending |
+| EDU-01 | Phase 4 | Pending |
 | CTRL-01 | Phase 5 | Pending |
 | CTRL-02 | Phase 5 | Pending |
 | CTRL-03 | Phase 5 | Pending |
+| EDU-02 | Phase 5 | Pending |
 | DATA-01 | Phase 6 | Pending |
 | DATA-02 | Phase 6 | Pending |
 | DATA-03 | Phase 6 | Pending |
 | VAL-01 | Phase 7 | Pending |
 | DESN-01 | Phase 8 | Pending |
+| ELEC-01 | Phase 3 | Pending |
+| ELEC-02 | Phase 3 | Pending |
 
 **Coverage:**
-- v1 requirements: 20 total
-- Mapped to phases: 20
+- v1 requirements: 24 total
+- Mapped to phases: 24
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-19*
-*Last updated: 2026-03-19 after initial definition*
+*Last updated: 2026-03-19 after deliberation on electrical systems and educational scope*
