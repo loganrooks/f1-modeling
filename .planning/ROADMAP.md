@@ -24,18 +24,23 @@ The path to a useful F1 modeling product is to build a clear local-first learnin
 ### Phase 1: Foundations and Scenario Schema
 **Goal**: Establish a local-first application skeleton, scenario schema, regulation presets, and run-history tracking so later models have a stable home.
 **Depends on**: Nothing (first phase)
-**Requirements**: [PLAT-01, PLAT-03, VAL-02, DESN-02]
+**Requirements**: [PLAT-01, PLAT-03, VAL-02, DESN-02, VISU-01]
 **Success Criteria** (what must be TRUE):
   1. User can start the application locally and reach an initial interactive workspace.
   2. User can define a scenario with circuit, session type, regulation preset, weather preset, and driver profile placeholders.
   3. Each run stores enough metadata to reproduce or compare it later, and the architecture leaves room for educational subsystem views and later subsystem-family expansion.
   4. The workspace includes reusable visual primitives that later models can plug into without redesigning the whole UI.
-**Plans**: 3 plans
+**Plans**: 8 plans
 
 Plans:
-- [ ] 01-01: Scaffold the local-first app architecture and repository layout
-- [ ] 01-02: Define scenario, regulation, and run-record schemas
-- [ ] 01-03: Build the first workspace, local persistence path, and reusable visualization primitives
+- [ ] 01-01: Define the root workspace and shared toolchain contract
+- [ ] 01-02: Scaffold the browser and local API application shells
+- [ ] 01-03: Create shared package seams and the deterministic placeholder harness
+- [ ] 01-04: Implement core scenario and run schema foundations
+- [ ] 01-05: Add preset catalog contracts and snapshot-aware run-record construction
+- [ ] 01-06: Build the local file persistence layer and Phase 1 API routes
+- [ ] 01-07: Create reusable Phase 1 visual primitives
+- [ ] 01-08: Assemble the first interactive workspace on top of the shared contracts
 
 ### Phase 2: Reduced-Order Lap Model
 **Goal**: Deliver the first transparent lap model with editable vehicle and circuit parameters.
@@ -175,7 +180,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundations and Scenario Schema | 0/3 | Not started | - |
+| 1. Foundations and Scenario Schema | 0/8 | Not started | - |
 | 2. Reduced-Order Lap Model | 0/3 | Not started | - |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 0/4 | Not started | - |
 | 4. Strategy, Estimation, Explanations, and Learning Views | 0/3 | Not started | - |

@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 ## Current Position
 
 Phase: 1 of 8 (Foundations and Scenario Schema)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-03-19 - Created Phase 1 context and phase directory for downstream research and planning
+Plan: 0 of 8 in current phase
+Status: Ready to execute
+Last activity: 2026-03-19 - Planned Phase 1 into eight verified execution plans with research and checker pass
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -58,16 +58,16 @@ None yet.
 
 - Shared GSD tooling still resolves quality profiles to Claude-era labels; project-level Codex intent is documented but global tooling may still need adaptation later.
 - Realistic telemetry import path is still unknown until actual subscription data workflow is tested.
-- The minimum viable electrical state set and educational UX surface for v1 still need to be decided during Phase 1 planning.
-- The minimum viable environment-interaction model for v1 still needs to be decided during Phase 1 planning.
-- The first observer targets and whether EKF is the right initial estimator for them still need to be decided during Phase 1 planning.
-- The minimum viable plant model, horizon, and solver strategy for an initial MPC baseline still need to be decided during Phase 1 planning.
-- The first reusable visualization primitives and the threshold for honest racing-line visualization still need to be decided during Phase 1 planning.
+- The minimum viable electrical state set and educational UX surface for v1 remain deferred to later roadmap phases and should not leak into Phase 1 execution.
+- The minimum viable environment-interaction model for v1 remains deferred to later roadmap phases and should not leak into Phase 1 execution.
+- The first observer targets and whether EKF is the right initial estimator for them remain deferred to Phase 4 planning.
+- The minimum viable plant model, horizon, and solver strategy for an initial MPC baseline remain deferred to Phase 5 planning.
+- The first reusable visualization primitives are now planned for Phase 1, but the threshold for honest racing-line visualization remains deferred to Phase 2.
 - Future milestone sequencing for non-electrical subsystem families is still undefined and should be made explicit as the roadmap evolves.
 - Shared GSD roadmap parsing currently depends on `.planning/phases/` directories; Phase 1 is now scaffolded there, and future phases should follow that convention so phase workflows resolve cleanly.
 
 ## Session Continuity
 
 Last session: 2026-03-19 03:10
-Stopped at: Phase 1 context created and ready for research or plan-phase
+Stopped at: Phase 1 planned and ready for execution
 Resume file: None
