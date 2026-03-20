@@ -15,11 +15,11 @@ Plan: 1 of 8 complete
 **Current Phase:** 01
 **Current Phase Name:** Foundations and Scenario Schema
 **Total Phases:** 8
-**Current Plan:** 1
+**Current Plan:** 3
 **Total Plans in Phase:** 8
 **Status:** Ready to execute
 **Last Activity:** 2026-03-20
-**Progress:** [█░░░░░░░░░] 13%
+**Progress:** [████░░░░░░] 38%
 
 ## Performance Metrics
 
@@ -38,6 +38,8 @@ Plan: 1 of 8 complete
 - Last 5 plans: 5min
 - Trend: Baseline established
 | Phase 01 P01 | 5min | 1 tasks | 5 files |
+| Phase 01 P02 | 6min | 2 tasks | 13 files |
+| Phase 01 P03 | 4min | 2 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -57,6 +59,10 @@ Recent decisions affecting current work:
 - Deliberation: visualization should be a progressive, model-coupled learning surface rather than a disconnected later polish layer
 - [Phase 01]: Reserve root dev/build/test/typecheck scripts at the repo root so later workspaces inherit a stable command surface.
 - [Phase 01]: Keep future workspace-data artifacts as local disk files that are git-ignored by default but still human-inspectable.
+- [Phase 01]: Use pinned localhost ports plus a Vite proxy so the browser and API shells can be smoke-tested deterministically.
+- [Phase 01]: Keep Fastify app construction separate from process startup so later plans can reuse the app instance cleanly.
+- [Phase 01]: Keep packages/domain and packages/visuals as explicit Phase 1 placeholders until schema and primitive plans land.
+- [Phase 01]: Use clearly labeled non-physical placeholder metrics in sim-core so wiring can progress without implying unsupported model fidelity.
 
 ### Pending Todos
 
@@ -76,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-20T02:21:02.140Z
-**Stopped At:** Completed 01-01-PLAN.md
+**Last session:** 2026-03-20T02:31:22.840Z
+**Stopped At:** Completed 01-03-PLAN.md
 **Resume File:** None
