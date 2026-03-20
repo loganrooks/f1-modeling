@@ -15,6 +15,14 @@ import { loadPresetCatalogFromDisk } from "@f1-modeling/domain/node/preset-catal
 
 const presetsRoot = fileURLToPath(new URL("../../../../presets", import.meta.url));
 
+function firstPreset<T>(presets: T[], label: string): T {
+  const first = presets[0];
+  if (first === undefined) {
+    throw new Error(`Expected at least one ${label} preset in catalog`);
+  }
+  return first;
+}
+
 function createPresetSnapshot(
   presetType: "regulation" | "session" | "weather",
   presetId: string,
@@ -219,9 +227,9 @@ describe("runRecordSchema", () => {
       createdAt: "2026-03-20T03:15:00.000Z",
       scenario,
       resolvedPresets: {
-        regulation: catalog.regulation[0],
-        session: catalog.session[0],
-        weather: catalog.weather[0],
+        regulation: firstPreset(catalog.regulation, "regulation"),
+        session: firstPreset(catalog.session, "session"),
+        weather: firstPreset(catalog.weather, "weather"),
       },
       versions: {
         modelVersion: "phase1-placeholder/v1",
@@ -267,14 +275,19 @@ describe("runRecordSchema", () => {
     const scenario = createDefaultScenario();
     const catalog = loadPresetCatalogFromDisk(presetsRoot);
 
+    const mismatchedSession = catalog.session[1];
+    if (mismatchedSession === undefined) {
+      throw new Error("Expected at least two session presets in catalog");
+    }
+
     expect(() =>
       createRunRecord({
         runId: "phase1-invalid-run-record",
         scenario,
         resolvedPresets: {
-          regulation: catalog.regulation[0],
-          session: catalog.session[1],
-          weather: catalog.weather[0],
+          regulation: firstPreset(catalog.regulation, "regulation"),
+          session: mismatchedSession,
+          weather: firstPreset(catalog.weather, "weather"),
         },
         versions: {
           modelVersion: "phase1-placeholder/v1",
