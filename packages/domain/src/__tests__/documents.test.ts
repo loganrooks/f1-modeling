@@ -1,11 +1,19 @@
+import { fileURLToPath } from "node:url";
+
 import { describe, expect, it } from "vitest";
 
 import {
+  createRunRecord,
   createDefaultScenario,
+  presetDocumentSchema,
+  presetDocumentSchemaVersion,
   runRecordSchema,
   runRecordSchemaVersion,
   scenarioDocumentSchema,
 } from "../index.js";
+import { loadPresetCatalogFromDisk } from "@f1-modeling/domain/node/preset-catalog";
+
+const presetsRoot = fileURLToPath(new URL("../../../../presets", import.meta.url));
 
 function createPresetSnapshot(
   presetType: "regulation" | "session" | "weather",
@@ -23,6 +31,7 @@ function createPresetSnapshot(
       source: "Phase 1 contract test fixture",
       notes: "Representative preset payload for schema validation.",
     },
+    assumptionNotes: [],
     values: {
       label: name,
       placeholder: presetType === "weather",
@@ -39,6 +48,11 @@ function createValidRunRecord() {
     createdAt: "2026-03-20T02:45:00.000Z",
     scenarioId: scenario.scenarioId,
     scenarioSnapshot: scenario,
+    presetReferences: {
+      regulation: scenario.regulationPreset,
+      session: scenario.sessionPreset,
+      weather: scenario.weatherPreset,
+    },
     presetSnapshots: {
       regulation: createPresetSnapshot(
         "regulation",
@@ -89,6 +103,42 @@ function createValidRunRecord() {
     ],
   };
 }
+
+describe("presetDocumentSchema", () => {
+  it("parses the seeded preset documents", () => {
+    const catalog = loadPresetCatalogFromDisk(presetsRoot);
+    const seededPresetDocuments = [
+      ...catalog.regulation,
+      ...catalog.session,
+      ...catalog.weather,
+    ];
+
+    expect(seededPresetDocuments).toHaveLength(5);
+    expect(
+      seededPresetDocuments.every(
+        (presetDocument) =>
+          presetDocumentSchema.parse(presetDocument).schemaVersion ===
+          presetDocumentSchemaVersion,
+      ),
+    ).toBe(true);
+  });
+
+  it("loads the preset catalog through the node-only package subpath", () => {
+    const catalog = loadPresetCatalogFromDisk(presetsRoot);
+
+    expect(catalog.regulation.map((document) => document.presetId)).toEqual([
+      "fia-2026-baseline",
+    ]);
+    expect(catalog.session.map((document) => document.presetId)).toEqual([
+      "grand-prix-race",
+      "qualifying-session",
+    ]);
+    expect(catalog.weather.map((document) => document.presetId)).toEqual([
+      "dry-baseline",
+      "light-rain-placeholder",
+    ]);
+  });
+});
 
 describe("scenarioDocumentSchema", () => {
   it("parses the canonical default scenario", () => {
@@ -159,5 +209,83 @@ describe("runRecordSchema", () => {
     });
 
     expect(result.success).toBe(false);
+  });
+
+  it("creates an immutable run record with preset references and snapshots", () => {
+    const scenario = createDefaultScenario();
+    const catalog = loadPresetCatalogFromDisk(presetsRoot);
+    const runRecord = createRunRecord({
+      runId: "phase1-created-run-record",
+      createdAt: "2026-03-20T03:15:00.000Z",
+      scenario,
+      resolvedPresets: {
+        regulation: catalog.regulation[0],
+        session: catalog.session[0],
+        weather: catalog.weather[0],
+      },
+      versions: {
+        modelVersion: "phase1-placeholder/v1",
+        appVersion: "0.1.0",
+      },
+      output: {
+        summaryMetrics: {
+          placeholderScore: 52,
+        },
+        artifacts: [
+          {
+            artifactId: "phase1-summary-report",
+            artifactType: "report",
+            label: "Phase 1 summary report",
+          },
+        ],
+        assumptionNotes: [
+          {
+            note: "Run outputs remain placeholder-level while the model stack is being scaffolded.",
+            provenance: {
+              sourceType: "placeholder",
+              source: "Phase 1 run helper test fixture",
+            },
+          },
+        ],
+      },
+    });
+
+    expect(runRecord.presetReferences).toEqual({
+      regulation: scenario.regulationPreset,
+      session: scenario.sessionPreset,
+      weather: scenario.weatherPreset,
+    });
+    expect(runRecord.presetSnapshots.regulation.presetId).toBe(
+      "fia-2026-baseline",
+    );
+    expect(runRecord.presetSnapshots.session.name).toBe("Grand Prix Race");
+    expect(Object.isFrozen(runRecord)).toBe(true);
+    expect(Object.isFrozen(runRecord.presetSnapshots)).toBe(true);
+  });
+
+  it("rejects run construction when resolved presets do not match the scenario references", () => {
+    const scenario = createDefaultScenario();
+    const catalog = loadPresetCatalogFromDisk(presetsRoot);
+
+    expect(() =>
+      createRunRecord({
+        runId: "phase1-invalid-run-record",
+        scenario,
+        resolvedPresets: {
+          regulation: catalog.regulation[0],
+          session: catalog.session[1],
+          weather: catalog.weather[0],
+        },
+        versions: {
+          modelVersion: "phase1-placeholder/v1",
+          appVersion: "0.1.0",
+        },
+        output: {
+          summaryMetrics: {
+            placeholderScore: 41,
+          },
+        },
+      }),
+    ).toThrow("Preset mismatch for session");
   });
 });

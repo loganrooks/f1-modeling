@@ -1,14 +1,23 @@
 import { z } from "zod";
 
-import { assumptionNoteSchema, provenanceSchema } from "../common/provenance.js";
+import { assumptionNoteSchema } from "../common/provenance.js";
 import {
   documentIdSchema,
   isoTimestampSchema,
   nonEmptyStringSchema,
   runRecordSchemaVersion,
-  schemaVersionSchema,
 } from "../common/schemaVersion.js";
-import { scenarioDocumentSchema } from "../scenario/schema.js";
+import {
+  presetReferenceSchema,
+  scenarioDocumentSchema,
+} from "../scenario/schema.js";
+import {
+  presetDocumentSchema,
+  presetTypeSchema,
+  regulationPresetDocumentSchema,
+  sessionPresetDocumentSchema,
+  weatherPresetDocumentSchema,
+} from "../presets/schema.js";
 
 export const runStatusSchema = z.enum([
   "queued",
@@ -17,31 +26,21 @@ export const runStatusSchema = z.enum([
   "failed",
 ]);
 
-export const presetTypeSchema = z.enum(["regulation", "session", "weather"]);
-
-export const presetSnapshotSchema = z
-  .object({
-    schemaVersion: schemaVersionSchema,
-    presetId: documentIdSchema,
-    presetType: presetTypeSchema,
-    name: nonEmptyStringSchema,
-    description: nonEmptyStringSchema,
-    provenance: provenanceSchema,
-    values: z.record(z.string(), z.unknown()),
-  })
-  .strict();
+export const presetSnapshotSchema = presetDocumentSchema;
 
 export const presetSnapshotsSchema = z
   .object({
-    regulation: presetSnapshotSchema.extend({
-      presetType: z.literal("regulation"),
-    }),
-    session: presetSnapshotSchema.extend({
-      presetType: z.literal("session"),
-    }),
-    weather: presetSnapshotSchema.extend({
-      presetType: z.literal("weather"),
-    }),
+    regulation: regulationPresetDocumentSchema,
+    session: sessionPresetDocumentSchema,
+    weather: weatherPresetDocumentSchema,
+  })
+  .strict();
+
+export const presetReferencesSchema = z
+  .object({
+    regulation: presetReferenceSchema,
+    session: presetReferenceSchema,
+    weather: presetReferenceSchema,
   })
   .strict();
 
@@ -63,6 +62,7 @@ export const runRecordSchema = z
     createdAt: isoTimestampSchema,
     scenarioId: documentIdSchema,
     scenarioSnapshot: scenarioDocumentSchema,
+    presetReferences: presetReferencesSchema,
     presetSnapshots: presetSnapshotsSchema,
     modelVersion: nonEmptyStringSchema,
     appVersion: nonEmptyStringSchema,
@@ -76,6 +76,7 @@ export const runRecordSchema = z
 
 export type PresetSnapshot = z.infer<typeof presetSnapshotSchema>;
 export type PresetSnapshots = z.infer<typeof presetSnapshotsSchema>;
+export type PresetReferences = z.infer<typeof presetReferencesSchema>;
 export type PresetType = z.infer<typeof presetTypeSchema>;
 export type RunArtifact = z.infer<typeof runArtifactSchema>;
 export type RunRecord = z.infer<typeof runRecordSchema>;

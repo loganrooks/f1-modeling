@@ -67,6 +67,17 @@ export {
 export type { PresetCatalog } from "./presets/registry.js";
 
 export {
+  createRunRecord,
+} from "./runs/createRunRecord.js";
+export type {
+  CreateRunRecordInput,
+  CreateRunRecordOutput,
+  CreateRunRecordVersions,
+  ResolvedPresetDocuments,
+} from "./runs/createRunRecord.js";
+
+export {
+  presetReferencesSchema,
   presetSnapshotSchema,
   presetSnapshotsSchema,
   runArtifactSchema,
@@ -74,6 +85,7 @@ export {
   runStatusSchema,
 } from "./runs/schema.js";
 export type {
+  PresetReferences,
   PresetSnapshot,
   PresetSnapshots,
   RunArtifact,
