@@ -21,3 +21,18 @@ export type {
   MetricTraceSeries,
   MetricTraceTone,
 } from './traces/MetricTracePanel';
+
+export { AssumptionPanel } from './inspectors/AssumptionPanel';
+export type {
+  AssumptionConfidence,
+  AssumptionEntry,
+  AssumptionKind,
+  AssumptionPanelNote,
+  AssumptionPanelProps,
+} from './inspectors/AssumptionPanel';
+
+export { TrackContextPlaceholder } from './workspace/TrackContextPlaceholder';
+export type {
+  TrackContextPlaceholderProps,
+  TrackContextPlaceholderState,
+} from './workspace/TrackContextPlaceholder';
