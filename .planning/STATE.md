@@ -10,39 +10,40 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 ## Current Position
 
 Phase: 1 of 8 (Foundations and Scenario Schema)
-Plan: 6 of 8 complete
+Plan: 7 of 8 complete
 
 **Current Phase:** 01
 **Current Phase Name:** Foundations and Scenario Schema
 **Total Phases:** 8
-**Current Plan:** 6
+**Current Plan:** 7
 **Total Plans in Phase:** 8
 **Status:** Ready to execute
 **Last Activity:** 2026-03-20
-**Progress:** [████████░░] 75%
+**Progress:** [█████████░] 88%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 5.5 min
-- Total execution time: 0.55 hours
+- Total plans completed: 7
+- Average duration: 6.1 min
+- Total execution time: 0.72 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| Phase 01 | 6/8 | 33min | 5.5min |
+| Phase 01 | 7/8 | 43min | 6.1min |
 
 **Recent Trend:**
-- Last 5 plans: 5.6min
-- Trend: Stable
+- Last 5 plans: 6.4min
+- Trend: Up slightly
 | Phase 01 P01 | 5min | 1 tasks | 5 files |
 | Phase 01 P02 | 6min | 2 tasks | 13 files |
 | Phase 01 P03 | 4min | 2 tasks | 13 files |
 | Phase 01 P07 | 4min | 2 tasks | 6 files |
 | Phase 01 P04 | 6min | 2 tasks | 7 files |
 | Phase 01 P05 | 8min | 2 tasks | 15 files |
+| Phase 01 P06 | 10min | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,8 @@ Recent decisions affecting current work:
 - [Phase 01]: Make the canonical Phase 1 default scenario deterministic and validated at factory construction time.
 - [Phase 01]: Keep filesystem preset loading behind @f1-modeling/domain/node/preset-catalog so the package root remains browser-safe.
 - [Phase 01]: Run records must carry both stable preset references and resolved preset snapshots so historical runs stay reproducible after preset edits.
+- [Phase 01]: Default local API paths resolve repo-root presets and workspace-data locations, but app construction accepts explicit overrides for tests and alternate roots.
+- [Phase 01]: Run creation stays append-only by generating fresh run ids while delegating scenario snapshot and preset snapshot assembly to createRunRecord.
 
 ### Pending Todos
 
@@ -92,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-20T03:01:12.821Z
-**Stopped At:** Completed 01-05-PLAN.md
+**Last session:** 2026-03-20T03:16:40.615Z
+**Stopped At:** Completed 01-06-PLAN.md
 **Resume File:** None
