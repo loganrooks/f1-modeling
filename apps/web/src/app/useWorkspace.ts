@@ -4,7 +4,7 @@ import {
   type RunRecord,
   type ScenarioDocument,
 } from "@f1-modeling/domain";
-import { startTransition, useEffect, useEffectEvent, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 
 import {
   createPlaceholderRun,
@@ -50,7 +50,7 @@ export function useWorkspace() {
     text: "Loading local presets, saved scenarios, and placeholder run history...",
   });
 
-  const refreshWorkspace = useEffectEvent(async () => {
+  async function refreshWorkspace() {
     setIsBooting(true);
 
     try {
@@ -95,11 +95,11 @@ export function useWorkspace() {
     } finally {
       setIsBooting(false);
     }
-  });
+  }
 
   useEffect(() => {
     void refreshWorkspace();
-  }, [refreshWorkspace]);
+  }, []);
 
   async function reloadCollections() {
     const [scenarios, runs] = await Promise.all([

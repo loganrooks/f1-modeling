@@ -130,6 +130,7 @@ export function PresetSelectors({
               <label className="workspace-field">
                 <span className="workspace-label">{group.label}</span>
                 <select
+                  aria-label={group.label}
                   className="workspace-select"
                   value={selectedPreset?.presetId ?? ""}
                   disabled={disabled}

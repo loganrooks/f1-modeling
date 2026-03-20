@@ -110,6 +110,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Scenario name</span>
           <input
+            aria-label="Scenario name"
             className="workspace-input"
             type="text"
             value={scenario.name}
@@ -125,6 +126,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Local document id</span>
           <input
+            aria-label="Local document id"
             className="workspace-input"
             type="text"
             value={scenario.scenarioId}
@@ -143,6 +145,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Circuit</span>
           <input
+            aria-label="Circuit"
             className="workspace-input"
             type="text"
             value={scenario.circuit.name}
@@ -161,6 +164,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Circuit id</span>
           <input
+            aria-label="Circuit id"
             className="workspace-input"
             type="text"
             value={scenario.circuit.circuitId}
@@ -182,6 +186,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Configuration</span>
           <input
+            aria-label="Configuration"
             className="workspace-input"
             type="text"
             value={scenario.circuit.configuration ?? ""}
@@ -200,6 +205,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Seed</span>
           <input
+            aria-label="Seed"
             className="workspace-input"
             type="number"
             min="0"
@@ -226,6 +232,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Driver placeholder label</span>
           <input
+            aria-label="Driver placeholder label"
             className="workspace-input"
             type="text"
             value={scenario.driverProfile.label}
@@ -244,6 +251,7 @@ export function ScenarioEditor({
         <label className="workspace-field">
           <span className="workspace-label">Driver placeholder id</span>
           <input
+            aria-label="Driver placeholder id"
             className="workspace-input"
             type="text"
             value={scenario.driverProfile.profileId}
@@ -266,6 +274,7 @@ export function ScenarioEditor({
       <label className="workspace-field">
         <span className="workspace-label">Driver placeholder description</span>
         <textarea
+          aria-label="Driver placeholder description"
           className="workspace-textarea"
           rows={3}
           value={scenario.driverProfile.description}
@@ -285,6 +294,7 @@ export function ScenarioEditor({
         <label className="workspace-field workspace-field--wide">
           <span className="workspace-label">Notes</span>
           <textarea
+            aria-label="Notes"
             className="workspace-textarea"
             rows={4}
             value={scenario.notes.join("\n")}
@@ -300,6 +310,7 @@ export function ScenarioEditor({
         <label className="workspace-field workspace-field--wide">
           <span className="workspace-label">Assumptions</span>
           <textarea
+            aria-label="Assumptions"
             className="workspace-textarea"
             rows={4}
             value={scenario.assumptionNotes.map((note) => note.note).join("\n")}
