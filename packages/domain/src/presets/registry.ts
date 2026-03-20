@@ -13,6 +13,24 @@ export interface PresetCatalog {
   weather: WeatherPresetDocument[];
 }
 
+function isRegulationPresetDocument(
+  document: PresetDocument,
+): document is RegulationPresetDocument {
+  return document.presetType === "regulation";
+}
+
+function isSessionPresetDocument(
+  document: PresetDocument,
+): document is SessionPresetDocument {
+  return document.presetType === "session";
+}
+
+function isWeatherPresetDocument(
+  document: PresetDocument,
+): document is WeatherPresetDocument {
+  return document.presetType === "weather";
+}
+
 function sortPresetDocuments<T extends PresetDocument>(documents: T[]): T[] {
   return [...documents].sort(
     (left, right) =>
@@ -31,16 +49,18 @@ export function groupPresetCatalog(
   };
 
   for (const document of documents) {
-    switch (document.presetType) {
-      case "regulation":
-        catalog.regulation.push(document);
-        break;
-      case "session":
-        catalog.session.push(document);
-        break;
-      case "weather":
-        catalog.weather.push(document);
-        break;
+    if (isRegulationPresetDocument(document)) {
+      catalog.regulation.push(document);
+      continue;
+    }
+
+    if (isSessionPresetDocument(document)) {
+      catalog.session.push(document);
+      continue;
+    }
+
+    if (isWeatherPresetDocument(document)) {
+      catalog.weather.push(document);
     }
   }
 
