@@ -43,3 +43,20 @@ export type {
   ReservedExtensionPoint,
   ScenarioDocument,
 } from "./scenario/schema.js";
+
+export {
+  presetSnapshotSchema,
+  presetSnapshotsSchema,
+  presetTypeSchema,
+  runArtifactSchema,
+  runRecordSchema,
+  runStatusSchema,
+} from "./runs/schema.js";
+export type {
+  PresetSnapshot,
+  PresetSnapshots,
+  PresetType,
+  RunArtifact,
+  RunRecord,
+  RunStatus,
+} from "./runs/schema.js";
