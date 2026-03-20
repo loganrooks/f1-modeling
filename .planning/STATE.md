@@ -5,38 +5,38 @@
 See: .planning/PROJECT.md (updated 2026-03-19)
 
 **Core value:** Make F1 design and strategy legible by coupling editable models with visual explanations of why a result changed.
-**Current focus:** Phase 1 - Foundations and Scenario Schema
+**Current focus:** Phase 1 complete - Foundations and Scenario Schema
 
 ## Current Position
 
 Phase: 1 of 8 (Foundations and Scenario Schema)
-Plan: 7 of 8 complete
+Plan: 8 of 8 complete
 
 **Current Phase:** 01
 **Current Phase Name:** Foundations and Scenario Schema
 **Total Phases:** 8
-**Current Plan:** 7
+**Current Plan:** 8
 **Total Plans in Phase:** 8
-**Status:** Ready to execute
+**Status:** Phase complete
 **Last Activity:** 2026-03-20
-**Progress:** [█████████░] 88%
+**Progress:** [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 6.1 min
-- Total execution time: 0.72 hours
+- Total plans completed: 8
+- Average duration: 8.3 min
+- Total execution time: 1.10 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| Phase 01 | 7/8 | 43min | 6.1min |
+| Phase 01 | 8/8 | 66min | 8.3min |
 
 **Recent Trend:**
-- Last 5 plans: 6.4min
-- Trend: Up slightly
+- Last 5 plans: 10.2min
+- Trend: Up sharply
 | Phase 01 P01 | 5min | 1 tasks | 5 files |
 | Phase 01 P02 | 6min | 2 tasks | 13 files |
 | Phase 01 P03 | 4min | 2 tasks | 13 files |
@@ -44,6 +44,7 @@ Plan: 7 of 8 complete
 | Phase 01 P04 | 6min | 2 tasks | 7 files |
 | Phase 01 P05 | 8min | 2 tasks | 15 files |
 | Phase 01 P06 | 10min | 2 tasks | 12 files |
+| Phase 01 P08 | 23min | 2 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -76,6 +77,8 @@ Recent decisions affecting current work:
 - [Phase 01]: Run records must carry both stable preset references and resolved preset snapshots so historical runs stay reproducible after preset edits.
 - [Phase 01]: Default local API paths resolve repo-root presets and workspace-data locations, but app construction accepts explicit overrides for tests and alternate roots.
 - [Phase 01]: Run creation stays append-only by generating fresh run ids while delegating scenario snapshot and preset snapshot assembly to createRunRecord.
+- [Phase 01]: Centralize browser-side preset, scenario, and run I/O in a dedicated workspace API layer orchestrated by useWorkspace.
+- [Phase 01]: Keep the integrated workbench on shared visuals primitives and label all Phase 1 run outputs as placeholder surfaces.
 
 ### Pending Todos
 
@@ -95,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-20T03:16:40.615Z
-**Stopped At:** Completed 01-06-PLAN.md
+**Last session:** 2026-03-20T03:44:08.707Z
+**Stopped At:** Completed 01-08-PLAN.md
 **Resume File:** None
