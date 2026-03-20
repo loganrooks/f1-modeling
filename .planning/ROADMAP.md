@@ -30,7 +30,7 @@ The path to a useful F1 modeling product is to build a clear local-first learnin
   2. User can define a scenario with circuit, session type, regulation preset, weather preset, and driver profile placeholders.
   3. Each run stores enough metadata to reproduce or compare it later, and the architecture leaves room for educational subsystem views and later subsystem-family expansion.
   4. The workspace includes reusable visual primitives that later models can plug into without redesigning the whole UI.
-**Plans**: 8 plans
+**Plans**: 9 plans
 
 Plans:
 - [ ] 01-01: Define the root workspace and shared toolchain contract
@@ -41,6 +41,7 @@ Plans:
 - [ ] 01-06: Build the local file persistence layer and Phase 1 API routes
 - [ ] 01-07: Create reusable Phase 1 visual primitives
 - [ ] 01-08: Assemble the first interactive workspace on top of the shared contracts
+- [ ] 01-09: Fix unchecked array indexing in domain contract tests (gap closure)
 
 ### Phase 2: Reduced-Order Lap Model
 **Goal**: Deliver the first transparent lap model with editable vehicle and circuit parameters.
@@ -180,7 +181,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundations and Scenario Schema | 0/8 | Not started | - |
+| 1. Foundations and Scenario Schema | 8/9 | Gap closure | - |
 | 2. Reduced-Order Lap Model | 0/3 | Not started | - |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 0/4 | Not started | - |
 | 4. Strategy, Estimation, Explanations, and Learning Views | 0/3 | Not started | - |
