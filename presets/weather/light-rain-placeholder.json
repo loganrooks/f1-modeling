@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "light-rain-placeholder",
+  "presetType": "weather",
+  "name": "Light Rain Placeholder",
+  "description": "Explicit placeholder preset for light-rain conditions before environment-coupling dynamics are modeled.",
+  "provenance": {
+    "sourceType": "placeholder",
+    "source": "Phase 1 weather preset seed",
+    "notes": "This preset is intentionally labeled as a placeholder and should not be read as a calibrated wet-weather model."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Wetness, visibility, aquaplaning risk, and grip loss remain qualitative placeholders in Phase 1.",
+      "provenance": {
+        "sourceType": "placeholder",
+        "source": "Phase 1 light-rain weather preset seed",
+        "notes": "Real wet-weather behavior depends on later environment, tire, and control models."
+      }
+    }
+  ],
+  "values": {
+    "surfaceCondition": "damp",
+    "rainfall": "light",
+    "trackWetness": "partial",
+    "ambientTemperatureC": 20,
+    "trackTemperatureC": 24
+  }
+}

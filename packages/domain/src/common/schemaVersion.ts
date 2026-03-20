@@ -35,6 +35,7 @@ export const scenarioDocumentSchemaVersion = schemaVersion(
   "scenario-document",
   1,
 );
+export const presetDocumentSchemaVersion = schemaVersion("preset-document", 1);
 export const runRecordSchemaVersion = schemaVersion("run-record", 1);
 
 export type DocumentId = z.infer<typeof documentIdSchema>;

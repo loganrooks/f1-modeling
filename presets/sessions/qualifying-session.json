@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "qualifying-session",
+  "presetType": "session",
+  "name": "Qualifying Session",
+  "description": "Baseline qualifying-session preset for Phase 1 scenario selection and future comparison workflows.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 1 session preset seed",
+    "notes": "Captures a qualifying-session category for selection without claiming current sporting-rule completeness."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Segment timings and knockout rules are summarized coarsely because detailed session orchestration is outside Phase 1 scope.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Phase 1 qualifying preset seed",
+        "notes": "Phase 1 only needs an honest category distinction from race sessions."
+      }
+    }
+  ],
+  "values": {
+    "sessionKind": "qualifying",
+    "format": "knockout",
+    "segments": [
+      "Q1",
+      "Q2",
+      "Q3"
+    ],
+    "parcFerme": "placeholder"
+  }
+}

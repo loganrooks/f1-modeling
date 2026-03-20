@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "fia-2026-baseline",
+  "presetType": "regulation",
+  "name": "FIA 2026 Baseline",
+  "description": "Phase 1 baseline regulation preset for exploring the 2026 rules direction without claiming full sporting or technical fidelity.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 1 research synthesis from public 2026 Formula 1 regulation direction",
+    "notes": "This preset captures only coarse Phase 1 configuration hooks and is not an official regulation transcription."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Active aero and larger electrical-energy contribution are represented as qualitative placeholders rather than calibrated subsystem equations.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Phase 1 regulation preset seed",
+        "notes": "Detailed active-aero and power-unit dynamics are deferred to later phases."
+      }
+    }
+  ],
+  "values": {
+    "era": "2026",
+    "activeAeroModeSwitching": true,
+    "electricalEnergyContribution": "increased-relative-to-prior-era",
+    "powerUnitPackage": "placeholder-2026-direction",
+    "notes": [
+      "Phase 1 preset selection only",
+      "Not a full legal or technical specification"
+    ]
+  }
+}

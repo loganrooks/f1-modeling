@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "dry-baseline",
+  "presetType": "weather",
+  "name": "Dry Baseline",
+  "description": "Nominal dry-weather placeholder for Phase 1 scenario selection and reproducible run snapshots.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 1 weather preset seed",
+    "notes": "Provides a stable dry baseline without implying a calibrated environment or tire-temperature model."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Grip evolution and thermal behavior are deferred, so this preset is a selection contract rather than a predictive weather model.",
+      "provenance": {
+        "sourceType": "placeholder",
+        "source": "Phase 1 weather preset seed",
+        "notes": "Environment coupling lands in Phase 3."
+      }
+    }
+  ],
+  "values": {
+    "surfaceCondition": "dry",
+    "rainfall": "none",
+    "trackWetness": "none",
+    "ambientTemperatureC": 24,
+    "trackTemperatureC": 33
+  }
+}

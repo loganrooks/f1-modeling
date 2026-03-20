@@ -2,6 +2,7 @@ export {
   documentIdSchema,
   isoTimestampSchema,
   nonEmptyStringSchema,
+  presetDocumentSchemaVersion,
   runRecordSchemaVersion,
   schemaVersion,
   schemaVersionSchema,
@@ -45,9 +46,29 @@ export type {
 } from "./scenario/schema.js";
 
 export {
+  presetDocumentSchema,
+  presetTypeSchema,
+  regulationPresetDocumentSchema,
+  sessionPresetDocumentSchema,
+  weatherPresetDocumentSchema,
+} from "./presets/schema.js";
+export type {
+  PresetDocument,
+  PresetType,
+  RegulationPresetDocument,
+  SessionPresetDocument,
+  WeatherPresetDocument,
+} from "./presets/schema.js";
+
+export {
+  getPresetById,
+  groupPresetCatalog,
+} from "./presets/registry.js";
+export type { PresetCatalog } from "./presets/registry.js";
+
+export {
   presetSnapshotSchema,
   presetSnapshotsSchema,
-  presetTypeSchema,
   runArtifactSchema,
   runRecordSchema,
   runStatusSchema,
@@ -55,7 +76,6 @@ export {
 export type {
   PresetSnapshot,
   PresetSnapshots,
-  PresetType,
   RunArtifact,
   RunRecord,
   RunStatus,

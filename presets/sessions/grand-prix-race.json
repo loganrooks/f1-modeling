@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "grand-prix-race",
+  "presetType": "session",
+  "name": "Grand Prix Race",
+  "description": "Baseline race-session preset for Phase 1 scenario selection and run logging.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 1 session preset seed",
+    "notes": "Represents a typical race-session shape for schema selection, not an exhaustive sporting-regulation model."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Session timing, incidents, and operational states remain placeholders until strategy and race-operations phases land.",
+      "provenance": {
+        "sourceType": "placeholder",
+        "source": "Phase 1 session preset seed",
+        "notes": "Only the stable selection contract matters in Phase 1."
+      }
+    }
+  ],
+  "values": {
+    "sessionKind": "race",
+    "distanceUnit": "laps",
+    "plannedDistance": 52,
+    "standingStart": true,
+    "safetyCarModel": "placeholder",
+    "redFlagModel": "placeholder"
+  }
+}

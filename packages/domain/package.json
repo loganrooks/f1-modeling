@@ -6,6 +6,10 @@
   "description": "Shared domain contracts for the F1 Modeling Lab.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./node/preset-catalog": "./src/node/presetCatalog.ts"
+  },
   "files": [
     "dist"
   ],
