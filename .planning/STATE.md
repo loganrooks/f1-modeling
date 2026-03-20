@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 ## Current Position
 
 Phase: 1 of 8 (Foundations and Scenario Schema)
-Plan: 8 of 8 complete
+Plan: 9 of 9 complete
 
 **Current Phase:** 01
 **Current Phase Name:** Foundations and Scenario Schema
 **Total Phases:** 8
-**Current Plan:** 8
-**Total Plans in Phase:** 8
-**Status:** Phase complete
+**Current Plan:** 9
+**Total Plans in Phase:** 9
+**Status:** Phase complete — ready for verification
 **Last Activity:** 2026-03-20
 **Progress:** [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 8.3 min
-- Total execution time: 1.10 hours
+- Total plans completed: 9
+- Average duration: 7.6 min
+- Total execution time: 1.13 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| Phase 01 | 8/8 | 66min | 8.3min |
+| Phase 01 | 9/9 | 68min | 7.6min |
 
 **Recent Trend:**
 - Last 5 plans: 10.2min
@@ -45,6 +45,7 @@ Plan: 8 of 8 complete
 | Phase 01 P05 | 8min | 2 tasks | 15 files |
 | Phase 01 P06 | 10min | 2 tasks | 12 files |
 | Phase 01 P08 | 23min | 2 tasks | 13 files |
+| Phase 01 P09 | 2min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,7 @@ Recent decisions affecting current work:
 - [Phase 01]: Run creation stays append-only by generating fresh run ids while delegating scenario snapshot and preset snapshot assembly to createRunRecord.
 - [Phase 01]: Centralize browser-side preset, scenario, and run I/O in a dedicated workspace API layer orchestrated by useWorkspace.
 - [Phase 01]: Keep the integrated workbench on shared visuals primitives and label all Phase 1 run outputs as placeholder surfaces.
+- [Phase 01]: Use a generic firstPreset<T> helper with runtime assertion rather than non-null assertions or type casts, preserving test safety under noUncheckedIndexedAccess.
 
 ### Pending Todos
 
@@ -98,6 +100,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-20T03:44:08.707Z
-**Stopped At:** Completed 01-08-PLAN.md
+**Last session:** 2026-03-20T04:25:32.551Z
+**Stopped At:** Completed 01-09-PLAN.md
 **Resume File:** None
