@@ -15,11 +15,11 @@ Plan: 1 of 8 complete
 **Current Phase:** 01
 **Current Phase Name:** Foundations and Scenario Schema
 **Total Phases:** 8
-**Current Plan:** 3
+**Current Plan:** 5
 **Total Plans in Phase:** 8
 **Status:** Ready to execute
 **Last Activity:** 2026-03-20
-**Progress:** [████░░░░░░] 38%
+**Progress:** [██████░░░░] 63%
 
 ## Performance Metrics
 
@@ -40,6 +40,8 @@ Plan: 1 of 8 complete
 | Phase 01 P01 | 5min | 1 tasks | 5 files |
 | Phase 01 P02 | 6min | 2 tasks | 13 files |
 | Phase 01 P03 | 4min | 2 tasks | 13 files |
+| Phase 01 P07 | 4min | 2 tasks | 6 files |
+| Phase 01 P04 | 6min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -63,6 +65,11 @@ Recent decisions affecting current work:
 - [Phase 01]: Keep Fastify app construction separate from process startup so later plans can reuse the app instance cleanly.
 - [Phase 01]: Keep packages/domain and packages/visuals as explicit Phase 1 placeholders until schema and primitive plans land.
 - [Phase 01]: Use clearly labeled non-physical placeholder metrics in sim-core so wiring can progress without implying unsupported model fidelity.
+- [Phase 01]: Keep visuals package APIs presentation-only so later app shells provide data and control flow without deep private imports.
+- [Phase 01]: Encode honesty constraints directly in shared primitives, especially for provenance labeling and track-context placeholders.
+- [Phase 01]: Keep scenario documents and run records as separate versioned contracts, with scenario documents referencing presets instead of embedding one opaque workspace blob.
+- [Phase 01]: Represent future observer, controller, and imported-data surfaces as explicit placeholder sections with placeholder provenance instead of speculative Phase 1 config.
+- [Phase 01]: Make the canonical Phase 1 default scenario deterministic and validated at factory construction time.
 
 ### Pending Todos
 
@@ -82,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-20T02:31:22.840Z
-**Stopped At:** Completed 01-03-PLAN.md
+**Last session:** 2026-03-20T02:44:49.232Z
+**Stopped At:** Completed 01-04-PLAN.md
 **Resume File:** None
