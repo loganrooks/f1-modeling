@@ -9,17 +9,17 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 
 ## Current Position
 
-Phase: 1 of 8 (Foundations and Scenario Schema)
-Plan: 9 of 9 complete
+Phase: 2 of 8 (Reduced-Order Lap Model)
+Plan: 1 of 3 complete
 
-**Current Phase:** 01
-**Current Phase Name:** Foundations and Scenario Schema
+**Current Phase:** 02
+**Current Phase Name:** Reduced-Order Lap Model
 **Total Phases:** 8
-**Current Plan:** 9
-**Total Plans in Phase:** 9
-**Status:** Phase complete — ready for verification
-**Last Activity:** 2026-03-20
-**Progress:** [██████████] 100%
+**Current Plan:** 2
+**Total Plans in Phase:** 3
+**Status:** In progress
+**Last Activity:** 2026-03-26
+**Progress:** [█████░░░░░] 53%
 
 ## Performance Metrics
 
@@ -46,6 +46,7 @@ Plan: 9 of 9 complete
 | Phase 01 P06 | 10min | 2 tasks | 12 files |
 | Phase 01 P08 | 23min | 2 tasks | 13 files |
 | Phase 01 P09 | 2min | 1 tasks | 1 files |
+| Phase 02 P01 | 14min | 2 tasks | 22 files |
 
 ## Accumulated Context
 
@@ -88,6 +89,9 @@ Recent decisions affecting current work:
 - [Phase 01]: Centralize browser-side preset, scenario, and run I/O in a dedicated workspace API layer orchestrated by useWorkspace.
 - [Phase 01]: Keep the integrated workbench on shared visuals primitives and label all Phase 1 run outputs as placeholder surfaces.
 - [Phase 01]: Use a generic firstPreset<T> helper with runtime assertion rather than non-null assertions or type casts, preserving test safety under noUncheckedIndexedAccess.
+- [Phase 02]: sim-core now depends on @f1-modeling/domain for CircuitDocument type in lapSolver
+- [Phase 02]: Circuit presets use 5m curvature arrays with sine-ramped transitions and x/y from heading integration
+- [Phase 02]: SimulationRunSummary generalized to Phase1PlaceholderSummary | LapModelSummary discriminated union on harnessId
 
 ### Pending Todos
 
@@ -107,6 +111,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-26
-**Stopped At:** Gap analysis complete; requirements and roadmap updated; three new deliberations written
+**Last session:** 2026-03-27T03:49:44.303Z
+**Stopped At:** Completed 02-01-PLAN.md
 **Resume File:** None
