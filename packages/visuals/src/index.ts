@@ -36,3 +36,24 @@ export type {
   TrackContextPlaceholderProps,
   TrackContextPlaceholderState,
 } from './workspace/TrackContextPlaceholder';
+
+export { SpeedProfileTrace } from './traces/SpeedProfileTrace';
+export type {
+  SpeedProfileTracePoint,
+  SpeedProfileTraceProps,
+  SpeedProfileSector,
+} from './traces/SpeedProfileTrace';
+
+export { SensitivityWaterfall } from './inspectors/SensitivityWaterfall';
+export type {
+  SensitivityWaterfallProps,
+  WaterfallSectorResult,
+} from './inspectors/SensitivityWaterfall';
+
+export { TrackMap } from './workspace/TrackMap';
+export type {
+  TrackMapPoint,
+  TrackMapProps,
+  TrackMapProvenance,
+  TrackMapSector,
+} from './workspace/TrackMap';
