@@ -37,6 +37,7 @@ export {
   presetReferenceSchema,
   reservedExtensionPointSchema,
   scenarioDocumentSchema,
+  vehicleParamsSchema,
 } from "./scenario/schema.js";
 export type {
   CircuitSelection,
@@ -44,6 +45,7 @@ export type {
   PresetReference,
   ReservedExtensionPoint,
   ScenarioDocument,
+  VehicleParamsInput,
 } from "./scenario/schema.js";
 
 export {

@@ -10,6 +10,16 @@ import {
   placeholderProvenanceSchema,
 } from "../common/provenance.js";
 
+export const vehicleParamsSchema = z
+  .object({
+    mass: z.number().positive(),
+    dragFactor: z.number().nonnegative(),
+    downforceFactor: z.number().nonnegative(),
+    peakPower: z.number().positive(),
+    gripCoefficient: z.number().positive(),
+  })
+  .strict();
+
 export const presetReferenceSchema = z
   .object({
     presetId: documentIdSchema,
@@ -55,12 +65,14 @@ export const scenarioDocumentSchema = z
     driverProfile: driverProfilePlaceholderSchema,
     seed: z.number().int().nonnegative(),
     assumptionNotes: z.array(assumptionNoteSchema),
+    vehicleParams: vehicleParamsSchema.optional(),
     observerConfigPlaceholder: reservedExtensionPointSchema,
     controllerConfigPlaceholder: reservedExtensionPointSchema,
     importedDataAlignmentPlaceholder: reservedExtensionPointSchema,
   })
   .strict();
 
+export type VehicleParamsInput = z.infer<typeof vehicleParamsSchema>;
 export type CircuitSelection = z.infer<typeof circuitSelectionSchema>;
 export type DriverProfilePlaceholder = z.infer<
   typeof driverProfilePlaceholderSchema

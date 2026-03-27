@@ -6,6 +6,7 @@ import Fastify, {
   type FastifyServerOptions,
 } from "fastify";
 
+import registerCircuitRoutes from "./routes/circuits.js";
 import healthRoutes from "./routes/health.js";
 import registerPresetRoutes from "./routes/presets.js";
 import registerRunRoutes from "./routes/runs.js";
@@ -59,6 +60,7 @@ export function buildApp(options: BuildAppOptions = {}): FastifyInstance {
   });
 
   app.register(healthRoutes);
+  app.register(registerCircuitRoutes, { prefix: "/api", paths });
   app.register(registerPresetRoutes, { prefix: "/api", paths });
   app.register(registerRunRoutes, { prefix: "/api", paths });
   app.register(registerScenarioRoutes, { prefix: "/api", paths });

@@ -52,8 +52,8 @@ export function createDefaultScenario(
       "Canonical Phase 1 scenario scaffold for UI wiring, persistence, and tests.",
     ],
     circuit: {
-      circuitId: "silverstone-gp",
-      name: "Silverstone Circuit",
+      circuitId: "monza",
+      name: "Monza",
       configuration: "Grand Prix",
     },
     sessionPreset: {
@@ -77,6 +77,13 @@ export function createDefaultScenario(
         "Phase 1 driver placeholder",
         "Driver-specific behavior remains a later-phase concern and is not modeled yet.",
       ),
+    },
+    vehicleParams: {
+      mass: 798,
+      dragFactor: 1.05,
+      downforceFactor: 3.8,
+      peakPower: 735_000,
+      gripCoefficient: 1.7,
     },
     seed: options.seed ?? 0,
     assumptionNotes: [

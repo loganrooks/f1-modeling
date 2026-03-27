@@ -4,6 +4,7 @@ import { z, ZodError } from "zod";
 
 import type { LocalApiPaths } from "../app.js";
 import {
+  createLapModelRun,
   createPhase1Run,
   listRuns,
   RunDependencyError,
@@ -17,6 +18,7 @@ interface RunRouteOptions {
 const createRunRequestSchema = z
   .object({
     scenarioId: documentIdSchema,
+    harnessId: z.enum(["qss-lap-model", "phase1-placeholder"]).optional(),
   })
   .strict();
 
@@ -39,7 +41,26 @@ export const registerRunRoutes: FastifyPluginAsync<RunRouteOptions> = async (
   app.post("/runs", async (request, reply) => {
     try {
       const body = createRunRequestSchema.parse(request.body);
-      const runRecord = await createPhase1Run(paths, body);
+
+      let runRecord;
+
+      if (body.harnessId === "phase1-placeholder") {
+        runRecord = await createPhase1Run(paths, body);
+      } else if (body.harnessId === "qss-lap-model") {
+        runRecord = await createLapModelRun(paths, body);
+      } else {
+        // No explicit harnessId: try lap model, fall back to placeholder
+        // if the circuit cannot be resolved.
+        try {
+          runRecord = await createLapModelRun(paths, body);
+        } catch (lapError) {
+          if (lapError instanceof RunDependencyError) {
+            runRecord = await createPhase1Run(paths, body);
+          } else {
+            throw lapError;
+          }
+        }
+      }
 
       reply.code(201);
       return runRecord;

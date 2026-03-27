@@ -112,6 +112,129 @@ describe("workspace routes", () => {
     expect(getScenarioResponse.json()).toEqual(scenario);
   });
 
+  it("lists available circuits from the presets directory", async () => {
+    const circuitResponse = await app.inject({
+      method: "GET",
+      url: "/api/circuits",
+    });
+
+    expect(circuitResponse.statusCode).toBe(200);
+
+    const circuits = circuitResponse.json();
+
+    expect(circuits.length).toBeGreaterThanOrEqual(3);
+    expect(circuits).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ circuitId: "monza" }),
+        expect.objectContaining({ circuitId: "monaco" }),
+        expect.objectContaining({ circuitId: "silverstone" }),
+      ]),
+    );
+  });
+
+  it("creates a Phase 1 placeholder run when explicitly requested", async () => {
+    const scenario = createDefaultScenario({
+      scenarioId: "phase1-placeholder-run",
+      name: "Phase 1 Placeholder Run",
+      seed: 11,
+    });
+
+    await app.inject({
+      method: "POST",
+      url: "/api/scenarios",
+      payload: scenario,
+    });
+
+    const runResponse = await app.inject({
+      method: "POST",
+      url: "/api/runs",
+      payload: {
+        scenarioId: scenario.scenarioId,
+        harnessId: "phase1-placeholder",
+      },
+    });
+
+    expect(runResponse.statusCode).toBe(201);
+
+    const run = runResponse.json();
+
+    expect(run.runId).toMatch(/^run-phase1-placeholder-run-/);
+    expect(run.scenarioId).toBe(scenario.scenarioId);
+    expect(run.modelVersion).toBe("phase1-placeholder/v1");
+    expect(run.appVersion).toBe("0.1.0");
+    expect(run.presetReferences.regulation.presetId).toBe(
+      scenario.regulationPreset.presetId,
+    );
+    expect(run.presetSnapshots.regulation.presetId).toBe(
+      scenario.regulationPreset.presetId,
+    );
+    expect(run.artifacts).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          artifactType: "phase1-placeholder-trace",
+        }),
+      ]),
+    );
+  });
+
+  it("creates a lap model run with circuit and vehicle params", async () => {
+    const scenario = createDefaultScenario({
+      scenarioId: "lap-model-run",
+      name: "Lap Model Run",
+      seed: 42,
+    });
+
+    await app.inject({
+      method: "POST",
+      url: "/api/scenarios",
+      payload: scenario,
+    });
+
+    const runResponse = await app.inject({
+      method: "POST",
+      url: "/api/runs",
+      payload: {
+        scenarioId: scenario.scenarioId,
+        harnessId: "qss-lap-model",
+      },
+    });
+
+    expect(runResponse.statusCode).toBe(201);
+
+    const run = runResponse.json();
+
+    expect(run.runId).toMatch(/^run-lap-model-run-/);
+    expect(run.scenarioId).toBe(scenario.scenarioId);
+    expect(run.modelVersion).toBe("qss-lap-model/v1");
+    expect(run.summaryMetrics.harnessId).toBe("qss-lap-model");
+    expect(run.summaryMetrics.circuitId).toBe("monza");
+    expect(run.summaryMetrics.lapTime).toBeGreaterThan(0);
+    expect(run.summaryMetrics.sectorResults).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ sectorIndex: 0 }),
+      ]),
+    );
+    expect(run.summaryMetrics.speedProfile.length).toBeGreaterThan(0);
+    expect(run.summaryMetrics.assumptions.length).toBeGreaterThan(0);
+    expect(run.summaryMetrics.vehicleParams).toEqual(
+      expect.objectContaining({
+        mass: 798,
+        peakPower: 735000,
+      }),
+    );
+    expect(run.artifacts).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          artifactType: "qss-speed-profile",
+        }),
+      ]),
+    );
+    expect(run.assumptionNotes.length).toBeGreaterThan(0);
+    expect(run.assumptionNotes[0].provenance.sourceType).toBe(
+      "engineering-inference",
+    );
+  });
+
   it("creates append-only run history records with preset references and snapshots", async () => {
     const scenario = createDefaultScenario({
       scenarioId: "append-only-run-scenario",
@@ -141,7 +264,7 @@ describe("workspace routes", () => {
 
     expect(firstRun.runId).toMatch(/^run-append-only-run-scenario-/);
     expect(firstRun.scenarioId).toBe(scenario.scenarioId);
-    expect(firstRun.modelVersion).toBe("phase1-placeholder/v1");
+    expect(firstRun.modelVersion).toBe("qss-lap-model/v1");
     expect(firstRun.appVersion).toBe("0.1.0");
     expect(firstRun.presetReferences.regulation.presetId).toBe(
       scenario.regulationPreset.presetId,
@@ -158,7 +281,7 @@ describe("workspace routes", () => {
     expect(firstRun.artifacts).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          artifactType: "phase1-placeholder-trace",
+          artifactType: "qss-speed-profile",
         }),
       ]),
     );
