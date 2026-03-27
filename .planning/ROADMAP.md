@@ -59,6 +59,15 @@ Plans:
 - [ ] 02-02-PLAN.md — API and workspace integration for lap model execution with circuit selection and vehicle parameter editing
 - [ ] 02-03-PLAN.md — Speed profile trace, track map, sensitivity waterfall, and run comparison visualization
 
+### Phase 02.1: Circuit Geometry Pipeline (INSERTED)
+
+**Goal:** Replace hand-authored non-closing x/y circuit coordinates with real GPS-derived geometry so track map visualizations resemble actual circuits, and deliver a reproducible pipeline for generating circuit geometry.
+**Depends on:** Phase 2
+**Plans:** 1 plan
+
+Plans:
+- [ ] 02.1-01-PLAN.md — Python geometry pipeline (TUMFTM + bacinger data), preset updates, and visual verification
+
 ### Phase 3: Tire, Electrical, Weather, Environment, and Energy Dynamics
 **Goal**: Add the main non-ideal dynamics, reduced-order electrical subsystem behavior, and explicit car-environment coupling that shape stint evolution and regulation-era tradeoffs.
 **Depends on**: Phase 2
@@ -197,6 +206,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 |-------|----------------|--------|-----------|
 | 1. Foundations and Scenario Schema | 9/9 | Complete | 2026-03-20 |
 | 2. Reduced-Order Lap Model | 3/3 | Complete | 2026-03-27 |
+| 02.1. Circuit Geometry Pipeline | 0/1 | Planned | - |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 0/4 | Not started | - |
 | 4. Strategy, Estimation, Explanations, and Learning Views | 0/6 | Not started | - |
 | 5. Driver Style and Control Systems | 0/5 | Not started | - |
