@@ -99,7 +99,7 @@ Recent decisions affecting current work:
 
 ### Pending Todos
 
-None yet.
+1. Add context-appropriate comparison modes for same-track and cross-track analysis (MEDIUM, ui)
 
 ### Blockers/Concerns
 
