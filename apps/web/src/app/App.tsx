@@ -147,10 +147,12 @@ export function App() {
     description:
       "Shared provenance panel reused so facts, engineering inference, and placeholders stay visibly distinct.",
     modelLabel: workspace.selectedRun
-      ? "Phase 1 placeholder harness"
-      : "Phase 1 scenario workspace",
+      ? workspace.selectedRun.summaryMetrics.harnessId === "qss-lap-model"
+        ? "QSS lap model (Lenzo & Rossi 2020)"
+        : "Phase 1 placeholder harness"
+      : "Scenario workspace",
     modelVersion:
-      workspace.selectedRun?.modelVersion ?? "phase1-workspace/draft",
+      workspace.selectedRun?.modelVersion ?? "workspace/draft",
     entries: assumptionEntries,
     notes: [
       {
@@ -192,6 +194,7 @@ export function App() {
         <ScenarioEditor
           scenario={workspace.currentScenario}
           presetCatalog={workspace.presetCatalog}
+          circuitCatalog={workspace.circuitCatalog}
           savedScenarios={workspace.savedScenarios}
           isBooting={workspace.isBooting}
           isSaving={workspace.isSavingScenario}

@@ -1,9 +1,11 @@
 import {
+  circuitDocumentSchema,
   regulationPresetDocumentSchema,
   runRecordSchema,
   scenarioDocumentSchema,
   sessionPresetDocumentSchema,
   weatherPresetDocumentSchema,
+  type CircuitDocument,
   type PresetCatalog,
   type RunRecord,
   type ScenarioDocument,
@@ -142,7 +144,28 @@ export async function createPlaceholderRun(
 ): Promise<RunRecord> {
   const payload = await requestJson("/api/runs", {
     method: "POST",
-    body: JSON.stringify({ scenarioId }),
+    body: JSON.stringify({ scenarioId, harnessId: "phase1-placeholder" }),
+  });
+
+  return runRecordSchema.parse(payload);
+}
+
+export async function fetchCircuitCatalog(): Promise<CircuitDocument[]> {
+  const payload = await requestJson("/api/circuits");
+
+  if (!Array.isArray(payload)) {
+    throw new Error("Expected circuit catalog response.");
+  }
+
+  return payload.map((entry) => circuitDocumentSchema.parse(entry));
+}
+
+export async function createLapModelRun(
+  scenarioId: string,
+): Promise<RunRecord> {
+  const payload = await requestJson("/api/runs", {
+    method: "POST",
+    body: JSON.stringify({ scenarioId, harnessId: "qss-lap-model" }),
   });
 
   return runRecordSchema.parse(payload);

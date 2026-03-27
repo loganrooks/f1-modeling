@@ -1,5 +1,6 @@
 import {
   createDefaultScenario,
+  type CircuitDocument,
   type PresetCatalog,
   type RunRecord,
   type ScenarioDocument,
@@ -7,7 +8,9 @@ import {
 import { startTransition, useEffect, useState } from "react";
 
 import {
+  createLapModelRun,
   createPlaceholderRun,
+  fetchCircuitCatalog,
   fetchPresetCatalog,
   listRunHistory,
   listScenarioDocuments,
@@ -36,6 +39,7 @@ function getErrorMessage(error: unknown): string {
 
 export function useWorkspace() {
   const [presetCatalog, setPresetCatalog] = useState<PresetCatalog | null>(null);
+  const [circuitCatalog, setCircuitCatalog] = useState<CircuitDocument[]>([]);
   const [currentScenario, setCurrentScenario] = useState<ScenarioDocument>(() =>
     createDefaultScenario(),
   );
@@ -54,8 +58,9 @@ export function useWorkspace() {
     setIsBooting(true);
 
     try {
-      const [catalog, scenarios, runs] = await Promise.all([
+      const [catalog, circuits, scenarios, runs] = await Promise.all([
         fetchPresetCatalog(),
+        fetchCircuitCatalog(),
         listScenarioDocuments(),
         listRunHistory(),
       ]);
@@ -63,6 +68,7 @@ export function useWorkspace() {
 
       startTransition(() => {
         setPresetCatalog(catalog);
+        setCircuitCatalog(circuits);
         setSavedScenarios(orderedScenarios);
         setRunHistory(runs);
         setCurrentScenario((draft) => {
@@ -163,8 +169,19 @@ export function useWorkspace() {
 
     try {
       const savedScenario = await saveScenarioDocument(currentScenario);
-      const createdRun = await createPlaceholderRun(savedScenario.scenarioId);
+
+      const hasVehicleParams = savedScenario.vehicleParams !== undefined;
+      const hasMatchingCircuit = circuitCatalog.some(
+        (c) => c.circuitId === savedScenario.circuit.circuitId,
+      );
+      const useLapModel = hasVehicleParams && hasMatchingCircuit;
+
+      const createdRun = useLapModel
+        ? await createLapModelRun(savedScenario.scenarioId)
+        : await createPlaceholderRun(savedScenario.scenarioId);
+
       const { scenarios, runs } = await reloadCollections();
+      const runLabel = useLapModel ? "lap model run" : "placeholder run";
 
       startTransition(() => {
         setCurrentScenario(savedScenario);
@@ -173,7 +190,7 @@ export function useWorkspace() {
         setSelectedRunId(createdRun.runId);
         setNotice({
           tone: "success",
-          text: `Saved "${savedScenario.name}" and appended placeholder run "${createdRun.runId}".`,
+          text: `Saved "${savedScenario.name}" and appended ${runLabel} "${createdRun.runId}".`,
         });
       });
     } catch (error) {
@@ -188,6 +205,7 @@ export function useWorkspace() {
 
   return {
     presetCatalog,
+    circuitCatalog,
     currentScenario,
     savedScenarios,
     runHistory,

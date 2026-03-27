@@ -1,4 +1,9 @@
-import { type PresetCatalog, type ScenarioDocument } from "@f1-modeling/domain";
+import {
+  type CircuitDocument,
+  type PresetCatalog,
+  type ScenarioDocument,
+  type VehicleParamsInput,
+} from "@f1-modeling/domain";
 
 import { PresetSelectors } from "../presets/PresetSelectors";
 
@@ -40,9 +45,32 @@ function rebuildAssumptionNotes(
   }));
 }
 
+const DEFAULT_VEHICLE_PARAMS: VehicleParamsInput = {
+  mass: 798,
+  dragFactor: 1.05,
+  downforceFactor: 3.8,
+  peakPower: 735_000,
+  gripCoefficient: 1.7,
+};
+
+const VEHICLE_PARAM_FIELDS: {
+  key: keyof VehicleParamsInput;
+  label: string;
+  unit: string;
+  step: number;
+  min: number;
+}[] = [
+  { key: "mass", label: "Mass", unit: "kg", step: 1, min: 1 },
+  { key: "dragFactor", label: "Drag factor", unit: "kx", step: 0.01, min: 0 },
+  { key: "downforceFactor", label: "Downforce factor", unit: "kz", step: 0.01, min: 0 },
+  { key: "peakPower", label: "Peak power", unit: "W", step: 1000, min: 1 },
+  { key: "gripCoefficient", label: "Grip coefficient", unit: "mu", step: 0.01, min: 0.01 },
+];
+
 type ScenarioEditorProps = {
   scenario: ScenarioDocument;
   presetCatalog: PresetCatalog | null;
+  circuitCatalog: CircuitDocument[];
   savedScenarios: ScenarioDocument[];
   isBooting?: boolean;
   isSaving?: boolean;
@@ -54,6 +82,7 @@ type ScenarioEditorProps = {
 export function ScenarioEditor({
   scenario,
   presetCatalog,
+  circuitCatalog,
   savedScenarios,
   isBooting = false,
   isSaving = false,
@@ -144,43 +173,55 @@ export function ScenarioEditor({
 
         <label className="workspace-field">
           <span className="workspace-label">Circuit</span>
-          <input
-            aria-label="Circuit"
-            className="workspace-input"
-            type="text"
-            value={scenario.circuit.name}
-            onChange={(event) =>
-              onScenarioChange({
-                ...scenario,
-                circuit: {
-                  ...scenario.circuit,
-                  name: event.target.value,
-                },
-              })
-            }
-          />
-        </label>
-
-        <label className="workspace-field">
-          <span className="workspace-label">Circuit id</span>
-          <input
-            aria-label="Circuit id"
-            className="workspace-input"
-            type="text"
-            value={scenario.circuit.circuitId}
-            onChange={(event) =>
-              onScenarioChange({
-                ...scenario,
-                circuit: {
-                  ...scenario.circuit,
-                  circuitId: sanitizeDocumentId(
-                    event.target.value,
-                    scenario.circuit.circuitId,
-                  ),
-                },
-              })
-            }
-          />
+          {circuitCatalog.length > 0 ? (
+            <select
+              aria-label="Circuit"
+              className="workspace-input"
+              value={scenario.circuit.circuitId}
+              onChange={(event) => {
+                const selected = circuitCatalog.find(
+                  (c) => c.circuitId === event.target.value,
+                );
+                if (selected) {
+                  onScenarioChange({
+                    ...scenario,
+                    circuit: {
+                      circuitId: selected.circuitId,
+                      name: selected.name,
+                      configuration: selected.configuration,
+                    },
+                  });
+                }
+              }}
+            >
+              {!circuitCatalog.some((c) => c.circuitId === scenario.circuit.circuitId) && (
+                <option value={scenario.circuit.circuitId}>
+                  {scenario.circuit.name} (not in catalog)
+                </option>
+              )}
+              {circuitCatalog.map((circuit) => (
+                <option key={circuit.circuitId} value={circuit.circuitId}>
+                  {circuit.name}{circuit.configuration ? ` (${circuit.configuration})` : ""}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <input
+              aria-label="Circuit"
+              className="workspace-input"
+              type="text"
+              value={scenario.circuit.name}
+              onChange={(event) =>
+                onScenarioChange({
+                  ...scenario,
+                  circuit: {
+                    ...scenario.circuit,
+                    name: event.target.value,
+                  },
+                })
+              }
+            />
+          )}
         </label>
 
         <label className="workspace-field">
@@ -190,15 +231,7 @@ export function ScenarioEditor({
             className="workspace-input"
             type="text"
             value={scenario.circuit.configuration ?? ""}
-            onChange={(event) =>
-              onScenarioChange({
-                ...scenario,
-                circuit: {
-                  ...scenario.circuit,
-                  configuration: event.target.value || undefined,
-                },
-              })
-            }
+            readOnly={circuitCatalog.length > 0}
           />
         </label>
 
@@ -227,6 +260,73 @@ export function ScenarioEditor({
         disabled={isBooting}
         onScenarioChange={onScenarioChange}
       />
+
+      <div className="workspace-section-heading">
+        <p className="workspace-kicker">Vehicle parameters</p>
+        <h3>QSS model inputs</h3>
+        <p className="workspace-copy">
+          These parameters feed the quasi-steady-state lap model. Default values are engineering-inference from 2026 FIA baseline.
+        </p>
+      </div>
+
+      {scenario.vehicleParams ? (
+        <div
+          className="workspace-form-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+            gap: "0.75rem",
+          }}
+        >
+          {VEHICLE_PARAM_FIELDS.map((field) => (
+            <label key={field.key} className="workspace-field">
+              <span className="workspace-label">
+                {field.label} ({field.unit})
+              </span>
+              <input
+                aria-label={`${field.label} (${field.unit})`}
+                className="workspace-input"
+                type="number"
+                step={field.step}
+                min={field.min}
+                value={scenario.vehicleParams![field.key]}
+                onChange={(event) => {
+                  const raw = parseFloat(event.target.value);
+                  const value = Number.isFinite(raw) ? Math.max(field.min, raw) : field.min;
+                  onScenarioChange({
+                    ...scenario,
+                    vehicleParams: {
+                      ...scenario.vehicleParams!,
+                      [field.key]: value,
+                    },
+                  });
+                }}
+              />
+              <span className="workspace-token workspace-token--muted" style={{ fontSize: "0.7rem", marginTop: "0.25rem" }}>
+                Engineering inference - 2026 FIA baseline
+              </span>
+            </label>
+          ))}
+        </div>
+      ) : (
+        <div className="workspace-action-bar">
+          <button
+            className="workspace-button"
+            type="button"
+            onClick={() =>
+              onScenarioChange({
+                ...scenario,
+                vehicleParams: { ...DEFAULT_VEHICLE_PARAMS },
+              })
+            }
+          >
+            Add vehicle parameters (use 2026 defaults)
+          </button>
+          <span className="workspace-token workspace-token--muted">
+            No vehicle parameters set - Phase 1 scenario
+          </span>
+        </div>
+      )}
 
       <div className="workspace-form-grid">
         <label className="workspace-field">
