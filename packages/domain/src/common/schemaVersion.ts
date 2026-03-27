@@ -37,6 +37,10 @@ export const scenarioDocumentSchemaVersion = schemaVersion(
 );
 export const presetDocumentSchemaVersion = schemaVersion("preset-document", 1);
 export const runRecordSchemaVersion = schemaVersion("run-record", 1);
+export const circuitDocumentSchemaVersion = schemaVersion(
+  "circuit-document",
+  1,
+);
 
 export type DocumentId = z.infer<typeof documentIdSchema>;
 export type IsoTimestamp = z.infer<typeof isoTimestampSchema>;

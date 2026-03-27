@@ -1,4 +1,5 @@
 export {
+  circuitDocumentSchemaVersion,
   documentIdSchema,
   isoTimestampSchema,
   nonEmptyStringSchema,
@@ -92,3 +93,18 @@ export type {
   RunRecord,
   RunStatus,
 } from "./runs/schema.js";
+
+export {
+  circuitCornerSchema,
+  circuitDocumentSchema,
+  circuitPointSchema,
+  circuitSectorSchema,
+  getCircuitById,
+  groupCircuitCatalog,
+} from "./circuits/index.js";
+export type {
+  CircuitCorner,
+  CircuitDocument,
+  CircuitPoint,
+  CircuitSector,
+} from "./circuits/index.js";
