@@ -91,12 +91,14 @@ Official context captured during initialization:
 | Use an explicit layered stack of plant and sensor model -> observer -> model-based control -> later RL | This captures the architecture discussed in deliberation and keeps estimation, control, and learning conceptually aligned | — Pending |
 | Defer RL policy optimization until after explainable control baselines and simulator calibration exist | RL without a credible environment will optimize simulator artifacts instead of useful driving behavior | — Pending |
 | Eventual platform scope is comprehensive across major F1 design and strategy systems, but delivery is staged by subsystem family | We need architecture and roadmap decisions that preserve the long-horizon end-state without trying to build everything immediately | — Pending |
+| Dev servers use env-var HOST toggle (default 127.0.0.1, set 0.0.0.0 for remote access) | Developer SSHs from apollo (MacBook) to dionysus (dev server) over Tailscale; browser UI must be reachable from the remote machine | — Implemented |
+| Target FastF1 and OpenF1 API as the primary external data sources for telemetry import | These are the most practical, well-documented, community-supported paths to real F1 data; shapes Phase 6 adapter architecture | — Pending |
 
 ## Open Questions
 
 | Question | Why It Matters | Criticality | Status |
 |----------|----------------|-------------|--------|
-| What data format(s) will be realistically obtainable from F1 TV Premium or companion tooling? | Determines ingestion interfaces, legal boundaries, and calibration workflow | Critical | Pending |
+| What data format(s) will be realistically obtainable from F1 TV Premium or companion tooling? | Determines ingestion interfaces, legal boundaries, and calibration workflow | Critical | Resolved — FastF1 (Python, MIT, telemetry+position+weather) and OpenF1 API (REST, free) identified as primary targets; see deliberation `data-source-strategy-and-import-feasibility.md` |
 | Which modeling stack should own the simulation core first: Python service, shared library, or in-browser compute? | Affects developer velocity, numerical tooling, and future performance work | Medium | Pending |
 | What visualization primitives should exist in Phase 1 so later model layers can reuse them cleanly? | Prevents the visual learning surface from becoming ad hoc as the simulator grows | Critical | Pending |
 | What is the first acceptable fidelity target for lap-time and stint modeling? | Prevents overbuilding before there is a usable learning loop | Critical | Pending |
@@ -112,4 +114,4 @@ Official context captured during initialization:
 | Which circuits and sessions should serve as the first calibration baseline? | Needed for model validation once data import starts | Medium | Pending |
 
 ---
-*Last updated: 2026-03-19 after incorporating MPC as the preferred control baseline before RL*
+*Last updated: 2026-03-26 after gap analysis — added remote-dev decision, data-source decision, resolved data-format open question*

@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-03-19)
 
 **Core value:** Make F1 design and strategy legible by coupling editable models with visual explanations of why a result changed.
-**Current focus:** Phase 1 complete - Foundations and Scenario Schema
+**Current focus:** Gap analysis complete; Phase 2 next — Reduced-Order Lap Model
 
 ## Current Position
 
@@ -63,6 +63,13 @@ Recent decisions affecting current work:
 - Deliberation: platform scope is eventual full-system F1 coverage with staged subsystem delivery; electrical is early but not the sole defining focus
 - Clarification: environment interaction should be treated as explicit system coupling, not only as weather or preset metadata
 - Deliberation: visualization should be a progressive, model-coupled learning surface rather than a disconnected later polish layer
+- Gap analysis (2026-03-26): added 8 new requirements (PLAT-04, VISU-05, STRA-04, STRA-05, CTRL-05, EDU-03, ESTM-04, DATA-04); refined MODL-01 and MODL-04
+- Gap analysis: expanded Phase 4 from 3 to 6 plans, Phase 5 from 4 to 5, Phase 6 from 4 to 5
+- Gap analysis: dev servers now support HOST env-var toggle for remote access from apollo over Tailscale
+- Gap analysis: FastF1 and OpenF1 API identified as primary data source targets (resolves open question)
+- Deliberation: dev/deployment architecture — env-var toggle recommended; SSH tunnel fallback if HMR unreliable
+- Deliberation: educational pedagogy — hybrid role-based entry points with concept-based depth modules; performance engineer as natural first role for robotics background
+- Deliberation: data source strategy — FastF1 (Python, telemetry-rich) + OpenF1 (REST, Node-native) via adapter interface; Python sidecar for FastF1
 - [Phase 01]: Reserve root dev/build/test/typecheck scripts at the repo root so later workspaces inherit a stable command surface.
 - [Phase 01]: Keep future workspace-data artifacts as local disk files that are git-ignored by default but still human-inspectable.
 - [Phase 01]: Use pinned localhost ports plus a Vite proxy so the browser and API shells can be smoke-tested deterministically.
@@ -89,7 +96,7 @@ None yet.
 ### Blockers/Concerns
 
 - Shared GSD tooling still resolves quality profiles to Claude-era labels; project-level Codex intent is documented but global tooling may still need adaptation later.
-- Realistic telemetry import path is still unknown until actual subscription data workflow is tested.
+- Telemetry import path now targeted at FastF1 (Python) and OpenF1 API (REST); detailed integration architecture deferred to Phase 6 planning.
 - The minimum viable electrical state set and educational UX surface for v1 remain deferred to later roadmap phases and should not leak into Phase 1 execution.
 - The minimum viable environment-interaction model for v1 remains deferred to later roadmap phases and should not leak into Phase 1 execution.
 - The first observer targets and whether EKF is the right initial estimator for them remain deferred to Phase 4 planning.
@@ -100,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-20T04:25:32.551Z
-**Stopped At:** Completed 01-09-PLAN.md
+**Last session:** 2026-03-26
+**Stopped At:** Gap analysis complete; requirements and roadmap updated; three new deliberations written
 **Resume File:** None

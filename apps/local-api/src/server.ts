@@ -1,6 +1,6 @@
 import { buildApp } from './app.js';
 
-const HOST = '127.0.0.1';
+const HOST = process.env.HOST ?? '127.0.0.1';
 const PORT = 8787;
 
 async function startServer() {

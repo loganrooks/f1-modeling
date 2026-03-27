@@ -13,6 +13,8 @@
   - *Motivation:* `user: wants to study strategy under different regulations and non-ideal conditions`
 - [ ] **PLAT-03**: User can save and reload scenario configurations and simulation runs locally.
   - *Motivation:* `user: wants to experiment and compare setups over time`
+- [ ] **PLAT-04**: User can simulate qualifying sessions (Q1/Q2/Q3 with compound allocation and push-lap timing) and sprint races as distinct session modes with format-specific strategy constraints.
+  - *Motivation:* `user: wants comprehensive F1 racing strategy coverage across session formats`
 
 ### Visualization
 
@@ -24,16 +26,18 @@
   - *Motivation:* `user: wants visuals that help build intuition about models and dynamics`
 - [ ] **VISU-04**: User can compare runs, policies, designs, or strategies side by side through interactive visual overlays and linked views.
   - *Motivation:* `user: wants an interactive visualizer that helps relate design and dynamics to optimal policy`
+- [ ] **VISU-05**: User can scrub through simulation time, inspect subsystem state at any point, and branch simulations from intermediate states to explore alternative decisions.
+  - *Motivation:* `user: wants proper visualizations and interactivity to help teach someone onboarding as different F1 racing engineers`
 
 ### Modeling
 
-- [ ] **MODL-01**: Application provides a reduced-order lap and stint model with explicit inputs for mass, drag, downforce proxy, tire grip, and power-unit behavior.
+- [ ] **MODL-01**: Application provides a reduced-order lap and stint model with explicit inputs for mass, drag, downforce proxy, tire grip, power-unit behavior, and basic lateral/longitudinal force balance showing how corner speed, braking distance, and acceleration emerge from these inputs.
   - *Motivation:* `user: wants to understand the model and the modeling process itself`
 - [ ] **MODL-02**: Application models tire wear and tire temperature state across laps and stints.
   - *Motivation:* `user: explicitly wants to experiment with tire wear and tire temperature`
 - [ ] **MODL-03**: Application models reduced-order electrical energy state, harvesting, deployment, and limiting logic that affect lap time and straight-line performance.
   - *Motivation:* `user: wants to study battery deployment policy under the new regulations`
-- [ ] **MODL-04**: Application models non-ideal conditions including ambient temperature, track temperature, rain or wetness, and traffic or safety-car penalties.
+- [ ] **MODL-04**: Application models non-ideal conditions including ambient temperature, track temperature, rain or wetness, traffic or safety-car penalties, and dynamic weather evolution within a session (e.g., rain onset, drying track, grip buildup over laps).
   - *Motivation:* `user: wants to study non-ideal conditions rather than perfect-lap assumptions`
 
 ### Environment Interaction
@@ -58,6 +62,10 @@
   - *Motivation:* `user: wants reasons behind optimal strategy, not just rankings`
 - [ ] **STRA-03**: User can run sensitivity analyses by perturbing weather, wear, incidents, or policy assumptions and comparing outcomes.
   - *Motivation:* `user: wants to experiment under changing non-ideal conditions`
+- [ ] **STRA-04**: User can simulate in-race strategy interventions (mode changes, pit timing responses to rivals, tire management instructions) and see how intervention timing and information state alter race outcomes.
+  - *Motivation:* `user: wants to understand interactions between drivers and the engineering team`
+- [ ] **STRA-05**: User can inject race interruptions (virtual safety car, full safety car, red flag) at specified or probabilistic points in a race simulation and see how they alter optimal strategy.
+  - *Motivation:* `user: wants to study general F1 racing strategy under non-ideal conditions`
 
 ### Driver and Control
 
@@ -69,6 +77,8 @@
   - *Motivation:* `user: wants to understand modeling and control, not just consume an opaque result`
 - [ ] **CTRL-04**: Application supports a model-based control baseline, preferably MPC where tractable, with explicit state, constraint, and cost-function definitions.
   - *Motivation:* `user: MPC could be interesting and is a sensible baseline before RL`
+- [ ] **CTRL-05**: Application can compute or approximate an optimal trajectory for the current model and circuit, and show how parameter changes (grip, downforce, power, regulation constraints) alter the racing line.
+  - *Motivation:* `user: wants to visualize optimal policy and racing lines; wants to understand the control systems involved`
 
 ### Education and Explainability
 
@@ -76,6 +86,8 @@
   - *Motivation:* `user: wants this to be an educational platform`
 - [ ] **EDU-02**: User can view controller-intent, assumptions, and equation-level or rule-level explanations aimed at learning engineers.
   - *Motivation:* `user: wants learning engineers to understand the different control systems involved`
+- [ ] **EDU-03**: The educational surface presents learning paths relevant to different F1 engineering disciplines (race engineer, strategy engineer, performance engineer, vehicle dynamics engineer, power unit engineer) showing what information each role uses and how decisions propagate through the system.
+  - *Motivation:* `user: wants to teach someone looking to onboard as different F1 racing engineers`
 
 ### Estimation and Observers
 
@@ -85,6 +97,8 @@
   - *Motivation:* `user: wants to understand the mathematics behind EKF in context`
 - [ ] **ESTM-03**: User can compare true simulated state, measured state, and estimated state when an observer model is enabled.
   - *Motivation:* `user: wants to understand estimation with respect to modeling and control`
+- [ ] **ESTM-04**: The simulator generates noisy measurement channels that mimic realistic sensor outputs (speed, acceleration, temperatures, pressures), enabling observer comparison of true state vs. measured state vs. estimated state.
+  - *Motivation:* `user: prerequisite for observer layer; creates self-contained estimation learning path before real telemetry is available`
 
 ### Data
 
@@ -94,6 +108,8 @@
   - *Motivation:* `user: expects future subscription-backed data access`
 - [ ] **DATA-03**: Imported data can be aligned with circuit, session, lap, and scenario metadata and compared against simulation outputs.
   - *Motivation:* `user: wants data to be integrated usefully rather than merely displayed`
+- [ ] **DATA-04**: Application supports import from at least one established F1 data source (such as FastF1 or OpenF1 API) as the primary real-data integration path, with adapter architecture that can accommodate additional sources.
+  - *Motivation:* `user: wants ingestion of real telemetry and simulated data collection`
 
 ### Validation
 
@@ -179,12 +195,20 @@
 | DESN-01 | Phase 8 | Pending |
 | ELEC-01 | Phase 3 | Pending |
 | ELEC-02 | Phase 3 | Pending |
+| PLAT-04 | Phase 4 | Pending |
+| VISU-05 | Phase 4 | Pending |
+| STRA-04 | Phase 4 | Pending |
+| STRA-05 | Phase 4 | Pending |
+| EDU-03 | Phase 4 | Pending |
+| ESTM-04 | Phase 4 | Pending |
+| CTRL-05 | Phase 5 | Pending |
+| DATA-04 | Phase 6 | Pending |
 
 **Coverage:**
-- v1 requirements: 34 total
-- Mapped to phases: 34
+- v1 requirements: 42 total
+- Mapped to phases: 42
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-19*
-*Last updated: 2026-03-19 after incorporating MPC as the preferred control baseline before RL*
+*Last updated: 2026-03-26 after gap analysis — added PLAT-04, VISU-05, STRA-04, STRA-05, CTRL-05, EDU-03, ESTM-04, DATA-04; refined MODL-01 and MODL-04*

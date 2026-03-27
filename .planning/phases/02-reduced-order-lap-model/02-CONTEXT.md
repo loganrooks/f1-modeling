@@ -1,6 +1,7 @@
 # Phase 2: Reduced-Order Lap Model - Context
 
 **Gathered:** 2026-03-20
+**Updated:** 2026-03-26 (gap analysis findings incorporated)
 **Status:** Ready for research
 
 <domain>
@@ -53,8 +54,9 @@ The model should expose per-sector or per-segment intermediate state: corner ent
 ### From requirements
 
 - **PLAT-02**: User can choose circuit, regulation preset, weather preset, and session scenario before running. Phase 1 already provides preset selection UI; Phase 2 adds circuit choice and car parameter editing.
-- **MODL-01**: Reduced-order lap and stint model with explicit inputs for mass, drag, downforce proxy, tire grip, and power-unit behavior. Phase 2 delivers the single-lap version; stint extension is Phase 3+.
+- **MODL-01** (refined 2026-03-26): Reduced-order lap and stint model with explicit inputs for mass, drag, downforce proxy, tire grip, power-unit behavior, and basic lateral/longitudinal force balance showing how corner speed, braking distance, and acceleration emerge from these inputs. Phase 2 delivers the single-lap version with at least longitudinal force balance; lateral dynamics deferred to Phase 3 but the model architecture should not preclude them.
 - **VISU-02**: Trajectories, track-map views, or racing-line style outputs when the model supports them. Phase 2 must determine what the model honestly supports and visualize accordingly.
+- **CTRL-05** (added 2026-03-26, Phase 5): Optimal trajectory/racing line computation. Phase 2 does not implement this, but the circuit representation format chosen here directly enables or constrains Phase 5's trajectory optimization. Research should consider spatial coordinate requirements.
 
 ### From Phase 1 decisions
 
@@ -62,6 +64,14 @@ The model should expose per-sector or per-segment intermediate state: corner ent
 - Visualization is a progressive, model-coupled learning surface — not disconnected polish.
 - Encode honesty constraints directly: do not imply precision the model does not justify.
 - The threshold for honest racing-line visualization was explicitly deferred to Phase 2 (from STATE.md blockers).
+
+### From gap analysis and new deliberations (2026-03-26)
+
+- **Phase 3 now expects aero-mode switching** from regulation presets (e.g., DRS, 2026 active-aero states). Phase 2's regulation preset handling should support discrete aero-state parameters even if Phase 2 uses only a single static coefficient. Do not close the door on Phase 3 aero-mode switching.
+- **Phase 3 expects basic lateral force balance.** Phase 2's model can be purely longitudinal, but the architecture should accommodate lateral forces being added in Phase 3 without a rewrite.
+- **FastF1 provides circuit position data** that could seed Phase 2 circuit representations with real spatial coordinates (see data-source-strategy deliberation).
+- **Educational pedagogy deliberation** recommends performance engineer as the first learning role. Phase 2's sensitivity and intermediate-factor views are the natural entry point for that role.
+- **Dev servers now support remote access** via `HOST=0.0.0.0 npm run dev` for Tailscale access from apollo.
 
 </constraints>
 
@@ -80,7 +90,7 @@ The model should expose per-sector or per-segment intermediate state: corner ent
 - **Why it matters:** The circuit format determines whether the model can produce per-corner or per-sector state, whether track-map visualization has spatial grounding, and whether circuits can be extended later for trajectory or racing-line display.
 - **Downstream decision:** Whether `TrackContextPlaceholder` can be upgraded to a real track map, how circuits are stored and loaded, and what circuit metadata Phase 3+ can rely on.
 - **Reversibility:** Medium — circuit format is consumed by the model and visualization layers, so changing it later requires migration.
-- **Research should:** Evaluate minimum circuit data requirements for the recommended model class. Determine whether a lightweight sector list is sufficient or whether curvature profiles and spatial coordinates are needed. Consider what public circuit data is realistically available.
+- **Research should:** Evaluate minimum circuit data requirements for the recommended model class. Determine whether a lightweight sector list is sufficient or whether curvature profiles and spatial coordinates are needed. Consider what public circuit data is realistically available. **New (2026-03-26):** The data source deliberation concluded that FastF1 provides track position data (x/y/z coordinates at ~240ms sampling) for circuits from 2018+. This is a realistic source for seeding circuit representations with spatial coordinates. Research should evaluate whether FastF1 position data is accurate enough to serve as circuit geometry input.
 
 ### 3. When is track-map or racing-line visualization honest for this model?
 - **Type:** final
@@ -144,6 +154,9 @@ The model should expose per-sector or per-segment intermediate state: corner ent
 - Real telemetry overlay against model output — Phase 6
 - Model calibration and confidence scoring — Phase 7
 - Higher-fidelity aero or suspension submodels — v2
+- Optimal trajectory / racing line computation — Phase 5 (CTRL-05), but circuit format chosen here must support it
+- Aero-mode switching (DRS, active aero) — Phase 3, but regulation preset structure should not preclude it
+- Lateral force balance and load transfer — Phase 3 (MODL-01 refinement), but model architecture should accommodate it
 
 </deferred>
 
@@ -151,3 +164,4 @@ The model should expose per-sector or per-segment intermediate state: corner ent
 
 *Phase: 02-reduced-order-lap-model*
 *Context gathered: 2026-03-20*
+*Context updated: 2026-03-26 (gap analysis, 3 new deliberations, requirement refinements)*
