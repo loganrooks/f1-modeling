@@ -46,6 +46,7 @@ export function useWorkspace() {
   const [savedScenarios, setSavedScenarios] = useState<ScenarioDocument[]>([]);
   const [runHistory, setRunHistory] = useState<RunRecord[]>([]);
   const [selectedRunId, setSelectedRunId] = useState<string | null>(null);
+  const [comparisonRunId, setComparisonRunId] = useState<string | null>(null);
   const [isBooting, setIsBooting] = useState(true);
   const [isSavingScenario, setIsSavingScenario] = useState(false);
   const [isCreatingRun, setIsCreatingRun] = useState(false);
@@ -203,6 +204,13 @@ export function useWorkspace() {
     }
   }
 
+  const comparisonRun =
+    runHistory.find((entry) => entry.runId === comparisonRunId) ?? null;
+
+  function selectComparisonRun(runId: string | null) {
+    setComparisonRunId(runId);
+  }
+
   return {
     presetCatalog,
     circuitCatalog,
@@ -210,6 +218,8 @@ export function useWorkspace() {
     savedScenarios,
     runHistory,
     selectedRunId,
+    comparisonRunId,
+    comparisonRun,
     selectedRun:
       runHistory.find((entry) => entry.runId === selectedRunId) ?? runHistory[0] ?? null,
     isBooting,
@@ -223,5 +233,6 @@ export function useWorkspace() {
     reloadCurrentScenario: () => loadScenario(currentScenario.scenarioId),
     createRun,
     selectRun: setSelectedRunId,
+    selectComparisonRun,
   };
 }

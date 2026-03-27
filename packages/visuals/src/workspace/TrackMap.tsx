@@ -26,15 +26,15 @@ export type TrackMapProps = {
   /** Circuit name. */
   circuitName: string;
   /** Optional sector start indicators. */
-  sectors?: TrackMapSector[];
+  sectors?: TrackMapSector[] | undefined;
   /** Provenance for the honesty label. */
   provenance: TrackMapProvenance;
   /** SVG width (default 400). */
-  width?: number;
+  width?: number | undefined;
   /** SVG height (default 400). */
-  height?: number;
+  height?: number | undefined;
   /** If true, render placeholder instead. */
-  noSpatialData?: boolean;
+  noSpatialData?: boolean | undefined;
 };
 
 const panelStyle: CSSProperties = {

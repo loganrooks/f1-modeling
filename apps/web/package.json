@@ -5,6 +5,7 @@
   "type": "module",
   "dependencies": {
     "@f1-modeling/domain": "*",
+    "@f1-modeling/sim-core": "*",
     "@f1-modeling/visuals": "*",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"

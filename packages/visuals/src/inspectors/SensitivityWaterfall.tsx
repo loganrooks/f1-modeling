@@ -22,9 +22,9 @@ export type SensitivityWaterfallProps = {
   /** Modified total lap time in seconds. */
   totalModifiedTime: number;
   /** SVG width (default 700). */
-  width?: number;
+  width?: number | undefined;
   /** SVG height (default 350). */
-  height?: number;
+  height?: number | undefined;
 };
 
 const panelStyle: CSSProperties = {

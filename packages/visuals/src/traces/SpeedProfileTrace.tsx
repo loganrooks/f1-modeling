@@ -21,17 +21,17 @@ export type SpeedProfileTraceProps = {
   /** The speed profile data points. */
   profile: SpeedProfileTracePoint[];
   /** Optional sector boundary annotations. */
-  sectors?: SpeedProfileSector[];
+  sectors?: SpeedProfileSector[] | undefined;
   /** Displayed as chart title. */
   circuitName: string;
   /** Optional second profile for overlay comparison (shown as dashed line). */
-  comparisonProfile?: SpeedProfileTracePoint[];
+  comparisonProfile?: SpeedProfileTracePoint[] | undefined;
   /** Label for the comparison profile. */
-  comparisonLabel?: string;
+  comparisonLabel?: string | undefined;
   /** SVG width (default 800). */
-  width?: number;
+  width?: number | undefined;
   /** SVG height (default 300). */
-  height?: number;
+  height?: number | undefined;
 };
 
 const regimeColors: Record<SpeedProfileTracePoint['regime'], string> = {

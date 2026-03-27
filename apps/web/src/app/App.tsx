@@ -221,22 +221,26 @@ export function App() {
     {
       id: "run-surface",
       eyebrow: "Center lane",
-      title: "Run summaries, comparison, and trace seams",
+      title: "Run output, visualization, and comparison",
       description:
-        "Create deterministic placeholder runs, compare recent history side by side, and keep the Phase 1 output surface honest about its limits.",
+        "Create lap model runs, inspect speed profiles and sector breakdowns, compare runs with sensitivity waterfall charts, and view track maps with speed overlays.",
       tone: "featured",
       content: (
         <div className="workspace-stack">
           <RunSummaryPanel
             runs={workspace.runHistory}
             selectedRunId={workspace.selectedRunId}
+            comparisonRunId={workspace.comparisonRunId}
+            circuitCatalog={workspace.circuitCatalog}
           />
           <RunHistoryPanel
             runs={workspace.runHistory}
             selectedRunId={workspace.selectedRunId}
+            comparisonRunId={workspace.comparisonRunId}
             isCreatingRun={workspace.isCreatingRun}
             onCreateRun={workspace.createRun}
             onSelectRun={workspace.selectRun}
+            onSelectComparisonRun={workspace.selectComparisonRun}
           />
         </div>
       ),
@@ -300,8 +304,8 @@ export function App() {
     <div className="app-shell">
       <WorkbenchShell
         eyebrow="F1 Modeling Lab"
-        title="Phase 1 scenario workbench"
-        description="Local browser workspace for editing Phase 1 scenarios, saving them through the local API, and reviewing placeholder run history with shared visual primitives."
+        title="Phase 2 scenario workbench"
+        description="Local browser workspace for editing scenarios, running the QSS lap model, and inspecting results through speed profile traces, track maps, sector breakdowns, and sensitivity comparisons."
         status={
           <div className="app-status-stack">
             <span className={statusClassName(workspace.isBooting, workspace.notice.tone)}>

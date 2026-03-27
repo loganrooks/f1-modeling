@@ -7,27 +7,64 @@ function formatTimestamp(value: string): string {
   }).format(new Date(value));
 }
 
+function getHarnessId(run: RunRecord): string {
+  const id = run.summaryMetrics.harnessId;
+  return typeof id === "string" ? id : "";
+}
+
+function formatLapTime(seconds: number): string {
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds - mins * 60;
+  return `${mins}:${secs.toFixed(3).padStart(6, "0")}`;
+}
+
+function getRunBadge(run: RunRecord): { label: string; className: string } {
+  const harnessId = getHarnessId(run);
+  if (harnessId === "qss-lap-model") {
+    return { label: "Lap Model", className: "workspace-token workspace-token--accent" };
+  }
+  return { label: "Placeholder", className: "workspace-token workspace-token--warning" };
+}
+
+function getRunMetricDisplay(run: RunRecord): string {
+  const harnessId = getHarnessId(run);
+  if (harnessId === "qss-lap-model") {
+    const lapTime = run.summaryMetrics.lapTime;
+    if (typeof lapTime === "number") {
+      return formatLapTime(lapTime);
+    }
+    return "no lap time";
+  }
+
+  const score = run.summaryMetrics.placeholderScore;
+  return typeof score === "number" ? `score: ${score.toFixed(0)}` : "placeholder";
+}
+
 type RunHistoryPanelProps = {
   runs: RunRecord[];
   selectedRunId: string | null;
+  comparisonRunId?: string | null;
   isCreatingRun?: boolean;
   onCreateRun: () => void;
   onSelectRun: (runId: string) => void;
+  onSelectComparisonRun?: (runId: string | null) => void;
 };
 
 export function RunHistoryPanel({
   runs,
   selectedRunId,
+  comparisonRunId,
   isCreatingRun = false,
   onCreateRun,
   onSelectRun,
+  onSelectComparisonRun,
 }: RunHistoryPanelProps) {
   return (
     <section className="workspace-stack">
       <div className="workspace-row workspace-row--between">
         <div className="workspace-section-heading">
           <p className="workspace-kicker">Run history</p>
-          <h3>Append-only placeholder runs</h3>
+          <h3>Runs</h3>
         </div>
         <button
           className="workspace-button"
@@ -35,7 +72,7 @@ export function RunHistoryPanel({
           disabled={isCreatingRun}
           onClick={onCreateRun}
         >
-          {isCreatingRun ? "Creating run..." : "Create placeholder run"}
+          {isCreatingRun ? "Creating run..." : "Create run"}
         </button>
       </div>
 
@@ -43,43 +80,97 @@ export function RunHistoryPanel({
         <div className="workspace-saved-list">
           {runs.map((run) => {
             const isSelected = run.runId === selectedRunId;
+            const isComparison = run.runId === comparisonRunId;
+            const badge = getRunBadge(run);
+            const metricDisplay = getRunMetricDisplay(run);
 
             return (
-              <button
+              <div
                 key={run.runId}
-                className={
-                  isSelected
-                    ? "workspace-history-card workspace-history-card--selected"
-                    : "workspace-history-card"
-                }
-                type="button"
-                onClick={() => onSelectRun(run.runId)}
+                style={{
+                  display: "grid",
+                  gap: 0,
+                  border: isComparison
+                    ? "2px solid rgba(11, 111, 120, 0.4)"
+                    : "1px solid transparent",
+                  borderRadius: 18,
+                }}
               >
-                <div className="workspace-row workspace-row--between">
-                  <strong>{run.scenarioSnapshot.name}</strong>
-                  <span className="workspace-token workspace-token--warning">
-                    placeholder
-                  </span>
-                </div>
-                <p className="workspace-copy">{run.runId}</p>
-                <div className="workspace-token-row">
-                  <span className="workspace-token workspace-token--muted">
-                    {run.modelVersion}
-                  </span>
-                  <span className="workspace-token">{run.status}</span>
-                  <span className="workspace-token workspace-token--muted">
-                    {formatTimestamp(run.createdAt)}
-                  </span>
-                </div>
-              </button>
+                <button
+                  className={
+                    isSelected
+                      ? "workspace-history-card workspace-history-card--selected"
+                      : "workspace-history-card"
+                  }
+                  type="button"
+                  onClick={() => onSelectRun(run.runId)}
+                  style={isComparison ? { borderRadius: "16px 16px 0 0" } : undefined}
+                >
+                  <div className="workspace-row workspace-row--between">
+                    <strong>{run.scenarioSnapshot.name}</strong>
+                    <span className={badge.className}>{badge.label}</span>
+                  </div>
+                  <div className="workspace-row workspace-row--between">
+                    <p className="workspace-copy" style={{ margin: 0 }}>{run.runId}</p>
+                    <span style={{
+                      fontFamily: '"IBM Plex Mono", "Fira Code", "SFMono-Regular", monospace',
+                      fontSize: "0.88rem",
+                      fontWeight: 600,
+                      color: getHarnessId(run) === "qss-lap-model" ? "#0d6770" : "#8e5517",
+                    }}>
+                      {metricDisplay}
+                    </span>
+                  </div>
+                  <div className="workspace-token-row">
+                    <span className="workspace-token workspace-token--muted">
+                      {run.modelVersion}
+                    </span>
+                    <span className="workspace-token">{run.status}</span>
+                    <span className="workspace-token workspace-token--muted">
+                      {formatTimestamp(run.createdAt)}
+                    </span>
+                  </div>
+                </button>
+
+                {/* Compare button for non-selected runs */}
+                {onSelectComparisonRun && !isSelected ? (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectComparisonRun(isComparison ? null : run.runId);
+                    }}
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      padding: "6px 14px",
+                      border: "none",
+                      borderTop: "1px solid rgba(26, 56, 74, 0.1)",
+                      borderRadius: "0 0 16px 16px",
+                      background: isComparison
+                        ? "rgba(11, 111, 120, 0.08)"
+                        : "rgba(255, 255, 255, 0.5)",
+                      color: isComparison ? "#0d6770" : "#5a6d7c",
+                      fontSize: "0.78rem",
+                      fontFamily: '"IBM Plex Mono", "Fira Code", "SFMono-Regular", monospace',
+                      fontWeight: 600,
+                      letterSpacing: "0.06em",
+                      textTransform: "uppercase",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {isComparison ? "Remove comparison" : "Compare"}
+                  </button>
+                ) : null}
+              </div>
             );
           })}
         </div>
       ) : (
         <div className="workspace-card workspace-card--muted">
           <p className="workspace-copy">
-            No runs saved yet. The Phase 1 browser workspace will save the current scenario first,
-            then append a deterministic placeholder run through the local API.
+            No runs saved yet. Select a circuit, configure vehicle parameters, and create a run to
+            see lap model output with speed profiles and sector breakdowns.
           </p>
         </div>
       )}
