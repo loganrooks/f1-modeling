@@ -15,11 +15,11 @@ Plan: 1 of 3 complete
 **Current Phase:** 02
 **Current Phase Name:** Reduced-Order Lap Model
 **Total Phases:** 8
-**Current Plan:** 2
+**Current Plan:** 3
 **Total Plans in Phase:** 3
-**Status:** In progress
-**Last Activity:** 2026-03-26
-**Progress:** [█████░░░░░] 53%
+**Status:** Ready to execute
+**Last Activity:** 2026-03-27
+**Progress:** [█████████░] 92%
 
 ## Performance Metrics
 
@@ -47,6 +47,7 @@ Plan: 1 of 3 complete
 | Phase 01 P08 | 23min | 2 tasks | 13 files |
 | Phase 01 P09 | 2min | 1 tasks | 1 files |
 | Phase 02 P01 | 14min | 2 tasks | 22 files |
+| Phase 02 P02 | 9min | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -92,6 +93,9 @@ Recent decisions affecting current work:
 - [Phase 02]: sim-core now depends on @f1-modeling/domain for CircuitDocument type in lapSolver
 - [Phase 02]: Circuit presets use 5m curvature arrays with sine-ramped transitions and x/y from heading integration
 - [Phase 02]: SimulationRunSummary generalized to Phase1PlaceholderSummary | LapModelSummary discriminated union on harnessId
+- [Phase 02]: Default scenario circuit changed from silverstone-gp to monza to match available circuit presets
+- [Phase 02]: Run route uses harnessId-based routing with fallback: no harnessId tries lap model then falls back to placeholder on RunDependencyError
+- [Phase 02]: Speed profile stored sampled (every 10th point) in summaryMetrics, full profile in artifact data
 
 ### Pending Todos
 
@@ -111,6 +115,6 @@ None yet.
 
 ## Session Continuity
 
-**Last session:** 2026-03-27T03:49:44.303Z
-**Stopped At:** Completed 02-01-PLAN.md
+**Last session:** 2026-03-27T04:01:57.065Z
+**Stopped At:** Completed 02-02-PLAN.md
 **Resume File:** None
