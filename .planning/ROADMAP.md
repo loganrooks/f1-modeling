@@ -55,9 +55,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Implement baseline vehicle and circuit abstractions
-- [ ] 02-02: Build the reduced-order lap-time model and intermediate state outputs
-- [ ] 02-03: Visualize sensitivities, trajectories, and racing-line-adjacent outputs where model support is honest
+- [ ] 02-01-PLAN.md — Circuit schema, vehicle types, QSS forward-backward solver, and circuit presets
+- [ ] 02-02-PLAN.md — API and workspace integration for lap model execution with circuit selection and vehicle parameter editing
+- [ ] 02-03-PLAN.md — Speed profile trace, track map, sensitivity waterfall, and run comparison visualization
 
 ### Phase 3: Tire, Electrical, Weather, Environment, and Energy Dynamics
 **Goal**: Add the main non-ideal dynamics, reduced-order electrical subsystem behavior, and explicit car-environment coupling that shape stint evolution and regulation-era tradeoffs.
@@ -191,7 +191,7 @@ The current roadmap is not the full endpoint of the platform. Subsequent milesto
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
