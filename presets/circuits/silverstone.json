@@ -1,0 +1,7179 @@
+{
+  "schemaVersion": "circuit-document/v1",
+  "circuitId": "silverstone",
+  "name": "Silverstone Circuit",
+  "configuration": "grand-prix",
+  "totalLength": 5840,
+  "points": [
+    {
+      "distance": 0,
+      "curvature": 0,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "distance": 5,
+      "curvature": 0,
+      "x": 5,
+      "y": 0
+    },
+    {
+      "distance": 10,
+      "curvature": 0,
+      "x": 10,
+      "y": 0
+    },
+    {
+      "distance": 15,
+      "curvature": 0,
+      "x": 15,
+      "y": 0
+    },
+    {
+      "distance": 20,
+      "curvature": 0,
+      "x": 20,
+      "y": 0
+    },
+    {
+      "distance": 25,
+      "curvature": 0,
+      "x": 25,
+      "y": 0
+    },
+    {
+      "distance": 30,
+      "curvature": 0,
+      "x": 30,
+      "y": 0
+    },
+    {
+      "distance": 35,
+      "curvature": 0,
+      "x": 35,
+      "y": 0
+    },
+    {
+      "distance": 40,
+      "curvature": 0,
+      "x": 40,
+      "y": 0
+    },
+    {
+      "distance": 45,
+      "curvature": 0,
+      "x": 45,
+      "y": 0
+    },
+    {
+      "distance": 50,
+      "curvature": 0,
+      "x": 50,
+      "y": 0
+    },
+    {
+      "distance": 55,
+      "curvature": 0,
+      "x": 55,
+      "y": 0
+    },
+    {
+      "distance": 60,
+      "curvature": 0,
+      "x": 60,
+      "y": 0
+    },
+    {
+      "distance": 65,
+      "curvature": 0,
+      "x": 65,
+      "y": 0
+    },
+    {
+      "distance": 70,
+      "curvature": 0,
+      "x": 70,
+      "y": 0
+    },
+    {
+      "distance": 75,
+      "curvature": 0,
+      "x": 75,
+      "y": 0
+    },
+    {
+      "distance": 80,
+      "curvature": 0,
+      "x": 80,
+      "y": 0
+    },
+    {
+      "distance": 85,
+      "curvature": 0,
+      "x": 85,
+      "y": 0
+    },
+    {
+      "distance": 90,
+      "curvature": 0,
+      "x": 90,
+      "y": 0
+    },
+    {
+      "distance": 95,
+      "curvature": 0,
+      "x": 95,
+      "y": 0
+    },
+    {
+      "distance": 100,
+      "curvature": 0,
+      "x": 100,
+      "y": 0
+    },
+    {
+      "distance": 105,
+      "curvature": 0,
+      "x": 105,
+      "y": 0
+    },
+    {
+      "distance": 110,
+      "curvature": 0,
+      "x": 110,
+      "y": 0
+    },
+    {
+      "distance": 115,
+      "curvature": 0,
+      "x": 115,
+      "y": 0
+    },
+    {
+      "distance": 120,
+      "curvature": 0,
+      "x": 120,
+      "y": 0
+    },
+    {
+      "distance": 125,
+      "curvature": 0,
+      "x": 125,
+      "y": 0
+    },
+    {
+      "distance": 130,
+      "curvature": 0,
+      "x": 130,
+      "y": 0
+    },
+    {
+      "distance": 135,
+      "curvature": 0,
+      "x": 135,
+      "y": 0
+    },
+    {
+      "distance": 140,
+      "curvature": 0,
+      "x": 140,
+      "y": 0
+    },
+    {
+      "distance": 145,
+      "curvature": 0,
+      "x": 145,
+      "y": 0
+    },
+    {
+      "distance": 150,
+      "curvature": 0,
+      "x": 150,
+      "y": 0
+    },
+    {
+      "distance": 155,
+      "curvature": 0,
+      "x": 155,
+      "y": 0
+    },
+    {
+      "distance": 160,
+      "curvature": 0,
+      "x": 160,
+      "y": 0
+    },
+    {
+      "distance": 165,
+      "curvature": 0,
+      "x": 165,
+      "y": 0
+    },
+    {
+      "distance": 170,
+      "curvature": 0,
+      "x": 170,
+      "y": 0
+    },
+    {
+      "distance": 175,
+      "curvature": 0,
+      "x": 175,
+      "y": 0
+    },
+    {
+      "distance": 180,
+      "curvature": 0,
+      "x": 180,
+      "y": 0
+    },
+    {
+      "distance": 185,
+      "curvature": 0,
+      "x": 185,
+      "y": 0
+    },
+    {
+      "distance": 190,
+      "curvature": 0,
+      "x": 190,
+      "y": 0
+    },
+    {
+      "distance": 195,
+      "curvature": 0,
+      "x": 195,
+      "y": 0
+    },
+    {
+      "distance": 200,
+      "curvature": 0,
+      "x": 200,
+      "y": 0
+    },
+    {
+      "distance": 205,
+      "curvature": 0,
+      "x": 205,
+      "y": 0
+    },
+    {
+      "distance": 210,
+      "curvature": 0,
+      "x": 210,
+      "y": 0
+    },
+    {
+      "distance": 215,
+      "curvature": 0,
+      "x": 215,
+      "y": 0
+    },
+    {
+      "distance": 220,
+      "curvature": 0,
+      "x": 220,
+      "y": 0
+    },
+    {
+      "distance": 225,
+      "curvature": 0,
+      "x": 225,
+      "y": 0
+    },
+    {
+      "distance": 230,
+      "curvature": 0,
+      "x": 230,
+      "y": 0
+    },
+    {
+      "distance": 235,
+      "curvature": 0,
+      "x": 235,
+      "y": 0
+    },
+    {
+      "distance": 240,
+      "curvature": 0,
+      "x": 240,
+      "y": 0
+    },
+    {
+      "distance": 245,
+      "curvature": 0,
+      "x": 245,
+      "y": 0
+    },
+    {
+      "distance": 250,
+      "curvature": 0,
+      "x": 250,
+      "y": 0
+    },
+    {
+      "distance": 255,
+      "curvature": 0,
+      "x": 255,
+      "y": 0
+    },
+    {
+      "distance": 260,
+      "curvature": 0,
+      "x": 260,
+      "y": 0
+    },
+    {
+      "distance": 265,
+      "curvature": 0,
+      "x": 265,
+      "y": 0
+    },
+    {
+      "distance": 270,
+      "curvature": 0,
+      "x": 270,
+      "y": 0
+    },
+    {
+      "distance": 275,
+      "curvature": 0,
+      "x": 275,
+      "y": 0
+    },
+    {
+      "distance": 280,
+      "curvature": 0,
+      "x": 280,
+      "y": 0
+    },
+    {
+      "distance": 285,
+      "curvature": 0,
+      "x": 285,
+      "y": 0
+    },
+    {
+      "distance": 290,
+      "curvature": 0,
+      "x": 290,
+      "y": 0
+    },
+    {
+      "distance": 295,
+      "curvature": 0,
+      "x": 295,
+      "y": 0
+    },
+    {
+      "distance": 300,
+      "curvature": 0,
+      "x": 300,
+      "y": 0
+    },
+    {
+      "distance": 305,
+      "curvature": 0,
+      "x": 305,
+      "y": 0
+    },
+    {
+      "distance": 310,
+      "curvature": 0,
+      "x": 310,
+      "y": 0
+    },
+    {
+      "distance": 315,
+      "curvature": 0,
+      "x": 315,
+      "y": 0
+    },
+    {
+      "distance": 320,
+      "curvature": 0,
+      "x": 320,
+      "y": 0
+    },
+    {
+      "distance": 325,
+      "curvature": 0,
+      "x": 325,
+      "y": 0
+    },
+    {
+      "distance": 330,
+      "curvature": 0,
+      "x": 330,
+      "y": 0
+    },
+    {
+      "distance": 335,
+      "curvature": 0,
+      "x": 335,
+      "y": 0
+    },
+    {
+      "distance": 340,
+      "curvature": 0,
+      "x": 340,
+      "y": 0
+    },
+    {
+      "distance": 345,
+      "curvature": 0,
+      "x": 345,
+      "y": 0
+    },
+    {
+      "distance": 350,
+      "curvature": 0,
+      "x": 350,
+      "y": 0
+    },
+    {
+      "distance": 355,
+      "curvature": 0,
+      "x": 355,
+      "y": 0
+    },
+    {
+      "distance": 360,
+      "curvature": 0,
+      "x": 360,
+      "y": 0
+    },
+    {
+      "distance": 365,
+      "curvature": 0,
+      "x": 365,
+      "y": 0
+    },
+    {
+      "distance": 370,
+      "curvature": 0,
+      "x": 370,
+      "y": 0
+    },
+    {
+      "distance": 375,
+      "curvature": 0,
+      "x": 375,
+      "y": 0
+    },
+    {
+      "distance": 380,
+      "curvature": 0,
+      "x": 380,
+      "y": 0
+    },
+    {
+      "distance": 385,
+      "curvature": 0,
+      "x": 385,
+      "y": 0
+    },
+    {
+      "distance": 390,
+      "curvature": 0,
+      "x": 390,
+      "y": 0
+    },
+    {
+      "distance": 395,
+      "curvature": 0,
+      "x": 395,
+      "y": 0
+    },
+    {
+      "distance": 400,
+      "curvature": 0,
+      "x": 400,
+      "y": 0
+    },
+    {
+      "distance": 405,
+      "curvature": 0,
+      "x": 405,
+      "y": 0
+    },
+    {
+      "distance": 410,
+      "curvature": 0,
+      "x": 410,
+      "y": 0
+    },
+    {
+      "distance": 415,
+      "curvature": 0,
+      "x": 415,
+      "y": 0
+    },
+    {
+      "distance": 420,
+      "curvature": 0,
+      "x": 420,
+      "y": 0
+    },
+    {
+      "distance": 425,
+      "curvature": 0,
+      "x": 425,
+      "y": 0
+    },
+    {
+      "distance": 430,
+      "curvature": 0,
+      "x": 430,
+      "y": 0
+    },
+    {
+      "distance": 435,
+      "curvature": 0,
+      "x": 435,
+      "y": 0
+    },
+    {
+      "distance": 440,
+      "curvature": 0,
+      "x": 440,
+      "y": 0
+    },
+    {
+      "distance": 445,
+      "curvature": 0,
+      "x": 445,
+      "y": 0
+    },
+    {
+      "distance": 450,
+      "curvature": 0,
+      "x": 450,
+      "y": 0
+    },
+    {
+      "distance": 455,
+      "curvature": 0,
+      "x": 455,
+      "y": 0
+    },
+    {
+      "distance": 460,
+      "curvature": 0,
+      "x": 460,
+      "y": 0
+    },
+    {
+      "distance": 465,
+      "curvature": 0,
+      "x": 465,
+      "y": 0
+    },
+    {
+      "distance": 470,
+      "curvature": 0,
+      "x": 470,
+      "y": 0
+    },
+    {
+      "distance": 475,
+      "curvature": 0,
+      "x": 475,
+      "y": 0
+    },
+    {
+      "distance": 480,
+      "curvature": 0,
+      "x": 480,
+      "y": 0
+    },
+    {
+      "distance": 485,
+      "curvature": 0,
+      "x": 485,
+      "y": 0
+    },
+    {
+      "distance": 490,
+      "curvature": 0,
+      "x": 490,
+      "y": 0
+    },
+    {
+      "distance": 495,
+      "curvature": 0,
+      "x": 495,
+      "y": 0
+    },
+    {
+      "distance": 500,
+      "curvature": 0,
+      "x": 500,
+      "y": 0
+    },
+    {
+      "distance": 505,
+      "curvature": 0,
+      "x": 505,
+      "y": 0
+    },
+    {
+      "distance": 510,
+      "curvature": 0,
+      "x": 510,
+      "y": 0
+    },
+    {
+      "distance": 515,
+      "curvature": 0,
+      "x": 515,
+      "y": 0
+    },
+    {
+      "distance": 520,
+      "curvature": 0,
+      "x": 520,
+      "y": 0
+    },
+    {
+      "distance": 525,
+      "curvature": 0,
+      "x": 525,
+      "y": 0
+    },
+    {
+      "distance": 530,
+      "curvature": 0,
+      "x": 530,
+      "y": 0
+    },
+    {
+      "distance": 535,
+      "curvature": 0,
+      "x": 535,
+      "y": 0
+    },
+    {
+      "distance": 540,
+      "curvature": 0,
+      "x": 540,
+      "y": 0
+    },
+    {
+      "distance": 545,
+      "curvature": 0,
+      "x": 545,
+      "y": 0
+    },
+    {
+      "distance": 550,
+      "curvature": 0,
+      "x": 550,
+      "y": 0
+    },
+    {
+      "distance": 555,
+      "curvature": 0,
+      "x": 555,
+      "y": 0
+    },
+    {
+      "distance": 560,
+      "curvature": 0,
+      "x": 560,
+      "y": 0
+    },
+    {
+      "distance": 565,
+      "curvature": 0,
+      "x": 565,
+      "y": 0
+    },
+    {
+      "distance": 570,
+      "curvature": 0,
+      "x": 570,
+      "y": 0
+    },
+    {
+      "distance": 575,
+      "curvature": 0,
+      "x": 575,
+      "y": 0
+    },
+    {
+      "distance": 580,
+      "curvature": 0,
+      "x": 580,
+      "y": 0
+    },
+    {
+      "distance": 585,
+      "curvature": 0,
+      "x": 585,
+      "y": 0
+    },
+    {
+      "distance": 590,
+      "curvature": 0,
+      "x": 590,
+      "y": 0
+    },
+    {
+      "distance": 595,
+      "curvature": 0,
+      "x": 595,
+      "y": 0
+    },
+    {
+      "distance": 600,
+      "curvature": 0,
+      "x": 600,
+      "y": 0
+    },
+    {
+      "distance": 605,
+      "curvature": 0,
+      "x": 605,
+      "y": 0
+    },
+    {
+      "distance": 610,
+      "curvature": 0,
+      "x": 610,
+      "y": 0
+    },
+    {
+      "distance": 615,
+      "curvature": 0,
+      "x": 615,
+      "y": 0
+    },
+    {
+      "distance": 620,
+      "curvature": 0,
+      "x": 620,
+      "y": 0
+    },
+    {
+      "distance": 625,
+      "curvature": 0,
+      "x": 625,
+      "y": 0
+    },
+    {
+      "distance": 630,
+      "curvature": 0,
+      "x": 630,
+      "y": 0
+    },
+    {
+      "distance": 635,
+      "curvature": 0,
+      "x": 635,
+      "y": 0
+    },
+    {
+      "distance": 640,
+      "curvature": 0,
+      "x": 640,
+      "y": 0
+    },
+    {
+      "distance": 645,
+      "curvature": 0,
+      "x": 645,
+      "y": 0
+    },
+    {
+      "distance": 650,
+      "curvature": 0,
+      "x": 650,
+      "y": 0
+    },
+    {
+      "distance": 655,
+      "curvature": 0,
+      "x": 655,
+      "y": 0
+    },
+    {
+      "distance": 660,
+      "curvature": 0,
+      "x": 660,
+      "y": 0
+    },
+    {
+      "distance": 665,
+      "curvature": 0,
+      "x": 665,
+      "y": 0
+    },
+    {
+      "distance": 670,
+      "curvature": 0,
+      "x": 670,
+      "y": 0
+    },
+    {
+      "distance": 675,
+      "curvature": 0,
+      "x": 675,
+      "y": 0
+    },
+    {
+      "distance": 680,
+      "curvature": 0,
+      "x": 680,
+      "y": 0
+    },
+    {
+      "distance": 685,
+      "curvature": 0,
+      "x": 685,
+      "y": 0
+    },
+    {
+      "distance": 690,
+      "curvature": 0,
+      "x": 690,
+      "y": 0
+    },
+    {
+      "distance": 695,
+      "curvature": 0,
+      "x": 695,
+      "y": 0
+    },
+    {
+      "distance": 700,
+      "curvature": 0,
+      "x": 700,
+      "y": 0
+    },
+    {
+      "distance": 705,
+      "curvature": 0,
+      "x": 705,
+      "y": 0
+    },
+    {
+      "distance": 710,
+      "curvature": 0,
+      "x": 710,
+      "y": 0
+    },
+    {
+      "distance": 715,
+      "curvature": 0,
+      "x": 715,
+      "y": 0
+    },
+    {
+      "distance": 720,
+      "curvature": 0,
+      "x": 720,
+      "y": 0
+    },
+    {
+      "distance": 725,
+      "curvature": 0,
+      "x": 725,
+      "y": 0
+    },
+    {
+      "distance": 730,
+      "curvature": 0,
+      "x": 730,
+      "y": 0
+    },
+    {
+      "distance": 735,
+      "curvature": 0,
+      "x": 735,
+      "y": 0
+    },
+    {
+      "distance": 740,
+      "curvature": 0,
+      "x": 740,
+      "y": 0
+    },
+    {
+      "distance": 745,
+      "curvature": 0,
+      "x": 745,
+      "y": 0
+    },
+    {
+      "distance": 750,
+      "curvature": 0,
+      "x": 750,
+      "y": 0
+    },
+    {
+      "distance": 755,
+      "curvature": 0,
+      "x": 755,
+      "y": 0
+    },
+    {
+      "distance": 760,
+      "curvature": 0,
+      "x": 760,
+      "y": 0
+    },
+    {
+      "distance": 765,
+      "curvature": 0,
+      "x": 765,
+      "y": 0
+    },
+    {
+      "distance": 770,
+      "curvature": 0,
+      "x": 770,
+      "y": 0
+    },
+    {
+      "distance": 775,
+      "curvature": 0,
+      "x": 775,
+      "y": 0
+    },
+    {
+      "distance": 780,
+      "curvature": 0,
+      "x": 780,
+      "y": 0
+    },
+    {
+      "distance": 785,
+      "curvature": 0,
+      "x": 785,
+      "y": 0
+    },
+    {
+      "distance": 790,
+      "curvature": 0,
+      "x": 790,
+      "y": 0
+    },
+    {
+      "distance": 795,
+      "curvature": 0,
+      "x": 795,
+      "y": 0
+    },
+    {
+      "distance": 800,
+      "curvature": -0.003189,
+      "x": 800,
+      "y": 0
+    },
+    {
+      "distance": 805,
+      "curvature": -0.005893,
+      "x": 805,
+      "y": -0.08
+    },
+    {
+      "distance": 810,
+      "curvature": -0.007699,
+      "x": 809.99,
+      "y": -0.31
+    },
+    {
+      "distance": 815,
+      "curvature": -0.008333,
+      "x": 814.98,
+      "y": -0.73
+    },
+    {
+      "distance": 820,
+      "curvature": -0.008333,
+      "x": 819.94,
+      "y": -1.35
+    },
+    {
+      "distance": 825,
+      "curvature": -0.008333,
+      "x": 824.87,
+      "y": -2.18
+    },
+    {
+      "distance": 830,
+      "curvature": -0.008333,
+      "x": 829.76,
+      "y": -3.22
+    },
+    {
+      "distance": 835,
+      "curvature": -0.008333,
+      "x": 834.6,
+      "y": -4.46
+    },
+    {
+      "distance": 840,
+      "curvature": -0.008333,
+      "x": 839.39,
+      "y": -5.9
+    },
+    {
+      "distance": 845,
+      "curvature": -0.008333,
+      "x": 844.11,
+      "y": -7.54
+    },
+    {
+      "distance": 850,
+      "curvature": -0.008333,
+      "x": 848.77,
+      "y": -9.37
+    },
+    {
+      "distance": 855,
+      "curvature": -0.008333,
+      "x": 853.34,
+      "y": -11.4
+    },
+    {
+      "distance": 860,
+      "curvature": -0.008333,
+      "x": 857.82,
+      "y": -13.62
+    },
+    {
+      "distance": 865,
+      "curvature": -0.008333,
+      "x": 862.21,
+      "y": -16.01
+    },
+    {
+      "distance": 870,
+      "curvature": -0.008333,
+      "x": 866.49,
+      "y": -18.59
+    },
+    {
+      "distance": 875,
+      "curvature": -0.008333,
+      "x": 870.66,
+      "y": -21.35
+    },
+    {
+      "distance": 880,
+      "curvature": -0.008333,
+      "x": 874.71,
+      "y": -24.28
+    },
+    {
+      "distance": 885,
+      "curvature": -0.008333,
+      "x": 878.64,
+      "y": -27.37
+    },
+    {
+      "distance": 890,
+      "curvature": -0.008333,
+      "x": 882.44,
+      "y": -30.63
+    },
+    {
+      "distance": 895,
+      "curvature": -0.008333,
+      "x": 886.09,
+      "y": -34.04
+    },
+    {
+      "distance": 900,
+      "curvature": -0.008333,
+      "x": 889.6,
+      "y": -37.6
+    },
+    {
+      "distance": 905,
+      "curvature": -0.008333,
+      "x": 892.96,
+      "y": -41.3
+    },
+    {
+      "distance": 910,
+      "curvature": -0.008333,
+      "x": 896.17,
+      "y": -45.14
+    },
+    {
+      "distance": 915,
+      "curvature": -0.008333,
+      "x": 899.21,
+      "y": -49.11
+    },
+    {
+      "distance": 920,
+      "curvature": -0.008333,
+      "x": 902.08,
+      "y": -53.2
+    },
+    {
+      "distance": 925,
+      "curvature": -0.007699,
+      "x": 904.78,
+      "y": -57.41
+    },
+    {
+      "distance": 930,
+      "curvature": -0.005893,
+      "x": 907.31,
+      "y": -61.72
+    },
+    {
+      "distance": 935,
+      "curvature": -0.003189,
+      "x": 909.72,
+      "y": -66.1
+    },
+    {
+      "distance": 940,
+      "curvature": 0,
+      "x": 912.06,
+      "y": -70.52
+    },
+    {
+      "distance": 945,
+      "curvature": 0,
+      "x": 914.39,
+      "y": -74.94
+    },
+    {
+      "distance": 950,
+      "curvature": 0,
+      "x": 916.73,
+      "y": -79.36
+    },
+    {
+      "distance": 955,
+      "curvature": 0,
+      "x": 919.07,
+      "y": -83.79
+    },
+    {
+      "distance": 960,
+      "curvature": 0,
+      "x": 921.41,
+      "y": -88.21
+    },
+    {
+      "distance": 965,
+      "curvature": 0,
+      "x": 923.74,
+      "y": -92.63
+    },
+    {
+      "distance": 970,
+      "curvature": 0,
+      "x": 926.08,
+      "y": -97.05
+    },
+    {
+      "distance": 975,
+      "curvature": 0,
+      "x": 928.42,
+      "y": -101.47
+    },
+    {
+      "distance": 980,
+      "curvature": 0,
+      "x": 930.75,
+      "y": -105.89
+    },
+    {
+      "distance": 985,
+      "curvature": 0,
+      "x": 933.09,
+      "y": -110.31
+    },
+    {
+      "distance": 990,
+      "curvature": 0,
+      "x": 935.43,
+      "y": -114.73
+    },
+    {
+      "distance": 995,
+      "curvature": 0,
+      "x": 937.76,
+      "y": -119.15
+    },
+    {
+      "distance": 1000,
+      "curvature": 0,
+      "x": 940.1,
+      "y": -123.57
+    },
+    {
+      "distance": 1005,
+      "curvature": 0,
+      "x": 942.44,
+      "y": -127.99
+    },
+    {
+      "distance": 1010,
+      "curvature": 0,
+      "x": 944.77,
+      "y": -132.41
+    },
+    {
+      "distance": 1015,
+      "curvature": 0,
+      "x": 947.11,
+      "y": -136.83
+    },
+    {
+      "distance": 1020,
+      "curvature": 0,
+      "x": 949.45,
+      "y": -141.25
+    },
+    {
+      "distance": 1025,
+      "curvature": 0,
+      "x": 951.79,
+      "y": -145.67
+    },
+    {
+      "distance": 1030,
+      "curvature": 0,
+      "x": 954.12,
+      "y": -150.09
+    },
+    {
+      "distance": 1035,
+      "curvature": 0,
+      "x": 956.46,
+      "y": -154.51
+    },
+    {
+      "distance": 1040,
+      "curvature": 0,
+      "x": 958.8,
+      "y": -158.93
+    },
+    {
+      "distance": 1045,
+      "curvature": 0,
+      "x": 961.13,
+      "y": -163.35
+    },
+    {
+      "distance": 1050,
+      "curvature": 0,
+      "x": 963.47,
+      "y": -167.77
+    },
+    {
+      "distance": 1055,
+      "curvature": 0,
+      "x": 965.81,
+      "y": -172.19
+    },
+    {
+      "distance": 1060,
+      "curvature": 0,
+      "x": 968.14,
+      "y": -176.61
+    },
+    {
+      "distance": 1065,
+      "curvature": 0,
+      "x": 970.48,
+      "y": -181.03
+    },
+    {
+      "distance": 1070,
+      "curvature": 0,
+      "x": 972.82,
+      "y": -185.45
+    },
+    {
+      "distance": 1075,
+      "curvature": 0,
+      "x": 975.15,
+      "y": -189.87
+    },
+    {
+      "distance": 1080,
+      "curvature": 0,
+      "x": 977.49,
+      "y": -194.29
+    },
+    {
+      "distance": 1085,
+      "curvature": 0,
+      "x": 979.83,
+      "y": -198.71
+    },
+    {
+      "distance": 1090,
+      "curvature": 0,
+      "x": 982.16,
+      "y": -203.13
+    },
+    {
+      "distance": 1095,
+      "curvature": 0,
+      "x": 984.5,
+      "y": -207.55
+    },
+    {
+      "distance": 1100,
+      "curvature": 0,
+      "x": 986.84,
+      "y": -211.97
+    },
+    {
+      "distance": 1105,
+      "curvature": 0,
+      "x": 989.18,
+      "y": -216.39
+    },
+    {
+      "distance": 1110,
+      "curvature": 0,
+      "x": 991.51,
+      "y": -220.81
+    },
+    {
+      "distance": 1115,
+      "curvature": 0,
+      "x": 993.85,
+      "y": -225.23
+    },
+    {
+      "distance": 1120,
+      "curvature": 0,
+      "x": 996.19,
+      "y": -229.65
+    },
+    {
+      "distance": 1125,
+      "curvature": 0,
+      "x": 998.52,
+      "y": -234.07
+    },
+    {
+      "distance": 1130,
+      "curvature": 0,
+      "x": 1000.86,
+      "y": -238.5
+    },
+    {
+      "distance": 1135,
+      "curvature": 0,
+      "x": 1003.2,
+      "y": -242.92
+    },
+    {
+      "distance": 1140,
+      "curvature": 0.00625,
+      "x": 1005.53,
+      "y": -247.34
+    },
+    {
+      "distance": 1145,
+      "curvature": 0.010825,
+      "x": 1008.01,
+      "y": -251.68
+    },
+    {
+      "distance": 1150,
+      "curvature": 0.0125,
+      "x": 1010.71,
+      "y": -255.89
+    },
+    {
+      "distance": 1155,
+      "curvature": 0.0125,
+      "x": 1013.68,
+      "y": -259.91
+    },
+    {
+      "distance": 1160,
+      "curvature": 0.0125,
+      "x": 1016.88,
+      "y": -263.75
+    },
+    {
+      "distance": 1165,
+      "curvature": 0.0125,
+      "x": 1020.33,
+      "y": -267.38
+    },
+    {
+      "distance": 1170,
+      "curvature": 0.0125,
+      "x": 1023.99,
+      "y": -270.78
+    },
+    {
+      "distance": 1175,
+      "curvature": 0.0125,
+      "x": 1027.85,
+      "y": -273.95
+    },
+    {
+      "distance": 1180,
+      "curvature": 0.0125,
+      "x": 1031.91,
+      "y": -276.87
+    },
+    {
+      "distance": 1185,
+      "curvature": 0.0125,
+      "x": 1036.14,
+      "y": -279.53
+    },
+    {
+      "distance": 1190,
+      "curvature": 0.0125,
+      "x": 1040.53,
+      "y": -281.93
+    },
+    {
+      "distance": 1195,
+      "curvature": 0.0125,
+      "x": 1045.06,
+      "y": -284.04
+    },
+    {
+      "distance": 1200,
+      "curvature": 0.0125,
+      "x": 1049.72,
+      "y": -285.87
+    },
+    {
+      "distance": 1205,
+      "curvature": 0.0125,
+      "x": 1054.48,
+      "y": -287.4
+    },
+    {
+      "distance": 1210,
+      "curvature": 0.0125,
+      "x": 1059.32,
+      "y": -288.63
+    },
+    {
+      "distance": 1215,
+      "curvature": 0.0125,
+      "x": 1064.24,
+      "y": -289.56
+    },
+    {
+      "distance": 1220,
+      "curvature": 0.0125,
+      "x": 1069.2,
+      "y": -290.18
+    },
+    {
+      "distance": 1225,
+      "curvature": 0.008839,
+      "x": 1074.19,
+      "y": -290.49
+    },
+    {
+      "distance": 1230,
+      "curvature": -0.010102,
+      "x": 1079.19,
+      "y": -290.58
+    },
+    {
+      "distance": 1235,
+      "curvature": -0.014286,
+      "x": 1084.18,
+      "y": -290.91
+    },
+    {
+      "distance": 1240,
+      "curvature": -0.014286,
+      "x": 1089.13,
+      "y": -291.61
+    },
+    {
+      "distance": 1245,
+      "curvature": -0.014286,
+      "x": 1094.02,
+      "y": -292.66
+    },
+    {
+      "distance": 1250,
+      "curvature": -0.014286,
+      "x": 1098.82,
+      "y": -294.05
+    },
+    {
+      "distance": 1255,
+      "curvature": -0.014286,
+      "x": 1103.51,
+      "y": -295.78
+    },
+    {
+      "distance": 1260,
+      "curvature": -0.014286,
+      "x": 1108.07,
+      "y": -297.84
+    },
+    {
+      "distance": 1265,
+      "curvature": -0.014286,
+      "x": 1112.46,
+      "y": -300.22
+    },
+    {
+      "distance": 1270,
+      "curvature": -0.014286,
+      "x": 1116.68,
+      "y": -302.91
+    },
+    {
+      "distance": 1275,
+      "curvature": -0.014286,
+      "x": 1120.69,
+      "y": -305.9
+    },
+    {
+      "distance": 1280,
+      "curvature": -0.014286,
+      "x": 1124.48,
+      "y": -309.16
+    },
+    {
+      "distance": 1285,
+      "curvature": -0.014286,
+      "x": 1128.03,
+      "y": -312.68
+    },
+    {
+      "distance": 1290,
+      "curvature": -0.014286,
+      "x": 1131.31,
+      "y": -316.45
+    },
+    {
+      "distance": 1295,
+      "curvature": -0.014286,
+      "x": 1134.32,
+      "y": -320.44
+    },
+    {
+      "distance": 1300,
+      "curvature": -0.014286,
+      "x": 1137.04,
+      "y": -324.64
+    },
+    {
+      "distance": 1305,
+      "curvature": -0.010102,
+      "x": 1139.45,
+      "y": -329.02
+    },
+    {
+      "distance": 1310,
+      "curvature": 0.009428,
+      "x": 1141.63,
+      "y": -333.52
+    },
+    {
+      "distance": 1315,
+      "curvature": 0.013333,
+      "x": 1144.03,
+      "y": -337.91
+    },
+    {
+      "distance": 1320,
+      "curvature": 0.013333,
+      "x": 1146.71,
+      "y": -342.13
+    },
+    {
+      "distance": 1325,
+      "curvature": 0.013333,
+      "x": 1149.67,
+      "y": -346.16
+    },
+    {
+      "distance": 1330,
+      "curvature": 0.013333,
+      "x": 1152.89,
+      "y": -349.99
+    },
+    {
+      "distance": 1335,
+      "curvature": 0.013333,
+      "x": 1156.35,
+      "y": -353.59
+    },
+    {
+      "distance": 1340,
+      "curvature": 0.013333,
+      "x": 1160.05,
+      "y": -356.95
+    },
+    {
+      "distance": 1345,
+      "curvature": 0.013333,
+      "x": 1163.97,
+      "y": -360.06
+    },
+    {
+      "distance": 1350,
+      "curvature": 0.013333,
+      "x": 1168.08,
+      "y": -362.9
+    },
+    {
+      "distance": 1355,
+      "curvature": 0.013333,
+      "x": 1172.38,
+      "y": -365.47
+    },
+    {
+      "distance": 1360,
+      "curvature": 0.013333,
+      "x": 1176.83,
+      "y": -367.74
+    },
+    {
+      "distance": 1365,
+      "curvature": 0.013333,
+      "x": 1181.43,
+      "y": -369.7
+    },
+    {
+      "distance": 1370,
+      "curvature": 0.013333,
+      "x": 1186.14,
+      "y": -371.36
+    },
+    {
+      "distance": 1375,
+      "curvature": 0.013333,
+      "x": 1190.96,
+      "y": -372.7
+    },
+    {
+      "distance": 1380,
+      "curvature": 0.013333,
+      "x": 1195.86,
+      "y": -373.72
+    },
+    {
+      "distance": 1385,
+      "curvature": 0.013333,
+      "x": 1200.81,
+      "y": -374.41
+    },
+    {
+      "distance": 1390,
+      "curvature": 0.011547,
+      "x": 1205.8,
+      "y": -374.76
+    },
+    {
+      "distance": 1395,
+      "curvature": 0.006667,
+      "x": 1210.8,
+      "y": -374.83
+    },
+    {
+      "distance": 1400,
+      "curvature": -0.008839,
+      "x": 1215.79,
+      "y": -374.73
+    },
+    {
+      "distance": 1405,
+      "curvature": -0.0125,
+      "x": 1220.79,
+      "y": -374.85
+    },
+    {
+      "distance": 1410,
+      "curvature": -0.0125,
+      "x": 1225.77,
+      "y": -375.29
+    },
+    {
+      "distance": 1415,
+      "curvature": -0.0125,
+      "x": 1230.72,
+      "y": -376.03
+    },
+    {
+      "distance": 1420,
+      "curvature": -0.0125,
+      "x": 1235.61,
+      "y": -377.08
+    },
+    {
+      "distance": 1425,
+      "curvature": -0.0125,
+      "x": 1240.42,
+      "y": -378.44
+    },
+    {
+      "distance": 1430,
+      "curvature": -0.0125,
+      "x": 1245.14,
+      "y": -380.09
+    },
+    {
+      "distance": 1435,
+      "curvature": -0.0125,
+      "x": 1249.75,
+      "y": -382.03
+    },
+    {
+      "distance": 1440,
+      "curvature": -0.0125,
+      "x": 1254.22,
+      "y": -384.26
+    },
+    {
+      "distance": 1445,
+      "curvature": -0.0125,
+      "x": 1258.55,
+      "y": -386.77
+    },
+    {
+      "distance": 1450,
+      "curvature": -0.0125,
+      "x": 1262.71,
+      "y": -389.53
+    },
+    {
+      "distance": 1455,
+      "curvature": -0.0125,
+      "x": 1266.69,
+      "y": -392.56
+    },
+    {
+      "distance": 1460,
+      "curvature": -0.0125,
+      "x": 1270.48,
+      "y": -395.82
+    },
+    {
+      "distance": 1465,
+      "curvature": -0.010825,
+      "x": 1274.05,
+      "y": -399.32
+    },
+    {
+      "distance": 1470,
+      "curvature": -0.00625,
+      "x": 1277.43,
+      "y": -403.01
+    },
+    {
+      "distance": 1475,
+      "curvature": 0.005263,
+      "x": 1280.7,
+      "y": -406.79
+    },
+    {
+      "distance": 1480,
+      "curvature": 0.009116,
+      "x": 1284.06,
+      "y": -410.5
+    },
+    {
+      "distance": 1485,
+      "curvature": 0.010526,
+      "x": 1287.59,
+      "y": -414.04
+    },
+    {
+      "distance": 1490,
+      "curvature": 0.010526,
+      "x": 1291.29,
+      "y": -417.39
+    },
+    {
+      "distance": 1495,
+      "curvature": 0.010526,
+      "x": 1295.17,
+      "y": -420.55
+    },
+    {
+      "distance": 1500,
+      "curvature": 0.010526,
+      "x": 1299.21,
+      "y": -423.49
+    },
+    {
+      "distance": 1505,
+      "curvature": 0.010526,
+      "x": 1303.4,
+      "y": -426.22
+    },
+    {
+      "distance": 1510,
+      "curvature": 0.010526,
+      "x": 1307.73,
+      "y": -428.73
+    },
+    {
+      "distance": 1515,
+      "curvature": 0.010526,
+      "x": 1312.18,
+      "y": -431
+    },
+    {
+      "distance": 1520,
+      "curvature": 0.010526,
+      "x": 1316.75,
+      "y": -433.04
+    },
+    {
+      "distance": 1525,
+      "curvature": 0.010526,
+      "x": 1321.42,
+      "y": -434.83
+    },
+    {
+      "distance": 1530,
+      "curvature": 0.010526,
+      "x": 1326.17,
+      "y": -436.38
+    },
+    {
+      "distance": 1535,
+      "curvature": 0.009116,
+      "x": 1331,
+      "y": -437.67
+    },
+    {
+      "distance": 1540,
+      "curvature": 0.005263,
+      "x": 1335.89,
+      "y": -438.74
+    },
+    {
+      "distance": 1545,
+      "curvature": 0,
+      "x": 1340.8,
+      "y": -439.68
+    },
+    {
+      "distance": 1550,
+      "curvature": 0,
+      "x": 1345.71,
+      "y": -440.63
+    },
+    {
+      "distance": 1555,
+      "curvature": 0,
+      "x": 1350.62,
+      "y": -441.57
+    },
+    {
+      "distance": 1560,
+      "curvature": 0,
+      "x": 1355.53,
+      "y": -442.51
+    },
+    {
+      "distance": 1565,
+      "curvature": 0,
+      "x": 1360.44,
+      "y": -443.45
+    },
+    {
+      "distance": 1570,
+      "curvature": 0,
+      "x": 1365.35,
+      "y": -444.4
+    },
+    {
+      "distance": 1575,
+      "curvature": 0,
+      "x": 1370.26,
+      "y": -445.34
+    },
+    {
+      "distance": 1580,
+      "curvature": 0,
+      "x": 1375.17,
+      "y": -446.28
+    },
+    {
+      "distance": 1585,
+      "curvature": 0,
+      "x": 1380.08,
+      "y": -447.22
+    },
+    {
+      "distance": 1590,
+      "curvature": 0,
+      "x": 1384.99,
+      "y": -448.17
+    },
+    {
+      "distance": 1595,
+      "curvature": 0,
+      "x": 1389.9,
+      "y": -449.11
+    },
+    {
+      "distance": 1600,
+      "curvature": 0,
+      "x": 1394.81,
+      "y": -450.05
+    },
+    {
+      "distance": 1605,
+      "curvature": 0,
+      "x": 1399.72,
+      "y": -451
+    },
+    {
+      "distance": 1610,
+      "curvature": 0,
+      "x": 1404.63,
+      "y": -451.94
+    },
+    {
+      "distance": 1615,
+      "curvature": 0,
+      "x": 1409.54,
+      "y": -452.88
+    },
+    {
+      "distance": 1620,
+      "curvature": 0,
+      "x": 1414.45,
+      "y": -453.82
+    },
+    {
+      "distance": 1625,
+      "curvature": 0,
+      "x": 1419.36,
+      "y": -454.77
+    },
+    {
+      "distance": 1630,
+      "curvature": 0,
+      "x": 1424.27,
+      "y": -455.71
+    },
+    {
+      "distance": 1635,
+      "curvature": 0,
+      "x": 1429.18,
+      "y": -456.65
+    },
+    {
+      "distance": 1640,
+      "curvature": 0,
+      "x": 1434.09,
+      "y": -457.59
+    },
+    {
+      "distance": 1645,
+      "curvature": 0,
+      "x": 1439,
+      "y": -458.54
+    },
+    {
+      "distance": 1650,
+      "curvature": 0,
+      "x": 1443.91,
+      "y": -459.48
+    },
+    {
+      "distance": 1655,
+      "curvature": 0,
+      "x": 1448.82,
+      "y": -460.42
+    },
+    {
+      "distance": 1660,
+      "curvature": 0,
+      "x": 1453.73,
+      "y": -461.36
+    },
+    {
+      "distance": 1665,
+      "curvature": 0,
+      "x": 1458.64,
+      "y": -462.31
+    },
+    {
+      "distance": 1670,
+      "curvature": 0,
+      "x": 1463.56,
+      "y": -463.25
+    },
+    {
+      "distance": 1675,
+      "curvature": 0,
+      "x": 1468.47,
+      "y": -464.19
+    },
+    {
+      "distance": 1680,
+      "curvature": 0,
+      "x": 1473.38,
+      "y": -465.14
+    },
+    {
+      "distance": 1685,
+      "curvature": 0,
+      "x": 1478.29,
+      "y": -466.08
+    },
+    {
+      "distance": 1690,
+      "curvature": 0,
+      "x": 1483.2,
+      "y": -467.02
+    },
+    {
+      "distance": 1695,
+      "curvature": 0,
+      "x": 1488.11,
+      "y": -467.96
+    },
+    {
+      "distance": 1700,
+      "curvature": 0,
+      "x": 1493.02,
+      "y": -468.91
+    },
+    {
+      "distance": 1705,
+      "curvature": 0,
+      "x": 1497.93,
+      "y": -469.85
+    },
+    {
+      "distance": 1710,
+      "curvature": 0,
+      "x": 1502.84,
+      "y": -470.79
+    },
+    {
+      "distance": 1715,
+      "curvature": 0,
+      "x": 1507.75,
+      "y": -471.73
+    },
+    {
+      "distance": 1720,
+      "curvature": 0,
+      "x": 1512.66,
+      "y": -472.68
+    },
+    {
+      "distance": 1725,
+      "curvature": 0,
+      "x": 1517.57,
+      "y": -473.62
+    },
+    {
+      "distance": 1730,
+      "curvature": 0,
+      "x": 1522.48,
+      "y": -474.56
+    },
+    {
+      "distance": 1735,
+      "curvature": 0,
+      "x": 1527.39,
+      "y": -475.51
+    },
+    {
+      "distance": 1740,
+      "curvature": 0,
+      "x": 1532.3,
+      "y": -476.45
+    },
+    {
+      "distance": 1745,
+      "curvature": 0,
+      "x": 1537.21,
+      "y": -477.39
+    },
+    {
+      "distance": 1750,
+      "curvature": 0,
+      "x": 1542.12,
+      "y": -478.33
+    },
+    {
+      "distance": 1755,
+      "curvature": 0,
+      "x": 1547.03,
+      "y": -479.28
+    },
+    {
+      "distance": 1760,
+      "curvature": 0,
+      "x": 1551.94,
+      "y": -480.22
+    },
+    {
+      "distance": 1765,
+      "curvature": 0,
+      "x": 1556.85,
+      "y": -481.16
+    },
+    {
+      "distance": 1770,
+      "curvature": 0,
+      "x": 1561.76,
+      "y": -482.1
+    },
+    {
+      "distance": 1775,
+      "curvature": 0,
+      "x": 1566.67,
+      "y": -483.05
+    },
+    {
+      "distance": 1780,
+      "curvature": 0,
+      "x": 1571.58,
+      "y": -483.99
+    },
+    {
+      "distance": 1785,
+      "curvature": 0,
+      "x": 1576.49,
+      "y": -484.93
+    },
+    {
+      "distance": 1790,
+      "curvature": 0,
+      "x": 1581.4,
+      "y": -485.87
+    },
+    {
+      "distance": 1795,
+      "curvature": 0,
+      "x": 1586.31,
+      "y": -486.82
+    },
+    {
+      "distance": 1800,
+      "curvature": 0,
+      "x": 1591.22,
+      "y": -487.76
+    },
+    {
+      "distance": 1805,
+      "curvature": 0,
+      "x": 1596.13,
+      "y": -488.7
+    },
+    {
+      "distance": 1810,
+      "curvature": 0,
+      "x": 1601.04,
+      "y": -489.65
+    },
+    {
+      "distance": 1815,
+      "curvature": 0,
+      "x": 1605.95,
+      "y": -490.59
+    },
+    {
+      "distance": 1820,
+      "curvature": 0,
+      "x": 1610.87,
+      "y": -491.53
+    },
+    {
+      "distance": 1825,
+      "curvature": 0,
+      "x": 1615.78,
+      "y": -492.47
+    },
+    {
+      "distance": 1830,
+      "curvature": 0,
+      "x": 1620.69,
+      "y": -493.42
+    },
+    {
+      "distance": 1835,
+      "curvature": 0,
+      "x": 1625.6,
+      "y": -494.36
+    },
+    {
+      "distance": 1840,
+      "curvature": 0,
+      "x": 1630.51,
+      "y": -495.3
+    },
+    {
+      "distance": 1845,
+      "curvature": 0,
+      "x": 1635.42,
+      "y": -496.24
+    },
+    {
+      "distance": 1850,
+      "curvature": 0,
+      "x": 1640.33,
+      "y": -497.19
+    },
+    {
+      "distance": 1855,
+      "curvature": 0,
+      "x": 1645.24,
+      "y": -498.13
+    },
+    {
+      "distance": 1860,
+      "curvature": 0,
+      "x": 1650.15,
+      "y": -499.07
+    },
+    {
+      "distance": 1865,
+      "curvature": 0,
+      "x": 1655.06,
+      "y": -500.01
+    },
+    {
+      "distance": 1870,
+      "curvature": 0,
+      "x": 1659.97,
+      "y": -500.96
+    },
+    {
+      "distance": 1875,
+      "curvature": 0,
+      "x": 1664.88,
+      "y": -501.9
+    },
+    {
+      "distance": 1880,
+      "curvature": 0,
+      "x": 1669.79,
+      "y": -502.84
+    },
+    {
+      "distance": 1885,
+      "curvature": 0,
+      "x": 1674.7,
+      "y": -503.79
+    },
+    {
+      "distance": 1890,
+      "curvature": 0,
+      "x": 1679.61,
+      "y": -504.73
+    },
+    {
+      "distance": 1895,
+      "curvature": 0,
+      "x": 1684.52,
+      "y": -505.67
+    },
+    {
+      "distance": 1900,
+      "curvature": 0,
+      "x": 1689.43,
+      "y": -506.61
+    },
+    {
+      "distance": 1905,
+      "curvature": 0,
+      "x": 1694.34,
+      "y": -507.56
+    },
+    {
+      "distance": 1910,
+      "curvature": 0,
+      "x": 1699.25,
+      "y": -508.5
+    },
+    {
+      "distance": 1915,
+      "curvature": 0,
+      "x": 1704.16,
+      "y": -509.44
+    },
+    {
+      "distance": 1920,
+      "curvature": 0,
+      "x": 1709.07,
+      "y": -510.38
+    },
+    {
+      "distance": 1925,
+      "curvature": 0,
+      "x": 1713.98,
+      "y": -511.33
+    },
+    {
+      "distance": 1930,
+      "curvature": 0,
+      "x": 1718.89,
+      "y": -512.27
+    },
+    {
+      "distance": 1935,
+      "curvature": 0,
+      "x": 1723.8,
+      "y": -513.21
+    },
+    {
+      "distance": 1940,
+      "curvature": 0,
+      "x": 1728.71,
+      "y": -514.15
+    },
+    {
+      "distance": 1945,
+      "curvature": 0,
+      "x": 1733.62,
+      "y": -515.1
+    },
+    {
+      "distance": 1950,
+      "curvature": 0,
+      "x": 1738.53,
+      "y": -516.04
+    },
+    {
+      "distance": 1955,
+      "curvature": 0,
+      "x": 1743.44,
+      "y": -516.98
+    },
+    {
+      "distance": 1960,
+      "curvature": 0,
+      "x": 1748.35,
+      "y": -517.93
+    },
+    {
+      "distance": 1965,
+      "curvature": 0,
+      "x": 1753.26,
+      "y": -518.87
+    },
+    {
+      "distance": 1970,
+      "curvature": 0,
+      "x": 1758.18,
+      "y": -519.81
+    },
+    {
+      "distance": 1975,
+      "curvature": 0,
+      "x": 1763.09,
+      "y": -520.75
+    },
+    {
+      "distance": 1980,
+      "curvature": 0,
+      "x": 1768,
+      "y": -521.7
+    },
+    {
+      "distance": 1985,
+      "curvature": 0,
+      "x": 1772.91,
+      "y": -522.64
+    },
+    {
+      "distance": 1990,
+      "curvature": 0,
+      "x": 1777.82,
+      "y": -523.58
+    },
+    {
+      "distance": 1995,
+      "curvature": 0,
+      "x": 1782.73,
+      "y": -524.52
+    },
+    {
+      "distance": 2000,
+      "curvature": 0,
+      "x": 1787.64,
+      "y": -525.47
+    },
+    {
+      "distance": 2005,
+      "curvature": 0,
+      "x": 1792.55,
+      "y": -526.41
+    },
+    {
+      "distance": 2010,
+      "curvature": 0,
+      "x": 1797.46,
+      "y": -527.35
+    },
+    {
+      "distance": 2015,
+      "curvature": 0,
+      "x": 1802.37,
+      "y": -528.3
+    },
+    {
+      "distance": 2020,
+      "curvature": 0,
+      "x": 1807.28,
+      "y": -529.24
+    },
+    {
+      "distance": 2025,
+      "curvature": 0,
+      "x": 1812.19,
+      "y": -530.18
+    },
+    {
+      "distance": 2030,
+      "curvature": 0,
+      "x": 1817.1,
+      "y": -531.12
+    },
+    {
+      "distance": 2035,
+      "curvature": 0,
+      "x": 1822.01,
+      "y": -532.07
+    },
+    {
+      "distance": 2040,
+      "curvature": 0,
+      "x": 1826.92,
+      "y": -533.01
+    },
+    {
+      "distance": 2045,
+      "curvature": 0,
+      "x": 1831.83,
+      "y": -533.95
+    },
+    {
+      "distance": 2050,
+      "curvature": 0,
+      "x": 1836.74,
+      "y": -534.89
+    },
+    {
+      "distance": 2055,
+      "curvature": 0,
+      "x": 1841.65,
+      "y": -535.84
+    },
+    {
+      "distance": 2060,
+      "curvature": 0,
+      "x": 1846.56,
+      "y": -536.78
+    },
+    {
+      "distance": 2065,
+      "curvature": 0,
+      "x": 1851.47,
+      "y": -537.72
+    },
+    {
+      "distance": 2070,
+      "curvature": 0,
+      "x": 1856.38,
+      "y": -538.66
+    },
+    {
+      "distance": 2075,
+      "curvature": 0,
+      "x": 1861.29,
+      "y": -539.61
+    },
+    {
+      "distance": 2080,
+      "curvature": 0,
+      "x": 1866.2,
+      "y": -540.55
+    },
+    {
+      "distance": 2085,
+      "curvature": 0,
+      "x": 1871.11,
+      "y": -541.49
+    },
+    {
+      "distance": 2090,
+      "curvature": 0,
+      "x": 1876.02,
+      "y": -542.44
+    },
+    {
+      "distance": 2095,
+      "curvature": 0,
+      "x": 1880.93,
+      "y": -543.38
+    },
+    {
+      "distance": 2100,
+      "curvature": 0,
+      "x": 1885.84,
+      "y": -544.32
+    },
+    {
+      "distance": 2105,
+      "curvature": 0,
+      "x": 1890.75,
+      "y": -545.26
+    },
+    {
+      "distance": 2110,
+      "curvature": 0,
+      "x": 1895.66,
+      "y": -546.21
+    },
+    {
+      "distance": 2115,
+      "curvature": 0,
+      "x": 1900.57,
+      "y": -547.15
+    },
+    {
+      "distance": 2120,
+      "curvature": 0,
+      "x": 1905.49,
+      "y": -548.09
+    },
+    {
+      "distance": 2125,
+      "curvature": 0,
+      "x": 1910.4,
+      "y": -549.03
+    },
+    {
+      "distance": 2130,
+      "curvature": 0,
+      "x": 1915.31,
+      "y": -549.98
+    },
+    {
+      "distance": 2135,
+      "curvature": 0,
+      "x": 1920.22,
+      "y": -550.92
+    },
+    {
+      "distance": 2140,
+      "curvature": 0,
+      "x": 1925.13,
+      "y": -551.86
+    },
+    {
+      "distance": 2145,
+      "curvature": 0,
+      "x": 1930.04,
+      "y": -552.8
+    },
+    {
+      "distance": 2150,
+      "curvature": 0,
+      "x": 1934.95,
+      "y": -553.75
+    },
+    {
+      "distance": 2155,
+      "curvature": 0,
+      "x": 1939.86,
+      "y": -554.69
+    },
+    {
+      "distance": 2160,
+      "curvature": 0,
+      "x": 1944.77,
+      "y": -555.63
+    },
+    {
+      "distance": 2165,
+      "curvature": 0,
+      "x": 1949.68,
+      "y": -556.58
+    },
+    {
+      "distance": 2170,
+      "curvature": 0,
+      "x": 1954.59,
+      "y": -557.52
+    },
+    {
+      "distance": 2175,
+      "curvature": 0,
+      "x": 1959.5,
+      "y": -558.46
+    },
+    {
+      "distance": 2180,
+      "curvature": 0,
+      "x": 1964.41,
+      "y": -559.4
+    },
+    {
+      "distance": 2185,
+      "curvature": 0,
+      "x": 1969.32,
+      "y": -560.35
+    },
+    {
+      "distance": 2190,
+      "curvature": 0,
+      "x": 1974.23,
+      "y": -561.29
+    },
+    {
+      "distance": 2195,
+      "curvature": 0,
+      "x": 1979.14,
+      "y": -562.23
+    },
+    {
+      "distance": 2200,
+      "curvature": 0,
+      "x": 1984.05,
+      "y": -563.17
+    },
+    {
+      "distance": 2205,
+      "curvature": 0,
+      "x": 1988.96,
+      "y": -564.12
+    },
+    {
+      "distance": 2210,
+      "curvature": 0,
+      "x": 1993.87,
+      "y": -565.06
+    },
+    {
+      "distance": 2215,
+      "curvature": 0,
+      "x": 1998.78,
+      "y": -566
+    },
+    {
+      "distance": 2220,
+      "curvature": 0,
+      "x": 2003.69,
+      "y": -566.94
+    },
+    {
+      "distance": 2225,
+      "curvature": 0,
+      "x": 2008.6,
+      "y": -567.89
+    },
+    {
+      "distance": 2230,
+      "curvature": 0,
+      "x": 2013.51,
+      "y": -568.83
+    },
+    {
+      "distance": 2235,
+      "curvature": 0,
+      "x": 2018.42,
+      "y": -569.77
+    },
+    {
+      "distance": 2240,
+      "curvature": 0,
+      "x": 2023.33,
+      "y": -570.72
+    },
+    {
+      "distance": 2245,
+      "curvature": 0,
+      "x": 2028.24,
+      "y": -571.66
+    },
+    {
+      "distance": 2250,
+      "curvature": 0,
+      "x": 2033.15,
+      "y": -572.6
+    },
+    {
+      "distance": 2255,
+      "curvature": 0,
+      "x": 2038.06,
+      "y": -573.54
+    },
+    {
+      "distance": 2260,
+      "curvature": 0,
+      "x": 2042.97,
+      "y": -574.49
+    },
+    {
+      "distance": 2265,
+      "curvature": 0,
+      "x": 2047.88,
+      "y": -575.43
+    },
+    {
+      "distance": 2270,
+      "curvature": 0,
+      "x": 2052.8,
+      "y": -576.37
+    },
+    {
+      "distance": 2275,
+      "curvature": 0,
+      "x": 2057.71,
+      "y": -577.31
+    },
+    {
+      "distance": 2280,
+      "curvature": 0,
+      "x": 2062.62,
+      "y": -578.26
+    },
+    {
+      "distance": 2285,
+      "curvature": 0,
+      "x": 2067.53,
+      "y": -579.2
+    },
+    {
+      "distance": 2290,
+      "curvature": 0,
+      "x": 2072.44,
+      "y": -580.14
+    },
+    {
+      "distance": 2295,
+      "curvature": 0,
+      "x": 2077.35,
+      "y": -581.09
+    },
+    {
+      "distance": 2300,
+      "curvature": 0,
+      "x": 2082.26,
+      "y": -582.03
+    },
+    {
+      "distance": 2305,
+      "curvature": 0,
+      "x": 2087.17,
+      "y": -582.97
+    },
+    {
+      "distance": 2310,
+      "curvature": 0,
+      "x": 2092.08,
+      "y": -583.91
+    },
+    {
+      "distance": 2315,
+      "curvature": 0,
+      "x": 2096.99,
+      "y": -584.86
+    },
+    {
+      "distance": 2320,
+      "curvature": 0,
+      "x": 2101.9,
+      "y": -585.8
+    },
+    {
+      "distance": 2325,
+      "curvature": 0,
+      "x": 2106.81,
+      "y": -586.74
+    },
+    {
+      "distance": 2330,
+      "curvature": 0,
+      "x": 2111.72,
+      "y": -587.68
+    },
+    {
+      "distance": 2335,
+      "curvature": 0,
+      "x": 2116.63,
+      "y": -588.63
+    },
+    {
+      "distance": 2340,
+      "curvature": 0,
+      "x": 2121.54,
+      "y": -589.57
+    },
+    {
+      "distance": 2345,
+      "curvature": 0,
+      "x": 2126.45,
+      "y": -590.51
+    },
+    {
+      "distance": 2350,
+      "curvature": 0,
+      "x": 2131.36,
+      "y": -591.45
+    },
+    {
+      "distance": 2355,
+      "curvature": 0,
+      "x": 2136.27,
+      "y": -592.4
+    },
+    {
+      "distance": 2360,
+      "curvature": 0,
+      "x": 2141.18,
+      "y": -593.34
+    },
+    {
+      "distance": 2365,
+      "curvature": 0,
+      "x": 2146.09,
+      "y": -594.28
+    },
+    {
+      "distance": 2370,
+      "curvature": 0,
+      "x": 2151,
+      "y": -595.23
+    },
+    {
+      "distance": 2375,
+      "curvature": 0,
+      "x": 2155.91,
+      "y": -596.17
+    },
+    {
+      "distance": 2380,
+      "curvature": 0,
+      "x": 2160.82,
+      "y": -597.11
+    },
+    {
+      "distance": 2385,
+      "curvature": 0,
+      "x": 2165.73,
+      "y": -598.05
+    },
+    {
+      "distance": 2390,
+      "curvature": 0,
+      "x": 2170.64,
+      "y": -599
+    },
+    {
+      "distance": 2395,
+      "curvature": 0,
+      "x": 2175.55,
+      "y": -599.94
+    },
+    {
+      "distance": 2400,
+      "curvature": 0,
+      "x": 2180.46,
+      "y": -600.88
+    },
+    {
+      "distance": 2405,
+      "curvature": 0,
+      "x": 2185.37,
+      "y": -601.82
+    },
+    {
+      "distance": 2410,
+      "curvature": 0,
+      "x": 2190.28,
+      "y": -602.77
+    },
+    {
+      "distance": 2415,
+      "curvature": 0,
+      "x": 2195.19,
+      "y": -603.71
+    },
+    {
+      "distance": 2420,
+      "curvature": 0,
+      "x": 2200.1,
+      "y": -604.65
+    },
+    {
+      "distance": 2425,
+      "curvature": 0,
+      "x": 2205.02,
+      "y": -605.59
+    },
+    {
+      "distance": 2430,
+      "curvature": 0,
+      "x": 2209.93,
+      "y": -606.54
+    },
+    {
+      "distance": 2435,
+      "curvature": 0,
+      "x": 2214.84,
+      "y": -607.48
+    },
+    {
+      "distance": 2440,
+      "curvature": 0,
+      "x": 2219.75,
+      "y": -608.42
+    },
+    {
+      "distance": 2445,
+      "curvature": 0,
+      "x": 2224.66,
+      "y": -609.37
+    },
+    {
+      "distance": 2450,
+      "curvature": 0,
+      "x": 2229.57,
+      "y": -610.31
+    },
+    {
+      "distance": 2455,
+      "curvature": 0,
+      "x": 2234.48,
+      "y": -611.25
+    },
+    {
+      "distance": 2460,
+      "curvature": 0,
+      "x": 2239.39,
+      "y": -612.19
+    },
+    {
+      "distance": 2465,
+      "curvature": 0,
+      "x": 2244.3,
+      "y": -613.14
+    },
+    {
+      "distance": 2470,
+      "curvature": 0,
+      "x": 2249.21,
+      "y": -614.08
+    },
+    {
+      "distance": 2475,
+      "curvature": 0,
+      "x": 2254.12,
+      "y": -615.02
+    },
+    {
+      "distance": 2480,
+      "curvature": 0,
+      "x": 2259.03,
+      "y": -615.96
+    },
+    {
+      "distance": 2485,
+      "curvature": 0,
+      "x": 2263.94,
+      "y": -616.91
+    },
+    {
+      "distance": 2490,
+      "curvature": 0,
+      "x": 2268.85,
+      "y": -617.85
+    },
+    {
+      "distance": 2495,
+      "curvature": 0,
+      "x": 2273.76,
+      "y": -618.79
+    },
+    {
+      "distance": 2500,
+      "curvature": 0,
+      "x": 2278.67,
+      "y": -619.73
+    },
+    {
+      "distance": 2505,
+      "curvature": -0.004784,
+      "x": 2283.58,
+      "y": -620.68
+    },
+    {
+      "distance": 2510,
+      "curvature": -0.008839,
+      "x": 2288.47,
+      "y": -621.74
+    },
+    {
+      "distance": 2515,
+      "curvature": -0.011548,
+      "x": 2293.3,
+      "y": -623.01
+    },
+    {
+      "distance": 2520,
+      "curvature": -0.0125,
+      "x": 2298.05,
+      "y": -624.56
+    },
+    {
+      "distance": 2525,
+      "curvature": -0.0125,
+      "x": 2302.7,
+      "y": -626.41
+    },
+    {
+      "distance": 2530,
+      "curvature": -0.0125,
+      "x": 2307.22,
+      "y": -628.54
+    },
+    {
+      "distance": 2535,
+      "curvature": -0.0125,
+      "x": 2311.61,
+      "y": -630.95
+    },
+    {
+      "distance": 2540,
+      "curvature": -0.0125,
+      "x": 2315.83,
+      "y": -633.63
+    },
+    {
+      "distance": 2545,
+      "curvature": -0.0125,
+      "x": 2319.87,
+      "y": -636.57
+    },
+    {
+      "distance": 2550,
+      "curvature": -0.0125,
+      "x": 2323.73,
+      "y": -639.75
+    },
+    {
+      "distance": 2555,
+      "curvature": -0.0125,
+      "x": 2327.38,
+      "y": -643.17
+    },
+    {
+      "distance": 2560,
+      "curvature": -0.0125,
+      "x": 2330.8,
+      "y": -646.81
+    },
+    {
+      "distance": 2565,
+      "curvature": -0.0125,
+      "x": 2334,
+      "y": -650.66
+    },
+    {
+      "distance": 2570,
+      "curvature": -0.0125,
+      "x": 2336.94,
+      "y": -654.7
+    },
+    {
+      "distance": 2575,
+      "curvature": -0.0125,
+      "x": 2339.63,
+      "y": -658.92
+    },
+    {
+      "distance": 2580,
+      "curvature": -0.0125,
+      "x": 2342.05,
+      "y": -663.29
+    },
+    {
+      "distance": 2585,
+      "curvature": -0.0125,
+      "x": 2344.19,
+      "y": -667.81
+    },
+    {
+      "distance": 2590,
+      "curvature": -0.0125,
+      "x": 2346.05,
+      "y": -672.45
+    },
+    {
+      "distance": 2595,
+      "curvature": -0.0125,
+      "x": 2347.61,
+      "y": -677.2
+    },
+    {
+      "distance": 2600,
+      "curvature": -0.011548,
+      "x": 2348.87,
+      "y": -682.04
+    },
+    {
+      "distance": 2605,
+      "curvature": -0.008839,
+      "x": 2349.86,
+      "y": -686.94
+    },
+    {
+      "distance": 2610,
+      "curvature": -0.004784,
+      "x": 2350.62,
+      "y": -691.88
+    },
+    {
+      "distance": 2615,
+      "curvature": 0,
+      "x": 2351.27,
+      "y": -696.84
+    },
+    {
+      "distance": 2620,
+      "curvature": 0,
+      "x": 2351.91,
+      "y": -701.8
+    },
+    {
+      "distance": 2625,
+      "curvature": 0,
+      "x": 2352.56,
+      "y": -706.76
+    },
+    {
+      "distance": 2630,
+      "curvature": 0,
+      "x": 2353.2,
+      "y": -711.72
+    },
+    {
+      "distance": 2635,
+      "curvature": 0,
+      "x": 2353.85,
+      "y": -716.67
+    },
+    {
+      "distance": 2640,
+      "curvature": 0,
+      "x": 2354.49,
+      "y": -721.63
+    },
+    {
+      "distance": 2645,
+      "curvature": 0,
+      "x": 2355.14,
+      "y": -726.59
+    },
+    {
+      "distance": 2650,
+      "curvature": 0,
+      "x": 2355.78,
+      "y": -731.55
+    },
+    {
+      "distance": 2655,
+      "curvature": 0,
+      "x": 2356.43,
+      "y": -736.51
+    },
+    {
+      "distance": 2660,
+      "curvature": 0,
+      "x": 2357.07,
+      "y": -741.46
+    },
+    {
+      "distance": 2665,
+      "curvature": 0,
+      "x": 2357.72,
+      "y": -746.42
+    },
+    {
+      "distance": 2670,
+      "curvature": 0,
+      "x": 2358.36,
+      "y": -751.38
+    },
+    {
+      "distance": 2675,
+      "curvature": 0,
+      "x": 2359.01,
+      "y": -756.34
+    },
+    {
+      "distance": 2680,
+      "curvature": 0,
+      "x": 2359.65,
+      "y": -761.3
+    },
+    {
+      "distance": 2685,
+      "curvature": 0,
+      "x": 2360.3,
+      "y": -766.26
+    },
+    {
+      "distance": 2690,
+      "curvature": 0,
+      "x": 2360.94,
+      "y": -771.21
+    },
+    {
+      "distance": 2695,
+      "curvature": 0,
+      "x": 2361.59,
+      "y": -776.17
+    },
+    {
+      "distance": 2700,
+      "curvature": 0.01,
+      "x": 2362.23,
+      "y": -781.13
+    },
+    {
+      "distance": 2705,
+      "curvature": 0.017321,
+      "x": 2363.13,
+      "y": -786.05
+    },
+    {
+      "distance": 2710,
+      "curvature": 0.02,
+      "x": 2364.44,
+      "y": -790.87
+    },
+    {
+      "distance": 2715,
+      "curvature": 0.02,
+      "x": 2366.23,
+      "y": -795.54
+    },
+    {
+      "distance": 2720,
+      "curvature": 0.02,
+      "x": 2368.48,
+      "y": -800.01
+    },
+    {
+      "distance": 2725,
+      "curvature": 0.02,
+      "x": 2371.16,
+      "y": -804.23
+    },
+    {
+      "distance": 2730,
+      "curvature": 0.02,
+      "x": 2374.25,
+      "y": -808.16
+    },
+    {
+      "distance": 2735,
+      "curvature": 0.02,
+      "x": 2377.71,
+      "y": -811.76
+    },
+    {
+      "distance": 2740,
+      "curvature": 0.02,
+      "x": 2381.52,
+      "y": -815
+    },
+    {
+      "distance": 2745,
+      "curvature": 0.02,
+      "x": 2385.64,
+      "y": -817.85
+    },
+    {
+      "distance": 2750,
+      "curvature": 0.02,
+      "x": 2390.01,
+      "y": -820.27
+    },
+    {
+      "distance": 2755,
+      "curvature": 0.02,
+      "x": 2394.61,
+      "y": -822.23
+    },
+    {
+      "distance": 2760,
+      "curvature": 0.02,
+      "x": 2399.38,
+      "y": -823.73
+    },
+    {
+      "distance": 2765,
+      "curvature": 0.02,
+      "x": 2404.27,
+      "y": -824.75
+    },
+    {
+      "distance": 2770,
+      "curvature": 0.02,
+      "x": 2409.25,
+      "y": -825.27
+    },
+    {
+      "distance": 2775,
+      "curvature": 0.02,
+      "x": 2414.25,
+      "y": -825.3
+    },
+    {
+      "distance": 2780,
+      "curvature": 0.017321,
+      "x": 2419.22,
+      "y": -824.82
+    },
+    {
+      "distance": 2785,
+      "curvature": 0.01,
+      "x": 2424.14,
+      "y": -823.92
+    },
+    {
+      "distance": 2790,
+      "curvature": -0.008333,
+      "x": 2429.01,
+      "y": -822.77
+    },
+    {
+      "distance": 2795,
+      "curvature": -0.014434,
+      "x": 2433.92,
+      "y": -821.82
+    },
+    {
+      "distance": 2800,
+      "curvature": -0.016667,
+      "x": 2438.88,
+      "y": -821.24
+    },
+    {
+      "distance": 2805,
+      "curvature": -0.016667,
+      "x": 2443.88,
+      "y": -821.06
+    },
+    {
+      "distance": 2810,
+      "curvature": -0.016667,
+      "x": 2448.87,
+      "y": -821.31
+    },
+    {
+      "distance": 2815,
+      "curvature": -0.016667,
+      "x": 2453.83,
+      "y": -821.96
+    },
+    {
+      "distance": 2820,
+      "curvature": -0.016667,
+      "x": 2458.71,
+      "y": -823.03
+    },
+    {
+      "distance": 2825,
+      "curvature": -0.016667,
+      "x": 2463.49,
+      "y": -824.5
+    },
+    {
+      "distance": 2830,
+      "curvature": -0.016667,
+      "x": 2468.13,
+      "y": -826.37
+    },
+    {
+      "distance": 2835,
+      "curvature": -0.016667,
+      "x": 2472.6,
+      "y": -828.61
+    },
+    {
+      "distance": 2840,
+      "curvature": -0.016667,
+      "x": 2476.87,
+      "y": -831.22
+    },
+    {
+      "distance": 2845,
+      "curvature": -0.016667,
+      "x": 2480.9,
+      "y": -834.17
+    },
+    {
+      "distance": 2850,
+      "curvature": -0.016667,
+      "x": 2484.68,
+      "y": -837.45
+    },
+    {
+      "distance": 2855,
+      "curvature": -0.016667,
+      "x": 2488.16,
+      "y": -841.03
+    },
+    {
+      "distance": 2860,
+      "curvature": -0.016667,
+      "x": 2491.34,
+      "y": -844.89
+    },
+    {
+      "distance": 2865,
+      "curvature": -0.016667,
+      "x": 2494.19,
+      "y": -849.01
+    },
+    {
+      "distance": 2870,
+      "curvature": -0.016667,
+      "x": 2496.68,
+      "y": -853.34
+    },
+    {
+      "distance": 2875,
+      "curvature": -0.016667,
+      "x": 2498.81,
+      "y": -857.87
+    },
+    {
+      "distance": 2880,
+      "curvature": -0.016667,
+      "x": 2500.55,
+      "y": -862.55
+    },
+    {
+      "distance": 2885,
+      "curvature": -0.016667,
+      "x": 2501.89,
+      "y": -867.37
+    },
+    {
+      "distance": 2890,
+      "curvature": -0.014434,
+      "x": 2502.83,
+      "y": -872.28
+    },
+    {
+      "distance": 2895,
+      "curvature": -0.008333,
+      "x": 2503.41,
+      "y": -877.25
+    },
+    {
+      "distance": 2900,
+      "curvature": 0,
+      "x": 2503.78,
+      "y": -882.23
+    },
+    {
+      "distance": 2905,
+      "curvature": 0,
+      "x": 2504.16,
+      "y": -887.22
+    },
+    {
+      "distance": 2910,
+      "curvature": 0,
+      "x": 2504.53,
+      "y": -892.2
+    },
+    {
+      "distance": 2915,
+      "curvature": 0,
+      "x": 2504.91,
+      "y": -897.19
+    },
+    {
+      "distance": 2920,
+      "curvature": 0,
+      "x": 2505.28,
+      "y": -902.18
+    },
+    {
+      "distance": 2925,
+      "curvature": 0,
+      "x": 2505.66,
+      "y": -907.16
+    },
+    {
+      "distance": 2930,
+      "curvature": 0,
+      "x": 2506.03,
+      "y": -912.15
+    },
+    {
+      "distance": 2935,
+      "curvature": 0,
+      "x": 2506.41,
+      "y": -917.13
+    },
+    {
+      "distance": 2940,
+      "curvature": 0,
+      "x": 2506.78,
+      "y": -922.12
+    },
+    {
+      "distance": 2945,
+      "curvature": 0,
+      "x": 2507.15,
+      "y": -927.11
+    },
+    {
+      "distance": 2950,
+      "curvature": 0,
+      "x": 2507.53,
+      "y": -932.09
+    },
+    {
+      "distance": 2955,
+      "curvature": 0,
+      "x": 2507.9,
+      "y": -937.08
+    },
+    {
+      "distance": 2960,
+      "curvature": 0,
+      "x": 2508.28,
+      "y": -942.06
+    },
+    {
+      "distance": 2965,
+      "curvature": 0,
+      "x": 2508.65,
+      "y": -947.05
+    },
+    {
+      "distance": 2970,
+      "curvature": 0,
+      "x": 2509.03,
+      "y": -952.04
+    },
+    {
+      "distance": 2975,
+      "curvature": 0,
+      "x": 2509.4,
+      "y": -957.02
+    },
+    {
+      "distance": 2980,
+      "curvature": 0,
+      "x": 2509.77,
+      "y": -962.01
+    },
+    {
+      "distance": 2985,
+      "curvature": 0,
+      "x": 2510.15,
+      "y": -966.99
+    },
+    {
+      "distance": 2990,
+      "curvature": 0,
+      "x": 2510.52,
+      "y": -971.98
+    },
+    {
+      "distance": 2995,
+      "curvature": 0,
+      "x": 2510.9,
+      "y": -976.97
+    },
+    {
+      "distance": 3000,
+      "curvature": 0,
+      "x": 2511.27,
+      "y": -981.95
+    },
+    {
+      "distance": 3005,
+      "curvature": 0,
+      "x": 2511.65,
+      "y": -986.94
+    },
+    {
+      "distance": 3010,
+      "curvature": 0,
+      "x": 2512.02,
+      "y": -991.92
+    },
+    {
+      "distance": 3015,
+      "curvature": 0,
+      "x": 2512.4,
+      "y": -996.91
+    },
+    {
+      "distance": 3020,
+      "curvature": 0,
+      "x": 2512.77,
+      "y": -1001.9
+    },
+    {
+      "distance": 3025,
+      "curvature": 0,
+      "x": 2513.14,
+      "y": -1006.88
+    },
+    {
+      "distance": 3030,
+      "curvature": 0,
+      "x": 2513.52,
+      "y": -1011.87
+    },
+    {
+      "distance": 3035,
+      "curvature": 0,
+      "x": 2513.89,
+      "y": -1016.85
+    },
+    {
+      "distance": 3040,
+      "curvature": 0,
+      "x": 2514.27,
+      "y": -1021.84
+    },
+    {
+      "distance": 3045,
+      "curvature": 0,
+      "x": 2514.64,
+      "y": -1026.83
+    },
+    {
+      "distance": 3050,
+      "curvature": 0,
+      "x": 2515.02,
+      "y": -1031.81
+    },
+    {
+      "distance": 3055,
+      "curvature": 0,
+      "x": 2515.39,
+      "y": -1036.8
+    },
+    {
+      "distance": 3060,
+      "curvature": -0.009091,
+      "x": 2515.77,
+      "y": -1041.78
+    },
+    {
+      "distance": 3065,
+      "curvature": -0.015746,
+      "x": 2515.91,
+      "y": -1046.78
+    },
+    {
+      "distance": 3070,
+      "curvature": -0.018182,
+      "x": 2515.67,
+      "y": -1051.78
+    },
+    {
+      "distance": 3075,
+      "curvature": -0.018182,
+      "x": 2514.97,
+      "y": -1056.73
+    },
+    {
+      "distance": 3080,
+      "curvature": -0.018182,
+      "x": 2513.82,
+      "y": -1061.59
+    },
+    {
+      "distance": 3085,
+      "curvature": -0.018182,
+      "x": 2512.24,
+      "y": -1066.34
+    },
+    {
+      "distance": 3090,
+      "curvature": -0.018182,
+      "x": 2510.23,
+      "y": -1070.92
+    },
+    {
+      "distance": 3095,
+      "curvature": -0.018182,
+      "x": 2507.82,
+      "y": -1075.3
+    },
+    {
+      "distance": 3100,
+      "curvature": -0.018182,
+      "x": 2505.02,
+      "y": -1079.44
+    },
+    {
+      "distance": 3105,
+      "curvature": -0.018182,
+      "x": 2501.85,
+      "y": -1083.31
+    },
+    {
+      "distance": 3110,
+      "curvature": -0.018182,
+      "x": 2498.35,
+      "y": -1086.87
+    },
+    {
+      "distance": 3115,
+      "curvature": -0.018182,
+      "x": 2494.54,
+      "y": -1090.11
+    },
+    {
+      "distance": 3120,
+      "curvature": -0.018182,
+      "x": 2490.45,
+      "y": -1092.98
+    },
+    {
+      "distance": 3125,
+      "curvature": -0.018182,
+      "x": 2486.11,
+      "y": -1095.47
+    },
+    {
+      "distance": 3130,
+      "curvature": -0.018182,
+      "x": 2481.57,
+      "y": -1097.56
+    },
+    {
+      "distance": 3135,
+      "curvature": -0.012856,
+      "x": 2476.85,
+      "y": -1099.23
+    },
+    {
+      "distance": 3140,
+      "curvature": 0.011785,
+      "x": 2472.04,
+      "y": -1100.59
+    },
+    {
+      "distance": 3145,
+      "curvature": 0.016667,
+      "x": 2467.32,
+      "y": -1102.23
+    },
+    {
+      "distance": 3150,
+      "curvature": 0.016667,
+      "x": 2462.75,
+      "y": -1104.26
+    },
+    {
+      "distance": 3155,
+      "curvature": 0.016667,
+      "x": 2458.36,
+      "y": -1106.66
+    },
+    {
+      "distance": 3160,
+      "curvature": 0.016667,
+      "x": 2454.19,
+      "y": -1109.42
+    },
+    {
+      "distance": 3165,
+      "curvature": 0.016667,
+      "x": 2450.27,
+      "y": -1112.51
+    },
+    {
+      "distance": 3170,
+      "curvature": 0.016667,
+      "x": 2446.61,
+      "y": -1115.92
+    },
+    {
+      "distance": 3175,
+      "curvature": 0.016667,
+      "x": 2443.25,
+      "y": -1119.63
+    },
+    {
+      "distance": 3180,
+      "curvature": 0.016667,
+      "x": 2440.22,
+      "y": -1123.6
+    },
+    {
+      "distance": 3185,
+      "curvature": 0.016667,
+      "x": 2437.52,
+      "y": -1127.81
+    },
+    {
+      "distance": 3190,
+      "curvature": 0.016667,
+      "x": 2435.18,
+      "y": -1132.23
+    },
+    {
+      "distance": 3195,
+      "curvature": 0.016667,
+      "x": 2433.22,
+      "y": -1136.83
+    },
+    {
+      "distance": 3200,
+      "curvature": 0.016667,
+      "x": 2431.65,
+      "y": -1141.58
+    },
+    {
+      "distance": 3205,
+      "curvature": 0.014434,
+      "x": 2430.48,
+      "y": -1146.44
+    },
+    {
+      "distance": 3210,
+      "curvature": 0.008333,
+      "x": 2429.66,
+      "y": -1151.37
+    },
+    {
+      "distance": 3215,
+      "curvature": 0,
+      "x": 2429.05,
+      "y": -1156.33
+    },
+    {
+      "distance": 3220,
+      "curvature": 0,
+      "x": 2428.44,
+      "y": -1161.3
+    },
+    {
+      "distance": 3225,
+      "curvature": 0,
+      "x": 2427.83,
+      "y": -1166.26
+    },
+    {
+      "distance": 3230,
+      "curvature": 0,
+      "x": 2427.21,
+      "y": -1171.22
+    },
+    {
+      "distance": 3235,
+      "curvature": 0,
+      "x": 2426.6,
+      "y": -1176.18
+    },
+    {
+      "distance": 3240,
+      "curvature": 0,
+      "x": 2425.99,
+      "y": -1181.14
+    },
+    {
+      "distance": 3245,
+      "curvature": 0,
+      "x": 2425.38,
+      "y": -1186.11
+    },
+    {
+      "distance": 3250,
+      "curvature": 0,
+      "x": 2424.77,
+      "y": -1191.07
+    },
+    {
+      "distance": 3255,
+      "curvature": 0,
+      "x": 2424.16,
+      "y": -1196.03
+    },
+    {
+      "distance": 3260,
+      "curvature": 0,
+      "x": 2423.55,
+      "y": -1200.99
+    },
+    {
+      "distance": 3265,
+      "curvature": 0,
+      "x": 2422.94,
+      "y": -1205.96
+    },
+    {
+      "distance": 3270,
+      "curvature": 0,
+      "x": 2422.32,
+      "y": -1210.92
+    },
+    {
+      "distance": 3275,
+      "curvature": 0,
+      "x": 2421.71,
+      "y": -1215.88
+    },
+    {
+      "distance": 3280,
+      "curvature": 0,
+      "x": 2421.1,
+      "y": -1220.84
+    },
+    {
+      "distance": 3285,
+      "curvature": 0,
+      "x": 2420.49,
+      "y": -1225.81
+    },
+    {
+      "distance": 3290,
+      "curvature": 0,
+      "x": 2419.88,
+      "y": -1230.77
+    },
+    {
+      "distance": 3295,
+      "curvature": 0,
+      "x": 2419.27,
+      "y": -1235.73
+    },
+    {
+      "distance": 3300,
+      "curvature": 0,
+      "x": 2418.66,
+      "y": -1240.69
+    },
+    {
+      "distance": 3305,
+      "curvature": 0,
+      "x": 2418.04,
+      "y": -1245.66
+    },
+    {
+      "distance": 3310,
+      "curvature": 0,
+      "x": 2417.43,
+      "y": -1250.62
+    },
+    {
+      "distance": 3315,
+      "curvature": 0,
+      "x": 2416.82,
+      "y": -1255.58
+    },
+    {
+      "distance": 3320,
+      "curvature": 0,
+      "x": 2416.21,
+      "y": -1260.54
+    },
+    {
+      "distance": 3325,
+      "curvature": 0,
+      "x": 2415.6,
+      "y": -1265.51
+    },
+    {
+      "distance": 3330,
+      "curvature": 0,
+      "x": 2414.99,
+      "y": -1270.47
+    },
+    {
+      "distance": 3335,
+      "curvature": 0,
+      "x": 2414.38,
+      "y": -1275.43
+    },
+    {
+      "distance": 3340,
+      "curvature": 0,
+      "x": 2413.77,
+      "y": -1280.39
+    },
+    {
+      "distance": 3345,
+      "curvature": 0,
+      "x": 2413.15,
+      "y": -1285.36
+    },
+    {
+      "distance": 3350,
+      "curvature": 0,
+      "x": 2412.54,
+      "y": -1290.32
+    },
+    {
+      "distance": 3355,
+      "curvature": 0,
+      "x": 2411.93,
+      "y": -1295.28
+    },
+    {
+      "distance": 3360,
+      "curvature": 0,
+      "x": 2411.32,
+      "y": -1300.24
+    },
+    {
+      "distance": 3365,
+      "curvature": 0,
+      "x": 2410.71,
+      "y": -1305.21
+    },
+    {
+      "distance": 3370,
+      "curvature": 0,
+      "x": 2410.1,
+      "y": -1310.17
+    },
+    {
+      "distance": 3375,
+      "curvature": 0,
+      "x": 2409.49,
+      "y": -1315.13
+    },
+    {
+      "distance": 3380,
+      "curvature": 0,
+      "x": 2408.87,
+      "y": -1320.09
+    },
+    {
+      "distance": 3385,
+      "curvature": 0,
+      "x": 2408.26,
+      "y": -1325.06
+    },
+    {
+      "distance": 3390,
+      "curvature": 0,
+      "x": 2407.65,
+      "y": -1330.02
+    },
+    {
+      "distance": 3395,
+      "curvature": 0,
+      "x": 2407.04,
+      "y": -1334.98
+    },
+    {
+      "distance": 3400,
+      "curvature": 0,
+      "x": 2406.43,
+      "y": -1339.94
+    },
+    {
+      "distance": 3405,
+      "curvature": 0,
+      "x": 2405.82,
+      "y": -1344.91
+    },
+    {
+      "distance": 3410,
+      "curvature": 0,
+      "x": 2405.21,
+      "y": -1349.87
+    },
+    {
+      "distance": 3415,
+      "curvature": 0,
+      "x": 2404.6,
+      "y": -1354.83
+    },
+    {
+      "distance": 3420,
+      "curvature": 0,
+      "x": 2403.98,
+      "y": -1359.79
+    },
+    {
+      "distance": 3425,
+      "curvature": 0,
+      "x": 2403.37,
+      "y": -1364.76
+    },
+    {
+      "distance": 3430,
+      "curvature": 0,
+      "x": 2402.76,
+      "y": -1369.72
+    },
+    {
+      "distance": 3435,
+      "curvature": 0,
+      "x": 2402.15,
+      "y": -1374.68
+    },
+    {
+      "distance": 3440,
+      "curvature": 0,
+      "x": 2401.54,
+      "y": -1379.64
+    },
+    {
+      "distance": 3445,
+      "curvature": 0,
+      "x": 2400.93,
+      "y": -1384.61
+    },
+    {
+      "distance": 3450,
+      "curvature": 0,
+      "x": 2400.32,
+      "y": -1389.57
+    },
+    {
+      "distance": 3455,
+      "curvature": 0,
+      "x": 2399.7,
+      "y": -1394.53
+    },
+    {
+      "distance": 3460,
+      "curvature": 0,
+      "x": 2399.09,
+      "y": -1399.49
+    },
+    {
+      "distance": 3465,
+      "curvature": 0,
+      "x": 2398.48,
+      "y": -1404.46
+    },
+    {
+      "distance": 3470,
+      "curvature": 0,
+      "x": 2397.87,
+      "y": -1409.42
+    },
+    {
+      "distance": 3475,
+      "curvature": 0,
+      "x": 2397.26,
+      "y": -1414.38
+    },
+    {
+      "distance": 3480,
+      "curvature": 0,
+      "x": 2396.65,
+      "y": -1419.34
+    },
+    {
+      "distance": 3485,
+      "curvature": 0,
+      "x": 2396.04,
+      "y": -1424.31
+    },
+    {
+      "distance": 3490,
+      "curvature": 0,
+      "x": 2395.43,
+      "y": -1429.27
+    },
+    {
+      "distance": 3495,
+      "curvature": 0,
+      "x": 2394.81,
+      "y": -1434.23
+    },
+    {
+      "distance": 3500,
+      "curvature": 0,
+      "x": 2394.2,
+      "y": -1439.19
+    },
+    {
+      "distance": 3505,
+      "curvature": 0,
+      "x": 2393.59,
+      "y": -1444.16
+    },
+    {
+      "distance": 3510,
+      "curvature": 0,
+      "x": 2392.98,
+      "y": -1449.12
+    },
+    {
+      "distance": 3515,
+      "curvature": 0,
+      "x": 2392.37,
+      "y": -1454.08
+    },
+    {
+      "distance": 3520,
+      "curvature": 0,
+      "x": 2391.76,
+      "y": -1459.04
+    },
+    {
+      "distance": 3525,
+      "curvature": -0.014286,
+      "x": 2391.15,
+      "y": -1464.01
+    },
+    {
+      "distance": 3530,
+      "curvature": -0.024744,
+      "x": 2390.18,
+      "y": -1468.91
+    },
+    {
+      "distance": 3535,
+      "curvature": -0.028571,
+      "x": 2388.62,
+      "y": -1473.66
+    },
+    {
+      "distance": 3540,
+      "curvature": -0.028571,
+      "x": 2386.4,
+      "y": -1478.14
+    },
+    {
+      "distance": 3545,
+      "curvature": -0.028571,
+      "x": 2383.56,
+      "y": -1482.26
+    },
+    {
+      "distance": 3550,
+      "curvature": -0.028571,
+      "x": 2380.17,
+      "y": -1485.93
+    },
+    {
+      "distance": 3555,
+      "curvature": -0.028571,
+      "x": 2376.28,
+      "y": -1489.08
+    },
+    {
+      "distance": 3560,
+      "curvature": -0.028571,
+      "x": 2371.99,
+      "y": -1491.65
+    },
+    {
+      "distance": 3565,
+      "curvature": -0.028571,
+      "x": 2367.38,
+      "y": -1493.57
+    },
+    {
+      "distance": 3570,
+      "curvature": -0.028571,
+      "x": 2362.54,
+      "y": -1494.83
+    },
+    {
+      "distance": 3575,
+      "curvature": -0.028571,
+      "x": 2357.57,
+      "y": -1495.38
+    },
+    {
+      "distance": 3580,
+      "curvature": -0.028571,
+      "x": 2352.57,
+      "y": -1495.21
+    },
+    {
+      "distance": 3585,
+      "curvature": -0.028571,
+      "x": 2347.65,
+      "y": -1494.34
+    },
+    {
+      "distance": 3590,
+      "curvature": -0.028571,
+      "x": 2342.9,
+      "y": -1492.77
+    },
+    {
+      "distance": 3595,
+      "curvature": -0.028571,
+      "x": 2338.42,
+      "y": -1490.55
+    },
+    {
+      "distance": 3600,
+      "curvature": -0.028571,
+      "x": 2334.31,
+      "y": -1487.71
+    },
+    {
+      "distance": 3605,
+      "curvature": -0.024744,
+      "x": 2330.64,
+      "y": -1484.31
+    },
+    {
+      "distance": 3610,
+      "curvature": -0.014286,
+      "x": 2327.42,
+      "y": -1480.49
+    },
+    {
+      "distance": 3615,
+      "curvature": 0,
+      "x": 2324.47,
+      "y": -1476.45
+    },
+    {
+      "distance": 3620,
+      "curvature": 0,
+      "x": 2321.53,
+      "y": -1472.4
+    },
+    {
+      "distance": 3625,
+      "curvature": 0,
+      "x": 2318.59,
+      "y": -1468.36
+    },
+    {
+      "distance": 3630,
+      "curvature": 0,
+      "x": 2315.65,
+      "y": -1464.31
+    },
+    {
+      "distance": 3635,
+      "curvature": 0,
+      "x": 2312.71,
+      "y": -1460.27
+    },
+    {
+      "distance": 3640,
+      "curvature": 0,
+      "x": 2309.77,
+      "y": -1456.23
+    },
+    {
+      "distance": 3645,
+      "curvature": 0,
+      "x": 2306.83,
+      "y": -1452.18
+    },
+    {
+      "distance": 3650,
+      "curvature": 0,
+      "x": 2303.89,
+      "y": -1448.14
+    },
+    {
+      "distance": 3655,
+      "curvature": 0,
+      "x": 2300.95,
+      "y": -1444.09
+    },
+    {
+      "distance": 3660,
+      "curvature": 0,
+      "x": 2298.01,
+      "y": -1440.05
+    },
+    {
+      "distance": 3665,
+      "curvature": 0,
+      "x": 2295.07,
+      "y": -1436.01
+    },
+    {
+      "distance": 3670,
+      "curvature": 0,
+      "x": 2292.13,
+      "y": -1431.96
+    },
+    {
+      "distance": 3675,
+      "curvature": 0,
+      "x": 2289.19,
+      "y": -1427.92
+    },
+    {
+      "distance": 3680,
+      "curvature": 0,
+      "x": 2286.25,
+      "y": -1423.87
+    },
+    {
+      "distance": 3685,
+      "curvature": 0,
+      "x": 2283.31,
+      "y": -1419.83
+    },
+    {
+      "distance": 3690,
+      "curvature": 0,
+      "x": 2280.37,
+      "y": -1415.79
+    },
+    {
+      "distance": 3695,
+      "curvature": 0,
+      "x": 2277.43,
+      "y": -1411.74
+    },
+    {
+      "distance": 3700,
+      "curvature": 0.016667,
+      "x": 2274.48,
+      "y": -1407.7
+    },
+    {
+      "distance": 3705,
+      "curvature": 0.028868,
+      "x": 2271.22,
+      "y": -1403.91
+    },
+    {
+      "distance": 3710,
+      "curvature": 0.033333,
+      "x": 2267.44,
+      "y": -1400.64
+    },
+    {
+      "distance": 3715,
+      "curvature": 0.033333,
+      "x": 2263.17,
+      "y": -1398.03
+    },
+    {
+      "distance": 3720,
+      "curvature": 0.033333,
+      "x": 2258.53,
+      "y": -1396.17
+    },
+    {
+      "distance": 3725,
+      "curvature": 0.033333,
+      "x": 2253.64,
+      "y": -1395.11
+    },
+    {
+      "distance": 3730,
+      "curvature": 0.033333,
+      "x": 2248.65,
+      "y": -1394.87
+    },
+    {
+      "distance": 3735,
+      "curvature": 0.033333,
+      "x": 2243.69,
+      "y": -1395.47
+    },
+    {
+      "distance": 3740,
+      "curvature": 0.033333,
+      "x": 2238.89,
+      "y": -1396.87
+    },
+    {
+      "distance": 3745,
+      "curvature": 0.033333,
+      "x": 2234.39,
+      "y": -1399.06
+    },
+    {
+      "distance": 3750,
+      "curvature": 0.033333,
+      "x": 2230.32,
+      "y": -1401.96
+    },
+    {
+      "distance": 3755,
+      "curvature": 0.033333,
+      "x": 2226.78,
+      "y": -1405.5
+    },
+    {
+      "distance": 3760,
+      "curvature": 0.033333,
+      "x": 2223.88,
+      "y": -1409.57
+    },
+    {
+      "distance": 3765,
+      "curvature": 0.033333,
+      "x": 2221.7,
+      "y": -1414.07
+    },
+    {
+      "distance": 3770,
+      "curvature": 0.033333,
+      "x": 2220.29,
+      "y": -1418.87
+    },
+    {
+      "distance": 3775,
+      "curvature": 0.033333,
+      "x": 2219.7,
+      "y": -1423.83
+    },
+    {
+      "distance": 3780,
+      "curvature": 0.033333,
+      "x": 2219.94,
+      "y": -1428.83
+    },
+    {
+      "distance": 3785,
+      "curvature": 0.033333,
+      "x": 2221.01,
+      "y": -1433.71
+    },
+    {
+      "distance": 3790,
+      "curvature": 0.033333,
+      "x": 2222.87,
+      "y": -1438.35
+    },
+    {
+      "distance": 3795,
+      "curvature": 0.033333,
+      "x": 2225.48,
+      "y": -1442.62
+    },
+    {
+      "distance": 3800,
+      "curvature": 0.033333,
+      "x": 2228.75,
+      "y": -1446.39
+    },
+    {
+      "distance": 3805,
+      "curvature": 0.033333,
+      "x": 2232.61,
+      "y": -1449.57
+    },
+    {
+      "distance": 3810,
+      "curvature": 0.033333,
+      "x": 2236.94,
+      "y": -1452.07
+    },
+    {
+      "distance": 3815,
+      "curvature": 0.033333,
+      "x": 2241.63,
+      "y": -1453.81
+    },
+    {
+      "distance": 3820,
+      "curvature": 0.033333,
+      "x": 2246.54,
+      "y": -1454.75
+    },
+    {
+      "distance": 3825,
+      "curvature": 0.033333,
+      "x": 2251.54,
+      "y": -1454.87
+    },
+    {
+      "distance": 3830,
+      "curvature": 0.033333,
+      "x": 2256.49,
+      "y": -1454.15
+    },
+    {
+      "distance": 3835,
+      "curvature": 0.028868,
+      "x": 2261.25,
+      "y": -1452.62
+    },
+    {
+      "distance": 3840,
+      "curvature": 0.016667,
+      "x": 2265.74,
+      "y": -1450.42
+    },
+    {
+      "distance": 3845,
+      "curvature": -0.014142,
+      "x": 2270.03,
+      "y": -1447.86
+    },
+    {
+      "distance": 3850,
+      "curvature": -0.02,
+      "x": 2274.5,
+      "y": -1445.61
+    },
+    {
+      "distance": 3855,
+      "curvature": -0.02,
+      "x": 2279.16,
+      "y": -1443.81
+    },
+    {
+      "distance": 3860,
+      "curvature": -0.02,
+      "x": 2283.98,
+      "y": -1442.49
+    },
+    {
+      "distance": 3865,
+      "curvature": -0.02,
+      "x": 2288.91,
+      "y": -1441.65
+    },
+    {
+      "distance": 3870,
+      "curvature": -0.02,
+      "x": 2293.9,
+      "y": -1441.32
+    },
+    {
+      "distance": 3875,
+      "curvature": -0.02,
+      "x": 2298.9,
+      "y": -1441.48
+    },
+    {
+      "distance": 3880,
+      "curvature": -0.02,
+      "x": 2303.86,
+      "y": -1442.14
+    },
+    {
+      "distance": 3885,
+      "curvature": -0.02,
+      "x": 2308.72,
+      "y": -1443.29
+    },
+    {
+      "distance": 3890,
+      "curvature": -0.02,
+      "x": 2313.45,
+      "y": -1444.92
+    },
+    {
+      "distance": 3895,
+      "curvature": -0.02,
+      "x": 2317.99,
+      "y": -1447.01
+    },
+    {
+      "distance": 3900,
+      "curvature": -0.014142,
+      "x": 2322.3,
+      "y": -1449.55
+    },
+    {
+      "distance": 3905,
+      "curvature": 0,
+      "x": 2326.41,
+      "y": -1452.39
+    },
+    {
+      "distance": 3910,
+      "curvature": 0,
+      "x": 2330.53,
+      "y": -1455.22
+    },
+    {
+      "distance": 3915,
+      "curvature": 0,
+      "x": 2334.65,
+      "y": -1458.06
+    },
+    {
+      "distance": 3920,
+      "curvature": 0,
+      "x": 2338.77,
+      "y": -1460.9
+    },
+    {
+      "distance": 3925,
+      "curvature": 0,
+      "x": 2342.89,
+      "y": -1463.73
+    },
+    {
+      "distance": 3930,
+      "curvature": 0,
+      "x": 2347,
+      "y": -1466.57
+    },
+    {
+      "distance": 3935,
+      "curvature": 0,
+      "x": 2351.12,
+      "y": -1469.4
+    },
+    {
+      "distance": 3940,
+      "curvature": 0,
+      "x": 2355.24,
+      "y": -1472.24
+    },
+    {
+      "distance": 3945,
+      "curvature": 0,
+      "x": 2359.36,
+      "y": -1475.08
+    },
+    {
+      "distance": 3950,
+      "curvature": 0,
+      "x": 2363.48,
+      "y": -1477.91
+    },
+    {
+      "distance": 3955,
+      "curvature": 0,
+      "x": 2367.59,
+      "y": -1480.75
+    },
+    {
+      "distance": 3960,
+      "curvature": 0,
+      "x": 2371.71,
+      "y": -1483.58
+    },
+    {
+      "distance": 3965,
+      "curvature": 0,
+      "x": 2375.83,
+      "y": -1486.42
+    },
+    {
+      "distance": 3970,
+      "curvature": 0,
+      "x": 2379.95,
+      "y": -1489.26
+    },
+    {
+      "distance": 3975,
+      "curvature": 0,
+      "x": 2384.07,
+      "y": -1492.09
+    },
+    {
+      "distance": 3980,
+      "curvature": 0,
+      "x": 2388.18,
+      "y": -1494.93
+    },
+    {
+      "distance": 3985,
+      "curvature": 0,
+      "x": 2392.3,
+      "y": -1497.76
+    },
+    {
+      "distance": 3990,
+      "curvature": 0,
+      "x": 2396.42,
+      "y": -1500.6
+    },
+    {
+      "distance": 3995,
+      "curvature": 0,
+      "x": 2400.54,
+      "y": -1503.43
+    },
+    {
+      "distance": 4000,
+      "curvature": 0,
+      "x": 2404.66,
+      "y": -1506.27
+    },
+    {
+      "distance": 4005,
+      "curvature": 0,
+      "x": 2408.77,
+      "y": -1509.11
+    },
+    {
+      "distance": 4010,
+      "curvature": 0,
+      "x": 2412.89,
+      "y": -1511.94
+    },
+    {
+      "distance": 4015,
+      "curvature": 0,
+      "x": 2417.01,
+      "y": -1514.78
+    },
+    {
+      "distance": 4020,
+      "curvature": 0,
+      "x": 2421.13,
+      "y": -1517.61
+    },
+    {
+      "distance": 4025,
+      "curvature": 0,
+      "x": 2425.25,
+      "y": -1520.45
+    },
+    {
+      "distance": 4030,
+      "curvature": 0,
+      "x": 2429.36,
+      "y": -1523.29
+    },
+    {
+      "distance": 4035,
+      "curvature": 0,
+      "x": 2433.48,
+      "y": -1526.12
+    },
+    {
+      "distance": 4040,
+      "curvature": 0,
+      "x": 2437.6,
+      "y": -1528.96
+    },
+    {
+      "distance": 4045,
+      "curvature": 0,
+      "x": 2441.72,
+      "y": -1531.79
+    },
+    {
+      "distance": 4050,
+      "curvature": 0,
+      "x": 2445.84,
+      "y": -1534.63
+    },
+    {
+      "distance": 4055,
+      "curvature": 0,
+      "x": 2449.95,
+      "y": -1537.47
+    },
+    {
+      "distance": 4060,
+      "curvature": 0,
+      "x": 2454.07,
+      "y": -1540.3
+    },
+    {
+      "distance": 4065,
+      "curvature": 0,
+      "x": 2458.19,
+      "y": -1543.14
+    },
+    {
+      "distance": 4070,
+      "curvature": 0,
+      "x": 2462.31,
+      "y": -1545.97
+    },
+    {
+      "distance": 4075,
+      "curvature": 0,
+      "x": 2466.43,
+      "y": -1548.81
+    },
+    {
+      "distance": 4080,
+      "curvature": 0,
+      "x": 2470.54,
+      "y": -1551.64
+    },
+    {
+      "distance": 4085,
+      "curvature": 0,
+      "x": 2474.66,
+      "y": -1554.48
+    },
+    {
+      "distance": 4090,
+      "curvature": 0,
+      "x": 2478.78,
+      "y": -1557.32
+    },
+    {
+      "distance": 4095,
+      "curvature": 0,
+      "x": 2482.9,
+      "y": -1560.15
+    },
+    {
+      "distance": 4100,
+      "curvature": 0,
+      "x": 2487.02,
+      "y": -1562.99
+    },
+    {
+      "distance": 4105,
+      "curvature": 0,
+      "x": 2491.13,
+      "y": -1565.82
+    },
+    {
+      "distance": 4110,
+      "curvature": 0,
+      "x": 2495.25,
+      "y": -1568.66
+    },
+    {
+      "distance": 4115,
+      "curvature": 0,
+      "x": 2499.37,
+      "y": -1571.5
+    },
+    {
+      "distance": 4120,
+      "curvature": 0,
+      "x": 2503.49,
+      "y": -1574.33
+    },
+    {
+      "distance": 4125,
+      "curvature": 0,
+      "x": 2507.61,
+      "y": -1577.17
+    },
+    {
+      "distance": 4130,
+      "curvature": 0,
+      "x": 2511.72,
+      "y": -1580
+    },
+    {
+      "distance": 4135,
+      "curvature": 0,
+      "x": 2515.84,
+      "y": -1582.84
+    },
+    {
+      "distance": 4140,
+      "curvature": 0,
+      "x": 2519.96,
+      "y": -1585.68
+    },
+    {
+      "distance": 4145,
+      "curvature": 0,
+      "x": 2524.08,
+      "y": -1588.51
+    },
+    {
+      "distance": 4150,
+      "curvature": 0,
+      "x": 2528.2,
+      "y": -1591.35
+    },
+    {
+      "distance": 4155,
+      "curvature": 0,
+      "x": 2532.31,
+      "y": -1594.18
+    },
+    {
+      "distance": 4160,
+      "curvature": 0,
+      "x": 2536.43,
+      "y": -1597.02
+    },
+    {
+      "distance": 4165,
+      "curvature": 0,
+      "x": 2540.55,
+      "y": -1599.85
+    },
+    {
+      "distance": 4170,
+      "curvature": 0,
+      "x": 2544.67,
+      "y": -1602.69
+    },
+    {
+      "distance": 4175,
+      "curvature": 0,
+      "x": 2548.79,
+      "y": -1605.53
+    },
+    {
+      "distance": 4180,
+      "curvature": 0,
+      "x": 2552.9,
+      "y": -1608.36
+    },
+    {
+      "distance": 4185,
+      "curvature": 0,
+      "x": 2557.02,
+      "y": -1611.2
+    },
+    {
+      "distance": 4190,
+      "curvature": 0,
+      "x": 2561.14,
+      "y": -1614.03
+    },
+    {
+      "distance": 4195,
+      "curvature": 0,
+      "x": 2565.26,
+      "y": -1616.87
+    },
+    {
+      "distance": 4200,
+      "curvature": 0,
+      "x": 2569.38,
+      "y": -1619.71
+    },
+    {
+      "distance": 4205,
+      "curvature": 0,
+      "x": 2573.49,
+      "y": -1622.54
+    },
+    {
+      "distance": 4210,
+      "curvature": 0,
+      "x": 2577.61,
+      "y": -1625.38
+    },
+    {
+      "distance": 4215,
+      "curvature": 0,
+      "x": 2581.73,
+      "y": -1628.21
+    },
+    {
+      "distance": 4220,
+      "curvature": 0,
+      "x": 2585.85,
+      "y": -1631.05
+    },
+    {
+      "distance": 4225,
+      "curvature": 0,
+      "x": 2589.97,
+      "y": -1633.89
+    },
+    {
+      "distance": 4230,
+      "curvature": 0,
+      "x": 2594.08,
+      "y": -1636.72
+    },
+    {
+      "distance": 4235,
+      "curvature": 0,
+      "x": 2598.2,
+      "y": -1639.56
+    },
+    {
+      "distance": 4240,
+      "curvature": 0,
+      "x": 2602.32,
+      "y": -1642.39
+    },
+    {
+      "distance": 4245,
+      "curvature": 0,
+      "x": 2606.44,
+      "y": -1645.23
+    },
+    {
+      "distance": 4250,
+      "curvature": 0,
+      "x": 2610.56,
+      "y": -1648.06
+    },
+    {
+      "distance": 4255,
+      "curvature": 0,
+      "x": 2614.67,
+      "y": -1650.9
+    },
+    {
+      "distance": 4260,
+      "curvature": 0,
+      "x": 2618.79,
+      "y": -1653.74
+    },
+    {
+      "distance": 4265,
+      "curvature": 0,
+      "x": 2622.91,
+      "y": -1656.57
+    },
+    {
+      "distance": 4270,
+      "curvature": 0,
+      "x": 2627.03,
+      "y": -1659.41
+    },
+    {
+      "distance": 4275,
+      "curvature": 0,
+      "x": 2631.15,
+      "y": -1662.24
+    },
+    {
+      "distance": 4280,
+      "curvature": 0,
+      "x": 2635.26,
+      "y": -1665.08
+    },
+    {
+      "distance": 4285,
+      "curvature": 0,
+      "x": 2639.38,
+      "y": -1667.92
+    },
+    {
+      "distance": 4290,
+      "curvature": 0,
+      "x": 2643.5,
+      "y": -1670.75
+    },
+    {
+      "distance": 4295,
+      "curvature": 0,
+      "x": 2647.62,
+      "y": -1673.59
+    },
+    {
+      "distance": 4300,
+      "curvature": 0,
+      "x": 2651.74,
+      "y": -1676.42
+    },
+    {
+      "distance": 4305,
+      "curvature": 0,
+      "x": 2655.85,
+      "y": -1679.26
+    },
+    {
+      "distance": 4310,
+      "curvature": 0,
+      "x": 2659.97,
+      "y": -1682.1
+    },
+    {
+      "distance": 4315,
+      "curvature": 0,
+      "x": 2664.09,
+      "y": -1684.93
+    },
+    {
+      "distance": 4320,
+      "curvature": 0,
+      "x": 2668.21,
+      "y": -1687.77
+    },
+    {
+      "distance": 4325,
+      "curvature": 0,
+      "x": 2672.32,
+      "y": -1690.6
+    },
+    {
+      "distance": 4330,
+      "curvature": 0,
+      "x": 2676.44,
+      "y": -1693.44
+    },
+    {
+      "distance": 4335,
+      "curvature": 0,
+      "x": 2680.56,
+      "y": -1696.27
+    },
+    {
+      "distance": 4340,
+      "curvature": 0,
+      "x": 2684.68,
+      "y": -1699.11
+    },
+    {
+      "distance": 4345,
+      "curvature": 0,
+      "x": 2688.8,
+      "y": -1701.95
+    },
+    {
+      "distance": 4350,
+      "curvature": 0,
+      "x": 2692.91,
+      "y": -1704.78
+    },
+    {
+      "distance": 4355,
+      "curvature": 0,
+      "x": 2697.03,
+      "y": -1707.62
+    },
+    {
+      "distance": 4360,
+      "curvature": 0,
+      "x": 2701.15,
+      "y": -1710.45
+    },
+    {
+      "distance": 4365,
+      "curvature": 0,
+      "x": 2705.27,
+      "y": -1713.29
+    },
+    {
+      "distance": 4370,
+      "curvature": 0,
+      "x": 2709.39,
+      "y": -1716.13
+    },
+    {
+      "distance": 4375,
+      "curvature": 0,
+      "x": 2713.5,
+      "y": -1718.96
+    },
+    {
+      "distance": 4380,
+      "curvature": 0,
+      "x": 2717.62,
+      "y": -1721.8
+    },
+    {
+      "distance": 4385,
+      "curvature": 0,
+      "x": 2721.74,
+      "y": -1724.63
+    },
+    {
+      "distance": 4390,
+      "curvature": 0,
+      "x": 2725.86,
+      "y": -1727.47
+    },
+    {
+      "distance": 4395,
+      "curvature": 0,
+      "x": 2729.98,
+      "y": -1730.31
+    },
+    {
+      "distance": 4400,
+      "curvature": 0,
+      "x": 2734.09,
+      "y": -1733.14
+    },
+    {
+      "distance": 4405,
+      "curvature": 0,
+      "x": 2738.21,
+      "y": -1735.98
+    },
+    {
+      "distance": 4410,
+      "curvature": 0,
+      "x": 2742.33,
+      "y": -1738.81
+    },
+    {
+      "distance": 4415,
+      "curvature": 0,
+      "x": 2746.45,
+      "y": -1741.65
+    },
+    {
+      "distance": 4420,
+      "curvature": 0,
+      "x": 2750.57,
+      "y": -1744.49
+    },
+    {
+      "distance": 4425,
+      "curvature": 0,
+      "x": 2754.68,
+      "y": -1747.32
+    },
+    {
+      "distance": 4430,
+      "curvature": 0,
+      "x": 2758.8,
+      "y": -1750.16
+    },
+    {
+      "distance": 4435,
+      "curvature": 0,
+      "x": 2762.92,
+      "y": -1752.99
+    },
+    {
+      "distance": 4440,
+      "curvature": 0,
+      "x": 2767.04,
+      "y": -1755.83
+    },
+    {
+      "distance": 4445,
+      "curvature": 0,
+      "x": 2771.16,
+      "y": -1758.66
+    },
+    {
+      "distance": 4450,
+      "curvature": 0,
+      "x": 2775.27,
+      "y": -1761.5
+    },
+    {
+      "distance": 4455,
+      "curvature": 0,
+      "x": 2779.39,
+      "y": -1764.34
+    },
+    {
+      "distance": 4460,
+      "curvature": 0,
+      "x": 2783.51,
+      "y": -1767.17
+    },
+    {
+      "distance": 4465,
+      "curvature": 0,
+      "x": 2787.63,
+      "y": -1770.01
+    },
+    {
+      "distance": 4470,
+      "curvature": 0,
+      "x": 2791.75,
+      "y": -1772.84
+    },
+    {
+      "distance": 4475,
+      "curvature": 0,
+      "x": 2795.86,
+      "y": -1775.68
+    },
+    {
+      "distance": 4480,
+      "curvature": 0,
+      "x": 2799.98,
+      "y": -1778.52
+    },
+    {
+      "distance": 4485,
+      "curvature": 0,
+      "x": 2804.1,
+      "y": -1781.35
+    },
+    {
+      "distance": 4490,
+      "curvature": 0,
+      "x": 2808.22,
+      "y": -1784.19
+    },
+    {
+      "distance": 4495,
+      "curvature": 0,
+      "x": 2812.34,
+      "y": -1787.02
+    },
+    {
+      "distance": 4500,
+      "curvature": 0,
+      "x": 2816.45,
+      "y": -1789.86
+    },
+    {
+      "distance": 4505,
+      "curvature": 0,
+      "x": 2820.57,
+      "y": -1792.7
+    },
+    {
+      "distance": 4510,
+      "curvature": 0,
+      "x": 2824.69,
+      "y": -1795.53
+    },
+    {
+      "distance": 4515,
+      "curvature": 0,
+      "x": 2828.81,
+      "y": -1798.37
+    },
+    {
+      "distance": 4520,
+      "curvature": 0,
+      "x": 2832.93,
+      "y": -1801.2
+    },
+    {
+      "distance": 4525,
+      "curvature": 0,
+      "x": 2837.04,
+      "y": -1804.04
+    },
+    {
+      "distance": 4530,
+      "curvature": 0,
+      "x": 2841.16,
+      "y": -1806.87
+    },
+    {
+      "distance": 4535,
+      "curvature": 0,
+      "x": 2845.28,
+      "y": -1809.71
+    },
+    {
+      "distance": 4540,
+      "curvature": 0,
+      "x": 2849.4,
+      "y": -1812.55
+    },
+    {
+      "distance": 4545,
+      "curvature": 0,
+      "x": 2853.52,
+      "y": -1815.38
+    },
+    {
+      "distance": 4550,
+      "curvature": 0,
+      "x": 2857.63,
+      "y": -1818.22
+    },
+    {
+      "distance": 4555,
+      "curvature": 0,
+      "x": 2861.75,
+      "y": -1821.05
+    },
+    {
+      "distance": 4560,
+      "curvature": 0,
+      "x": 2865.87,
+      "y": -1823.89
+    },
+    {
+      "distance": 4565,
+      "curvature": 0,
+      "x": 2869.99,
+      "y": -1826.73
+    },
+    {
+      "distance": 4570,
+      "curvature": 0,
+      "x": 2874.11,
+      "y": -1829.56
+    },
+    {
+      "distance": 4575,
+      "curvature": 0,
+      "x": 2878.22,
+      "y": -1832.4
+    },
+    {
+      "distance": 4580,
+      "curvature": 0,
+      "x": 2882.34,
+      "y": -1835.23
+    },
+    {
+      "distance": 4585,
+      "curvature": 0,
+      "x": 2886.46,
+      "y": -1838.07
+    },
+    {
+      "distance": 4590,
+      "curvature": 0,
+      "x": 2890.58,
+      "y": -1840.91
+    },
+    {
+      "distance": 4595,
+      "curvature": 0,
+      "x": 2894.7,
+      "y": -1843.74
+    },
+    {
+      "distance": 4600,
+      "curvature": 0,
+      "x": 2898.81,
+      "y": -1846.58
+    },
+    {
+      "distance": 4605,
+      "curvature": 0,
+      "x": 2902.93,
+      "y": -1849.41
+    },
+    {
+      "distance": 4610,
+      "curvature": 0,
+      "x": 2907.05,
+      "y": -1852.25
+    },
+    {
+      "distance": 4615,
+      "curvature": -0.016667,
+      "x": 2911.17,
+      "y": -1855.08
+    },
+    {
+      "distance": 4620,
+      "curvature": -0.028868,
+      "x": 2915.04,
+      "y": -1858.25
+    },
+    {
+      "distance": 4625,
+      "curvature": -0.033333,
+      "x": 2918.41,
+      "y": -1861.95
+    },
+    {
+      "distance": 4630,
+      "curvature": -0.033333,
+      "x": 2921.12,
+      "y": -1866.15
+    },
+    {
+      "distance": 4635,
+      "curvature": -0.033333,
+      "x": 2923.1,
+      "y": -1870.74
+    },
+    {
+      "distance": 4640,
+      "curvature": -0.033333,
+      "x": 2924.29,
+      "y": -1875.59
+    },
+    {
+      "distance": 4645,
+      "curvature": -0.033333,
+      "x": 2924.65,
+      "y": -1880.58
+    },
+    {
+      "distance": 4650,
+      "curvature": -0.033333,
+      "x": 2924.19,
+      "y": -1885.56
+    },
+    {
+      "distance": 4655,
+      "curvature": -0.033333,
+      "x": 2922.9,
+      "y": -1890.39
+    },
+    {
+      "distance": 4660,
+      "curvature": -0.033333,
+      "x": 2920.83,
+      "y": -1894.94
+    },
+    {
+      "distance": 4665,
+      "curvature": -0.033333,
+      "x": 2918.04,
+      "y": -1899.09
+    },
+    {
+      "distance": 4670,
+      "curvature": -0.033333,
+      "x": 2914.59,
+      "y": -1902.71
+    },
+    {
+      "distance": 4675,
+      "curvature": -0.033333,
+      "x": 2910.59,
+      "y": -1905.72
+    },
+    {
+      "distance": 4680,
+      "curvature": -0.033333,
+      "x": 2906.15,
+      "y": -1908.01
+    },
+    {
+      "distance": 4685,
+      "curvature": -0.033333,
+      "x": 2901.39,
+      "y": -1909.54
+    },
+    {
+      "distance": 4690,
+      "curvature": -0.033333,
+      "x": 2896.45,
+      "y": -1910.26
+    },
+    {
+      "distance": 4695,
+      "curvature": -0.033333,
+      "x": 2891.45,
+      "y": -1910.15
+    },
+    {
+      "distance": 4700,
+      "curvature": -0.033333,
+      "x": 2886.54,
+      "y": -1909.21
+    },
+    {
+      "distance": 4705,
+      "curvature": -0.028868,
+      "x": 2881.85,
+      "y": -1907.47
+    },
+    {
+      "distance": 4710,
+      "curvature": -0.016667,
+      "x": 2877.46,
+      "y": -1905.07
+    },
+    {
+      "distance": 4715,
+      "curvature": 0,
+      "x": 2873.29,
+      "y": -1902.31
+    },
+    {
+      "distance": 4720,
+      "curvature": 0,
+      "x": 2869.12,
+      "y": -1899.56
+    },
+    {
+      "distance": 4725,
+      "curvature": 0,
+      "x": 2864.94,
+      "y": -1896.81
+    },
+    {
+      "distance": 4730,
+      "curvature": 0,
+      "x": 2860.77,
+      "y": -1894.05
+    },
+    {
+      "distance": 4735,
+      "curvature": 0,
+      "x": 2856.6,
+      "y": -1891.3
+    },
+    {
+      "distance": 4740,
+      "curvature": 0,
+      "x": 2852.43,
+      "y": -1888.54
+    },
+    {
+      "distance": 4745,
+      "curvature": 0,
+      "x": 2848.25,
+      "y": -1885.79
+    },
+    {
+      "distance": 4750,
+      "curvature": 0,
+      "x": 2844.08,
+      "y": -1883.03
+    },
+    {
+      "distance": 4755,
+      "curvature": 0,
+      "x": 2839.91,
+      "y": -1880.28
+    },
+    {
+      "distance": 4760,
+      "curvature": 0,
+      "x": 2835.73,
+      "y": -1877.52
+    },
+    {
+      "distance": 4765,
+      "curvature": 0,
+      "x": 2831.56,
+      "y": -1874.77
+    },
+    {
+      "distance": 4770,
+      "curvature": 0,
+      "x": 2827.39,
+      "y": -1872.01
+    },
+    {
+      "distance": 4775,
+      "curvature": 0,
+      "x": 2823.22,
+      "y": -1869.26
+    },
+    {
+      "distance": 4780,
+      "curvature": 0,
+      "x": 2819.04,
+      "y": -1866.5
+    },
+    {
+      "distance": 4785,
+      "curvature": 0.0125,
+      "x": 2814.87,
+      "y": -1863.75
+    },
+    {
+      "distance": 4790,
+      "curvature": 0.021651,
+      "x": 2810.53,
+      "y": -1861.26
+    },
+    {
+      "distance": 4795,
+      "curvature": 0.025,
+      "x": 2805.95,
+      "y": -1859.25
+    },
+    {
+      "distance": 4800,
+      "curvature": 0.025,
+      "x": 2801.16,
+      "y": -1857.84
+    },
+    {
+      "distance": 4805,
+      "curvature": 0.025,
+      "x": 2796.23,
+      "y": -1857.03
+    },
+    {
+      "distance": 4810,
+      "curvature": 0.025,
+      "x": 2791.23,
+      "y": -1856.84
+    },
+    {
+      "distance": 4815,
+      "curvature": 0.025,
+      "x": 2786.25,
+      "y": -1857.27
+    },
+    {
+      "distance": 4820,
+      "curvature": 0.025,
+      "x": 2781.36,
+      "y": -1858.33
+    },
+    {
+      "distance": 4825,
+      "curvature": 0.025,
+      "x": 2776.64,
+      "y": -1859.98
+    },
+    {
+      "distance": 4830,
+      "curvature": 0.025,
+      "x": 2772.17,
+      "y": -1862.21
+    },
+    {
+      "distance": 4835,
+      "curvature": 0.025,
+      "x": 2768,
+      "y": -1864.98
+    },
+    {
+      "distance": 4840,
+      "curvature": 0.025,
+      "x": 2764.22,
+      "y": -1868.25
+    },
+    {
+      "distance": 4845,
+      "curvature": 0.025,
+      "x": 2760.87,
+      "y": -1871.96
+    },
+    {
+      "distance": 4850,
+      "curvature": 0.025,
+      "x": 2758.01,
+      "y": -1876.07
+    },
+    {
+      "distance": 4855,
+      "curvature": 0.025,
+      "x": 2755.69,
+      "y": -1880.49
+    },
+    {
+      "distance": 4860,
+      "curvature": 0.025,
+      "x": 2753.94,
+      "y": -1885.17
+    },
+    {
+      "distance": 4865,
+      "curvature": 0.025,
+      "x": 2752.78,
+      "y": -1890.04
+    },
+    {
+      "distance": 4870,
+      "curvature": 0.025,
+      "x": 2752.24,
+      "y": -1895.01
+    },
+    {
+      "distance": 4875,
+      "curvature": 0.025,
+      "x": 2752.32,
+      "y": -1900.01
+    },
+    {
+      "distance": 4880,
+      "curvature": 0.025,
+      "x": 2753.02,
+      "y": -1904.96
+    },
+    {
+      "distance": 4885,
+      "curvature": 0.025,
+      "x": 2754.34,
+      "y": -1909.78
+    },
+    {
+      "distance": 4890,
+      "curvature": 0.025,
+      "x": 2756.25,
+      "y": -1914.4
+    },
+    {
+      "distance": 4895,
+      "curvature": 0.025,
+      "x": 2758.72,
+      "y": -1918.75
+    },
+    {
+      "distance": 4900,
+      "curvature": 0.025,
+      "x": 2761.71,
+      "y": -1922.76
+    },
+    {
+      "distance": 4905,
+      "curvature": 0.025,
+      "x": 2765.18,
+      "y": -1926.36
+    },
+    {
+      "distance": 4910,
+      "curvature": 0.021651,
+      "x": 2769.07,
+      "y": -1929.5
+    },
+    {
+      "distance": 4915,
+      "curvature": 0.0125,
+      "x": 2773.27,
+      "y": -1932.2
+    },
+    {
+      "distance": 4920,
+      "curvature": -0.004252,
+      "x": 2777.64,
+      "y": -1934.64
+    },
+    {
+      "distance": 4925,
+      "curvature": -0.007857,
+      "x": 2781.96,
+      "y": -1937.17
+    },
+    {
+      "distance": 4930,
+      "curvature": -0.010265,
+      "x": 2786.17,
+      "y": -1939.86
+    },
+    {
+      "distance": 4935,
+      "curvature": -0.011111,
+      "x": 2790.24,
+      "y": -1942.77
+    },
+    {
+      "distance": 4940,
+      "curvature": -0.011111,
+      "x": 2794.14,
+      "y": -1945.89
+    },
+    {
+      "distance": 4945,
+      "curvature": -0.011111,
+      "x": 2797.86,
+      "y": -1949.24
+    },
+    {
+      "distance": 4950,
+      "curvature": -0.011111,
+      "x": 2801.39,
+      "y": -1952.78
+    },
+    {
+      "distance": 4955,
+      "curvature": -0.011111,
+      "x": 2804.71,
+      "y": -1956.51
+    },
+    {
+      "distance": 4960,
+      "curvature": -0.011111,
+      "x": 2807.83,
+      "y": -1960.42
+    },
+    {
+      "distance": 4965,
+      "curvature": -0.011111,
+      "x": 2810.72,
+      "y": -1964.5
+    },
+    {
+      "distance": 4970,
+      "curvature": -0.011111,
+      "x": 2813.38,
+      "y": -1968.73
+    },
+    {
+      "distance": 4975,
+      "curvature": -0.011111,
+      "x": 2815.81,
+      "y": -1973.1
+    },
+    {
+      "distance": 4980,
+      "curvature": -0.011111,
+      "x": 2817.98,
+      "y": -1977.61
+    },
+    {
+      "distance": 4985,
+      "curvature": -0.011111,
+      "x": 2819.91,
+      "y": -1982.22
+    },
+    {
+      "distance": 4990,
+      "curvature": -0.011111,
+      "x": 2821.57,
+      "y": -1986.94
+    },
+    {
+      "distance": 4995,
+      "curvature": -0.011111,
+      "x": 2822.97,
+      "y": -1991.74
+    },
+    {
+      "distance": 5000,
+      "curvature": -0.011111,
+      "x": 2824.1,
+      "y": -1996.61
+    },
+    {
+      "distance": 5005,
+      "curvature": -0.011111,
+      "x": 2824.96,
+      "y": -2001.53
+    },
+    {
+      "distance": 5010,
+      "curvature": -0.011111,
+      "x": 2825.54,
+      "y": -2006.5
+    },
+    {
+      "distance": 5015,
+      "curvature": -0.010265,
+      "x": 2825.85,
+      "y": -2011.49
+    },
+    {
+      "distance": 5020,
+      "curvature": -0.007857,
+      "x": 2825.9,
+      "y": -2016.49
+    },
+    {
+      "distance": 5025,
+      "curvature": -0.004252,
+      "x": 2825.75,
+      "y": -2021.49
+    },
+    {
+      "distance": 5030,
+      "curvature": 0,
+      "x": 2825.5,
+      "y": -2026.48
+    },
+    {
+      "distance": 5035,
+      "curvature": 0,
+      "x": 2825.25,
+      "y": -2031.47
+    },
+    {
+      "distance": 5040,
+      "curvature": 0,
+      "x": 2825,
+      "y": -2036.47
+    },
+    {
+      "distance": 5045,
+      "curvature": 0,
+      "x": 2824.75,
+      "y": -2041.46
+    },
+    {
+      "distance": 5050,
+      "curvature": 0,
+      "x": 2824.49,
+      "y": -2046.45
+    },
+    {
+      "distance": 5055,
+      "curvature": 0,
+      "x": 2824.24,
+      "y": -2051.45
+    },
+    {
+      "distance": 5060,
+      "curvature": 0,
+      "x": 2823.99,
+      "y": -2056.44
+    },
+    {
+      "distance": 5065,
+      "curvature": 0,
+      "x": 2823.74,
+      "y": -2061.44
+    },
+    {
+      "distance": 5070,
+      "curvature": 0,
+      "x": 2823.49,
+      "y": -2066.43
+    },
+    {
+      "distance": 5075,
+      "curvature": 0,
+      "x": 2823.23,
+      "y": -2071.42
+    },
+    {
+      "distance": 5080,
+      "curvature": 0,
+      "x": 2822.98,
+      "y": -2076.42
+    },
+    {
+      "distance": 5085,
+      "curvature": 0,
+      "x": 2822.73,
+      "y": -2081.41
+    },
+    {
+      "distance": 5090,
+      "curvature": 0,
+      "x": 2822.48,
+      "y": -2086.4
+    },
+    {
+      "distance": 5095,
+      "curvature": 0,
+      "x": 2822.23,
+      "y": -2091.4
+    },
+    {
+      "distance": 5100,
+      "curvature": 0,
+      "x": 2821.98,
+      "y": -2096.39
+    },
+    {
+      "distance": 5105,
+      "curvature": 0,
+      "x": 2821.72,
+      "y": -2101.38
+    },
+    {
+      "distance": 5110,
+      "curvature": 0,
+      "x": 2821.47,
+      "y": -2106.38
+    },
+    {
+      "distance": 5115,
+      "curvature": 0,
+      "x": 2821.22,
+      "y": -2111.37
+    },
+    {
+      "distance": 5120,
+      "curvature": 0,
+      "x": 2820.97,
+      "y": -2116.37
+    },
+    {
+      "distance": 5125,
+      "curvature": 0,
+      "x": 2820.72,
+      "y": -2121.36
+    },
+    {
+      "distance": 5130,
+      "curvature": 0,
+      "x": 2820.46,
+      "y": -2126.35
+    },
+    {
+      "distance": 5135,
+      "curvature": 0,
+      "x": 2820.21,
+      "y": -2131.35
+    },
+    {
+      "distance": 5140,
+      "curvature": 0,
+      "x": 2819.96,
+      "y": -2136.34
+    },
+    {
+      "distance": 5145,
+      "curvature": 0,
+      "x": 2819.71,
+      "y": -2141.33
+    },
+    {
+      "distance": 5150,
+      "curvature": 0,
+      "x": 2819.46,
+      "y": -2146.33
+    },
+    {
+      "distance": 5155,
+      "curvature": 0,
+      "x": 2819.2,
+      "y": -2151.32
+    },
+    {
+      "distance": 5160,
+      "curvature": 0,
+      "x": 2818.95,
+      "y": -2156.31
+    },
+    {
+      "distance": 5165,
+      "curvature": 0,
+      "x": 2818.7,
+      "y": -2161.31
+    },
+    {
+      "distance": 5170,
+      "curvature": 0,
+      "x": 2818.45,
+      "y": -2166.3
+    },
+    {
+      "distance": 5175,
+      "curvature": 0,
+      "x": 2818.2,
+      "y": -2171.3
+    },
+    {
+      "distance": 5180,
+      "curvature": 0,
+      "x": 2817.94,
+      "y": -2176.29
+    },
+    {
+      "distance": 5185,
+      "curvature": 0,
+      "x": 2817.69,
+      "y": -2181.28
+    },
+    {
+      "distance": 5190,
+      "curvature": 0,
+      "x": 2817.44,
+      "y": -2186.28
+    },
+    {
+      "distance": 5195,
+      "curvature": 0,
+      "x": 2817.19,
+      "y": -2191.27
+    },
+    {
+      "distance": 5200,
+      "curvature": 0,
+      "x": 2816.94,
+      "y": -2196.26
+    },
+    {
+      "distance": 5205,
+      "curvature": 0,
+      "x": 2816.68,
+      "y": -2201.26
+    },
+    {
+      "distance": 5210,
+      "curvature": 0,
+      "x": 2816.43,
+      "y": -2206.25
+    },
+    {
+      "distance": 5215,
+      "curvature": 0,
+      "x": 2816.18,
+      "y": -2211.24
+    },
+    {
+      "distance": 5220,
+      "curvature": 0,
+      "x": 2815.93,
+      "y": -2216.24
+    },
+    {
+      "distance": 5225,
+      "curvature": 0,
+      "x": 2815.68,
+      "y": -2221.23
+    },
+    {
+      "distance": 5230,
+      "curvature": 0,
+      "x": 2815.42,
+      "y": -2226.23
+    },
+    {
+      "distance": 5235,
+      "curvature": 0,
+      "x": 2815.17,
+      "y": -2231.22
+    },
+    {
+      "distance": 5240,
+      "curvature": 0,
+      "x": 2814.92,
+      "y": -2236.21
+    },
+    {
+      "distance": 5245,
+      "curvature": 0,
+      "x": 2814.67,
+      "y": -2241.21
+    },
+    {
+      "distance": 5250,
+      "curvature": 0,
+      "x": 2814.42,
+      "y": -2246.2
+    },
+    {
+      "distance": 5255,
+      "curvature": 0,
+      "x": 2814.16,
+      "y": -2251.19
+    },
+    {
+      "distance": 5260,
+      "curvature": 0,
+      "x": 2813.91,
+      "y": -2256.19
+    },
+    {
+      "distance": 5265,
+      "curvature": 0,
+      "x": 2813.66,
+      "y": -2261.18
+    },
+    {
+      "distance": 5270,
+      "curvature": 0,
+      "x": 2813.41,
+      "y": -2266.18
+    },
+    {
+      "distance": 5275,
+      "curvature": 0,
+      "x": 2813.16,
+      "y": -2271.17
+    },
+    {
+      "distance": 5280,
+      "curvature": 0,
+      "x": 2812.91,
+      "y": -2276.16
+    },
+    {
+      "distance": 5285,
+      "curvature": 0,
+      "x": 2812.65,
+      "y": -2281.16
+    },
+    {
+      "distance": 5290,
+      "curvature": 0,
+      "x": 2812.4,
+      "y": -2286.15
+    },
+    {
+      "distance": 5295,
+      "curvature": 0,
+      "x": 2812.15,
+      "y": -2291.14
+    },
+    {
+      "distance": 5300,
+      "curvature": 0,
+      "x": 2811.9,
+      "y": -2296.14
+    },
+    {
+      "distance": 5305,
+      "curvature": 0,
+      "x": 2811.65,
+      "y": -2301.13
+    },
+    {
+      "distance": 5310,
+      "curvature": 0,
+      "x": 2811.39,
+      "y": -2306.12
+    },
+    {
+      "distance": 5315,
+      "curvature": 0,
+      "x": 2811.14,
+      "y": -2311.12
+    },
+    {
+      "distance": 5320,
+      "curvature": 0,
+      "x": 2810.89,
+      "y": -2316.11
+    },
+    {
+      "distance": 5325,
+      "curvature": 0,
+      "x": 2810.64,
+      "y": -2321.11
+    },
+    {
+      "distance": 5330,
+      "curvature": 0,
+      "x": 2810.39,
+      "y": -2326.1
+    },
+    {
+      "distance": 5335,
+      "curvature": 0,
+      "x": 2810.13,
+      "y": -2331.09
+    },
+    {
+      "distance": 5340,
+      "curvature": 0,
+      "x": 2809.88,
+      "y": -2336.09
+    },
+    {
+      "distance": 5345,
+      "curvature": 0,
+      "x": 2809.63,
+      "y": -2341.08
+    },
+    {
+      "distance": 5350,
+      "curvature": 0,
+      "x": 2809.38,
+      "y": -2346.07
+    },
+    {
+      "distance": 5355,
+      "curvature": 0,
+      "x": 2809.13,
+      "y": -2351.07
+    },
+    {
+      "distance": 5360,
+      "curvature": 0,
+      "x": 2808.87,
+      "y": -2356.06
+    },
+    {
+      "distance": 5365,
+      "curvature": 0,
+      "x": 2808.62,
+      "y": -2361.05
+    },
+    {
+      "distance": 5370,
+      "curvature": 0,
+      "x": 2808.37,
+      "y": -2366.05
+    },
+    {
+      "distance": 5375,
+      "curvature": 0,
+      "x": 2808.12,
+      "y": -2371.04
+    },
+    {
+      "distance": 5380,
+      "curvature": 0,
+      "x": 2807.87,
+      "y": -2376.04
+    },
+    {
+      "distance": 5385,
+      "curvature": 0,
+      "x": 2807.61,
+      "y": -2381.03
+    },
+    {
+      "distance": 5390,
+      "curvature": 0,
+      "x": 2807.36,
+      "y": -2386.02
+    },
+    {
+      "distance": 5395,
+      "curvature": 0,
+      "x": 2807.11,
+      "y": -2391.02
+    },
+    {
+      "distance": 5400,
+      "curvature": 0,
+      "x": 2806.86,
+      "y": -2396.01
+    },
+    {
+      "distance": 5405,
+      "curvature": 0,
+      "x": 2806.61,
+      "y": -2401
+    },
+    {
+      "distance": 5410,
+      "curvature": 0,
+      "x": 2806.35,
+      "y": -2406
+    },
+    {
+      "distance": 5415,
+      "curvature": 0,
+      "x": 2806.1,
+      "y": -2410.99
+    },
+    {
+      "distance": 5420,
+      "curvature": 0,
+      "x": 2805.85,
+      "y": -2415.98
+    },
+    {
+      "distance": 5425,
+      "curvature": 0,
+      "x": 2805.6,
+      "y": -2420.98
+    },
+    {
+      "distance": 5430,
+      "curvature": 0,
+      "x": 2805.35,
+      "y": -2425.97
+    },
+    {
+      "distance": 5435,
+      "curvature": 0,
+      "x": 2805.09,
+      "y": -2430.97
+    },
+    {
+      "distance": 5440,
+      "curvature": 0,
+      "x": 2804.84,
+      "y": -2435.96
+    },
+    {
+      "distance": 5445,
+      "curvature": 0,
+      "x": 2804.59,
+      "y": -2440.95
+    },
+    {
+      "distance": 5450,
+      "curvature": 0,
+      "x": 2804.34,
+      "y": -2445.95
+    },
+    {
+      "distance": 5455,
+      "curvature": 0,
+      "x": 2804.09,
+      "y": -2450.94
+    },
+    {
+      "distance": 5460,
+      "curvature": 0,
+      "x": 2803.83,
+      "y": -2455.93
+    },
+    {
+      "distance": 5465,
+      "curvature": 0,
+      "x": 2803.58,
+      "y": -2460.93
+    },
+    {
+      "distance": 5470,
+      "curvature": 0,
+      "x": 2803.33,
+      "y": -2465.92
+    },
+    {
+      "distance": 5475,
+      "curvature": 0,
+      "x": 2803.08,
+      "y": -2470.91
+    },
+    {
+      "distance": 5480,
+      "curvature": 0,
+      "x": 2802.83,
+      "y": -2475.91
+    },
+    {
+      "distance": 5485,
+      "curvature": 0,
+      "x": 2802.58,
+      "y": -2480.9
+    },
+    {
+      "distance": 5490,
+      "curvature": 0,
+      "x": 2802.32,
+      "y": -2485.9
+    },
+    {
+      "distance": 5495,
+      "curvature": 0,
+      "x": 2802.07,
+      "y": -2490.89
+    },
+    {
+      "distance": 5500,
+      "curvature": 0,
+      "x": 2801.82,
+      "y": -2495.88
+    },
+    {
+      "distance": 5505,
+      "curvature": 0,
+      "x": 2801.57,
+      "y": -2500.88
+    },
+    {
+      "distance": 5510,
+      "curvature": 0,
+      "x": 2801.32,
+      "y": -2505.87
+    },
+    {
+      "distance": 5515,
+      "curvature": 0,
+      "x": 2801.06,
+      "y": -2510.86
+    },
+    {
+      "distance": 5520,
+      "curvature": 0,
+      "x": 2800.81,
+      "y": -2515.86
+    },
+    {
+      "distance": 5525,
+      "curvature": 0,
+      "x": 2800.56,
+      "y": -2520.85
+    },
+    {
+      "distance": 5530,
+      "curvature": 0,
+      "x": 2800.31,
+      "y": -2525.84
+    },
+    {
+      "distance": 5535,
+      "curvature": 0,
+      "x": 2800.06,
+      "y": -2530.84
+    },
+    {
+      "distance": 5540,
+      "curvature": 0,
+      "x": 2799.8,
+      "y": -2535.83
+    },
+    {
+      "distance": 5545,
+      "curvature": 0,
+      "x": 2799.55,
+      "y": -2540.83
+    },
+    {
+      "distance": 5550,
+      "curvature": 0,
+      "x": 2799.3,
+      "y": -2545.82
+    },
+    {
+      "distance": 5555,
+      "curvature": 0,
+      "x": 2799.05,
+      "y": -2550.81
+    },
+    {
+      "distance": 5560,
+      "curvature": 0,
+      "x": 2798.8,
+      "y": -2555.81
+    },
+    {
+      "distance": 5565,
+      "curvature": 0,
+      "x": 2798.54,
+      "y": -2560.8
+    },
+    {
+      "distance": 5570,
+      "curvature": 0,
+      "x": 2798.29,
+      "y": -2565.79
+    },
+    {
+      "distance": 5575,
+      "curvature": 0,
+      "x": 2798.04,
+      "y": -2570.79
+    },
+    {
+      "distance": 5580,
+      "curvature": 0,
+      "x": 2797.79,
+      "y": -2575.78
+    },
+    {
+      "distance": 5585,
+      "curvature": 0,
+      "x": 2797.54,
+      "y": -2580.77
+    },
+    {
+      "distance": 5590,
+      "curvature": 0,
+      "x": 2797.28,
+      "y": -2585.77
+    },
+    {
+      "distance": 5595,
+      "curvature": 0,
+      "x": 2797.03,
+      "y": -2590.76
+    },
+    {
+      "distance": 5600,
+      "curvature": 0,
+      "x": 2796.78,
+      "y": -2595.76
+    },
+    {
+      "distance": 5605,
+      "curvature": 0,
+      "x": 2796.53,
+      "y": -2600.75
+    },
+    {
+      "distance": 5610,
+      "curvature": 0,
+      "x": 2796.28,
+      "y": -2605.74
+    },
+    {
+      "distance": 5615,
+      "curvature": 0,
+      "x": 2796.02,
+      "y": -2610.74
+    },
+    {
+      "distance": 5620,
+      "curvature": 0,
+      "x": 2795.77,
+      "y": -2615.73
+    },
+    {
+      "distance": 5625,
+      "curvature": 0,
+      "x": 2795.52,
+      "y": -2620.72
+    },
+    {
+      "distance": 5630,
+      "curvature": 0,
+      "x": 2795.27,
+      "y": -2625.72
+    },
+    {
+      "distance": 5635,
+      "curvature": 0,
+      "x": 2795.02,
+      "y": -2630.71
+    },
+    {
+      "distance": 5640,
+      "curvature": 0,
+      "x": 2794.76,
+      "y": -2635.7
+    },
+    {
+      "distance": 5645,
+      "curvature": 0,
+      "x": 2794.51,
+      "y": -2640.7
+    },
+    {
+      "distance": 5650,
+      "curvature": 0,
+      "x": 2794.26,
+      "y": -2645.69
+    },
+    {
+      "distance": 5655,
+      "curvature": 0,
+      "x": 2794.01,
+      "y": -2650.69
+    },
+    {
+      "distance": 5660,
+      "curvature": 0,
+      "x": 2793.76,
+      "y": -2655.68
+    },
+    {
+      "distance": 5665,
+      "curvature": 0,
+      "x": 2793.51,
+      "y": -2660.67
+    },
+    {
+      "distance": 5670,
+      "curvature": 0,
+      "x": 2793.25,
+      "y": -2665.67
+    },
+    {
+      "distance": 5675,
+      "curvature": 0,
+      "x": 2793,
+      "y": -2670.66
+    },
+    {
+      "distance": 5680,
+      "curvature": 0,
+      "x": 2792.75,
+      "y": -2675.65
+    },
+    {
+      "distance": 5685,
+      "curvature": 0,
+      "x": 2792.5,
+      "y": -2680.65
+    },
+    {
+      "distance": 5690,
+      "curvature": 0,
+      "x": 2792.25,
+      "y": -2685.64
+    },
+    {
+      "distance": 5695,
+      "curvature": 0,
+      "x": 2791.99,
+      "y": -2690.64
+    },
+    {
+      "distance": 5700,
+      "curvature": 0,
+      "x": 2791.74,
+      "y": -2695.63
+    },
+    {
+      "distance": 5705,
+      "curvature": 0,
+      "x": 2791.49,
+      "y": -2700.62
+    },
+    {
+      "distance": 5710,
+      "curvature": 0,
+      "x": 2791.24,
+      "y": -2705.62
+    },
+    {
+      "distance": 5715,
+      "curvature": 0,
+      "x": 2790.99,
+      "y": -2710.61
+    },
+    {
+      "distance": 5720,
+      "curvature": 0,
+      "x": 2790.73,
+      "y": -2715.6
+    },
+    {
+      "distance": 5725,
+      "curvature": 0,
+      "x": 2790.48,
+      "y": -2720.6
+    },
+    {
+      "distance": 5730,
+      "curvature": 0,
+      "x": 2790.23,
+      "y": -2725.59
+    },
+    {
+      "distance": 5735,
+      "curvature": 0,
+      "x": 2789.98,
+      "y": -2730.58
+    },
+    {
+      "distance": 5740,
+      "curvature": 0,
+      "x": 2789.73,
+      "y": -2735.58
+    },
+    {
+      "distance": 5745,
+      "curvature": 0,
+      "x": 2789.47,
+      "y": -2740.57
+    },
+    {
+      "distance": 5750,
+      "curvature": 0,
+      "x": 2789.22,
+      "y": -2745.57
+    },
+    {
+      "distance": 5755,
+      "curvature": 0,
+      "x": 2788.97,
+      "y": -2750.56
+    },
+    {
+      "distance": 5760,
+      "curvature": 0,
+      "x": 2788.72,
+      "y": -2755.55
+    },
+    {
+      "distance": 5765,
+      "curvature": 0,
+      "x": 2788.47,
+      "y": -2760.55
+    },
+    {
+      "distance": 5770,
+      "curvature": -0.0025,
+      "x": 2788.21,
+      "y": -2765.54
+    },
+    {
+      "distance": 5775,
+      "curvature": -0.00433,
+      "x": 2787.9,
+      "y": -2770.53
+    },
+    {
+      "distance": 5780,
+      "curvature": -0.005,
+      "x": 2787.48,
+      "y": -2775.51
+    },
+    {
+      "distance": 5785,
+      "curvature": -0.005,
+      "x": 2786.93,
+      "y": -2780.48
+    },
+    {
+      "distance": 5790,
+      "curvature": -0.005,
+      "x": 2786.26,
+      "y": -2785.44
+    },
+    {
+      "distance": 5795,
+      "curvature": -0.005,
+      "x": 2785.47,
+      "y": -2790.37
+    },
+    {
+      "distance": 5800,
+      "curvature": -0.005,
+      "x": 2784.55,
+      "y": -2795.29
+    },
+    {
+      "distance": 5805,
+      "curvature": -0.005,
+      "x": 2783.51,
+      "y": -2800.18
+    },
+    {
+      "distance": 5810,
+      "curvature": -0.005,
+      "x": 2782.35,
+      "y": -2805.04
+    },
+    {
+      "distance": 5815,
+      "curvature": -0.005,
+      "x": 2781.06,
+      "y": -2809.87
+    },
+    {
+      "distance": 5820,
+      "curvature": -0.005,
+      "x": 2779.66,
+      "y": -2814.67
+    },
+    {
+      "distance": 5825,
+      "curvature": -0.005,
+      "x": 2778.14,
+      "y": -2819.44
+    },
+    {
+      "distance": 5830,
+      "curvature": -0.00433,
+      "x": 2776.49,
+      "y": -2824.16
+    },
+    {
+      "distance": 5835,
+      "curvature": -0.0025,
+      "x": 2774.75,
+      "y": -2828.84
+    }
+  ],
+  "sectors": [
+    {
+      "sectorIndex": 0,
+      "sectorName": "Sector 1",
+      "startDistance": 0,
+      "endDistance": 2505
+    },
+    {
+      "sectorIndex": 1,
+      "sectorName": "Sector 2",
+      "startDistance": 2505,
+      "endDistance": 3525
+    },
+    {
+      "sectorIndex": 2,
+      "sectorName": "Sector 3",
+      "startDistance": 3525,
+      "endDistance": 5840
+    }
+  ],
+  "corners": [
+    {
+      "cornerIndex": 0,
+      "cornerName": "Copse",
+      "apexDistance": 870,
+      "entryDistance": 800,
+      "exitDistance": 940
+    },
+    {
+      "cornerIndex": 1,
+      "cornerName": "Maggotts",
+      "apexDistance": 1185,
+      "entryDistance": 1140,
+      "exitDistance": 1230
+    },
+    {
+      "cornerIndex": 2,
+      "cornerName": "Becketts",
+      "apexDistance": 1270,
+      "entryDistance": 1230,
+      "exitDistance": 1310
+    },
+    {
+      "cornerIndex": 3,
+      "cornerName": "Becketts Exit",
+      "apexDistance": 1355,
+      "entryDistance": 1310,
+      "exitDistance": 1400
+    },
+    {
+      "cornerIndex": 4,
+      "cornerName": "Chapel Entry",
+      "apexDistance": 1438,
+      "entryDistance": 1400,
+      "exitDistance": 1475
+    },
+    {
+      "cornerIndex": 5,
+      "cornerName": "Chapel",
+      "apexDistance": 1510,
+      "entryDistance": 1475,
+      "exitDistance": 1545
+    },
+    {
+      "cornerIndex": 6,
+      "cornerName": "Stowe",
+      "apexDistance": 2560,
+      "entryDistance": 2505,
+      "exitDistance": 2615
+    },
+    {
+      "cornerIndex": 7,
+      "cornerName": "Vale",
+      "apexDistance": 2745,
+      "entryDistance": 2700,
+      "exitDistance": 2790
+    },
+    {
+      "cornerIndex": 8,
+      "cornerName": "Club",
+      "apexDistance": 2845,
+      "entryDistance": 2790,
+      "exitDistance": 2900
+    },
+    {
+      "cornerIndex": 9,
+      "cornerName": "Abbey 1",
+      "apexDistance": 3100,
+      "entryDistance": 3060,
+      "exitDistance": 3140
+    },
+    {
+      "cornerIndex": 10,
+      "cornerName": "Abbey 2",
+      "apexDistance": 3178,
+      "entryDistance": 3140,
+      "exitDistance": 3215
+    },
+    {
+      "cornerIndex": 11,
+      "cornerName": "Village",
+      "apexDistance": 3570,
+      "entryDistance": 3525,
+      "exitDistance": 3615
+    },
+    {
+      "cornerIndex": 12,
+      "cornerName": "The Loop",
+      "apexDistance": 3773,
+      "entryDistance": 3700,
+      "exitDistance": 3845
+    },
+    {
+      "cornerIndex": 13,
+      "cornerName": "Aintree",
+      "apexDistance": 3875,
+      "entryDistance": 3845,
+      "exitDistance": 3905
+    },
+    {
+      "cornerIndex": 14,
+      "cornerName": "Brooklands",
+      "apexDistance": 4665,
+      "entryDistance": 4615,
+      "exitDistance": 4715
+    },
+    {
+      "cornerIndex": 15,
+      "cornerName": "Luffield",
+      "apexDistance": 4853,
+      "entryDistance": 4785,
+      "exitDistance": 4920
+    },
+    {
+      "cornerIndex": 16,
+      "cornerName": "Woodcote",
+      "apexDistance": 4975,
+      "entryDistance": 4920,
+      "exitDistance": 5030
+    }
+  ],
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Hand-authored from public track layout data and published corner radii",
+    "notes": "Approximate geometry for sensitivity analysis. Not surveyed data."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Curvature values derived from published corner radii with smooth transitions. Actual track geometry includes banking, camber, and elevation changes not captured here.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Public track guides and corner radii databases"
+      }
+    },
+    {
+      "note": "Spatial coordinates (x/y) are integrated from curvature and may not close perfectly. They represent approximate track shape for visualization, not GPS-accurate positions.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Heading integration from curvature array"
+      }
+    }
+  ]
+}

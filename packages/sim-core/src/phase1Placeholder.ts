@@ -1,4 +1,4 @@
-import type { SimulationRunRequest, SimulationRunSummary } from "./contracts.js";
+import type { Phase1PlaceholderSummary, SimulationRunRequest } from "./contracts.js";
 
 const PHASE1_PLACEHOLDER_HARNESS = "phase1-placeholder" as const;
 const PHASE1_PLACEHOLDER_MODEL_VERSION = "phase1-placeholder/v1" as const;
@@ -21,7 +21,7 @@ function stableHash(input: string): number {
 
 export function runPhase1PlaceholderScenario(
   request: SimulationRunRequest,
-): SimulationRunSummary {
+): Phase1PlaceholderSummary {
   const seed = request.seed ?? 0;
   const baseHash = stableHash(
     `${request.scenarioId}:${request.scenarioLabel}:${seed}`,

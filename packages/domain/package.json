@@ -8,7 +8,8 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./node/preset-catalog": "./src/node/presetCatalog.ts"
+    "./node/preset-catalog": "./src/node/presetCatalog.ts",
+    "./node/circuit-catalog": "./src/node/circuitCatalog.ts"
   },
   "files": [
     "dist"

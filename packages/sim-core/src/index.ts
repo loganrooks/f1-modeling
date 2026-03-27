@@ -1,4 +1,6 @@
 export type {
+  LapModelSummary,
+  Phase1PlaceholderSummary,
   SimulationHarness,
   SimulationRunRequest,
   SimulationRunSummary,

@@ -1,10 +1,20 @@
+import type {
+  SectorResult,
+  SpeedProfilePoint,
+  VehicleParams,
+} from "./lapModel/types.js";
+
 export interface SimulationRunRequest {
   scenarioId: string;
   scenarioLabel: string;
   seed?: number;
 }
 
-export interface SimulationRunSummary {
+/**
+ * Phase 1 placeholder summary. Preserved for backward compatibility.
+ * Discriminated on harnessId: "phase1-placeholder".
+ */
+export interface Phase1PlaceholderSummary {
   runId: string;
   harnessId: "phase1-placeholder";
   modelVersion: "phase1-placeholder/v1";
@@ -24,6 +34,33 @@ export interface SimulationRunSummary {
   }>;
   notes: string[];
 }
+
+/**
+ * Phase 2 quasi-steady-state lap model summary.
+ * Discriminated on harnessId: "qss-lap-model".
+ */
+export interface LapModelSummary {
+  runId: string;
+  harnessId: "qss-lap-model";
+  modelVersion: string;
+  scenarioId: string;
+  scenarioLabel: string;
+  seed: number;
+  placeholder: false;
+  vehicleParams: VehicleParams;
+  circuitId: string;
+  lapTime: number;
+  sectorResults: SectorResult[];
+  speedProfile: SpeedProfilePoint[];
+  assumptions: string[];
+  notes: string[];
+}
+
+/**
+ * Discriminated union of all simulation run summary types.
+ * Discriminate on `harnessId` to narrow to a specific type.
+ */
+export type SimulationRunSummary = LapModelSummary | Phase1PlaceholderSummary;
 
 export interface SimulationHarness {
   readonly harnessId: string;
