@@ -196,7 +196,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundations and Scenario Schema | 9/9 | Complete | 2026-03-20 |
-| 2. Reduced-Order Lap Model | 0/3 | Not started | - |
+| 2. Reduced-Order Lap Model | 3/3 | Complete | 2026-03-27 |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 0/4 | Not started | - |
 | 4. Strategy, Estimation, Explanations, and Learning Views | 0/6 | Not started | - |
 | 5. Driver Style and Control Systems | 0/5 | Not started | - |
