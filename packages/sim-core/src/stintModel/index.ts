@@ -38,6 +38,23 @@ export {
   computeLoadSensitivityFactor,
 } from "./loadTransfer.js";
 
+// Electrical model
+export {
+  initializeElectricalState,
+  updateElectricalState,
+  computeElectricalPowerModifier,
+  estimateBrakingEnergy,
+  DEFAULT_AGGRESSIVE_POLICY,
+  DEFAULT_CONSERVATIVE_POLICY,
+} from "./electricalModel.js";
+
+// Aero model
+export {
+  resolveAeroPerPoint,
+  computeAverageAeroFactors,
+} from "./aeroModel.js";
+export type { AeroResolvedPoint, AeroMode } from "./aeroModel.js";
+
 // Stint runner
 export {
   initializeStintState,

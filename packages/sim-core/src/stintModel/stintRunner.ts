@@ -12,10 +12,11 @@
 
 import type { LapModelOutput, SpeedProfilePoint, VehicleParams } from "../lapModel/types.js";
 import { solveLap } from "../lapModel/lapSolver.js";
+import { resolveAeroPerPoint, computeAverageAeroFactors } from "./aeroModel.js";
+import { updateElectricalState, initializeElectricalState, computeElectricalPowerModifier } from "./electricalModel.js";
 import { computeAverageLoadFactor } from "./loadTransfer.js";
 import { initializeTireState, tireWearGripFactor, tireThermalFactor, updateTireState } from "./tireModel.js";
 import type {
-  ElectricalState,
   EnvironmentState,
   LapTrace,
   StintConfig,
@@ -30,16 +31,6 @@ import { DEFAULT_LOAD_TRANSFER_PARAMS } from "./types.js";
 
 /** Approximate fuel consumption per lap in kg (engineering estimate). */
 const FUEL_CONSUMPTION_PER_LAP_KG = 1.5;
-
-/** Default electrical state: full charge, no activity. */
-const DEFAULT_ELECTRICAL_STATE: ElectricalState = {
-  stateOfCharge: 4_000_000,
-  maxCapacity: 4_000_000,
-  lapEnergyDeployed: 0,
-  lapEnergyHarvested: 0,
-  totalDeployed: 0,
-  totalHarvested: 0,
-};
 
 /** Default environment state: dry, moderate temperature. */
 const DEFAULT_ENVIRONMENT_STATE: EnvironmentState = {
@@ -80,7 +71,7 @@ export function initializeStintState(config: StintConfig): StintState {
   return {
     lapNumber: 0,
     tireState: initializeTireState(config.tireCompound, initialTrackTemp),
-    electricalState: { ...DEFAULT_ELECTRICAL_STATE },
+    electricalState: initializeElectricalState(config.electricalPolicy),
     environmentState: initialEnv,
     fuelMass: config.baseVehicle.mass * 0.04, // Approximate fuel fraction
   };
@@ -100,6 +91,7 @@ export function initializeStintState(config: StintConfig): StintState {
  * @param config - Stint configuration.
  * @param previousEffectiveGrip - Previous lap's effective grip (for 10% clamp), or null for first lap.
  * @param previousLapProfile - Previous lap's speed profile (for load transfer), or null for first lap.
+ * @param aeroFactors - Pre-computed average aero factors from aero-mode resolution, or null if no aeroConfig.
  * @returns Modified VehicleParams for this lap's solver call.
  */
 export function resolveEffectiveVehicle(
@@ -108,6 +100,7 @@ export function resolveEffectiveVehicle(
   config: StintConfig,
   previousEffectiveGrip: number | null,
   previousLapProfile: SpeedProfilePoint[] | null,
+  aeroFactors: { avgDragFactor: number; avgDownforceFactor: number } | null = null,
 ): VehicleParams {
   // --- Grip composition (multiplicative factors) ---
   const baseGrip = config.tireCompound.peakGrip;
@@ -139,12 +132,16 @@ export function resolveEffectiveVehicle(
     effectiveGrip = Math.max(0.4, effectiveGrip);
   }
 
-  // --- Power (stub -- Plan 02 adds electrical deployment power) ---
-  const effectivePower = baseVehicle.peakPower;
+  // --- Power: electrical deployment scales with SoC and policy ---
+  const effectivePower = computeElectricalPowerModifier(
+    state.electricalState,
+    config.electricalPolicy,
+    baseVehicle.peakPower,
+  );
 
-  // --- Aero (stub -- Plan 02 adds aero mode switching) ---
-  const effectiveDrag = baseVehicle.dragFactor;
-  const effectiveDownforce = baseVehicle.downforceFactor;
+  // --- Aero: use pre-computed average factors if aeroConfig is active ---
+  const effectiveDrag = aeroFactors !== null ? aeroFactors.avgDragFactor : baseVehicle.dragFactor;
+  const effectiveDownforce = aeroFactors !== null ? aeroFactors.avgDownforceFactor : baseVehicle.downforceFactor;
 
   // --- Mass: reduce by fuel burn ---
   const initialFuelMass = config.baseVehicle.mass * 0.04;
@@ -186,6 +183,17 @@ export function runStint(config: StintConfig): StintResult {
   let state = initializeStintState(config);
   const lapTraces: LapTrace[] = [];
 
+  // Pre-compute aero-resolved points once (zones don't change per lap)
+  let aeroFactors: { avgDragFactor: number; avgDownforceFactor: number } | null = null;
+  if (config.aeroConfig !== null) {
+    const circuitPoints = config.circuit.points.map((pt) => ({
+      distance: pt.distance,
+      curvature: pt.curvature,
+    }));
+    const resolvedAeroPoints = resolveAeroPerPoint(circuitPoints, config.aeroConfig);
+    aeroFactors = computeAverageAeroFactors(resolvedAeroPoints);
+  }
+
   let previousEffectiveGrip: number | null = null;
   let previousLapProfile: SpeedProfilePoint[] | null = null;
 
@@ -197,6 +205,7 @@ export function runStint(config: StintConfig): StintResult {
       config,
       previousEffectiveGrip,
       previousLapProfile,
+      aeroFactors,
     );
 
     // 2. Solve single lap with effective params
@@ -210,9 +219,14 @@ export function runStint(config: StintConfig): StintResult {
       state.environmentState,
     );
 
-    // 4. Update electrical state (identity stub)
-    // Phase 3 Plan 02: replace with updateElectricalState()
-    const newElectricalState: ElectricalState = { ...state.electricalState };
+    // 4. Update electrical state: SoC evolves via harvesting from braking and deployment via policy
+    // Phase 3 Plan 03: pass state.environmentState as 5th arg for weather->electrical coupling
+    const newElectricalState = updateElectricalState(
+      state.electricalState,
+      lapOutput,
+      config.electricalPolicy,
+      effectiveVehicle.mass,
+    );
 
     // 5. Update environment state (identity stub)
     // Phase 3 Plan 03: replace with updateEnvironmentState()
@@ -264,9 +278,14 @@ export function runStint(config: StintConfig): StintResult {
     "Load transfer 2-axle model (Milliken & Milliken)",
     "Max 10% grip change per lap (solver stability constraint)",
     "Minimum effective grip 0.4 (solver collapse prevention)",
-    "Electrical model: stub (Plan 02)",
+    "Reduced-order electrical energy balance (2026 single-pool, no MGU-H)",
+    "Deployment power scales with SoC and policy fraction",
     "Environment coupling: stub (Plan 03)",
   ];
+
+  if (config.aeroConfig !== null) {
+    assumptions.push("Aero-mode switching: 2026 Straight Mode / Corner Mode (zone-averaged per lap)");
+  }
 
   return {
     lapTraces,

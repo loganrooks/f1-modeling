@@ -3,30 +3,52 @@
   "presetId": "fia-2026-baseline",
   "presetType": "regulation",
   "name": "FIA 2026 Baseline",
-  "description": "Phase 1 baseline regulation preset for exploring the 2026 rules direction without claiming full sporting or technical fidelity.",
+  "description": "2026 regulation preset with quantitative electrical limits, aero mode deltas, and minimum weight derived from published regulation direction.",
   "provenance": {
     "sourceType": "engineering-inference",
-    "source": "Phase 1 research synthesis from public 2026 Formula 1 regulation direction",
-    "notes": "This preset captures only coarse Phase 1 configuration hooks and is not an official regulation transcription."
+    "source": "2026 FIA PU Technical Regulations (Issue 7) and Honda commentary",
+    "notes": "Phase 3 has replaced qualitative Phase 1 placeholders with engineering-inference quantitative values. Unpublished parameters are engineering estimates."
   },
   "assumptionNotes": [
     {
-      "note": "Active aero and larger electrical-energy contribution are represented as qualitative placeholders rather than calibrated subsystem equations.",
+      "note": "Values are derived from published 2026 regulation direction (Honda commentary, FIA Issue 7) with engineering estimates for unpublished parameters. Active-aero drag/downforce deltas are approximate.",
       "provenance": {
         "sourceType": "engineering-inference",
-        "source": "Phase 1 regulation preset seed",
-        "notes": "Detailed active-aero and power-unit dynamics are deferred to later phases."
+        "source": "Phase 3 regulation preset update",
+        "notes": "Quantitative values replace qualitative Phase 1 placeholders."
       }
     }
   ],
   "values": {
     "era": "2026",
-    "activeAeroModeSwitching": true,
-    "electricalEnergyContribution": "increased-relative-to-prior-era",
-    "powerUnitPackage": "placeholder-2026-direction",
+    "electrical": {
+      "maxMguKPower": 350000,
+      "maxHarvestPerLap": 8500000,
+      "maxDeltaSoC": 4000000,
+      "icePower": 400000,
+      "totalSystemPower": 750000,
+      "mguHPresent": false,
+      "notes": "2026 eliminates MGU-H; single energy pool (MGU-K only)"
+    },
+    "aero": {
+      "activeAeroModeSwitching": true,
+      "modes": {
+        "cornerMode": {
+          "dragReduction": 0.0,
+          "downforceReduction": 0.0
+        },
+        "straightMode": {
+          "dragReduction": 0.55,
+          "downforceReduction": 0.30
+        }
+      },
+      "notes": "2026 active aero: Straight Mode ~55% drag reduction, ~30% downforce reduction"
+    },
+    "minimumWeight": 798,
+    "fuelEnergyFlowLimit": 3000,
     "notes": [
-      "Phase 1 preset selection only",
-      "Not a full legal or technical specification"
+      "Values derived from 2026 FIA PU Technical Regulations (Issue 7) and Honda commentary",
+      "Engineering-inference where exact figures are not publicly ratified"
     ]
   }
 }
