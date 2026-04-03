@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "medium-c3",
+  "presetType": "tire-compound",
+  "name": "Medium (C3)",
+  "description": "Medium compound tire parameters. Balanced grip and durability, moderate thermal window. Educational model -- not calibrated to specific Pirelli data.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 3 tire model research synthesis from public F1 tire behavior characteristics",
+    "notes": "Parameters are plausible engineering estimates for educational modeling. Not calibrated to any specific compound or season."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Peak grip, wear rates, cliff threshold, and thermal window are engineering-inference values designed to produce qualitatively realistic compound differentiation.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Phase 3 research (arxiv.org/abs/2512.00640, TUMFTM race-simulation)",
+        "notes": "Values chosen to demonstrate observable differences between compounds in a reduced-order model."
+      }
+    }
+  ],
+  "values": {
+    "compoundId": "medium",
+    "peakGrip": 1.70,
+    "baseWearRate": 0.018,
+    "wearAcceleration": 0.3,
+    "cliffThreshold": 0.80,
+    "cliffSeverity": 0.6,
+    "optimalTempLow": 95,
+    "optimalTempHigh": 130,
+    "thermalSensitivity": 0.006,
+    "warmupRate": 0.25,
+    "provenance": "engineering-inference"
+  }
+}

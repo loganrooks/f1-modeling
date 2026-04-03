@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "hard-c1",
+  "presetType": "tire-compound",
+  "name": "Hard (C1)",
+  "description": "Hard compound tire parameters. Lowest peak grip, longest life, latest cliff threshold. Educational model -- not calibrated to specific Pirelli data.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 3 tire model research synthesis from public F1 tire behavior characteristics",
+    "notes": "Parameters are plausible engineering estimates for educational modeling. Not calibrated to any specific compound or season."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Peak grip, wear rates, cliff threshold, and thermal window are engineering-inference values designed to produce qualitatively realistic compound differentiation.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Phase 3 research (arxiv.org/abs/2512.00640, TUMFTM race-simulation)",
+        "notes": "Values chosen to demonstrate observable differences between compounds in a reduced-order model."
+      }
+    }
+  ],
+  "values": {
+    "compoundId": "hard",
+    "peakGrip": 1.55,
+    "baseWearRate": 0.010,
+    "wearAcceleration": 0.2,
+    "cliffThreshold": 0.90,
+    "cliffSeverity": 0.5,
+    "optimalTempLow": 110,
+    "optimalTempHigh": 145,
+    "thermalSensitivity": 0.005,
+    "warmupRate": 0.18,
+    "provenance": "engineering-inference"
+  }
+}

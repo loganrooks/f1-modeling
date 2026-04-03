@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "soft-c5",
+  "presetType": "tire-compound",
+  "name": "Soft (C5)",
+  "description": "Soft compound tire parameters. Highest peak grip, fastest degradation, earliest cliff. Educational model -- not calibrated to specific Pirelli data.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 3 tire model research synthesis from public F1 tire behavior characteristics",
+    "notes": "Parameters are plausible engineering estimates for educational modeling. Not calibrated to any specific compound or season."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Peak grip, wear rates, cliff threshold, and thermal window are engineering-inference values designed to produce qualitatively realistic compound differentiation.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Phase 3 research (arxiv.org/abs/2512.00640, TUMFTM race-simulation)",
+        "notes": "Values chosen to demonstrate observable differences between compounds in a reduced-order model."
+      }
+    }
+  ],
+  "values": {
+    "compoundId": "soft",
+    "peakGrip": 1.85,
+    "baseWearRate": 0.030,
+    "wearAcceleration": 0.4,
+    "cliffThreshold": 0.70,
+    "cliffSeverity": 0.7,
+    "optimalTempLow": 85,
+    "optimalTempHigh": 115,
+    "thermalSensitivity": 0.008,
+    "warmupRate": 0.35,
+    "provenance": "engineering-inference"
+  }
+}

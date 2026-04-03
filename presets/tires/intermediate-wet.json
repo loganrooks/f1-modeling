@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "intermediate-wet",
+  "presetType": "tire-compound",
+  "name": "Intermediate (Wet)",
+  "description": "Intermediate/wet compound tire parameters. Lower peak grip on dry surface, wide low-temperature thermal window, higher thermal sensitivity. Educational model -- not calibrated to specific Pirelli data.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 3 tire model research synthesis from public F1 tire behavior characteristics",
+    "notes": "Parameters are plausible engineering estimates for educational modeling. Not calibrated to any specific compound or season."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Peak grip, wear rates, cliff threshold, and thermal window are engineering-inference values designed to produce qualitatively realistic compound differentiation.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Phase 3 research (arxiv.org/abs/2512.00640, TUMFTM race-simulation)",
+        "notes": "Values chosen to demonstrate observable differences between compounds in a reduced-order model."
+      }
+    }
+  ],
+  "values": {
+    "compoundId": "intermediate",
+    "peakGrip": 1.40,
+    "baseWearRate": 0.022,
+    "wearAcceleration": 0.35,
+    "cliffThreshold": 0.65,
+    "cliffSeverity": 0.8,
+    "optimalTempLow": 50,
+    "optimalTempHigh": 90,
+    "thermalSensitivity": 0.010,
+    "warmupRate": 0.40,
+    "provenance": "engineering-inference"
+  }
+}
