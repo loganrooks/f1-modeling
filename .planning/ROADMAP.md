@@ -84,9 +84,9 @@ Plans:
 
 Plans:
 - [ ] 03-01-PLAN.md — Stint runner foundation, tire model, load transfer, and compound presets (Wave 1)
-- [ ] 03-02-PLAN.md — Electrical energy model, aero-mode switching, and regulation preset upgrade (Wave 2)
-- [ ] 03-03-PLAN.md — Weather evolution, environment coupling, scenario schema extension, and API integration (Wave 2)
-- [ ] 03-04-PLAN.md — Cross-subsystem validation tests and energy-policy comparison (Wave 3)
+- [ ] 03-02-PLAN.md — Electrical energy model with environment-aware harvesting, aero-mode switching, and regulation preset upgrade (Wave 2)
+- [ ] 03-03-PLAN.md — Weather evolution, environment->electrical coupling, SoC visualization, scenario schema, and API integration (Wave 3)
+- [ ] 03-04-PLAN.md — Cross-subsystem validation tests including weather->electrical coupling verification (Wave 4)
 
 ### Phase 4: Strategy, Estimation, Explanations, and Learning Views
 **Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, introduces observer methods with a synthetic sensor model, teaches subsystem interactions through engineer-role-specific views, and supports interactive temporal exploration.
