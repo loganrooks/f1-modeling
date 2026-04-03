@@ -3,6949 +3,6955 @@
   "circuitId": "monza",
   "name": "Autodromo Nazionale Monza",
   "configuration": "grand-prix",
-  "totalLength": 5785,
+  "totalLength": 5790,
   "points": [
     {
       "distance": 0,
-      "curvature": 0,
-      "x": 0,
-      "y": 0
+      "curvature": 0.0,
+      "x": -0.32,
+      "y": 1.09
     },
     {
       "distance": 5,
-      "curvature": 0,
-      "x": 5,
-      "y": 0
+      "curvature": 0.0,
+      "x": 0.17,
+      "y": 6.06
     },
     {
       "distance": 10,
-      "curvature": 0,
-      "x": 10,
-      "y": 0
+      "curvature": 0.0,
+      "x": 0.66,
+      "y": 11.04
     },
     {
       "distance": 15,
-      "curvature": 0,
-      "x": 15,
-      "y": 0
+      "curvature": 0.0,
+      "x": 1.14,
+      "y": 16.02
     },
     {
       "distance": 20,
-      "curvature": 0,
-      "x": 20,
-      "y": 0
+      "curvature": 0.0,
+      "x": 1.63,
+      "y": 20.99
     },
     {
       "distance": 25,
-      "curvature": 0,
-      "x": 25,
-      "y": 0
+      "curvature": 0.0,
+      "x": 2.12,
+      "y": 25.97
     },
     {
       "distance": 30,
-      "curvature": 0,
-      "x": 30,
-      "y": 0
+      "curvature": 0.0,
+      "x": 2.6,
+      "y": 30.95
     },
     {
       "distance": 35,
-      "curvature": 0,
-      "x": 35,
-      "y": 0
+      "curvature": 0.0,
+      "x": 3.09,
+      "y": 35.92
     },
     {
       "distance": 40,
-      "curvature": 0,
-      "x": 40,
-      "y": 0
+      "curvature": 0.0,
+      "x": 3.58,
+      "y": 40.9
     },
     {
       "distance": 45,
-      "curvature": 0,
-      "x": 45,
-      "y": 0
+      "curvature": 0.0,
+      "x": 4.06,
+      "y": 45.88
     },
     {
       "distance": 50,
-      "curvature": 0,
-      "x": 50,
-      "y": 0
+      "curvature": 0.0,
+      "x": 4.55,
+      "y": 50.85
     },
     {
       "distance": 55,
-      "curvature": 0,
-      "x": 55,
-      "y": 0
+      "curvature": 0.0,
+      "x": 5.03,
+      "y": 55.83
     },
     {
       "distance": 60,
-      "curvature": 0,
-      "x": 60,
-      "y": 0
+      "curvature": 0.0,
+      "x": 5.52,
+      "y": 60.81
     },
     {
       "distance": 65,
-      "curvature": 0,
-      "x": 65,
-      "y": 0
+      "curvature": 0.0,
+      "x": 6.0,
+      "y": 65.78
     },
     {
       "distance": 70,
-      "curvature": 0,
-      "x": 70,
-      "y": 0
+      "curvature": 0.0,
+      "x": 6.49,
+      "y": 70.76
     },
     {
       "distance": 75,
-      "curvature": 0,
-      "x": 75,
-      "y": 0
+      "curvature": 0.0,
+      "x": 6.97,
+      "y": 75.73
     },
     {
       "distance": 80,
-      "curvature": 0,
-      "x": 80,
-      "y": 0
+      "curvature": 0.0,
+      "x": 7.46,
+      "y": 80.71
     },
     {
       "distance": 85,
-      "curvature": 0,
-      "x": 85,
-      "y": 0
+      "curvature": 0.0,
+      "x": 7.95,
+      "y": 85.69
     },
     {
       "distance": 90,
-      "curvature": 0,
-      "x": 90,
-      "y": 0
+      "curvature": 0.0,
+      "x": 8.43,
+      "y": 90.66
     },
     {
       "distance": 95,
-      "curvature": 0,
-      "x": 95,
-      "y": 0
+      "curvature": 0.0,
+      "x": 8.92,
+      "y": 95.64
     },
     {
       "distance": 100,
-      "curvature": 0,
-      "x": 100,
-      "y": 0
+      "curvature": 0.0,
+      "x": 9.4,
+      "y": 100.62
     },
     {
       "distance": 105,
-      "curvature": 0,
-      "x": 105,
-      "y": 0
+      "curvature": 0.0,
+      "x": 9.89,
+      "y": 105.59
     },
     {
       "distance": 110,
-      "curvature": 0,
-      "x": 110,
-      "y": 0
+      "curvature": 0.0,
+      "x": 10.38,
+      "y": 110.57
     },
     {
       "distance": 115,
-      "curvature": 0,
-      "x": 115,
-      "y": 0
+      "curvature": 0.0,
+      "x": 10.86,
+      "y": 115.55
     },
     {
       "distance": 120,
-      "curvature": 0,
-      "x": 120,
-      "y": 0
+      "curvature": 0.0,
+      "x": 11.35,
+      "y": 120.52
     },
     {
       "distance": 125,
-      "curvature": 0,
-      "x": 125,
-      "y": 0
+      "curvature": 0.0,
+      "x": 11.84,
+      "y": 125.5
     },
     {
       "distance": 130,
-      "curvature": 0,
-      "x": 130,
-      "y": 0
+      "curvature": 0.0,
+      "x": 12.33,
+      "y": 130.48
     },
     {
       "distance": 135,
-      "curvature": 0,
-      "x": 135,
-      "y": 0
+      "curvature": 0.0,
+      "x": 12.82,
+      "y": 135.45
     },
     {
       "distance": 140,
-      "curvature": 0,
-      "x": 140,
-      "y": 0
+      "curvature": 0.0,
+      "x": 13.31,
+      "y": 140.43
     },
     {
       "distance": 145,
-      "curvature": 0,
-      "x": 145,
-      "y": 0
+      "curvature": 0.0,
+      "x": 13.8,
+      "y": 145.4
     },
     {
       "distance": 150,
-      "curvature": 0,
-      "x": 150,
-      "y": 0
+      "curvature": 0.0,
+      "x": 14.29,
+      "y": 150.38
     },
     {
       "distance": 155,
-      "curvature": 0,
-      "x": 155,
-      "y": 0
+      "curvature": 0.0,
+      "x": 14.78,
+      "y": 155.36
     },
     {
       "distance": 160,
-      "curvature": 0,
-      "x": 160,
-      "y": 0
+      "curvature": 0.0,
+      "x": 15.27,
+      "y": 160.33
     },
     {
       "distance": 165,
-      "curvature": 0,
-      "x": 165,
-      "y": 0
+      "curvature": 0.0,
+      "x": 15.76,
+      "y": 165.31
     },
     {
       "distance": 170,
-      "curvature": 0,
-      "x": 170,
-      "y": 0
+      "curvature": 0.0,
+      "x": 16.26,
+      "y": 170.28
     },
     {
       "distance": 175,
-      "curvature": 0,
-      "x": 175,
-      "y": 0
+      "curvature": 0.0,
+      "x": 16.75,
+      "y": 175.26
     },
     {
       "distance": 180,
-      "curvature": 0,
-      "x": 180,
-      "y": 0
+      "curvature": 0.0,
+      "x": 17.25,
+      "y": 180.23
     },
     {
       "distance": 185,
-      "curvature": 0,
-      "x": 185,
-      "y": 0
+      "curvature": 0.0,
+      "x": 17.75,
+      "y": 185.21
     },
     {
       "distance": 190,
-      "curvature": 0,
-      "x": 190,
-      "y": 0
+      "curvature": 0.0,
+      "x": 18.24,
+      "y": 190.19
     },
     {
       "distance": 195,
-      "curvature": 0,
-      "x": 195,
-      "y": 0
+      "curvature": 0.0,
+      "x": 18.74,
+      "y": 195.16
     },
     {
       "distance": 200,
-      "curvature": 0,
-      "x": 200,
-      "y": 0
+      "curvature": 0.0,
+      "x": 19.24,
+      "y": 200.14
     },
     {
       "distance": 205,
-      "curvature": 0,
-      "x": 205,
-      "y": 0
+      "curvature": 0.0,
+      "x": 19.74,
+      "y": 205.11
     },
     {
       "distance": 210,
-      "curvature": 0,
-      "x": 210,
-      "y": 0
+      "curvature": 0.0,
+      "x": 20.24,
+      "y": 210.09
     },
     {
       "distance": 215,
-      "curvature": 0,
-      "x": 215,
-      "y": 0
+      "curvature": 0.0,
+      "x": 20.74,
+      "y": 215.06
     },
     {
       "distance": 220,
-      "curvature": 0,
-      "x": 220,
-      "y": 0
+      "curvature": 0.0,
+      "x": 21.24,
+      "y": 220.04
     },
     {
       "distance": 225,
-      "curvature": 0,
-      "x": 225,
-      "y": 0
+      "curvature": 0.0,
+      "x": 21.75,
+      "y": 225.01
     },
     {
       "distance": 230,
-      "curvature": 0,
-      "x": 230,
-      "y": 0
+      "curvature": 0.0,
+      "x": 22.25,
+      "y": 229.99
     },
     {
       "distance": 235,
-      "curvature": 0,
-      "x": 235,
-      "y": 0
+      "curvature": 0.0,
+      "x": 22.75,
+      "y": 234.96
     },
     {
       "distance": 240,
-      "curvature": 0,
-      "x": 240,
-      "y": 0
+      "curvature": 0.0,
+      "x": 23.25,
+      "y": 239.94
     },
     {
       "distance": 245,
-      "curvature": 0,
-      "x": 245,
-      "y": 0
+      "curvature": 0.0,
+      "x": 23.75,
+      "y": 244.91
     },
     {
       "distance": 250,
-      "curvature": 0,
-      "x": 250,
-      "y": 0
+      "curvature": 0.0,
+      "x": 24.26,
+      "y": 249.89
     },
     {
       "distance": 255,
-      "curvature": 0,
-      "x": 255,
-      "y": 0
+      "curvature": 0.0,
+      "x": 24.76,
+      "y": 254.86
     },
     {
       "distance": 260,
-      "curvature": 0,
-      "x": 260,
-      "y": 0
+      "curvature": 0.0,
+      "x": 25.26,
+      "y": 259.84
     },
     {
       "distance": 265,
-      "curvature": 0,
-      "x": 265,
-      "y": 0
+      "curvature": 0.0,
+      "x": 25.76,
+      "y": 264.81
     },
     {
       "distance": 270,
-      "curvature": 0,
-      "x": 270,
-      "y": 0
+      "curvature": 0.0,
+      "x": 26.26,
+      "y": 269.79
     },
     {
       "distance": 275,
-      "curvature": 0,
-      "x": 275,
-      "y": 0
+      "curvature": 0.0,
+      "x": 26.76,
+      "y": 274.76
     },
     {
       "distance": 280,
-      "curvature": 0,
-      "x": 280,
-      "y": 0
+      "curvature": 0.0,
+      "x": 27.26,
+      "y": 279.74
     },
     {
       "distance": 285,
-      "curvature": 0,
-      "x": 285,
-      "y": 0
+      "curvature": 0.0,
+      "x": 27.76,
+      "y": 284.71
     },
     {
       "distance": 290,
-      "curvature": 0,
-      "x": 290,
-      "y": 0
+      "curvature": 0.0,
+      "x": 28.26,
+      "y": 289.69
     },
     {
       "distance": 295,
-      "curvature": 0,
-      "x": 295,
-      "y": 0
+      "curvature": 0.0,
+      "x": 28.75,
+      "y": 294.66
     },
     {
       "distance": 300,
-      "curvature": 0,
-      "x": 300,
-      "y": 0
+      "curvature": 0.0,
+      "x": 29.25,
+      "y": 299.64
     },
     {
       "distance": 305,
-      "curvature": 0,
-      "x": 305,
-      "y": 0
+      "curvature": 0.0,
+      "x": 29.75,
+      "y": 304.61
     },
     {
       "distance": 310,
-      "curvature": 0,
-      "x": 310,
-      "y": 0
+      "curvature": 0.0,
+      "x": 30.24,
+      "y": 309.59
     },
     {
       "distance": 315,
-      "curvature": 0,
-      "x": 315,
-      "y": 0
+      "curvature": 0.0,
+      "x": 30.73,
+      "y": 314.56
     },
     {
       "distance": 320,
-      "curvature": 0,
-      "x": 320,
-      "y": 0
+      "curvature": 0.0,
+      "x": 31.22,
+      "y": 319.54
     },
     {
       "distance": 325,
-      "curvature": 0,
-      "x": 325,
-      "y": 0
+      "curvature": 0.0,
+      "x": 31.71,
+      "y": 324.52
     },
     {
       "distance": 330,
-      "curvature": 0,
-      "x": 330,
-      "y": 0
+      "curvature": 0.0,
+      "x": 32.2,
+      "y": 329.49
     },
     {
       "distance": 335,
-      "curvature": 0,
-      "x": 335,
-      "y": 0
+      "curvature": 0.0,
+      "x": 32.69,
+      "y": 334.47
     },
     {
       "distance": 340,
-      "curvature": 0,
-      "x": 340,
-      "y": 0
+      "curvature": 0.0,
+      "x": 33.18,
+      "y": 339.45
     },
     {
       "distance": 345,
-      "curvature": 0,
-      "x": 345,
-      "y": 0
+      "curvature": 0.0,
+      "x": 33.66,
+      "y": 344.42
     },
     {
       "distance": 350,
-      "curvature": 0,
-      "x": 350,
-      "y": 0
+      "curvature": 0.0,
+      "x": 34.14,
+      "y": 349.4
     },
     {
       "distance": 355,
-      "curvature": 0,
-      "x": 355,
-      "y": 0
+      "curvature": 0.0,
+      "x": 34.62,
+      "y": 354.38
     },
     {
       "distance": 360,
-      "curvature": 0,
-      "x": 360,
-      "y": 0
+      "curvature": 0.0,
+      "x": 35.1,
+      "y": 359.35
     },
     {
       "distance": 365,
-      "curvature": 0,
-      "x": 365,
-      "y": 0
+      "curvature": 0.0,
+      "x": 35.57,
+      "y": 364.33
     },
     {
       "distance": 370,
-      "curvature": 0,
-      "x": 370,
-      "y": 0
+      "curvature": 0.0,
+      "x": 36.05,
+      "y": 369.31
     },
     {
       "distance": 375,
-      "curvature": 0,
-      "x": 375,
-      "y": 0
+      "curvature": 0.0,
+      "x": 36.52,
+      "y": 374.29
     },
     {
       "distance": 380,
-      "curvature": 0,
-      "x": 380,
-      "y": 0
+      "curvature": 0.0,
+      "x": 36.99,
+      "y": 379.26
     },
     {
       "distance": 385,
-      "curvature": 0,
-      "x": 385,
-      "y": 0
+      "curvature": 0.0,
+      "x": 37.46,
+      "y": 384.24
     },
     {
       "distance": 390,
-      "curvature": 0,
-      "x": 390,
-      "y": 0
+      "curvature": 0.0,
+      "x": 37.92,
+      "y": 389.22
     },
     {
       "distance": 395,
-      "curvature": 0,
-      "x": 395,
-      "y": 0
+      "curvature": 0.0,
+      "x": 38.39,
+      "y": 394.2
     },
     {
       "distance": 400,
-      "curvature": 0,
-      "x": 400,
-      "y": 0
+      "curvature": 0.0,
+      "x": 38.85,
+      "y": 399.18
     },
     {
       "distance": 405,
-      "curvature": 0,
-      "x": 405,
-      "y": 0
+      "curvature": 0.0,
+      "x": 39.31,
+      "y": 404.16
     },
     {
       "distance": 410,
-      "curvature": 0,
-      "x": 410,
-      "y": 0
+      "curvature": 0.0,
+      "x": 39.77,
+      "y": 409.14
     },
     {
       "distance": 415,
-      "curvature": 0,
-      "x": 415,
-      "y": 0
+      "curvature": 0.0,
+      "x": 40.23,
+      "y": 414.12
     },
     {
       "distance": 420,
-      "curvature": 0,
-      "x": 420,
-      "y": 0
+      "curvature": 0.0,
+      "x": 40.68,
+      "y": 419.1
     },
     {
       "distance": 425,
-      "curvature": 0,
-      "x": 425,
-      "y": 0
+      "curvature": 0.0,
+      "x": 41.13,
+      "y": 424.07
     },
     {
       "distance": 430,
-      "curvature": 0,
-      "x": 430,
-      "y": 0
+      "curvature": 0.0,
+      "x": 41.59,
+      "y": 429.05
     },
     {
       "distance": 435,
-      "curvature": 0,
-      "x": 435,
-      "y": 0
+      "curvature": 0.0,
+      "x": 42.04,
+      "y": 434.03
     },
     {
       "distance": 440,
-      "curvature": 0,
-      "x": 440,
-      "y": 0
+      "curvature": 0.0,
+      "x": 42.49,
+      "y": 439.01
     },
     {
       "distance": 445,
-      "curvature": 0,
-      "x": 445,
-      "y": 0
+      "curvature": 0.0,
+      "x": 42.93,
+      "y": 443.99
     },
     {
       "distance": 450,
-      "curvature": 0,
-      "x": 450,
-      "y": 0
+      "curvature": 0.0,
+      "x": 43.38,
+      "y": 448.97
     },
     {
       "distance": 455,
-      "curvature": 0,
-      "x": 455,
-      "y": 0
+      "curvature": 0.0,
+      "x": 43.82,
+      "y": 453.96
     },
     {
       "distance": 460,
-      "curvature": 0,
-      "x": 460,
-      "y": 0
+      "curvature": 0.0,
+      "x": 44.27,
+      "y": 458.94
     },
     {
       "distance": 465,
-      "curvature": 0,
-      "x": 465,
-      "y": 0
+      "curvature": 0.0,
+      "x": 44.71,
+      "y": 463.92
     },
     {
       "distance": 470,
-      "curvature": 0,
-      "x": 470,
-      "y": 0
+      "curvature": 0.0,
+      "x": 45.15,
+      "y": 468.9
     },
     {
       "distance": 475,
-      "curvature": 0,
-      "x": 475,
-      "y": 0
+      "curvature": 0.0,
+      "x": 45.59,
+      "y": 473.88
     },
     {
       "distance": 480,
-      "curvature": 0,
-      "x": 480,
-      "y": 0
+      "curvature": 0.0,
+      "x": 46.02,
+      "y": 478.86
     },
     {
       "distance": 485,
-      "curvature": 0,
-      "x": 485,
-      "y": 0
+      "curvature": 0.0,
+      "x": 46.46,
+      "y": 483.84
     },
     {
       "distance": 490,
-      "curvature": 0,
-      "x": 490,
-      "y": 0
+      "curvature": 0.0,
+      "x": 46.9,
+      "y": 488.82
     },
     {
       "distance": 495,
-      "curvature": 0,
-      "x": 495,
-      "y": 0
+      "curvature": 0.0,
+      "x": 47.33,
+      "y": 493.8
     },
     {
       "distance": 500,
-      "curvature": 0,
-      "x": 500,
-      "y": 0
+      "curvature": 0.0,
+      "x": 47.76,
+      "y": 498.78
     },
     {
       "distance": 505,
-      "curvature": 0,
-      "x": 505,
-      "y": 0
+      "curvature": 0.0,
+      "x": 48.2,
+      "y": 503.77
     },
     {
       "distance": 510,
-      "curvature": 0,
-      "x": 510,
-      "y": 0
+      "curvature": 0.0,
+      "x": 48.63,
+      "y": 508.75
     },
     {
       "distance": 515,
-      "curvature": 0,
-      "x": 515,
-      "y": 0
+      "curvature": 0.0,
+      "x": 49.06,
+      "y": 513.73
     },
     {
       "distance": 520,
-      "curvature": 0,
-      "x": 520,
-      "y": 0
+      "curvature": 0.0,
+      "x": 49.49,
+      "y": 518.71
     },
     {
       "distance": 525,
-      "curvature": 0,
-      "x": 525,
-      "y": 0
+      "curvature": 0.0,
+      "x": 49.91,
+      "y": 523.69
     },
     {
       "distance": 530,
-      "curvature": 0,
-      "x": 530,
-      "y": 0
+      "curvature": 0.0,
+      "x": 50.34,
+      "y": 528.67
     },
     {
       "distance": 535,
-      "curvature": 0,
-      "x": 535,
-      "y": 0
+      "curvature": 0.0,
+      "x": 50.77,
+      "y": 533.66
     },
     {
       "distance": 540,
-      "curvature": 0,
-      "x": 540,
-      "y": 0
+      "curvature": 0.0,
+      "x": 51.19,
+      "y": 538.64
     },
     {
       "distance": 545,
-      "curvature": 0,
-      "x": 545,
-      "y": 0
+      "curvature": 0.0,
+      "x": 51.62,
+      "y": 543.62
     },
     {
       "distance": 550,
-      "curvature": 0,
-      "x": 550,
-      "y": 0
+      "curvature": 0.0,
+      "x": 52.04,
+      "y": 548.6
     },
     {
       "distance": 555,
-      "curvature": 0,
-      "x": 555,
-      "y": 0
+      "curvature": 0.0,
+      "x": 52.47,
+      "y": 553.58
     },
     {
       "distance": 560,
-      "curvature": 0,
-      "x": 560,
-      "y": 0
+      "curvature": 0.0,
+      "x": 52.89,
+      "y": 558.57
     },
     {
       "distance": 565,
-      "curvature": 0,
-      "x": 565,
-      "y": 0
+      "curvature": 0.0,
+      "x": 53.31,
+      "y": 563.55
     },
     {
       "distance": 570,
-      "curvature": 0,
-      "x": 570,
-      "y": 0
+      "curvature": 0.0,
+      "x": 53.74,
+      "y": 568.53
     },
     {
       "distance": 575,
-      "curvature": 0,
-      "x": 575,
-      "y": 0
+      "curvature": 0.0,
+      "x": 54.16,
+      "y": 573.51
     },
     {
       "distance": 580,
-      "curvature": 0,
-      "x": 580,
-      "y": 0
+      "curvature": 0.0,
+      "x": 54.58,
+      "y": 578.5
     },
     {
       "distance": 585,
-      "curvature": 0,
-      "x": 585,
-      "y": 0
+      "curvature": 0.0,
+      "x": 55.0,
+      "y": 583.48
     },
     {
       "distance": 590,
-      "curvature": 0,
-      "x": 590,
-      "y": 0
+      "curvature": 0.0,
+      "x": 55.42,
+      "y": 588.46
     },
     {
       "distance": 595,
-      "curvature": 0,
-      "x": 595,
-      "y": 0
+      "curvature": 0.0,
+      "x": 55.84,
+      "y": 593.44
     },
     {
       "distance": 600,
-      "curvature": 0,
-      "x": 600,
-      "y": 0
+      "curvature": 0.0,
+      "x": 56.26,
+      "y": 598.43
     },
     {
       "distance": 605,
-      "curvature": 0,
-      "x": 605,
-      "y": 0
+      "curvature": 0.0,
+      "x": 56.68,
+      "y": 603.41
     },
     {
       "distance": 610,
-      "curvature": 0,
-      "x": 610,
-      "y": 0
+      "curvature": 0.0,
+      "x": 57.1,
+      "y": 608.39
     },
     {
       "distance": 615,
-      "curvature": 0,
-      "x": 615,
-      "y": 0
+      "curvature": 0.0,
+      "x": 57.52,
+      "y": 613.37
     },
     {
       "distance": 620,
-      "curvature": 0,
-      "x": 620,
-      "y": 0
+      "curvature": 0.0,
+      "x": 57.94,
+      "y": 618.36
     },
     {
       "distance": 625,
-      "curvature": 0,
-      "x": 625,
-      "y": 0
+      "curvature": 0.0,
+      "x": 58.36,
+      "y": 623.34
     },
     {
       "distance": 630,
-      "curvature": 0,
-      "x": 630,
-      "y": 0
+      "curvature": 0.0,
+      "x": 58.78,
+      "y": 628.32
     },
     {
       "distance": 635,
-      "curvature": 0,
-      "x": 635,
-      "y": 0
+      "curvature": 0.0,
+      "x": 59.19,
+      "y": 633.3
     },
     {
       "distance": 640,
-      "curvature": 0,
-      "x": 640,
-      "y": 0
+      "curvature": 0.0,
+      "x": 59.61,
+      "y": 638.29
     },
     {
       "distance": 645,
-      "curvature": 0,
-      "x": 645,
-      "y": 0
+      "curvature": 0.0,
+      "x": 60.03,
+      "y": 643.27
     },
     {
       "distance": 650,
-      "curvature": 0,
-      "x": 650,
-      "y": 0
+      "curvature": 0.0,
+      "x": 60.45,
+      "y": 648.25
     },
     {
       "distance": 655,
-      "curvature": 0,
-      "x": 655,
-      "y": 0
+      "curvature": 0.0,
+      "x": 60.87,
+      "y": 653.23
     },
     {
       "distance": 660,
-      "curvature": 0,
-      "x": 660,
-      "y": 0
+      "curvature": 0.0,
+      "x": 61.29,
+      "y": 658.22
     },
     {
       "distance": 665,
-      "curvature": 0,
-      "x": 665,
-      "y": 0
+      "curvature": 0.0,
+      "x": 61.71,
+      "y": 663.2
     },
     {
       "distance": 670,
-      "curvature": 0,
-      "x": 670,
-      "y": 0
+      "curvature": 0.0,
+      "x": 62.13,
+      "y": 668.18
     },
     {
       "distance": 675,
-      "curvature": 0,
-      "x": 675,
-      "y": 0
+      "curvature": 0.0,
+      "x": 62.55,
+      "y": 673.16
     },
     {
       "distance": 680,
-      "curvature": 0,
-      "x": 680,
-      "y": 0
+      "curvature": 0.0,
+      "x": 62.97,
+      "y": 678.15
     },
     {
       "distance": 685,
-      "curvature": 0,
-      "x": 685,
-      "y": 0
+      "curvature": 0.0,
+      "x": 63.39,
+      "y": 683.13
     },
     {
       "distance": 690,
-      "curvature": 0,
-      "x": 690,
-      "y": 0
+      "curvature": 0.0,
+      "x": 63.81,
+      "y": 688.11
     },
     {
       "distance": 695,
-      "curvature": 0,
-      "x": 695,
-      "y": 0
+      "curvature": 0.0,
+      "x": 64.23,
+      "y": 693.09
     },
     {
       "distance": 700,
-      "curvature": 0,
-      "x": 700,
-      "y": 0
+      "curvature": 0.0,
+      "x": 64.65,
+      "y": 698.08
     },
     {
       "distance": 705,
-      "curvature": 0,
-      "x": 705,
-      "y": 0
+      "curvature": 0.0,
+      "x": 65.08,
+      "y": 703.06
     },
     {
       "distance": 710,
-      "curvature": 0,
-      "x": 710,
-      "y": 0
+      "curvature": 0.0,
+      "x": 65.5,
+      "y": 708.04
     },
     {
       "distance": 715,
-      "curvature": 0,
-      "x": 715,
-      "y": 0
+      "curvature": 0.0,
+      "x": 65.92,
+      "y": 713.02
     },
     {
       "distance": 720,
-      "curvature": 0,
-      "x": 720,
-      "y": 0
+      "curvature": 0.0,
+      "x": 66.35,
+      "y": 718.01
     },
     {
       "distance": 725,
-      "curvature": 0,
-      "x": 725,
-      "y": 0
+      "curvature": 0.0,
+      "x": 66.77,
+      "y": 722.99
     },
     {
       "distance": 730,
-      "curvature": 0,
-      "x": 730,
-      "y": 0
+      "curvature": 0.0,
+      "x": 67.2,
+      "y": 727.97
     },
     {
       "distance": 735,
-      "curvature": 0,
-      "x": 735,
-      "y": 0
+      "curvature": 0.0,
+      "x": 67.62,
+      "y": 732.95
     },
     {
       "distance": 740,
-      "curvature": 0,
-      "x": 740,
-      "y": 0
+      "curvature": 0.0,
+      "x": 68.05,
+      "y": 737.93
     },
     {
       "distance": 745,
-      "curvature": 0,
-      "x": 745,
-      "y": 0
+      "curvature": 0.0,
+      "x": 68.48,
+      "y": 742.92
     },
     {
       "distance": 750,
-      "curvature": 0,
-      "x": 750,
-      "y": 0
+      "curvature": 0.0,
+      "x": 68.9,
+      "y": 747.9
     },
     {
       "distance": 755,
-      "curvature": 0,
-      "x": 755,
-      "y": 0
+      "curvature": 0.0,
+      "x": 69.33,
+      "y": 752.88
     },
     {
       "distance": 760,
-      "curvature": 0,
-      "x": 760,
-      "y": 0
+      "curvature": 0.0,
+      "x": 69.76,
+      "y": 757.86
     },
     {
       "distance": 765,
-      "curvature": 0,
-      "x": 765,
-      "y": 0
+      "curvature": 0.0,
+      "x": 70.19,
+      "y": 762.84
     },
     {
       "distance": 770,
-      "curvature": 0,
-      "x": 770,
-      "y": 0
+      "curvature": 0.0,
+      "x": 70.62,
+      "y": 767.82
     },
     {
       "distance": 775,
-      "curvature": 0,
-      "x": 775,
-      "y": 0
+      "curvature": 0.0,
+      "x": 71.05,
+      "y": 772.81
     },
     {
       "distance": 780,
-      "curvature": 0,
-      "x": 780,
-      "y": 0
+      "curvature": 0.0,
+      "x": 71.48,
+      "y": 777.79
     },
     {
       "distance": 785,
-      "curvature": 0,
-      "x": 785,
-      "y": 0
+      "curvature": 0.0,
+      "x": 71.91,
+      "y": 782.77
     },
     {
       "distance": 790,
-      "curvature": 0,
-      "x": 790,
-      "y": 0
+      "curvature": 0.0,
+      "x": 72.34,
+      "y": 787.75
     },
     {
       "distance": 795,
-      "curvature": 0,
-      "x": 795,
-      "y": 0
+      "curvature": 0.0,
+      "x": 72.76,
+      "y": 792.73
     },
     {
       "distance": 800,
-      "curvature": 0,
-      "x": 800,
-      "y": 0
+      "curvature": 0.0,
+      "x": 73.19,
+      "y": 797.71
     },
     {
       "distance": 805,
-      "curvature": 0,
-      "x": 805,
-      "y": 0
+      "curvature": 0.0,
+      "x": 73.62,
+      "y": 802.7
     },
     {
       "distance": 810,
-      "curvature": 0,
-      "x": 810,
-      "y": 0
+      "curvature": 0.0,
+      "x": 74.05,
+      "y": 807.68
     },
     {
       "distance": 815,
-      "curvature": 0,
-      "x": 815,
-      "y": 0
+      "curvature": 0.0,
+      "x": 74.48,
+      "y": 812.66
     },
     {
       "distance": 820,
-      "curvature": 0,
-      "x": 820,
-      "y": 0
+      "curvature": 0.0,
+      "x": 74.91,
+      "y": 817.64
     },
     {
       "distance": 825,
-      "curvature": 0,
-      "x": 825,
-      "y": 0
+      "curvature": 0.0,
+      "x": 75.33,
+      "y": 822.62
     },
     {
       "distance": 830,
-      "curvature": 0,
-      "x": 830,
-      "y": 0
+      "curvature": 0.0,
+      "x": 75.76,
+      "y": 827.61
     },
     {
       "distance": 835,
-      "curvature": 0,
-      "x": 835,
-      "y": 0
+      "curvature": 0.0,
+      "x": 76.19,
+      "y": 832.59
     },
     {
       "distance": 840,
-      "curvature": 0,
-      "x": 840,
-      "y": 0
+      "curvature": 0.0,
+      "x": 76.61,
+      "y": 837.57
     },
     {
       "distance": 845,
-      "curvature": 0,
-      "x": 845,
-      "y": 0
+      "curvature": 0.0,
+      "x": 77.04,
+      "y": 842.55
     },
     {
       "distance": 850,
-      "curvature": 0,
-      "x": 850,
-      "y": 0
+      "curvature": 0.0,
+      "x": 77.46,
+      "y": 847.53
     },
     {
       "distance": 855,
-      "curvature": 0,
-      "x": 855,
-      "y": 0
+      "curvature": 0.0,
+      "x": 77.88,
+      "y": 852.52
     },
     {
       "distance": 860,
-      "curvature": 0,
-      "x": 860,
-      "y": 0
+      "curvature": 0.0,
+      "x": 78.31,
+      "y": 857.5
     },
     {
       "distance": 865,
-      "curvature": 0,
-      "x": 865,
-      "y": 0
+      "curvature": 0.0,
+      "x": 78.73,
+      "y": 862.48
     },
     {
       "distance": 870,
-      "curvature": 0,
-      "x": 870,
-      "y": 0
+      "curvature": 0.0,
+      "x": 79.15,
+      "y": 867.46
     },
     {
       "distance": 875,
-      "curvature": 0,
-      "x": 875,
-      "y": 0
+      "curvature": 0.0,
+      "x": 79.57,
+      "y": 872.45
     },
     {
       "distance": 880,
-      "curvature": 0,
-      "x": 880,
-      "y": 0
+      "curvature": 0.0,
+      "x": 79.99,
+      "y": 877.43
     },
     {
       "distance": 885,
-      "curvature": 0,
-      "x": 885,
-      "y": 0
+      "curvature": 0.0,
+      "x": 80.4,
+      "y": 882.41
     },
     {
       "distance": 890,
-      "curvature": 0,
-      "x": 890,
-      "y": 0
+      "curvature": 0.0,
+      "x": 80.82,
+      "y": 887.39
     },
     {
       "distance": 895,
-      "curvature": 0,
-      "x": 895,
-      "y": 0
+      "curvature": 0.0,
+      "x": 81.23,
+      "y": 892.38
     },
     {
       "distance": 900,
-      "curvature": 0,
-      "x": 900,
-      "y": 0
+      "curvature": 0.0,
+      "x": 81.65,
+      "y": 897.36
     },
     {
       "distance": 905,
-      "curvature": 0,
-      "x": 905,
-      "y": 0
+      "curvature": 0.0,
+      "x": 82.06,
+      "y": 902.34
     },
     {
       "distance": 910,
-      "curvature": 0,
-      "x": 910,
-      "y": 0
+      "curvature": 0.0,
+      "x": 82.47,
+      "y": 907.33
     },
     {
       "distance": 915,
-      "curvature": 0,
-      "x": 915,
-      "y": 0
+      "curvature": 0.0,
+      "x": 82.87,
+      "y": 912.31
     },
     {
       "distance": 920,
-      "curvature": 0,
-      "x": 920,
-      "y": 0
+      "curvature": 0.0,
+      "x": 83.27,
+      "y": 917.29
     },
     {
       "distance": 925,
-      "curvature": 0,
-      "x": 925,
-      "y": 0
+      "curvature": 0.0,
+      "x": 83.98,
+      "y": 922.24
     },
     {
       "distance": 930,
-      "curvature": 0,
-      "x": 930,
-      "y": 0
+      "curvature": 0.0,
+      "x": 85.95,
+      "y": 926.83
     },
     {
       "distance": 935,
-      "curvature": 0,
-      "x": 935,
-      "y": 0
+      "curvature": 0.0,
+      "x": 89.91,
+      "y": 929.86
     },
     {
       "distance": 940,
-      "curvature": 0,
-      "x": 940,
-      "y": 0
+      "curvature": 0.0,
+      "x": 94.84,
+      "y": 930.73
     },
     {
       "distance": 945,
-      "curvature": 0,
-      "x": 945,
-      "y": 0
+      "curvature": 0.0,
+      "x": 99.81,
+      "y": 930.27
     },
     {
       "distance": 950,
-      "curvature": 0,
-      "x": 950,
-      "y": 0
+      "curvature": 0.0,
+      "x": 104.72,
+      "y": 929.29
     },
     {
       "distance": 955,
-      "curvature": 0,
-      "x": 955,
-      "y": 0
+      "curvature": 0.0,
+      "x": 109.66,
+      "y": 928.54
     },
     {
       "distance": 960,
-      "curvature": 0,
-      "x": 960,
-      "y": 0
+      "curvature": 0.0,
+      "x": 114.65,
+      "y": 928.76
     },
     {
       "distance": 965,
-      "curvature": 0,
-      "x": 965,
-      "y": 0
+      "curvature": 0.0,
+      "x": 119.35,
+      "y": 930.46
     },
     {
       "distance": 970,
-      "curvature": 0,
-      "x": 970,
-      "y": 0
+      "curvature": 0.0,
+      "x": 123.36,
+      "y": 933.47
     },
     {
       "distance": 975,
-      "curvature": 0,
-      "x": 975,
-      "y": 0
+      "curvature": 0.0,
+      "x": 126.41,
+      "y": 937.42
     },
     {
       "distance": 980,
-      "curvature": 0,
-      "x": 980,
-      "y": 0
+      "curvature": 0.0,
+      "x": 127.99,
+      "y": 942.17
     },
     {
       "distance": 985,
-      "curvature": 0,
-      "x": 985,
-      "y": 0
+      "curvature": 0.0,
+      "x": 128.14,
+      "y": 947.16
     },
     {
       "distance": 990,
-      "curvature": 0,
-      "x": 990,
-      "y": 0
+      "curvature": 0.0,
+      "x": 127.42,
+      "y": 952.11
     },
     {
       "distance": 995,
-      "curvature": 0,
-      "x": 995,
-      "y": 0
+      "curvature": 0.0,
+      "x": 126.31,
+      "y": 956.99
     },
     {
       "distance": 1000,
-      "curvature": 0,
-      "x": 1000,
-      "y": 0
+      "curvature": 0.0,
+      "x": 125.11,
+      "y": 961.84
     },
     {
       "distance": 1005,
-      "curvature": 0,
-      "x": 1005,
-      "y": 0
+      "curvature": 0.0,
+      "x": 123.87,
+      "y": 966.68
     },
     {
       "distance": 1010,
-      "curvature": 0,
-      "x": 1010,
-      "y": 0
+      "curvature": 0.0,
+      "x": 122.6,
+      "y": 971.52
     },
     {
       "distance": 1015,
-      "curvature": 0,
-      "x": 1015,
-      "y": 0
+      "curvature": 0.0,
+      "x": 121.31,
+      "y": 976.35
     },
     {
       "distance": 1020,
-      "curvature": 0,
-      "x": 1020,
-      "y": 0
+      "curvature": 0.0,
+      "x": 120.0,
+      "y": 981.18
     },
     {
       "distance": 1025,
-      "curvature": 0,
-      "x": 1025,
-      "y": 0
+      "curvature": 0.0,
+      "x": 118.67,
+      "y": 986.0
     },
     {
       "distance": 1030,
-      "curvature": 0,
-      "x": 1030,
-      "y": 0
+      "curvature": 0.0,
+      "x": 117.33,
+      "y": 990.82
     },
     {
       "distance": 1035,
-      "curvature": 0,
-      "x": 1035,
-      "y": 0
+      "curvature": 0.0,
+      "x": 115.99,
+      "y": 995.63
     },
     {
       "distance": 1040,
-      "curvature": 0,
-      "x": 1040,
-      "y": 0
+      "curvature": 0.0,
+      "x": 114.66,
+      "y": 1000.45
     },
     {
       "distance": 1045,
-      "curvature": 0,
-      "x": 1045,
-      "y": 0
+      "curvature": 0.0,
+      "x": 113.33,
+      "y": 1005.27
     },
     {
       "distance": 1050,
-      "curvature": 0,
-      "x": 1050,
-      "y": 0
+      "curvature": 0.0,
+      "x": 112.02,
+      "y": 1010.1
     },
     {
       "distance": 1055,
-      "curvature": 0,
-      "x": 1055,
-      "y": 0
+      "curvature": 0.0,
+      "x": 110.73,
+      "y": 1014.93
     },
     {
       "distance": 1060,
-      "curvature": 0,
-      "x": 1060,
-      "y": 0
+      "curvature": 0.0,
+      "x": 109.47,
+      "y": 1019.77
     },
     {
       "distance": 1065,
-      "curvature": 0,
-      "x": 1065,
-      "y": 0
+      "curvature": 0.0,
+      "x": 108.24,
+      "y": 1024.62
     },
     {
       "distance": 1070,
-      "curvature": 0,
-      "x": 1070,
-      "y": 0
+      "curvature": 0.0,
+      "x": 107.05,
+      "y": 1029.47
     },
     {
       "distance": 1075,
-      "curvature": 0,
-      "x": 1075,
-      "y": 0
+      "curvature": 0.0,
+      "x": 105.91,
+      "y": 1034.34
     },
     {
       "distance": 1080,
-      "curvature": 0,
-      "x": 1080,
-      "y": 0
+      "curvature": 0.0,
+      "x": 104.82,
+      "y": 1039.22
     },
     {
       "distance": 1085,
-      "curvature": 0,
-      "x": 1085,
-      "y": 0
+      "curvature": 0.0,
+      "x": 103.78,
+      "y": 1044.11
     },
     {
       "distance": 1090,
-      "curvature": 0,
-      "x": 1090,
-      "y": 0
+      "curvature": 0.0,
+      "x": 102.81,
+      "y": 1049.01
     },
     {
       "distance": 1095,
-      "curvature": 0,
-      "x": 1095,
-      "y": 0
+      "curvature": 0.0,
+      "x": 101.9,
+      "y": 1053.93
     },
     {
       "distance": 1100,
-      "curvature": 0,
-      "x": 1100,
-      "y": 0
+      "curvature": 0.0,
+      "x": 101.07,
+      "y": 1058.86
     },
     {
       "distance": 1105,
-      "curvature": 0,
-      "x": 1105,
-      "y": 0
+      "curvature": 0.0,
+      "x": 100.31,
+      "y": 1063.8
     },
     {
       "distance": 1110,
-      "curvature": 0,
-      "x": 1110,
-      "y": 0
+      "curvature": 0.0,
+      "x": 99.63,
+      "y": 1068.76
     },
     {
       "distance": 1115,
-      "curvature": 0,
-      "x": 1115,
-      "y": 0
+      "curvature": 0.0,
+      "x": 99.04,
+      "y": 1073.72
     },
     {
       "distance": 1120,
-      "curvature": 0,
-      "x": 1120,
-      "y": 0
+      "curvature": 0.0,
+      "x": 98.54,
+      "y": 1078.7
     },
     {
       "distance": 1125,
-      "curvature": 0,
-      "x": 1125,
-      "y": 0
+      "curvature": 0.0,
+      "x": 98.14,
+      "y": 1083.68
     },
     {
       "distance": 1130,
-      "curvature": 0,
-      "x": 1130,
-      "y": 0
+      "curvature": 0.0,
+      "x": 97.84,
+      "y": 1088.67
     },
     {
       "distance": 1135,
-      "curvature": 0,
-      "x": 1135,
-      "y": 0
+      "curvature": 0.0,
+      "x": 97.64,
+      "y": 1093.67
     },
     {
       "distance": 1140,
-      "curvature": 0,
-      "x": 1140,
-      "y": 0
+      "curvature": 0.0,
+      "x": 97.55,
+      "y": 1098.67
     },
     {
       "distance": 1145,
-      "curvature": 0,
-      "x": 1145,
-      "y": 0
+      "curvature": 0.0,
+      "x": 97.55,
+      "y": 1103.67
     },
     {
       "distance": 1150,
-      "curvature": 0,
-      "x": 1150,
-      "y": 0
+      "curvature": 0.0,
+      "x": 97.63,
+      "y": 1108.67
     },
     {
       "distance": 1155,
-      "curvature": 0,
-      "x": 1155,
-      "y": 0
+      "curvature": 0.0,
+      "x": 97.79,
+      "y": 1113.67
     },
     {
       "distance": 1160,
-      "curvature": 0,
-      "x": 1160,
-      "y": 0
+      "curvature": 0.0,
+      "x": 98.0,
+      "y": 1118.66
     },
     {
       "distance": 1165,
-      "curvature": 0,
-      "x": 1165,
-      "y": 0
+      "curvature": 0.0,
+      "x": 98.27,
+      "y": 1123.66
     },
     {
       "distance": 1170,
-      "curvature": 0,
-      "x": 1170,
-      "y": 0
+      "curvature": 0.0,
+      "x": 98.58,
+      "y": 1128.65
     },
     {
       "distance": 1175,
-      "curvature": 0,
-      "x": 1175,
-      "y": 0
+      "curvature": 0.0,
+      "x": 98.93,
+      "y": 1133.63
     },
     {
       "distance": 1180,
-      "curvature": -0.011111,
-      "x": 1180,
-      "y": 0
+      "curvature": -0.008847,
+      "x": 99.3,
+      "y": 1138.62
     },
     {
       "distance": 1185,
-      "curvature": -0.019245,
-      "x": 1184.99,
-      "y": -0.28
+      "curvature": -0.01758,
+      "x": 99.69,
+      "y": 1143.61
     },
     {
       "distance": 1190,
-      "curvature": -0.022222,
-      "x": 1189.93,
-      "y": -1.03
+      "curvature": -0.02161,
+      "x": 100.09,
+      "y": 1148.59
     },
     {
       "distance": 1195,
       "curvature": -0.022222,
-      "x": 1194.76,
-      "y": -2.33
+      "x": 100.5,
+      "y": 1153.57
     },
     {
       "distance": 1200,
       "curvature": -0.022222,
-      "x": 1199.42,
-      "y": -4.16
+      "x": 100.92,
+      "y": 1158.56
     },
     {
       "distance": 1205,
       "curvature": -0.022222,
-      "x": 1203.84,
-      "y": -6.49
+      "x": 101.33,
+      "y": 1163.54
     },
     {
       "distance": 1210,
       "curvature": -0.022222,
-      "x": 1207.98,
-      "y": -9.3
+      "x": 101.74,
+      "y": 1168.52
     },
     {
       "distance": 1215,
       "curvature": -0.022222,
-      "x": 1211.78,
-      "y": -12.55
+      "x": 102.14,
+      "y": 1173.51
     },
     {
       "distance": 1220,
       "curvature": -0.022222,
-      "x": 1215.2,
-      "y": -16.2
+      "x": 102.53,
+      "y": 1178.49
     },
     {
       "distance": 1225,
       "curvature": -0.022222,
-      "x": 1218.19,
-      "y": -20.21
+      "x": 102.9,
+      "y": 1183.48
     },
     {
       "distance": 1230,
       "curvature": -0.022222,
-      "x": 1220.71,
-      "y": -24.52
+      "x": 103.25,
+      "y": 1188.47
     },
     {
       "distance": 1235,
       "curvature": -0.022222,
-      "x": 1222.75,
-      "y": -29.09
+      "x": 103.59,
+      "y": 1193.45
     },
     {
       "distance": 1240,
       "curvature": -0.022222,
-      "x": 1224.26,
-      "y": -33.85
+      "x": 103.92,
+      "y": 1198.44
     },
     {
       "distance": 1245,
       "curvature": -0.022222,
-      "x": 1225.24,
-      "y": -38.75
+      "x": 104.24,
+      "y": 1203.43
     },
     {
       "distance": 1250,
-      "curvature": -0.019245,
-      "x": 1225.67,
-      "y": -43.74
+      "curvature": -0.019888,
+      "x": 104.57,
+      "y": 1208.42
     },
     {
       "distance": 1255,
-      "curvature": -0.011111,
-      "x": 1225.62,
-      "y": -48.74
+      "curvature": -0.012874,
+      "x": 104.91,
+      "y": 1213.41
     },
     {
       "distance": 1260,
-      "curvature": 0.014286,
-      "x": 1225.29,
-      "y": -53.73
+      "curvature": 0.008759,
+      "x": 105.27,
+      "y": 1218.4
     },
     {
       "distance": 1265,
-      "curvature": 0.024744,
-      "x": 1225.31,
-      "y": -58.73
+      "curvature": 0.022459,
+      "x": 105.64,
+      "y": 1223.38
     },
     {
       "distance": 1270,
-      "curvature": 0.028571,
-      "x": 1225.96,
-      "y": -63.68
+      "curvature": 0.027732,
+      "x": 106.04,
+      "y": 1228.37
     },
     {
       "distance": 1275,
       "curvature": 0.028571,
-      "x": 1227.3,
-      "y": -68.5
+      "x": 106.46,
+      "y": 1233.35
     },
     {
       "distance": 1280,
       "curvature": 0.028571,
-      "x": 1229.31,
-      "y": -73.08
+      "x": 106.93,
+      "y": 1238.33
     },
     {
       "distance": 1285,
       "curvature": 0.028571,
-      "x": 1231.96,
-      "y": -77.32
+      "x": 107.43,
+      "y": 1243.3
     },
     {
       "distance": 1290,
       "curvature": 0.028571,
-      "x": 1235.18,
-      "y": -81.14
+      "x": 107.98,
+      "y": 1248.27
     },
     {
       "distance": 1295,
       "curvature": 0.028571,
-      "x": 1238.92,
-      "y": -84.47
+      "x": 108.59,
+      "y": 1253.24
     },
     {
       "distance": 1300,
       "curvature": 0.028571,
-      "x": 1243.09,
-      "y": -87.23
+      "x": 109.24,
+      "y": 1258.19
     },
     {
       "distance": 1305,
       "curvature": 0.028571,
-      "x": 1247.61,
-      "y": -89.36
+      "x": 109.97,
+      "y": 1263.14
     },
     {
       "distance": 1310,
       "curvature": 0.028571,
-      "x": 1252.39,
-      "y": -90.84
+      "x": 110.76,
+      "y": 1268.08
     },
     {
       "distance": 1315,
       "curvature": 0.028571,
-      "x": 1257.32,
-      "y": -91.61
+      "x": 111.62,
+      "y": 1273.0
     },
     {
       "distance": 1320,
-      "curvature": 0.024744,
-      "x": 1262.32,
-      "y": -91.68
+      "curvature": 0.025616,
+      "x": 112.56,
+      "y": 1277.91
     },
     {
       "distance": 1325,
-      "curvature": 0.014286,
-      "x": 1267.29,
-      "y": -91.13
+      "curvature": 0.016679,
+      "x": 113.59,
+      "y": 1282.81
     },
     {
       "distance": 1330,
-      "curvature": 0,
-      "x": 1272.21,
-      "y": -90.22
+      "curvature": 0.003282,
+      "x": 114.71,
+      "y": 1287.68
     },
     {
       "distance": 1335,
-      "curvature": 0,
-      "x": 1277.13,
-      "y": -89.32
+      "curvature": 0.0,
+      "x": 115.92,
+      "y": 1292.53
     },
     {
       "distance": 1340,
-      "curvature": 0,
-      "x": 1282.05,
-      "y": -88.41
+      "curvature": 0.0,
+      "x": 117.24,
+      "y": 1297.36
     },
     {
       "distance": 1345,
-      "curvature": 0,
-      "x": 1286.96,
-      "y": -87.51
+      "curvature": 0.0,
+      "x": 118.66,
+      "y": 1302.15
     },
     {
       "distance": 1350,
-      "curvature": 0,
-      "x": 1291.88,
-      "y": -86.6
+      "curvature": 0.0,
+      "x": 120.19,
+      "y": 1306.91
     },
     {
       "distance": 1355,
-      "curvature": 0,
-      "x": 1296.8,
-      "y": -85.7
+      "curvature": 0.0,
+      "x": 121.83,
+      "y": 1311.63
     },
     {
       "distance": 1360,
-      "curvature": 0,
-      "x": 1301.72,
-      "y": -84.79
+      "curvature": 0.0,
+      "x": 123.59,
+      "y": 1316.31
     },
     {
       "distance": 1365,
-      "curvature": 0,
-      "x": 1306.63,
-      "y": -83.89
+      "curvature": 0.0,
+      "x": 125.46,
+      "y": 1320.95
     },
     {
       "distance": 1370,
-      "curvature": 0,
-      "x": 1311.55,
-      "y": -82.98
+      "curvature": 0.0,
+      "x": 127.43,
+      "y": 1325.55
     },
     {
       "distance": 1375,
-      "curvature": 0,
-      "x": 1316.47,
-      "y": -82.08
+      "curvature": 0.0,
+      "x": 129.48,
+      "y": 1330.11
     },
     {
       "distance": 1380,
-      "curvature": 0,
-      "x": 1321.39,
-      "y": -81.17
+      "curvature": 0.0,
+      "x": 131.6,
+      "y": 1334.63
     },
     {
       "distance": 1385,
-      "curvature": 0,
-      "x": 1326.3,
-      "y": -80.27
+      "curvature": 0.0,
+      "x": 133.78,
+      "y": 1339.14
     },
     {
       "distance": 1390,
-      "curvature": 0,
-      "x": 1331.22,
-      "y": -79.36
+      "curvature": 0.0,
+      "x": 136.0,
+      "y": 1343.61
     },
     {
       "distance": 1395,
-      "curvature": 0,
-      "x": 1336.14,
-      "y": -78.46
+      "curvature": 0.0,
+      "x": 138.26,
+      "y": 1348.08
     },
     {
       "distance": 1400,
-      "curvature": 0,
-      "x": 1341.06,
-      "y": -77.55
+      "curvature": 0.0,
+      "x": 140.54,
+      "y": 1352.53
     },
     {
       "distance": 1405,
-      "curvature": 0,
-      "x": 1345.97,
-      "y": -76.65
+      "curvature": 0.0,
+      "x": 142.83,
+      "y": 1356.97
     },
     {
       "distance": 1410,
-      "curvature": 0,
-      "x": 1350.89,
-      "y": -75.74
+      "curvature": 0.0,
+      "x": 145.13,
+      "y": 1361.41
     },
     {
       "distance": 1415,
-      "curvature": 0,
-      "x": 1355.81,
-      "y": -74.84
+      "curvature": 0.0,
+      "x": 147.49,
+      "y": 1365.82
     },
     {
       "distance": 1420,
-      "curvature": 0,
-      "x": 1360.73,
-      "y": -73.93
+      "curvature": 0.0,
+      "x": 149.92,
+      "y": 1370.19
     },
     {
       "distance": 1425,
-      "curvature": 0,
-      "x": 1365.64,
-      "y": -73.03
+      "curvature": 0.0,
+      "x": 152.47,
+      "y": 1374.49
     },
     {
       "distance": 1430,
-      "curvature": 0,
-      "x": 1370.56,
-      "y": -72.12
+      "curvature": 0.0,
+      "x": 155.15,
+      "y": 1378.71
     },
     {
       "distance": 1435,
-      "curvature": 0,
-      "x": 1375.48,
-      "y": -71.22
+      "curvature": 0.0,
+      "x": 157.94,
+      "y": 1382.86
     },
     {
       "distance": 1440,
-      "curvature": 0,
-      "x": 1380.39,
-      "y": -70.32
+      "curvature": 0.0,
+      "x": 160.84,
+      "y": 1386.94
     },
     {
       "distance": 1445,
-      "curvature": 0,
-      "x": 1385.31,
-      "y": -69.41
+      "curvature": 0.0,
+      "x": 163.83,
+      "y": 1390.95
     },
     {
       "distance": 1450,
-      "curvature": 0,
-      "x": 1390.23,
-      "y": -68.51
+      "curvature": 0.0,
+      "x": 166.89,
+      "y": 1394.9
     },
     {
       "distance": 1455,
-      "curvature": 0,
-      "x": 1395.15,
-      "y": -67.6
+      "curvature": 0.0,
+      "x": 170.03,
+      "y": 1398.79
     },
     {
       "distance": 1460,
-      "curvature": 0,
-      "x": 1400.06,
-      "y": -66.7
+      "curvature": 0.0,
+      "x": 173.24,
+      "y": 1402.63
     },
     {
       "distance": 1465,
-      "curvature": 0,
-      "x": 1404.98,
-      "y": -65.79
+      "curvature": 0.0,
+      "x": 176.51,
+      "y": 1406.4
     },
     {
       "distance": 1470,
-      "curvature": 0,
-      "x": 1409.9,
-      "y": -64.89
+      "curvature": 0.0,
+      "x": 179.85,
+      "y": 1410.13
     },
     {
       "distance": 1475,
-      "curvature": 0,
-      "x": 1414.82,
-      "y": -63.98
+      "curvature": 0.0,
+      "x": 183.25,
+      "y": 1413.79
     },
     {
       "distance": 1480,
-      "curvature": 0,
-      "x": 1419.73,
-      "y": -63.08
+      "curvature": 0.0,
+      "x": 186.72,
+      "y": 1417.4
     },
     {
       "distance": 1485,
-      "curvature": 0,
-      "x": 1424.65,
-      "y": -62.17
+      "curvature": 0.0,
+      "x": 190.24,
+      "y": 1420.94
     },
     {
       "distance": 1490,
-      "curvature": 0,
-      "x": 1429.57,
-      "y": -61.27
+      "curvature": 0.0,
+      "x": 193.82,
+      "y": 1424.43
     },
     {
       "distance": 1495,
-      "curvature": 0,
-      "x": 1434.49,
-      "y": -60.36
+      "curvature": 0.0,
+      "x": 197.46,
+      "y": 1427.87
     },
     {
       "distance": 1500,
-      "curvature": 0,
-      "x": 1439.4,
-      "y": -59.46
+      "curvature": 0.0,
+      "x": 201.14,
+      "y": 1431.25
     },
     {
       "distance": 1505,
-      "curvature": 0,
-      "x": 1444.32,
-      "y": -58.55
+      "curvature": 0.0,
+      "x": 204.88,
+      "y": 1434.57
     },
     {
       "distance": 1510,
-      "curvature": 0,
-      "x": 1449.24,
-      "y": -57.65
+      "curvature": 0.0,
+      "x": 208.67,
+      "y": 1437.83
     },
     {
       "distance": 1515,
-      "curvature": 0,
-      "x": 1454.16,
-      "y": -56.74
+      "curvature": 0.0,
+      "x": 212.5,
+      "y": 1441.04
     },
     {
       "distance": 1520,
-      "curvature": 0,
-      "x": 1459.07,
-      "y": -55.84
+      "curvature": 0.0,
+      "x": 216.38,
+      "y": 1444.2
     },
     {
       "distance": 1525,
-      "curvature": 0,
-      "x": 1463.99,
-      "y": -54.93
+      "curvature": 0.0,
+      "x": 220.3,
+      "y": 1447.3
     },
     {
       "distance": 1530,
-      "curvature": 0,
-      "x": 1468.91,
-      "y": -54.03
+      "curvature": 0.0,
+      "x": 224.27,
+      "y": 1450.34
     },
     {
       "distance": 1535,
-      "curvature": 0,
-      "x": 1473.83,
-      "y": -53.12
+      "curvature": 0.0,
+      "x": 228.27,
+      "y": 1453.34
     },
     {
       "distance": 1540,
-      "curvature": 0,
-      "x": 1478.74,
-      "y": -52.22
+      "curvature": 0.0,
+      "x": 232.32,
+      "y": 1456.28
     },
     {
       "distance": 1545,
-      "curvature": 0,
-      "x": 1483.66,
-      "y": -51.31
+      "curvature": 0.0,
+      "x": 236.4,
+      "y": 1459.17
     },
     {
       "distance": 1550,
-      "curvature": 0,
-      "x": 1488.58,
-      "y": -50.41
+      "curvature": 0.0,
+      "x": 240.51,
+      "y": 1462.01
     },
     {
       "distance": 1555,
-      "curvature": 0,
-      "x": 1493.5,
-      "y": -49.5
+      "curvature": 0.0,
+      "x": 244.67,
+      "y": 1464.79
     },
     {
       "distance": 1560,
-      "curvature": 0,
-      "x": 1498.41,
-      "y": -48.6
+      "curvature": 0.0,
+      "x": 248.86,
+      "y": 1467.52
     },
     {
       "distance": 1565,
-      "curvature": 0,
-      "x": 1503.33,
-      "y": -47.69
+      "curvature": 0.0,
+      "x": 253.08,
+      "y": 1470.19
     },
     {
       "distance": 1570,
-      "curvature": 0,
-      "x": 1508.25,
-      "y": -46.79
+      "curvature": 0.0,
+      "x": 257.35,
+      "y": 1472.81
     },
     {
       "distance": 1575,
-      "curvature": 0,
-      "x": 1513.17,
-      "y": -45.88
+      "curvature": 0.0,
+      "x": 261.65,
+      "y": 1475.36
     },
     {
       "distance": 1580,
-      "curvature": 0,
-      "x": 1518.08,
-      "y": -44.98
+      "curvature": 0.0,
+      "x": 265.98,
+      "y": 1477.85
     },
     {
       "distance": 1585,
-      "curvature": 0,
-      "x": 1523,
-      "y": -44.08
+      "curvature": 0.0,
+      "x": 270.35,
+      "y": 1480.28
     },
     {
       "distance": 1590,
-      "curvature": 0,
-      "x": 1527.92,
-      "y": -43.17
+      "curvature": 0.0,
+      "x": 274.76,
+      "y": 1482.65
     },
     {
       "distance": 1595,
-      "curvature": 0,
-      "x": 1532.84,
-      "y": -42.27
+      "curvature": 0.0,
+      "x": 279.2,
+      "y": 1484.94
     },
     {
       "distance": 1600,
-      "curvature": 0,
-      "x": 1537.75,
-      "y": -41.36
+      "curvature": 0.0,
+      "x": 283.67,
+      "y": 1487.18
     },
     {
       "distance": 1605,
-      "curvature": 0,
-      "x": 1542.67,
-      "y": -40.46
+      "curvature": 0.0,
+      "x": 288.18,
+      "y": 1489.34
     },
     {
       "distance": 1610,
-      "curvature": 0,
-      "x": 1547.59,
-      "y": -39.55
+      "curvature": 0.0,
+      "x": 292.72,
+      "y": 1491.43
     },
     {
       "distance": 1615,
-      "curvature": 0,
-      "x": 1552.51,
-      "y": -38.65
+      "curvature": 0.0,
+      "x": 297.29,
+      "y": 1493.45
     },
     {
       "distance": 1620,
-      "curvature": 0,
-      "x": 1557.42,
-      "y": -37.74
+      "curvature": 0.0,
+      "x": 301.9,
+      "y": 1495.4
     },
     {
       "distance": 1625,
-      "curvature": 0,
-      "x": 1562.34,
-      "y": -36.84
+      "curvature": 0.0,
+      "x": 306.54,
+      "y": 1497.27
     },
     {
       "distance": 1630,
-      "curvature": 0,
-      "x": 1567.26,
-      "y": -35.93
+      "curvature": 0.0,
+      "x": 311.21,
+      "y": 1499.06
     },
     {
       "distance": 1635,
-      "curvature": 0,
-      "x": 1572.18,
-      "y": -35.03
+      "curvature": 0.0,
+      "x": 315.9,
+      "y": 1500.77
     },
     {
       "distance": 1640,
-      "curvature": 0,
-      "x": 1577.09,
-      "y": -34.12
+      "curvature": 0.0,
+      "x": 320.62,
+      "y": 1502.42
     },
     {
       "distance": 1645,
-      "curvature": 0,
-      "x": 1582.01,
-      "y": -33.22
+      "curvature": 0.0,
+      "x": 325.37,
+      "y": 1504.0
     },
     {
       "distance": 1650,
-      "curvature": -0.001438,
-      "x": 1586.93,
-      "y": -32.31
+      "curvature": -0.001028,
+      "x": 330.13,
+      "y": 1505.51
     },
     {
       "distance": 1655,
-      "curvature": -0.002778,
-      "x": 1591.85,
-      "y": -31.44
+      "curvature": -0.002395,
+      "x": 334.91,
+      "y": 1506.98
     },
     {
       "distance": 1660,
-      "curvature": -0.003928,
-      "x": 1596.79,
-      "y": -30.64
+      "curvature": -0.003598,
+      "x": 339.71,
+      "y": 1508.39
     },
     {
       "distance": 1665,
-      "curvature": -0.004811,
-      "x": 1601.74,
-      "y": -29.94
+      "curvature": -0.004557,
+      "x": 344.52,
+      "y": 1509.76
     },
     {
       "distance": 1670,
-      "curvature": -0.005366,
-      "x": 1606.7,
-      "y": -29.35
+      "curvature": -0.005206,
+      "x": 349.34,
+      "y": 1511.09
     },
     {
       "distance": 1675,
-      "curvature": -0.005556,
-      "x": 1611.68,
-      "y": -28.9
+      "curvature": -0.005501,
+      "x": 354.17,
+      "y": 1512.39
     },
     {
       "distance": 1680,
       "curvature": -0.005556,
-      "x": 1616.67,
-      "y": -28.59
+      "x": 359.0,
+      "y": 1513.67
     },
     {
       "distance": 1685,
       "curvature": -0.005556,
-      "x": 1621.67,
-      "y": -28.42
+      "x": 363.85,
+      "y": 1514.91
     },
     {
       "distance": 1690,
       "curvature": -0.005556,
-      "x": 1626.67,
-      "y": -28.38
+      "x": 368.7,
+      "y": 1516.12
     },
     {
       "distance": 1695,
       "curvature": -0.005556,
-      "x": 1631.67,
-      "y": -28.48
+      "x": 373.56,
+      "y": 1517.29
     },
     {
       "distance": 1700,
       "curvature": -0.005556,
-      "x": 1636.66,
-      "y": -28.73
+      "x": 378.43,
+      "y": 1518.43
     },
     {
       "distance": 1705,
       "curvature": -0.005556,
-      "x": 1641.65,
-      "y": -29.11
+      "x": 383.31,
+      "y": 1519.52
     },
     {
       "distance": 1710,
       "curvature": -0.005556,
-      "x": 1646.62,
-      "y": -29.63
+      "x": 388.2,
+      "y": 1520.57
     },
     {
       "distance": 1715,
       "curvature": -0.005556,
-      "x": 1651.58,
-      "y": -30.28
+      "x": 393.1,
+      "y": 1521.56
     },
     {
       "distance": 1720,
       "curvature": -0.005556,
-      "x": 1656.51,
-      "y": -31.08
+      "x": 398.01,
+      "y": 1522.51
     },
     {
       "distance": 1725,
       "curvature": -0.005556,
-      "x": 1661.43,
-      "y": -32.01
+      "x": 402.93,
+      "y": 1523.4
     },
     {
       "distance": 1730,
       "curvature": -0.005556,
-      "x": 1666.31,
-      "y": -33.08
+      "x": 407.86,
+      "y": 1524.24
     },
     {
       "distance": 1735,
       "curvature": -0.005556,
-      "x": 1671.16,
-      "y": -34.28
+      "x": 412.79,
+      "y": 1525.03
     },
     {
       "distance": 1740,
       "curvature": -0.005556,
-      "x": 1675.98,
-      "y": -35.62
+      "x": 417.74,
+      "y": 1525.78
     },
     {
       "distance": 1745,
       "curvature": -0.005556,
-      "x": 1680.76,
-      "y": -37.09
+      "x": 422.69,
+      "y": 1526.49
     },
     {
       "distance": 1750,
       "curvature": -0.005556,
-      "x": 1685.5,
-      "y": -38.69
+      "x": 427.64,
+      "y": 1527.15
     },
     {
       "distance": 1755,
       "curvature": -0.005556,
-      "x": 1690.19,
-      "y": -40.43
+      "x": 432.6,
+      "y": 1527.77
     },
     {
       "distance": 1760,
       "curvature": -0.005556,
-      "x": 1694.83,
-      "y": -42.29
+      "x": 437.57,
+      "y": 1528.37
     },
     {
       "distance": 1765,
       "curvature": -0.005556,
-      "x": 1699.41,
-      "y": -44.28
+      "x": 442.54,
+      "y": 1528.93
     },
     {
       "distance": 1770,
       "curvature": -0.005556,
-      "x": 1703.94,
-      "y": -46.4
+      "x": 447.51,
+      "y": 1529.46
     },
     {
       "distance": 1775,
       "curvature": -0.005556,
-      "x": 1708.41,
-      "y": -48.64
+      "x": 452.48,
+      "y": 1529.96
     },
     {
       "distance": 1780,
       "curvature": -0.005556,
-      "x": 1712.82,
-      "y": -51.01
+      "x": 457.46,
+      "y": 1530.44
     },
     {
       "distance": 1785,
       "curvature": -0.005556,
-      "x": 1717.15,
-      "y": -53.5
+      "x": 462.44,
+      "y": 1530.9
     },
     {
       "distance": 1790,
       "curvature": -0.005556,
-      "x": 1721.42,
-      "y": -56.1
+      "x": 467.42,
+      "y": 1531.34
     },
     {
       "distance": 1795,
       "curvature": -0.005556,
-      "x": 1725.61,
-      "y": -58.83
+      "x": 472.4,
+      "y": 1531.77
     },
     {
       "distance": 1800,
       "curvature": -0.005556,
-      "x": 1729.73,
-      "y": -61.67
+      "x": 477.39,
+      "y": 1532.18
     },
     {
       "distance": 1805,
       "curvature": -0.005556,
-      "x": 1733.76,
-      "y": -64.62
+      "x": 482.37,
+      "y": 1532.58
     },
     {
       "distance": 1810,
       "curvature": -0.005556,
-      "x": 1737.71,
-      "y": -67.68
+      "x": 487.35,
+      "y": 1532.98
     },
     {
       "distance": 1815,
       "curvature": -0.005556,
-      "x": 1741.58,
-      "y": -70.86
+      "x": 492.34,
+      "y": 1533.37
     },
     {
       "distance": 1820,
       "curvature": -0.005556,
-      "x": 1745.35,
-      "y": -74.14
+      "x": 497.32,
+      "y": 1533.76
     },
     {
       "distance": 1825,
       "curvature": -0.005556,
-      "x": 1749.03,
-      "y": -77.52
+      "x": 502.31,
+      "y": 1534.14
     },
     {
       "distance": 1830,
       "curvature": -0.005556,
-      "x": 1752.62,
-      "y": -81
+      "x": 507.3,
+      "y": 1534.52
     },
     {
       "distance": 1835,
       "curvature": -0.005556,
-      "x": 1756.11,
-      "y": -84.58
+      "x": 512.28,
+      "y": 1534.9
     },
     {
       "distance": 1840,
       "curvature": -0.005556,
-      "x": 1759.5,
-      "y": -88.26
+      "x": 517.27,
+      "y": 1535.28
     },
     {
       "distance": 1845,
       "curvature": -0.005556,
-      "x": 1762.78,
-      "y": -92.03
+      "x": 522.25,
+      "y": 1535.66
     },
     {
       "distance": 1850,
       "curvature": -0.005556,
-      "x": 1765.96,
-      "y": -95.89
+      "x": 527.24,
+      "y": 1536.03
     },
     {
       "distance": 1855,
       "curvature": -0.005556,
-      "x": 1769.03,
-      "y": -99.84
+      "x": 532.22,
+      "y": 1536.41
     },
     {
       "distance": 1860,
       "curvature": -0.005556,
-      "x": 1771.99,
-      "y": -103.87
+      "x": 537.21,
+      "y": 1536.79
     },
     {
       "distance": 1865,
       "curvature": -0.005556,
-      "x": 1774.84,
-      "y": -107.98
+      "x": 542.2,
+      "y": 1537.16
     },
     {
       "distance": 1870,
       "curvature": -0.005556,
-      "x": 1777.57,
-      "y": -112.17
+      "x": 547.18,
+      "y": 1537.55
     },
     {
       "distance": 1875,
       "curvature": -0.005556,
-      "x": 1780.18,
-      "y": -116.43
+      "x": 552.17,
+      "y": 1537.93
     },
     {
       "distance": 1880,
       "curvature": -0.005556,
-      "x": 1782.68,
-      "y": -120.76
+      "x": 557.15,
+      "y": 1538.32
     },
     {
       "distance": 1885,
       "curvature": -0.005556,
-      "x": 1785.05,
-      "y": -125.16
+      "x": 562.14,
+      "y": 1538.71
     },
     {
       "distance": 1890,
       "curvature": -0.005556,
-      "x": 1787.3,
-      "y": -129.63
+      "x": 567.12,
+      "y": 1539.11
     },
     {
       "distance": 1895,
       "curvature": -0.005556,
-      "x": 1789.42,
-      "y": -134.15
+      "x": 572.11,
+      "y": 1539.51
     },
     {
       "distance": 1900,
       "curvature": -0.005556,
-      "x": 1791.42,
-      "y": -138.74
+      "x": 577.09,
+      "y": 1539.92
     },
     {
       "distance": 1905,
-      "curvature": -0.005366,
-      "x": 1793.29,
-      "y": -143.37
+      "curvature": -0.005429,
+      "x": 582.07,
+      "y": 1540.34
     },
     {
       "distance": 1910,
-      "curvature": -0.004811,
-      "x": 1795.04,
-      "y": -148.06
+      "curvature": -0.004994,
+      "x": 587.05,
+      "y": 1540.76
     },
     {
       "distance": 1915,
-      "curvature": -0.003928,
-      "x": 1796.67,
-      "y": -152.79
+      "curvature": -0.00422,
+      "x": 592.04,
+      "y": 1541.19
     },
     {
       "distance": 1920,
-      "curvature": -0.002778,
-      "x": 1798.21,
-      "y": -157.54
+      "curvature": -0.003159,
+      "x": 597.02,
+      "y": 1541.62
     },
     {
       "distance": 1925,
-      "curvature": -0.001438,
-      "x": 1799.68,
-      "y": -162.32
+      "curvature": -0.001884,
+      "x": 602.0,
+      "y": 1542.05
     },
     {
       "distance": 1930,
-      "curvature": 0,
-      "x": 1801.12,
-      "y": -167.11
+      "curvature": -0.000479,
+      "x": 606.98,
+      "y": 1542.48
     },
     {
       "distance": 1935,
-      "curvature": 0,
-      "x": 1802.56,
-      "y": -171.9
+      "curvature": 0.0,
+      "x": 611.96,
+      "y": 1542.92
     },
     {
       "distance": 1940,
-      "curvature": 0,
-      "x": 1804,
-      "y": -176.69
+      "curvature": 0.0,
+      "x": 616.94,
+      "y": 1543.35
     },
     {
       "distance": 1945,
-      "curvature": 0,
-      "x": 1805.43,
-      "y": -181.48
+      "curvature": 0.0,
+      "x": 621.92,
+      "y": 1543.78
     },
     {
       "distance": 1950,
-      "curvature": 0,
-      "x": 1806.87,
-      "y": -186.26
+      "curvature": 0.0,
+      "x": 626.91,
+      "y": 1544.2
     },
     {
       "distance": 1955,
-      "curvature": 0,
-      "x": 1808.31,
-      "y": -191.05
+      "curvature": 0.0,
+      "x": 631.89,
+      "y": 1544.63
     },
     {
       "distance": 1960,
-      "curvature": 0,
-      "x": 1809.75,
-      "y": -195.84
+      "curvature": 0.0,
+      "x": 636.87,
+      "y": 1545.04
     },
     {
       "distance": 1965,
-      "curvature": 0,
-      "x": 1811.19,
-      "y": -200.63
+      "curvature": 0.0,
+      "x": 641.86,
+      "y": 1545.45
     },
     {
       "distance": 1970,
-      "curvature": 0,
-      "x": 1812.62,
-      "y": -205.42
+      "curvature": 0.0,
+      "x": 646.84,
+      "y": 1545.84
     },
     {
       "distance": 1975,
-      "curvature": 0,
-      "x": 1814.06,
-      "y": -210.21
+      "curvature": 0.0,
+      "x": 651.83,
+      "y": 1546.23
     },
     {
       "distance": 1980,
-      "curvature": 0,
-      "x": 1815.5,
-      "y": -215
+      "curvature": 0.0,
+      "x": 656.81,
+      "y": 1546.61
     },
     {
       "distance": 1985,
-      "curvature": 0,
-      "x": 1816.94,
-      "y": -219.79
+      "curvature": 0.0,
+      "x": 661.8,
+      "y": 1546.98
     },
     {
       "distance": 1990,
-      "curvature": 0,
-      "x": 1818.38,
-      "y": -224.57
+      "curvature": 0.0,
+      "x": 666.79,
+      "y": 1547.33
     },
     {
       "distance": 1995,
-      "curvature": 0,
-      "x": 1819.82,
-      "y": -229.36
+      "curvature": 0.0,
+      "x": 671.77,
+      "y": 1547.66
     },
     {
       "distance": 2000,
-      "curvature": 0,
-      "x": 1821.25,
-      "y": -234.15
+      "curvature": 0.0,
+      "x": 676.76,
+      "y": 1547.99
     },
     {
       "distance": 2005,
-      "curvature": 0,
-      "x": 1822.69,
-      "y": -238.94
+      "curvature": 0.0,
+      "x": 681.75,
+      "y": 1548.3
     },
     {
       "distance": 2010,
-      "curvature": 0,
-      "x": 1824.13,
-      "y": -243.73
+      "curvature": 0.0,
+      "x": 686.75,
+      "y": 1548.59
     },
     {
       "distance": 2015,
-      "curvature": 0,
-      "x": 1825.57,
-      "y": -248.52
+      "curvature": 0.0,
+      "x": 691.74,
+      "y": 1548.88
     },
     {
       "distance": 2020,
-      "curvature": 0,
-      "x": 1827.01,
-      "y": -253.31
+      "curvature": 0.0,
+      "x": 696.73,
+      "y": 1549.15
     },
     {
       "distance": 2025,
-      "curvature": 0,
-      "x": 1828.45,
-      "y": -258.09
+      "curvature": 0.0,
+      "x": 701.72,
+      "y": 1549.41
     },
     {
       "distance": 2030,
-      "curvature": 0,
-      "x": 1829.88,
-      "y": -262.88
+      "curvature": 0.0,
+      "x": 706.72,
+      "y": 1549.67
     },
     {
       "distance": 2035,
-      "curvature": 0,
-      "x": 1831.32,
-      "y": -267.67
+      "curvature": 0.0,
+      "x": 711.71,
+      "y": 1549.91
     },
     {
       "distance": 2040,
-      "curvature": 0,
-      "x": 1832.76,
-      "y": -272.46
+      "curvature": 0.0,
+      "x": 716.71,
+      "y": 1550.15
     },
     {
       "distance": 2045,
-      "curvature": 0,
-      "x": 1834.2,
-      "y": -277.25
+      "curvature": 0.0,
+      "x": 721.7,
+      "y": 1550.37
     },
     {
       "distance": 2050,
-      "curvature": 0,
-      "x": 1835.64,
-      "y": -282.04
+      "curvature": 0.0,
+      "x": 726.7,
+      "y": 1550.59
     },
     {
       "distance": 2055,
-      "curvature": 0,
-      "x": 1837.08,
-      "y": -286.83
+      "curvature": 0.0,
+      "x": 731.69,
+      "y": 1550.81
     },
     {
       "distance": 2060,
-      "curvature": 0,
-      "x": 1838.51,
-      "y": -291.62
+      "curvature": 0.0,
+      "x": 736.69,
+      "y": 1551.01
     },
     {
       "distance": 2065,
-      "curvature": 0,
-      "x": 1839.95,
-      "y": -296.4
+      "curvature": 0.0,
+      "x": 741.68,
+      "y": 1551.21
     },
     {
       "distance": 2070,
-      "curvature": 0,
-      "x": 1841.39,
-      "y": -301.19
+      "curvature": 0.0,
+      "x": 746.68,
+      "y": 1551.41
     },
     {
       "distance": 2075,
-      "curvature": 0,
-      "x": 1842.83,
-      "y": -305.98
+      "curvature": 0.0,
+      "x": 751.68,
+      "y": 1551.61
     },
     {
       "distance": 2080,
-      "curvature": 0,
-      "x": 1844.27,
-      "y": -310.77
+      "curvature": 0.0,
+      "x": 756.67,
+      "y": 1551.8
     },
     {
       "distance": 2085,
-      "curvature": 0,
-      "x": 1845.7,
-      "y": -315.56
+      "curvature": 0.0,
+      "x": 761.67,
+      "y": 1551.99
     },
     {
       "distance": 2090,
-      "curvature": 0,
-      "x": 1847.14,
-      "y": -320.35
+      "curvature": 0.0,
+      "x": 766.67,
+      "y": 1552.18
     },
     {
       "distance": 2095,
-      "curvature": 0,
-      "x": 1848.58,
-      "y": -325.14
+      "curvature": 0.0,
+      "x": 771.66,
+      "y": 1552.37
     },
     {
       "distance": 2100,
-      "curvature": 0,
-      "x": 1850.02,
-      "y": -329.93
+      "curvature": 0.0,
+      "x": 776.66,
+      "y": 1552.58
     },
     {
       "distance": 2105,
-      "curvature": 0,
-      "x": 1851.46,
-      "y": -334.71
+      "curvature": 0.0,
+      "x": 781.66,
+      "y": 1552.8
     },
     {
       "distance": 2110,
-      "curvature": 0,
-      "x": 1852.9,
-      "y": -339.5
+      "curvature": 0.0,
+      "x": 786.65,
+      "y": 1553.03
     },
     {
       "distance": 2115,
-      "curvature": 0,
-      "x": 1854.33,
-      "y": -344.29
+      "curvature": 0.0,
+      "x": 791.64,
+      "y": 1553.28
     },
     {
       "distance": 2120,
-      "curvature": 0,
-      "x": 1855.77,
-      "y": -349.08
+      "curvature": 0.0,
+      "x": 796.64,
+      "y": 1553.56
     },
     {
       "distance": 2125,
-      "curvature": 0,
-      "x": 1857.21,
-      "y": -353.87
+      "curvature": 0.0,
+      "x": 801.63,
+      "y": 1553.87
     },
     {
       "distance": 2130,
-      "curvature": 0,
-      "x": 1858.65,
-      "y": -358.66
+      "curvature": 0.0,
+      "x": 806.61,
+      "y": 1554.22
     },
     {
       "distance": 2135,
-      "curvature": 0,
-      "x": 1860.09,
-      "y": -363.45
+      "curvature": 0.0,
+      "x": 811.58,
+      "y": 1554.79
     },
     {
       "distance": 2140,
-      "curvature": 0,
-      "x": 1861.53,
-      "y": -368.23
+      "curvature": 0.0,
+      "x": 816.46,
+      "y": 1555.9
     },
     {
       "distance": 2145,
-      "curvature": 0,
-      "x": 1862.96,
-      "y": -373.02
+      "curvature": 0.0,
+      "x": 821.0,
+      "y": 1558.0
     },
     {
       "distance": 2150,
-      "curvature": 0,
-      "x": 1864.4,
-      "y": -377.81
+      "curvature": 0.0,
+      "x": 824.66,
+      "y": 1561.38
     },
     {
       "distance": 2155,
-      "curvature": 0,
-      "x": 1865.84,
-      "y": -382.6
+      "curvature": 0.0,
+      "x": 827.23,
+      "y": 1565.68
     },
     {
       "distance": 2160,
-      "curvature": 0,
-      "x": 1867.28,
-      "y": -387.39
+      "curvature": 0.0,
+      "x": 829.06,
+      "y": 1570.33
     },
     {
       "distance": 2165,
-      "curvature": 0,
-      "x": 1868.72,
-      "y": -392.18
+      "curvature": 0.0,
+      "x": 830.46,
+      "y": 1575.13
     },
     {
       "distance": 2170,
-      "curvature": 0,
-      "x": 1870.16,
-      "y": -396.97
+      "curvature": 0.0,
+      "x": 831.64,
+      "y": 1579.99
     },
     {
       "distance": 2175,
-      "curvature": 0,
-      "x": 1871.59,
-      "y": -401.76
+      "curvature": 0.0,
+      "x": 832.86,
+      "y": 1584.84
     },
     {
       "distance": 2180,
-      "curvature": 0,
-      "x": 1873.03,
-      "y": -406.54
+      "curvature": 0.0,
+      "x": 834.5,
+      "y": 1589.56
     },
     {
       "distance": 2185,
-      "curvature": 0,
-      "x": 1874.47,
-      "y": -411.33
+      "curvature": 0.0,
+      "x": 836.96,
+      "y": 1593.92
     },
     {
       "distance": 2190,
-      "curvature": 0,
-      "x": 1875.91,
-      "y": -416.12
+      "curvature": 0.0,
+      "x": 840.48,
+      "y": 1597.46
     },
     {
       "distance": 2195,
-      "curvature": 0,
-      "x": 1877.35,
-      "y": -420.91
+      "curvature": 0.0,
+      "x": 844.94,
+      "y": 1599.71
     },
     {
       "distance": 2200,
-      "curvature": 0,
-      "x": 1878.78,
-      "y": -425.7
+      "curvature": 0.0,
+      "x": 849.83,
+      "y": 1600.77
     },
     {
       "distance": 2205,
-      "curvature": 0,
-      "x": 1880.22,
-      "y": -430.49
+      "curvature": 0.0,
+      "x": 854.8,
+      "y": 1601.28
     },
     {
       "distance": 2210,
-      "curvature": 0,
-      "x": 1881.66,
-      "y": -435.28
+      "curvature": 0.0,
+      "x": 859.77,
+      "y": 1601.81
     },
     {
       "distance": 2215,
-      "curvature": 0,
-      "x": 1883.1,
-      "y": -440.06
+      "curvature": 0.0,
+      "x": 864.72,
+      "y": 1602.53
     },
     {
       "distance": 2220,
-      "curvature": 0,
-      "x": 1884.54,
-      "y": -444.85
+      "curvature": 0.0,
+      "x": 869.65,
+      "y": 1603.37
     },
     {
       "distance": 2225,
-      "curvature": 0,
-      "x": 1885.98,
-      "y": -449.64
+      "curvature": 0.0,
+      "x": 874.56,
+      "y": 1604.32
     },
     {
       "distance": 2230,
-      "curvature": 0,
-      "x": 1887.41,
-      "y": -454.43
+      "curvature": 0.0,
+      "x": 879.45,
+      "y": 1605.36
     },
     {
       "distance": 2235,
-      "curvature": 0,
-      "x": 1888.85,
-      "y": -459.22
+      "curvature": 0.0,
+      "x": 884.33,
+      "y": 1606.48
     },
     {
       "distance": 2240,
-      "curvature": 0,
-      "x": 1890.29,
-      "y": -464.01
+      "curvature": 0.0,
+      "x": 889.18,
+      "y": 1607.68
     },
     {
       "distance": 2245,
-      "curvature": 0,
-      "x": 1891.73,
-      "y": -468.8
+      "curvature": 0.0,
+      "x": 894.01,
+      "y": 1608.95
     },
     {
       "distance": 2250,
-      "curvature": 0,
-      "x": 1893.17,
-      "y": -473.59
+      "curvature": 0.0,
+      "x": 898.83,
+      "y": 1610.28
     },
     {
       "distance": 2255,
-      "curvature": 0,
-      "x": 1894.61,
-      "y": -478.37
+      "curvature": 0.0,
+      "x": 903.64,
+      "y": 1611.66
     },
     {
       "distance": 2260,
-      "curvature": 0,
-      "x": 1896.04,
-      "y": -483.16
+      "curvature": 0.0,
+      "x": 908.44,
+      "y": 1613.08
     },
     {
       "distance": 2265,
-      "curvature": 0,
-      "x": 1897.48,
-      "y": -487.95
+      "curvature": 0.0,
+      "x": 913.22,
+      "y": 1614.53
     },
     {
       "distance": 2270,
-      "curvature": 0,
-      "x": 1898.92,
-      "y": -492.74
+      "curvature": 0.0,
+      "x": 918.0,
+      "y": 1616.01
     },
     {
       "distance": 2275,
-      "curvature": 0,
-      "x": 1900.36,
-      "y": -497.53
+      "curvature": 0.0,
+      "x": 922.76,
+      "y": 1617.52
     },
     {
       "distance": 2280,
-      "curvature": 0,
-      "x": 1901.8,
-      "y": -502.32
+      "curvature": 0.0,
+      "x": 927.53,
+      "y": 1619.05
     },
     {
       "distance": 2285,
-      "curvature": 0,
-      "x": 1903.23,
-      "y": -507.11
+      "curvature": 0.0,
+      "x": 932.28,
+      "y": 1620.6
     },
     {
       "distance": 2290,
-      "curvature": 0,
-      "x": 1904.67,
-      "y": -511.89
+      "curvature": 0.0,
+      "x": 937.03,
+      "y": 1622.17
     },
     {
       "distance": 2295,
-      "curvature": 0,
-      "x": 1906.11,
-      "y": -516.68
+      "curvature": 0.0,
+      "x": 941.77,
+      "y": 1623.75
     },
     {
       "distance": 2300,
-      "curvature": 0,
-      "x": 1907.55,
-      "y": -521.47
+      "curvature": 0.0,
+      "x": 946.51,
+      "y": 1625.35
     },
     {
       "distance": 2305,
-      "curvature": 0,
-      "x": 1908.99,
-      "y": -526.26
+      "curvature": 0.0,
+      "x": 951.24,
+      "y": 1626.97
     },
     {
       "distance": 2310,
-      "curvature": 0,
-      "x": 1910.43,
-      "y": -531.05
+      "curvature": 0.0,
+      "x": 955.97,
+      "y": 1628.59
     },
     {
       "distance": 2315,
-      "curvature": 0,
-      "x": 1911.86,
-      "y": -535.84
+      "curvature": 0.0,
+      "x": 960.7,
+      "y": 1630.22
     },
     {
       "distance": 2320,
-      "curvature": 0,
-      "x": 1913.3,
-      "y": -540.63
+      "curvature": 0.0,
+      "x": 965.42,
+      "y": 1631.86
     },
     {
       "distance": 2325,
-      "curvature": 0,
-      "x": 1914.74,
-      "y": -545.42
+      "curvature": 0.0,
+      "x": 970.14,
+      "y": 1633.5
     },
     {
       "distance": 2330,
-      "curvature": 0,
-      "x": 1916.18,
-      "y": -550.2
+      "curvature": 0.0,
+      "x": 974.87,
+      "y": 1635.14
     },
     {
       "distance": 2335,
-      "curvature": 0,
-      "x": 1917.62,
-      "y": -554.99
+      "curvature": 0.0,
+      "x": 979.59,
+      "y": 1636.78
     },
     {
       "distance": 2340,
-      "curvature": 0,
-      "x": 1919.06,
-      "y": -559.78
+      "curvature": 0.0,
+      "x": 984.31,
+      "y": 1638.42
     },
     {
       "distance": 2345,
-      "curvature": 0,
-      "x": 1920.49,
-      "y": -564.57
+      "curvature": 0.0,
+      "x": 989.04,
+      "y": 1640.05
     },
     {
       "distance": 2350,
-      "curvature": 0.0125,
-      "x": 1921.93,
-      "y": -569.36
+      "curvature": 0.007427,
+      "x": 993.77,
+      "y": 1641.67
     },
     {
       "distance": 2355,
-      "curvature": 0.021651,
-      "x": 1923.67,
-      "y": -574.05
+      "curvature": 0.017929,
+      "x": 998.5,
+      "y": 1643.29
     },
     {
       "distance": 2360,
-      "curvature": 0.025,
-      "x": 1925.9,
-      "y": -578.52
+      "curvature": 0.023635,
+      "x": 1003.24,
+      "y": 1644.9
     },
     {
       "distance": 2365,
       "curvature": 0.025,
-      "x": 1928.67,
-      "y": -582.68
+      "x": 1007.97,
+      "y": 1646.49
     },
     {
       "distance": 2370,
       "curvature": 0.025,
-      "x": 1931.94,
-      "y": -586.47
+      "x": 1012.71,
+      "y": 1648.08
     },
     {
       "distance": 2375,
       "curvature": 0.025,
-      "x": 1935.65,
-      "y": -589.81
+      "x": 1017.46,
+      "y": 1649.67
     },
     {
       "distance": 2380,
       "curvature": 0.025,
-      "x": 1939.76,
-      "y": -592.67
+      "x": 1022.2,
+      "y": 1651.24
     },
     {
       "distance": 2385,
       "curvature": 0.025,
-      "x": 1944.18,
-      "y": -595
+      "x": 1026.95,
+      "y": 1652.82
     },
     {
       "distance": 2390,
       "curvature": 0.025,
-      "x": 1948.87,
-      "y": -596.75
+      "x": 1031.7,
+      "y": 1654.39
     },
     {
       "distance": 2395,
       "curvature": 0.025,
-      "x": 1953.73,
-      "y": -597.9
+      "x": 1036.45,
+      "y": 1655.95
     },
     {
       "distance": 2400,
       "curvature": 0.025,
-      "x": 1958.7,
-      "y": -598.44
+      "x": 1041.2,
+      "y": 1657.51
     },
     {
       "distance": 2405,
       "curvature": 0.025,
-      "x": 1963.7,
-      "y": -598.36
+      "x": 1045.95,
+      "y": 1659.07
     },
     {
       "distance": 2410,
       "curvature": 0.025,
-      "x": 1968.65,
-      "y": -597.65
+      "x": 1050.7,
+      "y": 1660.64
     },
     {
       "distance": 2415,
-      "curvature": 0.021651,
-      "x": 1973.47,
-      "y": -596.34
+      "curvature": 0.023048,
+      "x": 1055.45,
+      "y": 1662.2
     },
     {
       "distance": 2420,
-      "curvature": 0.0125,
-      "x": 1978.13,
-      "y": -594.51
+      "curvature": 0.016325,
+      "x": 1060.2,
+      "y": 1663.76
     },
     {
       "distance": 2425,
-      "curvature": -0.014286,
-      "x": 1982.66,
-      "y": -592.39
+      "curvature": -0.003067,
+      "x": 1064.94,
+      "y": 1665.33
     },
     {
       "distance": 2430,
-      "curvature": -0.024744,
-      "x": 1987.32,
-      "y": -590.6
+      "curvature": -0.020355,
+      "x": 1069.69,
+      "y": 1666.9
     },
     {
       "distance": 2435,
-      "curvature": -0.028571,
-      "x": 1992.18,
-      "y": -589.4
+      "curvature": -0.026962,
+      "x": 1074.44,
+      "y": 1668.47
     },
     {
       "distance": 2440,
       "curvature": -0.028571,
-      "x": 1997.15,
-      "y": -588.9
+      "x": 1079.18,
+      "y": 1670.05
     },
     {
       "distance": 2445,
       "curvature": -0.028571,
-      "x": 2002.15,
-      "y": -589.12
+      "x": 1083.93,
+      "y": 1671.63
     },
     {
       "distance": 2450,
       "curvature": -0.028571,
-      "x": 2007.06,
-      "y": -590.04
+      "x": 1088.67,
+      "y": 1673.22
     },
     {
       "distance": 2455,
       "curvature": -0.028571,
-      "x": 2011.79,
-      "y": -591.66
+      "x": 1093.41,
+      "y": 1674.8
     },
     {
       "distance": 2460,
       "curvature": -0.028571,
-      "x": 2016.25,
-      "y": -593.93
+      "x": 1098.15,
+      "y": 1676.38
     },
     {
       "distance": 2465,
       "curvature": -0.028571,
-      "x": 2020.33,
-      "y": -596.82
+      "x": 1102.9,
+      "y": 1677.95
     },
     {
       "distance": 2470,
       "curvature": -0.028571,
-      "x": 2023.96,
-      "y": -600.25
+      "x": 1107.66,
+      "y": 1679.5
     },
     {
       "distance": 2475,
       "curvature": -0.028571,
-      "x": 2027.07,
-      "y": -604.17
+      "x": 1112.42,
+      "y": 1681.03
     },
     {
       "distance": 2480,
       "curvature": -0.028571,
-      "x": 2029.59,
-      "y": -608.49
+      "x": 1117.18,
+      "y": 1682.53
     },
     {
       "distance": 2485,
-      "curvature": -0.024744,
-      "x": 2031.46,
-      "y": -613.13
+      "curvature": -0.026387,
+      "x": 1121.96,
+      "y": 1684.0
     },
     {
       "distance": 2490,
-      "curvature": -0.014286,
-      "x": 2032.75,
-      "y": -617.96
+      "curvature": -0.018783,
+      "x": 1126.75,
+      "y": 1685.44
     },
     {
       "distance": 2495,
-      "curvature": 0,
-      "x": 2033.69,
-      "y": -622.87
+      "curvature": -0.006156,
+      "x": 1131.56,
+      "y": 1686.8
     },
     {
       "distance": 2500,
-      "curvature": 0,
-      "x": 2034.63,
-      "y": -627.78
+      "curvature": 0.0,
+      "x": 1136.42,
+      "y": 1688.01
     },
     {
       "distance": 2505,
-      "curvature": 0,
-      "x": 2035.58,
-      "y": -632.69
+      "curvature": 0.0,
+      "x": 1141.32,
+      "y": 1689.0
     },
     {
       "distance": 2510,
-      "curvature": 0,
-      "x": 2036.52,
-      "y": -637.6
+      "curvature": 0.0,
+      "x": 1146.27,
+      "y": 1689.68
     },
     {
       "distance": 2515,
-      "curvature": 0,
-      "x": 2037.46,
-      "y": -642.51
+      "curvature": 0.0,
+      "x": 1151.26,
+      "y": 1690.01
     },
     {
       "distance": 2520,
-      "curvature": 0,
-      "x": 2038.4,
-      "y": -647.42
+      "curvature": 0.0,
+      "x": 1156.26,
+      "y": 1689.98
     },
     {
       "distance": 2525,
-      "curvature": 0,
-      "x": 2039.34,
-      "y": -652.33
+      "curvature": 0.0,
+      "x": 1161.25,
+      "y": 1689.59
     },
     {
       "distance": 2530,
-      "curvature": 0,
-      "x": 2040.28,
-      "y": -657.24
+      "curvature": 0.0,
+      "x": 1166.19,
+      "y": 1688.86
     },
     {
       "distance": 2535,
-      "curvature": 0,
-      "x": 2041.22,
-      "y": -662.15
+      "curvature": 0.0,
+      "x": 1171.07,
+      "y": 1687.77
     },
     {
       "distance": 2540,
-      "curvature": 0,
-      "x": 2042.17,
-      "y": -667.06
+      "curvature": 0.0,
+      "x": 1175.86,
+      "y": 1686.33
     },
     {
       "distance": 2545,
-      "curvature": 0,
-      "x": 2043.11,
-      "y": -671.97
+      "curvature": 0.0,
+      "x": 1180.53,
+      "y": 1684.55
     },
     {
       "distance": 2550,
-      "curvature": 0,
-      "x": 2044.05,
-      "y": -676.88
+      "curvature": 0.0,
+      "x": 1185.07,
+      "y": 1682.46
     },
     {
       "distance": 2555,
-      "curvature": 0,
-      "x": 2044.99,
-      "y": -681.79
+      "curvature": 0.0,
+      "x": 1189.46,
+      "y": 1680.06
     },
     {
       "distance": 2560,
-      "curvature": 0,
-      "x": 2045.93,
-      "y": -686.71
+      "curvature": 0.0,
+      "x": 1193.68,
+      "y": 1677.37
     },
     {
       "distance": 2565,
-      "curvature": 0,
-      "x": 2046.87,
-      "y": -691.62
+      "curvature": 0.0,
+      "x": 1197.72,
+      "y": 1674.43
     },
     {
       "distance": 2570,
-      "curvature": 0,
-      "x": 2047.81,
-      "y": -696.53
+      "curvature": 0.0,
+      "x": 1201.58,
+      "y": 1671.24
     },
     {
       "distance": 2575,
-      "curvature": 0,
-      "x": 2048.76,
-      "y": -701.44
+      "curvature": 0.0,
+      "x": 1205.23,
+      "y": 1667.84
     },
     {
       "distance": 2580,
-      "curvature": 0,
-      "x": 2049.7,
-      "y": -706.35
+      "curvature": 0.0,
+      "x": 1208.69,
+      "y": 1664.22
     },
     {
       "distance": 2585,
-      "curvature": 0,
-      "x": 2050.64,
-      "y": -711.26
+      "curvature": 0.0,
+      "x": 1211.92,
+      "y": 1660.41
     },
     {
       "distance": 2590,
-      "curvature": 0,
-      "x": 2051.58,
-      "y": -716.17
+      "curvature": 0.0,
+      "x": 1214.88,
+      "y": 1656.38
     },
     {
       "distance": 2595,
-      "curvature": 0,
-      "x": 2052.52,
-      "y": -721.08
+      "curvature": 0.0,
+      "x": 1217.53,
+      "y": 1652.13
     },
     {
       "distance": 2600,
-      "curvature": 0,
-      "x": 2053.46,
-      "y": -725.99
+      "curvature": 0.0,
+      "x": 1219.78,
+      "y": 1647.67
     },
     {
       "distance": 2605,
-      "curvature": 0,
-      "x": 2054.4,
-      "y": -730.9
+      "curvature": 0.0,
+      "x": 1221.57,
+      "y": 1643.0
     },
     {
       "distance": 2610,
-      "curvature": 0,
-      "x": 2055.35,
-      "y": -735.81
+      "curvature": 0.0,
+      "x": 1222.93,
+      "y": 1638.19
     },
     {
       "distance": 2615,
-      "curvature": 0,
-      "x": 2056.29,
-      "y": -740.72
+      "curvature": 0.0,
+      "x": 1223.96,
+      "y": 1633.3
     },
     {
       "distance": 2620,
-      "curvature": 0,
-      "x": 2057.23,
-      "y": -745.63
+      "curvature": 0.0,
+      "x": 1224.77,
+      "y": 1628.36
     },
     {
       "distance": 2625,
-      "curvature": 0,
-      "x": 2058.17,
-      "y": -750.54
+      "curvature": 0.0,
+      "x": 1225.48,
+      "y": 1623.41
     },
     {
       "distance": 2630,
-      "curvature": 0,
-      "x": 2059.11,
-      "y": -755.45
+      "curvature": 0.0,
+      "x": 1226.14,
+      "y": 1618.46
     },
     {
       "distance": 2635,
-      "curvature": 0,
-      "x": 2060.05,
-      "y": -760.36
+      "curvature": 0.0,
+      "x": 1226.77,
+      "y": 1613.5
     },
     {
       "distance": 2640,
-      "curvature": 0,
-      "x": 2060.99,
-      "y": -765.27
+      "curvature": 0.0,
+      "x": 1227.37,
+      "y": 1608.53
     },
     {
       "distance": 2645,
-      "curvature": 0,
-      "x": 2061.94,
-      "y": -770.19
+      "curvature": 0.0,
+      "x": 1227.94,
+      "y": 1603.56
     },
     {
       "distance": 2650,
-      "curvature": 0,
-      "x": 2062.88,
-      "y": -775.1
+      "curvature": 0.0,
+      "x": 1228.48,
+      "y": 1598.59
     },
     {
       "distance": 2655,
-      "curvature": 0,
-      "x": 2063.82,
-      "y": -780.01
+      "curvature": 0.0,
+      "x": 1229.01,
+      "y": 1593.62
     },
     {
       "distance": 2660,
-      "curvature": 0,
-      "x": 2064.76,
-      "y": -784.92
+      "curvature": 0.0,
+      "x": 1229.51,
+      "y": 1588.65
     },
     {
       "distance": 2665,
-      "curvature": 0.005887,
-      "x": 2065.7,
-      "y": -789.83
+      "curvature": 0.003177,
+      "x": 1229.99,
+      "y": 1583.67
     },
     {
       "distance": 2670,
-      "curvature": 0.010879,
-      "x": 2066.79,
-      "y": -794.71
+      "curvature": 0.008577,
+      "x": 1230.46,
+      "y": 1578.69
     },
     {
       "distance": 2675,
-      "curvature": 0.014214,
-      "x": 2068.14,
-      "y": -799.52
+      "curvature": 0.012673,
+      "x": 1230.92,
+      "y": 1573.71
     },
     {
       "distance": 2680,
-      "curvature": 0.015385,
-      "x": 2069.82,
-      "y": -804.23
+      "curvature": 0.014843,
+      "x": 1231.37,
+      "y": 1568.73
     },
     {
       "distance": 2685,
       "curvature": 0.015385,
-      "x": 2071.87,
-      "y": -808.79
+      "x": 1231.8,
+      "y": 1563.75
     },
     {
       "distance": 2690,
       "curvature": 0.015385,
-      "x": 2074.26,
-      "y": -813.18
+      "x": 1232.24,
+      "y": 1558.77
     },
     {
       "distance": 2695,
       "curvature": 0.015385,
-      "x": 2076.98,
-      "y": -817.38
+      "x": 1232.67,
+      "y": 1553.79
     },
     {
       "distance": 2700,
       "curvature": 0.015385,
-      "x": 2080.01,
-      "y": -821.35
+      "x": 1233.1,
+      "y": 1548.81
     },
     {
       "distance": 2705,
       "curvature": 0.015385,
-      "x": 2083.34,
-      "y": -825.08
+      "x": 1233.53,
+      "y": 1543.82
     },
     {
       "distance": 2710,
       "curvature": 0.015385,
-      "x": 2086.95,
-      "y": -828.55
+      "x": 1233.97,
+      "y": 1538.84
     },
     {
       "distance": 2715,
       "curvature": 0.015385,
-      "x": 2090.81,
-      "y": -831.72
+      "x": 1234.42,
+      "y": 1533.86
     },
     {
       "distance": 2720,
       "curvature": 0.015385,
-      "x": 2094.91,
-      "y": -834.59
+      "x": 1234.88,
+      "y": 1528.88
     },
     {
       "distance": 2725,
       "curvature": 0.015385,
-      "x": 2099.21,
-      "y": -837.14
+      "x": 1235.34,
+      "y": 1523.91
     },
     {
       "distance": 2730,
       "curvature": 0.015385,
-      "x": 2103.7,
-      "y": -839.34
+      "x": 1235.81,
+      "y": 1518.93
     },
     {
       "distance": 2735,
       "curvature": 0.015385,
-      "x": 2108.34,
-      "y": -841.2
+      "x": 1236.29,
+      "y": 1513.95
     },
     {
       "distance": 2740,
       "curvature": 0.015385,
-      "x": 2113.11,
-      "y": -842.69
+      "x": 1236.77,
+      "y": 1508.97
     },
     {
       "distance": 2745,
       "curvature": 0.015385,
-      "x": 2117.98,
-      "y": -843.82
+      "x": 1237.25,
+      "y": 1504.0
     },
     {
       "distance": 2750,
       "curvature": 0.015385,
-      "x": 2122.93,
-      "y": -844.56
+      "x": 1237.74,
+      "y": 1499.02
     },
     {
       "distance": 2755,
       "curvature": 0.015385,
-      "x": 2127.91,
-      "y": -844.92
+      "x": 1238.23,
+      "y": 1494.04
     },
     {
       "distance": 2760,
       "curvature": 0.015385,
-      "x": 2132.91,
-      "y": -844.9
+      "x": 1238.72,
+      "y": 1489.07
     },
     {
       "distance": 2765,
       "curvature": 0.015385,
-      "x": 2137.9,
-      "y": -844.5
+      "x": 1239.21,
+      "y": 1484.09
     },
     {
       "distance": 2770,
       "curvature": 0.015385,
-      "x": 2142.83,
-      "y": -843.71
+      "x": 1239.7,
+      "y": 1479.12
     },
     {
       "distance": 2775,
       "curvature": 0.015385,
-      "x": 2147.7,
-      "y": -842.55
+      "x": 1240.18,
+      "y": 1474.14
     },
     {
       "distance": 2780,
-      "curvature": 0.014214,
-      "x": 2152.46,
-      "y": -841.01
+      "curvature": 0.014776,
+      "x": 1240.67,
+      "y": 1469.16
     },
     {
       "distance": 2785,
-      "curvature": 0.010879,
-      "x": 2157.09,
-      "y": -839.14
+      "curvature": 0.012483,
+      "x": 1241.15,
+      "y": 1464.19
     },
     {
       "distance": 2790,
-      "curvature": 0.005887,
-      "x": 2161.62,
-      "y": -837.02
+      "curvature": 0.008292,
+      "x": 1241.62,
+      "y": 1459.21
     },
     {
       "distance": 2795,
-      "curvature": 0,
-      "x": 2166.09,
-      "y": -834.77
+      "curvature": 0.002842,
+      "x": 1242.08,
+      "y": 1454.23
     },
     {
       "distance": 2800,
-      "curvature": 0,
-      "x": 2170.55,
-      "y": -832.52
+      "curvature": 0.0,
+      "x": 1242.54,
+      "y": 1449.25
     },
     {
       "distance": 2805,
-      "curvature": 0,
-      "x": 2175.02,
-      "y": -830.27
+      "curvature": 0.0,
+      "x": 1242.99,
+      "y": 1444.27
     },
     {
       "distance": 2810,
-      "curvature": 0,
-      "x": 2179.48,
-      "y": -828.02
+      "curvature": 0.0,
+      "x": 1243.43,
+      "y": 1439.29
     },
     {
       "distance": 2815,
-      "curvature": 0,
-      "x": 2183.95,
-      "y": -825.77
+      "curvature": 0.0,
+      "x": 1243.87,
+      "y": 1434.31
     },
     {
       "distance": 2820,
-      "curvature": 0,
-      "x": 2188.41,
-      "y": -823.52
+      "curvature": 0.0,
+      "x": 1244.31,
+      "y": 1429.33
     },
     {
       "distance": 2825,
-      "curvature": 0,
-      "x": 2192.88,
-      "y": -821.27
+      "curvature": 0.0,
+      "x": 1244.75,
+      "y": 1424.35
     },
     {
       "distance": 2830,
-      "curvature": 0,
-      "x": 2197.34,
-      "y": -819.02
+      "curvature": 0.0,
+      "x": 1245.2,
+      "y": 1419.37
     },
     {
       "distance": 2835,
-      "curvature": 0,
-      "x": 2201.81,
-      "y": -816.77
+      "curvature": 0.0,
+      "x": 1245.66,
+      "y": 1414.39
     },
     {
       "distance": 2840,
-      "curvature": 0,
-      "x": 2206.27,
-      "y": -814.52
+      "curvature": 0.0,
+      "x": 1246.13,
+      "y": 1409.41
     },
     {
       "distance": 2845,
-      "curvature": 0,
-      "x": 2210.74,
-      "y": -812.27
+      "curvature": 0.0,
+      "x": 1246.62,
+      "y": 1404.43
     },
     {
       "distance": 2850,
-      "curvature": 0,
-      "x": 2215.2,
-      "y": -810.02
+      "curvature": 0.0,
+      "x": 1247.14,
+      "y": 1399.46
     },
     {
       "distance": 2855,
-      "curvature": 0,
-      "x": 2219.67,
-      "y": -807.77
+      "curvature": 0.0,
+      "x": 1247.64,
+      "y": 1394.49
     },
     {
       "distance": 2860,
-      "curvature": 0,
-      "x": 2224.13,
-      "y": -805.52
+      "curvature": 0.0,
+      "x": 1247.99,
+      "y": 1389.5
     },
     {
       "distance": 2865,
-      "curvature": 0,
-      "x": 2228.6,
-      "y": -803.27
+      "curvature": 0.0,
+      "x": 1248.02,
+      "y": 1384.5
     },
     {
       "distance": 2870,
-      "curvature": 0,
-      "x": 2233.06,
-      "y": -801.02
+      "curvature": 0.0,
+      "x": 1247.55,
+      "y": 1379.52
     },
     {
       "distance": 2875,
-      "curvature": 0,
-      "x": 2237.53,
-      "y": -798.77
+      "curvature": 0.0,
+      "x": 1246.43,
+      "y": 1374.65
     },
     {
       "distance": 2880,
-      "curvature": 0,
-      "x": 2241.99,
-      "y": -796.51
+      "curvature": 0.0,
+      "x": 1244.65,
+      "y": 1369.98
     },
     {
       "distance": 2885,
-      "curvature": 0,
-      "x": 2246.46,
-      "y": -794.26
+      "curvature": 0.0,
+      "x": 1242.27,
+      "y": 1365.58
     },
     {
       "distance": 2890,
-      "curvature": 0,
-      "x": 2250.92,
-      "y": -792.01
+      "curvature": 0.0,
+      "x": 1239.35,
+      "y": 1361.52
     },
     {
       "distance": 2895,
-      "curvature": 0,
-      "x": 2255.39,
-      "y": -789.76
+      "curvature": 0.0,
+      "x": 1235.89,
+      "y": 1357.91
     },
     {
       "distance": 2900,
-      "curvature": 0,
-      "x": 2259.85,
-      "y": -787.51
+      "curvature": 0.0,
+      "x": 1232.0,
+      "y": 1354.76
     },
     {
       "distance": 2905,
-      "curvature": 0,
-      "x": 2264.32,
-      "y": -785.26
+      "curvature": 0.0,
+      "x": 1227.83,
+      "y": 1352.01
     },
     {
       "distance": 2910,
-      "curvature": 0,
-      "x": 2268.78,
-      "y": -783.01
+      "curvature": 0.0,
+      "x": 1223.49,
+      "y": 1349.53
     },
     {
       "distance": 2915,
-      "curvature": 0.006958,
-      "x": 2273.24,
-      "y": -780.76
+      "curvature": 0.003455,
+      "x": 1219.07,
+      "y": 1347.18
     },
     {
       "distance": 2920,
-      "curvature": 0.012856,
-      "x": 2277.63,
-      "y": -778.36
+      "curvature": 0.009882,
+      "x": 1214.66,
+      "y": 1344.84
     },
     {
       "distance": 2925,
-      "curvature": 0.016798,
-      "x": 2281.85,
-      "y": -775.68
+      "curvature": 0.014807,
+      "x": 1210.27,
+      "y": 1342.43
     },
     {
       "distance": 2930,
-      "curvature": 0.018182,
-      "x": 2285.83,
-      "y": -772.65
+      "curvature": 0.017482,
+      "x": 1205.91,
+      "y": 1339.99
     },
     {
       "distance": 2935,
       "curvature": 0.018182,
-      "x": 2289.52,
-      "y": -769.28
+      "x": 1201.56,
+      "y": 1337.53
     },
     {
       "distance": 2940,
       "curvature": 0.018182,
-      "x": 2292.89,
-      "y": -765.58
+      "x": 1197.21,
+      "y": 1335.06
     },
     {
       "distance": 2945,
       "curvature": 0.018182,
-      "x": 2295.91,
-      "y": -761.59
+      "x": 1192.86,
+      "y": 1332.59
     },
     {
       "distance": 2950,
       "curvature": 0.018182,
-      "x": 2298.55,
-      "y": -757.35
+      "x": 1188.51,
+      "y": 1330.13
     },
     {
       "distance": 2955,
       "curvature": 0.018182,
-      "x": 2300.8,
-      "y": -752.88
+      "x": 1184.15,
+      "y": 1327.67
     },
     {
       "distance": 2960,
       "curvature": 0.018182,
-      "x": 2302.63,
-      "y": -748.23
+      "x": 1179.8,
+      "y": 1325.22
     },
     {
       "distance": 2965,
       "curvature": 0.018182,
-      "x": 2304.03,
-      "y": -743.43
+      "x": 1175.44,
+      "y": 1322.77
     },
     {
       "distance": 2970,
       "curvature": 0.018182,
-      "x": 2305,
-      "y": -738.53
+      "x": 1171.07,
+      "y": 1320.33
     },
     {
       "distance": 2975,
       "curvature": 0.018182,
-      "x": 2305.51,
-      "y": -733.55
+      "x": 1166.71,
+      "y": 1317.88
     },
     {
       "distance": 2980,
       "curvature": 0.018182,
-      "x": 2305.57,
-      "y": -728.55
+      "x": 1162.35,
+      "y": 1315.44
     },
     {
       "distance": 2985,
       "curvature": 0.018182,
-      "x": 2305.17,
-      "y": -723.57
+      "x": 1157.98,
+      "y": 1313.01
     },
     {
       "distance": 2990,
       "curvature": 0.018182,
-      "x": 2304.33,
-      "y": -718.64
+      "x": 1153.62,
+      "y": 1310.57
     },
     {
       "distance": 2995,
       "curvature": 0.018182,
-      "x": 2303.04,
-      "y": -713.81
+      "x": 1149.25,
+      "y": 1308.13
     },
     {
       "distance": 3000,
       "curvature": 0.018182,
-      "x": 2301.31,
-      "y": -709.12
+      "x": 1144.88,
+      "y": 1305.69
     },
     {
       "distance": 3005,
       "curvature": 0.018182,
-      "x": 2299.17,
-      "y": -704.6
+      "x": 1140.52,
+      "y": 1303.26
     },
     {
       "distance": 3010,
       "curvature": 0.018182,
-      "x": 2296.63,
-      "y": -700.29
+      "x": 1136.15,
+      "y": 1300.82
     },
     {
       "distance": 3015,
       "curvature": 0.018182,
-      "x": 2293.7,
-      "y": -696.24
+      "x": 1131.79,
+      "y": 1298.38
     },
     {
       "distance": 3020,
-      "curvature": 0.016798,
-      "x": 2290.42,
-      "y": -692.46
+      "curvature": 0.01752,
+      "x": 1127.42,
+      "y": 1295.94
     },
     {
       "distance": 3025,
-      "curvature": 0.012856,
-      "x": 2286.84,
-      "y": -688.98
+      "curvature": 0.014916,
+      "x": 1123.05,
+      "y": 1293.51
     },
     {
       "distance": 3030,
-      "curvature": 0.006958,
-      "x": 2283.04,
-      "y": -685.73
+      "curvature": 0.010045,
+      "x": 1118.69,
+      "y": 1291.07
     },
     {
       "distance": 3035,
-      "curvature": 0,
-      "x": 2279.12,
-      "y": -682.62
+      "curvature": 0.003647,
+      "x": 1114.32,
+      "y": 1288.63
     },
     {
       "distance": 3040,
-      "curvature": 0,
-      "x": 2275.21,
-      "y": -679.5
+      "curvature": 0.0,
+      "x": 1109.96,
+      "y": 1286.19
     },
     {
       "distance": 3045,
-      "curvature": 0,
-      "x": 2271.3,
-      "y": -676.39
+      "curvature": 0.0,
+      "x": 1105.59,
+      "y": 1283.75
     },
     {
       "distance": 3050,
-      "curvature": 0,
-      "x": 2267.39,
-      "y": -673.28
+      "curvature": 0.0,
+      "x": 1101.23,
+      "y": 1281.31
     },
     {
       "distance": 3055,
-      "curvature": 0,
-      "x": 2263.48,
-      "y": -670.16
+      "curvature": 0.0,
+      "x": 1096.87,
+      "y": 1278.87
     },
     {
       "distance": 3060,
-      "curvature": 0,
-      "x": 2259.56,
-      "y": -667.05
+      "curvature": 0.0,
+      "x": 1092.5,
+      "y": 1276.43
     },
     {
       "distance": 3065,
-      "curvature": 0,
-      "x": 2255.65,
-      "y": -663.94
+      "curvature": 0.0,
+      "x": 1088.14,
+      "y": 1273.98
     },
     {
       "distance": 3070,
-      "curvature": 0,
-      "x": 2251.74,
-      "y": -660.82
+      "curvature": 0.0,
+      "x": 1083.78,
+      "y": 1271.54
     },
     {
       "distance": 3075,
-      "curvature": 0,
-      "x": 2247.83,
-      "y": -657.71
+      "curvature": 0.0,
+      "x": 1079.42,
+      "y": 1269.09
     },
     {
       "distance": 3080,
-      "curvature": 0,
-      "x": 2243.92,
-      "y": -654.59
+      "curvature": 0.0,
+      "x": 1075.06,
+      "y": 1266.64
     },
     {
       "distance": 3085,
-      "curvature": 0,
-      "x": 2240,
-      "y": -651.48
+      "curvature": 0.0,
+      "x": 1070.7,
+      "y": 1264.2
     },
     {
       "distance": 3090,
-      "curvature": 0,
-      "x": 2236.09,
-      "y": -648.37
+      "curvature": 0.0,
+      "x": 1066.34,
+      "y": 1261.74
     },
     {
       "distance": 3095,
-      "curvature": 0,
-      "x": 2232.18,
-      "y": -645.25
+      "curvature": 0.0,
+      "x": 1061.98,
+      "y": 1259.29
     },
     {
       "distance": 3100,
-      "curvature": 0,
-      "x": 2228.27,
-      "y": -642.14
+      "curvature": 0.0,
+      "x": 1057.62,
+      "y": 1256.84
     },
     {
       "distance": 3105,
-      "curvature": 0,
-      "x": 2224.35,
-      "y": -639.03
+      "curvature": 0.0,
+      "x": 1053.27,
+      "y": 1254.39
     },
     {
       "distance": 3110,
-      "curvature": 0,
-      "x": 2220.44,
-      "y": -635.91
+      "curvature": 0.0,
+      "x": 1048.91,
+      "y": 1251.94
     },
     {
       "distance": 3115,
-      "curvature": 0,
-      "x": 2216.53,
-      "y": -632.8
+      "curvature": 0.0,
+      "x": 1044.55,
+      "y": 1249.49
     },
     {
       "distance": 3120,
-      "curvature": 0,
-      "x": 2212.62,
-      "y": -629.69
+      "curvature": 0.0,
+      "x": 1040.19,
+      "y": 1247.04
     },
     {
       "distance": 3125,
-      "curvature": 0,
-      "x": 2208.71,
-      "y": -626.57
+      "curvature": 0.0,
+      "x": 1035.83,
+      "y": 1244.59
     },
     {
       "distance": 3130,
-      "curvature": 0,
-      "x": 2204.79,
-      "y": -623.46
+      "curvature": 0.0,
+      "x": 1031.47,
+      "y": 1242.14
     },
     {
       "distance": 3135,
-      "curvature": 0,
-      "x": 2200.88,
-      "y": -620.34
+      "curvature": 0.0,
+      "x": 1027.11,
+      "y": 1239.7
     },
     {
       "distance": 3140,
-      "curvature": 0,
-      "x": 2196.97,
-      "y": -617.23
+      "curvature": 0.0,
+      "x": 1022.75,
+      "y": 1237.26
     },
     {
       "distance": 3145,
-      "curvature": 0,
-      "x": 2193.06,
-      "y": -614.12
+      "curvature": 0.0,
+      "x": 1018.38,
+      "y": 1234.82
     },
     {
       "distance": 3150,
-      "curvature": 0,
-      "x": 2189.14,
-      "y": -611
+      "curvature": 0.0,
+      "x": 1014.02,
+      "y": 1232.38
     },
     {
       "distance": 3155,
-      "curvature": 0,
-      "x": 2185.23,
-      "y": -607.89
+      "curvature": 0.0,
+      "x": 1009.65,
+      "y": 1229.94
     },
     {
       "distance": 3160,
-      "curvature": 0,
-      "x": 2181.32,
-      "y": -604.78
+      "curvature": 0.0,
+      "x": 1005.28,
+      "y": 1227.51
     },
     {
       "distance": 3165,
-      "curvature": 0,
-      "x": 2177.41,
-      "y": -601.66
+      "curvature": 0.0,
+      "x": 1000.91,
+      "y": 1225.09
     },
     {
       "distance": 3170,
-      "curvature": 0,
-      "x": 2173.5,
-      "y": -598.55
+      "curvature": 0.0,
+      "x": 996.53,
+      "y": 1222.66
     },
     {
       "distance": 3175,
-      "curvature": 0,
-      "x": 2169.58,
-      "y": -595.43
+      "curvature": 0.0,
+      "x": 992.16,
+      "y": 1220.24
     },
     {
       "distance": 3180,
-      "curvature": 0,
-      "x": 2165.67,
-      "y": -592.32
+      "curvature": 0.0,
+      "x": 987.78,
+      "y": 1217.83
     },
     {
       "distance": 3185,
-      "curvature": 0,
-      "x": 2161.76,
-      "y": -589.21
+      "curvature": 0.0,
+      "x": 983.41,
+      "y": 1215.41
     },
     {
       "distance": 3190,
-      "curvature": 0,
-      "x": 2157.85,
-      "y": -586.09
+      "curvature": 0.0,
+      "x": 979.03,
+      "y": 1212.98
     },
     {
       "distance": 3195,
-      "curvature": 0,
-      "x": 2153.94,
-      "y": -582.98
+      "curvature": 0.0,
+      "x": 974.66,
+      "y": 1210.56
     },
     {
       "distance": 3200,
-      "curvature": 0,
-      "x": 2150.02,
-      "y": -579.87
+      "curvature": 0.0,
+      "x": 970.29,
+      "y": 1208.12
     },
     {
       "distance": 3205,
-      "curvature": 0,
-      "x": 2146.11,
-      "y": -576.75
+      "curvature": 0.0,
+      "x": 965.93,
+      "y": 1205.68
     },
     {
       "distance": 3210,
-      "curvature": 0,
-      "x": 2142.2,
-      "y": -573.64
+      "curvature": 0.0,
+      "x": 961.57,
+      "y": 1203.23
     },
     {
       "distance": 3215,
-      "curvature": 0,
-      "x": 2138.29,
-      "y": -570.53
+      "curvature": 0.0,
+      "x": 957.22,
+      "y": 1200.76
     },
     {
       "distance": 3220,
-      "curvature": 0,
-      "x": 2134.37,
-      "y": -567.41
+      "curvature": 0.0,
+      "x": 952.88,
+      "y": 1198.28
     },
     {
       "distance": 3225,
-      "curvature": 0,
-      "x": 2130.46,
-      "y": -564.3
+      "curvature": 0.0,
+      "x": 948.55,
+      "y": 1195.79
     },
     {
       "distance": 3230,
-      "curvature": 0,
-      "x": 2126.55,
-      "y": -561.18
+      "curvature": 0.0,
+      "x": 944.22,
+      "y": 1193.27
     },
     {
       "distance": 3235,
-      "curvature": 0,
-      "x": 2122.64,
-      "y": -558.07
+      "curvature": 0.0,
+      "x": 939.91,
+      "y": 1190.74
     },
     {
       "distance": 3240,
-      "curvature": 0,
-      "x": 2118.73,
-      "y": -554.96
+      "curvature": 0.0,
+      "x": 935.62,
+      "y": 1188.18
     },
     {
       "distance": 3245,
-      "curvature": 0,
-      "x": 2114.81,
-      "y": -551.84
+      "curvature": 0.0,
+      "x": 931.33,
+      "y": 1185.6
     },
     {
       "distance": 3250,
-      "curvature": 0,
-      "x": 2110.9,
-      "y": -548.73
+      "curvature": 0.0,
+      "x": 927.07,
+      "y": 1183.0
     },
     {
       "distance": 3255,
-      "curvature": 0,
-      "x": 2106.99,
-      "y": -545.62
+      "curvature": 0.0,
+      "x": 922.82,
+      "y": 1180.36
     },
     {
       "distance": 3260,
-      "curvature": 0,
-      "x": 2103.08,
-      "y": -542.5
+      "curvature": 0.0,
+      "x": 918.58,
+      "y": 1177.7
     },
     {
       "distance": 3265,
-      "curvature": 0,
-      "x": 2099.16,
-      "y": -539.39
+      "curvature": 0.0,
+      "x": 914.37,
+      "y": 1175.01
     },
     {
       "distance": 3270,
-      "curvature": 0,
-      "x": 2095.25,
-      "y": -536.28
+      "curvature": 0.0,
+      "x": 910.18,
+      "y": 1172.28
     },
     {
       "distance": 3275,
-      "curvature": 0,
-      "x": 2091.34,
-      "y": -533.16
+      "curvature": 0.0,
+      "x": 906.01,
+      "y": 1169.52
     },
     {
       "distance": 3280,
-      "curvature": 0,
-      "x": 2087.43,
-      "y": -530.05
+      "curvature": 0.0,
+      "x": 901.86,
+      "y": 1166.73
     },
     {
       "distance": 3285,
-      "curvature": 0,
-      "x": 2083.52,
-      "y": -526.93
+      "curvature": 0.0,
+      "x": 897.74,
+      "y": 1163.9
     },
     {
       "distance": 3290,
-      "curvature": 0,
-      "x": 2079.6,
-      "y": -523.82
+      "curvature": 0.0,
+      "x": 893.65,
+      "y": 1161.03
     },
     {
       "distance": 3295,
-      "curvature": 0,
-      "x": 2075.69,
-      "y": -520.71
+      "curvature": 0.0,
+      "x": 889.58,
+      "y": 1158.12
     },
     {
       "distance": 3300,
-      "curvature": 0,
-      "x": 2071.78,
-      "y": -517.59
+      "curvature": 0.0,
+      "x": 885.54,
+      "y": 1155.17
     },
     {
       "distance": 3305,
-      "curvature": 0,
-      "x": 2067.87,
-      "y": -514.48
+      "curvature": 0.0,
+      "x": 881.54,
+      "y": 1152.17
     },
     {
       "distance": 3310,
-      "curvature": 0,
-      "x": 2063.96,
-      "y": -511.37
+      "curvature": 0.0,
+      "x": 877.56,
+      "y": 1149.14
     },
     {
       "distance": 3315,
-      "curvature": 0,
-      "x": 2060.04,
-      "y": -508.25
+      "curvature": 0.0,
+      "x": 873.62,
+      "y": 1146.06
     },
     {
       "distance": 3320,
-      "curvature": 0,
-      "x": 2056.13,
-      "y": -505.14
+      "curvature": 0.0,
+      "x": 869.71,
+      "y": 1142.95
     },
     {
       "distance": 3325,
-      "curvature": 0,
-      "x": 2052.22,
-      "y": -502.02
+      "curvature": 0.0,
+      "x": 865.82,
+      "y": 1139.81
     },
     {
       "distance": 3330,
-      "curvature": 0,
-      "x": 2048.31,
-      "y": -498.91
+      "curvature": 0.0,
+      "x": 861.96,
+      "y": 1136.63
     },
     {
       "distance": 3335,
-      "curvature": 0,
-      "x": 2044.39,
-      "y": -495.8
+      "curvature": 0.0,
+      "x": 858.12,
+      "y": 1133.43
     },
     {
       "distance": 3340,
-      "curvature": 0,
-      "x": 2040.48,
-      "y": -492.68
+      "curvature": 0.0,
+      "x": 854.3,
+      "y": 1130.2
     },
     {
       "distance": 3345,
-      "curvature": 0,
-      "x": 2036.57,
-      "y": -489.57
+      "curvature": 0.0,
+      "x": 850.5,
+      "y": 1126.95
     },
     {
       "distance": 3350,
-      "curvature": 0,
-      "x": 2032.66,
-      "y": -486.46
+      "curvature": 0.0,
+      "x": 846.72,
+      "y": 1123.67
     },
     {
       "distance": 3355,
-      "curvature": 0,
-      "x": 2028.75,
-      "y": -483.34
+      "curvature": 0.0,
+      "x": 842.96,
+      "y": 1120.38
     },
     {
       "distance": 3360,
-      "curvature": 0,
-      "x": 2024.83,
-      "y": -480.23
+      "curvature": 0.0,
+      "x": 839.21,
+      "y": 1117.08
     },
     {
       "distance": 3365,
-      "curvature": 0,
-      "x": 2020.92,
-      "y": -477.12
+      "curvature": 0.0,
+      "x": 835.47,
+      "y": 1113.76
     },
     {
       "distance": 3370,
-      "curvature": 0,
-      "x": 2017.01,
-      "y": -474
+      "curvature": 0.0,
+      "x": 831.73,
+      "y": 1110.43
     },
     {
       "distance": 3375,
-      "curvature": 0,
-      "x": 2013.1,
-      "y": -470.89
+      "curvature": 0.0,
+      "x": 828.0,
+      "y": 1107.1
     },
     {
       "distance": 3380,
-      "curvature": 0,
-      "x": 2009.18,
-      "y": -467.77
+      "curvature": 0.0,
+      "x": 824.28,
+      "y": 1103.76
     },
     {
       "distance": 3385,
-      "curvature": 0,
-      "x": 2005.27,
-      "y": -464.66
+      "curvature": 0.0,
+      "x": 820.56,
+      "y": 1100.43
     },
     {
       "distance": 3390,
-      "curvature": 0,
-      "x": 2001.36,
-      "y": -461.55
+      "curvature": 0.0,
+      "x": 816.83,
+      "y": 1097.09
     },
     {
       "distance": 3395,
-      "curvature": 0,
-      "x": 1997.45,
-      "y": -458.43
+      "curvature": 0.0,
+      "x": 813.1,
+      "y": 1093.76
     },
     {
       "distance": 3400,
-      "curvature": 0,
-      "x": 1993.54,
-      "y": -455.32
+      "curvature": 0.0,
+      "x": 809.36,
+      "y": 1090.44
     },
     {
       "distance": 3405,
-      "curvature": 0,
-      "x": 1989.62,
-      "y": -452.21
+      "curvature": 0.0,
+      "x": 805.62,
+      "y": 1087.13
     },
     {
       "distance": 3410,
-      "curvature": 0,
-      "x": 1985.71,
-      "y": -449.09
+      "curvature": 0.0,
+      "x": 801.87,
+      "y": 1083.82
     },
     {
       "distance": 3415,
-      "curvature": -0.008333,
-      "x": 1981.8,
-      "y": -445.98
+      "curvature": -0.003418,
+      "x": 798.11,
+      "y": 1080.52
     },
     {
       "distance": 3420,
-      "curvature": -0.014434,
-      "x": 1978.02,
-      "y": -442.7
+      "curvature": -0.01083,
+      "x": 794.35,
+      "y": 1077.22
     },
     {
       "distance": 3425,
-      "curvature": -0.016667,
-      "x": 1974.49,
-      "y": -439.17
+      "curvature": -0.015346,
+      "x": 790.59,
+      "y": 1073.93
     },
     {
       "distance": 3430,
       "curvature": -0.016667,
-      "x": 1971.26,
-      "y": -435.35
+      "x": 786.83,
+      "y": 1070.64
     },
     {
       "distance": 3435,
       "curvature": -0.016667,
-      "x": 1968.36,
-      "y": -431.27
+      "x": 783.06,
+      "y": 1067.34
     },
     {
       "distance": 3440,
       "curvature": -0.016667,
-      "x": 1965.82,
-      "y": -426.97
+      "x": 779.3,
+      "y": 1064.05
     },
     {
       "distance": 3445,
       "curvature": -0.016667,
-      "x": 1963.63,
-      "y": -422.47
+      "x": 775.54,
+      "y": 1060.76
     },
     {
       "distance": 3450,
       "curvature": -0.016667,
-      "x": 1961.84,
-      "y": -417.81
+      "x": 771.77,
+      "y": 1057.47
     },
     {
       "distance": 3455,
       "curvature": -0.016667,
-      "x": 1960.43,
-      "y": -413.01
+      "x": 768.01,
+      "y": 1054.17
     },
     {
       "distance": 3460,
       "curvature": -0.016667,
-      "x": 1959.43,
-      "y": -408.11
+      "x": 764.25,
+      "y": 1050.88
     },
     {
       "distance": 3465,
       "curvature": -0.016667,
-      "x": 1958.84,
-      "y": -403.14
+      "x": 760.49,
+      "y": 1047.59
     },
     {
       "distance": 3470,
       "curvature": -0.016667,
-      "x": 1958.67,
-      "y": -398.15
+      "x": 756.73,
+      "y": 1044.29
     },
     {
       "distance": 3475,
       "curvature": -0.016667,
-      "x": 1958.91,
-      "y": -393.15
+      "x": 752.97,
+      "y": 1040.99
     },
     {
       "distance": 3480,
-      "curvature": -0.011785,
-      "x": 1959.57,
-      "y": -388.2
+      "curvature": -0.014719,
+      "x": 749.21,
+      "y": 1037.7
     },
     {
       "distance": 3485,
-      "curvature": 0.012856,
-      "x": 1960.52,
-      "y": -383.29
+      "curvature": -0.001975,
+      "x": 745.45,
+      "y": 1034.4
     },
     {
       "distance": 3490,
-      "curvature": 0.018182,
-      "x": 1961.15,
-      "y": -378.33
+      "curvature": 0.014972,
+      "x": 741.69,
+      "y": 1031.1
     },
     {
       "distance": 3495,
       "curvature": 0.018182,
-      "x": 1961.33,
-      "y": -373.33
+      "x": 737.93,
+      "y": 1027.8
     },
     {
       "distance": 3500,
       "curvature": 0.018182,
-      "x": 1961.05,
-      "y": -368.34
+      "x": 734.17,
+      "y": 1024.51
     },
     {
       "distance": 3505,
       "curvature": 0.018182,
-      "x": 1960.32,
-      "y": -363.39
+      "x": 730.42,
+      "y": 1021.21
     },
     {
       "distance": 3510,
       "curvature": 0.018182,
-      "x": 1959.15,
-      "y": -358.53
+      "x": 726.66,
+      "y": 1017.91
     },
     {
       "distance": 3515,
       "curvature": 0.018182,
-      "x": 1957.54,
-      "y": -353.8
+      "x": 722.9,
+      "y": 1014.61
     },
     {
       "distance": 3520,
       "curvature": 0.018182,
-      "x": 1955.5,
-      "y": -349.23
+      "x": 719.15,
+      "y": 1011.31
     },
     {
       "distance": 3525,
       "curvature": 0.018182,
-      "x": 1953.06,
-      "y": -344.86
+      "x": 715.39,
+      "y": 1008.01
     },
     {
       "distance": 3530,
       "curvature": 0.018182,
-      "x": 1950.24,
-      "y": -340.74
+      "x": 711.63,
+      "y": 1004.71
     },
     {
       "distance": 3535,
-      "curvature": 0.012856,
-      "x": 1947.05,
-      "y": -336.89
+      "curvature": 0.016108,
+      "x": 707.88,
+      "y": 1001.41
     },
     {
       "distance": 3540,
-      "curvature": -0.010879,
-      "x": 1943.62,
-      "y": -333.25
+      "curvature": 0.003633,
+      "x": 704.12,
+      "y": 998.11
     },
     {
       "distance": 3545,
-      "curvature": -0.015385,
-      "x": 1940.39,
-      "y": -329.43
+      "curvature": -0.012626,
+      "x": 700.37,
+      "y": 994.81
     },
     {
       "distance": 3550,
       "curvature": -0.015385,
-      "x": 1937.47,
-      "y": -325.38
+      "x": 696.61,
+      "y": 991.51
     },
     {
       "distance": 3555,
       "curvature": -0.015385,
-      "x": 1934.87,
-      "y": -321.11
+      "x": 692.85,
+      "y": 988.2
     },
     {
       "distance": 3560,
       "curvature": -0.015385,
-      "x": 1932.6,
-      "y": -316.65
+      "x": 689.1,
+      "y": 984.9
     },
     {
       "distance": 3565,
       "curvature": -0.015385,
-      "x": 1930.68,
-      "y": -312.03
+      "x": 685.34,
+      "y": 981.6
     },
     {
       "distance": 3570,
       "curvature": -0.015385,
-      "x": 1929.12,
-      "y": -307.28
+      "x": 681.59,
+      "y": 978.3
     },
     {
       "distance": 3575,
       "curvature": -0.015385,
-      "x": 1927.93,
-      "y": -302.42
+      "x": 677.83,
+      "y": 975.0
     },
     {
       "distance": 3580,
       "curvature": -0.015385,
-      "x": 1927.12,
-      "y": -297.49
+      "x": 674.08,
+      "y": 971.7
     },
     {
       "distance": 3585,
       "curvature": -0.015385,
-      "x": 1926.69,
-      "y": -292.51
+      "x": 670.32,
+      "y": 968.4
     },
     {
       "distance": 3590,
       "curvature": -0.015385,
-      "x": 1926.65,
-      "y": -287.51
+      "x": 666.57,
+      "y": 965.1
     },
     {
       "distance": 3595,
       "curvature": -0.015385,
-      "x": 1926.98,
-      "y": -282.52
+      "x": 662.81,
+      "y": 961.79
     },
     {
       "distance": 3600,
-      "curvature": -0.013323,
-      "x": 1927.71,
-      "y": -277.57
+      "curvature": -0.014605,
+      "x": 659.06,
+      "y": 958.49
     },
     {
       "distance": 3605,
-      "curvature": -0.007692,
-      "x": 1928.75,
-      "y": -272.68
+      "curvature": -0.011198,
+      "x": 655.3,
+      "y": 955.19
     },
     {
       "distance": 3610,
-      "curvature": 0,
-      "x": 1929.99,
-      "y": -267.84
+      "curvature": -0.004796,
+      "x": 651.54,
+      "y": 951.89
     },
     {
       "distance": 3615,
-      "curvature": 0,
-      "x": 1931.23,
-      "y": -263
+      "curvature": 0.0,
+      "x": 647.79,
+      "y": 948.59
     },
     {
       "distance": 3620,
-      "curvature": 0,
-      "x": 1932.46,
-      "y": -258.15
+      "curvature": 0.0,
+      "x": 644.03,
+      "y": 945.29
     },
     {
       "distance": 3625,
-      "curvature": 0,
-      "x": 1933.7,
-      "y": -253.31
+      "curvature": 0.0,
+      "x": 640.27,
+      "y": 941.99
     },
     {
       "distance": 3630,
-      "curvature": 0,
-      "x": 1934.93,
-      "y": -248.46
+      "curvature": 0.0,
+      "x": 636.52,
+      "y": 938.69
     },
     {
       "distance": 3635,
-      "curvature": 0,
-      "x": 1936.17,
-      "y": -243.62
+      "curvature": 0.0,
+      "x": 632.76,
+      "y": 935.39
     },
     {
       "distance": 3640,
-      "curvature": 0,
-      "x": 1937.4,
-      "y": -238.77
+      "curvature": 0.0,
+      "x": 629.0,
+      "y": 932.09
     },
     {
       "distance": 3645,
-      "curvature": 0,
-      "x": 1938.64,
-      "y": -233.93
+      "curvature": 0.0,
+      "x": 625.24,
+      "y": 928.8
     },
     {
       "distance": 3650,
-      "curvature": 0,
-      "x": 1939.88,
-      "y": -229.08
+      "curvature": 0.0,
+      "x": 621.49,
+      "y": 925.5
     },
     {
       "distance": 3655,
-      "curvature": 0,
-      "x": 1941.11,
-      "y": -224.24
+      "curvature": 0.0,
+      "x": 617.73,
+      "y": 922.2
     },
     {
       "distance": 3660,
-      "curvature": 0,
-      "x": 1942.35,
-      "y": -219.39
+      "curvature": 0.0,
+      "x": 613.97,
+      "y": 918.9
     },
     {
       "distance": 3665,
-      "curvature": 0,
-      "x": 1943.58,
-      "y": -214.55
+      "curvature": 0.0,
+      "x": 610.21,
+      "y": 915.6
     },
     {
       "distance": 3670,
-      "curvature": 0,
-      "x": 1944.82,
-      "y": -209.7
+      "curvature": 0.0,
+      "x": 606.45,
+      "y": 912.3
     },
     {
       "distance": 3675,
-      "curvature": 0,
-      "x": 1946.05,
-      "y": -204.86
+      "curvature": 0.0,
+      "x": 602.7,
+      "y": 909.01
     },
     {
       "distance": 3680,
-      "curvature": 0,
-      "x": 1947.29,
-      "y": -200.01
+      "curvature": 0.0,
+      "x": 598.94,
+      "y": 905.71
     },
     {
       "distance": 3685,
-      "curvature": 0,
-      "x": 1948.53,
-      "y": -195.17
+      "curvature": 0.0,
+      "x": 595.18,
+      "y": 902.41
     },
     {
       "distance": 3690,
-      "curvature": 0,
-      "x": 1949.76,
-      "y": -190.32
+      "curvature": 0.0,
+      "x": 591.42,
+      "y": 899.11
     },
     {
       "distance": 3695,
-      "curvature": 0,
-      "x": 1951,
-      "y": -185.48
+      "curvature": 0.0,
+      "x": 587.66,
+      "y": 895.81
     },
     {
       "distance": 3700,
-      "curvature": 0,
-      "x": 1952.23,
-      "y": -180.63
+      "curvature": 0.0,
+      "x": 583.9,
+      "y": 892.51
     },
     {
       "distance": 3705,
-      "curvature": 0,
-      "x": 1953.47,
-      "y": -175.79
+      "curvature": 0.0,
+      "x": 580.15,
+      "y": 889.22
     },
     {
       "distance": 3710,
-      "curvature": 0,
-      "x": 1954.71,
-      "y": -170.94
+      "curvature": 0.0,
+      "x": 576.39,
+      "y": 885.92
     },
     {
       "distance": 3715,
-      "curvature": 0,
-      "x": 1955.94,
-      "y": -166.1
+      "curvature": 0.0,
+      "x": 572.63,
+      "y": 882.62
     },
     {
       "distance": 3720,
-      "curvature": 0,
-      "x": 1957.18,
-      "y": -161.25
+      "curvature": 0.0,
+      "x": 568.87,
+      "y": 879.32
     },
     {
       "distance": 3725,
-      "curvature": 0,
-      "x": 1958.41,
-      "y": -156.41
+      "curvature": 0.0,
+      "x": 565.11,
+      "y": 876.02
     },
     {
       "distance": 3730,
-      "curvature": 0,
-      "x": 1959.65,
-      "y": -151.56
+      "curvature": 0.0,
+      "x": 561.36,
+      "y": 872.72
     },
     {
       "distance": 3735,
-      "curvature": 0,
-      "x": 1960.88,
-      "y": -146.72
+      "curvature": 0.0,
+      "x": 557.6,
+      "y": 869.43
     },
     {
       "distance": 3740,
-      "curvature": 0,
-      "x": 1962.12,
-      "y": -141.87
+      "curvature": 0.0,
+      "x": 553.84,
+      "y": 866.13
     },
     {
       "distance": 3745,
-      "curvature": 0,
-      "x": 1963.36,
-      "y": -137.03
+      "curvature": 0.0,
+      "x": 550.08,
+      "y": 862.83
     },
     {
       "distance": 3750,
-      "curvature": 0,
-      "x": 1964.59,
-      "y": -132.18
+      "curvature": 0.0,
+      "x": 546.33,
+      "y": 859.53
     },
     {
       "distance": 3755,
-      "curvature": 0,
-      "x": 1965.83,
-      "y": -127.34
+      "curvature": 0.0,
+      "x": 542.57,
+      "y": 856.23
     },
     {
       "distance": 3760,
-      "curvature": 0,
-      "x": 1967.06,
-      "y": -122.49
+      "curvature": 0.0,
+      "x": 538.81,
+      "y": 852.93
     },
     {
       "distance": 3765,
-      "curvature": 0,
-      "x": 1968.3,
-      "y": -117.65
+      "curvature": 0.0,
+      "x": 535.06,
+      "y": 849.63
     },
     {
       "distance": 3770,
-      "curvature": 0,
-      "x": 1969.53,
-      "y": -112.8
+      "curvature": 0.0,
+      "x": 531.3,
+      "y": 846.33
     },
     {
       "distance": 3775,
-      "curvature": 0,
-      "x": 1970.77,
-      "y": -107.96
+      "curvature": 0.0,
+      "x": 527.54,
+      "y": 843.03
     },
     {
       "distance": 3780,
-      "curvature": 0,
-      "x": 1972.01,
-      "y": -103.11
+      "curvature": 0.0,
+      "x": 523.79,
+      "y": 839.73
     },
     {
       "distance": 3785,
-      "curvature": 0,
-      "x": 1973.24,
-      "y": -98.27
+      "curvature": 0.0,
+      "x": 520.03,
+      "y": 836.43
     },
     {
       "distance": 3790,
-      "curvature": 0,
-      "x": 1974.48,
-      "y": -93.42
+      "curvature": 0.0,
+      "x": 516.27,
+      "y": 833.13
     },
     {
       "distance": 3795,
-      "curvature": 0,
-      "x": 1975.71,
-      "y": -88.58
+      "curvature": 0.0,
+      "x": 512.52,
+      "y": 829.83
     },
     {
       "distance": 3800,
-      "curvature": 0,
-      "x": 1976.95,
-      "y": -83.73
+      "curvature": 0.0,
+      "x": 508.76,
+      "y": 826.53
     },
     {
       "distance": 3805,
-      "curvature": 0,
-      "x": 1978.18,
-      "y": -78.89
+      "curvature": 0.0,
+      "x": 505.01,
+      "y": 823.22
     },
     {
       "distance": 3810,
-      "curvature": 0,
-      "x": 1979.42,
-      "y": -74.04
+      "curvature": 0.0,
+      "x": 501.25,
+      "y": 819.92
     },
     {
       "distance": 3815,
-      "curvature": 0,
-      "x": 1980.66,
-      "y": -69.2
+      "curvature": 0.0,
+      "x": 497.5,
+      "y": 816.62
     },
     {
       "distance": 3820,
-      "curvature": 0,
-      "x": 1981.89,
-      "y": -64.36
+      "curvature": 0.0,
+      "x": 493.74,
+      "y": 813.32
     },
     {
       "distance": 3825,
-      "curvature": 0,
-      "x": 1983.13,
-      "y": -59.51
+      "curvature": 0.0,
+      "x": 489.99,
+      "y": 810.02
     },
     {
       "distance": 3830,
-      "curvature": 0,
-      "x": 1984.36,
-      "y": -54.67
+      "curvature": 0.0,
+      "x": 486.23,
+      "y": 806.72
     },
     {
       "distance": 3835,
-      "curvature": 0,
-      "x": 1985.6,
-      "y": -49.82
+      "curvature": 0.0,
+      "x": 482.48,
+      "y": 803.42
     },
     {
       "distance": 3840,
-      "curvature": 0,
-      "x": 1986.84,
-      "y": -44.98
+      "curvature": 0.0,
+      "x": 478.72,
+      "y": 800.11
     },
     {
       "distance": 3845,
-      "curvature": 0,
-      "x": 1988.07,
-      "y": -40.13
+      "curvature": 0.0,
+      "x": 474.96,
+      "y": 796.81
     },
     {
       "distance": 3850,
-      "curvature": 0,
-      "x": 1989.31,
-      "y": -35.29
+      "curvature": 0.0,
+      "x": 471.21,
+      "y": 793.51
     },
     {
       "distance": 3855,
-      "curvature": 0,
-      "x": 1990.54,
-      "y": -30.44
+      "curvature": 0.0,
+      "x": 467.45,
+      "y": 790.22
     },
     {
       "distance": 3860,
-      "curvature": 0,
-      "x": 1991.78,
-      "y": -25.6
+      "curvature": 0.0,
+      "x": 463.69,
+      "y": 786.92
     },
     {
       "distance": 3865,
-      "curvature": 0,
-      "x": 1993.01,
-      "y": -20.75
+      "curvature": 0.0,
+      "x": 459.93,
+      "y": 783.62
     },
     {
       "distance": 3870,
-      "curvature": 0,
-      "x": 1994.25,
-      "y": -15.91
+      "curvature": 0.0,
+      "x": 456.17,
+      "y": 780.33
     },
     {
       "distance": 3875,
-      "curvature": 0,
-      "x": 1995.49,
-      "y": -11.06
+      "curvature": 0.0,
+      "x": 452.41,
+      "y": 777.03
     },
     {
       "distance": 3880,
-      "curvature": 0,
-      "x": 1996.72,
-      "y": -6.22
+      "curvature": 0.0,
+      "x": 448.65,
+      "y": 773.74
     },
     {
       "distance": 3885,
-      "curvature": 0,
-      "x": 1997.96,
-      "y": -1.37
+      "curvature": 0.0,
+      "x": 444.89,
+      "y": 770.44
     },
     {
       "distance": 3890,
-      "curvature": 0,
-      "x": 1999.19,
-      "y": 3.47
+      "curvature": 0.0,
+      "x": 441.12,
+      "y": 767.15
     },
     {
       "distance": 3895,
-      "curvature": 0,
-      "x": 2000.43,
-      "y": 8.32
+      "curvature": 0.0,
+      "x": 437.36,
+      "y": 763.86
     },
     {
       "distance": 3900,
-      "curvature": 0,
-      "x": 2001.66,
-      "y": 13.16
+      "curvature": 0.0,
+      "x": 433.59,
+      "y": 760.57
     },
     {
       "distance": 3905,
-      "curvature": 0,
-      "x": 2002.9,
-      "y": 18.01
+      "curvature": 0.0,
+      "x": 429.83,
+      "y": 757.28
     },
     {
       "distance": 3910,
-      "curvature": 0,
-      "x": 2004.14,
-      "y": 22.85
+      "curvature": 0.0,
+      "x": 426.07,
+      "y": 753.98
     },
     {
       "distance": 3915,
-      "curvature": 0,
-      "x": 2005.37,
-      "y": 27.7
+      "curvature": 0.0,
+      "x": 422.32,
+      "y": 750.68
     },
     {
       "distance": 3920,
-      "curvature": 0,
-      "x": 2006.61,
-      "y": 32.54
+      "curvature": 0.0,
+      "x": 418.58,
+      "y": 747.36
     },
     {
       "distance": 3925,
-      "curvature": 0,
-      "x": 2007.84,
-      "y": 37.39
+      "curvature": 0.0,
+      "x": 414.85,
+      "y": 744.03
     },
     {
       "distance": 3930,
-      "curvature": 0,
-      "x": 2009.08,
-      "y": 42.23
+      "curvature": 0.0,
+      "x": 411.13,
+      "y": 740.69
     },
     {
       "distance": 3935,
-      "curvature": 0,
-      "x": 2010.31,
-      "y": 47.08
+      "curvature": 0.0,
+      "x": 407.43,
+      "y": 737.33
     },
     {
       "distance": 3940,
-      "curvature": 0,
-      "x": 2011.55,
-      "y": 51.92
+      "curvature": 0.0,
+      "x": 403.75,
+      "y": 733.93
     },
     {
       "distance": 3945,
-      "curvature": 0,
-      "x": 2012.79,
-      "y": 56.77
+      "curvature": 0.0,
+      "x": 400.29,
+      "y": 730.33
     },
     {
       "distance": 3950,
-      "curvature": 0,
-      "x": 2014.02,
-      "y": 61.61
+      "curvature": 0.0,
+      "x": 397.42,
+      "y": 726.23
     },
     {
       "distance": 3955,
-      "curvature": 0,
-      "x": 2015.26,
-      "y": 66.46
+      "curvature": 0.0,
+      "x": 395.48,
+      "y": 721.63
     },
     {
       "distance": 3960,
-      "curvature": 0,
-      "x": 2016.49,
-      "y": 71.3
+      "curvature": 0.0,
+      "x": 394.48,
+      "y": 716.73
     },
     {
       "distance": 3965,
-      "curvature": 0,
-      "x": 2017.73,
-      "y": 76.15
+      "curvature": 0.0,
+      "x": 394.31,
+      "y": 711.73
     },
     {
       "distance": 3970,
-      "curvature": 0,
-      "x": 2018.97,
-      "y": 80.99
+      "curvature": 0.0,
+      "x": 394.67,
+      "y": 706.74
     },
     {
       "distance": 3975,
-      "curvature": 0,
-      "x": 2020.2,
-      "y": 85.84
+      "curvature": 0.0,
+      "x": 395.27,
+      "y": 701.78
     },
     {
       "distance": 3980,
-      "curvature": 0,
-      "x": 2021.44,
-      "y": 90.68
+      "curvature": 0.0,
+      "x": 395.97,
+      "y": 696.83
     },
     {
       "distance": 3985,
-      "curvature": 0,
-      "x": 2022.67,
-      "y": 95.53
+      "curvature": 0.0,
+      "x": 396.64,
+      "y": 691.87
     },
     {
       "distance": 3990,
-      "curvature": 0,
-      "x": 2023.91,
-      "y": 100.37
+      "curvature": 0.0,
+      "x": 397.26,
+      "y": 686.91
     },
     {
       "distance": 3995,
-      "curvature": 0,
-      "x": 2025.14,
-      "y": 105.22
+      "curvature": 0.0,
+      "x": 397.79,
+      "y": 681.94
     },
     {
       "distance": 4000,
-      "curvature": 0,
-      "x": 2026.38,
-      "y": 110.06
+      "curvature": 0.0,
+      "x": 398.22,
+      "y": 676.96
     },
     {
       "distance": 4005,
-      "curvature": 0,
-      "x": 2027.62,
-      "y": 114.91
+      "curvature": 0.0,
+      "x": 398.53,
+      "y": 671.97
     },
     {
       "distance": 4010,
-      "curvature": 0,
-      "x": 2028.85,
-      "y": 119.75
+      "curvature": 0.0,
+      "x": 398.69,
+      "y": 666.97
     },
     {
       "distance": 4015,
-      "curvature": 0,
-      "x": 2030.09,
-      "y": 124.6
+      "curvature": 0.0,
+      "x": 398.68,
+      "y": 661.97
     },
     {
       "distance": 4020,
-      "curvature": 0,
-      "x": 2031.32,
-      "y": 129.44
+      "curvature": 0.0,
+      "x": 398.48,
+      "y": 656.97
     },
     {
       "distance": 4025,
-      "curvature": 0,
-      "x": 2032.56,
-      "y": 134.29
+      "curvature": 0.0,
+      "x": 398.07,
+      "y": 651.99
     },
     {
       "distance": 4030,
-      "curvature": 0,
-      "x": 2033.79,
-      "y": 139.13
+      "curvature": 0.0,
+      "x": 397.42,
+      "y": 647.03
     },
     {
       "distance": 4035,
-      "curvature": 0,
-      "x": 2035.03,
-      "y": 143.97
+      "curvature": 0.0,
+      "x": 396.53,
+      "y": 642.11
     },
     {
       "distance": 4040,
-      "curvature": 0,
-      "x": 2036.27,
-      "y": 148.82
+      "curvature": 0.0,
+      "x": 395.41,
+      "y": 637.24
     },
     {
       "distance": 4045,
-      "curvature": 0,
-      "x": 2037.5,
-      "y": 153.66
+      "curvature": 0.0,
+      "x": 394.06,
+      "y": 632.42
     },
     {
       "distance": 4050,
-      "curvature": 0,
-      "x": 2038.74,
-      "y": 158.51
+      "curvature": 0.0,
+      "x": 392.49,
+      "y": 627.68
     },
     {
       "distance": 4055,
-      "curvature": 0,
-      "x": 2039.97,
-      "y": 163.35
+      "curvature": 0.0,
+      "x": 390.7,
+      "y": 623.01
     },
     {
       "distance": 4060,
-      "curvature": 0,
-      "x": 2041.21,
-      "y": 168.2
+      "curvature": 0.0,
+      "x": 388.71,
+      "y": 618.42
     },
     {
       "distance": 4065,
-      "curvature": 0,
-      "x": 2042.44,
-      "y": 173.04
-    },
-    {
-      "distance": 4070,
-      "curvature": 0,
-      "x": 2043.68,
-      "y": 177.89
-    },
-    {
-      "distance": 4075,
-      "curvature": 0,
-      "x": 2044.92,
-      "y": 182.73
-    },
-    {
-      "distance": 4080,
-      "curvature": 0,
-      "x": 2046.15,
-      "y": 187.58
-    },
-    {
-      "distance": 4085,
-      "curvature": 0,
-      "x": 2047.39,
-      "y": 192.42
-    },
-    {
-      "distance": 4090,
-      "curvature": 0,
-      "x": 2048.62,
-      "y": 197.27
-    },
-    {
-      "distance": 4095,
-      "curvature": 0,
-      "x": 2049.86,
-      "y": 202.11
-    },
-    {
-      "distance": 4100,
-      "curvature": 0,
-      "x": 2051.1,
-      "y": 206.96
-    },
-    {
-      "distance": 4105,
-      "curvature": 0,
-      "x": 2052.33,
-      "y": 211.8
-    },
-    {
-      "distance": 4110,
-      "curvature": 0,
-      "x": 2053.57,
-      "y": 216.65
-    },
-    {
-      "distance": 4115,
-      "curvature": 0,
-      "x": 2054.8,
-      "y": 221.49
-    },
-    {
-      "distance": 4120,
-      "curvature": 0,
-      "x": 2056.04,
-      "y": 226.34
-    },
-    {
-      "distance": 4125,
-      "curvature": 0,
-      "x": 2057.27,
-      "y": 231.18
-    },
-    {
-      "distance": 4130,
-      "curvature": 0,
-      "x": 2058.51,
-      "y": 236.03
-    },
-    {
-      "distance": 4135,
-      "curvature": 0,
-      "x": 2059.75,
-      "y": 240.87
-    },
-    {
-      "distance": 4140,
-      "curvature": 0,
-      "x": 2060.98,
-      "y": 245.72
-    },
-    {
-      "distance": 4145,
-      "curvature": 0,
-      "x": 2062.22,
-      "y": 250.56
-    },
-    {
-      "distance": 4150,
-      "curvature": 0,
-      "x": 2063.45,
-      "y": 255.41
-    },
-    {
-      "distance": 4155,
-      "curvature": 0,
-      "x": 2064.69,
-      "y": 260.25
-    },
-    {
-      "distance": 4160,
-      "curvature": 0,
-      "x": 2065.92,
-      "y": 265.1
-    },
-    {
-      "distance": 4165,
-      "curvature": 0,
-      "x": 2067.16,
-      "y": 269.94
-    },
-    {
-      "distance": 4170,
-      "curvature": 0,
-      "x": 2068.4,
-      "y": 274.79
-    },
-    {
-      "distance": 4175,
-      "curvature": 0,
-      "x": 2069.63,
-      "y": 279.63
-    },
-    {
-      "distance": 4180,
-      "curvature": 0,
-      "x": 2070.87,
-      "y": 284.48
-    },
-    {
-      "distance": 4185,
-      "curvature": 0,
-      "x": 2072.1,
-      "y": 289.32
-    },
-    {
-      "distance": 4190,
-      "curvature": 0,
-      "x": 2073.34,
-      "y": 294.17
-    },
-    {
-      "distance": 4195,
-      "curvature": 0,
-      "x": 2074.57,
-      "y": 299.01
-    },
-    {
-      "distance": 4200,
-      "curvature": 0,
-      "x": 2075.81,
-      "y": 303.86
-    },
-    {
-      "distance": 4205,
-      "curvature": 0,
-      "x": 2077.05,
-      "y": 308.7
-    },
-    {
-      "distance": 4210,
-      "curvature": 0,
-      "x": 2078.28,
-      "y": 313.55
-    },
-    {
-      "distance": 4215,
-      "curvature": 0,
-      "x": 2079.52,
-      "y": 318.39
-    },
-    {
-      "distance": 4220,
-      "curvature": 0,
-      "x": 2080.75,
-      "y": 323.24
-    },
-    {
-      "distance": 4225,
-      "curvature": 0,
-      "x": 2081.99,
-      "y": 328.08
-    },
-    {
-      "distance": 4230,
-      "curvature": 0,
-      "x": 2083.23,
-      "y": 332.93
-    },
-    {
-      "distance": 4235,
-      "curvature": 0,
-      "x": 2084.46,
-      "y": 337.77
-    },
-    {
-      "distance": 4240,
-      "curvature": 0,
-      "x": 2085.7,
-      "y": 342.62
-    },
-    {
-      "distance": 4245,
-      "curvature": 0,
-      "x": 2086.93,
-      "y": 347.46
-    },
-    {
-      "distance": 4250,
-      "curvature": 0,
-      "x": 2088.17,
-      "y": 352.3
-    },
-    {
-      "distance": 4255,
-      "curvature": 0,
-      "x": 2089.4,
-      "y": 357.15
-    },
-    {
-      "distance": 4260,
-      "curvature": 0,
-      "x": 2090.64,
-      "y": 361.99
-    },
-    {
-      "distance": 4265,
-      "curvature": 0,
-      "x": 2091.88,
-      "y": 366.84
-    },
-    {
-      "distance": 4270,
-      "curvature": 0,
-      "x": 2093.11,
-      "y": 371.68
-    },
-    {
-      "distance": 4275,
-      "curvature": 0,
-      "x": 2094.35,
-      "y": 376.53
-    },
-    {
-      "distance": 4280,
-      "curvature": 0,
-      "x": 2095.58,
-      "y": 381.37
-    },
-    {
-      "distance": 4285,
-      "curvature": 0,
-      "x": 2096.82,
-      "y": 386.22
-    },
-    {
-      "distance": 4290,
-      "curvature": 0,
-      "x": 2098.05,
-      "y": 391.06
-    },
-    {
-      "distance": 4295,
-      "curvature": 0,
-      "x": 2099.29,
-      "y": 395.91
-    },
-    {
-      "distance": 4300,
-      "curvature": 0,
-      "x": 2100.53,
-      "y": 400.75
-    },
-    {
-      "distance": 4305,
-      "curvature": 0,
-      "x": 2101.76,
-      "y": 405.6
-    },
-    {
-      "distance": 4310,
-      "curvature": 0,
-      "x": 2103,
-      "y": 410.44
-    },
-    {
-      "distance": 4315,
-      "curvature": 0,
-      "x": 2104.23,
-      "y": 415.29
-    },
-    {
-      "distance": 4320,
-      "curvature": 0,
-      "x": 2105.47,
-      "y": 420.13
-    },
-    {
-      "distance": 4325,
-      "curvature": 0,
-      "x": 2106.7,
-      "y": 424.98
-    },
-    {
-      "distance": 4330,
-      "curvature": 0,
-      "x": 2107.94,
-      "y": 429.82
-    },
-    {
-      "distance": 4335,
-      "curvature": 0,
-      "x": 2109.18,
-      "y": 434.67
-    },
-    {
-      "distance": 4340,
-      "curvature": 0,
-      "x": 2110.41,
-      "y": 439.51
-    },
-    {
-      "distance": 4345,
-      "curvature": 0,
-      "x": 2111.65,
-      "y": 444.36
-    },
-    {
-      "distance": 4350,
-      "curvature": 0,
-      "x": 2112.88,
-      "y": 449.2
-    },
-    {
-      "distance": 4355,
-      "curvature": 0,
-      "x": 2114.12,
-      "y": 454.05
-    },
-    {
-      "distance": 4360,
-      "curvature": 0,
-      "x": 2115.36,
-      "y": 458.89
-    },
-    {
-      "distance": 4365,
-      "curvature": 0,
-      "x": 2116.59,
-      "y": 463.74
-    },
-    {
-      "distance": 4370,
-      "curvature": 0,
-      "x": 2117.83,
-      "y": 468.58
-    },
-    {
-      "distance": 4375,
-      "curvature": 0,
-      "x": 2119.06,
-      "y": 473.43
-    },
-    {
-      "distance": 4380,
-      "curvature": 0,
-      "x": 2120.3,
-      "y": 478.27
-    },
-    {
-      "distance": 4385,
-      "curvature": 0,
-      "x": 2121.53,
-      "y": 483.12
-    },
-    {
-      "distance": 4390,
-      "curvature": 0,
-      "x": 2122.77,
-      "y": 487.96
-    },
-    {
-      "distance": 4395,
-      "curvature": 0,
-      "x": 2124.01,
-      "y": 492.81
-    },
-    {
-      "distance": 4400,
-      "curvature": 0,
-      "x": 2125.24,
-      "y": 497.65
-    },
-    {
-      "distance": 4405,
-      "curvature": 0,
-      "x": 2126.48,
-      "y": 502.5
-    },
-    {
-      "distance": 4410,
-      "curvature": 0,
-      "x": 2127.71,
-      "y": 507.34
-    },
-    {
-      "distance": 4415,
-      "curvature": 0,
-      "x": 2128.95,
-      "y": 512.19
-    },
-    {
-      "distance": 4420,
-      "curvature": 0,
-      "x": 2130.18,
-      "y": 517.03
-    },
-    {
-      "distance": 4425,
-      "curvature": 0,
-      "x": 2131.42,
-      "y": 521.88
-    },
-    {
-      "distance": 4430,
-      "curvature": 0,
-      "x": 2132.66,
-      "y": 526.72
-    },
-    {
-      "distance": 4435,
-      "curvature": 0,
-      "x": 2133.89,
-      "y": 531.57
-    },
-    {
-      "distance": 4440,
-      "curvature": 0,
-      "x": 2135.13,
-      "y": 536.41
-    },
-    {
-      "distance": 4445,
-      "curvature": 0,
-      "x": 2136.36,
-      "y": 541.26
-    },
-    {
-      "distance": 4450,
-      "curvature": 0,
-      "x": 2137.6,
-      "y": 546.1
-    },
-    {
-      "distance": 4455,
-      "curvature": 0,
-      "x": 2138.83,
-      "y": 550.94
-    },
-    {
-      "distance": 4460,
-      "curvature": 0,
-      "x": 2140.07,
-      "y": 555.79
-    },
-    {
-      "distance": 4465,
-      "curvature": 0,
-      "x": 2141.31,
-      "y": 560.63
-    },
-    {
-      "distance": 4470,
-      "curvature": 0,
-      "x": 2142.54,
-      "y": 565.48
-    },
-    {
-      "distance": 4475,
-      "curvature": 0,
-      "x": 2143.78,
-      "y": 570.32
-    },
-    {
-      "distance": 4480,
-      "curvature": 0,
-      "x": 2145.01,
-      "y": 575.17
-    },
-    {
-      "distance": 4485,
-      "curvature": 0,
-      "x": 2146.25,
-      "y": 580.01
-    },
-    {
-      "distance": 4490,
-      "curvature": 0,
-      "x": 2147.49,
-      "y": 584.86
-    },
-    {
-      "distance": 4495,
-      "curvature": 0,
-      "x": 2148.72,
-      "y": 589.7
-    },
-    {
-      "distance": 4500,
-      "curvature": 0,
-      "x": 2149.96,
-      "y": 594.55
-    },
-    {
-      "distance": 4505,
-      "curvature": 0,
-      "x": 2151.19,
-      "y": 599.39
-    },
-    {
-      "distance": 4510,
-      "curvature": 0,
-      "x": 2152.43,
-      "y": 604.24
-    },
-    {
-      "distance": 4515,
-      "curvature": 0,
-      "x": 2153.66,
-      "y": 609.08
-    },
-    {
-      "distance": 4520,
-      "curvature": 0,
-      "x": 2154.9,
+      "curvature": 0.0,
+      "x": 386.52,
       "y": 613.93
     },
     {
+      "distance": 4070,
+      "curvature": 0.0,
+      "x": 384.13,
+      "y": 609.53
+    },
+    {
+      "distance": 4075,
+      "curvature": 0.0,
+      "x": 381.55,
+      "y": 605.25
+    },
+    {
+      "distance": 4080,
+      "curvature": 0.0,
+      "x": 378.78,
+      "y": 601.08
+    },
+    {
+      "distance": 4085,
+      "curvature": 0.0,
+      "x": 375.83,
+      "y": 597.05
+    },
+    {
+      "distance": 4090,
+      "curvature": 0.0,
+      "x": 372.7,
+      "y": 593.15
+    },
+    {
+      "distance": 4095,
+      "curvature": 0.0,
+      "x": 369.38,
+      "y": 589.41
+    },
+    {
+      "distance": 4100,
+      "curvature": 0.0,
+      "x": 365.87,
+      "y": 585.85
+    },
+    {
+      "distance": 4105,
+      "curvature": 0.0,
+      "x": 362.19,
+      "y": 582.46
+    },
+    {
+      "distance": 4110,
+      "curvature": 0.0,
+      "x": 358.36,
+      "y": 579.25
+    },
+    {
+      "distance": 4115,
+      "curvature": 0.0,
+      "x": 354.4,
+      "y": 576.2
+    },
+    {
+      "distance": 4120,
+      "curvature": 0.0,
+      "x": 350.35,
+      "y": 573.27
+    },
+    {
+      "distance": 4125,
+      "curvature": 0.0,
+      "x": 346.25,
+      "y": 570.4
+    },
+    {
+      "distance": 4130,
+      "curvature": 0.0,
+      "x": 342.24,
+      "y": 567.42
+    },
+    {
+      "distance": 4135,
+      "curvature": 0.0,
+      "x": 338.45,
+      "y": 564.16
+    },
+    {
+      "distance": 4140,
+      "curvature": 0.0,
+      "x": 335.11,
+      "y": 560.43
+    },
+    {
+      "distance": 4145,
+      "curvature": 0.0,
+      "x": 332.53,
+      "y": 556.15
+    },
+    {
+      "distance": 4150,
+      "curvature": 0.0,
+      "x": 330.72,
+      "y": 551.49
+    },
+    {
+      "distance": 4155,
+      "curvature": 0.0,
+      "x": 329.46,
+      "y": 546.65
+    },
+    {
+      "distance": 4160,
+      "curvature": 0.0,
+      "x": 328.54,
+      "y": 541.74
+    },
+    {
+      "distance": 4165,
+      "curvature": 0.0,
+      "x": 327.75,
+      "y": 536.8
+    },
+    {
+      "distance": 4170,
+      "curvature": 0.0,
+      "x": 326.98,
+      "y": 531.86
+    },
+    {
+      "distance": 4175,
+      "curvature": 0.0,
+      "x": 326.24,
+      "y": 526.91
+    },
+    {
+      "distance": 4180,
+      "curvature": 0.0,
+      "x": 325.53,
+      "y": 521.96
+    },
+    {
+      "distance": 4185,
+      "curvature": 0.0,
+      "x": 324.84,
+      "y": 517.01
+    },
+    {
+      "distance": 4190,
+      "curvature": 0.0,
+      "x": 324.16,
+      "y": 512.06
+    },
+    {
+      "distance": 4195,
+      "curvature": 0.0,
+      "x": 323.51,
+      "y": 507.1
+    },
+    {
+      "distance": 4200,
+      "curvature": 0.0,
+      "x": 322.87,
+      "y": 502.14
+    },
+    {
+      "distance": 4205,
+      "curvature": 0.0,
+      "x": 322.25,
+      "y": 497.18
+    },
+    {
+      "distance": 4210,
+      "curvature": 0.0,
+      "x": 321.64,
+      "y": 492.22
+    },
+    {
+      "distance": 4215,
+      "curvature": 0.0,
+      "x": 321.04,
+      "y": 487.25
+    },
+    {
+      "distance": 4220,
+      "curvature": 0.0,
+      "x": 320.45,
+      "y": 482.29
+    },
+    {
+      "distance": 4225,
+      "curvature": 0.0,
+      "x": 319.87,
+      "y": 477.32
+    },
+    {
+      "distance": 4230,
+      "curvature": 0.0,
+      "x": 319.29,
+      "y": 472.35
+    },
+    {
+      "distance": 4235,
+      "curvature": 0.0,
+      "x": 318.72,
+      "y": 467.39
+    },
+    {
+      "distance": 4240,
+      "curvature": 0.0,
+      "x": 318.14,
+      "y": 462.42
+    },
+    {
+      "distance": 4245,
+      "curvature": 0.0,
+      "x": 317.57,
+      "y": 457.45
+    },
+    {
+      "distance": 4250,
+      "curvature": 0.0,
+      "x": 317.0,
+      "y": 452.49
+    },
+    {
+      "distance": 4255,
+      "curvature": 0.0,
+      "x": 316.42,
+      "y": 447.52
+    },
+    {
+      "distance": 4260,
+      "curvature": 0.0,
+      "x": 315.83,
+      "y": 442.55
+    },
+    {
+      "distance": 4265,
+      "curvature": 0.0,
+      "x": 315.24,
+      "y": 437.59
+    },
+    {
+      "distance": 4270,
+      "curvature": 0.0,
+      "x": 314.65,
+      "y": 432.62
+    },
+    {
+      "distance": 4275,
+      "curvature": 0.0,
+      "x": 314.06,
+      "y": 427.66
+    },
+    {
+      "distance": 4280,
+      "curvature": 0.0,
+      "x": 313.46,
+      "y": 422.69
+    },
+    {
+      "distance": 4285,
+      "curvature": 0.0,
+      "x": 312.86,
+      "y": 417.73
+    },
+    {
+      "distance": 4290,
+      "curvature": 0.0,
+      "x": 312.26,
+      "y": 412.77
+    },
+    {
+      "distance": 4295,
+      "curvature": 0.0,
+      "x": 311.65,
+      "y": 407.8
+    },
+    {
+      "distance": 4300,
+      "curvature": 0.0,
+      "x": 311.05,
+      "y": 402.84
+    },
+    {
+      "distance": 4305,
+      "curvature": 0.0,
+      "x": 310.45,
+      "y": 397.87
+    },
+    {
+      "distance": 4310,
+      "curvature": 0.0,
+      "x": 309.85,
+      "y": 392.91
+    },
+    {
+      "distance": 4315,
+      "curvature": 0.0,
+      "x": 309.25,
+      "y": 387.95
+    },
+    {
+      "distance": 4320,
+      "curvature": 0.0,
+      "x": 308.65,
+      "y": 382.98
+    },
+    {
+      "distance": 4325,
+      "curvature": 0.0,
+      "x": 308.06,
+      "y": 378.02
+    },
+    {
+      "distance": 4330,
+      "curvature": 0.0,
+      "x": 307.46,
+      "y": 373.05
+    },
+    {
+      "distance": 4335,
+      "curvature": 0.0,
+      "x": 306.88,
+      "y": 368.09
+    },
+    {
+      "distance": 4340,
+      "curvature": 0.0,
+      "x": 306.3,
+      "y": 363.12
+    },
+    {
+      "distance": 4345,
+      "curvature": 0.0,
+      "x": 305.72,
+      "y": 358.15
+    },
+    {
+      "distance": 4350,
+      "curvature": 0.0,
+      "x": 305.15,
+      "y": 353.19
+    },
+    {
+      "distance": 4355,
+      "curvature": 0.0,
+      "x": 304.58,
+      "y": 348.22
+    },
+    {
+      "distance": 4360,
+      "curvature": 0.0,
+      "x": 304.02,
+      "y": 343.25
+    },
+    {
+      "distance": 4365,
+      "curvature": 0.0,
+      "x": 303.46,
+      "y": 338.28
+    },
+    {
+      "distance": 4370,
+      "curvature": 0.0,
+      "x": 302.91,
+      "y": 333.31
+    },
+    {
+      "distance": 4375,
+      "curvature": 0.0,
+      "x": 302.36,
+      "y": 328.34
+    },
+    {
+      "distance": 4380,
+      "curvature": 0.0,
+      "x": 301.82,
+      "y": 323.37
+    },
+    {
+      "distance": 4385,
+      "curvature": 0.0,
+      "x": 301.28,
+      "y": 318.4
+    },
+    {
+      "distance": 4390,
+      "curvature": 0.0,
+      "x": 300.75,
+      "y": 313.43
+    },
+    {
+      "distance": 4395,
+      "curvature": 0.0,
+      "x": 300.22,
+      "y": 308.46
+    },
+    {
+      "distance": 4400,
+      "curvature": 0.0,
+      "x": 299.69,
+      "y": 303.48
+    },
+    {
+      "distance": 4405,
+      "curvature": 0.0,
+      "x": 299.17,
+      "y": 298.51
+    },
+    {
+      "distance": 4410,
+      "curvature": 0.0,
+      "x": 298.65,
+      "y": 293.54
+    },
+    {
+      "distance": 4415,
+      "curvature": 0.0,
+      "x": 298.13,
+      "y": 288.56
+    },
+    {
+      "distance": 4420,
+      "curvature": 0.0,
+      "x": 297.62,
+      "y": 283.59
+    },
+    {
+      "distance": 4425,
+      "curvature": 0.0,
+      "x": 297.11,
+      "y": 278.62
+    },
+    {
+      "distance": 4430,
+      "curvature": 0.0,
+      "x": 296.6,
+      "y": 273.64
+    },
+    {
+      "distance": 4435,
+      "curvature": 0.0,
+      "x": 296.09,
+      "y": 268.67
+    },
+    {
+      "distance": 4440,
+      "curvature": 0.0,
+      "x": 295.59,
+      "y": 263.69
+    },
+    {
+      "distance": 4445,
+      "curvature": 0.0,
+      "x": 295.09,
+      "y": 258.72
+    },
+    {
+      "distance": 4450,
+      "curvature": 0.0,
+      "x": 294.59,
+      "y": 253.74
+    },
+    {
+      "distance": 4455,
+      "curvature": 0.0,
+      "x": 294.09,
+      "y": 248.77
+    },
+    {
+      "distance": 4460,
+      "curvature": 0.0,
+      "x": 293.59,
+      "y": 243.79
+    },
+    {
+      "distance": 4465,
+      "curvature": 0.0,
+      "x": 293.1,
+      "y": 238.82
+    },
+    {
+      "distance": 4470,
+      "curvature": 0.0,
+      "x": 292.61,
+      "y": 233.84
+    },
+    {
+      "distance": 4475,
+      "curvature": 0.0,
+      "x": 292.11,
+      "y": 228.87
+    },
+    {
+      "distance": 4480,
+      "curvature": 0.0,
+      "x": 291.62,
+      "y": 223.89
+    },
+    {
+      "distance": 4485,
+      "curvature": 0.0,
+      "x": 291.13,
+      "y": 218.91
+    },
+    {
+      "distance": 4490,
+      "curvature": 0.0,
+      "x": 290.64,
+      "y": 213.94
+    },
+    {
+      "distance": 4495,
+      "curvature": 0.0,
+      "x": 290.15,
+      "y": 208.96
+    },
+    {
+      "distance": 4500,
+      "curvature": 0.0,
+      "x": 289.66,
+      "y": 203.98
+    },
+    {
+      "distance": 4505,
+      "curvature": 0.0,
+      "x": 289.17,
+      "y": 199.01
+    },
+    {
+      "distance": 4510,
+      "curvature": 0.0,
+      "x": 288.68,
+      "y": 194.03
+    },
+    {
+      "distance": 4515,
+      "curvature": 0.0,
+      "x": 288.19,
+      "y": 189.06
+    },
+    {
+      "distance": 4520,
+      "curvature": 0.0,
+      "x": 287.7,
+      "y": 184.08
+    },
+    {
       "distance": 4525,
-      "curvature": 0,
-      "x": 2156.14,
-      "y": 618.77
+      "curvature": 0.0,
+      "x": 287.21,
+      "y": 179.1
     },
     {
       "distance": 4530,
-      "curvature": 0,
-      "x": 2157.37,
-      "y": 623.62
+      "curvature": 0.0,
+      "x": 286.72,
+      "y": 174.13
     },
     {
       "distance": 4535,
-      "curvature": 0,
-      "x": 2158.61,
-      "y": 628.46
+      "curvature": 0.0,
+      "x": 286.23,
+      "y": 169.15
     },
     {
       "distance": 4540,
-      "curvature": 0,
-      "x": 2159.84,
-      "y": 633.31
+      "curvature": 0.0,
+      "x": 285.73,
+      "y": 164.18
     },
     {
       "distance": 4545,
-      "curvature": 0,
-      "x": 2161.08,
-      "y": 638.15
+      "curvature": 0.0,
+      "x": 285.24,
+      "y": 159.2
     },
     {
       "distance": 4550,
-      "curvature": 0,
-      "x": 2162.31,
-      "y": 643
+      "curvature": 0.0,
+      "x": 284.74,
+      "y": 154.23
     },
     {
       "distance": 4555,
-      "curvature": 0,
-      "x": 2163.55,
-      "y": 647.84
+      "curvature": 0.0,
+      "x": 284.25,
+      "y": 149.25
     },
     {
       "distance": 4560,
-      "curvature": 0,
-      "x": 2164.79,
-      "y": 652.69
+      "curvature": 0.0,
+      "x": 283.75,
+      "y": 144.27
     },
     {
       "distance": 4565,
-      "curvature": 0,
-      "x": 2166.02,
-      "y": 657.53
+      "curvature": 0.0,
+      "x": 283.25,
+      "y": 139.3
     },
     {
       "distance": 4570,
-      "curvature": 0,
-      "x": 2167.26,
-      "y": 662.38
+      "curvature": 0.0,
+      "x": 282.76,
+      "y": 134.32
     },
     {
       "distance": 4575,
-      "curvature": 0,
-      "x": 2168.49,
-      "y": 667.22
+      "curvature": 0.0,
+      "x": 282.26,
+      "y": 129.35
     },
     {
       "distance": 4580,
-      "curvature": 0,
-      "x": 2169.73,
-      "y": 672.07
+      "curvature": 0.0,
+      "x": 281.76,
+      "y": 124.37
     },
     {
       "distance": 4585,
-      "curvature": 0,
-      "x": 2170.96,
-      "y": 676.91
+      "curvature": 0.0,
+      "x": 281.26,
+      "y": 119.4
     },
     {
       "distance": 4590,
-      "curvature": 0,
-      "x": 2172.2,
-      "y": 681.76
+      "curvature": 0.0,
+      "x": 280.76,
+      "y": 114.42
     },
     {
       "distance": 4595,
-      "curvature": 0,
-      "x": 2173.44,
-      "y": 686.6
+      "curvature": 0.0,
+      "x": 280.26,
+      "y": 109.45
     },
     {
       "distance": 4600,
-      "curvature": 0,
-      "x": 2174.67,
-      "y": 691.45
+      "curvature": 0.0,
+      "x": 279.76,
+      "y": 104.47
     },
     {
       "distance": 4605,
-      "curvature": 0,
-      "x": 2175.91,
-      "y": 696.29
+      "curvature": 0.0,
+      "x": 279.26,
+      "y": 99.5
     },
     {
       "distance": 4610,
-      "curvature": 0,
-      "x": 2177.14,
-      "y": 701.14
+      "curvature": 0.0,
+      "x": 278.76,
+      "y": 94.52
     },
     {
       "distance": 4615,
-      "curvature": 0,
-      "x": 2178.38,
-      "y": 705.98
+      "curvature": 0.0,
+      "x": 278.25,
+      "y": 89.55
     },
     {
       "distance": 4620,
-      "curvature": 0,
-      "x": 2179.62,
-      "y": 710.83
+      "curvature": 0.0,
+      "x": 277.75,
+      "y": 84.57
     },
     {
       "distance": 4625,
-      "curvature": 0,
-      "x": 2180.85,
-      "y": 715.67
+      "curvature": 0.0,
+      "x": 277.25,
+      "y": 79.6
     },
     {
       "distance": 4630,
-      "curvature": 0,
-      "x": 2182.09,
-      "y": 720.52
+      "curvature": 0.0,
+      "x": 276.75,
+      "y": 74.62
     },
     {
       "distance": 4635,
-      "curvature": 0,
-      "x": 2183.32,
-      "y": 725.36
+      "curvature": 0.0,
+      "x": 276.25,
+      "y": 69.65
     },
     {
       "distance": 4640,
-      "curvature": 0,
-      "x": 2184.56,
-      "y": 730.21
+      "curvature": 0.0,
+      "x": 275.74,
+      "y": 64.67
     },
     {
       "distance": 4645,
-      "curvature": 0,
-      "x": 2185.79,
-      "y": 735.05
+      "curvature": 0.0,
+      "x": 275.24,
+      "y": 59.7
     },
     {
       "distance": 4650,
-      "curvature": 0,
-      "x": 2187.03,
-      "y": 739.9
+      "curvature": 0.0,
+      "x": 274.74,
+      "y": 54.72
     },
     {
       "distance": 4655,
-      "curvature": 0,
-      "x": 2188.27,
-      "y": 744.74
+      "curvature": 0.0,
+      "x": 274.23,
+      "y": 49.75
     },
     {
       "distance": 4660,
-      "curvature": 0,
-      "x": 2189.5,
-      "y": 749.59
+      "curvature": 0.0,
+      "x": 273.73,
+      "y": 44.77
     },
     {
       "distance": 4665,
-      "curvature": 0,
-      "x": 2190.74,
-      "y": 754.43
+      "curvature": 0.0,
+      "x": 273.23,
+      "y": 39.8
     },
     {
       "distance": 4670,
-      "curvature": 0,
-      "x": 2191.97,
-      "y": 759.27
+      "curvature": 0.0,
+      "x": 272.72,
+      "y": 34.82
     },
     {
       "distance": 4675,
-      "curvature": 0,
-      "x": 2193.21,
-      "y": 764.12
+      "curvature": 0.0,
+      "x": 272.22,
+      "y": 29.85
     },
     {
       "distance": 4680,
-      "curvature": 0,
-      "x": 2194.44,
-      "y": 768.96
+      "curvature": 0.0,
+      "x": 271.71,
+      "y": 24.88
     },
     {
       "distance": 4685,
-      "curvature": 0,
-      "x": 2195.68,
-      "y": 773.81
+      "curvature": 0.0,
+      "x": 271.21,
+      "y": 19.9
     },
     {
       "distance": 4690,
-      "curvature": 0,
-      "x": 2196.92,
-      "y": 778.65
+      "curvature": 0.0,
+      "x": 270.71,
+      "y": 14.93
     },
     {
       "distance": 4695,
-      "curvature": 0,
-      "x": 2198.15,
-      "y": 783.5
+      "curvature": 0.0,
+      "x": 270.21,
+      "y": 9.95
     },
     {
       "distance": 4700,
-      "curvature": 0,
-      "x": 2199.39,
-      "y": 788.34
+      "curvature": 0.0,
+      "x": 269.7,
+      "y": 4.98
     },
     {
       "distance": 4705,
-      "curvature": 0,
-      "x": 2200.62,
-      "y": 793.19
+      "curvature": 0.0,
+      "x": 269.2,
+      "y": 0.0
     },
     {
       "distance": 4710,
-      "curvature": 0,
-      "x": 2201.86,
-      "y": 798.03
+      "curvature": 0.0,
+      "x": 268.7,
+      "y": -4.97
     },
     {
       "distance": 4715,
-      "curvature": 0,
-      "x": 2203.09,
-      "y": 802.88
+      "curvature": 0.0,
+      "x": 268.19,
+      "y": -9.95
     },
     {
       "distance": 4720,
-      "curvature": 0,
-      "x": 2204.33,
-      "y": 807.72
+      "curvature": 0.0,
+      "x": 267.69,
+      "y": -14.92
     },
     {
       "distance": 4725,
-      "curvature": 0,
-      "x": 2205.57,
-      "y": 812.57
+      "curvature": 0.0,
+      "x": 267.19,
+      "y": -19.9
     },
     {
       "distance": 4730,
-      "curvature": 0,
-      "x": 2206.8,
-      "y": 817.41
+      "curvature": 0.0,
+      "x": 266.69,
+      "y": -24.87
     },
     {
       "distance": 4735,
-      "curvature": 0,
-      "x": 2208.04,
-      "y": 822.26
+      "curvature": 0.0,
+      "x": 266.19,
+      "y": -29.85
     },
     {
       "distance": 4740,
-      "curvature": 0,
-      "x": 2209.27,
-      "y": 827.1
+      "curvature": 0.0,
+      "x": 265.69,
+      "y": -34.82
     },
     {
       "distance": 4745,
-      "curvature": 0,
-      "x": 2210.51,
-      "y": 831.95
+      "curvature": 0.0,
+      "x": 265.18,
+      "y": -39.8
     },
     {
       "distance": 4750,
-      "curvature": 0,
-      "x": 2211.75,
-      "y": 836.79
+      "curvature": 0.0,
+      "x": 264.68,
+      "y": -44.77
     },
     {
       "distance": 4755,
-      "curvature": -0.002225,
-      "x": 2212.98,
-      "y": 841.64
+      "curvature": -0.000398,
+      "x": 264.18,
+      "y": -49.75
     },
     {
       "distance": 4760,
-      "curvature": -0.004339,
-      "x": 2214.27,
-      "y": 846.47
+      "curvature": -0.002601,
+      "x": 263.68,
+      "y": -54.72
     },
     {
       "distance": 4765,
-      "curvature": -0.006235,
-      "x": 2215.66,
-      "y": 851.27
+      "curvature": -0.004675,
+      "x": 263.18,
+      "y": -59.7
     },
     {
       "distance": 4770,
-      "curvature": -0.007818,
-      "x": 2217.21,
-      "y": 856.03
+      "curvature": -0.006514,
+      "x": 262.68,
+      "y": -64.67
     },
     {
       "distance": 4775,
-      "curvature": -0.00901,
-      "x": 2218.94,
-      "y": 860.72
+      "curvature": -0.008027,
+      "x": 262.18,
+      "y": -69.65
     },
     {
       "distance": 4780,
-      "curvature": -0.009749,
-      "x": 2220.87,
-      "y": 865.33
+      "curvature": -0.009139,
+      "x": 261.68,
+      "y": -74.62
     },
     {
       "distance": 4785,
-      "curvature": -0.01,
-      "x": 2223.03,
-      "y": 869.84
+      "curvature": -0.009793,
+      "x": 261.18,
+      "y": -79.6
     },
     {
       "distance": 4790,
       "curvature": -0.01,
-      "x": 2225.41,
-      "y": 874.23
+      "x": 260.68,
+      "y": -84.57
     },
     {
       "distance": 4795,
       "curvature": -0.01,
-      "x": 2228.01,
-      "y": 878.5
+      "x": 260.18,
+      "y": -89.55
     },
     {
       "distance": 4800,
       "curvature": -0.01,
-      "x": 2230.82,
-      "y": 882.64
+      "x": 259.68,
+      "y": -94.52
     },
     {
       "distance": 4805,
       "curvature": -0.01,
-      "x": 2233.84,
-      "y": 886.63
+      "x": 259.19,
+      "y": -99.5
     },
     {
       "distance": 4810,
       "curvature": -0.01,
-      "x": 2237.04,
-      "y": 890.47
+      "x": 258.69,
+      "y": -104.47
     },
     {
       "distance": 4815,
       "curvature": -0.01,
-      "x": 2240.44,
-      "y": 894.14
+      "x": 258.19,
+      "y": -109.45
     },
     {
       "distance": 4820,
       "curvature": -0.01,
-      "x": 2244.01,
-      "y": 897.63
+      "x": 257.69,
+      "y": -114.43
     },
     {
       "distance": 4825,
       "curvature": -0.01,
-      "x": 2247.76,
-      "y": 900.94
+      "x": 257.19,
+      "y": -119.4
     },
     {
       "distance": 4830,
       "curvature": -0.01,
-      "x": 2251.67,
-      "y": 904.07
+      "x": 256.69,
+      "y": -124.38
     },
     {
       "distance": 4835,
       "curvature": -0.01,
-      "x": 2255.72,
-      "y": 906.99
+      "x": 256.19,
+      "y": -129.35
     },
     {
       "distance": 4840,
       "curvature": -0.01,
-      "x": 2259.92,
-      "y": 909.7
+      "x": 255.7,
+      "y": -134.33
     },
     {
       "distance": 4845,
       "curvature": -0.01,
-      "x": 2264.25,
-      "y": 912.21
+      "x": 255.2,
+      "y": -139.3
     },
     {
       "distance": 4850,
       "curvature": -0.01,
-      "x": 2268.7,
-      "y": 914.49
+      "x": 254.7,
+      "y": -144.28
     },
     {
       "distance": 4855,
       "curvature": -0.01,
-      "x": 2273.26,
-      "y": 916.55
+      "x": 254.2,
+      "y": -149.25
     },
     {
       "distance": 4860,
       "curvature": -0.01,
-      "x": 2277.91,
-      "y": 918.37
+      "x": 253.7,
+      "y": -154.23
     },
     {
       "distance": 4865,
       "curvature": -0.01,
-      "x": 2282.65,
-      "y": 919.97
+      "x": 253.21,
+      "y": -159.2
     },
     {
       "distance": 4870,
       "curvature": -0.01,
-      "x": 2287.46,
-      "y": 921.32
+      "x": 252.71,
+      "y": -164.18
     },
     {
       "distance": 4875,
       "curvature": -0.01,
-      "x": 2292.34,
-      "y": 922.43
+      "x": 252.21,
+      "y": -169.15
     },
     {
       "distance": 4880,
       "curvature": -0.01,
-      "x": 2297.26,
-      "y": 923.3
+      "x": 251.72,
+      "y": -174.13
     },
     {
       "distance": 4885,
       "curvature": -0.01,
-      "x": 2302.22,
-      "y": 923.92
+      "x": 251.22,
+      "y": -179.1
     },
     {
       "distance": 4890,
       "curvature": -0.01,
-      "x": 2307.21,
-      "y": 924.29
+      "x": 250.72,
+      "y": -184.08
     },
     {
       "distance": 4895,
       "curvature": -0.01,
-      "x": 2312.21,
-      "y": 924.41
+      "x": 250.22,
+      "y": -189.06
     },
     {
       "distance": 4900,
       "curvature": -0.01,
-      "x": 2317.21,
-      "y": 924.28
+      "x": 249.73,
+      "y": -194.03
     },
     {
       "distance": 4905,
       "curvature": -0.01,
-      "x": 2322.19,
-      "y": 923.9
+      "x": 249.23,
+      "y": -199.01
     },
     {
       "distance": 4910,
       "curvature": -0.01,
-      "x": 2327.15,
-      "y": 923.27
+      "x": 248.73,
+      "y": -203.98
     },
     {
       "distance": 4915,
       "curvature": -0.01,
-      "x": 2332.08,
-      "y": 922.4
+      "x": 248.24,
+      "y": -208.96
     },
     {
       "distance": 4920,
       "curvature": -0.01,
-      "x": 2336.95,
-      "y": 921.28
+      "x": 247.74,
+      "y": -213.93
     },
     {
       "distance": 4925,
       "curvature": -0.01,
-      "x": 2341.76,
-      "y": 919.92
+      "x": 247.24,
+      "y": -218.91
     },
     {
       "distance": 4930,
       "curvature": -0.01,
-      "x": 2346.5,
-      "y": 918.32
+      "x": 246.75,
+      "y": -223.88
     },
     {
       "distance": 4935,
       "curvature": -0.01,
-      "x": 2351.15,
-      "y": 916.48
+      "x": 246.25,
+      "y": -228.86
     },
     {
       "distance": 4940,
       "curvature": -0.01,
-      "x": 2355.7,
-      "y": 914.42
+      "x": 245.75,
+      "y": -233.83
     },
     {
       "distance": 4945,
       "curvature": -0.01,
-      "x": 2360.15,
-      "y": 912.13
+      "x": 245.26,
+      "y": -238.81
     },
     {
       "distance": 4950,
       "curvature": -0.01,
-      "x": 2364.47,
-      "y": 909.62
+      "x": 244.76,
+      "y": -243.79
     },
     {
       "distance": 4955,
       "curvature": -0.01,
-      "x": 2368.66,
-      "y": 906.89
+      "x": 244.27,
+      "y": -248.76
     },
     {
       "distance": 4960,
       "curvature": -0.01,
-      "x": 2372.72,
-      "y": 903.97
+      "x": 243.77,
+      "y": -253.74
     },
     {
       "distance": 4965,
       "curvature": -0.01,
-      "x": 2376.62,
-      "y": 900.84
+      "x": 243.27,
+      "y": -258.71
     },
     {
       "distance": 4970,
       "curvature": -0.01,
-      "x": 2380.36,
-      "y": 897.52
+      "x": 242.78,
+      "y": -263.69
     },
     {
       "distance": 4975,
       "curvature": -0.01,
-      "x": 2383.93,
-      "y": 894.02
+      "x": 242.28,
+      "y": -268.66
     },
     {
       "distance": 4980,
       "curvature": -0.01,
-      "x": 2387.32,
-      "y": 890.34
+      "x": 241.78,
+      "y": -273.64
     },
     {
       "distance": 4985,
       "curvature": -0.01,
-      "x": 2390.52,
-      "y": 886.5
+      "x": 241.29,
+      "y": -278.61
     },
     {
       "distance": 4990,
       "curvature": -0.01,
-      "x": 2393.52,
-      "y": 882.51
+      "x": 240.79,
+      "y": -283.59
     },
     {
       "distance": 4995,
       "curvature": -0.01,
-      "x": 2396.33,
-      "y": 878.37
+      "x": 240.3,
+      "y": -288.56
     },
     {
       "distance": 5000,
       "curvature": -0.01,
-      "x": 2398.92,
-      "y": 874.09
+      "x": 239.8,
+      "y": -293.54
     },
     {
       "distance": 5005,
       "curvature": -0.01,
-      "x": 2401.29,
-      "y": 869.69
+      "x": 239.3,
+      "y": -298.52
     },
     {
       "distance": 5010,
       "curvature": -0.01,
-      "x": 2403.44,
-      "y": 865.18
+      "x": 238.81,
+      "y": -303.49
     },
     {
       "distance": 5015,
       "curvature": -0.01,
-      "x": 2405.37,
-      "y": 860.56
+      "x": 238.31,
+      "y": -308.47
     },
     {
       "distance": 5020,
       "curvature": -0.01,
-      "x": 2407.06,
-      "y": 855.86
+      "x": 237.82,
+      "y": -313.44
     },
     {
       "distance": 5025,
       "curvature": -0.01,
-      "x": 2408.51,
-      "y": 851.07
+      "x": 237.32,
+      "y": -318.42
     },
     {
       "distance": 5030,
       "curvature": -0.01,
-      "x": 2409.73,
-      "y": 846.22
+      "x": 236.82,
+      "y": -323.39
     },
     {
       "distance": 5035,
       "curvature": -0.01,
-      "x": 2410.69,
-      "y": 841.32
+      "x": 236.33,
+      "y": -328.37
     },
     {
       "distance": 5040,
       "curvature": -0.01,
-      "x": 2411.42,
-      "y": 836.37
+      "x": 235.83,
+      "y": -333.34
     },
     {
       "distance": 5045,
       "curvature": -0.01,
-      "x": 2411.89,
-      "y": 831.39
+      "x": 235.34,
+      "y": -338.32
     },
     {
       "distance": 5050,
       "curvature": -0.01,
-      "x": 2412.12,
-      "y": 826.4
+      "x": 234.84,
+      "y": -343.3
     },
     {
       "distance": 5055,
       "curvature": -0.01,
-      "x": 2412.09,
-      "y": 821.4
+      "x": 234.34,
+      "y": -348.27
     },
     {
       "distance": 5060,
       "curvature": -0.01,
-      "x": 2411.82,
-      "y": 816.4
+      "x": 233.85,
+      "y": -353.25
     },
     {
       "distance": 5065,
       "curvature": -0.01,
-      "x": 2411.29,
-      "y": 811.43
+      "x": 233.35,
+      "y": -358.22
     },
     {
       "distance": 5070,
       "curvature": -0.01,
-      "x": 2410.52,
-      "y": 806.49
+      "x": 232.85,
+      "y": -363.2
     },
     {
       "distance": 5075,
       "curvature": -0.01,
-      "x": 2409.5,
-      "y": 801.6
+      "x": 232.35,
+      "y": -368.17
     },
     {
       "distance": 5080,
       "curvature": -0.01,
-      "x": 2408.24,
-      "y": 796.76
+      "x": 231.85,
+      "y": -373.15
     },
     {
       "distance": 5085,
       "curvature": -0.01,
-      "x": 2406.74,
-      "y": 791.99
+      "x": 231.34,
+      "y": -378.12
     },
     {
       "distance": 5090,
       "curvature": -0.01,
-      "x": 2405,
-      "y": 787.3
+      "x": 230.82,
+      "y": -383.09
     },
     {
       "distance": 5095,
       "curvature": -0.01,
-      "x": 2403.03,
-      "y": 782.71
+      "x": 230.28,
+      "y": -388.07
     },
     {
       "distance": 5100,
       "curvature": -0.01,
-      "x": 2400.83,
-      "y": 778.21
+      "x": 229.73,
+      "y": -393.04
     },
     {
       "distance": 5105,
-      "curvature": -0.009749,
-      "x": 2398.41,
-      "y": 773.84
+      "curvature": -0.00997,
+      "x": 229.16,
+      "y": -398.0
     },
     {
       "distance": 5110,
-      "curvature": -0.00901,
-      "x": 2395.78,
-      "y": 769.59
+      "curvature": -0.009662,
+      "x": 228.57,
+      "y": -402.97
     },
     {
       "distance": 5115,
-      "curvature": -0.007818,
-      "x": 2392.97,
-      "y": 765.46
+      "curvature": -0.008871,
+      "x": 227.95,
+      "y": -407.93
     },
     {
       "distance": 5120,
-      "curvature": -0.006235,
-      "x": 2389.99,
-      "y": 761.44
+      "curvature": -0.007635,
+      "x": 227.25,
+      "y": -412.88
     },
     {
       "distance": 5125,
-      "curvature": -0.004339,
-      "x": 2386.89,
-      "y": 757.52
+      "curvature": -0.006017,
+      "x": 226.4,
+      "y": -417.81
     },
     {
       "distance": 5130,
-      "curvature": -0.002225,
-      "x": 2383.7,
-      "y": 753.66
+      "curvature": -0.004098,
+      "x": 225.3,
+      "y": -422.69
     },
     {
       "distance": 5135,
-      "curvature": 0,
-      "x": 2380.47,
-      "y": 749.84
+      "curvature": -0.001973,
+      "x": 223.87,
+      "y": -427.48
     },
     {
       "distance": 5140,
-      "curvature": 0,
-      "x": 2377.24,
-      "y": 746.03
+      "curvature": 0.0,
+      "x": 222.05,
+      "y": -432.13
     },
     {
       "distance": 5145,
-      "curvature": 0,
-      "x": 2374.02,
-      "y": 742.21
+      "curvature": 0.0,
+      "x": 219.84,
+      "y": -436.62
     },
     {
       "distance": 5150,
-      "curvature": 0,
-      "x": 2370.79,
-      "y": 738.39
+      "curvature": 0.0,
+      "x": 217.31,
+      "y": -440.93
     },
     {
       "distance": 5155,
-      "curvature": 0,
-      "x": 2367.56,
-      "y": 734.57
+      "curvature": 0.0,
+      "x": 214.5,
+      "y": -445.07
     },
     {
       "distance": 5160,
-      "curvature": 0,
-      "x": 2364.33,
-      "y": 730.75
+      "curvature": 0.0,
+      "x": 211.44,
+      "y": -449.02
     },
     {
       "distance": 5165,
-      "curvature": 0,
-      "x": 2361.1,
-      "y": 726.94
+      "curvature": 0.0,
+      "x": 208.16,
+      "y": -452.8
     },
     {
       "distance": 5170,
-      "curvature": 0,
-      "x": 2357.87,
-      "y": 723.12
+      "curvature": 0.0,
+      "x": 204.67,
+      "y": -456.38
     },
     {
       "distance": 5175,
-      "curvature": 0,
-      "x": 2354.65,
-      "y": 719.3
+      "curvature": 0.0,
+      "x": 200.98,
+      "y": -459.75
     },
     {
       "distance": 5180,
-      "curvature": 0,
-      "x": 2351.42,
-      "y": 715.48
+      "curvature": 0.0,
+      "x": 197.1,
+      "y": -462.9
     },
     {
       "distance": 5185,
-      "curvature": 0,
-      "x": 2348.19,
-      "y": 711.66
+      "curvature": 0.0,
+      "x": 193.05,
+      "y": -465.84
     },
     {
       "distance": 5190,
-      "curvature": 0,
-      "x": 2344.96,
-      "y": 707.85
+      "curvature": 0.0,
+      "x": 188.85,
+      "y": -468.55
     },
     {
       "distance": 5195,
-      "curvature": 0,
-      "x": 2341.73,
-      "y": 704.03
+      "curvature": 0.0,
+      "x": 184.51,
+      "y": -471.03
     },
     {
       "distance": 5200,
-      "curvature": 0,
-      "x": 2338.5,
-      "y": 700.21
+      "curvature": 0.0,
+      "x": 180.04,
+      "y": -473.28
     },
     {
       "distance": 5205,
-      "curvature": 0,
-      "x": 2335.27,
-      "y": 696.39
+      "curvature": 0.0,
+      "x": 175.47,
+      "y": -475.3
     },
     {
       "distance": 5210,
-      "curvature": 0,
-      "x": 2332.05,
-      "y": 692.57
+      "curvature": 0.0,
+      "x": 170.8,
+      "y": -477.09
     },
     {
       "distance": 5215,
-      "curvature": 0,
-      "x": 2328.82,
-      "y": 688.76
+      "curvature": 0.0,
+      "x": 166.04,
+      "y": -478.62
     },
     {
       "distance": 5220,
-      "curvature": 0,
-      "x": 2325.59,
-      "y": 684.94
+      "curvature": 0.0,
+      "x": 161.19,
+      "y": -479.84
     },
     {
       "distance": 5225,
-      "curvature": 0,
-      "x": 2322.36,
-      "y": 681.12
+      "curvature": 0.0,
+      "x": 156.27,
+      "y": -480.72
     },
     {
       "distance": 5230,
-      "curvature": 0,
-      "x": 2319.13,
-      "y": 677.3
+      "curvature": 0.0,
+      "x": 151.29,
+      "y": -481.2
     },
     {
       "distance": 5235,
-      "curvature": 0,
-      "x": 2315.9,
-      "y": 673.48
+      "curvature": 0.0,
+      "x": 146.29,
+      "y": -481.29
     },
     {
       "distance": 5240,
-      "curvature": 0,
-      "x": 2312.68,
-      "y": 669.67
+      "curvature": 0.0,
+      "x": 141.3,
+      "y": -481.03
     },
     {
       "distance": 5245,
-      "curvature": 0,
-      "x": 2309.45,
-      "y": 665.85
+      "curvature": 0.0,
+      "x": 136.33,
+      "y": -480.46
     },
     {
       "distance": 5250,
-      "curvature": 0,
-      "x": 2306.22,
-      "y": 662.03
+      "curvature": 0.0,
+      "x": 131.4,
+      "y": -479.63
     },
     {
       "distance": 5255,
-      "curvature": 0,
-      "x": 2302.99,
-      "y": 658.21
+      "curvature": 0.0,
+      "x": 126.52,
+      "y": -478.55
     },
     {
       "distance": 5260,
-      "curvature": 0,
-      "x": 2299.76,
-      "y": 654.39
+      "curvature": 0.0,
+      "x": 121.69,
+      "y": -477.26
     },
     {
       "distance": 5265,
-      "curvature": 0,
-      "x": 2296.53,
-      "y": 650.58
+      "curvature": 0.0,
+      "x": 116.92,
+      "y": -475.75
     },
     {
       "distance": 5270,
-      "curvature": 0,
-      "x": 2293.31,
-      "y": 646.76
+      "curvature": 0.0,
+      "x": 112.22,
+      "y": -474.05
     },
     {
       "distance": 5275,
-      "curvature": 0,
-      "x": 2290.08,
-      "y": 642.94
+      "curvature": 0.0,
+      "x": 107.59,
+      "y": -472.17
     },
     {
       "distance": 5280,
-      "curvature": 0,
-      "x": 2286.85,
-      "y": 639.12
+      "curvature": 0.0,
+      "x": 103.03,
+      "y": -470.11
     },
     {
       "distance": 5285,
-      "curvature": 0,
-      "x": 2283.62,
-      "y": 635.3
+      "curvature": 0.0,
+      "x": 98.55,
+      "y": -467.89
     },
     {
       "distance": 5290,
-      "curvature": 0,
-      "x": 2280.39,
-      "y": 631.49
+      "curvature": 0.0,
+      "x": 94.15,
+      "y": -465.52
     },
     {
       "distance": 5295,
-      "curvature": 0,
-      "x": 2277.16,
-      "y": 627.67
+      "curvature": 0.0,
+      "x": 89.83,
+      "y": -463.01
     },
     {
       "distance": 5300,
-      "curvature": 0,
-      "x": 2273.94,
-      "y": 623.85
+      "curvature": 0.0,
+      "x": 85.58,
+      "y": -460.36
     },
     {
       "distance": 5305,
-      "curvature": 0,
-      "x": 2270.71,
-      "y": 620.03
+      "curvature": 0.0,
+      "x": 81.43,
+      "y": -457.58
     },
     {
       "distance": 5310,
-      "curvature": 0,
-      "x": 2267.48,
-      "y": 616.21
+      "curvature": 0.0,
+      "x": 77.35,
+      "y": -454.68
     },
     {
       "distance": 5315,
-      "curvature": 0,
-      "x": 2264.25,
-      "y": 612.4
+      "curvature": 0.0,
+      "x": 73.38,
+      "y": -451.65
     },
     {
       "distance": 5320,
-      "curvature": 0,
-      "x": 2261.02,
-      "y": 608.58
+      "curvature": 0.0,
+      "x": 69.49,
+      "y": -448.5
     },
     {
       "distance": 5325,
-      "curvature": 0,
-      "x": 2257.79,
-      "y": 604.76
+      "curvature": 0.0,
+      "x": 65.7,
+      "y": -445.24
     },
     {
       "distance": 5330,
-      "curvature": 0,
-      "x": 2254.56,
-      "y": 600.94
+      "curvature": 0.0,
+      "x": 62.02,
+      "y": -441.86
     },
     {
       "distance": 5335,
-      "curvature": 0,
-      "x": 2251.34,
-      "y": 597.12
+      "curvature": 0.0,
+      "x": 58.43,
+      "y": -438.37
     },
     {
       "distance": 5340,
-      "curvature": 0,
-      "x": 2248.11,
-      "y": 593.3
+      "curvature": 0.0,
+      "x": 54.95,
+      "y": -434.78
     },
     {
       "distance": 5345,
-      "curvature": 0,
-      "x": 2244.88,
-      "y": 589.49
+      "curvature": 0.0,
+      "x": 51.58,
+      "y": -431.09
     },
     {
       "distance": 5350,
-      "curvature": 0,
-      "x": 2241.65,
-      "y": 585.67
+      "curvature": 0.0,
+      "x": 48.32,
+      "y": -427.3
     },
     {
       "distance": 5355,
-      "curvature": 0,
-      "x": 2238.42,
-      "y": 581.85
+      "curvature": 0.0,
+      "x": 45.17,
+      "y": -423.42
     },
     {
       "distance": 5360,
-      "curvature": 0,
-      "x": 2235.19,
-      "y": 578.03
+      "curvature": 0.0,
+      "x": 42.13,
+      "y": -419.45
     },
     {
       "distance": 5365,
-      "curvature": 0,
-      "x": 2231.97,
-      "y": 574.21
+      "curvature": 0.0,
+      "x": 39.19,
+      "y": -415.4
     },
     {
       "distance": 5370,
-      "curvature": 0,
-      "x": 2228.74,
-      "y": 570.4
+      "curvature": 0.0,
+      "x": 36.37,
+      "y": -411.28
     },
     {
       "distance": 5375,
-      "curvature": 0,
-      "x": 2225.51,
-      "y": 566.58
+      "curvature": 0.0,
+      "x": 33.65,
+      "y": -407.08
     },
     {
       "distance": 5380,
-      "curvature": 0,
-      "x": 2222.28,
-      "y": 562.76
+      "curvature": 0.0,
+      "x": 31.04,
+      "y": -402.81
     },
     {
       "distance": 5385,
-      "curvature": 0,
-      "x": 2219.05,
-      "y": 558.94
+      "curvature": 0.0,
+      "x": 28.53,
+      "y": -398.49
     },
     {
       "distance": 5390,
-      "curvature": 0,
-      "x": 2215.82,
-      "y": 555.12
+      "curvature": 0.0,
+      "x": 26.14,
+      "y": -394.1
     },
     {
       "distance": 5395,
-      "curvature": 0,
-      "x": 2212.6,
-      "y": 551.31
+      "curvature": 0.0,
+      "x": 23.84,
+      "y": -389.65
     },
     {
       "distance": 5400,
-      "curvature": 0,
-      "x": 2209.37,
-      "y": 547.49
+      "curvature": 0.0,
+      "x": 21.66,
+      "y": -385.16
     },
     {
       "distance": 5405,
-      "curvature": 0,
-      "x": 2206.14,
-      "y": 543.67
+      "curvature": 0.0,
+      "x": 19.57,
+      "y": -380.61
     },
     {
       "distance": 5410,
-      "curvature": 0,
-      "x": 2202.91,
-      "y": 539.85
+      "curvature": 0.0,
+      "x": 17.59,
+      "y": -376.02
     },
     {
       "distance": 5415,
-      "curvature": 0,
-      "x": 2199.68,
-      "y": 536.03
+      "curvature": 0.0,
+      "x": 15.71,
+      "y": -371.39
     },
     {
       "distance": 5420,
-      "curvature": 0,
-      "x": 2196.45,
-      "y": 532.22
+      "curvature": 0.0,
+      "x": 13.93,
+      "y": -366.72
     },
     {
       "distance": 5425,
-      "curvature": 0,
-      "x": 2193.23,
-      "y": 528.4
+      "curvature": 0.0,
+      "x": 12.24,
+      "y": -362.01
     },
     {
       "distance": 5430,
-      "curvature": 0,
-      "x": 2190,
-      "y": 524.58
+      "curvature": 0.0,
+      "x": 10.66,
+      "y": -357.27
     },
     {
       "distance": 5435,
-      "curvature": 0,
-      "x": 2186.77,
-      "y": 520.76
+      "curvature": 0.0,
+      "x": 9.18,
+      "y": -352.49
     },
     {
       "distance": 5440,
-      "curvature": 0,
-      "x": 2183.54,
-      "y": 516.94
+      "curvature": 0.0,
+      "x": 7.79,
+      "y": -347.69
     },
     {
       "distance": 5445,
-      "curvature": 0,
-      "x": 2180.31,
-      "y": 513.13
+      "curvature": 0.0,
+      "x": 6.5,
+      "y": -342.86
     },
     {
       "distance": 5450,
-      "curvature": 0,
-      "x": 2177.08,
-      "y": 509.31
+      "curvature": 0.0,
+      "x": 5.3,
+      "y": -338.0
     },
     {
       "distance": 5455,
-      "curvature": 0,
-      "x": 2173.86,
-      "y": 505.49
+      "curvature": 0.0,
+      "x": 4.18,
+      "y": -333.13
     },
     {
       "distance": 5460,
-      "curvature": 0,
-      "x": 2170.63,
-      "y": 501.67
+      "curvature": 0.0,
+      "x": 3.15,
+      "y": -328.24
     },
     {
       "distance": 5465,
-      "curvature": 0,
-      "x": 2167.4,
-      "y": 497.85
+      "curvature": 0.0,
+      "x": 2.2,
+      "y": -323.33
     },
     {
       "distance": 5470,
-      "curvature": 0,
-      "x": 2164.17,
-      "y": 494.04
+      "curvature": 0.0,
+      "x": 1.33,
+      "y": -318.4
     },
     {
       "distance": 5475,
-      "curvature": 0,
-      "x": 2160.94,
-      "y": 490.22
+      "curvature": 0.0,
+      "x": 0.53,
+      "y": -313.47
     },
     {
       "distance": 5480,
-      "curvature": 0,
-      "x": 2157.71,
-      "y": 486.4
+      "curvature": 0.0,
+      "x": -0.19,
+      "y": -308.52
     },
     {
       "distance": 5485,
-      "curvature": 0,
-      "x": 2154.48,
-      "y": 482.58
+      "curvature": 0.0,
+      "x": -0.85,
+      "y": -303.56
     },
     {
       "distance": 5490,
-      "curvature": 0,
-      "x": 2151.26,
-      "y": 478.76
+      "curvature": 0.0,
+      "x": -1.44,
+      "y": -298.6
     },
     {
       "distance": 5495,
-      "curvature": 0,
-      "x": 2148.03,
-      "y": 474.95
+      "curvature": 0.0,
+      "x": -1.97,
+      "y": -293.63
     },
     {
       "distance": 5500,
-      "curvature": 0,
-      "x": 2144.8,
-      "y": 471.13
+      "curvature": 0.0,
+      "x": -2.45,
+      "y": -288.65
     },
     {
       "distance": 5505,
-      "curvature": 0,
-      "x": 2141.57,
-      "y": 467.31
+      "curvature": 0.0,
+      "x": -2.87,
+      "y": -283.67
     },
     {
       "distance": 5510,
-      "curvature": 0,
-      "x": 2138.34,
-      "y": 463.49
+      "curvature": 0.0,
+      "x": -3.23,
+      "y": -278.68
     },
     {
       "distance": 5515,
-      "curvature": 0,
-      "x": 2135.11,
-      "y": 459.67
+      "curvature": 0.0,
+      "x": -3.55,
+      "y": -273.69
     },
     {
       "distance": 5520,
-      "curvature": 0,
-      "x": 2131.89,
-      "y": 455.86
+      "curvature": 0.0,
+      "x": -3.83,
+      "y": -268.7
     },
     {
       "distance": 5525,
-      "curvature": 0,
-      "x": 2128.66,
-      "y": 452.04
+      "curvature": 0.0,
+      "x": -4.06,
+      "y": -263.7
     },
     {
       "distance": 5530,
-      "curvature": 0,
-      "x": 2125.43,
-      "y": 448.22
+      "curvature": 0.0,
+      "x": -4.25,
+      "y": -258.71
     },
     {
       "distance": 5535,
-      "curvature": 0,
-      "x": 2122.2,
-      "y": 444.4
+      "curvature": 0.0,
+      "x": -4.41,
+      "y": -253.71
     },
     {
       "distance": 5540,
-      "curvature": 0,
-      "x": 2118.97,
-      "y": 440.58
+      "curvature": 0.0,
+      "x": -4.54,
+      "y": -248.71
     },
     {
       "distance": 5545,
-      "curvature": 0,
-      "x": 2115.74,
-      "y": 436.77
+      "curvature": 0.0,
+      "x": -4.64,
+      "y": -243.71
     },
     {
       "distance": 5550,
-      "curvature": 0,
-      "x": 2112.52,
-      "y": 432.95
+      "curvature": 0.0,
+      "x": -4.71,
+      "y": -238.71
     },
     {
       "distance": 5555,
-      "curvature": 0,
-      "x": 2109.29,
-      "y": 429.13
+      "curvature": 0.0,
+      "x": -4.77,
+      "y": -233.71
     },
     {
       "distance": 5560,
-      "curvature": 0,
-      "x": 2106.06,
-      "y": 425.31
+      "curvature": 0.0,
+      "x": -4.8,
+      "y": -228.71
     },
     {
       "distance": 5565,
-      "curvature": 0,
-      "x": 2102.83,
-      "y": 421.49
+      "curvature": 0.0,
+      "x": -4.82,
+      "y": -223.71
     },
     {
       "distance": 5570,
-      "curvature": 0,
-      "x": 2099.6,
-      "y": 417.67
+      "curvature": 0.0,
+      "x": -4.83,
+      "y": -218.71
     },
     {
       "distance": 5575,
-      "curvature": 0,
-      "x": 2096.37,
-      "y": 413.86
+      "curvature": 0.0,
+      "x": -4.84,
+      "y": -213.71
     },
     {
       "distance": 5580,
-      "curvature": 0,
-      "x": 2093.15,
-      "y": 410.04
+      "curvature": 0.0,
+      "x": -4.84,
+      "y": -208.71
     },
     {
       "distance": 5585,
-      "curvature": 0,
-      "x": 2089.92,
-      "y": 406.22
+      "curvature": 0.0,
+      "x": -4.84,
+      "y": -203.71
     },
     {
       "distance": 5590,
-      "curvature": 0,
-      "x": 2086.69,
-      "y": 402.4
+      "curvature": 0.0,
+      "x": -4.84,
+      "y": -198.71
     },
     {
       "distance": 5595,
-      "curvature": 0,
-      "x": 2083.46,
-      "y": 398.58
+      "curvature": 0.0,
+      "x": -4.84,
+      "y": -193.71
     },
     {
       "distance": 5600,
-      "curvature": 0,
-      "x": 2080.23,
-      "y": 394.77
+      "curvature": 0.0,
+      "x": -4.86,
+      "y": -188.71
     },
     {
       "distance": 5605,
-      "curvature": 0,
-      "x": 2077,
-      "y": 390.95
+      "curvature": 0.0,
+      "x": -4.89,
+      "y": -183.71
     },
     {
       "distance": 5610,
-      "curvature": 0,
-      "x": 2073.77,
-      "y": 387.13
+      "curvature": 0.0,
+      "x": -4.94,
+      "y": -178.71
     },
     {
       "distance": 5615,
-      "curvature": 0,
-      "x": 2070.55,
-      "y": 383.31
+      "curvature": 0.0,
+      "x": -5.0,
+      "y": -173.71
     },
     {
       "distance": 5620,
-      "curvature": 0,
-      "x": 2067.32,
-      "y": 379.49
+      "curvature": 0.0,
+      "x": -5.09,
+      "y": -168.71
     },
     {
       "distance": 5625,
-      "curvature": 0,
-      "x": 2064.09,
-      "y": 375.68
+      "curvature": 0.0,
+      "x": -5.18,
+      "y": -163.71
     },
     {
       "distance": 5630,
-      "curvature": 0,
-      "x": 2060.86,
-      "y": 371.86
+      "curvature": 0.0,
+      "x": -5.28,
+      "y": -158.71
     },
     {
       "distance": 5635,
-      "curvature": 0,
-      "x": 2057.63,
-      "y": 368.04
+      "curvature": 0.0,
+      "x": -5.39,
+      "y": -153.71
     },
     {
       "distance": 5640,
-      "curvature": 0,
-      "x": 2054.4,
-      "y": 364.22
+      "curvature": 0.0,
+      "x": -5.49,
+      "y": -148.71
     },
     {
       "distance": 5645,
-      "curvature": 0,
-      "x": 2051.18,
-      "y": 360.4
+      "curvature": 0.0,
+      "x": -5.59,
+      "y": -143.71
     },
     {
       "distance": 5650,
-      "curvature": 0,
-      "x": 2047.95,
-      "y": 356.59
+      "curvature": 0.0,
+      "x": -5.68,
+      "y": -138.71
     },
     {
       "distance": 5655,
-      "curvature": 0,
-      "x": 2044.72,
-      "y": 352.77
+      "curvature": 0.0,
+      "x": -5.76,
+      "y": -133.72
     },
     {
       "distance": 5660,
-      "curvature": 0,
-      "x": 2041.49,
-      "y": 348.95
+      "curvature": 0.0,
+      "x": -5.83,
+      "y": -128.72
     },
     {
       "distance": 5665,
-      "curvature": 0,
-      "x": 2038.26,
-      "y": 345.13
+      "curvature": 0.0,
+      "x": -5.87,
+      "y": -123.72
     },
     {
       "distance": 5670,
-      "curvature": 0,
-      "x": 2035.03,
-      "y": 341.31
+      "curvature": 0.0,
+      "x": -5.9,
+      "y": -118.72
     },
     {
       "distance": 5675,
-      "curvature": 0,
-      "x": 2031.81,
-      "y": 337.5
+      "curvature": 0.0,
+      "x": -5.91,
+      "y": -113.72
     },
     {
       "distance": 5680,
-      "curvature": 0,
-      "x": 2028.58,
-      "y": 333.68
+      "curvature": 0.0,
+      "x": -5.91,
+      "y": -108.72
     },
     {
       "distance": 5685,
-      "curvature": 0,
-      "x": 2025.35,
-      "y": 329.86
+      "curvature": 0.0,
+      "x": -5.89,
+      "y": -103.71
     },
     {
       "distance": 5690,
-      "curvature": 0,
-      "x": 2022.12,
-      "y": 326.04
+      "curvature": 0.0,
+      "x": -5.85,
+      "y": -98.71
     },
     {
       "distance": 5695,
-      "curvature": 0,
-      "x": 2018.89,
-      "y": 322.22
+      "curvature": 0.0,
+      "x": -5.8,
+      "y": -93.71
     },
     {
       "distance": 5700,
-      "curvature": 0,
-      "x": 2015.66,
-      "y": 318.41
+      "curvature": 0.0,
+      "x": -5.74,
+      "y": -88.72
     },
     {
       "distance": 5705,
-      "curvature": 0,
-      "x": 2012.44,
-      "y": 314.59
+      "curvature": 0.0,
+      "x": -5.66,
+      "y": -83.72
     },
     {
       "distance": 5710,
-      "curvature": 0,
-      "x": 2009.21,
-      "y": 310.77
+      "curvature": 0.0,
+      "x": -5.57,
+      "y": -78.72
     },
     {
       "distance": 5715,
-      "curvature": 0,
-      "x": 2005.98,
-      "y": 306.95
+      "curvature": 0.0,
+      "x": -5.45,
+      "y": -73.72
     },
     {
       "distance": 5720,
-      "curvature": 0,
-      "x": 2002.75,
-      "y": 303.13
+      "curvature": 0.0,
+      "x": -5.31,
+      "y": -68.72
     },
     {
       "distance": 5725,
-      "curvature": 0,
-      "x": 1999.52,
-      "y": 299.32
+      "curvature": 0.0,
+      "x": -5.15,
+      "y": -63.72
     },
     {
       "distance": 5730,
-      "curvature": 0,
-      "x": 1996.29,
-      "y": 295.5
+      "curvature": 0.0,
+      "x": -4.96,
+      "y": -58.73
     },
     {
       "distance": 5735,
-      "curvature": 0,
-      "x": 1993.07,
-      "y": 291.68
+      "curvature": 0.0,
+      "x": -4.74,
+      "y": -53.73
     },
     {
       "distance": 5740,
-      "curvature": 0,
-      "x": 1989.84,
-      "y": 287.86
+      "curvature": 0.0,
+      "x": -4.48,
+      "y": -48.74
     },
     {
       "distance": 5745,
-      "curvature": 0,
-      "x": 1986.61,
-      "y": 284.04
+      "curvature": 0.0,
+      "x": -4.19,
+      "y": -43.74
     },
     {
       "distance": 5750,
-      "curvature": 0,
-      "x": 1983.38,
-      "y": 280.23
+      "curvature": 0.0,
+      "x": -3.86,
+      "y": -38.76
     },
     {
       "distance": 5755,
-      "curvature": 0,
-      "x": 1980.15,
-      "y": 276.41
+      "curvature": 0.0,
+      "x": -3.5,
+      "y": -33.77
     },
     {
       "distance": 5760,
-      "curvature": 0,
-      "x": 1976.92,
-      "y": 272.59
+      "curvature": 0.0,
+      "x": -3.1,
+      "y": -28.78
     },
     {
       "distance": 5765,
-      "curvature": 0,
-      "x": 1973.69,
-      "y": 268.77
+      "curvature": 0.0,
+      "x": -2.68,
+      "y": -23.8
     },
     {
       "distance": 5770,
-      "curvature": 0,
-      "x": 1970.47,
-      "y": 264.95
+      "curvature": 0.0,
+      "x": -2.23,
+      "y": -18.82
     },
     {
       "distance": 5775,
-      "curvature": 0,
-      "x": 1967.24,
-      "y": 261.13
+      "curvature": 0.0,
+      "x": -1.77,
+      "y": -13.84
     },
     {
       "distance": 5780,
-      "curvature": 0,
-      "x": 1964.01,
-      "y": 257.32
+      "curvature": 0.0,
+      "x": -1.29,
+      "y": -8.87
+    },
+    {
+      "distance": 5785,
+      "curvature": 0.0,
+      "x": -0.81,
+      "y": -3.89
     }
   ],
   "sectors": [
@@ -6953,104 +6959,104 @@
       "sectorIndex": 0,
       "sectorName": "Sector 1",
       "startDistance": 0,
-      "endDistance": 2350
+      "endDistance": 2352
     },
     {
       "sectorIndex": 1,
       "sectorName": "Sector 2",
-      "startDistance": 2350,
-      "endDistance": 3415
+      "startDistance": 2352,
+      "endDistance": 3418
     },
     {
       "sectorIndex": 2,
       "sectorName": "Sector 3",
-      "startDistance": 3415,
-      "endDistance": 5785
+      "startDistance": 3418,
+      "endDistance": 5790
     }
   ],
   "corners": [
     {
       "cornerIndex": 0,
       "cornerName": "Variante del Rettifilo R",
-      "apexDistance": 1220,
-      "entryDistance": 1180,
-      "exitDistance": 1260
+      "apexDistance": 1221,
+      "entryDistance": 1181,
+      "exitDistance": 1261
     },
     {
       "cornerIndex": 1,
       "cornerName": "Variante del Rettifilo L",
-      "apexDistance": 1295,
-      "entryDistance": 1260,
-      "exitDistance": 1330
+      "apexDistance": 1296,
+      "entryDistance": 1261,
+      "exitDistance": 1331
     },
     {
       "cornerIndex": 2,
       "cornerName": "Curva Grande",
-      "apexDistance": 1790,
-      "entryDistance": 1650,
-      "exitDistance": 1930
+      "apexDistance": 1792,
+      "entryDistance": 1651,
+      "exitDistance": 1932
     },
     {
       "cornerIndex": 3,
       "cornerName": "Variante della Roggia L",
-      "apexDistance": 2388,
-      "entryDistance": 2350,
-      "exitDistance": 2425
+      "apexDistance": 2390,
+      "entryDistance": 2352,
+      "exitDistance": 2427
     },
     {
       "cornerIndex": 4,
       "cornerName": "Variante della Roggia R",
-      "apexDistance": 2460,
-      "entryDistance": 2425,
-      "exitDistance": 2495
+      "apexDistance": 2462,
+      "entryDistance": 2427,
+      "exitDistance": 2497
     },
     {
       "cornerIndex": 5,
       "cornerName": "Lesmo 1",
-      "apexDistance": 2730,
-      "entryDistance": 2665,
-      "exitDistance": 2795
+      "apexDistance": 2732,
+      "entryDistance": 2667,
+      "exitDistance": 2798
     },
     {
       "cornerIndex": 6,
       "cornerName": "Lesmo 2",
-      "apexDistance": 2975,
-      "entryDistance": 2915,
-      "exitDistance": 3035
+      "apexDistance": 2978,
+      "entryDistance": 2918,
+      "exitDistance": 3038
     },
     {
       "cornerIndex": 7,
       "cornerName": "Ascari 1",
-      "apexDistance": 3450,
-      "entryDistance": 3415,
-      "exitDistance": 3485
+      "apexDistance": 3453,
+      "entryDistance": 3418,
+      "exitDistance": 3488
     },
     {
       "cornerIndex": 8,
       "cornerName": "Ascari 2",
-      "apexDistance": 3513,
-      "entryDistance": 3485,
-      "exitDistance": 3540
+      "apexDistance": 3516,
+      "entryDistance": 3488,
+      "exitDistance": 3543
     },
     {
       "cornerIndex": 9,
       "cornerName": "Ascari 3",
-      "apexDistance": 3575,
-      "entryDistance": 3540,
-      "exitDistance": 3610
+      "apexDistance": 3578,
+      "entryDistance": 3543,
+      "exitDistance": 3613
     },
     {
       "cornerIndex": 10,
       "cornerName": "Curva Parabolica",
-      "apexDistance": 4945,
-      "entryDistance": 4755,
-      "exitDistance": 5135
+      "apexDistance": 4949,
+      "entryDistance": 4759,
+      "exitDistance": 5140
     }
   ],
   "provenance": {
-    "sourceType": "engineering-inference",
-    "source": "Hand-authored from public track layout data and published corner radii",
-    "notes": "Approximate geometry for sensitivity analysis. Not surveyed data."
+    "sourceType": "documented-fact",
+    "source": "TUMFTM racetrack-database (LGPL-3.0), GPS centerlines from OpenStreetMap",
+    "notes": "x/y from TUMFTM ~5m spacing, curvature hand-authored from published corner radii, distances re-indexed proportionally"
   },
   "assumptionNotes": [
     {
@@ -7061,10 +7067,10 @@
       }
     },
     {
-      "note": "Spatial coordinates (x/y) are integrated from curvature and may not close perfectly. They represent approximate track shape for visualization, not GPS-accurate positions.",
+      "note": "Spatial coordinates (x/y) derived from GPS centerline data (TUMFTM racetrack-database, ~5m spacing). Curvature is NOT derived from GPS data due to noise; hand-authored values are retained.",
       "provenance": {
-        "sourceType": "engineering-inference",
-        "source": "Heading integration from curvature array"
+        "sourceType": "documented-fact",
+        "source": "TUMFTM racetrack-database (LGPL-3.0)"
       }
     }
   ]
