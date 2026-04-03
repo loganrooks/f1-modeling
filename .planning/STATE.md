@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 02.1
-current_phase_name: Circuit Geometry Pipeline
-current_plan: 1
-status: completed
-stopped_at: Phase 3 planned (4 plans, 4 waves, verified)
-last_updated: "2026-04-03T04:45:32.307Z"
+current_phase: 03
+current_phase_name: Tire, Electrical, Weather, Environment, and Energy Dynamics
+current_plan: 2
+status: in-progress
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-04-03T04:53:00Z"
 last_activity: 2026-04-03
 progress:
   total_phases: 9
   completed_phases: 3
   total_plans: 17
-  completed_plans: 13
-  percent: 100
+  completed_plans: 14
+  percent: 82
 ---
 
 # Project State
@@ -24,21 +24,21 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-19)
 
 **Core value:** Make F1 design and strategy legible by coupling editable models with visual explanations of why a result changed.
-**Current focus:** Phase 02.1 complete — Circuit Geometry Pipeline delivered; Phase 3 next
+**Current focus:** Phase 3 in progress — Tire, Electrical, Weather, Environment, and Energy Dynamics
 
 ## Current Position
 
-Phase: 02.1 of 8 (Circuit Geometry Pipeline)
-Plan: 1 of 1 complete
+Phase: 03 of 8 (Tire, Electrical, Weather, Environment, and Energy Dynamics)
+Plan: 1 of 4 complete
 
-**Current Phase:** 02.1
-**Current Phase Name:** Circuit Geometry Pipeline
+**Current Phase:** 03
+**Current Phase Name:** Tire, Electrical, Weather, Environment, and Energy Dynamics
 **Total Phases:** 8
-**Current Plan:** 1
-**Total Plans in Phase:** 1
-**Status:** Phase complete — ready for Phase 3
+**Current Plan:** 2
+**Total Plans in Phase:** 4
+**Status:** In progress — Plan 01 complete, Plan 02 next
 **Last Activity:** 2026-04-03
-**Progress:** [██████████] 100%
+**Progress:** [████████░░] 82%
 
 ## Performance Metrics
 
@@ -69,6 +69,7 @@ Plan: 1 of 1 complete
 | Phase 02 P02 | 9min | 2 tasks | 12 files |
 | Phase 02 P03 | 28min | 3 tasks | 10 files |
 | Phase 02.1 P01 | 12 | 3 tasks | 7 files |
+| Phase 03 P01 | 5min | 2 tasks | 11 files |
 
 ## Accumulated Context
 
@@ -123,6 +124,10 @@ Recent decisions affecting current work:
 - [Phase 02.1]: Preserve hand-authored curvature arrays rather than re-deriving from GPS (noise produces implausible radii)
 - [Phase 02.1]: Cache external source data files in repo for offline reproducibility and data provenance
 - [Phase 02.1]: Python sidecar pipeline pattern established for heavyweight scientific computation consumed by TypeScript monorepo
+- [Phase 03]: Tire wear uses linear pre-cliff + quadratic post-cliff degradation with 0.3 grip floor to prevent solver collapse
+- [Phase 03]: Load transfer computed as distance-weighted average over previous lap profile rather than per-point during solve
+- [Phase 03]: 10% per-lap grip clamp enforced in resolveEffectiveVehicle, not in tire model, to preserve model purity
+- [Phase 03]: Fuel mass reduction modeled at 1.5 kg/lap with 95% minimum mass floor
 
 ### Pending Todos
 
@@ -146,6 +151,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-**Last session:** 2026-04-03T04:45:32.305Z
-**Stopped At:** Phase 3 planned (4 plans, 4 waves, verified)
-**Resume File:** .planning/phases/03-tire-electrical-weather-environment-and-energy-dynamics/03-01-PLAN.md
+**Last session:** 2026-04-03T04:53:00Z
+**Stopped At:** Completed 03-01-PLAN.md
+**Resume File:** .planning/phases/03-tire-electrical-weather-environment-and-energy-dynamics/03-02-PLAN.md
