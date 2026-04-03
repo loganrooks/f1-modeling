@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 03
 current_phase_name: Tire, Electrical, Weather, Environment, and Energy Dynamics
-current_plan: 2
-status: in-progress
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-04-03T04:53:00Z"
+current_plan: 3
+status: executing
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-04-03T05:01:09.333Z"
 last_activity: 2026-04-03
 progress:
   total_phases: 9
   completed_phases: 3
   total_plans: 17
-  completed_plans: 14
-  percent: 82
+  completed_plans: 15
+  percent: 88
 ---
 
 # Project State
@@ -34,11 +34,11 @@ Plan: 1 of 4 complete
 **Current Phase:** 03
 **Current Phase Name:** Tire, Electrical, Weather, Environment, and Energy Dynamics
 **Total Phases:** 8
-**Current Plan:** 2
+**Current Plan:** 3
 **Total Plans in Phase:** 4
-**Status:** In progress — Plan 01 complete, Plan 02 next
+**Status:** Ready to execute
 **Last Activity:** 2026-04-03
-**Progress:** [████████░░] 82%
+**Progress:** [█████████░] 88%
 
 ## Performance Metrics
 
@@ -70,6 +70,7 @@ Plan: 1 of 4 complete
 | Phase 02 P03 | 28min | 3 tasks | 10 files |
 | Phase 02.1 P01 | 12 | 3 tasks | 7 files |
 | Phase 03 P01 | 5min | 2 tasks | 11 files |
+| Phase 03 P02 | 4min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -128,6 +129,9 @@ Recent decisions affecting current work:
 - [Phase 03]: Load transfer computed as distance-weighted average over previous lap profile rather than per-point during solve
 - [Phase 03]: 10% per-lap grip clamp enforced in resolveEffectiveVehicle, not in tire model, to preserve model purity
 - [Phase 03]: Fuel mass reduction modeled at 1.5 kg/lap with 95% minimum mass floor
+- [Phase 03]: Electrical power modifier scales proportionally with deployFraction * SoC/maxCapacity, capped at basePower + maxDeployPower
+- [Phase 03]: Wet harvest penalty uses linear 20% scaling factor per unit surfaceWetness
+- [Phase 03]: Aero factors pre-computed once before lap loop (zones static per stint)
 
 ### Pending Todos
 
@@ -151,6 +155,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-**Last session:** 2026-04-03T04:53:00Z
-**Stopped At:** Completed 03-01-PLAN.md
-**Resume File:** .planning/phases/03-tire-electrical-weather-environment-and-energy-dynamics/03-02-PLAN.md
+**Last session:** 2026-04-03T05:01:09.329Z
+**Stopped At:** Completed 03-02-PLAN.md
+**Resume File:** None
