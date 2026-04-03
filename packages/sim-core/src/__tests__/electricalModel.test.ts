@@ -123,7 +123,7 @@ describe("electricalModel: SoC bounded", () => {
 
 describe("electricalModel: harvest from braking", () => {
   it("estimateBrakingEnergy returns a positive value for profiles with braking", () => {
-    const lapResult = mockLapOutput(-2.0);
+    const lapResult = mockLapOutput("moderate");
     const energy = estimateBrakingEnergy(lapResult, VEHICLE_MASS);
     expect(energy).toBeGreaterThan(0);
   });
