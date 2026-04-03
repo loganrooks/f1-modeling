@@ -3,27 +3,31 @@
   "presetId": "dry-baseline",
   "presetType": "weather",
   "name": "Dry Baseline",
-  "description": "Nominal dry-weather placeholder for Phase 1 scenario selection and reproducible run snapshots.",
+  "description": "Stable dry-weather conditions with slight track temperature drop over a stint. Used as the default environment for tire and strategy modeling.",
   "provenance": {
     "sourceType": "engineering-inference",
-    "source": "Phase 1 weather preset seed",
-    "notes": "Provides a stable dry baseline without implying a calibrated environment or tire-temperature model."
+    "source": "Phase 3 weather evolution model",
+    "notes": "Phase 3 has added weather evolution parameters (weatherTimeline) for dynamic environment coupling. Track temperature drift is a typical dry-session behavior."
   },
   "assumptionNotes": [
     {
-      "note": "Grip evolution and thermal behavior are deferred, so this preset is a selection contract rather than a predictive weather model.",
+      "note": "Weather timeline is a deterministic authored input, not a weather prediction. The slight temperature drop represents typical afternoon track cooling.",
       "provenance": {
-        "sourceType": "placeholder",
-        "source": "Phase 1 weather preset seed",
-        "notes": "Environment coupling lands in Phase 3."
+        "sourceType": "engineering-inference",
+        "source": "Phase 3 weather model design",
+        "notes": "See guardrail 3 in CONTEXT.md"
       }
     }
   ],
   "values": {
     "surfaceCondition": "dry",
     "rainfall": "none",
-    "trackWetness": "none",
     "ambientTemperatureC": 24,
-    "trackTemperatureC": 33
+    "trackTemperatureC": 33,
+    "weatherTimeline": [
+      { "lap": 0, "trackTemperatureC": 33, "surfaceWetness": 0.0, "rainfall": "none" },
+      { "lap": 30, "trackTemperatureC": 31, "surfaceWetness": 0.0, "rainfall": "none" }
+    ],
+    "notes": "Stable dry conditions with slight track temperature drop over stint"
   }
 }

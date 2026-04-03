@@ -2,28 +2,33 @@
   "schemaVersion": "preset-document/v1",
   "presetId": "light-rain-placeholder",
   "presetType": "weather",
-  "name": "Light Rain Placeholder",
-  "description": "Explicit placeholder preset for light-rain conditions before environment-coupling dynamics are modeled.",
+  "name": "Light Rain Baseline",
+  "description": "Consistent light rain conditions with slightly increasing then decreasing wetness over a stint. Demonstrates wet-weather effects on tire grip and electrical harvesting.",
   "provenance": {
-    "sourceType": "placeholder",
-    "source": "Phase 1 weather preset seed",
-    "notes": "This preset is intentionally labeled as a placeholder and should not be read as a calibrated wet-weather model."
+    "sourceType": "engineering-inference",
+    "source": "Phase 3 weather evolution model",
+    "notes": "Phase 3 has replaced the Phase 1 placeholder with a dynamic weather timeline. PresetId preserved for backward compatibility with existing scenarios."
   },
   "assumptionNotes": [
     {
-      "note": "Wetness, visibility, aquaplaning risk, and grip loss remain qualitative placeholders in Phase 1.",
+      "note": "Weather timeline is a deterministic authored input, not a meteorological prediction. Wetness values represent a plausible light-rain stint profile.",
       "provenance": {
-        "sourceType": "placeholder",
-        "source": "Phase 1 light-rain weather preset seed",
-        "notes": "Real wet-weather behavior depends on later environment, tire, and control models."
+        "sourceType": "engineering-inference",
+        "source": "Phase 3 weather model design",
+        "notes": "See guardrail 3 in CONTEXT.md"
       }
     }
   ],
   "values": {
     "surfaceCondition": "damp",
     "rainfall": "light",
-    "trackWetness": "partial",
-    "ambientTemperatureC": 20,
-    "trackTemperatureC": 24
+    "ambientTemperatureC": 18,
+    "trackTemperatureC": 22,
+    "weatherTimeline": [
+      { "lap": 0, "trackTemperatureC": 22, "surfaceWetness": 0.3, "rainfall": "light" },
+      { "lap": 20, "trackTemperatureC": 20, "surfaceWetness": 0.4, "rainfall": "light" },
+      { "lap": 40, "trackTemperatureC": 20, "surfaceWetness": 0.3, "rainfall": "light" }
+    ],
+    "notes": "Consistent light rain with slightly increasing then decreasing wetness"
   }
 }

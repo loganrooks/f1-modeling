@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "preset-document/v1",
+  "presetId": "rain-transition",
+  "presetType": "weather",
+  "name": "Rain Transition",
+  "description": "Dynamic weather scenario: dry start, rain onset at lap 15, full wet by lap 20, drying from lap 35. Educational model for exploring weather-driven strategy decisions.",
+  "provenance": {
+    "sourceType": "engineering-inference",
+    "source": "Phase 3 weather evolution model",
+    "notes": "Authored scenario for weather strategy exploration. Not a meteorological prediction."
+  },
+  "assumptionNotes": [
+    {
+      "note": "Weather timeline is a deterministic authored input, not a weather prediction. Transitions are linear interpolations at lap boundaries.",
+      "provenance": {
+        "sourceType": "engineering-inference",
+        "source": "Phase 3 weather model design",
+        "notes": "See guardrail 3 in CONTEXT.md"
+      }
+    }
+  ],
+  "values": {
+    "surfaceCondition": "variable",
+    "rainfall": "variable",
+    "ambientTemperatureC": 22,
+    "trackTemperatureC": 28,
+    "weatherTimeline": [
+      { "lap": 0, "trackTemperatureC": 28, "surfaceWetness": 0.0, "rainfall": "none" },
+      { "lap": 14, "trackTemperatureC": 25, "surfaceWetness": 0.0, "rainfall": "none" },
+      { "lap": 15, "trackTemperatureC": 22, "surfaceWetness": 0.2, "rainfall": "light" },
+      { "lap": 20, "trackTemperatureC": 18, "surfaceWetness": 0.7, "rainfall": "heavy" },
+      { "lap": 35, "trackTemperatureC": 18, "surfaceWetness": 0.7, "rainfall": "heavy" },
+      { "lap": 45, "trackTemperatureC": 22, "surfaceWetness": 0.2, "rainfall": "light" },
+      { "lap": 55, "trackTemperatureC": 25, "surfaceWetness": 0.0, "rainfall": "none" }
+    ],
+    "notes": "Dynamic transition scenario for exploring tire compound and pit timing strategy under changing conditions"
+  }
+}

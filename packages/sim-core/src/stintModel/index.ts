@@ -48,6 +48,15 @@ export {
   DEFAULT_CONSERVATIVE_POLICY,
 } from "./electricalModel.js";
 
+// Environment model
+export {
+  initializeEnvironmentState,
+  updateEnvironmentState,
+  surfaceGripFactor,
+  rubberEvolutionFactor,
+  interpolateWeatherAtLap,
+} from "./environmentModel.js";
+
 // Aero model
 export {
   resolveAeroPerPoint,

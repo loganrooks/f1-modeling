@@ -14,10 +14,10 @@ import type { LapModelOutput, SpeedProfilePoint, VehicleParams } from "../lapMod
 import { solveLap } from "../lapModel/lapSolver.js";
 import { resolveAeroPerPoint, computeAverageAeroFactors } from "./aeroModel.js";
 import { updateElectricalState, initializeElectricalState, computeElectricalPowerModifier } from "./electricalModel.js";
+import { initializeEnvironmentState, updateEnvironmentState } from "./environmentModel.js";
 import { computeAverageLoadFactor } from "./loadTransfer.js";
 import { initializeTireState, tireWearGripFactor, tireThermalFactor, updateTireState } from "./tireModel.js";
 import type {
-  EnvironmentState,
   LapTrace,
   StintConfig,
   StintResult,
@@ -32,13 +32,8 @@ import { DEFAULT_LOAD_TRANSFER_PARAMS } from "./types.js";
 /** Approximate fuel consumption per lap in kg (engineering estimate). */
 const FUEL_CONSUMPTION_PER_LAP_KG = 1.5;
 
-/** Default environment state: dry, moderate temperature. */
-const DEFAULT_ENVIRONMENT_STATE: EnvironmentState = {
-  trackTemperatureC: 33,
-  surfaceWetness: 0,
-  rubberEvolution: 1.0,
-  gripModifier: 1.0,
-};
+// DEFAULT_ENVIRONMENT_STATE removed: now computed by initializeEnvironmentState()
+// from weather timeline rather than hardcoded.
 
 // ---------------------------------------------------------------------------
 // Initialization
@@ -51,22 +46,11 @@ const DEFAULT_ENVIRONMENT_STATE: EnvironmentState = {
  * @returns Initial StintState with fresh tires and full energy.
  */
 export function initializeStintState(config: StintConfig): StintState {
-  // Resolve initial track temperature from weather timeline
-  const initialTrackTemp =
-    config.weatherTimeline.length > 0
-      ? config.weatherTimeline[0]!.trackTemperatureC
-      : 25; // Safe fallback
+  // Initialize environment from weather timeline (rubberEvolution starts at 0.95)
+  const initialEnv = initializeEnvironmentState(config.weatherTimeline);
 
-  // Resolve initial environment state from weather timeline
-  const initialEnv: EnvironmentState =
-    config.weatherTimeline.length > 0
-      ? {
-          trackTemperatureC: config.weatherTimeline[0]!.trackTemperatureC,
-          surfaceWetness: config.weatherTimeline[0]!.surfaceWetness,
-          rubberEvolution: 1.0,
-          gripModifier: 1.0,
-        }
-      : { ...DEFAULT_ENVIRONMENT_STATE };
+  // Track temperature for tire initialization comes from the environment state
+  const initialTrackTemp = initialEnv.trackTemperatureC;
 
   return {
     lapNumber: 0,
@@ -220,17 +204,21 @@ export function runStint(config: StintConfig): StintResult {
     );
 
     // 4. Update electrical state: SoC evolves via harvesting from braking and deployment via policy
-    // Phase 3 Plan 03: pass state.environmentState as 5th arg for weather->electrical coupling
+    // Environment->electrical coupling: wet conditions reduce harvest efficiency
     const newElectricalState = updateElectricalState(
       state.electricalState,
       lapOutput,
       config.electricalPolicy,
       effectiveVehicle.mass,
+      state.environmentState,
     );
 
-    // 5. Update environment state (identity stub)
-    // Phase 3 Plan 03: replace with updateEnvironmentState()
-    const newEnvironmentState: EnvironmentState = { ...state.environmentState };
+    // 5. Update environment state: weather evolution, rubber buildup, grip modifiers
+    const newEnvironmentState = updateEnvironmentState(
+      state.environmentState,
+      lap,
+      config.weatherTimeline,
+    );
 
     // 6. Update fuel state
     const newFuelMass = Math.max(0, state.fuelMass - FUEL_CONSUMPTION_PER_LAP_KG);
@@ -280,7 +268,10 @@ export function runStint(config: StintConfig): StintResult {
     "Minimum effective grip 0.4 (solver collapse prevention)",
     "Reduced-order electrical energy balance (2026 single-pool, no MGU-H)",
     "Deployment power scales with SoC and policy fraction",
-    "Environment coupling: stub (Plan 03)",
+    "Weather evolution: deterministic timeline with per-lap interpolation",
+    "Surface grip: multiplicative wetness and rubber factors",
+    "Rubber evolution: buildup with rain washout",
+    "Weather->electrical coupling: wet conditions reduce harvesting efficiency (cold brakes)",
   ];
 
   if (config.aeroConfig !== null) {

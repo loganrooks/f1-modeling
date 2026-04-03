@@ -121,7 +121,7 @@ describe("presetDocumentSchema", () => {
       ...catalog.weather,
     ];
 
-    expect(seededPresetDocuments).toHaveLength(5);
+    expect(seededPresetDocuments).toHaveLength(6);
     expect(
       seededPresetDocuments.every(
         (presetDocument) =>
@@ -144,6 +144,7 @@ describe("presetDocumentSchema", () => {
     expect(catalog.weather.map((document) => document.presetId)).toEqual([
       "dry-baseline",
       "light-rain-placeholder",
+      "rain-transition",
     ]);
   });
 });

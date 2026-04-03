@@ -29,12 +29,17 @@ export {
   computeAverageLoadFactor,
   computeLoadSensitivityFactor,
   DEFAULT_LOAD_TRANSFER_PARAMS,
+  initializeEnvironmentState,
   initializeStintState,
   initializeTireState,
+  interpolateWeatherAtLap,
   resolveEffectiveVehicle,
+  rubberEvolutionFactor,
   runStint,
+  surfaceGripFactor,
   tireWearGripFactor,
   tireThermalFactor,
+  updateEnvironmentState,
   updateTireState,
 } from "./stintModel/index.js";
 export type {
