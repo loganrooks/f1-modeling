@@ -1,3 +1,22 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+current_phase: 02.1
+current_phase_name: Circuit Geometry Pipeline
+current_plan: 1
+status: phase_complete
+stopped_at: Completed 02.1-01-PLAN.md (Phase 02.1 complete, circuit geometry pipeline delivered)
+last_updated: "2026-04-03T03:51:07.285Z"
+last_activity: 2026-04-03
+progress:
+  total_phases: 9
+  completed_phases: 3
+  total_plans: 13
+  completed_plans: 13
+  percent: 100
+---
+
 # Project State
 
 ## Project Reference
@@ -5,20 +24,20 @@
 See: .planning/PROJECT.md (updated 2026-03-19)
 
 **Core value:** Make F1 design and strategy legible by coupling editable models with visual explanations of why a result changed.
-**Current focus:** Phase 2 complete — Reduced-Order Lap Model delivered; Phase 3 next
+**Current focus:** Phase 02.1 complete — Circuit Geometry Pipeline delivered; Phase 3 next
 
 ## Current Position
 
-Phase: 2 of 8 (Reduced-Order Lap Model)
-Plan: 3 of 3 complete
+Phase: 02.1 of 8 (Circuit Geometry Pipeline)
+Plan: 1 of 1 complete
 
-**Current Phase:** 02
-**Current Phase Name:** Reduced-Order Lap Model
+**Current Phase:** 02.1
+**Current Phase Name:** Circuit Geometry Pipeline
 **Total Phases:** 8
-**Current Plan:** 3
-**Total Plans in Phase:** 3
-**Status:** Phase complete — ready for verification
-**Last Activity:** 2026-03-27
+**Current Plan:** 1
+**Total Plans in Phase:** 1
+**Status:** Phase complete — ready for Phase 3
+**Last Activity:** 2026-04-03
 **Progress:** [██████████] 100%
 
 ## Performance Metrics
@@ -49,6 +68,7 @@ Plan: 3 of 3 complete
 | Phase 02 P01 | 14min | 2 tasks | 22 files |
 | Phase 02 P02 | 9min | 2 tasks | 12 files |
 | Phase 02 P03 | 28min | 3 tasks | 10 files |
+| Phase 02.1 P01 | 12 | 3 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -98,12 +118,19 @@ Recent decisions affecting current work:
 - [Phase 02]: Run route uses harnessId-based routing with fallback: no harnessId tries lap model then falls back to placeholder on RunDependencyError
 - [Phase 02]: Speed profile stored sampled (every 10th point) in summaryMetrics, full profile in artifact data
 - [Phase 02]: Hand-rolled SVG for all visualizations (no charting library) consistent with project conventions
-- [Phase 02]: Track map x/y coordinates are known-inaccurate approximations; real geometry deferred to Phase 2.1 using TUMFTM racetrack database (deliberation written)
+- [Phase 02]: Track map x/y coordinates were known-inaccurate approximations; resolved in Phase 2.1 with real GPS geometry from TUMFTM and bacinger
 - [Phase 02]: Comparison mode uses comparisonRunId state with overlaid speed profiles and waterfall charts
+- [Phase 02.1]: Preserve hand-authored curvature arrays rather than re-deriving from GPS (noise produces implausible radii)
+- [Phase 02.1]: Cache external source data files in repo for offline reproducibility and data provenance
+- [Phase 02.1]: Python sidecar pipeline pattern established for heavyweight scientific computation consumed by TypeScript monorepo
 
 ### Pending Todos
 
 1. Add context-appropriate comparison modes for same-track and cross-track analysis (MEDIUM, ui)
+
+### Roadmap Evolution
+
+- Phase 02.1 inserted after Phase 2: Circuit Geometry Pipeline (COMPLETE) — real GPS-derived track geometry from TUMFTM and bacinger sources
 
 ### Blockers/Concerns
 
@@ -119,6 +146,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-**Last session:** 2026-03-27T06:52:41.029Z
-**Stopped At:** Completed 02-03-PLAN.md (Phase 2 complete, all 3 plans delivered)
+**Last session:** 2026-04-03T03:51:07.280Z
+**Stopped At:** Completed 02.1-01-PLAN.md (Phase 02.1 complete, circuit geometry pipeline delivered)
 **Resume File:** None
