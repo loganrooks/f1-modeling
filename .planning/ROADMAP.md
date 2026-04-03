@@ -83,10 +83,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03-01: Implement tire state, compound differentiation, and degradation models
-- [ ] 03-02: Implement reduced-order electrical state, harvesting, deployment effects, and aero-mode switching
-- [ ] 03-03: Add dynamic weather evolution, track temperature, surface grip, lateral force balance, and environment-coupling dynamics
-- [ ] 03-04: Validate cross-subsystem interactions and energy-deployment policy comparison inside the simulation pipeline
+- [ ] 03-01-PLAN.md — Stint runner foundation, tire model, load transfer, and compound presets (Wave 1)
+- [ ] 03-02-PLAN.md — Electrical energy model, aero-mode switching, and regulation preset upgrade (Wave 2)
+- [ ] 03-03-PLAN.md — Weather evolution, environment coupling, scenario schema extension, and API integration (Wave 2)
+- [ ] 03-04-PLAN.md — Cross-subsystem validation tests and energy-policy comparison (Wave 3)
 
 ### Phase 4: Strategy, Estimation, Explanations, and Learning Views
 **Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, introduces observer methods with a synthetic sensor model, teaches subsystem interactions through engineer-role-specific views, and supports interactive temporal exploration.
