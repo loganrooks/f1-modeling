@@ -5,11 +5,13 @@ import {
   MetricTracePanel,
   RunComparisonCard,
   SensitivityWaterfall,
+  SoCTrace,
   SpeedProfileTrace,
   TrackMap,
   type AssumptionEntry,
   type MetricTraceSeries,
   type RunComparisonMetric,
+  type SoCTracePoint,
   type SpeedProfileTracePoint,
   type TrackMapPoint,
 } from "@f1-modeling/visuals";
@@ -684,6 +686,194 @@ function LapModelRunView({
 }
 
 // ---------------------------------------------------------------------------
+// Phase 3 stint model helpers
+// ---------------------------------------------------------------------------
+
+function extractSoCTrace(run: RunRecord): SoCTracePoint[] {
+  const artifact = run.artifacts.find(
+    (entry) => entry.artifactType === "electrical-state-trace",
+  );
+
+  if (!artifact?.data || typeof artifact.data !== "object") {
+    return [];
+  }
+
+  const data = artifact.data as { trace?: unknown };
+  if (!Array.isArray(data.trace)) {
+    return [];
+  }
+
+  return data.trace.flatMap((entry) => {
+    if (
+      typeof entry === "object" &&
+      entry !== null &&
+      typeof (entry as Record<string, unknown>).lap === "number" &&
+      typeof (entry as Record<string, unknown>).stateOfCharge === "number" &&
+      typeof (entry as Record<string, unknown>).deployed === "number" &&
+      typeof (entry as Record<string, unknown>).harvested === "number"
+    ) {
+      const e = entry as { lap: number; stateOfCharge: number; deployed: number; harvested: number };
+      return [{
+        lap: e.lap,
+        stateOfCharge: e.stateOfCharge,
+        deployed: e.deployed,
+        harvested: e.harvested,
+      }];
+    }
+    return [];
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Phase 3 stint model view
+// ---------------------------------------------------------------------------
+
+function StintModelRunView({
+  selectedRun,
+}: {
+  selectedRun: RunRecord;
+}) {
+  const m = selectedRun.summaryMetrics;
+  const lapTimes = Array.isArray(m.lapTimes) ? (m.lapTimes as number[]) : [];
+  const totalTime = typeof m.totalTime === "number" ? m.totalTime : 0;
+  const totalLaps = typeof m.totalLaps === "number" ? m.totalLaps : lapTimes.length;
+  const tireCompound = typeof m.tireCompound === "string" ? m.tireCompound : "unknown";
+  const electricalPolicy = typeof m.electricalPolicy === "string" ? m.electricalPolicy : "unknown";
+  const assumptions = Array.isArray(m.assumptions) ? (m.assumptions as string[]) : [];
+
+  const socData = extractSoCTrace(selectedRun);
+
+  // Format total time
+  const totalMins = Math.floor(totalTime / 60);
+  const totalSecs = totalTime - totalMins * 60;
+  const formattedTotal = `${totalMins}:${totalSecs.toFixed(3).padStart(6, "0")}`;
+
+  // Assumptions
+  const assumptionEntries: AssumptionEntry[] = assumptions.map((note, i) => ({
+    id: `stint-assumption-${i}`,
+    label: `Model assumption ${i + 1}`,
+    kind: "engineering-inference" as const,
+    summary: note,
+    confidence: "medium" as const,
+  }));
+
+  return (
+    <section className="workspace-stack">
+      {/* Header */}
+      <article className="workspace-card workspace-card--featured">
+        <div className="workspace-row workspace-row--between">
+          <div className="workspace-section-heading">
+            <p className="workspace-kicker">Stint model output</p>
+            <h3>{selectedRun.scenarioSnapshot.name}</h3>
+          </div>
+          <span className="workspace-token workspace-token--accent" style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            padding: "6px 12px",
+            borderRadius: 999,
+            background: "rgba(11, 111, 120, 0.12)",
+            color: "#0d6770",
+            fontSize: "0.84rem",
+            fontWeight: 600,
+          }}>
+            Stint model
+          </span>
+        </div>
+
+        <dl className="workspace-metadata-list">
+          <div>
+            <dt>Total laps</dt>
+            <dd>{totalLaps}</dd>
+          </div>
+          <div>
+            <dt>Total time</dt>
+            <dd style={{
+              fontFamily: '"IBM Plex Mono", "Fira Code", "SFMono-Regular", monospace',
+              fontSize: "1.2rem",
+              fontWeight: 700,
+              color: "#0d6770",
+            }}>
+              {formattedTotal}
+            </dd>
+          </div>
+          <div>
+            <dt>Tire compound</dt>
+            <dd>{tireCompound}</dd>
+          </div>
+          <div>
+            <dt>Electrical policy</dt>
+            <dd>{electricalPolicy}</dd>
+          </div>
+          <div>
+            <dt>Model version</dt>
+            <dd>{selectedRun.modelVersion}</dd>
+          </div>
+        </dl>
+      </article>
+
+      {/* Lap times summary */}
+      {lapTimes.length > 0 ? (
+        <div style={{
+          borderRadius: 18,
+          border: "1px solid rgba(26, 56, 74, 0.11)",
+          background: "rgba(255, 255, 255, 0.76)",
+          overflow: "hidden",
+          padding: "14px 18px",
+        }}>
+          <p style={{
+            margin: "0 0 8px 0",
+            color: "#0f6974",
+            fontFamily: '"IBM Plex Mono", "Fira Code", "SFMono-Regular", monospace',
+            fontSize: "0.76rem",
+            letterSpacing: "0.13em",
+            textTransform: "uppercase",
+          }}>Lap times</p>
+          <div style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "6px 12px",
+            fontFamily: '"IBM Plex Mono", "Fira Code", "SFMono-Regular", monospace',
+            fontSize: "0.82rem",
+            color: "#152634",
+          }}>
+            {lapTimes.map((t, i) => {
+              const lapMins = Math.floor(t / 60);
+              const lapSecs = t - lapMins * 60;
+              return (
+                <span key={i}>
+                  L{i + 1}: {lapMins}:{lapSecs.toFixed(3).padStart(6, "0")}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+
+      {/* SoC Trace */}
+      <SoCTrace
+        data={socData}
+        maxCapacity={4_000_000}
+        label="Energy State of Charge"
+      />
+
+      {/* Assumptions */}
+      {assumptionEntries.length > 0 ? (
+        <AssumptionPanel
+          eyebrow="Model assumptions"
+          title="Stint model limitations"
+          description="These assumptions bound the multi-lap simulation's fidelity. Results should be interpreted in this context."
+          modelLabel="Stint model (Phase 3)"
+          modelVersion={selectedRun.modelVersion}
+          entries={assumptionEntries}
+          updatedAt={selectedRun.createdAt}
+        />
+      ) : null}
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Main panel
 // ---------------------------------------------------------------------------
 
@@ -718,6 +908,10 @@ export function RunSummaryPanel({
   }
 
   const harnessId = getHarnessId(selectedRun);
+
+  if (harnessId === "stint-model") {
+    return <StintModelRunView selectedRun={selectedRun} />;
+  }
 
   if (harnessId === "qss-lap-model") {
     const comparisonRun = comparisonRunId

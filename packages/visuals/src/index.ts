@@ -37,6 +37,12 @@ export type {
   TrackContextPlaceholderState,
 } from './workspace/TrackContextPlaceholder';
 
+export { SoCTrace } from './traces/SoCTrace';
+export type {
+  SoCTracePoint,
+  SoCTraceProps,
+} from './traces/SoCTrace';
+
 export { SpeedProfileTrace } from './traces/SpeedProfileTrace';
 export type {
   SpeedProfileTracePoint,

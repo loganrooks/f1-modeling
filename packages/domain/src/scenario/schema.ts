@@ -52,6 +52,15 @@ export const reservedExtensionPointSchema = z
   })
   .strict();
 
+export const stintConfigSchema = z
+  .object({
+    totalLaps: z.number().int().positive(),
+    tireCompoundId: documentIdSchema,
+    electricalPolicyId: z.string().optional(),
+    weatherPresetOverride: documentIdSchema.optional(),
+  })
+  .strict();
+
 export const scenarioDocumentSchema = z
   .object({
     schemaVersion: z.literal(scenarioDocumentSchemaVersion),
@@ -66,6 +75,7 @@ export const scenarioDocumentSchema = z
     seed: z.number().int().nonnegative(),
     assumptionNotes: z.array(assumptionNoteSchema),
     vehicleParams: vehicleParamsSchema.optional(),
+    stintConfig: stintConfigSchema.optional(),
     observerConfigPlaceholder: reservedExtensionPointSchema,
     controllerConfigPlaceholder: reservedExtensionPointSchema,
     importedDataAlignmentPlaceholder: reservedExtensionPointSchema,
@@ -73,6 +83,7 @@ export const scenarioDocumentSchema = z
   .strict();
 
 export type VehicleParamsInput = z.infer<typeof vehicleParamsSchema>;
+export type StintConfig = z.infer<typeof stintConfigSchema>;
 export type CircuitSelection = z.infer<typeof circuitSelectionSchema>;
 export type DriverProfilePlaceholder = z.infer<
   typeof driverProfilePlaceholderSchema

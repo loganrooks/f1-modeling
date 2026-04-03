@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { join } from "node:path";
 
@@ -9,13 +10,23 @@ import {
   scenarioDocumentSchema,
   type CircuitDocument,
   type RunRecord,
+  type WeatherPresetDocument,
 } from "@f1-modeling/domain";
 import { loadCircuitCatalogFromDisk } from "@f1-modeling/domain/node/circuit-catalog";
 import {
+  DEFAULT_LOAD_TRANSFER_PARAMS,
   DEFAULT_VEHICLE_PARAMS,
+  DEFAULT_CONSERVATIVE_POLICY,
+  DEFAULT_AGGRESSIVE_POLICY,
   runPhase1PlaceholderScenario,
+  runStint,
   solveLap,
+  type ElectricalPolicy,
+  type StintConfig,
+  type TireCompoundParams,
   type VehicleParams,
+  type WeatherTimeline,
+  type WeatherTimelineEntry,
 } from "@f1-modeling/sim-core";
 
 import type { LocalApiPaths } from "../app.js";
@@ -236,6 +247,317 @@ export async function createLapModelRun(
       assumptionNotes: lapOutput.assumptions.map((note) => ({
         note,
         provenance: LAP_MODEL_PROVENANCE,
+      })),
+    },
+  });
+
+  await writeJsonFile(getRunFilePath(paths, runId), runRecord);
+
+  return runRecord;
+}
+
+// ---------------------------------------------------------------------------
+// Stint model run
+// ---------------------------------------------------------------------------
+
+const STINT_MODEL_PROVENANCE = {
+  sourceType: "engineering-inference" as const,
+  source: "Multi-lap stint model (Phase 3)",
+  notes:
+    "Multi-lap stint simulation with tire degradation, electrical energy balance, and weather evolution. Assumptions are documented in model output.",
+};
+
+export interface CreateStintModelRunInput {
+  scenarioId: string;
+}
+
+/**
+ * Loads a tire compound preset from the presets/tires directory.
+ */
+function loadTireCompoundPreset(
+  presetsRoot: string,
+  compoundId: string,
+): TireCompoundParams {
+  const filePath = join(presetsRoot, "tires", `${compoundId}.json`);
+  const raw = readJsonFileSync_preset(filePath);
+  if (!raw) {
+    throw new RunDependencyError(
+      `Tire compound preset "${compoundId}" not found at ${filePath}.`,
+    );
+  }
+
+  const doc = raw as { values?: Record<string, unknown> };
+  if (!doc.values) {
+    throw new RunDependencyError(
+      `Tire compound preset "${compoundId}" has no values field.`,
+    );
+  }
+
+  return doc.values as unknown as TireCompoundParams;
+}
+
+/**
+ * Synchronous JSON file reader for preset loading.
+ */
+function readJsonFileSync_preset(filePath: string): unknown | null {
+  try {
+    return JSON.parse(readFileSync(filePath, "utf8")) as unknown;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Extracts a weather timeline from a resolved weather preset.
+ */
+function extractWeatherTimeline(
+  weatherPreset: WeatherPresetDocument,
+): WeatherTimeline {
+  const values = weatherPreset.values as Record<string, unknown>;
+  const timeline = values.weatherTimeline;
+
+  if (Array.isArray(timeline)) {
+    return timeline as WeatherTimelineEntry[];
+  }
+
+  // Fallback: single-point dry timeline from preset values
+  const trackTemp = typeof values.trackTemperatureC === "number" ? values.trackTemperatureC : 33;
+  return [
+    { lap: 0, trackTemperatureC: trackTemp, surfaceWetness: 0, rainfall: "none" },
+  ];
+}
+
+/**
+ * Resolves an electrical deployment policy from a policy ID string.
+ */
+function resolveElectricalPolicy(policyId: string | undefined): ElectricalPolicy {
+  if (policyId === "aggressive-deploy" || policyId === "aggressive") {
+    return DEFAULT_AGGRESSIVE_POLICY;
+  }
+  return DEFAULT_CONSERVATIVE_POLICY;
+}
+
+/**
+ * Finds the longest contiguous section of near-zero curvature to use as
+ * a straight-mode zone. This is a heuristic for active-aero zone definition.
+ */
+function findStraightZones(
+  circuit: CircuitDocument,
+  curvatureThreshold: number = 0.001,
+): Array<{ startDistance: number; endDistance: number }> {
+  const points = circuit.points;
+  if (points.length === 0) return [];
+
+  let bestStart = 0;
+  let bestEnd = 0;
+  let bestLen = 0;
+  let curStart = 0;
+  let inStraight = false;
+
+  for (let i = 0; i < points.length; i++) {
+    const pt = points[i]!;
+    if (Math.abs(pt.curvature) < curvatureThreshold) {
+      if (!inStraight) {
+        curStart = i;
+        inStraight = true;
+      }
+      const len = pt.distance - points[curStart]!.distance;
+      if (len > bestLen) {
+        bestStart = curStart;
+        bestEnd = i;
+        bestLen = len;
+      }
+    } else {
+      inStraight = false;
+    }
+  }
+
+  if (bestLen > 0) {
+    return [{
+      startDistance: points[bestStart]!.distance,
+      endDistance: points[bestEnd]!.distance,
+    }];
+  }
+
+  return [];
+}
+
+export async function createStintModelRun(
+  paths: LocalApiPaths,
+  input: CreateStintModelRunInput,
+): Promise<Readonly<RunRecord>> {
+  const scenarioId = documentIdSchema.parse(input.scenarioId);
+  const scenario = await loadSavedScenario(paths, scenarioId);
+
+  let resolvedPresets;
+  try {
+    resolvedPresets = resolveScenarioPresetDocuments(paths.presetsRoot, scenario);
+  } catch (error) {
+    throw new RunDependencyError(
+      error instanceof Error ? error.message : "Failed to resolve scenario presets.",
+    );
+  }
+
+  // Load circuit
+  let circuits: CircuitDocument[];
+  try {
+    circuits = loadCircuitCatalogFromDisk(join(paths.presetsRoot, "circuits"));
+  } catch (error) {
+    throw new RunDependencyError(
+      error instanceof Error ? error.message : "Failed to load circuit catalog.",
+    );
+  }
+
+  const circuitId = scenario.circuit.circuitId;
+  const circuit = getCircuitById(circuits, circuitId);
+  if (!circuit) {
+    throw new RunDependencyError(
+      `Circuit "${circuitId}" not found in circuit catalog.`,
+    );
+  }
+
+  // Resolve stint parameters from scenario
+  const stintConfig = scenario.stintConfig;
+  const totalLaps = stintConfig?.totalLaps ?? 15;
+  const tireCompoundId = stintConfig?.tireCompoundId ?? "medium-c3";
+
+  // Load tire compound preset
+  let tireCompound: TireCompoundParams;
+  try {
+    tireCompound = loadTireCompoundPreset(paths.presetsRoot, tireCompoundId);
+  } catch (error) {
+    throw new RunDependencyError(
+      error instanceof Error ? error.message : `Failed to load tire compound "${tireCompoundId}".`,
+    );
+  }
+
+  // Resolve electrical policy
+  const electricalPolicy = resolveElectricalPolicy(stintConfig?.electricalPolicyId);
+
+  // Extract weather timeline from preset
+  const weatherTimeline = extractWeatherTimeline(resolvedPresets.weather);
+
+  // Resolve vehicle params
+  const baseVehicle: VehicleParams = scenario.vehicleParams ?? DEFAULT_VEHICLE_PARAMS;
+
+  // Build aero config from regulation preset if active aero is enabled
+  const regValues = resolvedPresets.regulation.values as Record<string, unknown>;
+  const aeroValues = regValues.aero as Record<string, unknown> | undefined;
+  let aeroConfig: StintConfig["aeroConfig"] = null;
+
+  if (aeroValues?.activeAeroModeSwitching === true) {
+    const modes = aeroValues.modes as Record<string, Record<string, number>> | undefined;
+    const straightMode = modes?.straightMode;
+    const dragReduction = straightMode?.dragReduction ?? 0.55;
+    const downforceReduction = straightMode?.downforceReduction ?? 0.30;
+
+    const straightModeZones = findStraightZones(circuit);
+
+    if (straightModeZones.length > 0) {
+      aeroConfig = {
+        straightModeZones,
+        cornerModeDragFactor: baseVehicle.dragFactor,
+        cornerModeDownforceFactor: baseVehicle.downforceFactor,
+        straightModeDragFactor: baseVehicle.dragFactor * (1 - dragReduction),
+        straightModeDownforceFactor: baseVehicle.downforceFactor * (1 - downforceReduction),
+      };
+    }
+  }
+
+  // Run the stint model
+  const stintRunConfig: StintConfig = {
+    circuit,
+    baseVehicle,
+    tireCompound,
+    electricalPolicy,
+    weatherTimeline,
+    aeroConfig,
+    loadTransferParams: DEFAULT_LOAD_TRANSFER_PARAMS,
+    totalLaps,
+  };
+
+  const stintResult = runStint(stintRunConfig);
+
+  // Build run record
+  const runId = createRunId(scenario.scenarioId);
+  const lapTimes = stintResult.lapTraces.map((t) => t.lapTime);
+
+  const runRecord = createRunRecord({
+    runId,
+    scenario,
+    resolvedPresets,
+    versions: {
+      modelVersion: "stint-model/v1",
+      appVersion: packageJson.version,
+    },
+    output: {
+      summaryMetrics: {
+        harnessId: "stint-model",
+        circuitId,
+        vehicleParams: baseVehicle,
+        tireCompound: tireCompound.compoundId,
+        electricalPolicy: electricalPolicy.policyId,
+        totalLaps,
+        lapTimes,
+        totalTime: stintResult.totalTime,
+        finalTireWear: stintResult.finalState.tireState.wearFraction,
+        finalElectricalSoC: stintResult.finalState.electricalState.stateOfCharge,
+        assumptions: stintResult.assumptions,
+      },
+      artifacts: [
+        {
+          artifactId: `${runId}-stint-trace`,
+          artifactType: "stint-trace",
+          label: "Full stint trace (per-lap state snapshots)",
+          data: {
+            lapTraces: stintResult.lapTraces,
+          },
+        },
+        {
+          artifactId: `${runId}-tire-degradation-trace`,
+          artifactType: "tire-degradation-trace",
+          label: "Tire degradation over stint",
+          data: {
+            trace: stintResult.lapTraces.map((t) => ({
+              lap: t.lapNumber,
+              wearFraction: t.tireState.wearFraction,
+              surfaceTemperature: t.tireState.surfaceTemperature,
+              effectiveGrip: t.effectiveGrip,
+              compound: t.tireState.compound,
+            })),
+          },
+        },
+        {
+          artifactId: `${runId}-electrical-state-trace`,
+          artifactType: "electrical-state-trace",
+          label: "Electrical SoC evolution over stint",
+          data: {
+            trace: stintResult.lapTraces.map((t) => ({
+              lap: t.lapNumber,
+              stateOfCharge: t.electricalState.stateOfCharge,
+              deployed: t.electricalState.lapEnergyDeployed,
+              harvested: t.electricalState.lapEnergyHarvested,
+            })),
+          },
+        },
+        {
+          artifactId: `${runId}-weather-evolution-trace`,
+          artifactType: "weather-evolution-trace",
+          label: "Weather evolution over stint",
+          data: {
+            trace: stintResult.lapTraces.map((t) => ({
+              lap: t.lapNumber,
+              trackTemperatureC: t.environmentState.trackTemperatureC,
+              surfaceWetness: t.environmentState.surfaceWetness,
+              gripModifier: t.environmentState.gripModifier,
+              rubberEvolution: t.environmentState.rubberEvolution,
+            })),
+          },
+        },
+      ],
+      assumptionNotes: stintResult.assumptions.map((note) => ({
+        note,
+        provenance: STINT_MODEL_PROVENANCE,
       })),
     },
   });

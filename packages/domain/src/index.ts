@@ -37,6 +37,7 @@ export {
   presetReferenceSchema,
   reservedExtensionPointSchema,
   scenarioDocumentSchema,
+  stintConfigSchema,
   vehicleParamsSchema,
 } from "./scenario/schema.js";
 export type {
@@ -45,6 +46,7 @@ export type {
   PresetReference,
   ReservedExtensionPoint,
   ScenarioDocument,
+  StintConfig,
   VehicleParamsInput,
 } from "./scenario/schema.js";
 

@@ -6,6 +6,7 @@ import type { LocalApiPaths } from "../app.js";
 import {
   createLapModelRun,
   createPhase1Run,
+  createStintModelRun,
   listRuns,
   RunDependencyError,
   ScenarioNotFoundError,
@@ -18,7 +19,7 @@ interface RunRouteOptions {
 const createRunRequestSchema = z
   .object({
     scenarioId: documentIdSchema,
-    harnessId: z.enum(["qss-lap-model", "phase1-placeholder"]).optional(),
+    harnessId: z.enum(["qss-lap-model", "phase1-placeholder", "stint-model"]).optional(),
   })
   .strict();
 
@@ -46,6 +47,8 @@ export const registerRunRoutes: FastifyPluginAsync<RunRouteOptions> = async (
 
       if (body.harnessId === "phase1-placeholder") {
         runRecord = await createPhase1Run(paths, body);
+      } else if (body.harnessId === "stint-model") {
+        runRecord = await createStintModelRun(paths, body);
       } else if (body.harnessId === "qss-lap-model") {
         runRecord = await createLapModelRun(paths, body);
       } else {

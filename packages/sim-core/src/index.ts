@@ -28,6 +28,8 @@ export type {
 export {
   computeAverageLoadFactor,
   computeLoadSensitivityFactor,
+  DEFAULT_AGGRESSIVE_POLICY,
+  DEFAULT_CONSERVATIVE_POLICY,
   DEFAULT_LOAD_TRANSFER_PARAMS,
   initializeEnvironmentState,
   initializeStintState,
