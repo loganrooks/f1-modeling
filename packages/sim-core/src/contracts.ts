@@ -3,7 +3,6 @@ import type {
   SpeedProfilePoint,
   VehicleParams,
 } from "./lapModel/types.js";
-
 export interface SimulationRunRequest {
   scenarioId: string;
   scenarioLabel: string;
@@ -57,10 +56,38 @@ export interface LapModelSummary {
 }
 
 /**
+ * Phase 3 multi-lap stint model summary.
+ * Discriminated on harnessId: "stint-model".
+ */
+export interface StintModelSummary {
+  runId: string;
+  harnessId: "stint-model";
+  modelVersion: string;
+  scenarioId: string;
+  scenarioLabel: string;
+  seed: number;
+  placeholder: false;
+  vehicleParams: VehicleParams;
+  circuitId: string;
+  tireCompound: string;
+  electricalPolicy: string;
+  totalLaps: number;
+  lapTimes: number[];
+  totalTime: number;
+  finalTireWear: number;
+  finalElectricalSoC: number;
+  assumptions: string[];
+  notes: string[];
+}
+
+/**
  * Discriminated union of all simulation run summary types.
  * Discriminate on `harnessId` to narrow to a specific type.
  */
-export type SimulationRunSummary = LapModelSummary | Phase1PlaceholderSummary;
+export type SimulationRunSummary =
+  | LapModelSummary
+  | Phase1PlaceholderSummary
+  | StintModelSummary;
 
 export interface SimulationHarness {
   readonly harnessId: string;
