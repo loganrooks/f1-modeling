@@ -10,6 +10,7 @@ import { startTransition, useEffect, useState } from "react";
 import {
   createLapModelRun,
   createPlaceholderRun,
+  createStintModelRun,
   fetchCircuitCatalog,
   fetchPresetCatalog,
   listRunHistory,
@@ -204,6 +205,34 @@ export function useWorkspace() {
     }
   }
 
+  async function createStintRun() {
+    setIsCreatingRun(true);
+
+    try {
+      const savedScenario = await saveScenarioDocument(currentScenario);
+      const createdRun = await createStintModelRun(savedScenario.scenarioId);
+      const { scenarios, runs } = await reloadCollections();
+
+      startTransition(() => {
+        setCurrentScenario(savedScenario);
+        setSavedScenarios(scenarios);
+        setRunHistory(runs);
+        setSelectedRunId(createdRun.runId);
+        setNotice({
+          tone: "success",
+          text: `Saved "${savedScenario.name}" and appended stint model run "${createdRun.runId}".`,
+        });
+      });
+    } catch (error) {
+      setNotice({
+        tone: "error",
+        text: getErrorMessage(error),
+      });
+    } finally {
+      setIsCreatingRun(false);
+    }
+  }
+
   const comparisonRun =
     runHistory.find((entry) => entry.runId === comparisonRunId) ?? null;
 
@@ -232,6 +261,7 @@ export function useWorkspace() {
     loadScenario,
     reloadCurrentScenario: () => loadScenario(currentScenario.scenarioId),
     createRun,
+    createStintRun,
     selectRun: setSelectedRunId,
     selectComparisonRun,
   };

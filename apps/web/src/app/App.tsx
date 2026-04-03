@@ -239,6 +239,7 @@ export function App() {
             comparisonRunId={workspace.comparisonRunId}
             isCreatingRun={workspace.isCreatingRun}
             onCreateRun={workspace.createRun}
+            onCreateStintRun={workspace.createStintRun}
             onSelectRun={workspace.selectRun}
             onSelectComparisonRun={workspace.selectComparisonRun}
           />

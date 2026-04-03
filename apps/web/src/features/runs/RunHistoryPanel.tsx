@@ -20,6 +20,9 @@ function formatLapTime(seconds: number): string {
 
 function getRunBadge(run: RunRecord): { label: string; className: string } {
   const harnessId = getHarnessId(run);
+  if (harnessId === "stint-model") {
+    return { label: "Stint Model", className: "workspace-token workspace-token--accent" };
+  }
   if (harnessId === "qss-lap-model") {
     return { label: "Lap Model", className: "workspace-token workspace-token--accent" };
   }
@@ -28,6 +31,16 @@ function getRunBadge(run: RunRecord): { label: string; className: string } {
 
 function getRunMetricDisplay(run: RunRecord): string {
   const harnessId = getHarnessId(run);
+  if (harnessId === "stint-model") {
+    const totalLaps = run.summaryMetrics.totalLaps;
+    const totalTime = run.summaryMetrics.totalTime;
+    if (typeof totalLaps === "number" && typeof totalTime === "number") {
+      const mins = Math.floor(totalTime / 60);
+      const secs = totalTime - mins * 60;
+      return `${totalLaps} laps · ${mins}:${secs.toFixed(1).padStart(4, "0")}`;
+    }
+    return "stint";
+  }
   if (harnessId === "qss-lap-model") {
     const lapTime = run.summaryMetrics.lapTime;
     if (typeof lapTime === "number") {
@@ -46,6 +59,7 @@ type RunHistoryPanelProps = {
   comparisonRunId?: string | null;
   isCreatingRun?: boolean;
   onCreateRun: () => void;
+  onCreateStintRun?: () => void;
   onSelectRun: (runId: string) => void;
   onSelectComparisonRun?: (runId: string | null) => void;
 };
@@ -56,6 +70,7 @@ export function RunHistoryPanel({
   comparisonRunId,
   isCreatingRun = false,
   onCreateRun,
+  onCreateStintRun,
   onSelectRun,
   onSelectComparisonRun,
 }: RunHistoryPanelProps) {
@@ -66,14 +81,26 @@ export function RunHistoryPanel({
           <p className="workspace-kicker">Run history</p>
           <h3>Runs</h3>
         </div>
-        <button
-          className="workspace-button"
-          type="button"
-          disabled={isCreatingRun}
-          onClick={onCreateRun}
-        >
-          {isCreatingRun ? "Creating run..." : "Create run"}
-        </button>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button
+            className="workspace-button"
+            type="button"
+            disabled={isCreatingRun}
+            onClick={onCreateRun}
+          >
+            {isCreatingRun ? "Creating..." : "Lap run"}
+          </button>
+          {onCreateStintRun ? (
+            <button
+              className="workspace-button"
+              type="button"
+              disabled={isCreatingRun}
+              onClick={onCreateStintRun}
+            >
+              {isCreatingRun ? "Creating..." : "Stint run"}
+            </button>
+          ) : null}
+        </div>
       </div>
 
       {runs.length > 0 ? (

@@ -170,3 +170,14 @@ export async function createLapModelRun(
 
   return runRecordSchema.parse(payload);
 }
+
+export async function createStintModelRun(
+  scenarioId: string,
+): Promise<RunRecord> {
+  const payload = await requestJson("/api/runs", {
+    method: "POST",
+    body: JSON.stringify({ scenarioId, harnessId: "stint-model" }),
+  });
+
+  return runRecordSchema.parse(payload);
+}
