@@ -72,6 +72,7 @@ const HARD: TireCompoundParams = {
 
 const DEFAULT_ENV: EnvironmentState = {
   trackTemperatureC: 33,
+  ambientTemperatureC: 24,
   surfaceWetness: 0,
   rubberEvolution: 1.0,
   gripModifier: 1.0,
@@ -328,5 +329,69 @@ describe("tireModel: grip floor", () => {
       const grip = tireWearGripFactor(state, compound);
       expect(grip).toBeGreaterThanOrEqual(0.3);
     }
+  });
+});
+
+describe("tireModel: ambient temperature effect on equilibrium", () => {
+  it("tire equilibrium temperature is lower with cold ambient (10C) vs hot ambient (30C)", () => {
+    const coldEnv: EnvironmentState = {
+      trackTemperatureC: 33,
+      ambientTemperatureC: 10,
+      surfaceWetness: 0,
+      rubberEvolution: 1.0,
+      gripModifier: 1.0,
+    };
+    const hotEnv: EnvironmentState = {
+      trackTemperatureC: 33,
+      ambientTemperatureC: 30,
+      surfaceWetness: 0,
+      rubberEvolution: 1.0,
+      gripModifier: 1.0,
+    };
+
+    // Start at same initial temp
+    let coldState = initializeTireState(SOFT, 33);
+    let hotState = initializeTireState(SOFT, 33);
+    const lapOutput = mockLapOutput();
+
+    // Run 10 laps with each environment
+    for (let i = 0; i < 10; i++) {
+      coldState = updateTireState(coldState, lapOutput, SOFT, coldEnv);
+      hotState = updateTireState(hotState, lapOutput, SOFT, hotEnv);
+    }
+
+    // Hot ambient should produce higher surface temperature (higher equilibrium)
+    expect(hotState.surfaceTemperature).toBeGreaterThan(coldState.surfaceTemperature);
+  });
+
+  it("stint with cold ambient (10C) produces slower warm-up than hot ambient (30C)", () => {
+    const coldEnv: EnvironmentState = {
+      trackTemperatureC: 33,
+      ambientTemperatureC: 10,
+      surfaceWetness: 0,
+      rubberEvolution: 1.0,
+      gripModifier: 1.0,
+    };
+    const hotEnv: EnvironmentState = {
+      trackTemperatureC: 33,
+      ambientTemperatureC: 30,
+      surfaceWetness: 0,
+      rubberEvolution: 1.0,
+      gripModifier: 1.0,
+    };
+
+    // Start from cold initial temp
+    let coldState = initializeTireState(SOFT, 20);
+    let hotState = initializeTireState(SOFT, 20);
+    const lapOutput = mockLapOutput();
+
+    // Run 5 laps
+    for (let i = 0; i < 5; i++) {
+      coldState = updateTireState(coldState, lapOutput, SOFT, coldEnv);
+      hotState = updateTireState(hotState, lapOutput, SOFT, hotEnv);
+    }
+
+    // Hot ambient environment should warm up faster (higher surface temp after same laps)
+    expect(hotState.surfaceTemperature).toBeGreaterThan(coldState.surfaceTemperature);
   });
 });

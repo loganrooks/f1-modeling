@@ -150,6 +150,37 @@ describe("environmentModel: rain washout", () => {
   });
 });
 
+describe("environmentModel: ambientTemperatureC tracking", () => {
+  it("initializeEnvironmentState stores ambientTemperatureC from parameter", () => {
+    const timeline: WeatherTimeline = [
+      { lap: 0, trackTemperatureC: 33, surfaceWetness: 0, rainfall: "none" },
+    ];
+
+    const state = initializeEnvironmentState(timeline, 18);
+    expect(state.ambientTemperatureC).toBe(18);
+  });
+
+  it("initializeEnvironmentState defaults ambientTemperatureC to 24 when not provided", () => {
+    const timeline: WeatherTimeline = [
+      { lap: 0, trackTemperatureC: 33, surfaceWetness: 0, rainfall: "none" },
+    ];
+
+    const state = initializeEnvironmentState(timeline);
+    expect(state.ambientTemperatureC).toBe(24);
+  });
+
+  it("updateEnvironmentState propagates ambientTemperatureC from previous state", () => {
+    const timeline: WeatherTimeline = [
+      { lap: 0, trackTemperatureC: 33, surfaceWetness: 0, rainfall: "none" },
+      { lap: 10, trackTemperatureC: 30, surfaceWetness: 0.2, rainfall: "light" },
+    ];
+
+    const initial = initializeEnvironmentState(timeline, 15);
+    const updated = updateEnvironmentState(initial, 5, timeline);
+    expect(updated.ambientTemperatureC).toBe(15);
+  });
+});
+
 describe("environmentModel: combined grip modifier (dry-to-wet transition)", () => {
   it("gripModifier decreases when rain arrives", () => {
     const dryTimeline: WeatherTimeline = [
