@@ -269,6 +269,7 @@ describe("electricalModel: environment-aware harvesting (cross-subsystem)", () =
   const dryEnv: EnvironmentState = {
     surfaceWetness: 0.0,
     trackTemperatureC: 33,
+    ambientTemperatureC: 24,
     rubberEvolution: 1.0,
     gripModifier: 1.0,
   };
@@ -276,6 +277,7 @@ describe("electricalModel: environment-aware harvesting (cross-subsystem)", () =
   const wetEnv: EnvironmentState = {
     surfaceWetness: 0.7,
     trackTemperatureC: 18,
+    ambientTemperatureC: 14,
     rubberEvolution: 0.95,
     gripModifier: 0.6,
   };

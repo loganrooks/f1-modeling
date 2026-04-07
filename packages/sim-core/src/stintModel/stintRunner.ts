@@ -47,7 +47,11 @@ const FUEL_CONSUMPTION_PER_LAP_KG = 1.5;
  */
 export function initializeStintState(config: StintConfig): StintState {
   // Initialize environment from weather timeline (rubberEvolution starts at 0.95)
-  const initialEnv = initializeEnvironmentState(config.weatherTimeline);
+  // ambientTemperatureC comes from weather preset (session-level, default 24C)
+  const initialEnv = initializeEnvironmentState(
+    config.weatherTimeline,
+    config.ambientTemperatureC ?? 24,
+  );
 
   // Track temperature for tire initialization comes from the environment state
   const initialTrackTemp = initialEnv.trackTemperatureC;

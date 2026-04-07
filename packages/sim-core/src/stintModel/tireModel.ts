@@ -134,12 +134,18 @@ export function updateTireState(
   );
 
   // --- Surface temperature update ---
-  // Equilibrium temperature: engineering estimate based on track temperature
-  // and compound optimal window. Higher-performance compounds generate more heat.
-  const equilibriumTemp = Math.max(
+  // Equilibrium temperature: engineering estimate based on track temperature,
+  // compound optimal window, and ambient air cooling. Higher-performance
+  // compounds generate more heat. Ambient air pulls equilibrium down via cooling.
+  //
+  // Blend: 80% driven by track/compound heat input, 20% by ambient cooling.
+  // Cooler ambient = lower equilibrium = harder to warm up = thermal grip penalty.
+  const heatInput = Math.max(
     envState.trackTemperatureC,
     compound.optimalTempLow + 5,
   );
+  const ambientCooling = envState.ambientTemperatureC;
+  const equilibriumTemp = 0.8 * heatInput + 0.2 * ambientCooling;
 
   // Exponential convergence: close `warmupRate` fraction of the gap per lap
   const newSurfaceTemp =

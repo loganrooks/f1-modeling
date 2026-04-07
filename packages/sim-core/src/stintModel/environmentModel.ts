@@ -163,9 +163,14 @@ export function rubberEvolutionFactor(
  * (or defaults: trackTemperatureC 33, surfaceWetness 0, rubberEvolution 0.95).
  *
  * @param timeline - Weather timeline for the stint.
+ * @param ambientTemperatureC - Ambient air temperature in degrees C (default 24).
+ *   Session-level value from weather preset; does not change during a stint.
  * @returns Initial EnvironmentState.
  */
-export function initializeEnvironmentState(timeline: WeatherTimeline): EnvironmentState {
+export function initializeEnvironmentState(
+  timeline: WeatherTimeline,
+  ambientTemperatureC: number = 24,
+): EnvironmentState {
   const trackTemperatureC = timeline.length > 0 ? timeline[0]!.trackTemperatureC : 33;
   const surfaceWetness = timeline.length > 0 ? timeline[0]!.surfaceWetness : 0;
   const rubberEvolution = 0.95;
@@ -173,6 +178,7 @@ export function initializeEnvironmentState(timeline: WeatherTimeline): Environme
 
   return {
     trackTemperatureC,
+    ambientTemperatureC,
     surfaceWetness,
     rubberEvolution,
     gripModifier,
@@ -207,6 +213,7 @@ export function updateEnvironmentState(
 
   return {
     trackTemperatureC: weather.trackTemperatureC,
+    ambientTemperatureC: prev.ambientTemperatureC,
     surfaceWetness: weather.surfaceWetness,
     rubberEvolution: rubberEvo,
     gripModifier,

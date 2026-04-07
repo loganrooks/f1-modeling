@@ -108,6 +108,8 @@ export interface ElectricalPolicy {
 export interface EnvironmentState {
   /** Track surface temperature in degrees C. */
   trackTemperatureC: number;
+  /** Ambient air temperature in degrees C. Affects tire cooling rate. */
+  ambientTemperatureC: number;
   /** Surface wetness: 0.0 (fully dry) to 1.0 (fully wet). */
   surfaceWetness: number;
   /** Rubber buildup evolution factor: 0.95 (green track) to 1.05 (rubbered in). */
@@ -214,6 +216,8 @@ export interface StintConfig {
   loadTransferParams: LoadTransferParams;
   /** Total number of laps to simulate. */
   totalLaps: number;
+  /** Ambient air temperature in degrees C from weather preset. Default 24. */
+  ambientTemperatureC?: number;
 }
 
 // ---------------------------------------------------------------------------

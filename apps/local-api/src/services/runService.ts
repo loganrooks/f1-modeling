@@ -434,8 +434,12 @@ export async function createStintModelRun(
   // Resolve electrical policy
   const electricalPolicy = resolveElectricalPolicy(stintConfig?.electricalPolicyId);
 
-  // Extract weather timeline from preset
+  // Extract weather timeline and ambient temperature from preset
   const weatherTimeline = extractWeatherTimeline(resolvedPresets.weather);
+  const weatherValues = resolvedPresets.weather.values as Record<string, unknown>;
+  const ambientTemperatureC = typeof weatherValues.ambientTemperatureC === "number"
+    ? weatherValues.ambientTemperatureC
+    : 24;
 
   // Resolve vehicle params
   const baseVehicle: VehicleParams = scenario.vehicleParams ?? DEFAULT_VEHICLE_PARAMS;
@@ -474,6 +478,7 @@ export async function createStintModelRun(
     aeroConfig,
     loadTransferParams: DEFAULT_LOAD_TRANSFER_PARAMS,
     totalLaps,
+    ambientTemperatureC,
   };
 
   const stintResult = runStint(stintRunConfig);
