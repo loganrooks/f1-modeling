@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 03
-current_phase_name: Tire, Electrical, Weather, Environment, and Energy Dynamics
-current_plan: 4
-status: verifying
-stopped_at: Completed 03-04-PLAN.md
-last_updated: "2026-04-03T05:25:12.556Z"
-last_activity: 2026-04-03
+current_phase: 03.1
+current_phase_name: Race State, Typed Artifacts, and Branchable Runs
+current_plan: 0
+status: Phase 3 complete, audit integrated. Phase 3.1 next.
+stopped_at: Audit integration complete (260407-mgl)
+last_updated: "2026-04-07T20:14:00.000Z"
+last_activity: 2026-04-07
 progress:
-  total_phases: 9
+  total_phases: 10
   completed_phases: 4
   total_plans: 17
   completed_plans: 17
@@ -24,21 +24,21 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-19)
 
 **Core value:** Make F1 design and strategy legible by coupling editable models with visual explanations of why a result changed.
-**Current focus:** Phase 3 in progress — Tire, Electrical, Weather, Environment, and Energy Dynamics
+**Current focus:** Phase 3 complete, audit integrated. Phase 3.1 next — Race State, Typed Artifacts, and Branchable Runs.
 
 ## Current Position
 
-Phase: 03 of 8 (Tire, Electrical, Weather, Environment, and Energy Dynamics)
-Plan: 1 of 4 complete
+Phase: 03.1 of 8+ (Race State, Typed Artifacts, and Branchable Runs)
+Plan: 0 of 4 complete
 
-**Current Phase:** 03
-**Current Phase Name:** Tire, Electrical, Weather, Environment, and Energy Dynamics
-**Total Phases:** 8
-**Current Plan:** 4
+**Current Phase:** 03.1
+**Current Phase Name:** Race State, Typed Artifacts, and Branchable Runs
+**Total Phases:** 10 (including inserted 2.1, 3.1, 4.1)
+**Current Plan:** 0
 **Total Plans in Phase:** 4
-**Status:** Phase complete — ready for verification
-**Last Activity:** 2026-04-03
-**Progress:** [██████████] 100%
+**Status:** Phase 3 complete, audit integrated. Phase 3.1 next.
+**Last Activity:** 2026-04-07
+**Progress:** [██████████] 100% (through Phase 3)
 
 ## Performance Metrics
 
@@ -141,6 +141,10 @@ Recent decisions affecting current work:
 - [Phase 03]: stintConfig on scenario is optional to preserve backward compatibility with all existing scenarios
 - [Phase 03]: Mock braking energy variants (moderate/heavy) for testing harvest cap vs efficiency differences
 - [Phase 03]: Two-tier coupling verification: precise ratio test at unit level + full pipeline wiring test at integration level
+- Audit (2026-04-07): Phase 4 split -- strategy/race sim stays in Phase 4; observer layer moves to Phase 4.1
+- Audit (2026-04-07): Visualization library adoption deliberation is prerequisite before Phase 4 planning
+- Audit (2026-04-07): Future Awareness convention added to CLAUDE.md for phase CONTEXT.md files
+- Audit (2026-04-07): ambientTemperatureC wired into tire cooling rate via environment model
 
 ### Pending Todos
 
@@ -149,6 +153,8 @@ Recent decisions affecting current work:
 ### Roadmap Evolution
 
 - Phase 02.1 inserted after Phase 2: Circuit Geometry Pipeline (COMPLETE) — real GPS-derived track geometry from TUMFTM and bacinger sources
+- Phase 03.1 inserted after Phase 3: Race State, Typed Artifacts, and Branchable Runs — architectural bridge between single-stint simulation and race-level analysis
+- Phase 4 split (2026-04-07 audit): Strategy/race sim stays in Phase 4 (4 plans); observer layer moves to Phase 4.1 (3 plans)
 
 ### Blockers/Concerns
 
@@ -164,6 +170,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-**Last session:** 2026-04-03T05:25:12.553Z
-**Stopped At:** Completed 03-04-PLAN.md
+**Last session:** 2026-04-07T20:14:00.000Z
+**Stopped At:** Audit integration complete (260407-mgl)
 **Resume File:** None

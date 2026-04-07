@@ -194,9 +194,9 @@
 | STRA-02 | Phase 4 | Pending |
 | STRA-03 | Phase 4 | Pending |
 | EDU-01 | Phase 4 | Pending |
-| ESTM-01 | Phase 4 | Pending |
-| ESTM-02 | Phase 4 | Pending |
-| ESTM-03 | Phase 4 | Pending |
+| ESTM-01 | Phase 4.1 | Pending |
+| ESTM-02 | Phase 4.1 | Pending |
+| ESTM-03 | Phase 4.1 | Pending |
 | VISU-03 | Phase 4 | Pending |
 | CTRL-01 | Phase 5 | Pending |
 | CTRL-02 | Phase 5 | Pending |
@@ -212,11 +212,11 @@
 | ELEC-01 | Phase 3 | Pending |
 | ELEC-02 | Phase 3 | Pending |
 | PLAT-04 | Phase 4 | Pending |
-| VISU-05 | Phase 4 | Pending |
+| VISU-05 | Phase 4.1 | Pending |
 | STRA-04 | Phase 4 | Pending |
 | STRA-05 | Phase 4 | Pending |
 | EDU-03 | Phase 4 | Pending |
-| ESTM-04 | Phase 4 | Pending |
+| ESTM-04 | Phase 4.1 | Pending |
 | CTRL-05 | Phase 5 | Pending |
 | DATA-04 | Phase 6 | Pending |
 | STRA-06 | Phase 3.1 | Pending |

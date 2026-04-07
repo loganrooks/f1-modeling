@@ -13,7 +13,8 @@ The path to a useful F1 modeling product is to build a clear local-first learnin
 - [ ] **Phase 1: Foundations and Scenario Schema** - Create the local-first shell, domain schema, and reproducible run logging.
 - [ ] **Phase 2: Reduced-Order Lap Model** - Build the first transparent car and lap model.
 - [ ] **Phase 3: Tire, Electrical, Weather, Environment, and Energy Dynamics** - Add the core non-ideal dynamics, electrical subsystem behavior, and environment coupling that actually drive race behavior.
-- [ ] **Phase 4: Strategy, Estimation, Explanations, and Learning Views** - Compare stints, compounds, and pit timing with explainable subsystem-oriented output and initial observer methods.
+- [ ] **Phase 4: Strategy, Race Simulation, and Explanation Surfaces** - Turn the simulation into a race-strategy analysis tool that explains outcomes and teaches subsystem interactions through engineer-role views.
+- [ ] **Phase 4.1: Observer Layer and Synthetic Sensing** - Introduce the observer layer with synthetic sensors, enabling true/measured/estimated state comparison and temporal exploration.
 - [ ] **Phase 5: Driver Style and Control Systems** - Model driver tendencies and explainable control-system tradeoffs.
 - [ ] **Phase 6: Data Import and Telemetry Alignment** - Ingest structured session data and compare it to simulation results.
 - [ ] **Phase 7: Calibration and Validation Workbench** - Measure confidence, calibrate parameters, and surface model limits.
@@ -107,10 +108,10 @@ Plans:
 - [ ] 03.1-03: Add tire-set inventory, pit-lane loss model, and race timeline artifact persistence
 - [ ] 03.1-04: Build branch-from-state, experiment grouping, and multi-stint comparison workflow
 
-### Phase 4: Strategy, Estimation, Explanations, and Learning Views
-**Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, introduces observer methods with a synthetic sensor model, teaches subsystem interactions through engineer-role-specific views, and supports interactive temporal exploration.
+### Phase 4: Strategy, Race Simulation, and Explanation Surfaces
+**Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, teaches subsystem interactions through engineer-role views, and supports interactive temporal exploration.
 **Depends on**: Phase 3
-**Requirements**: [STRA-01, STRA-02, STRA-03, STRA-04, STRA-05, PLAT-04, EDU-01, EDU-03, ESTM-01, ESTM-02, ESTM-03, ESTM-04, VISU-03, VISU-05]
+**Requirements**: [STRA-01, STRA-02, STRA-03, STRA-04, STRA-05, PLAT-04, EDU-01, EDU-03, VISU-03]
 **Success Criteria** (what must be TRUE):
   1. User can compare multiple pit and compound strategies across a race distance, including energy-deployment policy as a strategic variable.
   2. Outputs explain why a strategy wins or loses with stint-level and event-level detail.
@@ -118,20 +119,34 @@ Plans:
   4. User can simulate in-race strategy interventions (mode changes, pit timing responses, tire management instructions) and see how intervention timing alters outcomes.
   5. User can simulate qualifying sessions (Q1/Q2/Q3 with compound allocation) and sprint races as distinct session modes.
   6. User can inspect subsystem-level views showing how tires, electrical state, weather, and policy interact, with learning paths relevant to different F1 engineering disciplines.
-  7. The simulator generates noisy measurement channels that mimic realistic sensor outputs, enabling observer comparison of true vs. measured vs. estimated state.
-  8. User can enable an observer layer and inspect true, measured, and estimated state for selected subsystems.
-  9. User can scrub through simulation time, inspect state at any point, and branch simulations from intermediate states.
-  10. User can perturb assumptions and rerun sensitivity studies quickly.
-  11. Visual learning views remain tied to model semantics and uncertainty instead of becoming disconnected dashboards.
-**Plans**: 6 plans
+  7. User can perturb assumptions and rerun sensitivity studies quickly.
+  8. Visual learning views remain tied to model semantics and uncertainty instead of becoming disconnected dashboards.
+
+**Prerequisite:** Visualization architecture deliberation must be completed before Phase 4 planning begins. See audit-response-2026-04-07.md finding #9.
+
+**Plans**: 4 plans
 
 Plans:
-- [ ] 04-01: Implement race-distance, pit-strategy, and race-interruption simulation
-- [ ] 04-02: Add qualifying and sprint session simulation modes
-- [ ] 04-03: Build explanation views, engineer-role learning paths, and stint-delta analysis
-- [ ] 04-04: Implement synthetic sensor model and observer layer
-- [ ] 04-05: Add observer-aware learning views, timeline scrubbing, and sensitivity-analysis workflows
-- [ ] 04-06: Build in-race intervention simulation and strategy-response workflows
+- [ ] 04-01: Race-distance, pit-strategy, and race-interruption simulation
+- [ ] 04-02: Qualifying and sprint session modes
+- [ ] 04-03: Explanation views, engineer-role learning paths, and stint-delta analysis
+- [ ] 04-04: In-race intervention simulation and strategy-response workflows
+
+### Phase 4.1: Observer Layer and Synthetic Sensing
+**Goal**: Introduce the observer layer with a synthetic sensor model, enabling comparison of true, measured, and estimated state, with observer-aware learning views and temporal exploration.
+**Depends on**: Phase 4
+**Requirements**: [ESTM-01, ESTM-02, ESTM-03, ESTM-04, VISU-05]
+**Success Criteria** (what must be TRUE):
+  1. The simulator generates noisy measurement channels that mimic realistic sensor outputs, enabling observer comparison.
+  2. User can enable an observer layer and inspect true, measured, and estimated state.
+  3. User can scrub through simulation time, inspect state at any point, and branch simulations from intermediate states.
+  4. Observer-aware learning views connect estimation concepts to engineering disciplines.
+**Plans**: 3 plans
+
+Plans:
+- [ ] 04.1-01: Synthetic sensor model and noisy measurement channels
+- [ ] 04.1-02: Observer layer (EKF baseline) with true/measured/estimated comparison
+- [ ] 04.1-03: Observer-aware learning views, timeline scrubbing, and sensitivity workflows
 
 ### Phase 5: Driver Style and Control Systems
 **Goal**: Model how different driving tendencies and control choices alter performance and degradation, establish a model-based control baseline, and make the control logic legible to learners.
@@ -220,7 +235,7 @@ The current roadmap is not the full endpoint of the platform. Subsequent milesto
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 4 -> 5 -> 6 -> 7 -> 8
+Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 4 -> 4.1 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -229,7 +244,8 @@ Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 4 -> 5 -> 6 -> 7 -
 | 02.1. Circuit Geometry Pipeline | 1/1 | Complete | 2026-04-03 |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 4/4 | Complete | 2026-04-03 |
 | 3.1. Race State, Typed Artifacts, and Branchable Runs | 0/4 | Not started | - |
-| 4. Strategy, Estimation, Explanations, and Learning Views | 0/6 | Not started | - |
+| 4. Strategy, Race Simulation, and Explanation Surfaces | 0/4 | Not started | - |
+| 4.1. Observer Layer and Synthetic Sensing | 0/3 | Not started | - |
 | 5. Driver Style and Control Systems | 0/6 | Not started | - |
 | 6. Data Import and Telemetry Alignment | 0/5 | Not started | - |
 | 7. Calibration and Validation Workbench | 0/3 | Not started | - |

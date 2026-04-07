@@ -41,6 +41,7 @@ Browser runs on apollo; all processes run on dionysus.
 - **Preset snapshots:** Run records carry both stable preset references and resolved snapshots for reproducibility.
 - **Progressive visualization:** Visual components grow with model complexity. Don't build ahead of what the model justifies. Adopt a proper visualization library for Phase 4+ (deliberation pending).
 - **Strict TypeScript:** `noUncheckedIndexedAccess` enabled. Use `firstPreset<T>()` helper for safe indexed access in tests.
+- **Future Awareness:** Each phase CONTEXT.md must include a "Future Awareness" section documenting architectural constraints imposed by future phases and v2 ambitions. This is not a deferred-features list -- it captures constraints that shape current implementation choices (e.g., "Phase 5 needs a time-step plant interface, so avoid baking lap-level discretization into public APIs").
 
 ## Quality Gates
 
@@ -70,4 +71,4 @@ All planning lives in `.planning/`:
 
 ## Current Status
 
-Phase 1 complete (9/9 plans). Phase 2 next: Reduced-Order Lap Model.
+Phases 1-3 complete. Phase 3.1 next: Race State, Typed Artifacts, and Branchable Runs.
