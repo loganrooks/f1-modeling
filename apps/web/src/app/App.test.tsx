@@ -183,6 +183,10 @@ describe("App", () => {
         return new Response(JSON.stringify(runs), { status: 200 });
       }
 
+      if (url === "/api/circuits" && method === "GET") {
+        return new Response(JSON.stringify([]), { status: 200 });
+      }
+
       if (url === "/api/runs" && method === "POST") {
         const payload = JSON.parse(String(init?.body)) as { scenarioId: string };
         const scenario =
@@ -211,7 +215,7 @@ describe("App", () => {
     vi.restoreAllMocks();
   });
 
-  it("loads the Phase 1 workspace surfaces and shows saved history", async () => {
+  it("loads the workspace surfaces and shows saved history", async () => {
     render(<App />);
 
     await waitFor(
@@ -228,7 +232,7 @@ describe("App", () => {
     });
 
     expect(
-      screen.getByRole("heading", { name: "Phase 1 scenario workbench" }),
+      screen.getByRole("heading", { name: "Phase 2 scenario workbench" }),
     ).toBeInTheDocument();
     await waitFor(() => {
       expect(scenarioNameInput).toHaveValue("Saved Silverstone Baseline");
@@ -261,17 +265,15 @@ describe("App", () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText('Saved "Wet validation draft" to the local Phase 1 workspace.'),
+        screen.getByText(/Saved "Wet validation draft"/),
       ).toBeInTheDocument();
     });
 
-    fireEvent.click(screen.getByRole("button", { name: "Create placeholder run" }));
+    fireEvent.click(screen.getByRole("button", { name: "Lap run" }));
 
     await waitFor(() => {
       expect(
-        screen.getByText(
-          'Saved "Wet validation draft" and appended placeholder run "run-phase1-default-scenario-002".',
-        ),
+        screen.getByText(/Saved "Wet validation draft" and appended .* run "run-phase1-default-scenario-002"/),
       ).toBeInTheDocument();
     });
 

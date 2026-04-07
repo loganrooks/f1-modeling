@@ -88,6 +88,25 @@ Plans:
 - [ ] 03-03-PLAN.md — Weather evolution, environment->electrical coupling, SoC visualization, scenario schema, and API integration (Wave 3)
 - [ ] 03-04-PLAN.md — Cross-subsystem validation tests including weather->electrical coupling verification (Wave 4)
 
+### Phase 3.1: Race State, Typed Artifacts, and Branchable Runs
+**Goal**: Build the race-state engine, multi-stint scenario contracts, typed timeline artifacts, and run lineage that Phase 4 strategy work requires. This is the architectural bridge between single-stint simulation and race-level analysis.
+**Depends on**: Phase 3
+**Requirements**: [STRA-01 (partial), STRA-05 (partial), VISU-05 (partial)]
+**Success Criteria** (what must be TRUE):
+  1. Scenario schema supports multi-stint race plans with per-stint compound, policy, and lap count.
+  2. A race-state engine sequences stints with pit events (pit-entry time loss, service time, tire change) and produces a typed race timeline artifact.
+  3. Race interruptions (VSC, full SC, red flag) can be injected at specified laps and affect race state (field bunching, pit window, pace delta).
+  4. Run records carry parent/branch lineage so a user can fork from mid-race state and compare alternatives.
+  5. Tire-set inventory tracks allocated and used sets across a race weekend scenario.
+  6. Typed timeline artifacts are structured enough for downstream strategy UI and comparison views.
+**Plans**: 4 plans
+
+Plans:
+- [ ] 03.1-01: Extend scenario and run schemas for race plans, pit events, run lineage, and typed artifacts
+- [ ] 03.1-02: Implement race-state engine that sequences stints, pit events, and interruptions
+- [ ] 03.1-03: Add tire-set inventory, pit-lane loss model, and race timeline artifact persistence
+- [ ] 03.1-04: Build branch-from-state, experiment grouping, and multi-stint comparison workflow
+
 ### Phase 4: Strategy, Estimation, Explanations, and Learning Views
 **Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, introduces observer methods with a synthetic sensor model, teaches subsystem interactions through engineer-role-specific views, and supports interactive temporal exploration.
 **Depends on**: Phase 3
@@ -126,14 +145,15 @@ Plans:
   5. The system can compute or approximate an optimal trajectory for the current model and circuit, and show how parameter changes alter the racing line.
   6. The system can surface controller intent and constraint activation in a way that helps a learning engineer understand the control problem.
   7. Comparative visualizations make policy differences, path choices, and control consequences intuitive to inspect.
-**Plans**: 5 plans
+**Plans**: 6 plans
 
 Plans:
-- [ ] 05-01: Define driver-style parameterization
-- [ ] 05-02: Connect style parameters to tire, pace, and energy behavior
-- [ ] 05-03: Implement an explainable model-based control baseline, ideally MPC where tractable
-- [ ] 05-04: Compute optimal trajectory and racing-line output from the control/optimization layer
-- [ ] 05-05: Build comparative driver-style, control-intent, trajectory, and policy visualization workflows
+- [ ] 05-01: Define control-ready plant interface (segment/time-step state transition API coexisting with envelope solver)
+- [ ] 05-02: Define driver-style parameterization
+- [ ] 05-03: Connect style parameters to tire, pace, and energy behavior
+- [ ] 05-04: Implement an explainable model-based control baseline, ideally MPC where tractable
+- [ ] 05-05: Compute optimal trajectory and racing-line output from the control/optimization layer
+- [ ] 05-06: Build comparative driver-style, control-intent, trajectory, and policy visualization workflows
 
 Future extension from this phase:
 - Once the control interface is stable and the simulator is calibrated, this phase becomes the launch point for RL to be compared against a serious model-based baseline rather than a dead-end heuristic layer.
@@ -200,7 +220,7 @@ The current roadmap is not the full endpoint of the platform. Subsequent milesto
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 4 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -208,8 +228,9 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 2. Reduced-Order Lap Model | 3/3 | Complete | 2026-03-27 |
 | 02.1. Circuit Geometry Pipeline | 1/1 | Complete | 2026-04-03 |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 4/4 | Complete | 2026-04-03 |
+| 3.1. Race State, Typed Artifacts, and Branchable Runs | 0/4 | Not started | - |
 | 4. Strategy, Estimation, Explanations, and Learning Views | 0/6 | Not started | - |
-| 5. Driver Style and Control Systems | 0/5 | Not started | - |
+| 5. Driver Style and Control Systems | 0/6 | Not started | - |
 | 6. Data Import and Telemetry Alignment | 0/5 | Not started | - |
 | 7. Calibration and Validation Workbench | 0/3 | Not started | - |
 | 8. Regulation and Design Exploration | 0/3 | Not started | - |

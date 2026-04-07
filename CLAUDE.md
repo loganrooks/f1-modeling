@@ -39,8 +39,22 @@ Browser runs on apollo; all processes run on dionysus.
 - **Honesty constraints:** Never imply model fidelity the current phase doesn't support. Label placeholder outputs explicitly.
 - **Browser-safe boundary:** `packages/domain` must stay browser-safe. Filesystem operations go in `packages/domain/node/` subpath.
 - **Preset snapshots:** Run records carry both stable preset references and resolved snapshots for reproducibility.
-- **Progressive visualization:** Visual components grow with model complexity. Don't build ahead of what the model justifies.
+- **Progressive visualization:** Visual components grow with model complexity. Don't build ahead of what the model justifies. Adopt a proper visualization library for Phase 4+ (deliberation pending).
 - **Strict TypeScript:** `noUncheckedIndexedAccess` enabled. Use `firstPreset<T>()` helper for safe indexed access in tests.
+
+## Quality Gates
+
+Every plan execution must pass ALL of these before completion:
+
+1. **`npm run typecheck`** — must pass across all workspaces
+2. **`npm test` at project root** — must pass (not per-workspace, root catches cross-workspace regressions)
+3. **`npm run build`** — must pass
+4. **Phase verification** (gsdr-verifier) — must pass all success criteria
+5. **Cross-phase regression** — after modifying shared browser/API code, verify prior phase tests still pass
+
+At phase completion:
+- **Cross-model audit** — run `codex exec review` for independent Codex assessment (prompts saved to `.planning/audits/`)
+- **Audit response** — document dispositions in `.planning/audits/audit-response-{date}.md`
 
 ## Planning
 

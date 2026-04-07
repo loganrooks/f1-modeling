@@ -37,8 +37,9 @@
   - *Motivation:* `user: explicitly wants to experiment with tire wear and tire temperature`
 - [ ] **MODL-03**: Application models reduced-order electrical energy state, harvesting, deployment, and limiting logic that affect lap time and straight-line performance.
   - *Motivation:* `user: wants to study battery deployment policy under the new regulations`
-- [ ] **MODL-04**: Application models non-ideal conditions including ambient temperature, track temperature, rain or wetness, traffic or safety-car penalties, and dynamic weather evolution within a session (e.g., rain onset, drying track, grip buildup over laps).
+- [ ] **MODL-04**: Application models non-ideal conditions including ambient temperature, track temperature, rain or wetness, and dynamic weather evolution within a session (e.g., rain onset, drying track, grip buildup over laps).
   - *Motivation:* `user: wants to study non-ideal conditions rather than perfect-lap assumptions`
+  - *Note:* Traffic and safety-car penalties are race-operation concerns addressed by STRA-04/STRA-05 in Phase 4, not Phase 3 weather/environment scope.
 
 ### Environment Interaction
 
@@ -66,6 +67,21 @@
   - *Motivation:* `user: wants to understand interactions between drivers and the engineering team`
 - [ ] **STRA-05**: User can inject race interruptions (virtual safety car, full safety car, red flag) at specified or probabilistic points in a race simulation and see how they alter optimal strategy.
   - *Motivation:* `user: wants to study general F1 racing strategy under non-ideal conditions`
+- [ ] **STRA-06**: Application models pit-lane time loss including pit-entry delta, stationary service time, and pit-exit rejoin, so pit-stop timing decisions reflect realistic operational costs.
+  - *Motivation:* `audit: pit-lane loss is a first-order strategy variable that was missing from requirements`
+- [ ] **STRA-07**: Application tracks tire-set inventory and age across a race weekend scenario (qualifying, sprint, race), so compound allocation decisions are constrained by available sets.
+  - *Motivation:* `audit: tire inventory management is a core strategy engineering workflow`
+- [ ] **STRA-08**: Application models low-fidelity traffic and rejoin penalties so strategy decisions account for track-position risk (undercut/overcut windows, dirty air).
+  - *Motivation:* `audit: single-car optimization without traffic is insufficient for strategy education`
+
+### Race State and Branching
+
+- [ ] **RACE-01**: Application supports multi-stint race plans with per-stint compound, policy, and lap count in a single scenario configuration.
+  - *Motivation:* `audit: single-stint scenario contract cannot express race-level strategy`
+- [ ] **RACE-02**: Run records carry parent/branch lineage so users can fork simulations from intermediate states and compare alternative decisions.
+  - *Motivation:* `audit: branchable state is prerequisite for VISU-05 and strategy intervention workflows`
+- [ ] **RACE-03**: Application produces typed race timeline artifacts with event-level detail (stint boundaries, pit events, interruptions, mode changes) structured for downstream UI and comparison.
+  - *Motivation:* `audit: untyped generic artifacts will not scale to strategy timelines and explanation views`
 
 ### Driver and Control
 
@@ -203,12 +219,18 @@
 | ESTM-04 | Phase 4 | Pending |
 | CTRL-05 | Phase 5 | Pending |
 | DATA-04 | Phase 6 | Pending |
+| STRA-06 | Phase 3.1 | Pending |
+| STRA-07 | Phase 3.1 | Pending |
+| STRA-08 | Phase 3.1/4 | Pending |
+| RACE-01 | Phase 3.1 | Pending |
+| RACE-02 | Phase 3.1 | Pending |
+| RACE-03 | Phase 3.1 | Pending |
 
 **Coverage:**
-- v1 requirements: 42 total
-- Mapped to phases: 42
+- v1 requirements: 48 total
+- Mapped to phases: 48
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-19*
-*Last updated: 2026-03-26 after gap analysis — added PLAT-04, VISU-05, STRA-04, STRA-05, CTRL-05, EDU-03, ESTM-04, DATA-04; refined MODL-01 and MODL-04*
+*Last updated: 2026-04-07 after cross-model audit — added STRA-06/07/08, RACE-01/02/03; refined MODL-04 scope; inserted Phase 3.1; added Phase 5 control-ready plant plan*
