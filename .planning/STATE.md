@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 03.1
 current_phase_name: Race State, Typed Artifacts, and Branchable Runs
-current_plan: 2
+current_plan: 3
 status: executing
-stopped_at: Completed 03.1-02-PLAN.md
-last_updated: "2026-04-09T02:09:38.638Z"
+stopped_at: Completed 03.1-03-PLAN.md
+last_updated: "2026-04-09T02:20:43.493Z"
 last_activity: 2026-04-09
 progress:
   total_phases: 11
   completed_phases: 4
   total_plans: 21
-  completed_plans: 19
-  percent: 90
+  completed_plans: 20
+  percent: 95
 ---
 
 # Project State
@@ -29,16 +29,16 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 ## Current Position
 
 Phase: 03.1 of 8+ (Race State, Typed Artifacts, and Branchable Runs)
-Plan: 2 of 4
+Plan: 3 of 4
 
 **Current Phase:** 03.1
 **Current Phase Name:** Race State, Typed Artifacts, and Branchable Runs
 **Total Phases:** 10 (including inserted 2.1, 3.1, 4.1)
-**Current Plan:** 2
+**Current Plan:** 3
 **Total Plans in Phase:** 4
 **Status:** Ready to execute
 **Last Activity:** 2026-04-09
-**Progress:** [█████████░] 90%
+**Progress:** [██████████] 95%
 
 ## Performance Metrics
 
@@ -78,6 +78,7 @@ Plan: 2 of 4
 | Phase 03 P04 | 9min | 2 tasks | 5 files |
 | Phase 03.1 P01 | 4min | 2 tasks | 9 files |
 | Phase 03.1 P02 | 7min | 2 tasks | 8 files |
+| Phase 03.1 P03 | 7min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -155,6 +156,8 @@ Recent decisions affecting current work:
 - [Phase 03.1]: StintSpec in race model takes resolved TireCompoundParams and ElectricalPolicy, not IDs -- resolution happens at config assembly
 - [Phase 03.1]: Extracted core lap loop into shared runStintLoop() helper rather than adding optional initialState param -- preserves existing runStint() signature
 - [Phase 03.1]: Interruption effects applied as post-hoc lap-time modifiers on stint runner output, keeping stint runner single-concern
+- [Phase 03.1]: Tire inventory validation duplicated as local adapter in runService.ts for worktree build compatibility; canonical source in sim-core/raceModel/tireInventory.ts
+- [Phase 03.1]: Per-stint artifacts use stint-index prefix (stint-0, stint-1) for unique artifact IDs within race simulation runs
 
 ### Pending Todos
 
@@ -180,6 +183,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-**Last session:** 2026-04-09T02:09:38.633Z
-**Stopped At:** Completed 03.1-02-PLAN.md
+**Last session:** 2026-04-09T02:20:43.486Z
+**Stopped At:** Completed 03.1-03-PLAN.md
 **Resume File:** None
