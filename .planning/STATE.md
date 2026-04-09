@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 03.1
 current_phase_name: Race State, Typed Artifacts, and Branchable Runs
-current_plan: 0
-status: completed
-stopped_at: Phase 4 context gathered
-last_updated: "2026-04-09T00:18:34.580Z"
-last_activity: 2026-04-07
+current_plan: 1
+status: executing
+stopped_at: Completed 03.1-01-PLAN.md
+last_updated: "2026-04-09T01:59:11.725Z"
+last_activity: 2026-04-09
 progress:
   total_phases: 11
   completed_phases: 4
-  total_plans: 17
-  completed_plans: 17
-  percent: 100
+  total_plans: 21
+  completed_plans: 18
+  percent: 86
 ---
 
 # Project State
@@ -34,11 +34,11 @@ Plan: 0 of 4 complete
 **Current Phase:** 03.1
 **Current Phase Name:** Race State, Typed Artifacts, and Branchable Runs
 **Total Phases:** 10 (including inserted 2.1, 3.1, 4.1)
-**Current Plan:** 0
+**Current Plan:** 1
 **Total Plans in Phase:** 4
-**Status:** Phase 3 complete, audit integrated. Phase 3.1 next.
-**Last Activity:** 2026-04-07
-**Progress:** [██████████] 100% (through Phase 3)
+**Status:** Ready to execute
+**Last Activity:** 2026-04-09
+**Progress:** [█████████░] 86%
 
 ## Performance Metrics
 
@@ -73,6 +73,7 @@ Plan: 0 of 4 complete
 | Phase 03 P02 | 4min | 2 tasks | 5 files |
 | Phase 03 P03 | 9min | 2 tasks | 16 files |
 | Phase 03 P04 | 9min | 2 tasks | 5 files |
+| Phase 03.1 P01 | 4min | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -145,6 +146,9 @@ Recent decisions affecting current work:
 - Audit (2026-04-07): Visualization library adoption deliberation is prerequisite before Phase 4 planning
 - Audit (2026-04-07): Future Awareness convention added to CLAUDE.md for phase CONTEXT.md files
 - Audit (2026-04-07): ambientTemperatureC wired into tire cooling rate via environment model
+- [Phase 03.1]: All new race schema fields are optional to preserve backward compatibility with existing Phase 1-3 scenarios and run records
+- [Phase 03.1]: RaceTimelineEvent uses individual named interfaces per variant for clearer downstream consumption
+- [Phase 03.1]: StintSpec in race model takes resolved TireCompoundParams and ElectricalPolicy, not IDs -- resolution happens at config assembly
 
 ### Pending Todos
 
@@ -170,6 +174,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-**Last session:** 2026-04-09T00:18:34.577Z
-**Stopped At:** Phase 4 context gathered
-**Resume File:** .planning/phases/04-strategy-race-simulation-and-explanation-surfaces/04-CONTEXT.md
+**Last session:** 2026-04-09T01:59:11.720Z
+**Stopped At:** Completed 03.1-01-PLAN.md
+**Resume File:** None
