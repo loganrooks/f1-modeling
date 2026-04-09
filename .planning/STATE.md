@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 03.1
 current_phase_name: Race State, Typed Artifacts, and Branchable Runs
-current_plan: 1
+current_plan: 2
 status: executing
-stopped_at: Completed 03.1-01-PLAN.md
-last_updated: "2026-04-09T01:59:11.725Z"
+stopped_at: Completed 03.1-02-PLAN.md
+last_updated: "2026-04-09T02:09:38.638Z"
 last_activity: 2026-04-09
 progress:
   total_phases: 11
   completed_phases: 4
   total_plans: 21
-  completed_plans: 18
-  percent: 86
+  completed_plans: 19
+  percent: 90
 ---
 
 # Project State
@@ -29,20 +29,21 @@ See: .planning/PROJECT.md (updated 2026-03-19)
 ## Current Position
 
 Phase: 03.1 of 8+ (Race State, Typed Artifacts, and Branchable Runs)
-Plan: 0 of 4 complete
+Plan: 2 of 4
 
 **Current Phase:** 03.1
 **Current Phase Name:** Race State, Typed Artifacts, and Branchable Runs
 **Total Phases:** 10 (including inserted 2.1, 3.1, 4.1)
-**Current Plan:** 1
+**Current Plan:** 2
 **Total Plans in Phase:** 4
 **Status:** Ready to execute
 **Last Activity:** 2026-04-09
-**Progress:** [█████████░] 86%
+**Progress:** [█████████░] 90%
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 9
 - Average duration: 7.6 min
 - Total execution time: 1.13 hours
@@ -54,8 +55,10 @@ Plan: 0 of 4 complete
 | Phase 01 | 9/9 | 68min | 7.6min |
 
 **Recent Trend:**
+
 - Last 5 plans: 10.2min
 - Trend: Up sharply
+
 | Phase 01 P01 | 5min | 1 tasks | 5 files |
 | Phase 01 P02 | 6min | 2 tasks | 13 files |
 | Phase 01 P03 | 4min | 2 tasks | 13 files |
@@ -74,6 +77,7 @@ Plan: 0 of 4 complete
 | Phase 03 P03 | 9min | 2 tasks | 16 files |
 | Phase 03 P04 | 9min | 2 tasks | 5 files |
 | Phase 03.1 P01 | 4min | 2 tasks | 9 files |
+| Phase 03.1 P02 | 7min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -149,6 +153,8 @@ Recent decisions affecting current work:
 - [Phase 03.1]: All new race schema fields are optional to preserve backward compatibility with existing Phase 1-3 scenarios and run records
 - [Phase 03.1]: RaceTimelineEvent uses individual named interfaces per variant for clearer downstream consumption
 - [Phase 03.1]: StintSpec in race model takes resolved TireCompoundParams and ElectricalPolicy, not IDs -- resolution happens at config assembly
+- [Phase 03.1]: Extracted core lap loop into shared runStintLoop() helper rather than adding optional initialState param -- preserves existing runStint() signature
+- [Phase 03.1]: Interruption effects applied as post-hoc lap-time modifiers on stint runner output, keeping stint runner single-concern
 
 ### Pending Todos
 
@@ -174,6 +180,6 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-**Last session:** 2026-04-09T01:59:11.720Z
-**Stopped At:** Completed 03.1-01-PLAN.md
+**Last session:** 2026-04-09T02:09:38.633Z
+**Stopped At:** Completed 03.1-02-PLAN.md
 **Resume File:** None
