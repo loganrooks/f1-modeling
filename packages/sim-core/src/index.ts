@@ -1,6 +1,7 @@
 export type {
   LapModelSummary,
   Phase1PlaceholderSummary,
+  RaceSimulationSummary,
   SimulationHarness,
   SimulationRunRequest,
   SimulationRunSummary,
@@ -23,6 +24,24 @@ export type {
   SpeedProfilePoint,
   VehicleParams,
 } from "./lapModel/index.js";
+
+// Race model (Phase 3.1)
+export type {
+  InterruptionEndEvent,
+  InterruptionSpec,
+  InterruptionStartEvent,
+  InterruptionType,
+  PitEvent,
+  PitLaneParams,
+  PitLossResult,
+  RaceConfig,
+  RaceResult,
+  RaceTimelineEvent,
+  StintEndEvent,
+  StintSpec,
+  StintStartEvent,
+  StintSummary,
+} from "./raceModel/index.js";
 
 // Stint model (Phase 3)
 export {

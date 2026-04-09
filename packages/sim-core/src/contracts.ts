@@ -81,12 +81,43 @@ export interface StintModelSummary {
 }
 
 /**
+ * Phase 3.1 race simulation summary.
+ * Discriminated on harnessId: "race-simulation".
+ */
+export interface RaceSimulationSummary {
+  runId: string;
+  harnessId: "race-simulation";
+  modelVersion: string;
+  scenarioId: string;
+  scenarioLabel: string;
+  seed: number;
+  placeholder: false;
+  vehicleParams: VehicleParams;
+  circuitId: string;
+  stintCount: number;
+  totalRaceLaps: number;
+  totalRaceTime: number;
+  totalPitTime: number;
+  stintSummaries: Array<{
+    stintIndex: number;
+    compound: string;
+    laps: number;
+    stintTime: number;
+    finalWear: number;
+    finalSoC: number;
+  }>;
+  assumptions: string[];
+  notes: string[];
+}
+
+/**
  * Discriminated union of all simulation run summary types.
  * Discriminate on `harnessId` to narrow to a specific type.
  */
 export type SimulationRunSummary =
   | LapModelSummary
   | Phase1PlaceholderSummary
+  | RaceSimulationSummary
   | StintModelSummary;
 
 export interface SimulationHarness {
