@@ -103,10 +103,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03.1-01-PLAN.md — Domain schemas for race plans, pit events, tire inventory, run lineage, and race engine types
-- [ ] 03.1-02-PLAN.md — Pit-lane loss model, interruption effects, runStintFromState, and race engine orchestration loop
-- [ ] 03.1-03-PLAN.md — Tire-set inventory validation, API dispatcher for race simulation, and artifact persistence
-- [ ] 03.1-04-PLAN.md — Integration tests, API tests, and Phase 3.1 success criteria verification
+- [x] 03.1-01-PLAN.md — Domain schemas for race plans, pit events, tire inventory, run lineage, and race engine types
+- [x] 03.1-02-PLAN.md — Pit-lane loss model, interruption effects, runStintFromState, and race engine orchestration loop
+- [x] 03.1-03-PLAN.md — Tire-set inventory validation, API dispatcher for race simulation, and artifact persistence
+- [x] 03.1-04-PLAN.md — Integration tests, API tests, and Phase 3.1 success criteria verification
 
 ### Phase 4: Strategy, Race Simulation, and Explanation Surfaces
 **Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, teaches subsystem interactions through engineer-role views, and supports interactive temporal exploration.
@@ -243,7 +243,7 @@ Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 4 -> 4.1 -> 5 -> 6
 | 2. Reduced-Order Lap Model | 3/3 | Complete | 2026-03-27 |
 | 02.1. Circuit Geometry Pipeline | 1/1 | Complete | 2026-04-03 |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 4/4 | Complete | 2026-04-03 |
-| 3.1. Race State, Typed Artifacts, and Branchable Runs | 0/4 | Not started | - |
+| 3.1. Race State, Typed Artifacts, and Branchable Runs | 4/4 | Complete | 2026-04-08 |
 | 4. Strategy, Race Simulation, and Explanation Surfaces | 0/4 | Not started | - |
 | 4.1. Observer Layer and Synthetic Sensing | 0/3 | Not started | - |
 | 5. Driver Style and Control Systems | 0/6 | Not started | - |
