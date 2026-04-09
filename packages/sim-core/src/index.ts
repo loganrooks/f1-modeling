@@ -30,9 +30,12 @@ export {
   applyInterruptionsToLapTimes,
   computePitLoss,
   DEFAULT_PIT_LANE_PARAMS,
+  DEFAULT_TIRE_ALLOCATION,
   interruptionLapTimeFactor,
   pitLossDiscountFactor,
   runRace,
+  trackTireUsage,
+  validateTireInventory,
 } from "./raceModel/index.js";
 export type {
   InterruptionEndEvent,
@@ -49,6 +52,8 @@ export type {
   StintSpec,
   StintStartEvent,
   StintSummary,
+  TireSetAllocation,
+  TireUsageEntry,
 } from "./raceModel/index.js";
 
 // Stint model (Phase 3)

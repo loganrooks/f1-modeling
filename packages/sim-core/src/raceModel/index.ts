@@ -35,3 +35,14 @@ export {
   pitLossDiscountFactor,
   applyInterruptionsToLapTimes,
 } from "./interruptionModel.js";
+
+// Tire inventory
+export {
+  validateTireInventory,
+  trackTireUsage,
+  DEFAULT_TIRE_ALLOCATION,
+} from "./tireInventory.js";
+export type {
+  TireSetAllocation,
+  TireUsageEntry,
+} from "./tireInventory.js";
