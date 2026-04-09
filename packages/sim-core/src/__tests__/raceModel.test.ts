@@ -17,8 +17,12 @@ import type { VehicleParams } from "../lapModel/types.js";
 import {
   DEFAULT_CONSERVATIVE_POLICY,
   DEFAULT_LOAD_TRANSFER_PARAMS,
+  initializeStintState,
+  runStint,
+  runStintFromState,
 } from "../stintModel/index.js";
 import type {
+  StintConfig,
   TireCompoundParams,
   WeatherTimeline,
 } from "../stintModel/types.js";
@@ -406,5 +410,218 @@ describe("raceRunner: pit stop under interruption gets discount", () => {
     const vscLoss = computePitLoss(DEFAULT_PIT_LANE_PARAMS, 0.65).totalLoss;
     expect(resultWithVSC.totalPitTime).toBeCloseTo(vscLoss, 5);
     expect(resultWithVSC.totalPitTime).toBeCloseTo(greenFlagLoss * 0.65, 5);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// SC overlapping pit stop
+// ---------------------------------------------------------------------------
+
+describe("raceRunner: pit stop under SC gets deeper discount", () => {
+  const config = makeRaceConfig();
+  const stints = makeTwoStintPlan();
+  const scAtPit: InterruptionSpec[] = [
+    { type: "sc", startLap: 9, endLap: 12 },
+  ];
+  const resultWithSC = runRace(stints, config, scAtPit);
+
+  it("pit loss under SC is approximately 40% of green-flag pit loss", () => {
+    const greenFlagLoss = computePitLoss(DEFAULT_PIT_LANE_PARAMS).totalLoss;
+    expect(resultWithSC.totalPitTime).toBeCloseTo(greenFlagLoss * 0.4, 5);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Red flag race
+// ---------------------------------------------------------------------------
+
+describe("raceRunner: with red flag", () => {
+  const config = makeRaceConfig();
+  const stints = makeTwoStintPlan();
+  const redFlag: InterruptionSpec[] = [
+    { type: "red-flag", startLap: 8, endLap: 10 },
+  ];
+  const result = runRace(stints, config, redFlag);
+  const resultClean = runRace(stints, config);
+
+  it("affected laps produce 0 time (session stopped)", () => {
+    // Red flag at race laps 8-9 (endLap 10 exclusive).
+    // Stint 1 is laps 0-9 (10 laps), so stint-local laps 8, 9 are affected.
+    const stint1Traces = result.stintResults[0]!.lapTraces;
+    // The race engine applies interruptions post-hoc to lap times.
+    // The original lapTraces are unmodified (physical sim), but the
+    // timeline stintTime should reflect the zeroed laps.
+    const stintEndEvent = result.timeline.find(
+      (e) => e.type === "stint-end" && e.stintIndex === 0,
+    );
+    expect(stintEndEvent).toBeDefined();
+    if (stintEndEvent?.type === "stint-end") {
+      // With 2 laps zeroed out, stint time should be less than clean
+      const cleanStintEnd = resultClean.timeline.find(
+        (e) => e.type === "stint-end" && e.stintIndex === 0,
+      );
+      if (cleanStintEnd?.type === "stint-end") {
+        expect(stintEndEvent.stintTime).toBeLessThan(cleanStintEnd.stintTime);
+      }
+    }
+  });
+
+  it("if pit occurs during red flag, pit cost is 0", () => {
+    // Red flag spans race laps 8-10. Pit happens at lap 10 (end of stint 1).
+    // Since red flag endLap is 10 (exclusive), pit at lap 10 is NOT within the red flag.
+    // To test pit-cost = 0, we need a red flag that covers the pit lap.
+    const redFlagAtPit: InterruptionSpec[] = [
+      { type: "red-flag", startLap: 9, endLap: 12 },
+    ];
+    const resultRedPit = runRace(stints, config, redFlagAtPit);
+    expect(resultRedPit.totalPitTime).toBe(0);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Timeline event ordering (thorough)
+// ---------------------------------------------------------------------------
+
+describe("raceRunner: timeline event ordering", () => {
+  const config = makeRaceConfig();
+  const stints: StintSpec[] = [
+    {
+      stintIndex: 0,
+      totalLaps: 8,
+      tireCompound: softCompound,
+      electricalPolicy: DEFAULT_CONSERVATIVE_POLICY,
+    },
+    {
+      stintIndex: 1,
+      totalLaps: 10,
+      tireCompound: mediumCompound,
+      electricalPolicy: DEFAULT_CONSERVATIVE_POLICY,
+    },
+    {
+      stintIndex: 2,
+      totalLaps: 8,
+      tireCompound: hardCompound,
+      electricalPolicy: DEFAULT_CONSERVATIVE_POLICY,
+    },
+  ];
+  const interruptions: InterruptionSpec[] = [
+    { type: "vsc", startLap: 5, endLap: 9 },
+  ];
+  const result = runRace(stints, config, interruptions);
+
+  it("events are in non-decreasing raceLap order", () => {
+    for (let i = 1; i < result.timeline.length; i++) {
+      expect(result.timeline[i]!.raceLap).toBeGreaterThanOrEqual(
+        result.timeline[i - 1]!.raceLap,
+      );
+    }
+  });
+
+  it("no duplicate events at the same position with same type", () => {
+    const seen = new Set<string>();
+    for (const event of result.timeline) {
+      const key = `${event.type}:${event.raceLap}:${"stintIndex" in event ? event.stintIndex : ""}`;
+      expect(seen.has(key)).toBe(false);
+      seen.add(key);
+    }
+  });
+
+  it("all stintIndex values are sequential (0, 1, 2...)", () => {
+    const stintStartEvents = result.timeline.filter(
+      (e) => e.type === "stint-start",
+    );
+    for (let i = 0; i < stintStartEvents.length; i++) {
+      const event = stintStartEvents[i]!;
+      if (event.type === "stint-start") {
+        expect(event.stintIndex).toBe(i);
+      }
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Plausible lap times
+// ---------------------------------------------------------------------------
+
+describe("raceRunner: plausible lap times", () => {
+  const config = makeRaceConfig();
+  const stints = makeTwoStintPlan();
+  const result = runRace(stints, config);
+
+  it("all lap times > 50s (Monza is ~80-90s)", () => {
+    for (const stintResult of result.stintResults) {
+      for (const trace of stintResult.lapTraces) {
+        expect(trace.lapTime).toBeGreaterThan(50);
+      }
+    }
+  });
+
+  it("no NaN or Infinity in any result field", () => {
+    expect(Number.isFinite(result.totalRaceTime)).toBe(true);
+    expect(Number.isFinite(result.totalPitTime)).toBe(true);
+
+    for (const stintResult of result.stintResults) {
+      for (const trace of stintResult.lapTraces) {
+        expect(Number.isNaN(trace.lapTime)).toBe(false);
+        expect(Number.isFinite(trace.lapTime)).toBe(true);
+        expect(Number.isNaN(trace.effectiveGrip)).toBe(false);
+        expect(Number.isNaN(trace.effectivePower)).toBe(false);
+      }
+    }
+
+    for (const summary of result.stintSummaries) {
+      expect(Number.isFinite(summary.stintTime)).toBe(true);
+      expect(Number.isFinite(summary.finalWear)).toBe(true);
+      expect(Number.isFinite(summary.finalSoC)).toBe(true);
+    }
+  });
+
+  it("totalRaceTime is plausible for the number of laps", () => {
+    // 20 laps at Monza (~80-90s per lap) = ~1600-1800s + pit time
+    // Allow wide range: within 2x of lapCount * expectedLapTime
+    const totalLaps = 20;
+    const expectedLapTime = 85; // rough Monza average
+    expect(result.totalRaceTime).toBeGreaterThan(totalLaps * expectedLapTime * 0.5);
+    expect(result.totalRaceTime).toBeLessThan(totalLaps * expectedLapTime * 2);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// runStintFromState backward compatibility
+// ---------------------------------------------------------------------------
+
+describe("raceRunner: runStintFromState backward compatibility", () => {
+  const stintConfig: StintConfig = {
+    circuit: monza,
+    baseVehicle,
+    tireCompound: mediumCompound,
+    electricalPolicy: DEFAULT_CONSERVATIVE_POLICY,
+    weatherTimeline: dryTimeline,
+    aeroConfig: null,
+    loadTransferParams: DEFAULT_LOAD_TRANSFER_PARAMS,
+    totalLaps: 10,
+  };
+
+  const resultFromRunStint = runStint(stintConfig);
+  const initialState = initializeStintState(stintConfig);
+  const resultFromRunStintFromState = runStintFromState(stintConfig, initialState);
+
+  it("results should have identical totalTime", () => {
+    expect(resultFromRunStintFromState.totalTime).toBeCloseTo(
+      resultFromRunStint.totalTime,
+      10,
+    );
+  });
+
+  it("results should have identical lap traces", () => {
+    expect(resultFromRunStintFromState.lapTraces).toHaveLength(
+      resultFromRunStint.lapTraces.length,
+    );
+    for (let i = 0; i < resultFromRunStint.lapTraces.length; i++) {
+      expect(resultFromRunStintFromState.lapTraces[i]!.lapTime).toBeCloseTo(
+        resultFromRunStint.lapTraces[i]!.lapTime,
+        10,
+      );
+    }
   });
 });

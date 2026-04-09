@@ -17,6 +17,7 @@ import {
 } from "../raceModel/tireInventory.js";
 import type { StintSpec } from "../raceModel/types.js";
 import { DEFAULT_CONSERVATIVE_POLICY } from "../stintModel/index.js";
+import type { CompoundId } from "../stintModel/types.js";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -32,12 +33,17 @@ function makeStintSpec(
     stintIndex,
     totalLaps,
     tireCompound: {
-      compoundId,
+      compoundId: compoundId as CompoundId,
       peakGrip: 1.0,
-      wearRateBase: 0.01,
-      cliffOnset: 0.8,
-      optimalTempC: 100,
-      thermalWindowHalfWidth: 15,
+      baseWearRate: 0.01,
+      wearAcceleration: 0.5,
+      cliffThreshold: 0.7,
+      cliffSeverity: 0.6,
+      optimalTempLow: 85,
+      optimalTempHigh: 115,
+      thermalSensitivity: 0.003,
+      warmupRate: 0.15,
+      provenance: "test-fixture",
     },
     electricalPolicy: DEFAULT_CONSERVATIVE_POLICY,
   };
