@@ -26,6 +26,14 @@ export type {
 } from "./lapModel/index.js";
 
 // Race model (Phase 3.1)
+export {
+  applyInterruptionsToLapTimes,
+  computePitLoss,
+  DEFAULT_PIT_LANE_PARAMS,
+  interruptionLapTimeFactor,
+  pitLossDiscountFactor,
+  runRace,
+} from "./raceModel/index.js";
 export type {
   InterruptionEndEvent,
   InterruptionSpec,

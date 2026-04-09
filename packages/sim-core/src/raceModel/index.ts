@@ -1,9 +1,11 @@
 /**
  * Race model barrel export.
  *
- * All type definitions for multi-stint race simulation.
- * Implementation functions will be added in Plan 02.
+ * All type definitions and implementation functions for multi-stint
+ * race simulation.
  */
+
+// Types
 export type {
   InterruptionEndEvent,
   InterruptionSpec,
@@ -20,3 +22,16 @@ export type {
   StintStartEvent,
   StintSummary,
 } from "./types.js";
+
+// Race engine
+export { runRace } from "./raceRunner.js";
+
+// Pit model
+export { computePitLoss, DEFAULT_PIT_LANE_PARAMS } from "./pitModel.js";
+
+// Interruption model
+export {
+  interruptionLapTimeFactor,
+  pitLossDiscountFactor,
+  applyInterruptionsToLapTimes,
+} from "./interruptionModel.js";
