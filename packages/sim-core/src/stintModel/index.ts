@@ -69,4 +69,5 @@ export {
   initializeStintState,
   resolveEffectiveVehicle,
   runStint,
+  runStintFromState,
 } from "./stintRunner.js";

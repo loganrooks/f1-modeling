@@ -149,26 +149,18 @@ export function resolveEffectiveVehicle(
 }
 
 // ---------------------------------------------------------------------------
-// Main stint loop
+// Internal stint loop (shared by runStint and runStintFromState)
 // ---------------------------------------------------------------------------
 
 /**
- * Runs a multi-lap stint simulation.
- *
- * For each lap:
- *   1. Resolves effective vehicle params from current subsystem state.
- *   2. Calls the existing QSS solveLap() with those params.
- *   3. Updates tire state based on the lap result.
- *   4. Updates electrical state (identity stub for Plan 02).
- *   5. Updates environment state (identity stub for Plan 03).
- *   6. Updates fuel state (1.5 kg/lap burn).
- *   7. Records a LapTrace snapshot.
+ * Core lap-iteration loop used by both runStint() and runStintFromState().
  *
  * @param config - Stint configuration.
+ * @param startState - Initial state for the first lap.
  * @returns StintResult with all lap traces, final state, total time, and assumptions.
  */
-export function runStint(config: StintConfig): StintResult {
-  let state = initializeStintState(config);
+function runStintLoop(config: StintConfig, startState: StintState): StintResult {
+  let state = startState;
   const lapTraces: LapTrace[] = [];
 
   // Pre-compute aero-resolved points once (zones don't change per lap)
@@ -288,4 +280,49 @@ export function runStint(config: StintConfig): StintResult {
     totalTime,
     assumptions,
   };
+}
+
+// ---------------------------------------------------------------------------
+// Public API
+// ---------------------------------------------------------------------------
+
+/**
+ * Runs a multi-lap stint simulation from fresh initial state.
+ *
+ * For each lap:
+ *   1. Resolves effective vehicle params from current subsystem state.
+ *   2. Calls the existing QSS solveLap() with those params.
+ *   3. Updates tire state based on the lap result.
+ *   4. Updates electrical state (SoC evolves via harvesting and deployment).
+ *   5. Updates environment state (weather evolution, rubber buildup).
+ *   6. Updates fuel state (1.5 kg/lap burn).
+ *   7. Records a LapTrace snapshot.
+ *
+ * @param config - Stint configuration.
+ * @returns StintResult with all lap traces, final state, total time, and assumptions.
+ */
+export function runStint(config: StintConfig): StintResult {
+  const initialState = initializeStintState(config);
+  return runStintLoop(config, initialState);
+}
+
+/**
+ * Runs a multi-lap stint simulation from a pre-existing state.
+ *
+ * Used by the race engine to run subsequent stints after pit events,
+ * where the initial state comes from the previous stint's finalState
+ * (with pit-event modifications applied).
+ *
+ * The existing runStint() function is preserved unchanged for
+ * single-stint callers.
+ *
+ * @param config - Stint configuration.
+ * @param initialState - Pre-existing StintState (e.g. pit-modified state from previous stint).
+ * @returns StintResult with all lap traces, final state, total time, and assumptions.
+ */
+export function runStintFromState(
+  config: StintConfig,
+  initialState: StintState,
+): StintResult {
+  return runStintLoop(config, initialState);
 }

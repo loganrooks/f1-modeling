@@ -57,6 +57,7 @@ export {
   resolveEffectiveVehicle,
   rubberEvolutionFactor,
   runStint,
+  runStintFromState,
   surfaceGripFactor,
   tireWearGripFactor,
   tireThermalFactor,
