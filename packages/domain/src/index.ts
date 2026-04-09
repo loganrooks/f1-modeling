@@ -32,6 +32,25 @@ export { createDefaultScenario } from "./scenario/defaultScenario.js";
 export type { CreateDefaultScenarioOptions } from "./scenario/defaultScenario.js";
 
 export {
+  branchPointSchema,
+  interruptionSpecSchema,
+  pitLaneParamsSchema,
+  racePlanSchema,
+  stintSpecSchema,
+  tireInventorySchema,
+  tireSetAllocationSchema,
+} from "./scenario/raceSchema.js";
+export type {
+  BranchPoint,
+  InterruptionSpec,
+  PitLaneParams,
+  RacePlan,
+  StintSpec,
+  TireInventory,
+  TireSetAllocation,
+} from "./scenario/raceSchema.js";
+
+export {
   circuitSelectionSchema,
   driverProfilePlaceholderSchema,
   presetReferenceSchema,

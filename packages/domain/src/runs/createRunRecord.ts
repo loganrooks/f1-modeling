@@ -48,6 +48,13 @@ export interface CreateRunRecordInput {
   resolvedPresets: ResolvedPresetDocuments;
   versions: CreateRunRecordVersions;
   output: CreateRunRecordOutput;
+  parentRunId?: string;
+  branchPoint?: {
+    stintIndex: number;
+    raceLap: number;
+    branchType: "stint-boundary";
+  };
+  experimentTag?: string;
 }
 
 function cloneValue<T>(value: T): T {
@@ -156,6 +163,9 @@ export function createRunRecord(input: CreateRunRecordInput): Readonly<RunRecord
       .array()
       .parse(cloneValue(input.output.artifacts ?? [])),
     assumptionNotes: cloneValue(input.output.assumptionNotes ?? []),
+    ...(input.parentRunId !== undefined && { parentRunId: input.parentRunId }),
+    ...(input.branchPoint !== undefined && { branchPoint: cloneValue(input.branchPoint) }),
+    ...(input.experimentTag !== undefined && { experimentTag: input.experimentTag }),
   });
 
   return deepFreeze(runRecord);

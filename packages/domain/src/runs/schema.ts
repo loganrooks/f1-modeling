@@ -11,6 +11,7 @@ import {
   presetReferenceSchema,
   scenarioDocumentSchema,
 } from "../scenario/schema.js";
+import { branchPointSchema } from "../scenario/raceSchema.js";
 import {
   presetDocumentSchema,
   presetTypeSchema,
@@ -71,6 +72,9 @@ export const runRecordSchema = z
     summaryMetrics: z.record(z.string(), z.unknown()),
     artifacts: z.array(runArtifactSchema),
     assumptionNotes: z.array(assumptionNoteSchema),
+    parentRunId: documentIdSchema.optional(),
+    branchPoint: branchPointSchema.optional(),
+    experimentTag: nonEmptyStringSchema.optional(),
   })
   .strict();
 

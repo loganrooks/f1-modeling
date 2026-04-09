@@ -9,6 +9,7 @@ import {
   assumptionNoteSchema,
   placeholderProvenanceSchema,
 } from "../common/provenance.js";
+import { racePlanSchema } from "./raceSchema.js";
 
 export const vehicleParamsSchema = z
   .object({
@@ -76,6 +77,7 @@ export const scenarioDocumentSchema = z
     assumptionNotes: z.array(assumptionNoteSchema),
     vehicleParams: vehicleParamsSchema.optional(),
     stintConfig: stintConfigSchema.optional(),
+    racePlan: racePlanSchema.optional(),
     observerConfigPlaceholder: reservedExtensionPointSchema,
     controllerConfigPlaceholder: reservedExtensionPointSchema,
     importedDataAlignmentPlaceholder: reservedExtensionPointSchema,
