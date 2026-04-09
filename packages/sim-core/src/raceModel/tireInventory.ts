@@ -30,7 +30,7 @@ export interface TireUsageEntry {
   /** Session in which the set was used (e.g. "race", "qualifying", "FP1"). */
   session: string;
   /** Stint index within the session, if applicable. */
-  stintIndex?: number;
+  stintIndex?: number | undefined;
 }
 
 // ---------------------------------------------------------------------------
