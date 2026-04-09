@@ -1,9 +1,9 @@
 # Knowledge Store Index
 
-**Generated:** 2026-04-09T02:48:09Z
-**Total entries:** 9
+**Generated:** 2026-04-09T02:52:39Z
+**Total entries:** 10
 
-## Signals (9)
+## Signals (10)
 
 | ID | Project | Severity | Lifecycle | Tags | Date | Status |
 |----|---------|----------|-----------|------|------|--------|
@@ -16,6 +16,7 @@
 | sig-2026-04-08-missing-codex-cross-model-audit-phase-31 | f1-modeling | minor | detected | audit,cross-model,codex,quality-gate | 2026-04-08 | active |
 | sig-2026-04-08-exact-optional-property-types-interface-annotations | f1-modeling | minor | detected | typescript,exactOptionalPropertyTypes,strict-mode,interfaces | 2026-04-08 | active |
 | sig-2026-04-08-config-runtime-platform-mismatch-codex-vs-claude | f1-modeling | notable | detected | config-mismatch,runtime-mismatch,model-profile,codex,claude-code | 2026-04-08 | active |
+| sig-2026-04-08-log-sensor-skipped-wrong-session-log-paths | f1-modeling | notable | detected | log-sensor,session-logs,path-resolution,collect-signals,orchestrator | "2026-04-09 | active |
 
 ## Spikes (0)
 
