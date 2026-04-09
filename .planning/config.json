@@ -1,7 +1,6 @@
 {
   "model_profile": "quality",
   "mode": "interactive",
-  "depth": "comprehensive",
   "commit_docs": true,
   "search_gitignored": false,
   "branching_strategy": "none",
@@ -10,7 +9,14 @@
   "workflow": {
     "research": true,
     "plan_check": true,
-    "verifier": true
+    "verifier": true,
+    "nyquist_validation": true,
+    "auto_advance": false,
+    "text_mode": false,
+    "research_before_questions": false,
+    "discuss_mode": "exploratory",
+    "skip_discuss": false,
+    "_auto_chain_active": true
   },
   "parallelization": true,
   "brave_search": false,
@@ -74,7 +80,7 @@
     "stats": {
       "signal_collection": {
         "fires": 0,
-        "skips": 1,
+        "skips": 3,
         "last_triggered": null,
         "last_skip_reason": "level-1"
       }
@@ -83,8 +89,13 @@
       "auto_reflect": false,
       "threshold_phases": 3,
       "min_signals": 5,
-      "phases_since_last_reflect": 1,
+      "phases_since_last_reflect": 4,
       "last_reflect_at": null
     }
-  }
+  },
+  "model_overrides": {
+    "gsdr-executor": "sonnet"
+  },
+  "granularity": "fine",
+  "gsd_reflect_version": "1.18.3"
 }
