@@ -4,9 +4,9 @@ type: signal
 project: f1-modeling
 tags: [scope-creep, plan-accuracy]
 created: 2026-04-08T00:00:00Z
-updated: 2026-04-08T00:00:00Z
+updated: 2026-04-08T04:00:00Z
 durability: convention
-status: active
+status: archived
 severity: minor
 signal_type: deviation
 signal_category: negative
@@ -19,6 +19,7 @@ related_signals: []
 lifecycle_state: detected
 lifecycle_log:
   - "created -> detected by gsdr-signal-synthesizer at 2026-04-08T00:00:00Z"
+  - "archived by gsdr-signal-synthesizer at 2026-04-08T04:00:00Z: per-phase cap displacement by higher-severity signal (notable)"
 evidence:
   supporting:
     - "Plan 03.1-02 declared 7 files but committed 8 (extra: raceModel.test.ts)"
