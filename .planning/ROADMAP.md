@@ -103,10 +103,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 03.1-01: Extend scenario and run schemas for race plans, pit events, run lineage, and typed artifacts
-- [ ] 03.1-02: Implement race-state engine that sequences stints, pit events, and interruptions
-- [ ] 03.1-03: Add tire-set inventory, pit-lane loss model, and race timeline artifact persistence
-- [ ] 03.1-04: Build branch-from-state, experiment grouping, and multi-stint comparison workflow
+- [ ] 03.1-01-PLAN.md — Domain schemas for race plans, pit events, tire inventory, run lineage, and race engine types
+- [ ] 03.1-02-PLAN.md — Pit-lane loss model, interruption effects, runStintFromState, and race engine orchestration loop
+- [ ] 03.1-03-PLAN.md — Tire-set inventory validation, API dispatcher for race simulation, and artifact persistence
+- [ ] 03.1-04-PLAN.md — Integration tests, API tests, and Phase 3.1 success criteria verification
 
 ### Phase 4: Strategy, Race Simulation, and Explanation Surfaces
 **Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, teaches subsystem interactions through engineer-role views, and supports interactive temporal exploration.
