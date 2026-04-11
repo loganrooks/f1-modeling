@@ -284,8 +284,8 @@ Note: the exact count and shape of deliberations may change at Review Gate 1 if 
 | 1.5 | R1.5 | ✅ Complete | 2026-04-11 | 2026-04-11 | UI/rendering envelope + job/compute envelope, 5 worst-plausible scenarios, measurement methodology |
 | 2a | 2A (D1) | ✅ Complete | 2026-04-11 | 2026-04-11 | All 4 contracts addressed; C1 reframed (two-stage shape); C3 strongest recommendation with reserved semanticApplicability slot |
 | Gate 2a | — | ✅ Passed | 2026-04-11 | 2026-04-11 | All 4 contracts Accepted (C1, C3, C4 closed; C2 provisional on edge transport) |
-| 2b | 2B-i (D2) | 📝 Prompt drafted, awaiting launch authorization | — | — | Will close C4, C5, C6 + address D2.A-D UI discipline subsections |
-| 2b | 2B-ii (D3) | ⏳ Prompt not yet drafted (awaits D2 completion) | — | — | — |
+| 2b | 2B-i (D2) | ✅ Complete | 2026-04-11 | 2026-04-11 | C4 provisional, C5 accepted, C6 provisional; D2.A scoped out with shell handoff; D2.B-D accepted |
+| 2b | 2B-ii (D3) | 📝 Prompt drafted, awaiting launch authorization | — | — | Will close O1 + content-side C6, consuming D2 anchor and surfacing any need for 2B-iii |
 | 2b | 2B-iii | ⏳ Not triggered | — | — | Optional D2 revision if D3 surfaces new requirements |
 | Gate 2b | — | ⏳ Pending | — | — | — |
 | 2c | 2C (D5) | ⏳ Prompt not yet drafted (awaits D2/D3 completion) | — | — | Regulation semantic model ontology deliberation |
