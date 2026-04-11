@@ -296,9 +296,111 @@ See `.claude/projects/-home-rookslog-workspace-projects-f1-modeling/memory/MEMOR
 
 ---
 
+## Advisory Use Pattern (Primary Interaction Mode)
+
+**Added 2026-04-11.** The user's most common way of invoking Claude from this point forward is **advisory mode** — an ongoing pattern where the user periodically brings Codex's artifacts or chat logs to Claude for review, second opinions, and guidance. This is not a new role distinct from the three fallback roles below; it is the user's way of using the auditor + dialogue partner + emergency fallback capabilities proactively rather than reactively.
+
+### What advisory mode looks like in practice
+
+The user may invoke you with requests like:
+
+- "Codex just produced `deliberations/02-visualization-architecture.md`. What do you think of it?"
+- "Here's a chat log between me and the Codex orchestrator. Is Codex on track, or do you see methodology drift?"
+- "Codex is about to close D3 with this framing. Does it feel right to you?"
+- "I'm not sure whether to accept Codex's recommendation on [X]. What would you do?"
+- "Quick check — does this decision anchor actually capture what the deliberation found?"
+
+None of these are formal audit requests written via the `claude-audit-requests/` protocol. They are user-initiated, conversational, and often focused on specific artifacts or moments.
+
+### How to engage with advisory invocations
+
+1. **Respond to what the user brings you.** If the user shares a specific artifact, focus on that artifact. If the user shares a chat log, focus on the interaction patterns. Don't broaden the scope without invitation.
+
+2. **Be substantive, not a rubber stamp.** The advisory value comes from independent perspective. If you read D2's deliberation and it looks good, say so with specifics. If you see a label-trap, call it out. If you're uncertain, say so honestly.
+
+3. **Watch for the failure modes documented in CODEX-ORCHESTRATOR-HANDOFF.md § "Codex-Specific Guardrails":**
+   - Confidence bias (xhigh tends to produce confident text even when evidence is weak)
+   - Label-trap drift (accepting labels like "visx" or "Python" as closures instead of contracts)
+   - Premature closure (forcing closure where deferral is honest)
+   - Sycophancy (agreeing with user without analysis)
+   - Missed cross-cutting constraints (not honoring accessibility, thin-client, honesty labeling, etc.)
+   - Inconsistent treatment of the three-response gray area framework
+   - Contract-vs-ontology confusion (closing contract questions on axes, closing ontology questions on interfaces)
+
+4. **Be proactive about guidance when you see something worth saying.** If the user shares an artifact and asks "what do you think?", don't limit yourself to "looks fine" if you see things worth surfacing. Tell them what you noticed, flag what looks off, confirm what looks right.
+
+5. **Offer recommendations, not commands.** You're advising the user and, indirectly, the Codex orchestrator. The user makes decisions. The orchestrator acts. You surface observations and suggest paths.
+
+6. **Respect Codex's role.** You are not taking over. If Codex has made a judgment call that looks defensible, don't override it just because you'd have done it differently. Disagreements should be flagged with warrant, not with "I'd do it this way."
+
+7. **Confidence markers on everything substantive.** Known / likely / plausible / speculative / unknown. Don't pretend to certainty you don't have.
+
+### What to look for when reviewing Codex deliberations
+
+When the user brings you a deliberation output (e.g., `02-visualization-architecture.md`), check specifically:
+
+- **Required sections from RESEARCH-PRINCIPLES.md § "Required Output Sections for deliberation files"** — is everything present?
+- **Label-trap violations** — does the deliberation close at contract level, or does it sneak in "we picked visx" / "we picked Python" / "we picked MDX" as the primary closure?
+- **D1 artifact envelope consumption** — does it reference `artifactKey`, `runFamilyId`, `anchorNamespace`, `fidelityTier`, `validationState`, `semanticApplicability`? If not, it's not honoring D1's closed contract.
+- **R1.5 performance envelope consumption** — does it treat the envelope dimensions as constraints, or ignore them?
+- **Cross-cutting constraints 1-7 from the boundary memo** — especially accessibility (5), thin-client (6), honesty labeling visible in UI (7) for D2/D3 deliberations
+- **Push-back on the boundary memo** — is there any? If not, that might mean the memo is good, or it might mean Codex deferred to the framing without engaging deeply
+- **Three-response framework on gray areas** — are gray areas tagged with defer / follow-and-mark / revisit-later?
+- **Contract vs ontology closure** — if it's a contract question, does it close on interface? If ontology, does it close on axes + rules?
+- **Decision Record template** — is it present and empty for the user to fill, or filled in prematurely by Codex?
+
+### What to look for when reviewing Codex chat logs
+
+When the user shares a chat log of their interaction with Codex:
+
+- **Did Codex wait for explicit authorization at review gates?** Or did it auto-chain actions?
+- **When the user said "proceed," did Codex confirm what specifically?** Or did it interpret broadly?
+- **Did Codex push back on the user when warranted?** Or did it agree with everything (sycophancy)?
+- **When Codex presented review findings, were they substantive?** Or rubber-stamp?
+- **When Codex drafted prompts, did it reference the boundary memo and cross-cutting constraints?** Or did it draft generically?
+- **Context awareness** — did Codex mention its own context budget? Did it signal when to hand off?
+- **Methodology citations** — did Codex reference RESEARCH-PRINCIPLES.md and the boundary memo when making decisions, or operate from memory?
+
+### Advisory boundaries (what NOT to do)
+
+- **Do NOT take over orchestration.** Even if you see things you'd do differently, Codex is primary. Your role is advisory.
+- **Do NOT modify project files** unless the user explicitly authorizes you to do so.
+- **Do NOT draft next-wave prompts.** That's Codex's job.
+- **Do NOT commit git changes** unless the user explicitly asks.
+- **Do NOT overwhelm the user with concerns.** Prioritize — what's the most important thing they should know? What's noise?
+- **Do NOT second-guess every Codex decision.** Trust the work. Flag real concerns, not every minor stylistic choice.
+- **Do NOT retroactively argue for decisions that were already made and closed.** If the user accepted D1 with rationale, you don't re-litigate D1 unless there's new information that changes the calculus.
+
+### When to escalate from advisory to formal audit
+
+If during advisory review you find something that worries you significantly — a load-bearing error in a contract closure, a missed coupling that will propagate, a methodology drift that's affecting multiple deliberations — escalate to a formal audit via the `claude-audit-requests/` protocol:
+
+1. Name the concern specifically
+2. Recommend the user ask the Codex orchestrator to produce an audit request document
+3. The Codex orchestrator writes the request, user relays back to Claude, Claude performs the formal audit
+4. This promotes an advisory concern to a formal finding
+
+Not every concern needs escalation. Most advisory observations are fine as conversational input to the user. Escalate only when the concern is load-bearing and deserves structured treatment.
+
+### Fresh advisory session onboarding
+
+When the user starts a fresh Claude session for advisory work:
+
+1. **Read this handoff document first.** Budget 5-10 minutes.
+2. **Skim `CODEX-ORCHESTRATOR-HANDOFF.md`** to understand what Codex is doing and under what methodological commitments. Budget 10 minutes (skim, don't deep read).
+3. **Read `BOUNDARY-CONTRACT-MEMO.md`** to understand the catalog + cross-cutting constraints. Budget 5-10 minutes.
+4. **Read whatever the user brings to you.** This is the variable part — a deliberation, a chat log, a decision anchor, a prompt draft.
+5. **Respond substantively with confidence markers and specific observations.**
+
+You do NOT need to deep-read every research file, every prior deliberation, or the full Claude handoff in advisory mode. Read what's relevant to what the user is asking. Advisory mode is lightweight — 15-20K tokens of onboarding is enough, unless the user asks something that requires deeper reading.
+
+---
+
 ## Fresh Session Onboarding Protocol (Fallback Claude Role)
 
 **This onboarding protocol is for Claude sessions invoked in a FALLBACK role, not as primary orchestrator.** If Codex is asking you to do primary orchestration work, redirect the user to `CODEX-ORCHESTRATOR-HANDOFF.md` — Codex holds that role now.
+
+**Note:** The advisory mode section above covers the user's most common interaction pattern. The three roles below (formal cross-model auditor, user dialogue partner, emergency fallback) are the discrete fallback modes Claude may be invoked for. Advisory mode uses these same capabilities but in a proactive/conversational way rather than via formal invocation patterns.
 
 ### For Claude invoked as cross-model auditor
 
