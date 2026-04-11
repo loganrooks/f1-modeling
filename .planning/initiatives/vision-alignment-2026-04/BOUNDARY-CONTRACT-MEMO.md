@@ -1,6 +1,7 @@
 # Boundary and Contract Memo
 
 **Date:** 2026-04-11
+**Updated:** 2026-04-11 — expanded Cross-Cutting Constraints to add entries 5-7 (accessibility as architectural constraint, thin-client responsive rendering, honesty labeling visible in the UI). Reason: review of D1 outputs and discussion of UI gap scope identified that broader UI discipline concerns (accessibility, cross-device rendering, honesty-in-the-UI) need to be cross-cutting constraints that every Wave 2b deliberation honors, NOT their own separate deliberation. These additions are policy commitments that D2, D3, and downstream deliberations must treat as binding. They represent the memo doing its job: when research or review surfaces a gap, the memo gets updated to reflect it.
 **Author:** Claude Opus 4.6 (synthesizing Wave 1 research outputs)
 **Status:** Synthesis input for Wave 2 prompt drafting — NOT a closed decision
 **Required reading for:** All Wave 2 deliberation prompts (and any future synthesis work that consumes Wave 1 research)
@@ -181,6 +182,51 @@ CLAUDE.md already encodes the convention: "Never imply model fidelity the curren
 
 Codex's final cross-cutting observation: "the strongest Wave 1 convergence is do-not-decide-at-the-label level yet." R1 is not really a Python-vs-Rust prompt. R2 is not really a visx-vs-Canvas prompt. R3 is not really an MDX-vs-notebook prompt. R5 is not really a discriminated-union-vs-versioning prompt. Each Wave 2 prompt should explicitly forbid label-level closure ("we picked Python" / "we picked visx") and require closure at the deeper unit of analysis ("the backend boundary contract is X, the initial implementation is Python because Y, the migration shape is Z"). The label is downstream of the contract; the contract is the actual decision.
 
+### Cross-cutting 5: Accessibility as architectural constraint (added 2026-04-11)
+
+The platform vision describes a "serious platform that up-and-coming racing engineers would use" and explicitly includes education scope. Accessibility is a first-class constraint for serious engineering and educational tools — WCAG AA is the minimum level expected for engineering software in most institutional contexts, keyboard navigation is non-optional for engineers using the platform in high-pressure race-weekend environments, and ARIA annotations are required for screen reader users as well as for programmatic introspection of chart content.
+
+**How this constrains Wave 2b deliberations:**
+
+- **D2 (C4 renderer contract):** must support keyboard navigation for all interactive chart elements, not just mouse/touch. The renderer-agnostic surface must preserve focus management and accessible name/role/value semantics across whichever rendering family is active.
+- **D2 (C5 shared interaction state):** must be keyboard-driven, not mouse-only. Shared cursor, brush, selection state must be reachable and modifiable via keyboard.
+- **D2 (C6 annotation anchors, renderer side):** anchors must carry accessible labels that screen readers can announce. Visual annotations without accessible text equivalents are not conformant.
+- **D3 (O1 lesson graph, C6 anchor content side):** every lesson unit must specify accessible text for guided content. Audio/video content (if any) requires captions and transcripts. Guided tours must work with keyboard-only navigation.
+- **If a deliberation proposes a visualization primitive or content pattern that cannot be made accessible** (e.g., purely-visual pattern recognition, color-only information encoding, mouse-hover-only interaction), it must either propose an accessible alternative or explicitly defer with closure criteria.
+
+This is not asking each deliberation to redesign for accessibility. It is asking them to treat accessibility as a constraint on which substrate options are viable. Some options (hand-rolled Canvas with mouse-only interaction) may be ruled out by this constraint; some options (visx SVG with proper ARIA) may be preferred.
+
+**Why cross-cutting and not a separate deliberation:** accessibility is not option-space-shaped. There are no competing alternatives to deliberate between — you commit to a level (WCAG AA minimum) or you don't. The commitment lives in the memo so it binds every deliberation uniformly.
+
+### Cross-cutting 6: Thin-client responsive rendering (added 2026-04-11)
+
+The development model is browser on apollo (MacBook Air, thin client) connected to backend on dionysus (Xeon W-2125 dev server) over Tailscale. **The browser runs on the weaker machine.** Visualization performance and rendering must be acceptable on apollo, not just on a desktop browser attached directly to dionysus. R1.5's performance envelopes already explicitly distinguish dionysus (compute baseline) from apollo (client/render baseline); this memo entry elevates that distinction to a standing constraint.
+
+**How this constrains Wave 2b deliberations:**
+
+- **D2 (C4/C5/C6):** performance envelope closure must be on the real client path, not on headless browsers running on the server. The renderer-agnostic surface must remain responsive under apollo's constraints — MacBook Air CPU/GPU, 8-16GB RAM, Safari/Chrome/Firefox on macOS.
+- **D2:** the hardcoded three-zone `App.tsx` workspace layout is not enough even for the current dev scenario. Responsive layout for different viewport sizes is a commitment, even if the primary target remains desktop browsers.
+- **D2:** touch support is not a v1 requirement, but the renderer contract and interaction state contract should not preclude adding touch handlers later. No mouse-only APIs baked into the substrate.
+- **D3 (O1 + C6 content side):** lesson rendering must work on the same thin-client path. Guided tours must degrade gracefully if bandwidth or latency varies. Content payloads should be bounded — no massive lesson blobs that hang the client.
+- **Tailscale latency characteristics** (typically 20-80ms round-trip for nearby nodes) should be assumed, not ignored. Every live-update pattern must be viable under that latency.
+
+**Why cross-cutting:** this is a deployment-model constraint, not a deliberation choice. Every viz and content decision inherits it.
+
+### Cross-cutting 7: Honesty labeling visible in the UI (added 2026-04-11)
+
+Cross-cutting 3 already addresses honesty constraints conceptually, but framed them as "the constraint exists" rather than "the constraint manifests visibly in the product." This expansion makes the visible surfacing explicit: D1's artifact contract (C3) already includes `fidelityTier` and `validationState` fields with values `placeholder | reduced-order | benchmarked | calibrated | validated`. Those fields being present in metadata is NOT sufficient. **They must surface in the UI visibly so users can see the fidelity state of every output they are looking at.**
+
+This closes the loophole that the contract-level work D1 did is only useful if the UI actually honors it.
+
+**How this constrains Wave 2b deliberations:**
+
+- **D2 (C4 renderer contract):** must support visible fidelity markers on every chart. The marker form factor is a design question (icon, color ribbon, corner label, status badge) but presence is mandatory. `placeholder` state must be visually distinct from `validated` state in a way the user can recognize without hover or click.
+- **D2 (C5/C6):** comparison views that mix artifacts across different fidelity tiers must make the mixing explicit, not hide it. A chart comparing a `reduced-order` simulation with a `calibrated` reference must visibly indicate which is which.
+- **D3 (O1 + C6 content side):** lessons that reference artifacts must display the artifact's fidelity state to the learner. Lessons built on `placeholder` or `reduced-order` artifacts must frame their claims with appropriate epistemic humility — no lesson should teach "this is how F1 works" when the underlying artifact is explicitly labeled as reduced-order or placeholder.
+- **D3:** lesson-level validation should treat fidelity-tier mismatches as authoring errors. A lesson claiming "calibration results" based on a `placeholder` artifact should fail content validation.
+
+**Why this expansion, given Cross-cutting 3 already exists:** cross-cutting 3 addresses the architectural commitment to honesty labeling. Cross-cutting 7 addresses the product-surface commitment to making it visible. Both are needed. Without cross-cutting 7, an architecturally-correct design could ship an artifact model with rich fidelity metadata that the UI silently discards, producing a product that looks confident while the underlying data is honestly provisional.
+
 ---
 
 ## How Wave 2 Prompts Should Use This Memo
@@ -191,7 +237,7 @@ Each Wave 2 deliberation prompt should:
 2. **Declare which contracts/ontologies it is empowered to close.** Reference the catalog above by item number.
 3. **Declare which contracts/ontologies it must consume but cannot close.** These are constraints inherited from other deliberations or from this memo.
 4. **Declare the closure criteria appropriate to its question type** (contract = interface specification; ontology = axes + rules).
-5. **Acknowledge cross-cutting constraints** the deliberation must honor (performance envelope, cross-era comparability affordance, honesty constraints, label-trap).
+5. **Acknowledge cross-cutting constraints** the deliberation must honor: performance envelope (Round 1.5), cross-era comparability affordance, honesty constraints, label-trap, accessibility as architectural constraint, thin-client responsive rendering, and honesty labeling visible in the UI. Each constraint applies differently to different deliberations — D2 inherits all seven; D3 inherits six (all except the label-trap's compute framing); D5 inherits four (performance, comparability, honesty constraints, label-trap).
 6. **Explicitly invite push-back on the memo.** If the deliberation discovers a better ownership assignment, naming a different cross-cutting concern, or finding the contract-vs-ontology classification wrong, it should mark this as a finding for synthesis, not silently reorganize.
 
 The memo is scaffolding. The deliberations are where decisions actually happen. The memo's job is to make sure the deliberations don't drift apart on shared concerns.
