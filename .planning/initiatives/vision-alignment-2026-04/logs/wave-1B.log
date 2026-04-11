@@ -1,0 +1,191 @@
+OpenAI Codex v0.118.0 (research preview)
+--------
+workdir: /home/rookslog/workspace/projects/f1-modeling
+model: gpt-5.4
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: high
+reasoning summaries: none
+session id: 019d7a3b-2021-7ab2-9532-0714f1af9e81
+--------
+user
+# Call 1B: Visualization at Scale + Educational Content Architectures Research
+
+**Wave:** 1 (Research Round 1)
+**Model:** gpt-5.4
+**Reasoning effort:** high
+**Mode:** Terrain mapping (see RESEARCH-PRINCIPLES.md § Research Modes)
+**Tasks:** R2 (visualization at scale) + R3 (educational content architectures) — batched because they are user-facing surfaces with bidirectional coupling (viz capabilities constrain what education can teach; education's needs dictate visualization primitives).
+
+---
+
+## MANDATORY: Read RESEARCH-PRINCIPLES.md first
+
+Before doing ANY task work, read `.planning/initiatives/vision-alignment-2026-04/RESEARCH-PRINCIPLES.md` completely. That document defines:
+
+- The core commitment (non-foreclosure, terrain mapping mode, no premature solution evaluation)
+- Research modes (you are in **terrain mapping** mode — do NOT rank or recommend winners)
+- Required output sections
+- The **three-response gray area framework** (defer / follow-and-mark / revisit-later)
+- Anti-patterns to avoid
+- Tone and conduct
+
+If you find yourself drifting toward recommending a specific library or content system, stop and re-read.
+
+---
+
+## Context files (read in this order)
+
+1. `.planning/VISION.md` — the long-term platform vision (READ FIRST)
+2. `.planning/PROJECT.md` — current project definition
+3. `.planning/ROADMAP.md` — current 11-phase milestone
+4. `.planning/REQUIREMENTS.md` — 42 v1 requirements (especially EDU-01, EDU-02, EDU-03, VISU-01 through VISU-05)
+5. `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md` — consolidated audit findings (especially Findings #1, #2, #7, #10, #13, #14)
+6. `.planning/phases/04-strategy-race-simulation-and-explanation-surfaces/04-RESEARCH.md` — the original visx-recommending research (your audit target)
+7. `.planning/initiatives/vision-alignment-2026-04/README.md`
+8. `.planning/initiatives/vision-alignment-2026-04/PLAN.md`
+
+## Code files relevant to this research
+
+Read to understand the current visualization state:
+
+- `packages/visuals/src/` — list all files, read representative ones
+- `packages/visuals/src/traces/SpeedProfileTrace.tsx` — hand-rolled SVG chart
+- `packages/visuals/src/traces/SoCTrace.tsx` — hand-rolled SVG chart
+- `packages/visuals/src/inspectors/SensitivityWaterfall.tsx` — hand-rolled waterfall
+- `packages/visuals/src/workspace/TrackMap.tsx` — hand-rolled SVG track map
+- `packages/visuals/package.json` — current viz dependencies
+- `apps/web/src/App.tsx` — current 3-zone workspace layout
+- `apps/web/src/app/useWorkspace.ts` — current workspace state management
+- Root `package.json` for React version
+- `apps/web/src/features/` — list structure
+
+## Shell commands to run (as needed)
+
+- `wc -l packages/visuals/src/**/*.ts packages/visuals/src/**/*.tsx 2>/dev/null` — measure current viz code
+- `grep -rn 'svg\|<rect\|<line\|<path\|<circle' packages/visuals/src/ --include='*.tsx' | wc -l` — count raw SVG usage
+- `npm ls react 2>/dev/null | head -5` — React version
+- `npm view @visx/xychart version peerDependencies time --json 2>/dev/null` — visx stable state
+- `npm view @visx/xychart@3.13.2-alpha.0 peerDependencies dependencies --json 2>/dev/null` — visx alpha + react-spring chain
+- `npm view @visx/xychart@4.0.1-alpha.0 peerDependencies dependencies --json 2>/dev/null` — visx 4.x alpha
+- `npm view @react-spring/web@9.4.5 peerDependencies --json 2>/dev/null` — verify React 19 compatibility
+- `npm view <other-library> ...` as needed
+- `curl -s <url>` — fetch library documentation, reference platform documentation, or comparative articles
+
+## Research tasks
+
+This call addresses TWO coupled research tasks. They are batched because their subjects are tightly coupled in the product surface.
+
+---
+
+### Task R2: Visualization at Scale
+
+**Research question (as received):** The Phase 4 research recommended visx as the visualization foundation. The three audits pushed back, citing:
+- React 19 compatibility issues with `@visx/xychart` via `@react-spring/web`
+- SVG rendering ceiling for production density (6 strategies × 4 linked panels × per-lap state)
+- No Canvas/WebGL escape hatch
+- No performance budget defined
+
+**Map the option space including but not limited to:**
+
+1. **visx technical reality** — verify React 19 compatibility state, the react-spring transitive dependency chain, minimum viable packages without `@visx/xychart`, the 3.13.x vs 4.x-alpha situation
+2. **Rendering strategies** — SVG vs Canvas vs WebGL crossover points with evidence
+3. **Hybrid approaches** — SVG for semantic + Canvas for dense timeseries (how TradingView, Grafana, Observable handle density)
+4. **Alternative libraries** — uPlot, Plotly.js, deck.gl, Nivo, Apache ECharts, and others you find
+5. **Performance budget methodology** — how do production-grade visualization platforms define and enforce budgets? What metrics matter?
+
+**Include F1-specific visualization demands:**
+- Multi-strategy race timelines (Gantt-style with events)
+- Linked brushing across 4+ panels with shared cursors
+- Branch divergence visualization
+- Annotation anchors for educational overlays
+- Progressive disclosure of subsystem detail
+- Eventual live-updating views
+
+**Do not rank libraries.** Map their trajectories and trade-offs.
+
+### Task R3: Educational Content Architectures
+
+**Research question (as received):** VISION.md describes structured lessons, tutorials, and progressive learning paths with interactive visualizations of increasing complexity. The current roadmap treats educational requirements (EDU-01/02/03) as "learning views" — a UI concern. How do serious interactive learning platforms structure content as a first-class concern?
+
+**Reference platforms to investigate:**
+- Observable notebooks — reactive cells, cross-notebook links
+- Jupyter Book / MyST — Markdown + directives + prerequisite graphs
+- Brilliant — lesson architecture, progressive challenge
+- Khan Academy — skill trees, mastery tracking
+- 3Blue1Brown / Explorable Explanations — Bret Victor-style inline interactives
+- Distill.pub — research-as-essay with embedded interactivity
+- Any F1-engineering-specific learning resources
+
+**Content schema dimensions to map:**
+- `LessonUnit` shape (concept ID, prerequisites, scenario bindings, guiding questions, assessment hooks)
+- Prerequisite graph representation (DAG, metadata)
+- Role tags (strategy engineer, performance engineer, race engineer)
+- Difficulty/depth levels
+- Lesson-to-simulation-artifact binding patterns
+- Content storage formats (Markdown, MDX, JSON, TypeScript modules, notebook-style)
+- Content-as-code vs content-as-data tradeoffs
+
+**Integration patterns with engineering visualization:**
+- How does a lesson "attach" to a chart state or simulation artifact?
+- Annotation anchor patterns (Figma-style comments, Jupyter outputs)
+- Guided tour patterns (Shepherd.js, driver.js)
+- Composable overlays
+
+**Authoring workflow dimensions:**
+- Who writes lessons (developer, content author, AI-assisted)
+- Version control and review
+- Preview and hot-reload
+- Content validation (prerequisites exist, scenarios resolve)
+
+### The R2 ↔ R3 coupling
+
+**This coupling is the point of batching these two tasks.** Make it legible.
+
+R2 → R3 constraints:
+- What visualization capabilities enable what kinds of lessons?
+- What annotations, overlays, and progressive disclosure can the viz layer support?
+- Where does performance bound interactive lesson scale?
+
+R3 → R2 demands:
+- What primitives does pedagogical content require from visualization?
+- How do annotation anchors, guided tours, and assumption callouts shape renderer architecture?
+- What renderer boundary preserves educational composability?
+
+**Part of your job** is to map this bidirectional coupling. Where do viz and education reinforce each other? Where do they tension each other? Is there a reframing (the Prix Guesser "substrate + wrappers" kind of move) that makes the coupling dissolve into a cleaner concept?
+
+---
+
+## Required output
+
+Write to `.planning/initiatives/vision-alignment-2026-04/research/02-visualization-at-scale.md` and `.planning/initiatives/vision-alignment-2026-04/research/03-educational-content-architectures.md`.
+
+**Important:** These are two output files but one investigation. The bidirectional coupling should be explicit in both — each file cross-references the other where they interact.
+
+**Output file format** — follow RESEARCH-PRINCIPLES.md § Required Output Sections for research files.
+
+**Use cat heredoc** to write each file.
+
+## Completion signal
+
+At the end of the call, print:
+
+```
+Wave 1B complete.
+- research/02-visualization-at-scale.md (XXX lines)
+- research/03-educational-content-architectures.md (XXX lines)
+```
+
+Report any gray areas escalated via the three-response framework. Report any reframings that surfaced during the research. Report any scope expansions.
+
+## Reminders
+
+- **Terrain mapping mode** — do not pick libraries. Map the space.
+- **Honest uncertainty** — calibrated confidence markers throughout
+- **Precedent analysis must cite specific named projects** — not "industry standard"
+- **Gray areas must be handled via the three-response framework**
+- **Path of inquiry must show branching paths**
+- **Dependencies must be mapped** — especially the R2↔R3 bidirectional coupling and relations to R1/R4 (compute/streaming affect interactive viz capabilities)
+- **If the research suggests a conceptual reframing** (e.g., "these aren't two decisions, they're one user-surface architecture decision"), mark it explicitly per RESEARCH-PRINCIPLES.md § Responsiveness and Reframing
+
