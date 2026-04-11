@@ -12,7 +12,7 @@
 
 At each review gate, one valid outcome is: **"the planned structure is wrong; here is the right structure."** That is not a failure of the plan — it is the plan doing its job. If research surfaces that different deliberation questions are warranted, that D2 and D3 should merge or split differently, that a new research lane is needed, or that the overall framing should be reconsidered, the plan restructures.
 
-In particular, the **4 deliberations** currently listed (D1 compute, D2 visualization, D3 education, D4 long-horizon) are provisional handles. Research may reveal:
+In particular, the **deliberations currently listed** (D1 backend boundary, D2 visualization, D3 education, D5 regulation semantic model, D4 long-horizon) are provisional handles. Research may reveal:
 - The right number is 3 or 5, not 4
 - Two deliberations should merge because they're really one question
 - One deliberation should split because it contains distinct decisions
@@ -56,7 +56,7 @@ Any stage can trigger a loopback to an earlier stage if its findings reveal that
 
 ## Wave Structure (Current Scaffolding)
 
-The work is organized into approximately 9-10 Codex calls across multiple waves. Some waves run in parallel; some are strictly serial. Review gates between waves are mandatory.
+The work is organized into approximately 10-11 Codex calls across multiple waves. Some waves run in parallel; some are strictly serial. Review gates between waves are mandatory.
 
 ### Wave 1 — Research Round 1 (parallel, 3 calls)
 
@@ -143,19 +143,38 @@ User reviews D2 and D3 together. Decides:
 - Request D3 revision
 - Loop back if coupling can't be resolved
 
-### Wave 2c — Synthesis Deliberation (1 call)
+### Wave 2c — Regulation Semantic Model Deliberation (1 call)
 
 | Call | Task | Mode |
 |------|------|------|
-| **2C** | D4 (long-horizon roadmap projection) | Synthesis across D1/D2/D3, deferral and reframing allowed |
+| **2C** | D5 (regulation semantic model) | Closure attempted, deferral and reframing allowed |
 
-**Consumes:** D1/D2/D3 decision anchors, all research, VISION.md
+**Consumes:** D1/D2/D3 decision anchors, R5 research, relevant D2/D3 adjacency constraints, VISION.md
 
-D4 is the hardest to do well because it synthesizes everything. It reads decision anchors (compact ~1-page summaries) from the prior deliberations rather than full files, preserving working context. D4 may recommend restructuring the project roadmap, propose new milestones, or defer long-horizon decisions with criteria for when they should be made.
+D5 closes the **ontology** question R5 surfaced after D1 absorbed the execution-flow slice: what the primary regulation organizing axes should be, how schema versioning relates to semantic family identity, what cross-era comparability rules exist, and what override / semantic-identifier posture the project should adopt. It must consume D1's `ExecutionRegulationSnapshot` contract as a hard constraint rather than reopening it.
 
 **Prompt file:** `codex-call-2C.md` (written after Review Gate 2b)
 
 ### Review Gate 2c
+
+User reviews D5. Decides:
+- Accept the recommendation/deferral/reframing
+- Request revision with specific concerns
+- Loop back only if the semantic-model question proves not ready to close
+
+### Wave 2d — Synthesis Deliberation (1 call)
+
+| Call | Task | Mode |
+|------|------|------|
+| **2D** | D4 (long-horizon roadmap projection) | Synthesis across D1/D2/D3/D5, deferral and reframing allowed |
+
+**Consumes:** D1/D2/D3/D5 decision anchors, all research, VISION.md
+
+D4 is the hardest to do well because it synthesizes everything. It reads decision anchors (compact ~1-page summaries) from the prior deliberations rather than full files, preserving working context. D4 may recommend restructuring the project roadmap, propose new milestones, or defer long-horizon decisions with criteria for when they should be made.
+
+**Prompt file:** `codex-call-2D.md` (written after Review Gate 2c)
+
+### Review Gate 2d
 
 User reviews D4. Stage 3 blocks until all deliberations have decision records marked (or explicit deferrals recorded with closure criteria).
 
@@ -168,7 +187,7 @@ User reviews D4. Stage 3 blocks until all deliberations have decision records ma
 
 3A must complete before 3B because the SUMMARY references the roadmap changes.
 
-**Prompt files:** `codex-call-3A.md`, `codex-call-3B.md` (written after Review Gate 2c)
+**Prompt files:** `codex-call-3A.md`, `codex-call-3B.md` (written after Review Gate 2d)
 
 ### Final Review
 
@@ -191,13 +210,15 @@ User reviews all synthesis outputs. Manually applies changes to `.planning/ROADM
 | 2b | 2B-ii | D3 education deliberation (with D2 in context) | Serial | xhigh |
 | 2b | 2B-iii | D2 revision (optional, only if D3 surfaces new requirements) | Serial | xhigh |
 | — | Gate 2b | User review | — | — |
-| 2c | 2C | D4 long-horizon deliberation | Serial | xhigh |
+| 2c | 2C | D5 regulation semantic-model deliberation | Serial | xhigh |
 | — | Gate 2c | User review | — | — |
+| 2d | 2D | D4 long-horizon deliberation | Serial | xhigh |
+| — | Gate 2d | User review | — | — |
 | 3 | 3A | Roadmap synthesis | Serial | high |
 | 3 | 3B | Guardrails synthesis | Serial | high |
 
-**Wall-clock steps:** 8 minimum (Wave 1 parallel = 1 step; each subsequent serial wave = 1 step; Wave 2b can be 2-3 steps; Wave 3 = 2 steps)
-**Total Codex calls (minimum):** 9 (adds up to 10 if 2B-iii runs; more if Round 1.5 triggers)
+**Wall-clock steps:** 8 minimum without Round 1.5 and without 2B-iii; 9 with the already-triggered Round 1.5
+**Total Codex calls (minimum):** 10 with the current D1/D2/D3/D5/D4 structure (adds up to 11 if 2B-iii runs; more if other follow-up rounds trigger)
 **Iteration:** Round 1.5 may add 1-N calls if warranted. Wave 2b-iii may be skipped if unnecessary.
 
 ---
@@ -233,7 +254,7 @@ Prompt files for **Wave 1 are authored upfront** (before initiative begins). The
 
 Prompt files for **Waves 2 and 3 are authored at the appropriate review gate**, informed by what earlier waves actually found. This respects the "scaffolding not execution plan" principle — later prompts are shaped by what research surfaces, not pre-committed based on assumptions.
 
-At each review gate, Claude drafts the next wave's prompt files based on:
+At each review gate, the active primary orchestrator drafts the next wave's prompt files based on:
 - Findings from completed waves
 - User decisions at the review gate
 - Any reframings or restructurings that surfaced
@@ -255,12 +276,13 @@ This approach means the plan appears incomplete at first — only Wave 1 prompts
 - `research/1-5-<specific-question>.md` per follow-up
 
 ### Stage 2 outputs
-- `deliberations/01-computational-backend-strategy.md`
+- `deliberations/01-backend-boundary-architecture.md`
 - `deliberations/02-visualization-architecture.md`
 - `deliberations/03-educational-content-architecture.md`
-- `deliberations/04-long-horizon-roadmap.md`
+- `deliberations/04-regulation-semantic-model.md`
+- `deliberations/05-long-horizon-roadmap.md`
 
-Each deliberation also produces a `decision-anchor.md` companion — a 1-page compact summary that later deliberations consume instead of the full file. These decision anchors are what 2C (D4) reads, not the full deliberation files.
+Each deliberation also produces a `decision-anchor.md` companion — a 1-page compact summary that later deliberations consume instead of the full file. These decision anchors are what 2D (D4) reads, not the full deliberation files.
 
 Note: the exact count and shape of deliberations may change at Review Gate 1 if research surfaces reframings.
 
@@ -285,10 +307,10 @@ Note: the exact count and shape of deliberations may change at Review Gate 1 if 
 | 2a | 2A (D1) | ✅ Complete | 2026-04-11 | 2026-04-11 | All 4 contracts addressed; C1 reframed (two-stage shape); C3 strongest recommendation with reserved semanticApplicability slot |
 | Gate 2a | — | ✅ Passed | 2026-04-11 | 2026-04-11 | All 4 contracts Accepted (C1, C3, C4 closed; C2 provisional on edge transport) |
 | 2b | 2B-i (D2) | ✅ Complete | 2026-04-11 | 2026-04-11 | C4 provisional, C5 accepted, C6 provisional; D2.A scoped out with shell handoff; D2.B-D accepted |
-| 2b | 2B-ii (D3) | 📝 Prompt drafted, awaiting launch authorization | — | — | Will close O1 + content-side C6, consuming D2 anchor and surfacing any need for 2B-iii |
-| 2b | 2B-iii | ⏳ Not triggered | — | — | Optional D2 revision if D3 surfaces new requirements |
-| Gate 2b | — | ⏳ Pending | — | — | — |
-| 2c | 2C (D5) | ⏳ Prompt not yet drafted (awaits D2/D3 completion) | — | — | Regulation semantic model ontology deliberation |
+| 2b | 2B-ii (D3) | ✅ Complete | 2026-04-11 | 2026-04-11 | O1 accepted; content-side C6 accepted provisionally on `AnchorRegistry` completion; D3.A-D accepted |
+| 2b | 2B-iii | ⏭️ Skipped by default | — | — | User Decision Record lean: skip unless code-readiness polish is explicitly desired |
+| Gate 2b | — | ✅ Passed | 2026-04-11 | 2026-04-11 | D2 and D3 accepted; initiative proceeds to D5 rather than triggering 2B-iii |
+| 2c | 2C (D5) | 📝 Prompt drafted, awaiting launch authorization | — | — | Regulation semantic-model ontology deliberation consuming D1/D2/D3 anchors |
 | Gate 2c | — | ⏳ Pending | — | — | — |
 | 2d | 2D (D4) | ⏳ Prompt not yet drafted | — | — | Long-horizon roadmap synthesis |
 | Gate 2d | — | ⏳ Pending | — | — | — |
