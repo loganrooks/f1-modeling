@@ -217,6 +217,13 @@ You must explicitly address:
 - What fallback behavior occurs for `artifact-missing`, `anchor-missing`, `filtered-out`, `not-applicable`, and `renderer-unavailable`
 - What additive recipe metadata D3 needs, if any, and whether that triggers optional D2 revision
 
+**Known gap in D2's C6 closure that D3 must navigate explicitly:** D2 references an `AnchorRegistry` as the mechanism through which renderers register anchors and through which lesson bindings will resolve, but the register / lookup / update / remove / subscribe semantics are not specified in the D2 deliberation. This gap is tracked in signal `sig-2026-04-11-d2-underspecified-interface-types` at `.planning/knowledge/signals/f1-modeling/2026-04-11-d2-underspecified-interface-types.md`. D3 must either:
+
+- propose a minimal `AnchorRegistry` API that satisfies its lesson-binding needs and flag it explicitly as additive Wave 2B-iii input (not a reopening of anchor identity), or
+- document the minimum registry shape D3 assumes and mark it as a hard constraint D3 places on Phase 4 planning.
+
+Do not close D3.C on a silent registry assumption. Silent drift on renderer-side primitives is exactly the failure mode the boundary memo was designed to prevent.
+
 This is the most likely place where D3 may surface a genuine need for Wave 2B-iii. Be explicit.
 
 #### D3.D: Authoring, validation, preview, accessibility, and thin-client workflow
