@@ -314,7 +314,7 @@ Note: the exact count and shape of deliberations may change at Review Gate 1 if 
 | Gate 2c | — | ✅ Passed | 2026-04-11 | 2026-04-11 | D5 accepted; initiative proceeds to D4 roadmap synthesis |
 | 2d | 2D (D4) | ✅ Complete | 2026-04-11 | 2026-04-11 | Provisional roadmap accepted; post-hoc formal audit validated acceptance and surfaced two Stage 3B carry-forwards |
 | Gate 2d | — | ✅ Passed | 2026-04-11 | 2026-04-11 | D4 accepted; initiative exits deliberation stage and enters synthesis |
-| 3 | 3A | 📝 Prompt drafted, awaiting launch authorization | — | — | Roadmap evolution + phase insertion proposals |
+| 3 | 3A | ✅ Complete | 2026-04-11 | 2026-04-11 | Roadmap evolution and phase insertion proposals written; Insertion 3 kept as single visible phase |
 | 3 | 3B | ⏳ Prompt not yet drafted | — | — | Guardrails + tech debt + SUMMARY |
 
 Update this table as each wave completes.
