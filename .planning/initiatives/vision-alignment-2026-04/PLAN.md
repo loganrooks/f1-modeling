@@ -2,6 +2,7 @@
 
 **Target runtime:** Codex GPT-5.4 (mode varies by stage)
 **Required reading:** All Codex invocations MUST read `RESEARCH-PRINCIPLES.md` before beginning their task.
+**Primary orchestrator (as of 2026-04-11):** Codex GPT-5.4. See `CODEX-ORCHESTRATOR-HANDOFF.md` for the complete orchestration role and methodology. Waves 1 and 2A were orchestrated by Claude Opus 4.6; from Wave 2B-i forward, primary orchestration shifts to Codex for usage-budget reasons. Claude remains available as cross-model auditor at specific high-stakes moments and as user dialogue partner on request.
 
 ---
 

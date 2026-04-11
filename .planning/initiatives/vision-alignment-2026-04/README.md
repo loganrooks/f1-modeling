@@ -73,10 +73,41 @@ See `PLAN.md` for detailed wave structure. Summary:
 
 ## Key Files
 
+### Methodology and scaffolding
 - `RESEARCH-PRINCIPLES.md` — methodological manifesto, required reading for every Codex call
-- `PLAN.md` — master plan with wave structure, dependencies, invocation patterns
-- `codex-call-1A.md`, `codex-call-1B.md`, `codex-call-1C.md` — Wave 1 prompt files (ready to execute)
-- Prompts for Waves 2 and 3 are **authored at the corresponding review gates**, informed by what earlier waves actually surface. This respects the "scaffolding not execution plan" principle.
+- `BOUNDARY-CONTRACT-MEMO.md` — synthesis of Wave 1's convergent insight, required reading for every Wave 2 deliberation prompt, contains 8-item contract/ontology catalog and 7 cross-cutting constraints
+- `PLAN.md` — master plan with wave structure, dependencies, invocation patterns, progress tracker
+
+### Orchestration handoffs (read the one relevant to your role)
+- **`CODEX-ORCHESTRATOR-HANDOFF.md`** — PRIMARY orchestrator handoff as of 2026-04-11. Read this if you are the Codex orchestrator session picking up the initiative from Wave 2B-i forward.
+- `CLAUDE-SESSION-HANDOFF.md` — FALLBACK role handoff for Claude sessions invoked as cross-model auditor, user dialogue partner, or emergency fallback. Claude is NOT primary orchestrator as of 2026-04-11.
+- `ORCHESTRATOR-HANDOFF.md` — original Wave 1 Codex orchestrator handoff (obsolete, retained for reference)
+- `ORCHESTRATOR-HANDOFF-wave-2B-i.md` — narrow single-wave Codex orchestrator handoff (obsolete given Codex's expanded primary role, retained for pattern reference)
+
+### Wave prompt files
+- `codex-call-1A.md`, `codex-call-1B.md`, `codex-call-1C.md` — Wave 1 research prompts (executed)
+- `codex-call-1-5-performance-envelopes.md` — Round 1.5 performance envelopes prompt (executed)
+- `codex-call-2A.md` — D1 backend boundary deliberation prompt (executed, D1 accepted)
+- `codex-call-2B-i.md` — D2 visualization architecture deliberation prompt (drafted, awaiting launch)
+- Prompts for Wave 2B-ii (D3), Wave 2B-iii (optional D2 revision), Wave 2C (D5), Wave 2D (D4), Wave 3A, Wave 3B are **authored at the corresponding review gates**, informed by what earlier waves actually surface. This respects the "scaffolding not execution plan" principle.
+
+## Orchestration Model (as of 2026-04-11)
+
+**Primary orchestrator:** Codex GPT-5.4 xhigh (per `CODEX-ORCHESTRATOR-HANDOFF.md`)
+
+- Codex launches each remaining deliberation
+- Codex reviews each deliberation output substantively
+- Codex drafts the next wave's prompt informed by the current wave's findings
+- Codex interacts with the user at review gates
+- Codex requests Claude cross-model audits at specific named moments
+
+**Fallback orchestrator:** Claude Opus 4.6 (per `CLAUDE-SESSION-HANDOFF.md`)
+
+- Cross-model auditor for high-stakes moments (before closing D4, before applying synthesis to ROADMAP.md, ad-hoc when Codex orchestrator requests)
+- User dialogue partner when user explicitly wants Claude input
+- Emergency fallback if Codex orchestrator gets stuck or produces output the user doesn't trust
+
+**Why the shift (from Waves 1-2A Claude primary, to Wave 2B-i+ Codex primary):** Claude usage budget constraints. Claude successfully ran Waves 1 through 2A (with Codex executing individual research calls and D1 via `codex exec`). Codex has more available usage budget, so primary orchestration shifts to Codex for the remaining waves. The methodology lives in documents (RESEARCH-PRINCIPLES.md, BOUNDARY-CONTRACT-MEMO.md, this README, etc.), not in any specific model's memory, so the shift is supported by the same principles that guided Claude's orchestration.
 
 ## Source Documents
 
