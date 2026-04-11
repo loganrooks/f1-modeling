@@ -310,9 +310,9 @@ Note: the exact count and shape of deliberations may change at Review Gate 1 if 
 | 2b | 2B-ii (D3) | ✅ Complete | 2026-04-11 | 2026-04-11 | O1 accepted; content-side C6 accepted provisionally on `AnchorRegistry` completion; D3.A-D accepted |
 | 2b | 2B-iii | ⏭️ Skipped by default | — | — | User Decision Record lean: skip unless code-readiness polish is explicitly desired |
 | Gate 2b | — | ✅ Passed | 2026-04-11 | 2026-04-11 | D2 and D3 accepted; initiative proceeds to D5 rather than triggering 2B-iii |
-| 2c | 2C (D5) | 📝 Prompt drafted, awaiting launch authorization | — | — | Regulation semantic-model ontology deliberation consuming D1/D2/D3 anchors |
-| Gate 2c | — | ⏳ Pending | — | — | — |
-| 2d | 2D (D4) | ⏳ Prompt not yet drafted | — | — | Long-horizon roadmap synthesis |
+| 2c | 2C (D5) | ✅ Complete | 2026-04-11 | 2026-04-11 | O2 accepted provisionally; D5.A/B accepted; D5.C/D accepted provisionally |
+| Gate 2c | — | ✅ Passed | 2026-04-11 | 2026-04-11 | D5 accepted; initiative proceeds to D4 roadmap synthesis |
+| 2d | 2D (D4) | 📝 Prompt drafted, awaiting launch authorization | — | — | Long-horizon roadmap synthesis consuming D1/D2/D3/D5 anchors |
 | Gate 2d | — | ⏳ Pending | — | — | — |
 | 3 | 3A | ⏳ Prompt not yet drafted | — | — | Roadmap evolution + phase insertion proposals |
 | 3 | 3B | ⏳ Prompt not yet drafted | — | — | Guardrails + tech debt + SUMMARY |
