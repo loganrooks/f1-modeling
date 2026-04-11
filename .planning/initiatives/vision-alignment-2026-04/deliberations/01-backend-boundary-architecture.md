@@ -681,28 +681,32 @@ Coupling strength:
 - How much checkpoint granularity is honest for the first TypeScript worker: stint only, lap windows, or both?
 - What is the first concrete `run-record/v2` migration shape for manifest-only artifacts and compiled regulation snapshots?
 
-## Decision Record (to be filled by user)
+## Decision Record
 
 ### Contract 1 (compute execution boundary)
-- Decision:
-- Rationale:
-- Date:
-- Decider:
+- **Decision:** Accept
+- **Rationale:** D1's pushback on the boundary memo's cut line is architecturally sound. Treating C1 as a single "browser-to-backend interface" obscured that scenario resolution, preset loading, and regulation canonicalization all live inside `runService.ts`. The two-stage shape — `RunCommand → CompiledSimulationRequest → SimulationBackend` — puts request compilation in `packages/domain/src/execution` where it naturally belongs, leaving the backend boundary to handle only compiled, typed requests. The long-lived local TypeScript worker process initial implementation is the lowest-disruption first step and preserves the Phase 4 path without forcing premature language migration. Future Python/Rust/C++ sidecars and remote/cloud backends remain clean to add behind the same `SimulationBackend` interface. Implementation commitment acknowledged: creating `packages/domain/src/execution`, extracting request compilation from `runService.ts`, converting the synchronous `SimulationHarness` into the new async interface.
+- **Open question accepted (deferred):** Batch orchestration shape (parent/child vs independent jobs with family grouping) — revisit when Phase 4 multi-strategy UX work surfaces concrete cancellation/progress semantics needs.
+- **Date:** 2026-04-11
+- **Decider:** Logan Rooks
 
 ### Contract 2 (job/event protocol)
-- Decision:
-- Rationale:
-- Date:
-- Decider:
+- **Decision:** Accept (provisional on edge transport binding)
+- **Rationale:** The semantic model is closed — typed sequence-numbered events, explicit `queued → dispatching → running → cancelling → cancelled/completed/failed` state machine, artifact-ready events for partial and final artifacts, short-window replay (~5-15 min per R1.5). The wire transport is explicitly provisional: REST + SSE for v1, with the option to revisit to WebSocket later without changing the event union. This is the right level of commitment — SSE gives us browser-native reconnection, simpler mental model than WebSocket, and good fit for append-only progress. If Phase 4.1 temporal exploration or Phase 5 interactive control later requires bidirectional channel semantics, we revisit the edge transport without touching the event model. R1.5 envelope constraints (submit-to-ack ≤100ms local, first-progress ≤500ms, terminal events ≤250ms, 5-15 min replay) are honored throughout.
+- **Open question accepted (deferred):** When (if ever) richer full-duplex control makes WebSocket worth the complexity — answer depends on Phase 4.1 and Phase 5 work that doesn't exist yet.
+- **Date:** 2026-04-11
+- **Decider:** Logan Rooks
 
 ### Contract 3 (artifact/provenance contract)
-- Decision:
-- Rationale:
-- Date:
-- Decider:
+- **Decision:** Accept
+- **Rationale:** This is the most load-bearing contract and D1 got it right. The two-identity-layer model (`artifactId` immutable per persisted instance, `artifactKey` stable logical role across run family revisions) means D2 and D3 bind to artifact keys that survive re-runs and branch exploration without silently breaking. `runFamilyId` groups branch descendants without pretending unrelated reruns are the same object. The provenance fields are comprehensive, including `fidelityTier` and `validationState` enum (`placeholder | reduced-order | benchmarked | calibrated | validated`) that directly operationalizes the CLAUDE.md honesty constraint. The reserved `semanticApplicability` slot (`direct | derived | family-specific | non-comparable`) executes the contract-vs-ontology distinction precisely — D1 closes the slot shape, D5 closes which values apply when. Versioning is right: envelope schema versioned separately from payload schemas, regenerated artifacts get new `artifactId` but may retain `artifactKey` with higher revision. Implementation commitment acknowledged: creating `ArtifactEnvelope<T>` as first-class domain type, migrating `runRecord.artifacts[].data` to envelope + manifest references (breaking change), implementing `ArtifactStore` fetch interface, adding hashing/digest helpers, retrofitting or accepting hybrid legacy/new artifact shapes for Phase 1-3 runs.
+- **Open question accepted (deferred):** How much addressability lives in explicit `anchorSchema` manifest vs payload-local stable entity IDs — surfaces naturally during D2's renderer primitive work.
+- **Date:** 2026-04-11
+- **Decider:** Logan Rooks
 
 ### Contract 4 (regulation execution-flow slice)
-- Decision:
-- Rationale:
-- Date:
-- Decider:
+- **Decision:** Accept
+- **Rationale:** This is the contract that makes multi-regulation support real rather than cosmetic. The coupling R5 discovered is unambiguous — `sim-core/src/stintModel/electricalModel.ts` has 2026 electrical constants hardcoded, and no amount of preset-schema typing fixes multi-era execution if the compute layer itself is single-era. D1's recommendation (canonicalize regulation documents before execution, send only a typed `ExecutionRegulationSnapshot` across the backend boundary, store both raw source and compiled forms) is the right shape. The D1 ↔ D5 handshake is clean: D1 closes the execution-facing snapshot shape; D5 closes the semantic model (era-family vs capability-first organizing axes, schema versioning, comparability rules). Whatever D5 chooses must still compile to the execution snapshot without restructuring it. Implementation commitment acknowledged: removing hardcoded 2026 constants from `sim-core/src/stintModel/electricalModel.ts` (real code work), moving active-aero defaults from `runService.ts` casts into the new compiler stage, defining `ExecutionRegulationSnapshot` as a typed domain type, extending run records to store both raw and compiled snapshots. The snapshot shape should be designed for extensibility so D5 can add capability modules (session rules, tire allocation, energy limits, etc.) without forcing schema version bumps.
+- **Open question accepted (deferred):** Exact semantic axes for D5 (era-family vs capability-first vs hybrid) — D1 correctly left this alone; the execution-facing snapshot is shape-stable regardless.
+- **Date:** 2026-04-11
+- **Decider:** Logan Rooks
