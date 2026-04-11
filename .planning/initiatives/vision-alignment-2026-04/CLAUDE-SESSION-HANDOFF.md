@@ -1,11 +1,73 @@
 # Claude Session Handoff — Vision Alignment Initiative
 
+## ⚡ Current State (as of 2026-04-11, second-session handoff) — READ FIRST
+
+This banner supersedes any stale state references in the body below. The body of this document is still accurate on methodology, decisions, pitfalls, user profile, and the advisory/fallback role protocols — but its specific "what's pending" and "exact next action" sections were written before events that have since happened.
+
+### What has happened since the body of this handoff was written
+
+1. **Codex orchestrator handoff written and executed.** See `CODEX-ORCHESTRATOR-HANDOFF.md` for the primary role that now belongs to Codex. The prior Claude session wrote this handoff and the user kicked off a Codex orchestrator session using it.
+2. **Wave 2B-i (D2 visualization architecture) has been run by Codex.** Output files on disk:
+   - `deliberations/02-visualization-architecture.md` (~42KB, ~1000 lines)
+   - `deliberations/02-decision-anchor.md` (~6KB)
+3. **D2 outputs are NOT YET COMMITTED.** As of this handoff writing, both files exist on disk but are in untracked git state. Possible reasons: Codex may still be running and plans to commit later, or Codex stopped at Review Gate 2b-i per methodology and is awaiting user response before the commit step, or Codex completed and handed back to the user without doing the commit.
+4. **Advisory use pattern added to this document.** See the new "Advisory Use Pattern (Primary Interaction Mode)" section below. The user will invoke Claude primarily in advisory mode going forward — bringing artifacts or chat logs for review, second opinions, guidance. This is user-initiated proactive use of the fallback roles, not formal audit requests.
+5. **`claude-audit-requests/` directory established** with a protocol README for formal Codex-initiated audit requests.
+6. **This second-session handoff is being written as the prior session approaches ~78% context.**
+
+### What the fresh Claude session should do on onboarding
+
+1. Read this banner first.
+2. Read `CODEX-ORCHESTRATOR-HANDOFF.md` to understand Codex's role and the methodology Codex is operating under.
+3. Read the body of THIS document, starting with the "Advisory Use Pattern" section (primary interaction mode) and then the "Fallback Claude Role" section (formal fallback modes).
+4. Read `BOUNDARY-CONTRACT-MEMO.md` for the contract catalog and cross-cutting constraints.
+5. Check git status and the `deliberations/` directory to confirm current state:
+   - `git status --short`
+   - `ls -la .planning/initiatives/vision-alignment-2026-04/deliberations/`
+6. **Greet the user** with a state summary and ask what they want next. Likely next actions: advisory review of D2's output, or triage of the uncommitted D2 files, or preparing for D3 drafting.
+
+### What the fresh Claude session should NOT assume
+
+- Do NOT assume D2 has not been run. It has.
+- Do NOT assume D2 outputs need to be launched. They don't — they exist.
+- Do NOT launch the D2 prompt file again. That would duplicate work and possibly overwrite committed outputs.
+- Do NOT commit the uncommitted D2 files without user authorization. They may be in Codex's workflow. Ask the user first.
+- Do NOT draft the D3 prompt. That's Codex's job per the CODEX-ORCHESTRATOR-HANDOFF. Claude in advisory mode reviews but does not draft.
+- Do NOT take over orchestration. Codex is primary. Claude is advisory/fallback.
+
+### What this prior Claude session accomplished (for traceability)
+
+This Claude session (the one writing the second-session handoff) was responsible for:
+- Executing the three concrete moves the user approved after the Codex cross-model review: filling D1 Decision Record, expanding boundary memo with cross-cutting 5-7, drafting the D2 prompt
+- Writing `CODEX-ORCHESTRATOR-HANDOFF.md` (688 lines) to transfer primary orchestration to Codex due to Claude usage budget
+- Updating `PLAN.md`, `README.md`, and this `CLAUDE-SESSION-HANDOFF.md` to reflect the orchestration shift
+- Creating `claude-audit-requests/` directory with protocol README
+- Adding the "Advisory Use Pattern" section to this document
+- Writing this second-session handoff banner
+
+During this session the prior Claude also:
+- Admitted to sycophancy when the user pushed back on Claude's initial recommendation against Codex orchestration
+- Overrecommended Option B (Codex orchestrator then Claude) initially, then re-analyzed and corrected to Option A (direct Claude launch) honest — but before the user's subsequent decision to make Codex primary made the whole Option A vs B question moot
+- Over-launched earlier in the session (launching D1 as part of a chain when the user said "proceed with next steps") and was corrected
+
+These mistakes are documented in the existing "Pitfalls From the Prior Claude Session" section of `CODEX-ORCHESTRATOR-HANDOFF.md`. The fresh session should treat them as lessons to avoid, not as reasons to distrust the handoff documents.
+
+### Known concerns to flag to the user on first greeting
+
+1. **D2 is uncommitted.** The fresh session should ask the user whether to commit, whether Codex will commit, or whether advisory review should happen before committing.
+2. **The existing body of this document says "D2 prompt drafted awaiting launch" in places.** Ignore those stale references — D2 has been run. This banner is the authoritative current state.
+3. **Context budget awareness.** The prior Claude session hit ~78% context writing these handoffs. Advisory mode onboarding should be lightweight (~15-20K tokens) per the Advisory Use Pattern section — don't deep-read everything, read only what the user brings to you.
+
+---
+
+**Original handoff metadata follows. Treat it as historical context, not current state.**
+
 **Handoff date:** 2026-04-11
-**Handoff context usage at handoff time:** ~61% (608.8k / 1M tokens, Opus 4.6)
+**Handoff context usage at handoff time:** ~61% (608.8k / 1M tokens, Opus 4.6) — at the time of ORIGINAL writing. The session that added this banner reached ~78%.
 **Superseded by:** `CODEX-ORCHESTRATOR-HANDOFF.md` for PRIMARY orchestration. This document is retained for Claude sessions invoked in a FALLBACK role (cross-model audit, user dialogue, emergency fallback) rather than as the primary orchestrator.
 **Reason for original handoff:** Context budget. Quality reasoning degrades past ~400-500k; the prior session had been productive but approached the edge.
 **Role note (added 2026-04-11):** After writing this handoff, the user decided to shift primary orchestration from Claude to Codex due to Claude usage budget constraints. Codex now handles wave launches, deliberation reviews, next-wave prompt drafting, and user interaction at review gates. See `CODEX-ORCHESTRATOR-HANDOFF.md` for the primary orchestrator role. Claude is now used as cross-model auditor at specific high-stakes moments (before D4 closure, before ROADMAP.md modification, or ad-hoc when the Codex orchestrator requests a second opinion) and as user dialogue partner when the user explicitly wants Claude's input. This document remains useful for those fallback Claude sessions.
-**Intended reader:** A Claude session invoked in a **fallback** role (cross-model auditor OR user dialogue partner OR emergency support). NOT a Claude session invoked as primary orchestrator — that role now belongs to Codex.
+**Intended reader:** A Claude session invoked in a **fallback/advisory** role (cross-model auditor OR user dialogue partner OR advisory monitor OR emergency support). NOT a Claude session invoked as primary orchestrator — that role now belongs to Codex.
 
 ---
 
