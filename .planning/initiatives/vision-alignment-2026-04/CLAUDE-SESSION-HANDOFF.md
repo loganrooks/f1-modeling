@@ -2,8 +2,10 @@
 
 **Handoff date:** 2026-04-11
 **Handoff context usage at handoff time:** ~61% (608.8k / 1M tokens, Opus 4.6)
-**Reason for handoff:** Context budget. Quality reasoning degrades past ~400-500k; this session has been productive but is approaching the edge. Fresh session picks up with the initiative in a stable, committed state.
-**Intended reader:** A fresh Claude Opus 4.6 session (probably 1M context model, but the initiative can be picked up from any capable model). NOT Codex — Codex is still the executor for individual deliberations via `codex exec`, but the orchestration/review/drafting work lives in Claude.
+**Superseded by:** `CODEX-ORCHESTRATOR-HANDOFF.md` for PRIMARY orchestration. This document is retained for Claude sessions invoked in a FALLBACK role (cross-model audit, user dialogue, emergency fallback) rather than as the primary orchestrator.
+**Reason for original handoff:** Context budget. Quality reasoning degrades past ~400-500k; the prior session had been productive but approached the edge.
+**Role note (added 2026-04-11):** After writing this handoff, the user decided to shift primary orchestration from Claude to Codex due to Claude usage budget constraints. Codex now handles wave launches, deliberation reviews, next-wave prompt drafting, and user interaction at review gates. See `CODEX-ORCHESTRATOR-HANDOFF.md` for the primary orchestrator role. Claude is now used as cross-model auditor at specific high-stakes moments (before D4 closure, before ROADMAP.md modification, or ad-hoc when the Codex orchestrator requests a second opinion) and as user dialogue partner when the user explicitly wants Claude's input. This document remains useful for those fallback Claude sessions.
+**Intended reader:** A Claude session invoked in a **fallback** role (cross-model auditor OR user dialogue partner OR emergency support). NOT a Claude session invoked as primary orchestrator — that role now belongs to Codex.
 
 ---
 
@@ -294,17 +296,52 @@ See `.claude/projects/-home-rookslog-workspace-projects-f1-modeling/memory/MEMOR
 
 ---
 
-## Fresh Session Onboarding Protocol
+## Fresh Session Onboarding Protocol (Fallback Claude Role)
 
-When the fresh session starts:
+**This onboarding protocol is for Claude sessions invoked in a FALLBACK role, not as primary orchestrator.** If Codex is asking you to do primary orchestration work, redirect the user to `CODEX-ORCHESTRATOR-HANDOFF.md` — Codex holds that role now.
+
+### For Claude invoked as cross-model auditor
+
+The Codex orchestrator has requested a cross-model audit. Your job is to review specific artifacts and provide independent findings — NOT to take over the orchestration.
+
+1. **Read the audit request document** the Codex orchestrator wrote at `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/YYYY-MM-DD-*.md`. It will specify exactly what to audit.
+2. **Read `CODEX-ORCHESTRATOR-HANDOFF.md`** to understand the shared methodology and why Codex is primary.
+3. **Read this document** for additional context on prior Claude session work and decisions.
+4. **Read the specific files the audit request points to** — a deliberation output, a prompt draft, a roadmap change proposal, etc.
+5. **Conduct the audit** per the request's instructions.
+6. **Write findings** to a file path the request specifies (usually adjacent to the request document).
+7. **Report findings to the user**, who will relay them back to the Codex orchestrator.
+8. **Do NOT modify files** unless the audit request explicitly authorizes it.
+9. **Do NOT take over orchestration** — your role is audit, not replace.
+
+### For Claude invoked as user dialogue partner
+
+The user wants a Claude second opinion on something — a design decision, a strategic direction, a review outcome. You're a conversational partner, not an orchestrator.
+
+1. **Ask the user what they want to discuss.** Don't assume you're taking over the orchestrator role.
+2. **Read whatever context the user points you to.** This handoff, the audit response, specific deliberations, etc.
+3. **Engage substantively.** The user values depth over quick answers.
+4. **Do NOT launch deliberations** — that's Codex's role now.
+5. **Do NOT modify files** unless the user explicitly requests it.
+6. **At the end of the conversation, offer to summarize your findings** so the user can relay them back to the Codex orchestrator if relevant.
+
+### For Claude invoked as emergency fallback
+
+Something went wrong with the Codex orchestrator. Maybe it produced output the user doesn't trust, maybe it got stuck, maybe the user wants to revert to a known-good state.
+
+1. **Ask the user what happened** and what they want to do about it.
+2. **Read `CODEX-ORCHESTRATOR-HANDOFF.md`** and recent commits to understand the state.
+3. **Propose options** — revert specific commits, restart a wave, switch back to Claude as primary, etc. Don't assume the user wants any particular recovery path.
+4. **Act conservatively.** Rollbacks are destructive. Verify the user's intent before executing.
+5. **If the user wants Claude to resume primary orchestration**, say so explicitly and update `CODEX-ORCHESTRATOR-HANDOFF.md` with a note that orchestration switched back. Don't silently resume.
+
+### Common onboarding steps (all three fallback roles)
 
 1. **Read this handoff document first.** Budget 5-10 minutes.
-2. **Read the Tier 1 required files** (README.md, PLAN.md, RESEARCH-PRINCIPLES.md, BOUNDARY-CONTRACT-MEMO.md, VISION.md). Budget 15-25 minutes.
-3. **Read D1's decision anchor** (`deliberations/01-decision-anchor.md`). Budget 3 minutes.
-4. **Skim the D2 prompt** (`codex-call-2B-i.md`) so you know what you'll be launching. Budget 10 minutes.
-5. **Check git status** — should be clean (no uncommitted changes) since the handoff was written when all work was committed.
-6. **Greet the user and summarize state:** "Initiative is mid-Wave-2 with D1 accepted and D2 prompt drafted. Ready to launch D2 when you authorize. Anything you want to review or adjust before I launch?"
-7. **Wait for explicit authorization** before launching D2 or doing anything else.
+2. **Read `CODEX-ORCHESTRATOR-HANDOFF.md`** to understand the primary orchestration model.
+3. **Read the Tier 1 required files** (README.md, PLAN.md, RESEARCH-PRINCIPLES.md, BOUNDARY-CONTRACT-MEMO.md, VISION.md). Budget 15-25 minutes — or skim if your role is narrow.
+4. **Check git status** and recent commits to understand state.
+5. **Respond to the user based on the specific fallback role they invoked you for.**
 
 ---
 
