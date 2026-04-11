@@ -276,21 +276,23 @@ Note: the exact count and shape of deliberations may change at Review Gate 1 if 
 
 | Wave | Call | Status | Started | Completed | Gate Outcome |
 |------|------|--------|---------|-----------|--------------|
-| 1 | 1A | Not started | — | — | — |
-| 1 | 1B | Not started | — | — | — |
-| 1 | 1C | Not started | — | — | — |
-| Gate 1 | — | — | — | — | — |
-| 1.5 | — | Not triggered | — | — | — |
-| 2a | 2A | Not started | — | — | — |
-| Gate 2a | — | — | — | — | — |
-| 2b | 2B-i | Not started | — | — | — |
-| 2b | 2B-ii | Not started | — | — | — |
-| 2b | 2B-iii | Not triggered | — | — | — |
-| Gate 2b | — | — | — | — | — |
-| 2c | 2C | Not started | — | — | — |
-| Gate 2c | — | — | — | — | — |
-| 3 | 3A | Not started | — | — | — |
-| 3 | 3B | Not started | — | — | — |
+| 1 | 1A | ✅ Complete | 2026-04-10 | 2026-04-10 | 5 research outputs, terrain mapping held |
+| 1 | 1B | ✅ Complete | 2026-04-10 | 2026-04-10 | (bundled with 1A/1C via subagent fallback) |
+| 1 | 1C | ✅ Complete | 2026-04-10 | 2026-04-10 | (bundled with 1A/1B via subagent fallback) |
+| Gate 1 | — | ✅ Passed | 2026-04-10 | 2026-04-11 | Convergent boundary insight, boundary memo written, Codex cross-model review triggered restructure to δ |
+| 1.5 | R1.5 | ✅ Complete | 2026-04-11 | 2026-04-11 | UI/rendering envelope + job/compute envelope, 5 worst-plausible scenarios, measurement methodology |
+| 2a | 2A (D1) | ✅ Complete | 2026-04-11 | 2026-04-11 | All 4 contracts addressed; C1 reframed (two-stage shape); C3 strongest recommendation with reserved semanticApplicability slot |
+| Gate 2a | — | ✅ Passed | 2026-04-11 | 2026-04-11 | All 4 contracts Accepted (C1, C3, C4 closed; C2 provisional on edge transport) |
+| 2b | 2B-i (D2) | 📝 Prompt drafted, awaiting launch authorization | — | — | Will close C4, C5, C6 + address D2.A-D UI discipline subsections |
+| 2b | 2B-ii (D3) | ⏳ Prompt not yet drafted (awaits D2 completion) | — | — | — |
+| 2b | 2B-iii | ⏳ Not triggered | — | — | Optional D2 revision if D3 surfaces new requirements |
+| Gate 2b | — | ⏳ Pending | — | — | — |
+| 2c | 2C (D5) | ⏳ Prompt not yet drafted (awaits D2/D3 completion) | — | — | Regulation semantic model ontology deliberation |
+| Gate 2c | — | ⏳ Pending | — | — | — |
+| 2d | 2D (D4) | ⏳ Prompt not yet drafted | — | — | Long-horizon roadmap synthesis |
+| Gate 2d | — | ⏳ Pending | — | — | — |
+| 3 | 3A | ⏳ Prompt not yet drafted | — | — | Roadmap evolution + phase insertion proposals |
+| 3 | 3B | ⏳ Prompt not yet drafted | — | — | Guardrails + tech debt + SUMMARY |
 
 Update this table as each wave completes.
 
