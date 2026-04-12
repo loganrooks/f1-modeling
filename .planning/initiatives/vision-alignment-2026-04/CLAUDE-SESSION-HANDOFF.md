@@ -1,5 +1,25 @@
 # Claude Session Handoff — Vision Alignment Initiative
 
+## ⚡⚡ STOP — THIRD-SESSION BANNER (2026-04-11, third session) — READ FIRST
+
+**Active task-specific handoff:** `.planning/initiatives/vision-alignment-2026-04/CLAUDE-HANDOFF-2026-04-11-stage3-audit.md`
+
+If you are a fresh Claude session and you are picking up Vision Alignment Initiative work, **read the task-specific handoff linked above first**. It supersedes all earlier banners and body content in THIS file for the immediate task (Stage 3 application formal audit). The body of this document below is still valid for broader advisory-mode context but is not the primary onboarding reference for the fresh session's next action.
+
+**Current state at third-session handoff time:**
+- Wave 2 deliberations all accepted (D1, D2, D3, D5, D4)
+- Stage 3A and Stage 3B synthesis complete, committed
+- D4 post-hoc formal audit complete, three minor findings applied as in-place corrections
+- Signal filed documenting Claude's D4 formal-audit-protocol bypass slip
+- Stage 3 application formal audit is the **current gate** — Codex wrote the audit request at `claude-audit-requests/2026-04-11-stage-3-application-request.md`
+- Informal review from prior session saved as DRAFT at `claude-audit-requests/2026-04-11-stage-3-application-response-DRAFT.md`
+- **Fresh session's task:** perform the formal audit per the request, write findings to `claude-audit-requests/2026-04-11-stage-3-application-response.md` (no `-DRAFT` suffix), commit, report
+- Two stale orchestrator handoffs archived in commit `3bcc9b8` (they are no longer at initiative root)
+
+**The D4 slip lesson is the single most important lesson for you:** check `claude-audit-requests/` at session start before performing any review, and when a scheduled formal audit applies, write to the protocol file rather than falling into the advisory-review pattern. See `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md` and the task-specific handoff linked above for full context.
+
+---
+
 ## ⚡ Current State (as of 2026-04-11, second-session handoff) — READ FIRST
 
 This banner supersedes any stale state references in the body below. The body of this document is still accurate on methodology, decisions, pitfalls, user profile, and the advisory/fallback role protocols — but its specific "what's pending" and "exact next action" sections were written before events that have since happened.
