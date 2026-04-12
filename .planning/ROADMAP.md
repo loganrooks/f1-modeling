@@ -8,17 +8,23 @@ The path to a useful F1 modeling product is to build a clear local-first learnin
 
 **Phase Numbering:**
 - Integer phases (1, 2, 3): Planned milestone work
-- Decimal phases (2.1, 2.2): Urgent insertions if needed later
+- Decimal phases (2.1, 3.1, 3.2, 3.3, 3.4, 4.1, 5.1): Inserted dependency-shaping or follow-on phases that keep the roadmap structurally honest
 
 - [ ] **Phase 1: Foundations and Scenario Schema** - Create the local-first shell, domain schema, and reproducible run logging.
 - [ ] **Phase 2: Reduced-Order Lap Model** - Build the first transparent car and lap model.
+- [x] **Phase 2.1: Circuit Geometry Pipeline (INSERTED)** - Replace hand-authored track geometry with a reproducible GPS-derived circuit pipeline.
 - [ ] **Phase 3: Tire, Electrical, Weather, Environment, and Energy Dynamics** - Add the core non-ideal dynamics, electrical subsystem behavior, and environment coupling that actually drive race behavior.
-- [ ] **Phase 4: Strategy, Race Simulation, and Explanation Surfaces** - Turn the simulation into a race-strategy analysis tool that explains outcomes and teaches subsystem interactions through engineer-role views.
-- [ ] **Phase 4.1: Observer Layer and Synthetic Sensing** - Introduce the observer layer with synthetic sensors, enabling true/measured/estimated state comparison and temporal exploration.
-- [ ] **Phase 5: Driver Style and Control Systems** - Model driver tendencies and explainable control-system tradeoffs.
+- [x] **Phase 3.1: Race State, Typed Artifacts, and Branchable Runs** - Build the race-state engine, typed timeline artifacts, and run lineage that later strategy and comparison work require.
+- [ ] **Phase 3.2: Backend Execution, Job Artifacts, and Regulation Execution Flow** - Land the D1 execution boundary so later phases consume async jobs, durable typed artifacts, and honest regulation execution snapshots.
+- [ ] **Phase 3.3: Visualization Substrate, Workspace Shell, and Performance Foundation** - Land the D2 renderer-neutral substrate, recipe-driven shell, and thin-client benchmark foundation before product views ship.
+- [ ] **Phase 3.4: Educational Foundation and Minimal Regulation Semantics** - Land the D3 lesson architecture and D5 semantic groundwork required for honest Phase 4 lesson and comparison delivery.
+- [ ] **Phase 4: Strategy Workbench and Session Workflows** - Turn the post-3.4 substrate into a strategy workbench for race, qualifying, and sprint workflows with explanation surfaces and initial engineer-role lesson delivery.
+- [ ] **Phase 4.1: Observer and Replay Workbench** - Build observer-aware replay and temporal exploration on top of checkpointed artifacts, linked interaction, and guided overlays.
+- [ ] **Phase 5: Driver Style and Control Foundations** - Model driver tendencies and control-ready plant seams with explainable policy differences.
+- [ ] **Phase 5.1: Optimization-Backed Control and Trajectory Analysis** - Add optimizer-backed control baselines, trajectory analysis, and constraint-aware comparison workflows.
 - [ ] **Phase 6: Data Import and Telemetry Alignment** - Ingest structured session data and compare it to simulation results.
 - [ ] **Phase 7: Calibration and Validation Workbench** - Measure confidence, calibrate parameters, and surface model limits.
-- [ ] **Phase 8: Regulation and Design Exploration** - Turn the system into a real sandbox for regulation and design trade studies.
+- [ ] **Phase 8: First Regulation and Design Exploration Wave** - Use the calibrated sandbox and canonical semantic model for the first honest regulation and design trade studies.
 
 ## Phase Details
 
@@ -108,74 +114,143 @@ Plans:
 - [x] 03.1-03-PLAN.md — Tire-set inventory validation, API dispatcher for race simulation, and artifact persistence
 - [x] 03.1-04-PLAN.md — Integration tests, API tests, and Phase 3.1 success criteria verification
 
-### Phase 4: Strategy, Race Simulation, and Explanation Surfaces
-**Goal**: Turn the simulation into a race-strategy analysis tool that explains outcomes across session formats, teaches subsystem interactions through engineer-role views, and supports interactive temporal exploration.
-**Depends on**: Phase 3
+### Phase 3.2: Backend Execution, Job Artifacts, and Regulation Execution Flow
+**Goal**: Land the D1 execution boundary and artifact substrate so later phases consume compiled requests, async jobs, durable typed artifacts, and honest regulation execution snapshots instead of synchronous local-only route returns.
+**Depends on**: Phase 3.1
+**Requirements**: [VISU-03, VISU-04, VISU-05, ESTM-01, ESTM-03, ESTM-04, DATA-01, DATA-02, DATA-03, VAL-01, VAL-02, DESN-01, RACE-02, RACE-03]
+**Success Criteria** (what must be TRUE):
+  1. A compiled-request flow exists from scenario/preset references to a typed backend-facing execution request.
+  2. The active backend is accessed through a transport-neutral `SimulationBackend` interface rather than direct synchronous harness calls from request handlers.
+  3. Jobs expose typed lifecycle state, progress updates, cancellation, and artifact-ready events with durable artifact fetch after reconnect.
+  4. Durable artifacts carry stable identity, lineage, provenance, fidelity, validation, and regulation snapshot references.
+  5. The first worker-backed local execution path is in place and current `runService` responsibilities are split along compilation, execution dispatch, and persistence seams.
+  6. Execution no longer depends on hardcoded 2026-only regulation assumptions in the runtime path that later phases consume.
+**Plans**: 5 plans
+
+Plans:
+- [ ] 3.2-01: Define compiled simulation request types, backend interface, and request-compilation seams
+- [ ] 3.2-02: Implement submit/get/cancel/subscribe/fetch semantics and replay-safe progress/artifact events
+- [ ] 3.2-03: Implement typed artifact envelopes, lineage, provenance, and durable fetch semantics
+- [ ] 3.2-04: Put current local execution behind the new backend boundary and split orchestration responsibilities
+- [ ] 3.2-05: Compile canonical regulation data into execution snapshots and remove raw-preset and hardcoded runtime assumptions
+
+### Phase 3.3: Visualization Substrate, Workspace Shell, and Performance Foundation
+**Goal**: Land the D2 visualization substrate so Phase 4 and 4.1 can build product views on a recipe-driven shell, shared interaction state, renderer-neutral contracts, and measurable thin-client performance guardrails.
+**Depends on**: Phase 3.2
+**Requirements**: [VISU-01, VISU-03, VISU-04, VISU-05, EDU-01, EDU-02, EDU-03]
+**Success Criteria** (what must be TRUE):
+  1. A renderer-agnostic visualization contract exists from artifact payload to view model to render surface.
+  2. Shared interaction state supports linked cursor, committed brush, branch selection, pinned anchors, and guided focus without network-round-trip dependence.
+  3. View recipes and artifact-relative anchors resolve through typed success and failure states suitable for both engineering panels and lesson bindings.
+  4. The hardcoded three-zone shell is replaced or superseded by a recipe-driven shell with named panel slots and responsive collapse behavior.
+  5. New substrate-native panels consume shared visualization tokens for axes, overlays, fidelity/comparability states, and panel chrome.
+  6. A benchmark harness exists for the accepted thin-client performance envelope and can be used to test worst-plausible linked-view scenarios on the real client path.
+**Plans**: 5 plans
+
+Plans:
+- [ ] 3.3-01: Define view-family contracts, adapter seams, and the initial semantic-SVG implementation path
+- [ ] 3.3-02: Implement shared interaction state and keyboard-driven state transitions
+- [ ] 3.3-03: Define anchor resolution, recipe contracts, and the recipe-driven workspace shell
+- [ ] 3.3-04: Add shared visualization tokens and accessible substrate components for new D2-era panels
+- [ ] 3.3-05: Add the benchmark harness and reporting path for thin-client rendering and interaction responsiveness
+
+### Phase 3.4: Educational Foundation and Minimal Regulation Semantics
+**Goal**: Land the minimum D3 lesson architecture and D5 semantic groundwork required for Phase 4 to ship guided engineering workflows and honest comparison behavior on top of the D1/D2 substrate.
+**Depends on**: Phase 3.3
+**Requirements**: [EDU-01, EDU-02, EDU-03, VISU-03, VISU-04, VISU-05, STRA-02, ESTM-03, DESN-01]
+**Success Criteria** (what must be TRUE):
+  1. A typed `LessonUnit` and `LearningPath` schema exists with role, difficulty, depth, prerequisite, scenario, and artifact-binding fields.
+  2. Lesson content binds through recipe IDs, slot IDs, and artifact-relative anchors, with typed fallback behavior for missing or inapplicable bindings.
+  3. In-app preview and validation tooling exists for lesson schema, binding resolution, fidelity/validation mismatches, regulation applicability, and accessibility checks.
+  4. Initial role/path fixtures exist for the first strategy-engineer learning flow that Phase 4 will deliver.
+  5. A canonical regulation semantics inventory exists for the current family, including family identity, applicability, and the `direct` / `derived` / `family-specific` / `non-comparable` relation vocabulary needed by lessons and comparison surfaces.
+  6. Phase 4 can consume this groundwork without inferring semantics ad hoc from raw preset maps or teaching against unlabeled artifact fidelity.
+**Plans**: 5 plans
+
+Plans:
+- [ ] 3.4-01: Define `LessonUnit`, `LearningPath`, body normalization, and artifact-binding schema
+- [ ] 3.4-02: Implement recipe/slot/anchor lesson bindings, preview against canonical artifacts, and initial strategy-role fixtures
+- [ ] 3.4-03: Implement schema, binding, fidelity, applicability, and accessibility validation for lesson content
+- [ ] 3.4-04: Define the minimum family identity, applicability, and relation-class inventory the current family needs
+- [ ] 3.4-05: Connect lesson/runtime surfaces to the minimal semantic model so Phase 4 comparison and education workflows stay honest
+
+### Phase 4: Strategy Workbench and Session Workflows
+**Goal**: Turn the post-3.4 substrate into a usable strategy workbench for race, qualifying, and sprint workflows, with explanation surfaces and initial engineer-role lesson delivery.
+**Depends on**: Phase 3.4
 **Requirements**: [STRA-01, STRA-02, STRA-03, STRA-04, STRA-05, PLAT-04, EDU-01, EDU-03, VISU-03]
 **Success Criteria** (what must be TRUE):
   1. User can compare multiple pit and compound strategies across a race distance, including energy-deployment policy as a strategic variable.
-  2. Outputs explain why a strategy wins or loses with stint-level and event-level detail.
+  2. Outputs explain why a strategy wins or loses with stint-level and event-level detail tied to typed artifacts and provenance.
   3. User can inject race interruptions (VSC, full safety car, red flag) at specified or probabilistic points and see how they alter optimal strategy.
   4. User can simulate in-race strategy interventions (mode changes, pit timing responses, tire management instructions) and see how intervention timing alters outcomes.
   5. User can simulate qualifying sessions (Q1/Q2/Q3 with compound allocation) and sprint races as distinct session modes.
-  6. User can inspect subsystem-level views showing how tires, electrical state, weather, and policy interact, with learning paths relevant to different F1 engineering disciplines.
+  6. User can inspect subsystem-level views and initial engineer-role lessons built on the shared lesson schema, recipe-driven shell, and artifact/anchor substrate.
   7. User can perturb assumptions and rerun sensitivity studies quickly.
-  8. Visual learning views remain tied to model semantics and uncertainty instead of becoming disconnected dashboards.
-
-**Prerequisite:** Visualization architecture deliberation must be completed before Phase 4 planning begins. See audit-response-2026-04-07.md finding #9.
-
+  8. Explanation and learning surfaces remain tied to typed artifacts, fidelity markers, validation state, and honest regulation semantics instead of becoming disconnected dashboards.
 **Plans**: 4 plans
 
 Plans:
 - [ ] 04-01: Race-distance, pit-strategy, and race-interruption simulation
-- [ ] 04-02: Qualifying and sprint session modes
-- [ ] 04-03: Explanation views, engineer-role learning paths, and stint-delta analysis
+- [ ] 04-02: Qualifying and sprint session workflows
+- [ ] 04-03: Explanation surfaces and initial engineer-role lesson delivery
 - [ ] 04-04: In-race intervention simulation and strategy-response workflows
 
-### Phase 4.1: Observer Layer and Synthetic Sensing
-**Goal**: Introduce the observer layer with a synthetic sensor model, enabling comparison of true, measured, and estimated state, with observer-aware learning views and temporal exploration.
+### Phase 4.1: Observer and Replay Workbench
+**Goal**: Build observer-aware replay and temporal exploration on top of checkpointed artifacts, linked temporal interaction, and guided overlays.
 **Depends on**: Phase 4
 **Requirements**: [ESTM-01, ESTM-02, ESTM-03, ESTM-04, VISU-05]
 **Success Criteria** (what must be TRUE):
-  1. The simulator generates noisy measurement channels that mimic realistic sensor outputs, enabling observer comparison.
-  2. User can enable an observer layer and inspect true, measured, and estimated state.
-  3. User can scrub through simulation time, inspect state at any point, and branch simulations from intermediate states.
-  4. Observer-aware learning views connect estimation concepts to engineering disciplines.
+  1. The simulator generates noisy measurement artifacts through the D1 job/artifact pipeline, enabling observer comparison without bespoke data paths.
+  2. User can enable an observer layer and inspect true, measured, and estimated state through linked D2 interaction behaviors.
+  3. User can scrub through simulation time, inspect state at any point, and branch simulations from intermediate states using checkpointed artifacts and replay-friendly views.
+  4. Observer-aware learning views and guided overlays connect estimation concepts to engineering disciplines without inventing a separate lesson substrate.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04.1-01: Synthetic sensor model and noisy measurement channels
+- [ ] 04.1-01: Synthetic sensor model and noisy measurement artifacts
 - [ ] 04.1-02: Observer layer (EKF baseline) with true/measured/estimated comparison
-- [ ] 04.1-03: Observer-aware learning views, timeline scrubbing, and sensitivity workflows
+- [ ] 04.1-03: Observer-aware replay, guided overlays, and sensitivity workflows
 
-### Phase 5: Driver Style and Control Systems
-**Goal**: Model how different driving tendencies and control choices alter performance and degradation, establish a model-based control baseline, and make the control logic legible to learners.
-**Depends on**: Phase 4
-**Requirements**: [CTRL-01, CTRL-02, CTRL-03, CTRL-04, CTRL-05, EDU-02, VISU-04]
+### Phase 5: Driver Style and Control Foundations
+**Goal**: Model how different driving tendencies and control-ready plant assumptions alter performance and degradation, and make the policy logic legible to learners.
+**Depends on**: Phase 4.1
+**Requirements**: [CTRL-01, CTRL-02, CTRL-03, EDU-02, VISU-04]
 **Success Criteria** (what must be TRUE):
   1. User can define at least two driver-style profiles with meaningful behavioral differences.
   2. The same scenario can be rerun under different profiles and compared directly.
   3. The policy logic remains explainable and inspectable.
-  4. The system includes a model-based control baseline, ideally MPC where tractable, with visible state, constraint, and objective structure.
-  5. The system can compute or approximate an optimal trajectory for the current model and circuit, and show how parameter changes alter the racing line.
-  6. The system can surface controller intent and constraint activation in a way that helps a learning engineer understand the control problem.
-  7. Comparative visualizations make policy differences, path choices, and control consequences intuitive to inspect.
-**Plans**: 6 plans
+  4. The system exposes the control-ready plant seams needed for later optimizer-backed baselines without freezing the architecture around a single solver.
+  5. Comparative visualizations make driver-style and policy differences intuitive to inspect.
+**Plans**: 4 plans
 
 Plans:
 - [ ] 05-01: Define control-ready plant interface (segment/time-step state transition API coexisting with envelope solver)
 - [ ] 05-02: Define driver-style parameterization
 - [ ] 05-03: Connect style parameters to tire, pace, and energy behavior
-- [ ] 05-04: Implement an explainable model-based control baseline, ideally MPC where tractable
-- [ ] 05-05: Compute optimal trajectory and racing-line output from the control/optimization layer
-- [ ] 05-06: Build comparative driver-style, control-intent, trajectory, and policy visualization workflows
+- [ ] 05-04: Build comparative driver-style and policy visualization workflows
 
 Future extension from this phase:
 - Once the control interface is stable and the simulator is calibrated, this phase becomes the launch point for RL to be compared against a serious model-based baseline rather than a dead-end heuristic layer.
 
+### Phase 5.1: Optimization-Backed Control and Trajectory Analysis
+**Goal**: Add optimizer-backed control baselines, trajectory analysis, and constraint-aware comparison workflows on top of the control-ready foundations from Phase 5.
+**Depends on**: Phase 5
+**Requirements**: [CTRL-04, CTRL-05, VISU-04]
+**Success Criteria** (what must be TRUE):
+  1. The system includes a model-based control baseline, ideally MPC where tractable, with visible state, constraint, and objective structure.
+  2. The system can compute or approximate an optimal trajectory for the current model and circuit, and show how parameter changes alter the racing line.
+  3. The system can surface controller intent and constraint activation in a way that helps a learning engineer understand the control problem.
+  4. Comparative visualizations make optimization, path-choice, and control consequences intuitive to inspect.
+**Plans**: 3 plans
+
+Plans:
+- [ ] 05.1-01: Implement an explainable model-based control baseline, ideally MPC where tractable
+- [ ] 05.1-02: Compute optimal trajectory and racing-line output from the control and optimization layer
+- [ ] 05.1-03: Build controller-intent, trajectory-aware, and constraint-activation comparison workflows
+
 ### Phase 6: Data Import and Telemetry Alignment
 **Goal**: Bring outside session data into the loop so simulation can be compared against reality.
-**Depends on**: Phase 5
+**Depends on**: Phase 5.1
 **Requirements**: [DATA-01, DATA-02, DATA-03, DATA-04]
 **Success Criteria** (what must be TRUE):
   1. User can import structured local data files into a stable session schema.
@@ -206,14 +281,14 @@ Plans:
 - [ ] 07-02: Implement parameter fitting and confidence reporting
 - [ ] 07-03: Surface uncertainty and model limitations in the UI
 
-### Phase 8: Regulation and Design Exploration
-**Goal**: Turn the validated sandbox into a design and regulation trade-study environment.
+### Phase 8: First Regulation and Design Exploration Wave
+**Goal**: Use the calibrated sandbox and canonical semantic model for the first honest regulation and design trade studies.
 **Depends on**: Phase 7
 **Requirements**: [DESN-01]
 **Success Criteria** (what must be TRUE):
-  1. User can compare regulation presets or design parameter changes directly.
-  2. Downstream effects on pace, degradation, energy usage, and strategy are visible.
-  3. The system remains modular enough to accept higher-fidelity submodels later.
+  1. User can compare regulation presets or design parameter changes directly using the canonical semantic model and explicit relation classes.
+  2. Downstream effects on pace, degradation, energy usage, and strategy are visible with honest comparability and applicability labeling.
+  3. The first exploration wave stays narrow enough to preserve room for broader historical family expansion and richer regulation-lab breadth in later milestones.
 **Plans**: 3 plans
 
 Plans:
@@ -221,10 +296,38 @@ Plans:
 - [ ] 08-02: Add comparative visualizations for downstream tradeoffs
 - [ ] 08-03: Define extension points for higher-fidelity submodels
 
-## Subsequent Milestone Direction
+## Future Milestone Direction
 
-The current roadmap is not the full endpoint of the platform. Subsequent milestones remain in-scope for the product and should expand subsystem coverage deliberately, likely including:
+### v2: Numerical and Semantic Deepening
 
+Likely milestone themes:
+
+- first serious compute escalation if empirical workload triggers fire
+- broader regulation-family expansion
+- richer comparability registries
+- denser reference and benchmark layers
+- stronger competitor-reference abstractions
+
+### v3: Calibrated Comparative Engineering Lab
+
+Likely milestone themes:
+
+- calibrated model-vs-reference workflows
+- multi-family comparison with honest relation classes
+- deeper design and control trade studies
+- educational scaffolding that feels native rather than overlaid
+
+This is the clearest current answer to where the platform comes into its own.
+
+### v4+: Operational and Product Expansion Horizon
+
+Likely milestone themes:
+
+- remote and cloud compute maturity
+- live or near-live race-weekend workflows
+- broader role coverage
+- collaboration if scope expands
+- later RL or policy-learning work
 - aerodynamic and active-aero refinement
 - thermal and cooling dynamics
 - braking, chassis, suspension, and richer setup tradeoffs
@@ -235,7 +338,7 @@ The current roadmap is not the full endpoint of the platform. Subsequent milesto
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 4 -> 4.1 -> 5 -> 6 -> 7 -> 8
+Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 3.2 -> 3.3 -> 3.4 -> 4 -> 4.1 -> 5 -> 5.1 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -244,9 +347,13 @@ Phases execute in numeric order: 1 -> 2 -> 2.1 -> 3 -> 3.1 -> 4 -> 4.1 -> 5 -> 6
 | 02.1. Circuit Geometry Pipeline | 1/1 | Complete | 2026-04-03 |
 | 3. Tire, Electrical, Weather, Environment, and Energy Dynamics | 4/4 | Complete | 2026-04-03 |
 | 3.1. Race State, Typed Artifacts, and Branchable Runs | 4/4 | Complete | 2026-04-08 |
-| 4. Strategy, Race Simulation, and Explanation Surfaces | 0/4 | Not started | - |
-| 4.1. Observer Layer and Synthetic Sensing | 0/3 | Not started | - |
-| 5. Driver Style and Control Systems | 0/6 | Not started | - |
+| 3.2. Backend Execution, Job Artifacts, and Regulation Execution Flow | 0/5 | Not started | - |
+| 3.3. Visualization Substrate, Workspace Shell, and Performance Foundation | 0/5 | Not started | - |
+| 3.4. Educational Foundation and Minimal Regulation Semantics | 0/5 | Not started | - |
+| 4. Strategy Workbench and Session Workflows | 0/4 | Not started | - |
+| 4.1. Observer and Replay Workbench | 0/3 | Not started | - |
+| 5. Driver Style and Control Foundations | 0/4 | Not started | - |
+| 5.1. Optimization-Backed Control and Trajectory Analysis | 0/3 | Not started | - |
 | 6. Data Import and Telemetry Alignment | 0/5 | Not started | - |
 | 7. Calibration and Validation Workbench | 0/3 | Not started | - |
-| 8. Regulation and Design Exploration | 0/3 | Not started | - |
+| 8. First Regulation and Design Exploration Wave | 0/3 | Not started | - |
