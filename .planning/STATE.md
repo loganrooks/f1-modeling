@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 04
-current_phase_name: Strategy, Race Simulation, and Explanation Surfaces
+current_phase: 03.2
+current_phase_name: Backend Execution, Job Artifacts, and Regulation Execution Flow
 current_plan: 0
-status: completed
-stopped_at: Phase 3.1 complete, verified 6/6
-last_updated: "2026-04-09T03:00:00.000Z"
-last_activity: 2026-04-09
+status: ready_for_context
+stopped_at: Vision Alignment Initiative applied; next step is Phase 3.2 context and planning
+last_updated: "2026-04-11T23:30:00.000Z"
+last_activity: 2026-04-11
 progress:
-  total_phases: 11
+  total_phases: 15
   completed_phases: 5
-  total_plans: 21
+  total_plans: 61
   completed_plans: 21
-  percent: 100
+  percent: 34
 ---
 
 # Project State
@@ -24,40 +24,44 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-19)
 
 **Core value:** Make F1 design and strategy legible by coupling editable models with visual explanations of why a result changed.
-**Current focus:** Phase 3.1 complete. Phase 4 next — Strategy, Race Simulation, and Explanation Surfaces.
+**Current focus:** Vision Alignment Initiative has been applied to the live roadmap and planning policy. Phase 3.1 is complete; Phase 3.2 is next.
 
 ## Current Position
 
-Phase: 04 of 8+ (Strategy, Race Simulation, and Explanation Surfaces)
-Plan: 0 of 4
+Phase: 03.2 of 15 (Backend Execution, Job Artifacts, and Regulation Execution Flow)
+Plan: 0 of 5
 
-**Current Phase:** 04
-**Current Phase Name:** Strategy, Race Simulation, and Explanation Surfaces
-**Total Phases:** 10 (including inserted 2.1, 3.1, 4.1)
+**Current Phase:** 03.2
+**Current Phase Name:** Backend Execution, Job Artifacts, and Regulation Execution Flow
+**Total Phases:** 15
 **Current Plan:** 0
-**Total Plans in Phase:** 4
-**Status:** Phase 3.1 complete, verified 6/6
-**Last Activity:** 2026-04-09
-**Progress:** [██████████] 100% (through Phase 3.1)
+**Total Plans in Phase:** 5
+**Status:** Ready for context gathering and planning
+**Last Activity:** 2026-04-11
+**Progress:** [███░░░░░░░] 34% (21/61 roadmap plans complete; next is Phase 3.2 planning)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 9
-- Average duration: 7.6 min
-- Total execution time: 1.13 hours
+- Total plans completed: 21
+- Average duration: 8.7 min
+- Total execution time: 3.05 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | Phase 01 | 9/9 | 68min | 7.6min |
+| Phase 02 | 3/3 | 51min | 17.0min |
+| Phase 02.1 | 1/1 | 12min | 12.0min |
+| Phase 03 | 4/4 | 27min | 6.8min |
+| Phase 03.1 | 4/4 | 25min | 6.3min |
 
 **Recent Trend:**
 
-- Last 5 plans: 10.2min
-- Trend: Up sharply
+- Last 5 plans: 6.8min
+- Trend: Down from the Phase 2 peak; recent execution stabilized in the 4-9 minute range
 
 | Phase 01 P01 | 5min | 1 tasks | 5 files |
 | Phase 01 P02 | 6min | 2 tasks | 13 files |
@@ -71,7 +75,7 @@ Plan: 0 of 4
 | Phase 02 P01 | 14min | 2 tasks | 22 files |
 | Phase 02 P02 | 9min | 2 tasks | 12 files |
 | Phase 02 P03 | 28min | 3 tasks | 10 files |
-| Phase 02.1 P01 | 12 | 3 tasks | 7 files |
+| Phase 02.1 P01 | 12min | 3 tasks | 7 files |
 | Phase 03 P01 | 5min | 2 tasks | 11 files |
 | Phase 03 P02 | 4min | 2 tasks | 5 files |
 | Phase 03 P03 | 9min | 2 tasks | 16 files |
@@ -160,6 +164,9 @@ Recent decisions affecting current work:
 - [Phase 03.1]: Tire inventory validation duplicated as local adapter in runService.ts for worktree build compatibility; canonical source in sim-core/raceModel/tireInventory.ts
 - [Phase 03.1]: Per-stint artifacts use stint-index prefix (stint-0, stint-1) for unique artifact IDs within race simulation runs
 - [Phase 03.1]: Separate pitModel.test.ts and tireInventory.test.ts for focused unit testing, extending existing raceModel.test.ts for integration coverage
+- Vision Alignment Initiative (2026-04-11): accepted D1/D2/D3/D5 architecture and D4 roadmap consequences as binding inputs for future phase planning
+- Vision Alignment Initiative: inserted Phases 3.2, 3.3, and 3.4 before Phase 4; rewrote Phase 4 and 4.1 framing; split Phase 5 into 5 and 5.1; narrowed Phase 8
+- Vision Alignment Initiative: promoted `.planning/TECH-DEBT.md` as the living registry for rewrite triggers, benchmark obligations, and accepted transitional debt
 
 ### Pending Todos
 
@@ -169,22 +176,26 @@ Recent decisions affecting current work:
 
 - Phase 02.1 inserted after Phase 2: Circuit Geometry Pipeline (COMPLETE) — real GPS-derived track geometry from TUMFTM and bacinger sources
 - Phase 03.1 inserted after Phase 3: Race State, Typed Artifacts, and Branchable Runs — architectural bridge between single-stint simulation and race-level analysis
-- Phase 4 split (2026-04-07 audit): Strategy/race sim stays in Phase 4 (4 plans); observer layer moves to Phase 4.1 (3 plans)
+- Vision Alignment Initiative applied (2026-04-11): inserted Phase 3.2 (D1 execution boundary), Phase 3.3 (D2 visualization substrate), and Phase 3.4 (D3 lesson foundation plus D5 minimal semantics) before Phase 4
+- Vision Alignment Initiative applied (2026-04-11): Phase 4 narrowed to Strategy Workbench and Session Workflows; Phase 4.1 reframed as Observer and Replay Workbench on top of D1/D2/D3 substrate
+- Vision Alignment Initiative applied (2026-04-11): Phase 5 split into Driver Style and Control Foundations plus Phase 5.1 Optimization-Backed Control and Trajectory Analysis; Phase 8 narrowed to the first honest regulation/design exploration wave
 
 ### Blockers/Concerns
 
 - Shared GSD tooling still resolves quality profiles to Claude-era labels; project-level Codex intent is documented but global tooling may still need adaptation later.
+- STATE/ROADMAP/phase-directory alignment now expects new directories for Phases 3.2, 3.3, and 3.4; until those exist, GSD tooling will correctly route to planning but current-phase metadata must be kept honest manually.
+- The inserted pre-Phase-4 phases are not optional polish. They include deliberate refactor and retirement work against transitional seams already in the repo, especially `runService.ts`, synchronous harness contracts, the three-zone shell, and bespoke SVG panel growth.
+- `AccessibleChartContract` and `AnchorRegistry` remain explicit planning gates for Phase 3.3 and should not be allowed to drift into implementation-time guesswork.
 - Telemetry import path now targeted at FastF1 (Python) and OpenF1 API (REST); detailed integration architecture deferred to Phase 6 planning.
-- The minimum viable electrical state set and educational UX surface for v1 remain deferred to later roadmap phases and should not leak into Phase 1 execution.
-- The minimum viable environment-interaction model for v1 remains deferred to later roadmap phases and should not leak into Phase 1 execution.
-- The first observer targets and whether EKF is the right initial estimator for them remain deferred to Phase 4 planning.
+- The minimum viable electrical state set and educational UX surface for v1 remain deferred to later roadmap phases and should not leak into early-phase execution.
+- The minimum viable environment-interaction model for v1 remains deferred to later roadmap phases and should not leak into early-phase execution.
+- The first observer targets and whether EKF is the right initial estimator for them remain deferred to Phase 4.1 planning.
 - The minimum viable plant model, horizon, and solver strategy for an initial MPC baseline remain deferred to Phase 5 planning.
-- The first reusable visualization primitives are now planned for Phase 1, but the threshold for honest racing-line visualization remains deferred to Phase 2.
-- Future milestone sequencing for non-electrical subsystem families is still undefined and should be made explicit as the roadmap evolves.
-- Shared GSD roadmap parsing currently depends on `.planning/phases/` directories; Phase 1 is now scaffolded there, and future phases should follow that convention so phase workflows resolve cleanly.
+- Future milestone sequencing for non-electrical subsystem families is still thematic rather than detailed and should continue to be made explicit as the roadmap evolves.
+- Shared GSD roadmap parsing currently depends on `.planning/phases/` directories; inserted phases should be scaffolded there before automatic plan/execute routing can work cleanly.
 
 ## Session Continuity
 
-**Last session:** 2026-04-09T03:00:00.000Z
-**Stopped At:** Phase 3.1 complete, verified 6/6. Phase 4 next.
-**Resume File:** .planning/phases/04-strategy-race-simulation-and-explanation-surfaces/04-CONTEXT.md
+**Last session:** 2026-04-11T23:30:00.000Z
+**Stopped At:** Vision Alignment Initiative applied to live planning files. Phase 3.1 remains complete; next action is Phase 3.2 context and planning.
+**Resume File:** .planning/phases/03.2-backend-execution-job-artifacts-and-regulation-execution-flow/03.2-CONTEXT.md
