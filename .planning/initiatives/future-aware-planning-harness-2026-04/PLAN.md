@@ -269,12 +269,17 @@ Review gate questions:
 ### Stage 5 — Enforcement and preflight
 
 Purpose:
-- make dropped future-aware seams fail loudly enough to matter
+- reassess what enforcement or launch-truth gaps still remain after Stages `3` and `4`, and only apply more if the residual leverage is real
 
 Deliverables:
-- checker/prompt enforcement
-- explicit no-context reduced-guarantee path
-- doctrine-sensitive preflight / launch-truth capture design as appropriate
+- residual enforcement gap map
+- narrow decision on whether a Stage `5B` application wave is still justified
+- any remaining checker/prompt or launch-truth patch only if Gate `5` accepts it
+
+Current staged execution:
+- Wave `5A`: synthesize the remaining enforcement and launch-truth gap after the landed routing and formal-gate work
+- Review Gate `5`: decide whether Stage `5` needs any application wave at all
+- Wave `5B`: reserved only if Gate `5` identifies one narrow remaining enforcement patch
 
 Review gate questions:
 - Are failures specific and actionable rather than noisy?
