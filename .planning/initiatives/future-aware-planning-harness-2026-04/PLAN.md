@@ -197,6 +197,10 @@ Deliverables:
 - `.planning/ARTIFACT-GOVERNANCE.md`
 - any required root `AGENTS.md` refinements
 
+Current staged execution:
+- Wave `2A`: proposal synthesis for the doctrine/governance package
+- Wave `2B`: live application of the reviewed package to repo files
+
 Review gate questions:
 - Is doctrine cleanly separated from roadmap/state?
 - Are artifact roles explicit enough for Codex to navigate?

@@ -10,6 +10,7 @@ The files in `specs/` are the initiative's canonical executable task contracts. 
 | `specs/spec-wave-1B-research-gsdr-subsystem-adaptation-inventory.md` | Inventory and evaluate Reflect-only subsystem adaptation needs | GSDR subsystem inventory; adaptation matrix; borrow-now / borrow-later / reject table | Proposed |
 | `specs/spec-wave-1-review-gate-mechanism-and-adaptation-decisions.md` | Human/orchestrator review gate after Wave 1 | review decisions on borrow/adapt/defer/reject before synthesis begins | Proposed |
 | `specs/spec-wave-2A-synthesis-doctrine-and-governance-package.md` | Draft the doctrine/governance package for `f1-modeling` | `.planning/LONG-ARC.md`, `.planning/AGENTS.md`, `WORKFLOW.md`, `.planning/ARTIFACT-GOVERNANCE.md` drafts or proposals | Proposed |
+| `specs/spec-wave-2B-apply-doctrine-and-governance-package.md` | Apply the reviewed doctrine/governance package to live repo files | live doctrine/governance files plus application summary | Proposed |
 
 ## Current expectation
 
