@@ -10,17 +10,29 @@ Run a final transcript-focused audit after the three extract packs exist so like
 
 ## Required Inputs
 
-- `../../artifacts/transcript-nlp/normalized/manifest.json`
+- `../../NEGLECT-REVIEW.md`
 - `../../artifacts/transcript-nlp/lanes/claude-chat/coverage-report.json`
+- `../../artifacts/transcript-nlp/lanes/claude-chat/query-manifest.json`
+- `../../artifacts/transcript-nlp/lanes/claude-chat/neglect-report.json`
 - `../../artifacts/transcript-nlp/lanes/codex-chat/coverage-report.json`
+- `../../artifacts/transcript-nlp/lanes/codex-chat/query-manifest.json`
+- `../../artifacts/transcript-nlp/lanes/codex-chat/neglect-report.json`
 - `../../artifacts/transcript-nlp/lanes/cross-model-and-agent-usage/coverage-report.json`
-- `../../artifacts/transcript-nlp/lanes/claude-chat/candidate-hits.jsonl`
-- `../../artifacts/transcript-nlp/lanes/codex-chat/candidate-hits.jsonl`
-- `../../artifacts/transcript-nlp/lanes/cross-model-and-agent-usage/candidate-hits.jsonl`
+- `../../artifacts/transcript-nlp/lanes/cross-model-and-agent-usage/query-manifest.json`
+- `../../artifacts/transcript-nlp/lanes/cross-model-and-agent-usage/neglect-report.json`
 - `../../extracts/claude-chat-extract.md`
 - `../../extracts/codex-chat-extract.md`
 - `../../extracts/cross-model-and-agent-usage-extract.md`
 - `../../runs/2026-04-16-llm-sweep/RUN-MANIFEST.md`
+
+Escalation-only local artifacts:
+
+- local `candidate-hits.jsonl`
+- local `excerpt-windows.jsonl`
+- local `normalized/manifest.json`
+- local `normalized/turns.jsonl`
+
+These are reproducible intermediates, not canonical retained outputs. Only consult them if the compact neglect and coverage artifacts do not suffice to disposition a suspected miss.
 
 ## Context Budget
 
@@ -30,8 +42,8 @@ Target:
 
 Method:
 
-- Compare the final extract rows against the top unselected or unrepresented candidate hits.
-- Use coverage reports first; only reopen excerpt windows or raw sessions when a suspected omission looks material.
+- Compare the final extract rows against the top unresolved issues in `NEGLECT-REVIEW.md` and the per-lane `neglect-report.json` files.
+- Use coverage, query, and neglect reports first; only reopen local candidate/window artifacts or raw sessions when a suspected omission looks material and cannot be dispositioned from the compact artifacts.
 - Keep this audit narrow and patch-oriented rather than exploratory.
 
 ## Audit Checks
@@ -40,10 +52,10 @@ Method:
 - provider skew
 - actor skew
 - stage/date coverage gaps
-- repeated high-score candidates absent from all extracts
+- duplicate-fingerprint clusters that may hide recurring omitted evidence classes
 - agent-usage evidence omitted despite high lane counts
 - initiative-log evidence omitted where it materially changes attribution
-- blind spots declared by a lane but not carried forward to synthesis
+- blind spots or neglect findings declared by a lane but not carried forward to synthesis
 
 ## Output Constraints
 
@@ -57,10 +69,13 @@ Method:
   - `patch claude extract`
   - `patch codex extract`
   - `patch cross-model extract`
+  - `patch interaction review`
+  - `carry into H adversarial pass`
   - `accept as documented blind spot`
   - `not material`
 - Do not rewrite the three extract packs wholesale.
 - Do not convert this audit into a second interaction review.
+- Treat the output as a compact bridge into `NEGLECT-AND-COUNTEREVIDENCE.md`, not as a competing top-level doctrine file.
 
 ## Success Condition
 

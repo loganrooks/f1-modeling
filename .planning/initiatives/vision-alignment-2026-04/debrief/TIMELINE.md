@@ -5,7 +5,7 @@
 
 ## Evidence Scope Note
 
-The recommended core pack covered most of the sequence. Two targeted escalations were needed to answer Spec A cleanly:
+The recommended core pack was sufficient to reconstruct the main sequence for this timeline draft. Two targeted escalations were needed to answer Spec A cleanly:
 
 - `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md` for the pre-initiative trigger
 - `../reviews/review-wave-2-structure-decisions.md` for the Gate 1 restructure from the original scaffolding to the executed `delta` shape

@@ -5,7 +5,7 @@
 
 ## Outcome
 
-The Vision Alignment Initiative was worth doing. It corrected a wrong-sized Phase 4 framing, inserted the missing foundation work before Phase 4, translated accepted architecture into roadmap and guardrail changes, and left a much more honest project state than the one it started from. The initiative did not succeed because it was smooth; it succeeded because strong research and deliberation work were paired with several explicit recovery mechanisms when the process slipped.
+The Vision Alignment Initiative was worth doing. It corrected a wrong-sized Phase 4 framing, made the missing foundation work explicit as Phases `3.2`, `3.3`, and `3.4` before Phase `4`, translated accepted architecture into concrete roadmap, tech-debt, `CLAUDE.md`, and state-routing changes, and left a much more honest project state than the one it started from. The initiative was not smooth, but it still produced durable planning and governance changes through strong research and deliberation plus several explicit recoveries and later forcing mechanisms when the process slipped.
 
 ## What Went Well
 
@@ -17,9 +17,9 @@ The Vision Alignment Initiative was worth doing. It corrected a wrong-sized Phas
 ## What Went Wrong Or Almost Went Wrong
 
 - The biggest failures were procedural, not architectural: implicit authorization was treated as blanket launch permission, recommendation changes briefly outran the analysis behind them, and D4 bypassed its scheduled formal audit once before post-hoc recovery.
-- D2 left `AccessibleChartContract` and `AnchorRegistry` under-specified. That did not invalidate the initiative, but it did mean later carry-forward artifacts had to do interface-completeness work the deliberation itself should have closed more clearly.
+- D2 and D3 closed enough substrate direction to proceed, but `AccessibleChartContract` and `AnchorRegistry` still remained carry-forward interface obligations. The skipped `2B-iii` revision branch did not invalidate the initiative, but it did mean later carry-forward artifacts had to do interface-completeness work rather than finishing that closure inside the initiative.
 - Record quality remained strong only because the initiative kept adding corrective artifacts. Without canonical-entrypoint labeling, historical-snapshot warnings, and later directory cleanup, the record would have become hard to trust.
-- The transcript debrief tooling is useful but still overstates its own coverage. The current extraction passes are windowed and good at surfacing evidence, but not strong enough to justify blanket "no major blind spots" language.
+- The transcript debrief tooling is useful but still requires bounded-confidence wording. The current extraction passes are windowed and good at surfacing evidence, but not strong enough to justify blanket "no major blind spots" language.
 
 ## What Must Change Before The Next Initiative
 
@@ -31,5 +31,5 @@ The Vision Alignment Initiative was worth doing. It corrected a wrong-sized Phas
 ## What Stays Unchanged
 
 - The initiative's substantive architecture direction should stand.
-- The accepted carry-forward into roadmap, guardrails, and tech debt should stand.
+- The accepted carry-forward into roadmap, tech debt, `CLAUDE.md`, and state routing should stand.
 - The review-gate and decision-anchor methodology should stay, but with tighter execution controls around authorization, audit mode, and final application verification.

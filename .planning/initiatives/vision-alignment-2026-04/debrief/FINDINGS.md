@@ -1,6 +1,6 @@
 # Findings
 
-**Status:** Debrief Spec B findings drafted.
+**Status:** Completed on 2026-04-16.
 **Source spec:** `specs/spec-debrief-B-process-and-auditability-review.md`
 
 ## Purpose
