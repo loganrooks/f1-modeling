@@ -1,0 +1,160 @@
+{
+  "configId": "vision-alignment-2026-04",
+  "laneId": "claude-chat",
+  "generatedAt": "2026-04-16T19:01:51.587Z",
+  "totalWindowTokens": 13053,
+  "duplicateFingerprintGroups": [
+    {
+      "fingerprintPreview": "[tool_result] The file /home/rookslog/workspace/projects/f1-modeling/.claude/worktrees/agent-a5132fd8/apps/local-api/src/services/runService.ts has been updated successfully.",
+      "count": 10
+    },
+    {
+      "fingerprintPreview": "[tool_result] The file /home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/CLAUDE-SESSION-HANDOFF.md has been updated successfully.",
+      "count": 4
+    },
+    {
+      "fingerprintPreview": "[tool_result] The file /home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/BOUNDARY-CONTRACT-MEMO.md has been updated successfully.",
+      "count": 3
+    },
+    {
+      "fingerprintPreview": "skill_listing - update-config: Use this skill to configure the Claude Code harness via settings.json. Automated behaviors (\"from now on when X\", \"each time X\", \"whenever X\", \"befo…",
+      "count": 3
+    },
+    {
+      "fingerprintPreview": "[tool_result] File does not exist. Note: your current working directory is /home/rookslog/workspace/projects/f1-modeling/.claude/worktrees/agent-adffc5d8.",
+      "count": 3
+    },
+    {
+      "fingerprintPreview": "[tool_result] The file /home/rookslog/workspace/projects/f1-modeling/.claude/worktrees/agent-a5132fd8/apps/local-api/src/routes/runs.ts has been updated successfully.",
+      "count": 3
+    },
+    {
+      "fingerprintPreview": "[tool_result] The file /home/rookslog/workspace/projects/f1-modeling/.claude/worktrees/agent-a548563d/packages/sim-core/src/index.ts has been updated successfully.",
+      "count": 3
+    },
+    {
+      "fingerprintPreview": "[tool_result] 1 # Agent Execution Protocol 2 3 > **Shared operational conventions for all GSD agents** 4 > 5 > Convention changes go HERE, not in individual agent specs. 6 > Agent…",
+      "count": 2
+    },
+    {
+      "fingerprintPreview": "make any final refinements in the response to codex's recommendations, if you so choose, and then edit the file, filling in the Decision Record and then commit.",
+      "count": 2
+    },
+    {
+      "fingerprintPreview": "[tool_result] 1 { 2 \"model_profile\": \"quality\", 3 \"mode\": \"interactive\", 4 \"commit_docs\": true, 5 \"search_gitignored\": false, 6 \"branching_strategy\": \"none\", 7 \"phase_branch_templ…",
+      "count": 2
+    }
+  ],
+  "emittedSessionCounts": {
+    "claude:44aad61e-1d1a-4230-9df4-02cecccedbac": 2,
+    "claude:81c3c7eb-103e-4fe7-b5db-4a78b0183e8a": 4,
+    "claude:a3d3fad3-d23b-4e86-9479-eba4424080e8": 4,
+    "claude:f31b45c6-f76a-41c7-a63e-a8b888cca4ae": 1,
+    "claude:f31b45c6-f76a-41c7-a63e-a8b888cca4ae/agent-a424118ece512e7c7": 1
+  },
+  "emittedPrimaryFamilyCounts": {
+    "positive_collaboration": 4,
+    "frustration_pushback": 1,
+    "authorization_delegation": 4,
+    "audit_protocol": 3
+  },
+  "findings": [
+    {
+      "code": "candidate-duplicate-fingerprints",
+      "severity": "info",
+      "message": "Candidate pool still contains 17 duplicate fingerprint groups."
+    }
+  ],
+  "candidateCoverage": {
+    "totalHits": 906,
+    "countsByFamily": {
+      "authorization_delegation": 67,
+      "audit_protocol": 396,
+      "review_gate_restructure": 233,
+      "model_role_shift": 664,
+      "positive_collaboration": 45,
+      "clarification_ambiguity": 7,
+      "frustration_pushback": 13
+    },
+    "countsByProvider": {
+      "claude": 906
+    },
+    "countsByActor": {
+      "assistant": 254,
+      "tool": 494,
+      "user": 55,
+      "attachment": 97,
+      "system": 6
+    },
+    "countsByStage": {
+      "wave-execution-and-audit": 384,
+      "trigger-and-setup": 428,
+      "unassigned": 93,
+      "debrief": 1
+    },
+    "missingFamilies": [],
+    "missingProviders": [],
+    "missingActors": [],
+    "missingStages": []
+  },
+  "selectedCoverage": {
+    "totalHits": 12,
+    "countsByFamily": {
+      "positive_collaboration": 4,
+      "authorization_delegation": 7,
+      "audit_protocol": 12,
+      "review_gate_restructure": 11,
+      "model_role_shift": 11,
+      "frustration_pushback": 1,
+      "clarification_ambiguity": 2
+    },
+    "countsByProvider": {
+      "claude": 12
+    },
+    "countsByActor": {
+      "assistant": 8,
+      "user": 1,
+      "tool": 2,
+      "attachment": 1
+    },
+    "countsByStage": {
+      "trigger-and-setup": 4,
+      "wave-execution-and-audit": 5,
+      "unassigned": 3
+    },
+    "missingFamilies": [],
+    "missingProviders": [],
+    "missingActors": [],
+    "missingStages": []
+  },
+  "emittedCoverage": {
+    "totalHits": 12,
+    "countsByFamily": {
+      "positive_collaboration": 4,
+      "authorization_delegation": 7,
+      "audit_protocol": 12,
+      "review_gate_restructure": 11,
+      "model_role_shift": 11,
+      "frustration_pushback": 1,
+      "clarification_ambiguity": 2
+    },
+    "countsByProvider": {
+      "claude": 12
+    },
+    "countsByActor": {
+      "assistant": 8,
+      "user": 1,
+      "attachment": 1,
+      "tool": 2
+    },
+    "countsByStage": {
+      "trigger-and-setup": 4,
+      "wave-execution-and-audit": 5,
+      "unassigned": 3
+    },
+    "missingFamilies": [],
+    "missingProviders": [],
+    "missingActors": [],
+    "missingStages": []
+  }
+}

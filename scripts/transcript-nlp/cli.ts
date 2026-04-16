@@ -62,7 +62,7 @@ async function main(): Promise<void> {
     for (const laneId of laneIds) {
       const { hits, coverage } = await runCandidates(config, laneId, cwd, turns);
       printSummary(
-        `Candidates config=${config.id} lane=${laneId} hits=${hits.length} missingFamilies=${coverage.missingFamilies.join(",") || "none"}`,
+        `Candidates config=${config.id} lane=${laneId} hits=${hits.length} missingFamilies=${coverage.candidateCoverage.missingFamilies.join(",") || "none"}`,
       );
     }
     return;

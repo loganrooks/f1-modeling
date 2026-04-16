@@ -87,7 +87,7 @@ describe("transcript NLP text helpers", () => {
       sourceLine: 2,
       metadata: {},
     });
-    expect(notificationTurn.noise).toBe(true);
+    expect(notificationTurn.noise).toBe(false);
     expect(notificationTurn.noiseReasons).toContain("subagent-notification");
 
     const subagentPromptTurn = buildTurn({
@@ -107,7 +107,7 @@ describe("transcript NLP text helpers", () => {
       sourceLine: 1,
       metadata: {},
     });
-    expect(subagentPromptTurn.noise).toBe(true);
+    expect(subagentPromptTurn.noise).toBe(false);
     expect(subagentPromptTurn.noiseReasons).toContain("subagent-launch-prompt");
 
     const userTurn = buildTurn({

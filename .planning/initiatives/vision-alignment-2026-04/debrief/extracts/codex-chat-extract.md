@@ -8,28 +8,38 @@
 - config: `vision-alignment-2026-04`
 - providers: `codex`
 - families: `positive_collaboration`, `frustration_pushback`, `clarification_ambiguity`, `authorization_delegation`, `audit_protocol`, `review_gate_restructure`, `model_role_shift`, `agent_usage`
-- sessions touched: 6
-- source files touched: 6
-- selected windows: 11
-- estimated input tokens: 9945
+- sessions touched: 9
+- source files touched: 9
+- selected windows: 12
+- estimated input tokens: 7101
+- notification policy: `suppress`
+- include subagent launch prompts: `no`
+
+## Coverage Summary
+
+- candidate hits: 752
+- selected moments before trimming: 12
+- emitted moments: 12
+- selected windows: 12
+- trimmed windows: 0
 
 ## Extract Table
 
 | Date or session | Moment type | Summary | Evidence | Why it matters |
 | --- | --- | --- | --- | --- |
-| 2026-04-09 | Audit Or Protocol + Review Gate Or Restructure | User: # Vision Alignment Audit — Codex GPT-5.4 **Date:** 2026-04-08 **Model:** gpt-5.4 (high reasoning, 1M context) **Purpose:** Evaluate whether the current architecture, roadmap, and … | `/home/rookslog/.codex/sessions/2026/04/08/rollout-2026-04-08T23-44-48-019d7057-b24a-78a0-8f0a-0b31eee59c19.jsonl:6` | Captures auditability and procedural integrity. |
-| 2026-04-09 | Authorization Or Delegation + Audit Or Protocol | User: # Vision Alignment Audit — Independent Review **Date:** 2026-04-08 **Model:** gpt-5.4 (xhigh reasoning, 1M context) **Purpose:** Evaluate whether the current architecture, roadmap… | `/home/rookslog/.codex/sessions/2026/04/08/rollout-2026-04-08T23-54-43-019d7060-c5f5-7720-b55b-36d12e73fac1.jsonl:6` | Important for review-gate discipline and agent-usage analysis. |
-| 2026-04-09 | Authorization Or Delegation + Audit Or Protocol | Assistant: The audit is written at [codex-xhigh-audit.md](/home/rookslog/workspace/projects/f1-modeling/.planning/audits/vision-audit-2026-04-08/codex-xhigh-audit.md). Headline conclusion: t… | `/home/rookslog/.codex/sessions/2026/04/08/rollout-2026-04-08T23-54-43-019d7060-c5f5-7720-b55b-36d12e73fac1.jsonl:214` | Important for review-gate discipline and agent-usage analysis. |
+| 2026-04-09 | Authorization Or Delegation + Audit Or Protocol | Assistant: The audit is written at [codex-xhigh-audit.md](/home/rookslog/workspace/projects/f1-modeling/.planning/audits/vision-audit-2026-04-08/codex-xhigh-audit.md). Headline conclusion: t… | `/home/rookslog/.codex/sessions/2026/04/08/rollout-2026-04-08T23-54-43-019d7060-c5f5-7720-b55b-36d12e73fac1.jsonl:215` | Important for review-gate discipline and agent-usage analysis. |
 | 2026-04-11 | Authorization Or Delegation + Audit Or Protocol | User: # Call 2A: D1 — Backend Boundary Architecture Deliberation **Wave:** 2a (foundational deliberation) **Model:** gpt-5.4 **Reasoning effort:** xhigh **Mode:** Deliberation (closure … | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T01-29-10-019d7b03-f74e-7290-8de2-266456343bc7.jsonl:6` | Important for review-gate discipline and agent-usage analysis. |
-| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | Assistant: In this runtime, yes, I think an agent is better for D2. Why: - It gives first-class lifecycle control. I can `wait_agent`, inspect completion cleanly, and interrupt without leavi… | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce.jsonl:185` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Authorization Or Delegation + Audit Or Protocol | Assistant: I read your D5 decisions. They’re already committed in `4366bd6`, and they line up cleanly with the D5 output: O2 accepted provisionally, D5.A/B accepted, D5.C/D accepted provisio… | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce.jsonl:1329` | Important for review-gate discipline and agent-usage analysis. |
-| 2026-04-11 | Positive Collaboration + Audit Or Protocol | Assistant: I read it. The D4 acceptance in [`05-long-horizon-roadmap.md`](/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/deliberations/05-long-h… | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce.jsonl:1578` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Authorization Or Delegation + Audit Or Protocol | Assistant: `3A` is done, reviewed, and committed. It produced [roadmap-evolution.md](/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/synthesis/ro… | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce.jsonl:1759` | Important for review-gate discipline and agent-usage analysis. |
-| 2026-04-16 | Positive Collaboration + Frustration Or Pushback | Assistant: Yes. I would not do this as “LLM reads logs and summarizes.” I’d use a layered NLP pipeline so recall comes from cheap structural methods and judgment comes later. High-value stra… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl:1002` | Preserves what went well rather than only collecting failure. |
-| 2026-04-16 | Frustration Or Pushback + Clarification Or Ambiguity | Assistant: Best option is a hybrid pipeline, not just “read the logs with an LLM.” Use: - structural segmentation by session, speaker, model, agent, and date - dialogue-act tagging like `app… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl:1004` | Surfaces process friction, quality concerns, and failure-recovery moments. |
+| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | Assistant: In this runtime, yes, I think an agent is better for D2. Why: - It gives first-class lifecycle control. I can `wait_agent`, inspect completion cleanly, and interrupt without leavi… | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce.jsonl:186` | Preserves what went well rather than only collecting failure. |
+| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | User: You are Worker D2 for the Vision Alignment Initiative in /home/rookslog/workspace/projects/f1-modeling. Ownership and write scope: - You own ONLY these files: 1. .planning/initiat… | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T05-06-12-019d7bca-a7be-75a3-8f73-888c6c193993.jsonl:6` | Preserves what went well rather than only collecting failure. |
+| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | User: You are Worker D3 for the Vision Alignment Initiative in /home/rookslog/workspace/projects/f1-modeling. Ownership and write scope: - You own ONLY these files: 1. .planning/initiat… | `/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T14-44-02-019d7ddb-aead-73a1-bdde-b5a2c55af4a2.jsonl:6` | Preserves what went well rather than only collecting failure. |
+| 2026-04-16 | Positive Collaboration + Frustration Or Pushback | Assistant: Yes. I would not do this as “LLM reads logs and summarizes.” I’d use a layered NLP pipeline so recall comes from cheap structural methods and judgment comes later. High-value stra… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl:1003` | Preserves what went well rather than only collecting failure. |
 | 2026-04-16 | Clarification Or Ambiguity + Authorization Or Delegation | Assistant: <proposed_plan> # Layered Transcript NLP Pipeline For Audit-Grade Debriefs ## Summary Build a reusable TypeScript transcript-analysis pipeline under `scripts/transcript-nlp/` that… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl:1086` | Captures where intent or implementation meaning was unstable. |
-| 2026-04-16 | Clarification Or Ambiguity + Authorization Or Delegation | Assistant: The strongest Spec B findings are now in [FINDINGS.md](/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/debrief/FINDINGS.md). The main … | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T11-46-20-019d96f8-c8c9-7a42-91a7-7654618a681b.jsonl:121` | Captures where intent or implementation meaning was unstable. |
+| 2026-04-16 | Frustration Or Pushback + Clarification Or Ambiguity | Assistant: Candidates are turn-level hits, not conversation-level judgments. A turn becomes a candidate if it matches one or more query families plus optional anchor terms in [queryFamilies.… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl:1861` | Surfaces process friction, quality concerns, and failure-recovery moments. |
+| 2026-04-16 | Clarification Or Ambiguity + Authorization Or Delegation | Assistant: <proposed_plan> # Transcript NLP Hardening Plan ## Summary Harden the current deterministic transcript-NLP pipeline as a v1 reliability pass, not a retrieval redesign. The goal is… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl:1927` | Captures where intent or implementation meaning was unstable. |
+| 2026-04-16 | Positive Collaboration + Authorization Or Delegation | Assistant: In this runtime, yes, I think an agent is better for D2. Why: - It gives first-class lifecycle control. I can `wait_agent`, inspect completion cleanly, and interrupt without leavi… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T13-31-58-019d9759-8015-7993-99c5-d1f73123c07c.jsonl:68` | Preserves what went well rather than only collecting failure. |
+| 2026-04-16 | Clarification Or Ambiguity + Authorization Or Delegation | Assistant: Changed file: `.planning/initiatives/vision-alignment-2026-04/debrief/runs/2026-04-16-llm-sweep/reports/D-delegation-agent-usage-and-orchestration.md` Main conclusions: delegation… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T13-38-54-019d975f-d79c-77c1-b72c-66d53128d60b.jsonl:163` | Captures where intent or implementation meaning was unstable. |
+| 2026-04-16 | Clarification Or Ambiguity + Authorization Or Delegation | Assistant: Changed file: [G-codex-vs-claude-role-comparison.md](/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/debrief/runs/2026-04-16-llm-sweep… | `/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T13-48-20-019d9768-7b1e-7082-8f2c-9ef209867fa4.jsonl:148` | Captures where intent or implementation meaning was unstable. |
 
-## Blind Spots
+## Neglect Notes
 
-- No major blind spots were detected by the deterministic coverage checks.
+- No structural neglect findings were triggered. This is not a recall guarantee.

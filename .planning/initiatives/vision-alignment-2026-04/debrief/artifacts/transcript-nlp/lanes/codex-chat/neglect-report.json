@@ -1,15 +1,33 @@
 {
   "configId": "vision-alignment-2026-04",
   "laneId": "codex-chat",
-  "generatedAt": "2026-04-16T19:01:51.674Z",
-  "totalTurns": 14266,
-  "usableTurns": 1783,
-  "candidateHits": 752,
-  "selectedWindows": 12,
-  "selectedMoments": 12,
-  "emittedMoments": 12,
+  "generatedAt": "2026-04-16T19:01:51.713Z",
   "totalWindowTokens": 7101,
-  "trimmedWindowCount": 0,
+  "duplicateFingerprintGroups": [],
+  "emittedSessionCounts": {
+    "codex:rollout-2026-04-08T23-54-43-019d7060-c5f5-7720-b55b-36d12e73fac1": 1,
+    "codex:rollout-2026-04-11T01-29-10-019d7b03-f74e-7290-8de2-266456343bc7": 1,
+    "codex:rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce": 1,
+    "codex:rollout-2026-04-11T05-06-12-019d7bca-a7be-75a3-8f73-888c6c193993": 1,
+    "codex:rollout-2026-04-11T14-44-02-019d7ddb-aead-73a1-bdde-b5a2c55af4a2": 1,
+    "codex:rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed": 4,
+    "codex:rollout-2026-04-16T13-31-58-019d9759-8015-7993-99c5-d1f73123c07c": 1,
+    "codex:rollout-2026-04-16T13-38-54-019d975f-d79c-77c1-b72c-66d53128d60b": 1,
+    "codex:rollout-2026-04-16T13-48-20-019d9768-7b1e-7082-8f2c-9ef209867fa4": 1
+  },
+  "emittedPrimaryFamilyCounts": {
+    "authorization_delegation": 2,
+    "positive_collaboration": 5,
+    "clarification_ambiguity": 4,
+    "frustration_pushback": 1
+  },
+  "findings": [
+    {
+      "code": "no-structural-findings",
+      "severity": "info",
+      "message": "No structural neglect findings were triggered. This is not a recall guarantee."
+    }
+  ],
   "candidateCoverage": {
     "totalHits": 752,
     "countsByFamily": {
@@ -97,6 +115,5 @@
     "missingProviders": [],
     "missingActors": [],
     "missingStages": []
-  },
-  "structuralBlindSpots": []
+  }
 }

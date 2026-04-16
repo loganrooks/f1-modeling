@@ -1,4 +1,5 @@
 export type Provider = "claude" | "codex" | "initiative-log";
+export type NotificationPolicy = "suppress" | "downrank" | "include";
 
 export type Actor =
   | "user"
@@ -57,22 +58,35 @@ export interface LaneDefinition {
   familyIds: string[];
   requiredFamilies: string[];
   requiredProviders: Provider[];
+  requiredActors?: Actor[];
+  requiredStages?: string[];
   contextBefore: number;
   contextAfter: number;
   maxMoments: number;
   softTokenCap: number;
   preferredTokenTarget: number;
   preferredOutputTokenTarget: number;
+  notificationPolicy?: NotificationPolicy;
+  includeSubagentLaunchPrompts?: boolean;
+  maxSelectedHitsPerFingerprint?: number;
+  maxSelectedHitsPerSession?: number;
 }
 
 export interface PipelineConfig {
   id: string;
   label: string;
   outputRoot: string;
+  neglectReviewOutputPath?: string;
   anchorTerms: string[];
   stageDefinitions: StageDefinition[];
   sources: SourceDefinition[];
   lanes: LaneDefinition[];
+}
+
+export interface SourceRef {
+  sourceLine: number;
+  eventType: string;
+  timestamp: string | null;
 }
 
 export interface NormalizedTurn {
@@ -93,6 +107,7 @@ export interface NormalizedTurn {
   stageId: string | null;
   sourcePath: string;
   sourceLine: number;
+  sourceRefs: SourceRef[];
   metadata: Record<string, string>;
 }
 
@@ -112,6 +127,7 @@ export interface SessionManifestEntry {
 export interface CandidateHit {
   id: string;
   laneId: string;
+  fingerprint: string;
   provider: Provider;
   sessionId: string;
   turnId: string;
@@ -125,6 +141,8 @@ export interface CandidateHit {
   matchedAnchors: string[];
   textPreview: string;
   whyMatched: string[];
+  noiseReasons: string[];
+  sourceRefs: SourceRef[];
 }
 
 export interface ExcerptWindowTurn {
@@ -158,13 +176,50 @@ export interface CoverageReport {
   candidateHits: number;
   selectedWindows: number;
   selectedMoments: number;
+  emittedMoments: number;
   totalWindowTokens: number;
+  trimmedWindowCount: number;
+  candidateCoverage: CoverageSlice;
+  selectedCoverage: CoverageSlice;
+  emittedCoverage: CoverageSlice;
+  structuralBlindSpots: string[];
+}
+
+export interface CoverageSlice {
+  totalHits: number;
   countsByFamily: Record<string, number>;
   countsByProvider: Record<string, number>;
   countsByActor: Record<string, number>;
+  countsByStage: Record<string, number>;
   missingFamilies: string[];
   missingProviders: string[];
-  blindSpots: string[];
+  missingActors: string[];
+  missingStages: string[];
+}
+
+export interface NeglectFinding {
+  code: string;
+  severity: "info" | "warning";
+  message: string;
+}
+
+export interface DuplicateFingerprintGroup {
+  fingerprintPreview: string;
+  count: number;
+}
+
+export interface NeglectReport {
+  configId: string;
+  laneId: string;
+  generatedAt: string;
+  totalWindowTokens: number;
+  duplicateFingerprintGroups: DuplicateFingerprintGroup[];
+  emittedSessionCounts: Record<string, number>;
+  emittedPrimaryFamilyCounts: Record<string, number>;
+  findings: NeglectFinding[];
+  candidateCoverage: CoverageSlice;
+  selectedCoverage: CoverageSlice;
+  emittedCoverage: CoverageSlice;
 }
 
 export interface QueryFamily {
@@ -188,4 +243,8 @@ export interface QueryManifest {
   sourcePaths: string[];
   totalWindows: number;
   totalWindowTokens: number;
+  notificationPolicy?: NotificationPolicy;
+  includeSubagentLaunchPrompts?: boolean;
+  maxSelectedHitsPerFingerprint?: number;
+  maxSelectedHitsPerSession?: number;
 }

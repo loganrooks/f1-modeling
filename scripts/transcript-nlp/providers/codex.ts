@@ -15,6 +15,69 @@ import type {
   StageDefinition,
 } from "../types";
 
+function mergeSourceRefs(turns: NormalizedTurn[]): NormalizedTurn["sourceRefs"] {
+  const merged = new Map<string, NormalizedTurn["sourceRefs"][number]>();
+  for (const turn of turns) {
+    for (const ref of turn.sourceRefs) {
+      merged.set(`${ref.sourceLine}:${ref.eventType}`, ref);
+    }
+  }
+  return [...merged.values()].sort((left, right) => left.sourceLine - right.sourceLine);
+}
+
+function isResponseItem(turn: NormalizedTurn): boolean {
+  return turn.eventType.startsWith("response_item:");
+}
+
+function isEventMessage(turn: NormalizedTurn): boolean {
+  return turn.eventType.startsWith("event_msg:");
+}
+
+function areDuplicateCodexTurns(left: NormalizedTurn, right: NormalizedTurn): boolean {
+  if (left.sessionId !== right.sessionId || left.actor !== right.actor || left.text !== right.text) {
+    return false;
+  }
+  const crossKind =
+    (isResponseItem(left) && isEventMessage(right)) ||
+    (isEventMessage(left) && isResponseItem(right));
+  if (!crossKind) {
+    return false;
+  }
+  if (left.timestamp && right.timestamp && left.timestamp === right.timestamp) {
+    return true;
+  }
+  return Math.abs(left.sourceLine - right.sourceLine) <= 2;
+}
+
+function mergeDuplicateCodexTurns(left: NormalizedTurn, right: NormalizedTurn): NormalizedTurn {
+  const canonical =
+    isResponseItem(left) && !isResponseItem(right)
+      ? left
+      : isResponseItem(right) && !isResponseItem(left)
+      ? right
+      : left;
+  const secondary = canonical === left ? right : left;
+  return {
+    ...canonical,
+    sourceRefs: mergeSourceRefs([canonical, secondary]),
+    noise: canonical.noise && secondary.noise,
+    noiseReasons: [...new Set([...canonical.noiseReasons, ...secondary.noiseReasons])],
+  };
+}
+
+function dedupeCodexTurns(turns: NormalizedTurn[]): NormalizedTurn[] {
+  const deduped: NormalizedTurn[] = [];
+  for (const turn of turns) {
+    const prior = deduped[deduped.length - 1];
+    if (prior && areDuplicateCodexTurns(prior, turn)) {
+      deduped[deduped.length - 1] = mergeDuplicateCodexTurns(prior, turn);
+      continue;
+    }
+    deduped.push(turn);
+  }
+  return deduped;
+}
+
 function extractCodexText(content: unknown): string {
   if (typeof content === "string") {
     return content;
@@ -85,13 +148,10 @@ export async function indexCodexSessions(
   for (const path of files) {
     const stat = await import("node:fs/promises").then((fs) => fs.stat(path));
     const sessionId = fileStem(path);
-    let indexedTurns = 0;
-    let usableTurns = 0;
-    let firstTimestamp: string | null = null;
-    let lastTimestamp: string | null = null;
     let currentModel: string | null = null;
     let sessionAgentNickname: string | null = null;
     let sessionIncluded = targetWorkspace === null;
+    const sessionTurns: NormalizedTurn[] = [];
 
     for await (const row of readJsonLines(path)) {
       const entryType = typeof row.value.type === "string" ? row.value.type : "unknown";
@@ -223,20 +283,21 @@ export async function indexCodexSessions(
       if (!built) {
         continue;
       }
-      indexedTurns += 1;
-      if (!built.noise) {
-        usableTurns += 1;
-      }
-      if (built.timestamp) {
-        firstTimestamp ??= built.timestamp;
-        lastTimestamp = built.timestamp;
-      }
-      turns.push(built);
+      sessionTurns.push(built);
     }
 
     if (!sessionIncluded) {
       continue;
     }
+
+    const dedupedTurns = dedupeCodexTurns(sessionTurns);
+    const indexedTurns = dedupedTurns.length;
+    const usableTurns = dedupedTurns.filter((turn) => !turn.noise).length;
+    const firstTimestamp = dedupedTurns.find((turn) => turn.timestamp)?.timestamp ?? null;
+    const lastTimestamp = [...dedupedTurns]
+      .reverse()
+      .find((turn) => turn.timestamp)?.timestamp ?? null;
+    turns.push(...dedupedTurns);
 
     manifestEntries.push({
       provider: "codex",

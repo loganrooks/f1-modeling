@@ -1,36 +1,111 @@
 {
   "configId": "vision-alignment-2026-04",
   "laneId": "cross-model-and-agent-usage",
-  "generatedAt": "2026-04-16T16:42:32.540Z",
-  "totalTurns": 10054,
-  "usableTurns": 5787,
-  "candidateHits": 1729,
+  "generatedAt": "2026-04-16T19:01:51.965Z",
+  "totalTurns": 14266,
+  "usableTurns": 6135,
+  "candidateHits": 1755,
   "selectedWindows": 9,
   "selectedMoments": 10,
-  "totalWindowTokens": 7850,
-  "countsByFamily": {
-    "positive_collaboration": 152,
-    "frustration_pushback": 23,
-    "authorization_delegation": 342,
-    "audit_protocol": 734,
-    "model_role_shift": 938,
-    "agent_usage": 542,
-    "review_gate_restructure": 339
+  "emittedMoments": 10,
+  "totalWindowTokens": 7063,
+  "trimmedWindowCount": 0,
+  "candidateCoverage": {
+    "totalHits": 1755,
+    "countsByFamily": {
+      "positive_collaboration": 131,
+      "frustration_pushback": 22,
+      "authorization_delegation": 328,
+      "audit_protocol": 778,
+      "model_role_shift": 967,
+      "review_gate_restructure": 334,
+      "agent_usage": 341
+    },
+    "countsByProvider": {
+      "codex": 782,
+      "claude": 957,
+      "initiative-log": 16
+    },
+    "countsByActor": {
+      "assistant": 892,
+      "user": 238,
+      "tool": 506,
+      "attachment": 97,
+      "log": 16,
+      "system": 6
+    },
+    "countsByStage": {
+      "debrief": 534,
+      "trigger-and-setup": 501,
+      "wave-execution-and-audit": 588,
+      "unassigned": 132
+    },
+    "missingFamilies": [],
+    "missingProviders": [],
+    "missingActors": [],
+    "missingStages": []
   },
-  "countsByProvider": {
-    "codex": 725,
-    "claude": 988,
-    "initiative-log": 16
+  "selectedCoverage": {
+    "totalHits": 10,
+    "countsByFamily": {
+      "positive_collaboration": 7,
+      "frustration_pushback": 2,
+      "authorization_delegation": 9,
+      "audit_protocol": 9,
+      "model_role_shift": 10,
+      "review_gate_restructure": 4,
+      "agent_usage": 8
+    },
+    "countsByProvider": {
+      "codex": 4,
+      "claude": 5,
+      "initiative-log": 1
+    },
+    "countsByActor": {
+      "assistant": 8,
+      "log": 1,
+      "user": 1
+    },
+    "countsByStage": {
+      "debrief": 3,
+      "trigger-and-setup": 4,
+      "wave-execution-and-audit": 3
+    },
+    "missingFamilies": [],
+    "missingProviders": [],
+    "missingActors": [],
+    "missingStages": []
   },
-  "countsByActor": {
-    "assistant": 906,
-    "tool": 528,
-    "user": 176,
-    "attachment": 97,
-    "log": 16,
-    "system": 6
+  "emittedCoverage": {
+    "totalHits": 10,
+    "countsByFamily": {
+      "positive_collaboration": 7,
+      "authorization_delegation": 9,
+      "audit_protocol": 9,
+      "review_gate_restructure": 4,
+      "model_role_shift": 10,
+      "agent_usage": 8,
+      "frustration_pushback": 2
+    },
+    "countsByProvider": {
+      "claude": 5,
+      "codex": 4,
+      "initiative-log": 1
+    },
+    "countsByActor": {
+      "assistant": 8,
+      "user": 1,
+      "log": 1
+    },
+    "countsByStage": {
+      "trigger-and-setup": 4,
+      "wave-execution-and-audit": 3,
+      "debrief": 3
+    },
+    "missingFamilies": [],
+    "missingProviders": [],
+    "missingActors": [],
+    "missingStages": []
   },
-  "missingFamilies": [],
-  "missingProviders": [],
-  "blindSpots": []
+  "structuralBlindSpots": []
 }

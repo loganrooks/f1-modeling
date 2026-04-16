@@ -1,7 +1,7 @@
 {
   "configId": "vision-alignment-2026-04",
   "laneId": "cross-model-and-agent-usage",
-  "generatedAt": "2026-04-16T16:42:32.592Z",
+  "generatedAt": "2026-04-16T19:01:52.036Z",
   "providers": [
     "claude",
     "codex",
@@ -19,15 +19,23 @@
   "sessionIds": [
     "44aad61e-1d1a-4230-9df4-02cecccedbac",
     "81c3c7eb-103e-4fe7-b5db-4a78b0183e8a",
+    "rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce",
     "rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed",
+    "rollout-2026-04-16T13-31-58-019d9759-8015-7993-99c5-d1f73123c07c",
     "wave-1A.log"
   ],
   "sourcePaths": [
     "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/44aad61e-1d1a-4230-9df4-02cecccedbac.jsonl",
     "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl",
+    "/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce.jsonl",
     "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl",
+    "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T13-31-58-019d9759-8015-7993-99c5-d1f73123c07c.jsonl",
     "/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/logs/wave-1A.log"
   ],
   "totalWindows": 9,
-  "totalWindowTokens": 7850
+  "totalWindowTokens": 7063,
+  "notificationPolicy": "downrank",
+  "includeSubagentLaunchPrompts": true,
+  "maxSelectedHitsPerFingerprint": 1,
+  "maxSelectedHitsPerSession": 4
 }

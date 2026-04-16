@@ -1,7 +1,7 @@
 {
   "configId": "vision-alignment-2026-04",
   "laneId": "codex-chat",
-  "generatedAt": "2026-04-16T16:42:32.379Z",
+  "generatedAt": "2026-04-16T19:01:51.713Z",
   "providers": [
     "codex"
   ],
@@ -16,21 +16,31 @@
     "agent_usage"
   ],
   "sessionIds": [
-    "rollout-2026-04-08T23-44-48-019d7057-b24a-78a0-8f0a-0b31eee59c19",
     "rollout-2026-04-08T23-54-43-019d7060-c5f5-7720-b55b-36d12e73fac1",
     "rollout-2026-04-11T01-29-10-019d7b03-f74e-7290-8de2-266456343bc7",
     "rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce",
+    "rollout-2026-04-11T05-06-12-019d7bca-a7be-75a3-8f73-888c6c193993",
+    "rollout-2026-04-11T14-44-02-019d7ddb-aead-73a1-bdde-b5a2c55af4a2",
     "rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed",
-    "rollout-2026-04-16T11-46-20-019d96f8-c8c9-7a42-91a7-7654618a681b"
+    "rollout-2026-04-16T13-31-58-019d9759-8015-7993-99c5-d1f73123c07c",
+    "rollout-2026-04-16T13-38-54-019d975f-d79c-77c1-b72c-66d53128d60b",
+    "rollout-2026-04-16T13-48-20-019d9768-7b1e-7082-8f2c-9ef209867fa4"
   ],
   "sourcePaths": [
-    "/home/rookslog/.codex/sessions/2026/04/08/rollout-2026-04-08T23-44-48-019d7057-b24a-78a0-8f0a-0b31eee59c19.jsonl",
     "/home/rookslog/.codex/sessions/2026/04/08/rollout-2026-04-08T23-54-43-019d7060-c5f5-7720-b55b-36d12e73fac1.jsonl",
     "/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T01-29-10-019d7b03-f74e-7290-8de2-266456343bc7.jsonl",
     "/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T04-59-49-019d7bc4-cf90-7be1-9fdc-b1281243f2ce.jsonl",
+    "/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T05-06-12-019d7bca-a7be-75a3-8f73-888c6c193993.jsonl",
+    "/home/rookslog/.codex/sessions/2026/04/11/rollout-2026-04-11T14-44-02-019d7ddb-aead-73a1-bdde-b5a2c55af4a2.jsonl",
     "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl",
-    "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T11-46-20-019d96f8-c8c9-7a42-91a7-7654618a681b.jsonl"
+    "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T13-31-58-019d9759-8015-7993-99c5-d1f73123c07c.jsonl",
+    "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T13-38-54-019d975f-d79c-77c1-b72c-66d53128d60b.jsonl",
+    "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T13-48-20-019d9768-7b1e-7082-8f2c-9ef209867fa4.jsonl"
   ],
-  "totalWindows": 11,
-  "totalWindowTokens": 9945
+  "totalWindows": 12,
+  "totalWindowTokens": 7101,
+  "notificationPolicy": "suppress",
+  "includeSubagentLaunchPrompts": false,
+  "maxSelectedHitsPerFingerprint": 1,
+  "maxSelectedHitsPerSession": 4
 }

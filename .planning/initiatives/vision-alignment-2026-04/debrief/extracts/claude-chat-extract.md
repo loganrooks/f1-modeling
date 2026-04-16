@@ -8,28 +8,38 @@
 - config: `vision-alignment-2026-04`
 - providers: `claude`
 - families: `positive_collaboration`, `frustration_pushback`, `clarification_ambiguity`, `authorization_delegation`, `audit_protocol`, `review_gate_restructure`, `model_role_shift`
-- sessions touched: 4
-- source files touched: 4
-- selected windows: 10
-- estimated input tokens: 13517
+- sessions touched: 5
+- source files touched: 5
+- selected windows: 11
+- estimated input tokens: 13053
+- notification policy: `suppress`
+- include subagent launch prompts: `no`
+
+## Coverage Summary
+
+- candidate hits: 906
+- selected moments before trimming: 12
+- emitted moments: 12
+- selected windows: 11
+- trimmed windows: 0
 
 ## Extract Table
 
 | Date or session | Moment type | Summary | Evidence | Why it matters |
 | --- | --- | --- | --- | --- |
 | 2026-04-09 | Positive Collaboration + Authorization Or Delegation | Assistant: You're right — there are **8 session JSONL files** right here for this project, plus subagent logs. My earlier search was looking in the wrong paths (`/tmp/claude-*/*.jsonl` and `… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/44aad61e-1d1a-4230-9df4-02cecccedbac.jsonl:224` | Preserves what went well rather than only collecting failure. |
-| 2026-04-09 | Positive Collaboration + Frustration Or Pushback | Assistant: The index rebuilt correctly. 11 entries total: 10 active phase 03.1 signals (the 3 archived minors are excluded, replaced by 3 new signals) plus 1 new phase 03 signal. The phase 0… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/44aad61e-1d1a-4230-9df4-02cecccedbac/subagents/agent-a3c88973aa198f8d4.jsonl:75` | Preserves what went well rather than only collecting failure. |
+| 2026-04-09 | Frustration Or Pushback + Audit Or Protocol | Assistant: Log sensor delivered. Here's the full picture: ### Log Sensor Results \| # \| Type \| Severity \| Signal \| \|---\|------\|----------\|--------\| \| 1 \| struggle \| **critical** \| Codex CLI a… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/44aad61e-1d1a-4230-9df4-02cecccedbac.jsonl:269` | Surfaces process friction, quality concerns, and failure-recovery moments. |
+| 2026-04-09 | Authorization Or Delegation + Audit Or Protocol | User: when did we do phase 4 research? I thought we were in the planning phase? or has the planning already been done. also perhaps we can launch an grounded audit using codex cli GPT 5… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:71` | Important for review-gate discipline and agent-usage analysis. |
 | 2026-04-09 | Positive Collaboration + Authorization Or Delegation | Assistant: Good questions, let me untangle the status first. **Phase 4 timeline:** The *discuss* step ran on 2026-04-08 — that produced the CONTEXT.md, DISCUSSION-LOG.md, and RESEARCH.md. Th… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:73` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | Assistant: Yes, this is the right move. 297K/1M tokens, ~20% on messages — you're not critically loaded yet, but we've been in this session for a while and context quality degrades before th… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:355` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | Assistant: Done. `ORCHESTRATOR-HANDOFF.md` is in place. ## How to Initialize Codex When you're ready, start a Codex session on dionysus with xhigh reasoning and pipe the handoff to it: ```ba… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:364` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | Assistant: You're right — you don't need `/gsdr:pause-work`. `pause-work` is for the case where you're mid-phase with in-memory context that needs to be preserved for a future Claude session… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:369` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Positive Collaboration + Authorization Or Delegation | Assistant: Good idea — that's exactly the right structural use of the cross-model audit pattern. Let me write a self-contained decision document that a fresh Codex GPT-5.4 xhigh session can … | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:423` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Authorization Or Delegation + Audit Or Protocol | Assistant: Sorry — let me be direct about what I did. **Two Codex calls launched in background during this session segment:** 1. **Round 1.5** — performance envelopes research (Codex GPT-5.4… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:579` | Important for review-gate discipline and agent-usage analysis. |
 | 2026-04-11 | Authorization Or Delegation + Audit Or Protocol | Assistant: All the switchover work is committed. Let me give you the complete status report. ## Switchover Complete **5 new commits** establishing the Claude→Codex primary orchestration shif… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:819` | Important for review-gate discipline and agent-usage analysis. |
 | 2026-04-11 | Positive Collaboration + Clarification Or Ambiguity | Assistant: The advisory section is committed. Now let me handle the uncommitted D2 outputs and offer advisory review as you requested. ## Current State **Uncommitted on disk from Codex's run… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl:857` | Preserves what went well rather than only collecting failure. |
-| 2026-04-11 | Positive Collaboration + Audit Or Protocol | Assistant: Full D4 read complete. Here's the review and Decision Record drafts. # Advisory review: D4 long-horizon roadmap synthesis ## Bottom line **Strong synthesis work. No blocking findi… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/a3d3fad3-d23b-4e86-9479-eba4424080e8.jsonl:466` | Preserves what went well rather than only collecting failure. |
+| 2026-04-11 | Authorization Or Delegation + Audit Or Protocol | Assistant: Edit landed cleanly. File is now 694 lines (was 680 — added 14 lines of net content). All seven Decision Record entries are filled, header stripped of "(to be filled by user)" to … | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/a3d3fad3-d23b-4e86-9479-eba4424080e8.jsonl:126` | Important for review-gate discipline and agent-usage analysis. |
+| 2026-04-11 | Audit Or Protocol + Review Gate Or Restructure | Attachment: edited_text_file /home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/codex-call-2B-ii-claude-review.md 165 - D3 prompt under review: `.pla… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/a3d3fad3-d23b-4e86-9479-eba4424080e8.jsonl:231` | Captures auditability and procedural integrity. |
+| 2026-04-11 | Positive Collaboration + Clarification Or Ambiguity | Assistant: You're right — in-place correction is cleaner than revert. I framed revert as an option out of procedural conservatism, but since the audit findings are additive (not corrective o… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/a3d3fad3-d23b-4e86-9479-eba4424080e8.jsonl:539` | Preserves what went well rather than only collecting failure. |
 | 2026-04-12 | Authorization Or Delegation + Audit Or Protocol | Assistant: **Correction:** RACE-02 and RACE-03 exist at `REQUIREMENTS.md:81` and `:83`, both mapped to Phase 3.1 (already complete). Stage 3A's reference to them as "Direct continuity with e… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/a3d3fad3-d23b-4e86-9479-eba4424080e8.jsonl:616` | Important for review-gate discipline and agent-usage analysis. |
+| 2026-04-12 | Audit Or Protocol + Review Gate Or Restructure | Tool: [tool_result] 1 # Audit Request — Stage 3 Synthesis Application Review 2 3 **Requested by:** Codex primary orchestrator 4 **Request date:** 2026-04-11 5 **Requested model:** Claud… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/f31b45c6-f76a-41c7-a63e-a8b888cca4ae.jsonl:15` | Captures auditability and procedural integrity. |
+| 2026-04-12 | Audit Or Protocol + Review Gate Or Restructure | Tool: [tool_result] 1 # Audit Response — Stage 3 Synthesis Application Review 2 3 **Auditor:** Claude Opus 4.6 (1M) 4 **Response date:** 2026-04-11 5 **Request:** `2026-04-11-stage-3-ap… | `/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/f31b45c6-f76a-41c7-a63e-a8b888cca4ae/subagents/agent-a424118ece512e7c7.jsonl:22` | Captures auditability and procedural integrity. |
 
-## Blind Spots
+## Neglect Notes
 
-- No major blind spots were detected by the deterministic coverage checks.
+- Candidate pool still contains 17 duplicate fingerprint groups.

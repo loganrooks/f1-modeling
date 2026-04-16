@@ -2,6 +2,19 @@ import type { Actor, NormalizedTurn, StageDefinition } from "./types";
 
 const INDEX_TEXT_LIMIT = 2_000;
 const PREVIEW_TEXT_LIMIT = 180;
+const HARD_NOISE_REASONS = new Set([
+  "empty-text",
+  "developer-instructions",
+  "file-history-snapshot",
+  "local-command-caveat",
+  "command-shell-noise",
+  "local-command-stdout",
+  "environment-context",
+  "agents-instructions",
+  "permissions-instructions",
+  "task-notification",
+  "token-count",
+]);
 
 export function approxTokensForText(text: string): number {
   return Math.ceil(text.length / 4);
@@ -92,7 +105,7 @@ export function inferStageId(
 }
 
 export function buildTurn(
-  turn: Omit<NormalizedTurn, "textLength" | "noise" | "noiseReasons">,
+  turn: Omit<NormalizedTurn, "textLength" | "noise" | "noiseReasons" | "sourceRefs">,
 ): NormalizedTurn {
   const cleaned = clipForIndex(collapseWhitespace(turn.text));
   const noiseReasons = detectNoise(turn.actor, turn.eventType, cleaned);
@@ -107,7 +120,14 @@ export function buildTurn(
     ...turn,
     text: cleaned,
     textLength: cleaned.length,
-    noise: noiseReasons.length > 0,
+    noise: noiseReasons.some((reason) => HARD_NOISE_REASONS.has(reason)),
     noiseReasons,
+    sourceRefs: [
+      {
+        sourceLine: turn.sourceLine,
+        eventType: turn.eventType,
+        timestamp: turn.timestamp,
+      },
+    ],
   };
 }

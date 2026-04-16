@@ -27,3 +27,8 @@ venv/
 *.pyc
 *.pyo
 *.pyd
+
+# Transcript NLP reproducible intermediates
+.planning/initiatives/vision-alignment-2026-04/debrief/artifacts/transcript-nlp/normalized/
+.planning/initiatives/vision-alignment-2026-04/debrief/artifacts/transcript-nlp/lanes/*/candidate-hits.jsonl
+.planning/initiatives/vision-alignment-2026-04/debrief/artifacts/transcript-nlp/lanes/*/excerpt-windows.jsonl
