@@ -21,19 +21,31 @@ The debrief should evaluate four things separately:
 
 Read in this order unless a specific question requires a narrower slice:
 
-1. `../README.md`
-2. `../SPEC-INDEX.md`
-3. `../APPLICATION-LEDGER.md`
-4. `../SUMMARY.md`
-5. `../audit/2026-04-11-d4-acceptance-response.md`
-6. `../audit/2026-04-11-stage-3-application-response.md`
-7. `../reviews/review-wave-2-structure-decisions.md`
-8. `../reports/report-wave-1-orchestrator-execution.md`
-9. `../handoffs/`
-10. `../specs/`
-11. `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`
+1. `README.md`
+2. `SPEC-INDEX.md`
+3. `../README.md`
+4. `../SPEC-INDEX.md`
+5. `../APPLICATION-LEDGER.md`
+6. `../SUMMARY.md`
+7. `../audit/2026-04-11-d4-acceptance-response.md`
+8. `../audit/2026-04-11-stage-3-application-response.md`
+9. `../reviews/review-wave-2-structure-decisions.md`
+10. `../reports/report-wave-1-orchestrator-execution.md`
+11. `../handoffs/`
+12. `../specs/`
+13. `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`
 
 Then read specific research, deliberation, synthesis, or archive files only when a finding needs direct evidence.
+
+## Traceability Model
+
+The debrief should preserve the same discipline the initiative used:
+
+- every debrief output should cite the debrief spec that produced it
+- every debrief spec should map back to the original initiative plan elements it is evaluating
+- every finding should cite specific source files, and where relevant, the exact original wave, review gate, or application step involved
+
+This is why the debrief has its own `SPEC-INDEX.md` and `specs/` directory rather than only freeform notes.
 
 ## Work Sequence
 
@@ -49,7 +61,8 @@ Produce a short factual sequence:
 - application to live files
 
 Output target:
-- a dated timeline section in `DEBRIEF-SUMMARY.md`
+- `TIMELINE.md`
+- evidence coverage updates in `EVIDENCE-INDEX.md` when gaps are found
 
 ### Phase 2: Evaluate what went well
 
@@ -62,6 +75,10 @@ Look for:
 
 Rule:
 - every positive claim needs a file or commit reference
+
+Output target:
+- substantive-win entries in `FINDINGS.md`
+- reusable entries in `PATTERNS-TO-KEEP.md`
 
 ### Phase 3: Evaluate what went wrong or almost went wrong
 
@@ -78,6 +95,9 @@ Important distinction:
 - "annoying" is not enough
 - the question is whether the issue distorted judgment, slowed progress materially, or made the record harder to trust
 
+Output target:
+- process, auditability, and near-failure entries in `FINDINGS.md`
+
 ### Phase 4: Convert findings into carry-forward actions
 
 Every finding must end in one destination:
@@ -91,6 +111,10 @@ Every finding must end in one destination:
 
 Record each accepted item in `CARRY-FORWARD-LEDGER.md`.
 
+Output target:
+- `CHANGES-BEFORE-NEXT-INITIATIVE.md`
+- accepted items in `CARRY-FORWARD-LEDGER.md`
+
 ### Phase 5: Close with disposition
 
 Produce `DEBRIEF-SUMMARY.md` with:
@@ -100,6 +124,21 @@ Produce `DEBRIEF-SUMMARY.md` with:
 - the top 3-5 process failures or near-failures
 - what must change before the next initiative of this kind
 - what was intentionally left unchanged
+
+## Delegation Model
+
+Recommended bounded work split:
+
+1. `specs/spec-debrief-A-timeline-and-evidence-reconstruction.md`
+2. `specs/spec-debrief-B-process-and-auditability-review.md`
+3. `specs/spec-debrief-C-substantive-value-and-patterns-to-keep.md`
+4. `specs/spec-debrief-D-carry-forward-synthesis-and-next-initiative-changes.md`
+
+Guidance:
+
+- Specs A, B, and C are good agent-sized evidence-gathering tasks.
+- Spec D is synthesis and disposition work; keep final judgment local so one owner resolves contradictions and writes the final debrief.
+- If delegation is used, agent outputs should be treated as evidence drafts until reviewed against the source files.
 
 ## Core Questions
 
@@ -135,17 +174,23 @@ Expected files in this directory:
 
 - `README.md`
 - `DEBRIEF-PLAN.md`
+- `SPEC-INDEX.md`
 - `EVIDENCE-INDEX.md`
 - `CARRY-FORWARD-LEDGER.md`
+- `TIMELINE.md`
+- `FINDINGS.md`
+- `PATTERNS-TO-KEEP.md`
+- `CHANGES-BEFORE-NEXT-INITIATIVE.md`
 - `DEBRIEF-SUMMARY.md` once the debrief is run
 
 ## Completion Criteria
 
 The debrief is complete when:
 
-1. `DEBRIEF-SUMMARY.md` exists
-2. all material findings have dispositions in `CARRY-FORWARD-LEDGER.md`
-3. any accepted immediate follow-ups have been created or linked
-4. any rejected findings have reasons recorded
+1. `TIMELINE.md`, `FINDINGS.md`, `PATTERNS-TO-KEEP.md`, and `CHANGES-BEFORE-NEXT-INITIATIVE.md` are populated or intentionally marked not applicable
+2. `DEBRIEF-SUMMARY.md` exists
+3. all material findings have dispositions in `CARRY-FORWARD-LEDGER.md`
+4. any accepted immediate follow-ups have been created or linked
+5. any rejected findings have reasons recorded
 
 Until then, the debrief is in progress, not done.

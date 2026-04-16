@@ -13,6 +13,7 @@ Its purpose is not to restate the initiative. Its purpose is to answer:
 ## Start Here
 
 - `DEBRIEF-PLAN.md` — the execution plan for running the debrief
+- `SPEC-INDEX.md` — traceable map from debrief specs to original initiative waves, gates, and outputs
 - `EVIDENCE-INDEX.md` — the curated evidence set for the debrief
 - `CARRY-FORWARD-LEDGER.md` — where accepted lessons and actions should be recorded
 
@@ -20,9 +21,15 @@ Its purpose is not to restate the initiative. Its purpose is to answer:
 
 The debrief should eventually produce:
 
+- `TIMELINE.md` — dated factual reconstruction of what happened
+- `FINDINGS.md` — evidence-backed wins, failures, near-failures, and overhead
+- `PATTERNS-TO-KEEP.md` — good practices worth standardizing
+- `CHANGES-BEFORE-NEXT-INITIATIVE.md` — the short operational change list for the next strategic initiative
 - `DEBRIEF-SUMMARY.md` — concise retrospective outcome
 - updates to `CARRY-FORWARD-LEDGER.md`
 - new or updated signals / guardrails / planning docs when findings warrant them
+
+The bounded task contracts for producing those outputs live in `specs/`.
 
 ## Ground Rule
 
