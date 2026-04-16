@@ -223,7 +223,8 @@ Deliverables:
 Current staged execution:
 - Wave `3A`: synthesize the repo-local harness/bootstrap and steering-chain patch plan
 - Review Gate `3`: decide whether the patch plan is narrow enough, reproducible enough, and backward-compatible enough to apply
-- Wave `3B`: apply the approved repo-local harness/bootstrap and steering-chain patch
+- Wave `3B`: apply the approved repo-local overlay/bootstrap and core steering-chain patch (`discuss`, `research`, `plan`, `context`, `phase-prompt`)
+- later follow-on wave: routing digest patch (`progress`, `resume`, `state`) if still warranted after `3B` review
 
 Review gate questions:
 - Is this really repo-local and reproducible?

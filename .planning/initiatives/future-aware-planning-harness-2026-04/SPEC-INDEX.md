@@ -13,6 +13,7 @@ The files in `specs/` are the initiative's canonical executable task contracts. 
 | `specs/spec-wave-2B-apply-doctrine-and-governance-package.md` | Apply the reviewed doctrine/governance package to live repo files | live doctrine/governance files plus application summary | Proposed |
 | `specs/spec-wave-3A-synthesis-harness-patch-plan.md` | Design the repo-local harness/bootstrap and steering-chain patch plan | repo-local patch plan, bootstrap strategy, patch-surface map, compatibility strategy | Proposed |
 | `specs/spec-wave-3-review-gate-harness-patch-decisions.md` | Human/orchestrator review gate after Wave 3A | review decisions on patch scope, overlay strategy, compatibility, and proceed/narrow/split outcome | Proposed |
+| `specs/spec-wave-3B-apply-core-harness-patch.md` | Apply the narrowed repo-local overlay/bootstrap and core steering-chain patch | tracked overlay, bootstrap/verify scripts, core steering-chain patch, application summary | Proposed |
 
 ## Current expectation
 
