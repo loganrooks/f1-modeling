@@ -17,6 +17,7 @@ This is **not** a phase. It is a record of research, deliberation, synthesis, an
 - `APPLICATION-LEDGER.md` — what from the initiative was actually applied to the repo, and in which commits
 - `SUMMARY.md` — the Stage 3 synthesis closeout snapshot
 - `audit/2026-04-11-stage-3-application-response.md` — the formal application-readiness audit
+- `debrief/README.md` — the retrospective workspace for the post-initiative debrief
 
 ## Current Repo Consequence
 
@@ -41,6 +42,7 @@ The next live project action is **Phase 3.2 context gathering and planning**, no
 - `synthesis/` — Stage 3A / 3B outputs
 - `reviews/` — advisory reviews and cross-model structure review artifacts
 - `audit/` — formal audit request/response trail
+- `debrief/` — post-initiative retrospective planning, evidence, and carry-forward tracking
 - `handoffs/` — orchestrator and fallback-role handoffs
 - `reports/` — execution/process reports
 - `logs/` — raw execution logs
