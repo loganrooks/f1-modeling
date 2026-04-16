@@ -220,6 +220,11 @@ Deliverables:
 - canonical-ref propagation mechanism
 - optional research-disposition follow-on only if harmonized with GSDR `Genuine Gaps` and spike routing
 
+Current staged execution:
+- Wave `3A`: synthesize the repo-local harness/bootstrap and steering-chain patch plan
+- Review Gate `3`: decide whether the patch plan is narrow enough, reproducible enough, and backward-compatible enough to apply
+- Wave `3B`: apply the approved repo-local harness/bootstrap and steering-chain patch
+
 Review gate questions:
 - Is this really repo-local and reproducible?
 - Is the patch changing active behavior, not just template prose?
