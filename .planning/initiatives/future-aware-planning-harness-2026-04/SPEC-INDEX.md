@@ -18,15 +18,15 @@ The files in `specs/` are the initiative's canonical executable task contracts. 
 | `specs/spec-wave-4A-synthesis-gsdr-subsystem-adaptation-policy.md` | Synthesize the Stage 4 policy matrix for remaining GSDR-specific subsystem lanes | subsystem adaptation policy, lane classifications, candidate 4B patch surfaces | Completed |
 | `specs/spec-wave-4-review-gate-gsdr-subsystem-adaptation-decisions.md` | Human/orchestrator review gate after Wave 4A | review decisions on doctrine-only versus application-worthy subsystem lanes | Completed |
 | `specs/spec-wave-4B-apply-formal-gate-preflight-package.md` | Apply the narrow repo-level formal audit and review-gate preflight package | repo-level audit/review workspace docs, templates, initiative-local pointers, application summary | Completed |
-| `specs/spec-wave-5A-synthesis-enforcement-reassessment.md` | Reassess what enforcement or launch-truth gaps still remain after the landed Stage 3 and Stage 4 work | residual enforcement gap map; candidate 5B subset or close-stage recommendation | Proposed |
-| `specs/spec-wave-5-review-gate-enforcement-decisions.md` | Human/orchestrator review gate after Wave 5A | review decision on whether any Stage 5 application wave is still justified | Proposed |
+| `specs/spec-wave-5A-synthesis-enforcement-reassessment.md` | Reassess what enforcement or launch-truth gaps still remain after the landed Stage 3 and Stage 4 work | residual enforcement gap map; candidate 5B subset or close-stage recommendation | Completed |
+| `specs/spec-wave-5-review-gate-enforcement-decisions.md` | Human/orchestrator review gate after Wave 5A | review decision on whether any Stage 5 application wave is still justified | Completed |
 
 ## Current expectation
 
-This initiative has completed Stages `1` through `4` at the repo-tracked level.
+This initiative has completed Stages `1` through `5` at the repo-tracked level.
 
 The current useful execution step is:
 
-1. run the Stage `5A` reassessment so the initiative can decide whether more enforcement is actually worth the cost before the `3.2` proving ground
-2. keep `verify/validate`, signal automation, and global skill patching out of scope unless that reassessment proves them necessary
-3. move toward the `3.2` proving-ground application once the remaining enforcement question is honestly resolved
+1. run the actual `3.2` discuss/plan flow as the Stage `6` proving ground for the landed harness
+2. keep `verify/validate`, signal automation, and global skill patching out of scope unless the proving ground produces concrete failure evidence
+3. use the proving ground to decide whether any later harness follow-on is genuinely needed

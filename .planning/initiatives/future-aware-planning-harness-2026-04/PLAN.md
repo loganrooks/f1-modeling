@@ -1,6 +1,6 @@
 # Master Plan: Future-Aware Planning Harness Initiative
 
-**Status:** Active post-Stage 4
+**Status:** Ready for Stage 6 proving ground
 **Date:** 2026-04-16
 **Target runtime:** Codex GPT-5.4
 
@@ -280,6 +280,11 @@ Current staged execution:
 - Wave `5A`: synthesize the remaining enforcement and launch-truth gap after the landed routing and formal-gate work
 - Review Gate `5`: decide whether Stage `5` needs any application wave at all
 - Wave `5B`: reserved only if Gate `5` identifies one narrow remaining enforcement patch
+
+Gate `5` outcome:
+- `5A` accepted
+- no `5B` authorized by default
+- the initiative should use the real `3.2` planning flow as its first calibration point
 
 Review gate questions:
 - Are failures specific and actionable rather than noisy?
