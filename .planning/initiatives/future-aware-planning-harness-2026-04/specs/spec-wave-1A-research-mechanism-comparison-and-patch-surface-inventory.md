@@ -25,17 +25,34 @@ Then read these `f1-modeling` canon files:
 9. `AGENTS.md`
 10. `CLAUDE.md`
 
+Then inspect the **current active GSDR runtime surfaces** this repo is actually sitting on top of:
+
+11. `$HOME/.codex/get-shit-done-reflect/templates/context.md`
+12. `$HOME/.codex/get-shit-done-reflect/templates/deliberation.md`
+13. `$HOME/.codex/get-shit-done-reflect/templates/research.md`
+14. `$HOME/.codex/get-shit-done-reflect/templates/state.md`
+15. `$HOME/.codex/get-shit-done-reflect/workflows/discuss-phase.md`
+16. `$HOME/.codex/get-shit-done-reflect/workflows/plan-phase.md`
+17. `$HOME/.codex/get-shit-done-reflect/workflows/research-phase.md`
+18. `$HOME/.codex/get-shit-done-reflect/workflows/progress.md`
+19. `$HOME/.codex/get-shit-done-reflect/workflows/signal.md`
+20. `$HOME/.codex/get-shit-done-reflect/workflows/reflect.md`
+21. `$HOME/.codex/get-shit-done-reflect/workflows/resume-project.md`
+22. `$HOME/.codex/get-shit-done-reflect/workflows/verify-phase.md`
+23. `$HOME/.codex/get-shit-done-reflect/workflows/validate-phase.md`
+
 Then read these `prix-guesser` comparison files:
 
-11. `/home/rookslog/workspace/projects/prix-guesser/AGENTS.md`
-12. `/home/rookslog/workspace/projects/prix-guesser/WORKFLOW.md`
-13. `/home/rookslog/workspace/projects/prix-guesser/.planning/LONG-ARC.md`
-14. `/home/rookslog/workspace/projects/prix-guesser/.planning/deliberations/2026-04-10-future-awareness-harness-patch.md`
-15. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/get-shit-done/templates/context.md`
-16. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/get-shit-done/workflows/discuss-phase.md`
-17. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/get-shit-done/workflows/plan-phase.md`
-18. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/agents/gsd-planner.toml`
-19. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/agents/gsd-plan-checker.toml`
+24. `/home/rookslog/workspace/projects/prix-guesser/AGENTS.md`
+25. `/home/rookslog/workspace/projects/prix-guesser/WORKFLOW.md`
+26. `/home/rookslog/workspace/projects/prix-guesser/.planning/LONG-ARC.md`
+27. `/home/rookslog/workspace/projects/prix-guesser/.planning/deliberations/2026-04-10-future-awareness-harness-patch.md`
+28. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/get-shit-done/templates/context.md`
+29. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/get-shit-done/workflows/discuss-phase.md`
+30. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/get-shit-done/workflows/plan-phase.md`
+31. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/get-shit-done/workflows/research-phase.md`
+32. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/agents/gsd-planner.toml`
+33. `/home/rookslog/workspace/projects/prix-guesser/tooling/portable-gsd/overlay/agents/gsd-plan-checker.toml`
 
 ---
 
@@ -44,6 +61,13 @@ Then read these `prix-guesser` comparison files:
 Which future-aware planning mechanisms in `prix-guesser` are actual behavioral levers, and what are the concrete patch surfaces in `f1-modeling` if we want analogous behavior here without pretending that prose-only guidance is enough?
 
 This is not a product-doctrine comparison. This is a planning-harness mechanism audit.
+
+Because `f1-modeling` runs on top of **GSD Reflect**, not plain GSD, the audit must distinguish carefully between:
+
+- doctrine-only improvements
+- Codex-visible repo-local guidance
+- actual home-level GSDR behavior surfaces
+- repo-local patch surfaces that could override or adapt that behavior
 
 ---
 
@@ -62,24 +86,38 @@ Identify the concrete mechanisms in `prix-guesser` that matter most, including:
 - research disposition handling
 - repo-local bootstrap / overlay behavior that makes the above durable
 
-### Task A2 — Patch-surface mapping in `f1-modeling`
+### Task A2 — Current-surface mapping in `f1-modeling`
 
-For each mechanism above, identify the nearest active surface in `f1-modeling`, such as:
+For each mechanism above, identify the nearest active surface in `f1-modeling`, including where relevant:
 
 - repo-local docs that Codex already reads
-- phase artifact templates or conventions
-- GSDR workflows or prompts
+- current artifact conventions in `.planning/`
+- home-level GSDR workflows/templates/prompts that currently govern behavior
 - repo-local scripts/config/bootstrap surfaces
-- planning verification/checker surfaces
-
-Distinguish clearly between:
-
-- documentary surfaces
-- prompt-only surfaces
-- actual workflow behavior surfaces
 - validation / enforcement surfaces
 
-### Task A3 — Borrowability judgment
+For each identified surface, classify it as one of:
+
+- documentary surface
+- prompt-only surface
+- active workflow behavior surface
+- validation / enforcement surface
+- missing surface
+
+### Task A3 — Patch-surface inventory
+
+Name the real patch target in `f1-modeling` for each mechanism.
+
+The answer must not stop at “update docs.” For each mechanism, say whether the nearest meaningful patch target is:
+
+- repo-local doctrine/governance file
+- repo-local template or artifact convention
+- home-level GSDR workflow/template that would need local shadowing or adaptation
+- repo-local bootstrap/install/overlay surface
+- checker/verification surface
+- no viable target yet
+
+### Task A4 — Borrowability judgment
 
 For each mechanism, classify it as one of:
 
@@ -89,6 +127,12 @@ For each mechanism, classify it as one of:
 - `reject`
 
 and explain why.
+
+You must explicitly distinguish:
+
+- mechanisms that are behavior-changing enough to matter now
+- doctrine patterns that are useful but not sufficient on their own
+- mechanisms that look portable in plain GSD but become misleading on GSDR
 
 ---
 
@@ -104,12 +148,25 @@ The file must include:
 2. Executive Summary
 3. Mechanisms extracted from `prix-guesser`
 4. Current `f1-modeling` surfaces
-5. Mechanism-by-mechanism mapping table
-6. Real patch surfaces in `f1-modeling`
-7. `borrow now / adapt now / borrow later / reject` decisions
-8. Risks of superficial adoption
-9. Unresolved questions
-10. References with concrete file paths
+5. Current home-level GSDR surfaces that materially matter
+6. Behavior-changing vs doctrine-only classification
+7. Mechanism-by-mechanism mapping table
+8. Real patch surfaces in `f1-modeling`
+9. GSDR-specific consequence of adopting each mechanism
+10. `borrow now / adapt now / borrow later / reject` decisions
+11. Risks of superficial adoption
+12. Unresolved questions
+13. References with concrete file paths
+
+The mapping table must include, at minimum, these columns:
+
+- mechanism
+- implemented where in `prix-guesser`
+- nearest current surface in `f1-modeling`
+- nearest current surface in active GSDR runtime
+- patch target here
+- classification (`behavior-changing` / `doctrine-only` / `mixed`)
+- recommendation
 
 ## Completion signal
 
