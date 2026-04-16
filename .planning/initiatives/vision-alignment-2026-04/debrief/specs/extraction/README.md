@@ -1,18 +1,31 @@
 # Extraction Specs
 
-These specs are for transcript and interaction evidence extraction only. They are intentionally separate from the higher-level debrief specs because they should optimize for:
+These specs are lane-level prompts for transcript and interaction evidence extraction only. They remain useful because they optimize for:
 
 - cheap model usage
 - deterministic prefiltering before agent reading
 - compact output
 - high recall without transcript rewrites
 
+Canonical transcript-processing rules now live in `../transcript/`.
+
+That layer owns:
+
+- transcript substrate and indexing rules
+- lane ids and artifact bundle shape
+- sequencing between extraction and residual miss-audit
+- final authority when transcript-processing rules conflict
+
+Use these extraction prompts as subordinate lane guidance, not as the canonical source of transcript doctrine.
+
 ## Recommended Execution Order
 
-1. `spec-extract-claude-chat-evidence.md`
-2. `spec-extract-codex-chat-evidence.md`
-3. `spec-extract-cross-model-and-agent-usage.md`
-4. `../spec-debrief-F-interaction-review.md`
+1. `../transcript/spec-transcript-prep-and-index.md`
+2. `../transcript/spec-transcript-extract-claude.md`
+3. `../transcript/spec-transcript-extract-codex.md`
+4. `../transcript/spec-transcript-extract-cross-model.md`
+5. `../transcript/spec-transcript-residual-miss-audit.md`
+6. `../spec-debrief-F-interaction-review.md`
 
 ## Alternatives Judged
 
