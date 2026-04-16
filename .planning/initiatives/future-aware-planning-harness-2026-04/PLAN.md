@@ -1,6 +1,6 @@
 # Master Plan: Future-Aware Planning Harness Initiative
 
-**Status:** Active through Stage 4 shaping
+**Status:** Active through Stage 4 execution
 **Date:** 2026-04-16
 **Target runtime:** Codex GPT-5.4
 
@@ -248,7 +248,13 @@ Deliverables:
 Current staged execution:
 - Wave `4A`: synthesize a single subsystem-adaptation policy matrix across deliberations/decision anchors, audits/cross-model review, signals/reflection, and initiative/debrief carry-forward
 - Review Gate `4`: decide which Stage 4 lanes are application-worthy now versus doctrine-only or later
-- Wave `4B`: reserved for the narrow accepted application subset after Gate `4`
+- Wave `4B`: apply the narrow accepted formal-gate preflight package after Gate `4`
+
+Gate `4` outcome:
+- `4A` accepted
+- only the formal audit and review-gate lane remains application-worthy now
+- `4B` should stay repo-tracked and workspace-facing rather than patching the home-level `gsdr-audit` skill
+- deliberations/anchors, signals/reflection, and initiative/debrief remain governance-only at this stage
 
 Review gate questions:
 - Which extra subsystems genuinely need enforcement versus just doctrine?

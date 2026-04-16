@@ -15,15 +15,16 @@ The files in `specs/` are the initiative's canonical executable task contracts. 
 | `specs/spec-wave-3-review-gate-harness-patch-decisions.md` | Human/orchestrator review gate after Wave 3A | review decisions on patch scope, overlay strategy, compatibility, and proceed/narrow/split outcome | Completed |
 | `specs/spec-wave-3B-apply-core-harness-patch.md` | Apply the narrowed repo-local overlay/bootstrap and core steering-chain patch | tracked overlay, bootstrap/verify scripts, core steering-chain patch, application summary | Completed |
 | `specs/spec-wave-3C-apply-routing-digest-patch.md` | Apply the routing-focused overlay extension and live state digest uplift | routing overlay targets, updated STATE.md, application summary | Completed |
-| `specs/spec-wave-4A-synthesis-gsdr-subsystem-adaptation-policy.md` | Synthesize the Stage 4 policy matrix for remaining GSDR-specific subsystem lanes | subsystem adaptation policy, lane classifications, candidate 4B patch surfaces | Proposed |
-| `specs/spec-wave-4-review-gate-gsdr-subsystem-adaptation-decisions.md` | Human/orchestrator review gate after Wave 4A | review decisions on doctrine-only versus application-worthy subsystem lanes | Proposed |
+| `specs/spec-wave-4A-synthesis-gsdr-subsystem-adaptation-policy.md` | Synthesize the Stage 4 policy matrix for remaining GSDR-specific subsystem lanes | subsystem adaptation policy, lane classifications, candidate 4B patch surfaces | Completed |
+| `specs/spec-wave-4-review-gate-gsdr-subsystem-adaptation-decisions.md` | Human/orchestrator review gate after Wave 4A | review decisions on doctrine-only versus application-worthy subsystem lanes | Completed |
+| `specs/spec-wave-4B-apply-formal-gate-preflight-package.md` | Apply the narrow repo-level formal audit and review-gate preflight package | repo-level audit/review workspace docs, templates, initiative-local pointers, application summary | Proposed |
 
 ## Current expectation
 
-This initiative has completed Stages `1` through `3` and is now entering the Stage `4` subsystem-adaptation pass.
+This initiative has completed Stages `1` through `3`, completed Stage `4A`, and accepted the Gate `4` narrowing decision.
 
 The current useful execution step is:
 
-1. synthesize a single policy matrix for the remaining GSDR-only subsystem lanes
-2. decide at Gate `4` which lanes justify real application work now
-3. keep `verify/validate`, signal automation, audit redesign, and the `3.2` proving ground out of scope until that gate is complete
+1. apply the narrow repo-level formal gate preflight package in `4B`
+2. keep `verify/validate`, signal automation, global skill patching, and the `3.2` proving ground out of scope while `4B` lands
+3. review whether Stage `4` can close after that repo-level gate package or whether a later global-skill follow-on is still justified
