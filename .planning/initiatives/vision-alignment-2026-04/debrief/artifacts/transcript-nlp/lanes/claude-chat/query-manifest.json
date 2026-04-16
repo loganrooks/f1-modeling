@@ -1,0 +1,31 @@
+{
+  "configId": "vision-alignment-2026-04",
+  "laneId": "claude-chat",
+  "generatedAt": "2026-04-16T16:42:32.300Z",
+  "providers": [
+    "claude"
+  ],
+  "families": [
+    "positive_collaboration",
+    "frustration_pushback",
+    "clarification_ambiguity",
+    "authorization_delegation",
+    "audit_protocol",
+    "review_gate_restructure",
+    "model_role_shift"
+  ],
+  "sessionIds": [
+    "44aad61e-1d1a-4230-9df4-02cecccedbac",
+    "44aad61e-1d1a-4230-9df4-02cecccedbac/agent-a3c88973aa198f8d4",
+    "81c3c7eb-103e-4fe7-b5db-4a78b0183e8a",
+    "a3d3fad3-d23b-4e86-9479-eba4424080e8"
+  ],
+  "sourcePaths": [
+    "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/44aad61e-1d1a-4230-9df4-02cecccedbac.jsonl",
+    "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/44aad61e-1d1a-4230-9df4-02cecccedbac/subagents/agent-a3c88973aa198f8d4.jsonl",
+    "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl",
+    "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/a3d3fad3-d23b-4e86-9479-eba4424080e8.jsonl"
+  ],
+  "totalWindows": 10,
+  "totalWindowTokens": 13517
+}

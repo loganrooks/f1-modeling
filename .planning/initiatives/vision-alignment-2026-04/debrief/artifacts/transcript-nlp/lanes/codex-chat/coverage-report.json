@@ -1,0 +1,31 @@
+{
+  "configId": "vision-alignment-2026-04",
+  "laneId": "codex-chat",
+  "generatedAt": "2026-04-16T16:42:32.356Z",
+  "totalTurns": 10054,
+  "usableTurns": 1509,
+  "candidateHits": 735,
+  "selectedWindows": 11,
+  "selectedMoments": 12,
+  "totalWindowTokens": 9945,
+  "countsByFamily": {
+    "positive_collaboration": 96,
+    "frustration_pushback": 10,
+    "clarification_ambiguity": 45,
+    "authorization_delegation": 235,
+    "audit_protocol": 332,
+    "model_role_shift": 271,
+    "agent_usage": 195,
+    "review_gate_restructure": 103
+  },
+  "countsByProvider": {
+    "codex": 735
+  },
+  "countsByActor": {
+    "assistant": 612,
+    "user": 123
+  },
+  "missingFamilies": [],
+  "missingProviders": [],
+  "blindSpots": []
+}

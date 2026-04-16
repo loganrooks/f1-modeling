@@ -1,0 +1,33 @@
+{
+  "configId": "vision-alignment-2026-04",
+  "laneId": "cross-model-and-agent-usage",
+  "generatedAt": "2026-04-16T16:42:32.592Z",
+  "providers": [
+    "claude",
+    "codex",
+    "initiative-log"
+  ],
+  "families": [
+    "positive_collaboration",
+    "frustration_pushback",
+    "authorization_delegation",
+    "audit_protocol",
+    "review_gate_restructure",
+    "model_role_shift",
+    "agent_usage"
+  ],
+  "sessionIds": [
+    "44aad61e-1d1a-4230-9df4-02cecccedbac",
+    "81c3c7eb-103e-4fe7-b5db-4a78b0183e8a",
+    "rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed",
+    "wave-1A.log"
+  ],
+  "sourcePaths": [
+    "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/44aad61e-1d1a-4230-9df4-02cecccedbac.jsonl",
+    "/home/rookslog/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/81c3c7eb-103e-4fe7-b5db-4a78b0183e8a.jsonl",
+    "/home/rookslog/.codex/sessions/2026/04/16/rollout-2026-04-16T10-46-33-019d96c2-10d8-7a51-b013-3b55a25e8fed.jsonl",
+    "/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/logs/wave-1A.log"
+  ],
+  "totalWindows": 9,
+  "totalWindowTokens": 7850
+}

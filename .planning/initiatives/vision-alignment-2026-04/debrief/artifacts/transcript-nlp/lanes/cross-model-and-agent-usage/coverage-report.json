@@ -1,0 +1,36 @@
+{
+  "configId": "vision-alignment-2026-04",
+  "laneId": "cross-model-and-agent-usage",
+  "generatedAt": "2026-04-16T16:42:32.540Z",
+  "totalTurns": 10054,
+  "usableTurns": 5787,
+  "candidateHits": 1729,
+  "selectedWindows": 9,
+  "selectedMoments": 10,
+  "totalWindowTokens": 7850,
+  "countsByFamily": {
+    "positive_collaboration": 152,
+    "frustration_pushback": 23,
+    "authorization_delegation": 342,
+    "audit_protocol": 734,
+    "model_role_shift": 938,
+    "agent_usage": 542,
+    "review_gate_restructure": 339
+  },
+  "countsByProvider": {
+    "codex": 725,
+    "claude": 988,
+    "initiative-log": 16
+  },
+  "countsByActor": {
+    "assistant": 906,
+    "tool": 528,
+    "user": 176,
+    "attachment": 97,
+    "log": 16,
+    "system": 6
+  },
+  "missingFamilies": [],
+  "missingProviders": [],
+  "blindSpots": []
+}

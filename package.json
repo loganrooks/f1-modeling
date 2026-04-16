@@ -13,7 +13,14 @@
     "dev": "concurrently -k -n web,api -c blue,green \"npm run dev --workspace apps/web\" \"npm run dev --workspace apps/local-api\"",
     "build": "npm run build --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "transcript:nlp:index": "tsx scripts/transcript-nlp/cli.ts index",
+    "transcript:nlp:candidates": "tsx scripts/transcript-nlp/cli.ts candidates",
+    "transcript:nlp:windows": "tsx scripts/transcript-nlp/cli.ts windows",
+    "transcript:nlp:extract": "tsx scripts/transcript-nlp/cli.ts extract",
+    "transcript:nlp:run": "tsx scripts/transcript-nlp/cli.ts run",
+    "test:transcript-nlp": "vitest run scripts/transcript-nlp",
+    "typecheck:transcript-nlp": "tsc --noEmit --module ESNext --moduleResolution Bundler --target ES2022 --types node scripts/transcript-nlp/cli.ts scripts/transcript-nlp/pipeline.ts scripts/transcript-nlp/providers/claude.ts scripts/transcript-nlp/providers/codex.ts scripts/transcript-nlp/providers/log.ts scripts/transcript-nlp/io.ts scripts/transcript-nlp/text.ts scripts/transcript-nlp/types.ts scripts/transcript-nlp/queryFamilies.ts scripts/transcript-nlp/configs/index.ts scripts/transcript-nlp/configs/visionAlignment202604.ts scripts/transcript-nlp/text.test.ts scripts/transcript-nlp/pipeline.test.ts"
   },
   "dependencies": {
     "fastify": "^5.8.2",

@@ -1,0 +1,33 @@
+{
+  "configId": "vision-alignment-2026-04",
+  "laneId": "claude-chat",
+  "generatedAt": "2026-04-16T16:42:32.233Z",
+  "totalTurns": 10054,
+  "usableTurns": 3858,
+  "candidateHits": 936,
+  "selectedWindows": 10,
+  "selectedMoments": 12,
+  "totalWindowTokens": 13517,
+  "countsByFamily": {
+    "authorization_delegation": 107,
+    "audit_protocol": 396,
+    "review_gate_restructure": 233,
+    "model_role_shift": 664,
+    "positive_collaboration": 56,
+    "clarification_ambiguity": 9,
+    "frustration_pushback": 13
+  },
+  "countsByProvider": {
+    "claude": 936
+  },
+  "countsByActor": {
+    "assistant": 280,
+    "tool": 494,
+    "attachment": 97,
+    "user": 59,
+    "system": 6
+  },
+  "missingFamilies": [],
+  "missingProviders": [],
+  "blindSpots": []
+}
