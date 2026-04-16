@@ -45,7 +45,7 @@ In this exact order:
 
 10. `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md` — especially the accepted finding that regulation typing is under-specified and must stop being 2026-shaped.
 
-11. `.planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md` — specifically the rationale for splitting R5 into D1 execution-flow + D5 semantic-model rather than collapsing both into one deliberation.
+11. `.planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md` — specifically the rationale for splitting R5 into D1 execution-flow + D5 semantic-model rather than collapsing both into one deliberation.
 
 ## Supporting reads (for grounding, not for reopening D1)
 

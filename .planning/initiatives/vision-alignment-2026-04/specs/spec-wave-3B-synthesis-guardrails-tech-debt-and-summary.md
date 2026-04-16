@@ -37,7 +37,7 @@ In this exact order:
 
 13. `.planning/initiatives/vision-alignment-2026-04/deliberations/05-long-horizon-roadmap.md` — read the full D4 file, especially D4.D and the filled Decision Record.
 
-14. `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-d4-acceptance-response.md` — mandatory. This audit explicitly requires Stage 3B to reconcile `AccessibleChartContract` and `packages/visuals` zero-tests into the registry/guardrail outputs.
+14. `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-d4-acceptance-response.md` — mandatory. This audit explicitly requires Stage 3B to reconcile `AccessibleChartContract` and `packages/visuals` zero-tests into the registry/guardrail outputs.
 
 15. `.planning/knowledge/signals/f1-modeling/2026-04-11-d2-underspecified-interface-types.md` — mandatory. This is the authoritative source for the `AccessibleChartContract` and `AnchorRegistry` carry-forward obligations.
 

@@ -16,7 +16,7 @@ Files to read:
 - `.planning/initiatives/vision-alignment-2026-04/synthesis/tech-debt-registry.md` (full)
 - `.planning/initiatives/vision-alignment-2026-04/SUMMARY.md` (full)
 - `.planning/initiatives/vision-alignment-2026-04/deliberations/05-long-horizon-roadmap.md` (Decision Record and D4.D especially)
-- `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-d4-acceptance-response.md` (full)
+- `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-d4-acceptance-response.md` (full)
 - `.planning/knowledge/signals/f1-modeling/2026-04-11-d2-underspecified-interface-types.md` (full)
 - `.planning/ROADMAP.md` (current state that the synthesis proposes to modify)
 - `CLAUDE.md` (current state that the guardrails proposal would modify)

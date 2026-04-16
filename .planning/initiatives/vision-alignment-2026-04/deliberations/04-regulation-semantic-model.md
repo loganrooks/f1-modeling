@@ -16,7 +16,7 @@
   - `.planning/initiatives/vision-alignment-2026-04/research/05-multi-regulation-typing.md`
   - `.planning/initiatives/vision-alignment-2026-04/research/06-performance-envelopes.md`
   - `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md`
-  - `.planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md`
+  - `.planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md`
 - Supporting reads for grounding:
   - `packages/domain/src/presets/schema.ts`
   - `packages/domain/src/runs/schema.ts`

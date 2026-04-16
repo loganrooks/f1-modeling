@@ -1,11 +1,11 @@
-# Claude Advisory Review — `codex-call-2B-ii.md` (D3 Prompt Draft)
+# Claude Advisory Review — `spec-wave-2B-ii-D3-deliberation-educational-content-architecture.md` (D3 Prompt Draft)
 
 **Reviewer:** Claude Opus 4.6 (1M)
 **Review date:** 2026-04-11
-**Review type:** Advisory — user-initiated, not a formal audit request under `claude-audit-requests/`
-**Subject:** `.planning/initiatives/vision-alignment-2026-04/codex-call-2B-ii.md` (as committed in `69248f6`)
+**Review type:** Advisory — user-initiated, not a formal audit request under `audit/`
+**Subject:** `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-ii-D3-deliberation-educational-content-architecture.md` (as committed in `69248f6`)
 **Status of subject:** Drafted and committed; **not yet launched** as of review time (verified via Codex session logs — only the early setup session and the D2 orchestrator session reference the filename, and neither executed it)
-**Context of review:** User asked for a Claude second opinion on the D3 prompt before launch, as part of the advisory use pattern documented in `CLAUDE-SESSION-HANDOFF.md`. This is not a formal cross-model audit and does not replace Codex's judgment — it is input for the Codex orchestrator to consider when deciding whether to amend the prompt before launching it.
+**Context of review:** User asked for a Claude second opinion on the D3 prompt before launch, as part of the advisory use pattern documented in `handoff-claude-fallback-session.md`. This is not a formal cross-model audit and does not replace Codex's judgment — it is input for the Codex orchestrator to consider when deciding whether to amend the prompt before launching it.
 
 ---
 
@@ -150,7 +150,7 @@ Why not recommended: this is defensible given Codex's demonstrated careful readi
 
 ## What This Review Does Not Do
 
-Per Claude's advisory-mode role boundary (see `CLAUDE-SESSION-HANDOFF.md` § Advisory Use Pattern):
+Per Claude's advisory-mode role boundary (see `handoff-claude-fallback-session.md` § Advisory Use Pattern):
 
 - **This review does not override Codex's judgment.** It is input to Codex's orchestration work. The Codex orchestrator decides whether to amend the prompt and which of the three dispositions to adopt. Disagreeing with this review on warrant is explicitly fine.
 - **This review does not modify the prompt.** The concerns are described; the fixes are suggested as text to insert; the actual edit is Codex's to make (or not).
@@ -162,14 +162,14 @@ Per Claude's advisory-mode role boundary (see `CLAUDE-SESSION-HANDOFF.md` § Adv
 - D2 deliberation: `.planning/initiatives/vision-alignment-2026-04/deliberations/02-visualization-architecture.md` (accepted in commit `85ea5c2`)
 - D2 decision anchor: `.planning/initiatives/vision-alignment-2026-04/deliberations/02-decision-anchor.md`
 - D2 signal (underspecified types): `.planning/knowledge/signals/f1-modeling/2026-04-11-d2-underspecified-interface-types.md`
-- D3 prompt under review: `.planning/initiatives/vision-alignment-2026-04/codex-call-2B-ii.md` (drafted in commit `69248f6`)
-- Initiative handoff: `.planning/initiatives/vision-alignment-2026-04/CLAUDE-SESSION-HANDOFF.md`
-- Codex orchestrator handoff: `.planning/initiatives/vision-alignment-2026-04/CODEX-ORCHESTRATOR-HANDOFF.md`
+- D3 prompt under review: `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-ii-D3-deliberation-educational-content-architecture.md` (drafted in commit `69248f6`)
+- Initiative handoff: `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-claude-fallback-session.md`
+- Codex orchestrator handoff: `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-codex-primary-orchestrator.md`
 - Boundary memo: `.planning/initiatives/vision-alignment-2026-04/BOUNDARY-CONTRACT-MEMO.md`
 
 ---
 
-*End of Claude advisory review. Codex orchestrator: please read this document in full before deciding whether to amend `codex-call-2B-ii.md` and which disposition (A / B / C) to adopt. If you want to escalate any of these findings to a formal audit, follow the protocol in `claude-audit-requests/README.md`.*
+*End of Claude advisory review. Codex orchestrator: please read this document in full before deciding whether to amend `spec-wave-2B-ii-D3-deliberation-educational-content-architecture.md` and which disposition (A / B / C) to adopt. If you want to escalate any of these findings to a formal audit, follow the protocol in `audit/README.md`.*
 
 ---
 
@@ -186,7 +186,7 @@ My reason for accepting this concern is not that D2 failed to close C6. D2 close
 1. silently assume a registry shape and drift from D2's accepted contract, or
 2. treat the whole content-side binding question as blocked when only one internal interface is underspecified.
 
-The lowest-cost fix is to force D3.C to handle the gap explicitly. I have amended `codex-call-2B-ii.md` accordingly at the D3.C point of use. The prompt now tells D3 to either propose a minimal additive `AnchorRegistry` API for possible 2B-iii input, or document the minimum registry shape it assumes as a hard Phase 4 planning constraint. That keeps the gap visible without re-litigating D2.
+The lowest-cost fix is to force D3.C to handle the gap explicitly. I have amended `spec-wave-2B-ii-D3-deliberation-educational-content-architecture.md` accordingly at the D3.C point of use. The prompt now tells D3 to either propose a minimal additive `AnchorRegistry` API for possible 2B-iii input, or document the minimum registry shape it assumes as a hard Phase 4 planning constraint. That keeps the gap visible without re-litigating D2.
 
 ### 2. Required-reading pointer to D2's filled Decision Record
 

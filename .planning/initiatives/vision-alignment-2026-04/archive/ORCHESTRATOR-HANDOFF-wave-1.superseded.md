@@ -30,7 +30,7 @@ This is a narrow scope. You are doing infrastructure work, not intellectual work
 - Launch all three Wave 1 calls (1A, 1B, 1C) as parallel background processes
 - Wait for all three to complete before reporting
 - Verify that each expected output file exists and contains the required sections from `RESEARCH-PRINCIPLES.md`
-- Write a summary report to `wave-1-orchestrator-report.md` in the initiative directory
+- Write a summary report to `report-wave-1-orchestrator-execution.md` in the initiative directory
 - Stop at Review Gate 1 and hand control back to the user
 
 ### What you MUST NOT do
@@ -52,9 +52,9 @@ Read these files in order before launching anything. Budget ~30-40K tokens for t
 1. `.planning/initiatives/vision-alignment-2026-04/README.md` — initiative overview
 2. `.planning/initiatives/vision-alignment-2026-04/PLAN.md` — master plan with wave structure
 3. `.planning/initiatives/vision-alignment-2026-04/RESEARCH-PRINCIPLES.md` — methodological manifesto (the child processes will read this too; you need to know what's in it to verify outputs)
-4. `.planning/initiatives/vision-alignment-2026-04/codex-call-1A.md` — Wave 1 Call A prompt
-5. `.planning/initiatives/vision-alignment-2026-04/codex-call-1B.md` — Wave 1 Call B prompt
-6. `.planning/initiatives/vision-alignment-2026-04/codex-call-1C.md` — Wave 1 Call C prompt
+4. `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-1A-R1-R4-research-compute-backends-and-streaming.md` — Wave 1 Call A prompt
+5. `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-1B-R2-R3-research-visualization-and-education.md` — Wave 1 Call B prompt
+6. `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-1C-R5-research-multi-regulation-typing.md` — Wave 1 Call C prompt
 
 Do NOT read the audit files, VISION.md, PROJECT.md, ROADMAP.md, or any source code yourself. Those are for the child processes to read as part of their research tasks. Reading them yourself wastes context.
 
@@ -100,17 +100,17 @@ Launch the three calls in parallel:
 cd /home/rookslog/workspace/projects/f1-modeling
 
 # Wave 1 Call A: R1 (compute backends) + R4 (streaming architectures)
-nohup bash -c "cat .planning/initiatives/vision-alignment-2026-04/codex-call-1A.md | codex exec -m gpt-5.4 -c model_reasoning_effort=high -s danger-full-access -" \
+nohup bash -c "cat .planning/initiatives/vision-alignment-2026-04/specs/spec-wave-1A-R1-R4-research-compute-backends-and-streaming.md | codex exec -m gpt-5.4 -c model_reasoning_effort=high -s danger-full-access -" \
   > .planning/initiatives/vision-alignment-2026-04/logs/wave-1A.log 2>&1 &
 echo "Wave 1A PID: $!"
 
 # Wave 1 Call B: R2 (visualization) + R3 (educational content)
-nohup bash -c "cat .planning/initiatives/vision-alignment-2026-04/codex-call-1B.md | codex exec -m gpt-5.4 -c model_reasoning_effort=high -s danger-full-access -" \
+nohup bash -c "cat .planning/initiatives/vision-alignment-2026-04/specs/spec-wave-1B-R2-R3-research-visualization-and-education.md | codex exec -m gpt-5.4 -c model_reasoning_effort=high -s danger-full-access -" \
   > .planning/initiatives/vision-alignment-2026-04/logs/wave-1B.log 2>&1 &
 echo "Wave 1B PID: $!"
 
 # Wave 1 Call C: R5 (multi-regulation typing)
-nohup bash -c "cat .planning/initiatives/vision-alignment-2026-04/codex-call-1C.md | codex exec -m gpt-5.4 -c model_reasoning_effort=high -s danger-full-access -" \
+nohup bash -c "cat .planning/initiatives/vision-alignment-2026-04/specs/spec-wave-1C-R5-research-multi-regulation-typing.md | codex exec -m gpt-5.4 -c model_reasoning_effort=high -s danger-full-access -" \
   > .planning/initiatives/vision-alignment-2026-04/logs/wave-1C.log 2>&1 &
 echo "Wave 1C PID: $!"
 ```
@@ -197,7 +197,7 @@ Note any errors, warnings, or incomplete-looking outputs. Include them in your r
 
 ### Step 6: Write orchestrator report
 
-Write `.planning/initiatives/vision-alignment-2026-04/wave-1-orchestrator-report.md` using the template below. Use heredoc.
+Write `.planning/initiatives/vision-alignment-2026-04/reports/report-wave-1-orchestrator-execution.md` using the template below. Use heredoc.
 
 ---
 
@@ -267,7 +267,7 @@ One of:
 After writing the orchestrator report, print a final message and stop:
 
 ```
-Wave 1 orchestration complete. See wave-1-orchestrator-report.md for details.
+Wave 1 orchestration complete. See report-wave-1-orchestrator-execution.md for details.
 
 Next step: user reviews the five research files at Review Gate 1.
 
@@ -310,6 +310,6 @@ The user will return to the initiative after reviewing Wave 1 outputs. They may 
 **Initiative directory:** `.planning/initiatives/vision-alignment-2026-04/`
 **Output location:** `.planning/initiatives/vision-alignment-2026-04/research/`
 **Logs location:** `.planning/initiatives/vision-alignment-2026-04/logs/`
-**Report location:** `.planning/initiatives/vision-alignment-2026-04/wave-1-orchestrator-report.md`
+**Report location:** `.planning/initiatives/vision-alignment-2026-04/reports/report-wave-1-orchestrator-execution.md`
 
 **Your scope:** Wave 1 only. Stop at Review Gate 1. Hand back to user.

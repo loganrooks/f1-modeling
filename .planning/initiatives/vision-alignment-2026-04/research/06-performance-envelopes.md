@@ -403,7 +403,7 @@ The main epistemic limit is clear: exact crossover points and exact job wall-tim
 - `.planning/initiatives/vision-alignment-2026-04/RESEARCH-PRINCIPLES.md`
 - `.planning/initiatives/vision-alignment-2026-04/BOUNDARY-CONTRACT-MEMO.md`
 - `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md`
-- `.planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md`
+- `.planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md`
 - `.planning/initiatives/vision-alignment-2026-04/research/01-compute-backends.md`
 - `.planning/initiatives/vision-alignment-2026-04/research/02-visualization-at-scale.md`
 - `.planning/initiatives/vision-alignment-2026-04/research/04-streaming-architectures.md`

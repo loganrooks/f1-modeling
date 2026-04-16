@@ -45,7 +45,7 @@ Read these files in order. They are all in `/home/rookslog/workspace/projects/f1
 ### Initiative scaffolding
 4. `.planning/initiatives/vision-alignment-2026-04/README.md` — initiative overview and structure
 5. `.planning/initiatives/vision-alignment-2026-04/PLAN.md` — current wave structure (the structure you may recommend changing)
-6. `.planning/initiatives/vision-alignment-2026-04/wave-1-orchestrator-report.md` — Wave 1 execution status
+6. `.planning/initiatives/vision-alignment-2026-04/reports/report-wave-1-orchestrator-execution.md` — Wave 1 execution status
 
 ### Wave 1 research outputs (the substance you must engage with)
 7. `.planning/initiatives/vision-alignment-2026-04/research/01-compute-backends.md`
@@ -331,12 +331,12 @@ If you think any of these "not under review" decisions are wrong, you're welcome
 
 Append your review at the bottom of this file in a new section titled `## Codex Review (2026-04-11)`. Use heredoc to write to this exact path:
 
-`/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md`
+`/home/rookslog/workspace/projects/f1-modeling/.planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md`
 
 Use cat with append redirect, NOT cat with overwrite — preserve everything above. Example:
 
 ```bash
-cat >> .planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md <<'REVIEW_EOF'
+cat >> .planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md <<'REVIEW_EOF'
 
 ## Codex Review (2026-04-11)
 

@@ -37,7 +37,7 @@ In this exact order:
 
 13. `.planning/initiatives/vision-alignment-2026-04/deliberations/05-long-horizon-roadmap.md` — read the full D4 file, not just the anchor, because the filled Decision Record carries binding specifics and post-audit corrections.
 
-14. `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-d4-acceptance-response.md` — mandatory. Stage 3A must consume the audit's two substantive carry-forwards:
+14. `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-d4-acceptance-response.md` — mandatory. Stage 3A must consume the audit's two substantive carry-forwards:
    - use the corrected Phase 4.1 framing rather than "broadened from EKF later"
    - leave `AccessibleChartContract` and `packages/visuals` zero-tests for explicit Stage 3B reconciliation rather than pretending D4 already carried them
 

@@ -2,11 +2,13 @@
 
 ## ⚡ READ THIS FIRST
 
-You are picking up a Claude session where the prior session (also Claude Opus 4.6) had to clear context after performing substantial Vision Alignment Initiative work. Your immediate task is **to perform the formal Stage 3 application audit** that Codex requested at `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-stage-3-application-request.md`.
+You are picking up a Claude session where the prior session (also Claude Opus 4.6) had to clear context after performing substantial Vision Alignment Initiative work. Your immediate task is **to perform the formal Stage 3 application audit** that Codex requested at `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-stage-3-application-request.md`.
 
 **Do NOT** start reviewing Stage 3 content from scratch before you understand the context. Do NOT make any project file edits (to `ROADMAP.md`, `CLAUDE.md`, `.planning/TECH-DEBT.md`, or any phase file) until the formal audit response has been written. This handoff exists so you onboard once and do the audit once, correctly.
 
-**Your single deliverable for this session:** a formal audit response written to `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-stage-3-application-response.md` (note: **no `-DRAFT` suffix**), committed atomically, and reported to the user.
+**Your single deliverable for this session:** a formal audit response written to `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-stage-3-application-response.md` (note: **no `-DRAFT` suffix**), committed atomically, and reported to the user.
+
+**Historical note (2026-04-16):** This handoff refers multiple times to a temporary Stage 3 DRAFT response file that was later removed once the formal response landed. Treat those references as process history; the canonical retained output is `audit/2026-04-11-stage-3-application-response.md`.
 
 If the audit finds no blockers, the user will then apply Stage 3 outputs to project files as a separate step. If the audit finds blockers, they get surfaced before any irreversible edits happen.
 
@@ -16,21 +18,21 @@ If the audit finds no blockers, the user will then apply Stage 3 outputs to proj
 
 This handoff exists because two things happened in the prior session that are important for you to know:
 
-1. **A formal audit protocol was briefly bypassed.** The prior session performed advisory-mode review + Decision Record fill for D4 acceptance without checking `claude-audit-requests/`, despite the `CODEX-ORCHESTRATOR-HANDOFF.md` having scheduled D4 as a formal audit gate. Claude performed a post-hoc formal audit that validated the acceptance content, but the procedural slip was real. A signal was filed at `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`.
+1. **A formal audit protocol was briefly bypassed.** The prior session performed advisory-mode review + Decision Record fill for D4 acceptance without checking `audit/`, despite the `handoff-codex-primary-orchestrator.md` having scheduled D4 as a formal audit gate. Claude performed a post-hoc formal audit that validated the acceptance content, but the procedural slip was real. A signal was filed at `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`.
 
 2. **The same slip almost happened again for Stage 3 application.** The prior session performed a substantive informal review of Stage 3 artifacts, flagged at the end that Stage 3 application is a scheduled formal audit moment, and recommended either treating the review as formal or writing a proactive protocol response. The user relayed this to Codex, and Codex then wrote the formal audit request. The prior session saved the informal review as a **DRAFT** so this fresh session can use it as input rather than redoing everything.
 
-The practical implication: **your first action after reading this handoff should be to check `claude-audit-requests/` for the pending request and confirm that the protocol is being followed this time.** Do not start the review until you've confirmed the request exists and you've read it.
+The practical implication: **your first action after reading this handoff should be to check `audit/` for the pending request and confirm that the protocol is being followed this time.** Do not start the review until you've confirmed the request exists and you've read it.
 
 ---
 
 ## Your Task in Sequence
 
 1. Read this handoff in full.
-2. Read `claude-audit-requests/2026-04-11-stage-3-application-request.md` (the formal audit request from Codex).
-3. Read `claude-audit-requests/2026-04-11-stage-3-application-response-DRAFT.md` (the informal findings from the prior session — treat as INPUT not OUTPUT).
-4. Read `CODEX-ORCHESTRATOR-HANDOFF.md` § "When to Request Claude Cross-Model Audit" and `claude-audit-requests/README.md` for protocol reminders.
-5. Read the D4 post-hoc audit response at `claude-audit-requests/2026-04-11-d4-acceptance-response.md` for context on the prior formal audit's findings (especially the three minor carry-forwards).
+2. Read `audit/2026-04-11-stage-3-application-request.md` (the formal audit request from Codex).
+3. Read `audit/2026-04-11-stage-3-application-response-DRAFT.md` (the informal findings from the prior session — treat as INPUT not OUTPUT).
+4. Read `handoff-codex-primary-orchestrator.md` § "When to Request Claude Cross-Model Audit" and `audit/README.md` for protocol reminders.
+5. Read the D4 post-hoc audit response at `audit/2026-04-11-d4-acceptance-response.md` for context on the prior formal audit's findings (especially the three minor carry-forwards).
 6. Read the five Stage 3 artifacts fresh:
    - `synthesis/roadmap-evolution.md`
    - `synthesis/phase-insertion-proposals.md`
@@ -39,7 +41,7 @@ The practical implication: **your first action after reading this handoff should
    - `SUMMARY.md` (at initiative root)
 7. Read the reference files the informal draft flagged as NOT re-read fresh (see "Files to re-read fresh" below).
 8. Perform the formal audit independently, using the draft as input but reaching your own judgment.
-9. Write the formal response to `claude-audit-requests/2026-04-11-stage-3-application-response.md` (without `-DRAFT` suffix) following the format the audit request specifies (Executive summary, Findings, Concerns, Confirmations, Recommendation, Confidence).
+9. Write the formal response to `audit/2026-04-11-stage-3-application-response.md` (without `-DRAFT` suffix) following the format the audit request specifies (Executive summary, Findings, Concerns, Confirmations, Recommendation, Confidence).
 10. Commit the response atomically with a clear message noting it is the formal audit response for Stage 3 application.
 11. Report findings to the user and wait for their direction.
 
@@ -51,7 +53,7 @@ Do **not** modify `ROADMAP.md`, `CLAUDE.md`, or create `.planning/TECH-DEBT.md` 
 
 The Vision Alignment Initiative is complete through Stage 3 synthesis. Here is the state in one paragraph:
 
-The initiative ran five architectural deliberations (D1 backend boundary, D2 visualization architecture, D3 educational content architecture, D5 regulation semantic model, D4 long-horizon roadmap synthesis) via Codex GPT-5.4 xhigh with Claude advisory review of prompts and Decision Records. All five deliberations were accepted with filled Decision Records. Stage 3A produced `synthesis/roadmap-evolution.md` and `synthesis/phase-insertion-proposals.md`. Stage 3B produced `synthesis/guardrails-proposal.md`, `synthesis/tech-debt-registry.md`, and `SUMMARY.md` at initiative root. D4 acceptance was the first of two scheduled formal audit moments and went through a post-hoc audit after an advisory-pattern slip (see lessons learned below). Stage 3 application to `ROADMAP.md` / `CLAUDE.md` is the second scheduled formal audit moment and has not yet happened — Codex has written a formal audit request and your job is to respond to it per the `claude-audit-requests/` protocol.
+The initiative ran five architectural deliberations (D1 backend boundary, D2 visualization architecture, D3 educational content architecture, D5 regulation semantic model, D4 long-horizon roadmap synthesis) via Codex GPT-5.4 xhigh with Claude advisory review of prompts and Decision Records. All five deliberations were accepted with filled Decision Records. Stage 3A produced `synthesis/roadmap-evolution.md` and `synthesis/phase-insertion-proposals.md`. Stage 3B produced `synthesis/guardrails-proposal.md`, `synthesis/tech-debt-registry.md`, and `SUMMARY.md` at initiative root. D4 acceptance was the first of two scheduled formal audit moments and went through a post-hoc audit after an advisory-pattern slip (see lessons learned below). Stage 3 application to `ROADMAP.md` / `CLAUDE.md` is the second scheduled formal audit moment and has not yet happened — Codex has written a formal audit request and your job is to respond to it per the `audit/` protocol.
 
 ### Key commits in D4 and Stage 3 flow
 
@@ -88,11 +90,11 @@ Verify with `git status --short` before starting.
 
 ### Tier 1 — Mandatory before any audit work
 
-1. **This handoff** — `.planning/initiatives/vision-alignment-2026-04/CLAUDE-HANDOFF-2026-04-11-stage3-audit.md`
-2. **The formal audit request** — `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-stage-3-application-request.md`
-3. **The DRAFT response** — `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-stage-3-application-response-DRAFT.md`
-4. **The audit protocol README** — `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/README.md`
-5. **The D4 post-hoc audit response** — `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-d4-acceptance-response.md` (for context on the prior formal audit's findings and carry-forwards)
+1. **This handoff** — `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-claude-stage-3-formal-audit.md`
+2. **The formal audit request** — `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-stage-3-application-request.md`
+3. **The DRAFT response** — `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-stage-3-application-response-DRAFT.md`
+4. **The audit protocol README** — `.planning/initiatives/vision-alignment-2026-04/audit/README.md`
+5. **The D4 post-hoc audit response** — `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-d4-acceptance-response.md` (for context on the prior formal audit's findings and carry-forwards)
 
 ### Tier 2 — The Stage 3 artifacts under audit
 
@@ -122,9 +124,9 @@ Per the draft response's "Files the formal audit should also consult that the in
 ### Tier 4 — Reference only as needed
 
 23. **Claude formal-audit-bypass signal** — `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md` (background on the D4 slip and the lessons learned that motivate this handoff)
-24. **CODEX-ORCHESTRATOR-HANDOFF** — `.planning/initiatives/vision-alignment-2026-04/CODEX-ORCHESTRATOR-HANDOFF.md` § "When to Request Claude Cross-Model Audit" (the formal audit schedule)
-25. **CLAUDE-SESSION-HANDOFF** — `.planning/initiatives/vision-alignment-2026-04/CLAUDE-SESSION-HANDOFF.md` (broader context on advisory pattern and fallback roles)
-26. **D4 prompt review** — `.planning/initiatives/vision-alignment-2026-04/codex-call-2D-claude-review.md` (the prior Claude review that explicitly flagged D4 as needing formal audit — relevant for the lessons-learned narrative, not the Stage 3 audit itself)
+24. **CODEX-ORCHESTRATOR-HANDOFF** — `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-codex-primary-orchestrator.md` § "When to Request Claude Cross-Model Audit" (the formal audit schedule)
+25. **CLAUDE-SESSION-HANDOFF** — `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-claude-fallback-session.md` (broader context on advisory pattern and fallback roles)
+26. **D4 prompt review** — `.planning/initiatives/vision-alignment-2026-04/reviews/review-spec-wave-2D-D4-prompt-claude-advisory.md` (the prior Claude review that explicitly flagged D4 as needing formal audit — relevant for the lessons-learned narrative, not the Stage 3 audit itself)
 27. **D1-D3/D5 full deliberations** — only if you find a specific cross-check question that requires going deeper than the decision anchors
 
 **Budget estimate:** Tiers 1-2 are ~80k tokens total. Tier 3 is ~100k tokens if read in full. Budget ~180-200k tokens for onboarding, which leaves ample headroom in the 1M context window for the actual audit work and response drafting.
@@ -149,19 +151,19 @@ Each deliberation went through the pattern: draft prompt → Claude advisory rev
 
 ### The D4 slip and post-hoc audit
 
-**What happened:** When the prior session received "Wave 2D has finished, can you provide a review of the deliberation and how might you fill out the decision record?" Claude fell into the D2/D3/D5 advisory pattern reflexively without checking `claude-audit-requests/` for a pending formal audit request. Claude:
+**What happened:** When the prior session received "Wave 2D has finished, can you provide a review of the deliberation and how might you fill out the decision record?" Claude fell into the D2/D3/D5 advisory pattern reflexively without checking `audit/` for a pending formal audit request. Claude:
 1. Performed advisory review of the D4 deliberation
 2. Drafted Decision Record entries
 3. Compared against Codex's independent Decision Record recommendations
 4. Integrated five Codex sharpenings
 5. Wrote the Decision Record and committed acceptance as `6050c50`
-6. In the commit message, explicitly treated the formal audit protocol as "separately available" — which was wrong because Codex had already written the audit request at `claude-audit-requests/2026-04-11-d4-acceptance-request.md`
+6. In the commit message, explicitly treated the formal audit protocol as "separately available" — which was wrong because Codex had already written the audit request at `audit/2026-04-11-d4-acceptance-request.md`
 
 **What happened next:** The user pointed Claude at the audit request file after acceptance was already committed. Claude:
 1. Acknowledged the miss clearly (not defensively)
 2. Performed the formal audit post-hoc against the full audit request
 3. Read `ROADMAP.md` and the full audit response document during the audit
-4. Wrote findings to `claude-audit-requests/2026-04-11-d4-acceptance-response.md`
+4. Wrote findings to `audit/2026-04-11-d4-acceptance-response.md`
 5. The post-hoc audit validated the acceptance content — no revert needed
 6. Found three minor non-blocking findings:
    - `AccessibleChartContract` missing from D4.D's rewrite trigger list
@@ -181,11 +183,11 @@ Codex ran Stage 3A and Stage 3B in separate Codex sessions after D4 was accepted
 
 When the prior session (this one) received "Stage 3A and 3B is done and now we have to decide what to implement from it, can you give all the artifacts from .../ a review?" Claude almost fell into the same reflexive advisory pattern. **But this time Claude caught itself at the start** — the session opened with:
 
-> Applying the D4-slip lesson from `sig-2026-04-11-claude-bypassed-formal-audit-protocol.md`: check `claude-audit-requests/` at session start before performing any review.
+> Applying the D4-slip lesson from `sig-2026-04-11-claude-bypassed-formal-audit-protocol.md`: check `audit/` at session start before performing any review.
 
-Claude checked, found no pending formal audit request at that time (only the D4 files), and proceeded with the informal review while noting that Stage 3 application to ROADMAP.md is a scheduled formal audit moment per the `CODEX-ORCHESTRATOR-HANDOFF.md`. Claude flagged this to the user at the end of the informal review with three disposition options.
+Claude checked, found no pending formal audit request at that time (only the D4 files), and proceeded with the informal review while noting that Stage 3 application to ROADMAP.md is a scheduled formal audit moment per the `handoff-codex-primary-orchestrator.md`. Claude flagged this to the user at the end of the informal review with three disposition options.
 
-The user relayed this to Codex. Codex then **did the right thing** — wrote a formal audit request at `claude-audit-requests/2026-04-11-stage-3-application-request.md` per the protocol.
+The user relayed this to Codex. Codex then **did the right thing** — wrote a formal audit request at `audit/2026-04-11-stage-3-application-request.md` per the protocol.
 
 **The result:** the informal review from the prior session was saved as a DRAFT (`2026-04-11-stage-3-application-response-DRAFT.md`) so the fresh session (you) can use it as input while producing the formal response per the protocol. This handoff exists to make sure the onboarding happens correctly.
 
@@ -195,17 +197,17 @@ The user relayed this to Codex. Codex then **did the right thing** — wrote a f
 
 These lessons are distilled from the D4 slip and the near-repeat. They are load-bearing for how you conduct the Stage 3 formal audit and any future auditing work in this initiative.
 
-### 1. Check `claude-audit-requests/` at session start
+### 1. Check `audit/` at session start
 
-Before performing any review, audit, or Decision Record fill on an initiative artifact, **check `.planning/initiatives/<initiative-name>/claude-audit-requests/` for pending request files**. If a request exists for the current subject, follow the protocol — read the request, read the protocol README, perform the audit per the request's specific questions, write the formal response.
+Before performing any review, audit, or Decision Record fill on an initiative artifact, **check `.planning/initiatives/<initiative-name>/audit/` for pending request files**. If a request exists for the current subject, follow the protocol — read the request, read the protocol README, perform the audit per the request's specific questions, write the formal response.
 
 Do not assume the user's conversational phrasing dictates the protocol. "Can you review X" is equally consistent with advisory review and formal audit; the distinction lives in whether a request file exists and whether the subject is on the scheduled formal audit list.
 
 ### 2. Formal audit vs advisory review — the distinction
 
 - **Advisory review** is the D2/D3/D5 pattern: conversational, produces Decision Record recommendations, user fills and commits. Lives in the conversation + commit messages. Lower protocol overhead.
-- **Formal audit** is the D4 / Stage 3 application pattern: Codex (or user) writes a request in `claude-audit-requests/`, Claude reads the request + artifacts + context, writes findings to a response file in the same directory, commits the response atomically. Higher protocol overhead but creates a durable audit trail.
-- **The `CODEX-ORCHESTRATOR-HANDOFF.md` schedules formal audits** for specific high-stakes moments: before accepting D4, before applying synthesis to `ROADMAP.md`, before any irreversible file changes, and ad-hoc when the orchestrator requests a second opinion.
+- **Formal audit** is the D4 / Stage 3 application pattern: Codex (or user) writes a request in `audit/`, Claude reads the request + artifacts + context, writes findings to a response file in the same directory, commits the response atomically. Higher protocol overhead but creates a durable audit trail.
+- **The `handoff-codex-primary-orchestrator.md` schedules formal audits** for specific high-stakes moments: before accepting D4, before applying synthesis to `ROADMAP.md`, before any irreversible file changes, and ad-hoc when the orchestrator requests a second opinion.
 
 For the Stage 3 application audit, **you are in formal mode.** Write the response to the protocol file, not to the conversation.
 
@@ -227,7 +229,7 @@ Adopting Codex's practice of citing specific file:line pairs in review and audit
 
 ### 7. Draft findings transfer as input, not output
 
-When a previous session has produced a substantive review that was then saved as a draft (like the Stage 3 DRAFT at `claude-audit-requests/2026-04-11-stage-3-application-response-DRAFT.md`), treat it as input to your own judgment. Read it carefully — it may save you significant derivation work — but do not transcribe it. Your formal response should reach its own conclusions. Agreement with the draft is common; disagreement is legitimate when you find something the draft missed.
+When a previous session has produced a substantive review that was then saved as a draft (like the Stage 3 DRAFT at `audit/2026-04-11-stage-3-application-response-DRAFT.md`), treat it as input to your own judgment. Read it carefully — it may save you significant derivation work — but do not transcribe it. Your formal response should reach its own conclusions. Agreement with the draft is common; disagreement is legitimate when you find something the draft missed.
 
 ### 8. The draft explicitly enumerates what the formal audit should verify independently
 
@@ -260,7 +262,7 @@ For the Stage 3 formal audit, the pattern is different — you are writing the a
 
 These are specific things **not** to do during your Stage 3 audit session.
 
-1. **Do NOT start reviewing Stage 3 content before checking `claude-audit-requests/`.** Mandatory first step after reading this handoff.
+1. **Do NOT start reviewing Stage 3 content before checking `audit/`.** Mandatory first step after reading this handoff.
 2. **Do NOT treat the DRAFT as authoritative.** Read it as input, not as output. The formal response should independently verify each claim.
 3. **Do NOT skip Tier 3 reference reads** even though the draft already covers them. The draft's "did NOT re-read fresh" section explicitly flags these as needing independent verification.
 4. **Do NOT modify `ROADMAP.md`, `CLAUDE.md`, or create `.planning/TECH-DEBT.md`.** Application is a separate user-authorized step that happens AFTER the formal audit is complete.
@@ -279,14 +281,14 @@ In this order:
 
 1. **Read this handoff in full.** (You are here.)
 2. **Run `git status --short` and `git log --oneline -15`** to verify the initiative state matches this handoff's description. Confirm commit `a7fcfe4` (the DRAFT save) is the most recent initiative commit.
-3. **Read `claude-audit-requests/2026-04-11-stage-3-application-request.md`** in full.
-4. **Read `claude-audit-requests/2026-04-11-stage-3-application-response-DRAFT.md`** in full. Pay attention to its "Things the fresh formal audit should verify independently" section and its "Files the formal audit should also consult" section.
-5. **Read the audit protocol README** — `claude-audit-requests/README.md` — to confirm format expectations.
-6. **Read the D4 post-hoc audit response** — `claude-audit-requests/2026-04-11-d4-acceptance-response.md` — for context and carry-forward awareness.
+3. **Read `audit/2026-04-11-stage-3-application-request.md`** in full.
+4. **Read `audit/2026-04-11-stage-3-application-response-DRAFT.md`** in full. Pay attention to its "Things the fresh formal audit should verify independently" section and its "Files the formal audit should also consult" section.
+5. **Read the audit protocol README** — `audit/README.md` — to confirm format expectations.
+6. **Read the D4 post-hoc audit response** — `audit/2026-04-11-d4-acceptance-response.md` — for context and carry-forward awareness.
 7. **Read the five Stage 3 artifacts** — `synthesis/roadmap-evolution.md`, `synthesis/phase-insertion-proposals.md`, `synthesis/guardrails-proposal.md`, `synthesis/tech-debt-registry.md`, `SUMMARY.md`.
 8. **Read the Tier 3 reference files** — the five decision anchors, the D2 full deliberation, current `ROADMAP.md`, current `CLAUDE.md`, the 2026-04-10 audit response, the boundary memo, the D2 underspec signal.
 9. **Perform the formal audit** — answer each of the six specific questions from the request with evidence citations. Check the six verification items from the DRAFT. Apply your own judgment.
-10. **Write the formal response** to `claude-audit-requests/2026-04-11-stage-3-application-response.md` (without `-DRAFT` suffix). Required sections: Executive summary, Findings, Concerns, Confirmations, Recommendation, Confidence.
+10. **Write the formal response** to `audit/2026-04-11-stage-3-application-response.md` (without `-DRAFT` suffix). Required sections: Executive summary, Findings, Concerns, Confirmations, Recommendation, Confidence.
 11. **Commit the formal response atomically** with a message like `docs(initiative): Claude formal audit response for Stage 3 application`.
 12. **Report findings to the user** — summarize the audit outcome, list any blocking concerns, list residual non-blocking concerns, recommend specific next steps. Wait for user direction before any application work.
 
@@ -323,13 +325,13 @@ Expected to see on `git status --short`:
 
 These are NOT vision-alignment work. Do not touch them. They have been in this state for multiple prior sessions and are the user's responsibility separately.
 
-### On `CODEX-ORCHESTRATOR-HANDOFF.md`
+### On `handoff-codex-primary-orchestrator.md`
 
-This handoff does not supersede `CODEX-ORCHESTRATOR-HANDOFF.md` — Codex is still the primary orchestrator for Stage 3 application (if/when it happens). `CODEX-ORCHESTRATOR-HANDOFF.md` remains authoritative for Codex sessions. This handoff is specifically for the Claude fresh session performing the formal Stage 3 application audit.
+This handoff does not supersede `handoff-codex-primary-orchestrator.md` — Codex is still the primary orchestrator for Stage 3 application (if/when it happens). `handoff-codex-primary-orchestrator.md` remains authoritative for Codex sessions. This handoff is specifically for the Claude fresh session performing the formal Stage 3 application audit.
 
-### On `CLAUDE-SESSION-HANDOFF.md`
+### On `handoff-claude-fallback-session.md`
 
-The broader Claude fallback pattern handoff at `CLAUDE-SESSION-HANDOFF.md` remains valid for general advisory-mode work. This handoff supplements it with the specific Stage 3 audit task. When this task is complete, the general handoff is still the fallback reference.
+The broader Claude fallback pattern handoff at `handoff-claude-fallback-session.md` remains valid for general advisory-mode work. This handoff supplements it with the specific Stage 3 audit task. When this task is complete, the general handoff is still the fallback reference.
 
 ### On stale orchestrator handoffs
 
@@ -343,7 +345,7 @@ If you see references to those files in older commit messages or reviews, they n
 
 ## Final Reminder
 
-**Your single deliverable for this session:** a formal audit response written to `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-stage-3-application-response.md`, committed atomically, with findings reported to the user.
+**Your single deliverable for this session:** a formal audit response written to `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-stage-3-application-response.md`, committed atomically, with findings reported to the user.
 
 Do the audit once. Do it correctly. Do not apply Stage 3 outputs to project files without explicit user authorization after the audit. The formal audit is your gate, not advisory review.
 

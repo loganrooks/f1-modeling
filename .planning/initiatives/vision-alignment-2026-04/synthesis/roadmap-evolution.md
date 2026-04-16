@@ -19,7 +19,7 @@
   - `.planning/initiatives/vision-alignment-2026-04/deliberations/04-decision-anchor.md`
   - `.planning/initiatives/vision-alignment-2026-04/deliberations/05-decision-anchor.md`
   - `.planning/initiatives/vision-alignment-2026-04/deliberations/05-long-horizon-roadmap.md`
-  - `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-d4-acceptance-response.md`
+  - `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-d4-acceptance-response.md`
 
 ## Accepted Basis
 

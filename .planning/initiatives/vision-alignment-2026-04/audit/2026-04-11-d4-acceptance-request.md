@@ -12,7 +12,7 @@ Audit the D4 long-horizon roadmap deliberation for substantive review readiness 
 Files to read:
 - `.planning/initiatives/vision-alignment-2026-04/deliberations/05-long-horizon-roadmap.md` (full)
 - `.planning/initiatives/vision-alignment-2026-04/deliberations/05-decision-anchor.md` (full)
-- `.planning/initiatives/vision-alignment-2026-04/codex-call-2D.md` (full prompt; check whether the output satisfies it)
+- `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2D-D4-deliberation-long-horizon-roadmap.md` (full prompt; check whether the output satisfies it)
 - `.planning/initiatives/vision-alignment-2026-04/deliberations/01-decision-anchor.md` (full)
 - `.planning/initiatives/vision-alignment-2026-04/deliberations/02-decision-anchor.md` (full)
 - `.planning/initiatives/vision-alignment-2026-04/deliberations/03-decision-anchor.md` (full)

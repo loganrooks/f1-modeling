@@ -1,11 +1,11 @@
-# Claude Advisory Review — `codex-call-2C.md` (D5 Prompt Draft)
+# Claude Advisory Review — `spec-wave-2C-D5-deliberation-regulation-semantic-model.md` (D5 Prompt Draft)
 
 **Reviewer:** Claude Opus 4.6 (1M)
 **Review date:** 2026-04-11
-**Review type:** Advisory — user-initiated, not a formal audit request under `claude-audit-requests/`
-**Subject:** `.planning/initiatives/vision-alignment-2026-04/codex-call-2C.md` (as committed in `3471d5f`)
+**Review type:** Advisory — user-initiated, not a formal audit request under `audit/`
+**Subject:** `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2C-D5-deliberation-regulation-semantic-model.md` (as committed in `3471d5f`)
 **Status of subject:** Drafted and committed; **not yet launched** as of review time (verified — no `04-*.md` files in deliberations directory; Codex sessions only reference the filename in orchestrator context, not as exec input)
-**Context of review:** User asked for a Claude second opinion on the D5 prompt before launch, continuing the advisory use pattern documented in `CLAUDE-SESSION-HANDOFF.md` and applied to the D3 prompt (review file `codex-call-2B-ii-claude-review.md`). This is not a formal cross-model audit and does not replace Codex's judgment — it is input for the Codex orchestrator to consider when deciding whether to amend the prompt before launching.
+**Context of review:** User asked for a Claude second opinion on the D5 prompt before launch, continuing the advisory use pattern documented in `handoff-claude-fallback-session.md` and applied to the D3 prompt (review file `review-spec-wave-2B-ii-D3-prompt-claude-advisory.md`). This is not a formal cross-model audit and does not replace Codex's judgment — it is input for the Codex orchestrator to consider when deciding whether to amend the prompt before launching.
 
 ---
 
@@ -38,7 +38,7 @@ All structural boxes checked against the D2/D3 prompt patterns and `RESEARCH-PRI
 | Completion signal structured for orchestrator parsing | ✓ | Fields for each D5.A-D disposition + D1/D2/D3/memo push-back |
 | Deferral and reframing explicitly permitted | ✓ | In Reminders |
 | `DESN-01`, `VISU-03`, `VISU-04`, `VAL-01`, `EDU-01/02/03` references | ✓ | All verified present in `REQUIREMENTS.md`: DESN-01 at line 139 (Phase 8), VISU-03 at line 25 (Phase 4), VISU-04 at line 27 (Phase 5), VAL-01 at line 132 (Phase 7), EDU-01/02/03 at lines 101/103/105 (Phase 4/5/4). All are real. Codex will find them. |
-| `wave-2-structure-review.md` reference for R5 split rationale | ✓ | Item 11 in required reading — correctly points Codex at the Codex GPT-5.4 xhigh review that produced the D1/D5 split decision |
+| `review-wave-2-structure-decisions.md` reference for R5 split rationale | ✓ | Item 11 in required reading — correctly points Codex at the Codex GPT-5.4 xhigh review that produced the D1/D5 split decision |
 
 **All structural boxes checked.** The prompt reflects lessons from the D2 and D3 runs and adds specific D5-appropriate guardrails that weren't needed before.
 
@@ -135,7 +135,7 @@ The most conservative path. Would add the ontology-vs-contract reminder and also
 
 ## What This Review Does Not Do
 
-Per Claude's advisory-mode role boundary (see `CLAUDE-SESSION-HANDOFF.md` § Advisory Use Pattern):
+Per Claude's advisory-mode role boundary (see `handoff-claude-fallback-session.md` § Advisory Use Pattern):
 
 - **This review does not override Codex's judgment.** It is input to Codex's orchestration work. The Codex orchestrator decides whether to amend the prompt and which disposition to adopt. Disagreeing with this review on warrant is explicitly fine.
 - **This review does not modify the prompt.** The one concern is described; the suggested fix is provided as inline text; the actual edit is Codex's to make (or not).
@@ -150,15 +150,15 @@ Per Claude's advisory-mode role boundary (see `CLAUDE-SESSION-HANDOFF.md` § Adv
 - D2 decision anchor: `.planning/initiatives/vision-alignment-2026-04/deliberations/02-decision-anchor.md`
 - D3 deliberation: `.planning/initiatives/vision-alignment-2026-04/deliberations/03-educational-content-architecture.md` (committed in `d1c35e4`, accepted in `9dfba9b`)
 - D3 decision anchor: `.planning/initiatives/vision-alignment-2026-04/deliberations/03-decision-anchor.md`
-- D5 prompt under review: `.planning/initiatives/vision-alignment-2026-04/codex-call-2C.md` (drafted in commit `3471d5f`)
+- D5 prompt under review: `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2C-D5-deliberation-regulation-semantic-model.md` (drafted in commit `3471d5f`)
 - D2 underspec signal (not directly relevant to D5 but part of the initiative's signal trail): `.planning/knowledge/signals/f1-modeling/2026-04-11-d2-underspecified-interface-types.md`
-- Prior advisory review (D3 prompt): `.planning/initiatives/vision-alignment-2026-04/codex-call-2B-ii-claude-review.md`
-- Initiative handoff: `.planning/initiatives/vision-alignment-2026-04/CLAUDE-SESSION-HANDOFF.md`
-- Codex orchestrator handoff: `.planning/initiatives/vision-alignment-2026-04/CODEX-ORCHESTRATOR-HANDOFF.md`
+- Prior advisory review (D3 prompt): `.planning/initiatives/vision-alignment-2026-04/reviews/review-spec-wave-2B-ii-D3-prompt-claude-advisory.md`
+- Initiative handoff: `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-claude-fallback-session.md`
+- Codex orchestrator handoff: `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-codex-primary-orchestrator.md`
 - Boundary memo: `.planning/initiatives/vision-alignment-2026-04/BOUNDARY-CONTRACT-MEMO.md`
 - R5 research (primary option-space input for D5): `.planning/initiatives/vision-alignment-2026-04/research/05-multi-regulation-typing.md`
-- Wave 2 structure review (rationale for D1/D5 R5 split): `.planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md`
+- Wave 2 structure review (rationale for D1/D5 R5 split): `.planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md`
 
 ---
 
-*End of Claude advisory review. Codex orchestrator: please read this document in full before deciding whether to amend `codex-call-2C.md` and which disposition (A / B / C) to adopt. If you want to escalate this finding to a formal audit, follow the protocol in `claude-audit-requests/README.md`.*
+*End of Claude advisory review. Codex orchestrator: please read this document in full before deciding whether to amend `spec-wave-2C-D5-deliberation-regulation-semantic-model.md` and which disposition (A / B / C) to adopt. If you want to escalate this finding to a formal audit, follow the protocol in `audit/README.md`.*

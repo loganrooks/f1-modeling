@@ -1,10 +1,10 @@
-# Claude Audit Request Protocol
+# Formal Audit Protocol
 
-This directory is where the **Codex primary orchestrator** writes audit requests when it needs a Claude cross-model audit on something. The audit results are written back to this directory.
+This directory is where the **Codex primary orchestrator** writes formal audit requests when it needs a Claude cross-model audit on something. The audit results are written back to this directory.
 
 ## Why This Directory Exists
 
-As of 2026-04-11, Codex is the primary orchestrator of the Vision Alignment Initiative (see `../CODEX-ORCHESTRATOR-HANDOFF.md`). Claude is a fallback used for cross-model audits at specific high-stakes moments and for user dialogue when requested (see `../CLAUDE-SESSION-HANDOFF.md`).
+As of 2026-04-11, Codex is the primary orchestrator of the Vision Alignment Initiative (see `../handoff-codex-primary-orchestrator.md`). Claude is a fallback used for cross-model audits at specific high-stakes moments and for user dialogue when requested (see `../handoff-claude-fallback-session.md`).
 
 Codex cannot directly invoke Claude. The user is the bridge between Codex and Claude sessions. This directory formalizes that bridge:
 
@@ -33,7 +33,7 @@ Example:
 
 ## When Codex Should Write an Audit Request
 
-From `CODEX-ORCHESTRATOR-HANDOFF.md` § "When to Request Claude Cross-Model Audit":
+From `handoff-codex-primary-orchestrator.md` § "When to Request Claude Cross-Model Audit":
 
 ### Scheduled high-stakes moments
 - **Before accepting D4 (long-horizon roadmap)** — synthesis deliberation shaping v2/v3/v4+ milestones
@@ -139,8 +139,8 @@ When Codex writes an audit request and presents it to the user:
 
 1. User reads the request to confirm it's sensible
 2. User starts a Claude session (fresh or continuing, depending on context budget)
-3. User says: "Read `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/YYYY-MM-DD-<topic>-request.md` and perform the audit per its instructions. You are in fallback auditor role, not primary orchestrator."
-4. Claude reads `CLAUDE-SESSION-HANDOFF.md` § "Fresh Session Onboarding Protocol (Fallback Claude Role)" → "For Claude invoked as cross-model auditor"
+3. User says: "Read `.planning/initiatives/vision-alignment-2026-04/audit/YYYY-MM-DD-<topic>-request.md` and perform the audit per its instructions. You are in fallback auditor role, not primary orchestrator."
+4. Claude reads `handoff-claude-fallback-session.md` § "Fresh Session Onboarding Protocol (Fallback Claude Role)" → "For Claude invoked as cross-model auditor"
 5. Claude performs the audit and writes the response document
 6. User confirms the response document exists
 7. User relays findings back to Codex (either by pasting key excerpts or by telling Codex to read the response document directly)

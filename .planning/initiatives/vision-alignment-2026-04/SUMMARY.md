@@ -1,5 +1,7 @@
 # Vision Alignment Initiative Summary
 
+**Status note (2026-04-16):** This file is the initiative's closing Stage 3 synthesis snapshot. The proposed planning-file changes referenced here were later applied on 2026-04-11; see `APPLICATION-LEDGER.md` for the live application trail.
+
 ## What this initiative decided
 
 **D1** accepted the durable compute shape: compiled requests, a transport-neutral `SimulationBackend`, typed jobs/events, durable artifacts, and execution-facing regulation snapshots. The project no longer has permission to treat synchronous local route execution as the long-term architecture.
@@ -26,7 +28,7 @@
 - `.planning/initiatives/vision-alignment-2026-04/synthesis/tech-debt-registry.md`
 - `.planning/knowledge/signals/f1-modeling/2026-04-11-d2-underspecified-interface-types.md`
 - `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md`
-- `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/2026-04-11-d4-acceptance-response.md`
+- `.planning/initiatives/vision-alignment-2026-04/audit/2026-04-11-d4-acceptance-response.md`
 
 ## What should be modified later
 
@@ -52,6 +54,6 @@
 - Benchmark/reference-competitor depth beyond the current low-fidelity substitute remains deferred to later milestone work.
 - Collaboration, multi-user scope, and live race-weekend operational use remain later-horizon questions.
 
-## What happens next
+## What happened next
 
-Normal project planning should resume only after the user reviews and applies the Stage 3 proposals they agree with. The next concrete move is to patch `ROADMAP.md`, `CLAUDE.md`, and planning/process guidance from the Stage 3A and 3B synthesis outputs, then start `/gsdr:plan-phase 04` against the revised pre-Phase-4 sequence instead of the old direct `3.1 -> 4` assumption.
+The Stage 3 proposals were applied on 2026-04-11. The live repo now uses the revised roadmap, guardrails, and tech-debt registry, and the next real project step is Phase 3.2 context/planning rather than direct Phase 4 planning.

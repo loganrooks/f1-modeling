@@ -1,140 +1,100 @@
 # Initiative: Vision Alignment 2026-04
 
-**Status:** Planned, awaiting Wave 1 execution
+**Status:** Completed; Stage 3 outputs were applied to live planning files on 2026-04-11
 **Started:** 2026-04-10
 **Owner:** Logan Rooks
-**Runtime:** Codex GPT-5.4 (primary execution), Claude Opus 4.6 (oversight)
+**Primary runtime during execution:** Codex GPT-5.4 with Claude Opus 4.6 oversight/audit roles
 
----
+## What This Was
 
-## Why This Is Not a Phase
+This initiative was a mid-milestone architecture and roadmap realignment effort. It existed because Phase 4 research had answered the wrong-sized question: it was drifting toward a tactical visualization-library choice when the project vision actually required decisions about execution boundaries, visualization substrate, education architecture, regulation semantics, and long-horizon roadmap sequencing.
 
-GSDR phases are feature/capability-oriented with verifiable code deliverables that flow through discuss → plan → execute → verify. This work is **meta-work**:
+This is **not** a phase. It is a record of research, deliberation, synthesis, and application work that changed the live project roadmap and planning guardrails.
 
-- Inputs: three vision alignment audits + expanded VISION.md
-- Outputs: research reports, deliberation decisions, roadmap evolution, tech debt registry, guardrail conventions
-- Does not produce code directly — its outputs flow INTO phases as modifications to ROADMAP.md, CLAUDE.md, and new phase insertions
+## Start Here
 
-This exceeds the current GSDR formalized workflow in several ways. Workflow gap signals have been filed at `.planning/knowledge/signals/f1-modeling/` documenting the gaps so the GSDR tool itself can grow to support this kind of work natively.
+- `SPEC-INDEX.md` — canonical map from executable spec files to outputs, reviews, and audits
+- `APPLICATION-LEDGER.md` — what from the initiative was actually applied to the repo, and in which commits
+- `SUMMARY.md` — the Stage 3 synthesis closeout snapshot
+- `audit/2026-04-11-stage-3-application-response.md` — the formal application-readiness audit
 
-## Methodological Foundation
+## Current Repo Consequence
 
-This initiative critically inherits research methodology from prior work on the Prix Guesser project (2026-04). The core principles — non-foreclosure, terrain mapping over solution evaluation, hidden-assumption surfacing, trajectory analysis, explicit gray-area handling, path-of-inquiry traceability, deferral as valid outcome — are captured in `RESEARCH-PRINCIPLES.md`.
+The initiative's planning outputs have already been applied:
 
-**Every Codex invocation in this initiative MUST read `RESEARCH-PRINCIPLES.md` before beginning its task.** The principles document overrides any tension with task-specific instructions.
+- `.planning/ROADMAP.md` now inserts Phases 3.2, 3.3, and 3.4 before Phase 4
+- `CLAUDE.md` now carries the accepted vision-alignment guardrails
+- `.planning/TECH-DEBT.md` now exists as the living registry for the accepted rewrite triggers and deferred obligations
+- `.planning/STATE.md` now points to Phase 3.2 as the next live planning step
 
-The structural implication: research tasks are framed as terrain mapping, not solution selection. Deliberations permit deferral and reframing as outcomes, not just recommendations. Iteration is supported when findings warrant it. The wave structure is scaffolding, not an execution contract — it is subject to revision at every review gate.
+The next live project action is **Phase 3.2 context gathering and planning**, not direct Phase 4 planning.
 
-## Trigger
+## Record Layout
 
-Three parallel vision alignment audits (2026-04-08) identified 15 findings converging on a core message: the Phase 4 research answered the wrong-sized question. It resolved "which charting toolkit?" when the vision was asking "what architecture lets this become a serious engineering-and-education platform?"
+- `RESEARCH-PRINCIPLES.md` — methodology used throughout the initiative
+- `BOUNDARY-CONTRACT-MEMO.md` — synthesis memo that shaped the Wave 2 deliberations
+- `PLAN.md` — historical scaffolding snapshot of the initiative's planned wave structure
+- `SUMMARY.md` — historical synthesis snapshot from the initiative closeout
+- `specs/` — canonical executable task specs used to produce the initiative outputs
+- `research/` — terrain-mapping outputs
+- `deliberations/` — D1/D2/D3/D5/D4 decision records and anchors
+- `synthesis/` — Stage 3A / 3B outputs
+- `reviews/` — advisory reviews and cross-model structure review artifacts
+- `audit/` — formal audit request/response trail
+- `handoffs/` — orchestrator and fallback-role handoffs
+- `reports/` — execution/process reports
+- `logs/` — raw execution logs
+- `archive/` — superseded drafts retained for traceability
 
-The audits identified six must-haves that demand coordinated thinking before Phase 4 planning can safely proceed:
+## Reading Paths
 
-1. `SimulationBackend` abstraction (transport-neutral boundary + async job model + streaming)
-2. Visualization primitive layer (renderer-agnostic, visx as first impl, Canvas escape hatch)
-3. Typed regulation families (discriminated unions)
-4. Educational content architecture (lesson schema, learning overlays)
-5. Performance budget (measurable targets, not philosophical debates)
-6. Computational backend strategy (TypeScript vs hybrid, language choice, migration path)
+For an architecture audit:
 
-Plus a user-raised gap: **no explicit optimization / computational-efficiency track in the roadmap.**
+- `SPEC-INDEX.md`
+- `deliberations/01-decision-anchor.md` through `deliberations/05-decision-anchor.md`
+- `audit/2026-04-11-d4-acceptance-response.md`
+- `audit/2026-04-11-stage-3-application-response.md`
+- `APPLICATION-LEDGER.md`
 
-## Scope
+For a process/debrief review:
 
-**In scope (current scaffolding — subject to revision at review gates):**
-- Research on 5 domains (compute backends, visualization at scale, educational content, streaming, multi-regulation typing)
-- Deliberations on computational backend strategy, visualization architecture, educational content architecture, long-horizon roadmap (approximate count — may change based on research findings)
-- Synthesis: roadmap evolution, phase insertion proposals, guardrails, tech debt registry
-- Iterative drafting of D2 (visualization) and D3 (education) to honor their bidirectional coupling
+- `reviews/review-wave-2-structure-decisions.md`
+- `reports/report-wave-1-orchestrator-execution.md`
+- `handoffs/`
+- `audit/`
+- `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`
 
-**Out of scope:**
-- Implementation of any decisions (that happens in new/modified phases after this initiative)
-- Immediate Phase 4 planning (blocked until deliberations resolve)
+For live project continuation:
 
-## Structure
+- `.planning/STATE.md`
+- `.planning/ROADMAP.md`
+- `.planning/TECH-DEBT.md`
 
-See `PLAN.md` for detailed wave structure. Summary:
+## Historical Snapshot Note
 
-| Wave | Calls | Purpose |
-|------|-------|---------|
-| 1 | 1A, 1B, 1C (parallel) | Research Round 1 (terrain mapping) |
-| Gate 1 | — | User review; reshape later waves if warranted |
-| 1.5 | optional | Targeted follow-up research if findings warrant |
-| 2a | 2A (serial) | D1 compute backend deliberation |
-| Gate 2a | — | User review |
-| 2b | 2B-i → 2B-ii → optional 2B-iii (serial, iterative) | D2 + D3 coupled deliberations via iterative drafting |
-| Gate 2b | — | User review |
-| 2c | 2C (serial) | D4 long-horizon deliberation |
-| Gate 2c | — | User review |
-| 3 | 3A, 3B (serial) | Synthesis: roadmap, phase insertions, guardrails, tech debt, summary |
-
-**Minimum 9 Codex calls, 8 wall-clock steps.** Actual count may grow if Round 1.5 triggers or Wave 2b-iii runs.
-
-## Key Files
-
-### Methodology and scaffolding
-- `RESEARCH-PRINCIPLES.md` — methodological manifesto, required reading for every Codex call
-- `BOUNDARY-CONTRACT-MEMO.md` — synthesis of Wave 1's convergent insight, required reading for every Wave 2 deliberation prompt, contains 8-item contract/ontology catalog and 7 cross-cutting constraints
-- `PLAN.md` — master plan with wave structure, dependencies, invocation patterns, progress tracker
-
-### Orchestration handoffs (read the one relevant to your role)
-- **`CODEX-ORCHESTRATOR-HANDOFF.md`** — PRIMARY orchestrator handoff as of 2026-04-11. Read this if you are the Codex orchestrator session picking up the initiative from Wave 2B-i forward.
-- `CLAUDE-SESSION-HANDOFF.md` — FALLBACK role handoff for Claude sessions invoked as cross-model auditor, user dialogue partner, or emergency fallback. Claude is NOT primary orchestrator as of 2026-04-11.
-- `ORCHESTRATOR-HANDOFF.md` — original Wave 1 Codex orchestrator handoff (obsolete, retained for reference)
-- `ORCHESTRATOR-HANDOFF-wave-2B-i.md` — narrow single-wave Codex orchestrator handoff (obsolete given Codex's expanded primary role, retained for pattern reference)
-
-### Wave prompt files
-- `codex-call-1A.md`, `codex-call-1B.md`, `codex-call-1C.md` — Wave 1 research prompts (executed)
-- `codex-call-1-5-performance-envelopes.md` — Round 1.5 performance envelopes prompt (executed)
-- `codex-call-2A.md` — D1 backend boundary deliberation prompt (executed, D1 accepted)
-- `codex-call-2B-i.md` — D2 visualization architecture deliberation prompt (drafted, awaiting launch)
-- Prompts for Wave 2B-ii (D3), Wave 2B-iii (optional D2 revision), Wave 2C (D5), Wave 2D (D4), Wave 3A, Wave 3B are **authored at the corresponding review gates**, informed by what earlier waves actually surface. This respects the "scaffolding not execution plan" principle.
-
-## Orchestration Model (as of 2026-04-11)
-
-**Primary orchestrator:** Codex GPT-5.4 xhigh (per `CODEX-ORCHESTRATOR-HANDOFF.md`)
-
-- Codex launches each remaining deliberation
-- Codex reviews each deliberation output substantively
-- Codex drafts the next wave's prompt informed by the current wave's findings
-- Codex interacts with the user at review gates
-- Codex requests Claude cross-model audits at specific named moments
-
-**Fallback orchestrator:** Claude Opus 4.6 (per `CLAUDE-SESSION-HANDOFF.md`)
-
-- Cross-model auditor for high-stakes moments (before closing D4, before applying synthesis to ROADMAP.md, ad-hoc when Codex orchestrator requests)
-- User dialogue partner when user explicitly wants Claude input
-- Emergency fallback if Codex orchestrator gets stuck or produces output the user doesn't trust
-
-**Why the shift (from Waves 1-2A Claude primary, to Wave 2B-i+ Codex primary):** Claude usage budget constraints. Claude successfully ran Waves 1 through 2A (with Codex executing individual research calls and D1 via `codex exec`). Codex has more available usage budget, so primary orchestration shifts to Codex for the remaining waves. The methodology lives in documents (RESEARCH-PRINCIPLES.md, BOUNDARY-CONTRACT-MEMO.md, this README, etc.), not in any specific model's memory, so the shift is supported by the same principles that guided Claude's orchestration.
+`PLAN.md` and `SUMMARY.md` are retained as historical snapshots of the initiative while it was still in-flight or just closing. They are useful for auditability, but the current project state is governed by `.planning/ROADMAP.md`, `.planning/STATE.md`, and `APPLICATION-LEDGER.md`.
 
 ## Source Documents
 
-Every stage reads these (summarized in `RESEARCH-PRINCIPLES.md` references):
+The initiative was grounded in:
 
-- `.planning/VISION.md` — the expanded platform vision
-- `.planning/PROJECT.md` — current project definition
-- `.planning/ROADMAP.md` — current 11-phase milestone
-- `.planning/REQUIREMENTS.md` — 42 v1 requirements
-- `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md` — consolidated audit response with 15 findings and dispositions
-- `.planning/audits/vision-audit-2026-04-08/opus-audit.md` — Opus independent audit
-- `.planning/audits/vision-audit-2026-04-08/codex-audit.md` — Codex high-reasoning audit
-- `.planning/audits/vision-audit-2026-04-08/codex-xhigh-audit.md` — Codex xhigh-reasoning audit
+- `.planning/VISION.md`
+- `.planning/PROJECT.md`
+- `.planning/ROADMAP.md`
+- `.planning/REQUIREMENTS.md`
+- `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md`
+- `.planning/audits/vision-audit-2026-04-08/opus-audit.md`
+- `.planning/audits/vision-audit-2026-04-08/codex-audit.md`
+- `.planning/audits/vision-audit-2026-04-08/codex-xhigh-audit.md`
 
-## Archive
+## Completion Status
 
-The `archive/` directory contains superseded earlier drafts of the initiative structure, retained for traceability. See `archive/README.md` for what changed and why.
+The initiative's substantive closure criteria were met:
 
-## Completion Criteria
+- research outputs were produced
+- deliberation outcomes were recorded
+- synthesis outputs were produced
+- formal audits were run at the high-stakes application points
+- roadmap / guardrail / tech-debt / state changes were applied to the live planning files
 
-This initiative is complete when:
-
-1. All research outputs pass epistemic hygiene review (assumptions surfaced, gray areas handled via the three-response framework, trajectories analyzed, precedents cited, confidence calibrated, path of inquiry documented)
-2. All deliberations have outcomes recorded — recommendation with warrant, provisional recommendation with closure criteria, explicit deferral with closure criteria, or reframing (the number and shape of deliberations may differ from the initial scaffolding)
-3. Synthesis outputs propose concrete project-file changes
-4. User reviews and accepts synthesis outputs
-5. ROADMAP.md, CLAUDE.md, and phase CONTEXT.md templates are updated via atomic commits
-6. `SUMMARY.md` captures what was decided, what was deferred, what was reframed, and the path of inquiry across the initiative
-
-After completion, Phase 4 planning (`/gsdr:plan-phase 04`) can safely proceed on the new architectural foundation.
+What remains is not initiative completion; it is downstream project work under the revised roadmap.

@@ -9,7 +9,7 @@
 
 ## Who You Are In This Session
 
-You are **the orchestrator for Wave 2B-i** of the Vision Alignment Initiative. You are NOT the deliberator. The deliberation itself will run in a child process (or Codex-native subagent) that consumes `codex-call-2B-i.md`. Your job is narrow:
+You are **the orchestrator for Wave 2B-i** of the Vision Alignment Initiative. You are NOT the deliberator. The deliberation itself will run in a child process (or Codex-native subagent) that consumes `spec-wave-2B-i-D2-deliberation-visualization-architecture.md`. Your job is narrow:
 
 1. Understand what this wave is (read the handoff + brief overview files)
 2. Launch the D2 deliberation (single call, not parallel)
@@ -46,7 +46,7 @@ This is the **Wave 2 equivalent of the Wave 1 orchestrator handoff.** The patter
 - **Do NOT do research or deliberation yourself.** Your job is to launch the child process that does that work.
 - **Do NOT attempt to parallelize** — this wave is one deliberation, not parallel subagents.
 - **Do NOT summarize the deliberation findings in depth.** Your report is shallow observations ("output exists, required sections present, push-back flagged in section X") — NOT "here's what D2 decided about C4." That deep analysis belongs to the Claude review session.
-- **Do NOT read `CLAUDE-SESSION-HANDOFF.md`.** That's a Claude-to-Claude handoff; you are doing different work. It would waste your context.
+- **Do NOT read `handoff-claude-fallback-session.md`.** That's a Claude-to-Claude handoff; you are doing different work. It would waste your context.
 
 ---
 
@@ -58,14 +58,14 @@ Budget ~20-30K tokens for this reading. Keep it narrow — you are not onboardin
 2. `.planning/initiatives/vision-alignment-2026-04/README.md` — initiative overview (skim for context, don't over-read)
 3. `.planning/initiatives/vision-alignment-2026-04/PLAN.md` — check the progress tracker to confirm state (Wave 1 complete, Round 1.5 complete, Wave 2A/D1 complete with Decision Record filled, Wave 2B-i awaiting launch)
 4. `.planning/initiatives/vision-alignment-2026-04/RESEARCH-PRINCIPLES.md` — required reading for the deliberation (so you know what sections to verify in D2's output)
-5. `.planning/initiatives/vision-alignment-2026-04/codex-call-2B-i.md` — the D2 deliberation prompt. Read this to understand what D2 will produce. **Pay particular attention to the "Required Deliberation Format" section and the "Additional D2-specific required subsections" (D2.A/B/C/D).** These are the sections your verification step must check for.
+5. `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-i-D2-deliberation-visualization-architecture.md` — the D2 deliberation prompt. Read this to understand what D2 will produce. **Pay particular attention to the "Required Deliberation Format" section and the "Additional D2-specific required subsections" (D2.A/B/C/D).** These are the sections your verification step must check for.
 
 **Do NOT read (not needed for orchestration):**
 - `BOUNDARY-CONTRACT-MEMO.md` — input for the child process, not for you
 - `deliberations/01-backend-boundary-architecture.md` and `01-decision-anchor.md` — inputs for the child process
 - `research/*.md` files — inputs for the child process
-- `wave-2-structure-review.md` — historical context, not needed for execution
-- `CLAUDE-SESSION-HANDOFF.md` — different audience, different purpose
+- `review-wave-2-structure-decisions.md` — historical context, not needed for execution
+- `handoff-claude-fallback-session.md` — different audience, different purpose
 - `VISION.md`, `PROJECT.md`, source code — inputs for the child process
 
 ---
@@ -84,7 +84,7 @@ which codex && codex --version
 ls -la .planning/initiatives/vision-alignment-2026-04/
 
 # Check the D2 prompt exists
-ls -la .planning/initiatives/vision-alignment-2026-04/codex-call-2B-i.md
+ls -la .planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-i-D2-deliberation-visualization-architecture.md
 
 # Check the deliberations directory has D1 outputs (prerequisites for D2)
 ls -la .planning/initiatives/vision-alignment-2026-04/deliberations/
@@ -114,7 +114,7 @@ Launch D2 as a Codex-native background subagent (recommended — the Wave 1 orch
 **Preferred launch method: Codex-native parallel subagent with disjoint write scope.**
 
 The subagent task:
-- Read `.planning/initiatives/vision-alignment-2026-04/codex-call-2B-i.md`
+- Read `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-i-D2-deliberation-visualization-architecture.md`
 - Follow its instructions exactly
 - Produce `.planning/initiatives/vision-alignment-2026-04/deliberations/02-visualization-architecture.md`
 - Produce `.planning/initiatives/vision-alignment-2026-04/deliberations/02-decision-anchor.md`
@@ -127,7 +127,7 @@ cd /home/rookslog/workspace/projects/f1-modeling
 
 # NOTE: detached nohup launches stall at prompt ingest (Wave 1 lesson).
 # Use a normal background process within this Codex session's shell.
-bash -c "cat .planning/initiatives/vision-alignment-2026-04/codex-call-2B-i.md | codex exec -m gpt-5.4 -c model_reasoning_effort=xhigh -s danger-full-access -" \
+bash -c "cat .planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-i-D2-deliberation-visualization-architecture.md | codex exec -m gpt-5.4 -c model_reasoning_effort=xhigh -s danger-full-access -" \
   > .planning/initiatives/vision-alignment-2026-04/logs/wave-2B-i.log 2>&1 &
 echo "Wave 2B-i PID: $!"
 ```
@@ -171,7 +171,7 @@ Run a **shallow conformance check** — use `grep` to verify the main deliberati
 # Check for standard deliberation sections
 grep -E "^## " .planning/initiatives/vision-alignment-2026-04/deliberations/02-visualization-architecture.md
 
-# Check for D2-specific subsections (from codex-call-2B-i.md)
+# Check for D2-specific subsections (from spec-wave-2B-i-D2-deliberation-visualization-architecture.md)
 grep -iE "workspace shell|design system|accessibility|cross-device|thin-client" \
   .planning/initiatives/vision-alignment-2026-04/deliberations/02-visualization-architecture.md | head -20
 
@@ -257,13 +257,13 @@ State clearly:
 - Output files are ready for user review at Review Gate 2b-i
 - The Decision Record in the D2 deliberation is empty and awaits user decisions
 - Wave 2B-ii (D3) prompt has NOT been authored (per methodology — it requires a Claude session drafting it informed by D2's decision anchor)
-- User should open a fresh Claude session with `CLAUDE-SESSION-HANDOFF.md` as the onboarding document, then review D2's output and fill the Decision Record
+- User should open a fresh Claude session with `handoff-claude-fallback-session.md` as the onboarding document, then review D2's output and fill the Decision Record
 
 ## Recommended next step for user
 
 Proceed to Review Gate 2b-i:
 1. Start a fresh Claude session
-2. Point Claude at `.planning/initiatives/vision-alignment-2026-04/CLAUDE-SESSION-HANDOFF.md` for onboarding
+2. Point Claude at `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-claude-fallback-session.md` for onboarding
 3. Instruct Claude to read this orchestrator report + `deliberations/02-decision-anchor.md` first, then the full `02-visualization-architecture.md`
 4. Claude will provide substantive review against the four verification criteria in the Claude handoff:
    - Does D2 respect the label-trap?
@@ -284,7 +284,7 @@ After writing the orchestrator report, print a final message and stop:
 ```
 Wave 2B-i orchestration complete. See wave-2B-i-orchestrator-report.md for details.
 
-Next step: user opens a fresh Claude session with CLAUDE-SESSION-HANDOFF.md
+Next step: user opens a fresh Claude session with handoff-claude-fallback-session.md
 as onboarding, then reviews D2's output and fills the Decision Record.
 
 Orchestrator stopping per methodology (no autonomous progression past Review Gate 2b-i).
@@ -318,7 +318,7 @@ The Vision Alignment Initiative deliberately structures research and deliberatio
 
 **The separation of concerns this enables:**
 - **Codex orchestrator** does infrastructure work: launch, monitor, verify, report, stop. This is what Codex is cheap and good at.
-- **Claude session (post-orchestrator)** does substantive review and prompt drafting for the next wave. This requires the nuanced context that only a Claude session has (either via `CLAUDE-SESSION-HANDOFF.md` onboarding or via live user dialogue).
+- **Claude session (post-orchestrator)** does substantive review and prompt drafting for the next wave. This requires the nuanced context that only a Claude session has (either via `handoff-claude-fallback-session.md` onboarding or via live user dialogue).
 - **User** fills Decision Records and provides authorization between waves. This is the human judgment that both orchestrators serve.
 
 The earlier (Wave 1) ORCHESTRATOR-HANDOFF.md established this pattern for parallel research launches. This Wave 2B-i handoff adapts the pattern for a single serial deliberation launch. The shape is the same: you launch, you monitor, you verify, you write a shallow report, you stop.
@@ -331,7 +331,7 @@ The lesson this handoff inherits from Wave 1: **detached `nohup` launches stall 
 
 **Working directory:** `/home/rookslog/workspace/projects/f1-modeling/`
 **Initiative directory:** `.planning/initiatives/vision-alignment-2026-04/`
-**D2 prompt to run:** `.planning/initiatives/vision-alignment-2026-04/codex-call-2B-i.md`
+**D2 prompt to run:** `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-i-D2-deliberation-visualization-architecture.md`
 **Output location:** `.planning/initiatives/vision-alignment-2026-04/deliberations/`
 **Logs location:** `.planning/initiatives/vision-alignment-2026-04/logs/`
 **Report location:** `.planning/initiatives/vision-alignment-2026-04/wave-2B-i-orchestrator-report.md`

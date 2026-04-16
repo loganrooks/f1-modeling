@@ -51,7 +51,7 @@ The consequence: this is **not a pure visualization performance research task**.
 3. `.planning/initiatives/vision-alignment-2026-04/RESEARCH-PRINCIPLES.md` — methodology
 4. `.planning/initiatives/vision-alignment-2026-04/BOUNDARY-CONTRACT-MEMO.md` — synthesis of Wave 1 convergent insight; pay attention to "Cross-cutting 1: Performance envelope" and to the contract catalog (this memo names what your envelopes will eventually constrain)
 5. `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md` — Finding #10 (performance budget novel, accept disposition)
-6. `.planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md` — Codex review section, specifically Decision 2 analysis and the wider-scope refinement
+6. `.planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md` — Codex review section, specifically Decision 2 analysis and the wider-scope refinement
 7. `.planning/initiatives/vision-alignment-2026-04/research/02-visualization-at-scale.md` — UI/rendering envelope evidence
 8. `.planning/initiatives/vision-alignment-2026-04/research/04-streaming-architectures.md` — job/compute envelope evidence
 9. `.planning/initiatives/vision-alignment-2026-04/research/01-compute-backends.md` — backend trajectory and workload cadence framing

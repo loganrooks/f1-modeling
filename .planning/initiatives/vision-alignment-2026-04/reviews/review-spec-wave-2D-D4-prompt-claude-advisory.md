@@ -1,11 +1,11 @@
-# Claude Advisory Review — `codex-call-2D.md` (D4 Prompt Draft)
+# Claude Advisory Review — `spec-wave-2D-D4-deliberation-long-horizon-roadmap.md` (D4 Prompt Draft)
 
 **Reviewer:** Claude Opus 4.6 (1M)
 **Review date:** 2026-04-11
-**Review type:** Advisory — user-initiated, not a formal audit request under `claude-audit-requests/`
-**Subject:** `.planning/initiatives/vision-alignment-2026-04/codex-call-2D.md` (as committed in `2596e47`)
+**Review type:** Advisory — user-initiated, not a formal audit request under `audit/`
+**Subject:** `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2D-D4-deliberation-long-horizon-roadmap.md` (as committed in `2596e47`)
 **Status of subject:** Drafted and committed; **not yet launched** as of review time (verified — no `05-*.md` files in deliberations directory)
-**Context of review:** User asked for a Claude second opinion on the D4 prompt before launch, continuing the advisory use pattern documented in `CLAUDE-SESSION-HANDOFF.md` and applied to the D3 and D5 prompts. This is not a formal cross-model audit. The formal audit for D4 happens **after** D4 produces output, per the `CODEX-ORCHESTRATOR-HANDOFF.md` schedule ("before accepting D4" is one of the scheduled high-stakes audit moments), and would go through the `claude-audit-requests/` protocol rather than this advisory pattern.
+**Context of review:** User asked for a Claude second opinion on the D4 prompt before launch, continuing the advisory use pattern documented in `handoff-claude-fallback-session.md` and applied to the D3 and D5 prompts. This is not a formal cross-model audit. The formal audit for D4 happens **after** D4 produces output, per the `handoff-codex-primary-orchestrator.md` schedule ("before accepting D4" is one of the scheduled high-stakes audit moments), and would go through the `audit/` protocol rather than this advisory pattern.
 
 ---
 
@@ -81,9 +81,9 @@ These are things the prompt got right that Codex should not revise away if it am
 
 All minor. None rise to the level of recommended amendment.
 
-### 1. OBSERVATIONAL — `wave-2-structure-review.md` not in required reading
+### 1. OBSERVATIONAL — `review-wave-2-structure-decisions.md` not in required reading
 
-D5's prompt included `wave-2-structure-review.md` (the Codex GPT-5.4 xhigh review from 2026-04-11 that produced the D1/D5 R5 split, the contract-vs-ontology distinction, and the label-trap warning) as required reading item 11. D4's prompt does not.
+D5's prompt included `review-wave-2-structure-decisions.md` (the Codex GPT-5.4 xhigh review from 2026-04-11 that produced the D1/D5 R5 split, the contract-vs-ontology distinction, and the label-trap warning) as required reading item 11. D4's prompt does not.
 
 **Why this is observational, not a gap.** The structure review is primarily about initiative methodology (how Wave 2 was structured). D4 is about project roadmap (how v1/v2/v3/v4+ should be structured). The two "structures" are different — one is meta, one is object-level. D4 does not need the initiative structure review to do roadmap synthesis.
 
@@ -93,11 +93,11 @@ D5's prompt included `wave-2-structure-review.md` (the Codex GPT-5.4 xhigh revie
 
 ### 2. OBSERVATIONAL — Prior Claude advisory review files not referenced
 
-D4 is the scheduled formal audit trigger per `CODEX-ORCHESTRATOR-HANDOFF.md`. The prompt correctly mentions *"later Claude cross-model audit before D4 acceptance"* in the Feeds line. But it does not reference the prior Claude advisory review files (`codex-call-2B-ii-claude-review.md`, `codex-call-2C-claude-review.md`, and this file once committed) as context.
+D4 is the scheduled formal audit trigger per `handoff-codex-primary-orchestrator.md`. The prompt correctly mentions *"later Claude cross-model audit before D4 acceptance"* in the Feeds line. But it does not reference the prior Claude advisory review files (`review-spec-wave-2B-ii-D3-prompt-claude-advisory.md`, `review-spec-wave-2C-D5-prompt-claude-advisory.md`, and this file once committed) as context.
 
 **Why this is observational.** The Claude reviews are meta-process artifacts, not architectural inputs. Codex does not need to read them to do the D4 deliberation. D4's inputs are D1-D5 decision anchors, research, VISION, REQUIREMENTS, ROADMAP, audit response, and the boundary memo — all already in the reading list.
 
-**Weak argument for including them.** Advisory review is now part of the initiative's norm. If D4 closes with recommendations that might later be audited via the formal `claude-audit-requests/` protocol, Codex having prior context on how Claude advisory reviews have been shaped could improve the quality of D4's self-review before the formal audit. But this is a stretch — Codex will do its own internal review regardless.
+**Weak argument for including them.** Advisory review is now part of the initiative's norm. If D4 closes with recommendations that might later be audited via the formal `audit/` protocol, Codex having prior context on how Claude advisory reviews have been shaped could improve the quality of D4's self-review before the formal audit. But this is a stretch — Codex will do its own internal review regardless.
 
 **Disposition:** do not amend. Low priority observation only.
 
@@ -130,9 +130,9 @@ Three options, ranked by Claude's preference:
 
 Do not amend. Launch D4. The prompt is structurally strong, handles the synthesis-specific failure modes well, and my concerns are all observational rather than gap-level. Claude recommends Option A unambiguously this time — none of the concerns would materially improve D4's output, and prompt amendment has diminishing returns past a certain threshold.
 
-### Option B — Add the `wave-2-structure-review.md` reference to required reading (optional, low-value)
+### Option B — Add the `review-wave-2-structure-decisions.md` reference to required reading (optional, low-value)
 
-If the orchestrator wants Codex to have maximum initiative-history context when doing D4's forward projection, add item 13 to required reading: *"`.planning/initiatives/vision-alignment-2026-04/wave-2-structure-review.md` — initiative structure evolution context; inform D4.B roadmap evolution willingness."* This is a weak argument and the benefit is small.
+If the orchestrator wants Codex to have maximum initiative-history context when doing D4's forward projection, add item 13 to required reading: *"`.planning/initiatives/vision-alignment-2026-04/reviews/review-wave-2-structure-decisions.md` — initiative structure evolution context; inform D4.B roadmap evolution willingness."* This is a weak argument and the benefit is small.
 
 ### Option C — No amendment path meaningfully conservative beyond Option A
 
@@ -148,7 +148,7 @@ This is the one place where D4 differs from D2/D3/D5 in how acceptance should be
 
 **D2/D3/D5 pattern:** Claude advisory review of prompt → Codex amend or not → launch → deliberation → Claude advisory review of deliberation → user fills Decision Record → commit.
 
-**D4 pattern (per CODEX-ORCHESTRATOR-HANDOFF.md):** Claude advisory review of prompt → Codex amend or not → launch → deliberation → **Codex orchestrator writes formal audit request to `claude-audit-requests/` per protocol** → Claude performs formal cross-model audit → Claude writes findings back to `claude-audit-requests/` → user reviews findings → **user fills Decision Record only after audit findings are considered** → commit.
+**D4 pattern (per handoff-codex-primary-orchestrator.md):** Claude advisory review of prompt → Codex amend or not → launch → deliberation → **Codex orchestrator writes formal audit request to `audit/` per protocol** → Claude performs formal cross-model audit → Claude writes findings back to `audit/` → user reviews findings → **user fills Decision Record only after audit findings are considered** → commit.
 
 The formal audit step is specifically scheduled for D4 because D4's acceptance locks in the roadmap projection that will shape Phase 4 planning and v2/v3/v4+ milestones. It is the highest-stakes acceptance in the initiative.
 
@@ -156,7 +156,7 @@ The formal audit step is specifically scheduled for D4 because D4's acceptance l
 
 1. Read D4's outputs
 2. Do its own orchestrator-level review (same as D2/D3/D5 review)
-3. Write a formal audit request to `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/YYYY-MM-DD-d4-acceptance-request.md` per the protocol in `claude-audit-requests/README.md`
+3. Write a formal audit request to `.planning/initiatives/vision-alignment-2026-04/audit/YYYY-MM-DD-d4-acceptance-request.md` per the protocol in `audit/README.md`
 4. Present the request to the user
 5. Wait for user to relay findings back
 
@@ -168,12 +168,12 @@ This review does not replace the formal audit. It's an advisory review of the pr
 
 ## What This Review Does Not Do
 
-Per Claude's advisory-mode role boundary (see `CLAUDE-SESSION-HANDOFF.md` § Advisory Use Pattern):
+Per Claude's advisory-mode role boundary (see `handoff-claude-fallback-session.md` § Advisory Use Pattern):
 
 - **This review does not override Codex's judgment.** It is input to Codex's orchestration work. The Codex orchestrator decides whether to amend the prompt and which disposition to adopt.
 - **This review does not modify the prompt.** The observations are described; no fixes are suggested because none are warranted.
 - **This review does not take over orchestration.** Codex remains primary per the handoff.
-- **This review does not perform the formal audit at D4 acceptance.** That happens after the deliberation runs, via the `claude-audit-requests/` protocol, and is a different type of intervention.
+- **This review does not perform the formal audit at D4 acceptance.** That happens after the deliberation runs, via the `audit/` protocol, and is a different type of intervention.
 - **This review does not re-litigate D1/D2/D3/D5 closures.** D4's job is to synthesize them into roadmap shape; the prompt correctly protects them from re-opening.
 
 ## Related Artifacts
@@ -183,14 +183,14 @@ Per Claude's advisory-mode role boundary (see `CLAUDE-SESSION-HANDOFF.md` § Adv
 - D3 deliberation: `.planning/initiatives/vision-alignment-2026-04/deliberations/03-educational-content-architecture.md` (accepted in commits `d1c35e4`/`9dfba9b`)
 - D5 deliberation: `.planning/initiatives/vision-alignment-2026-04/deliberations/04-regulation-semantic-model.md` (accepted in commits `47c2441`/`4366bd6`)
 - All four decision anchors: `deliberations/01-decision-anchor.md`, `02-decision-anchor.md`, `03-decision-anchor.md`, `04-decision-anchor.md`
-- D4 prompt under review: `.planning/initiatives/vision-alignment-2026-04/codex-call-2D.md` (drafted in commit `2596e47`)
-- Prior Claude advisory reviews: `codex-call-2B-ii-claude-review.md` (D3 prompt), `codex-call-2C-claude-review.md` (D5 prompt)
+- D4 prompt under review: `.planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2D-D4-deliberation-long-horizon-roadmap.md` (drafted in commit `2596e47`)
+- Prior Claude advisory reviews: `review-spec-wave-2B-ii-D3-prompt-claude-advisory.md` (D3 prompt), `review-spec-wave-2C-D5-prompt-claude-advisory.md` (D5 prompt)
 - D2 underspec signal: `.planning/knowledge/signals/f1-modeling/2026-04-11-d2-underspecified-interface-types.md`
-- Initiative handoff: `.planning/initiatives/vision-alignment-2026-04/CLAUDE-SESSION-HANDOFF.md`
-- Codex orchestrator handoff: `.planning/initiatives/vision-alignment-2026-04/CODEX-ORCHESTRATOR-HANDOFF.md`
+- Initiative handoff: `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-claude-fallback-session.md`
+- Codex orchestrator handoff: `.planning/initiatives/vision-alignment-2026-04/handoffs/handoff-codex-primary-orchestrator.md`
 - Boundary memo: `.planning/initiatives/vision-alignment-2026-04/BOUNDARY-CONTRACT-MEMO.md`
-- Audit request protocol (for the formal audit after D4 runs): `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/README.md`
+- Audit request protocol (for the formal audit after D4 runs): `.planning/initiatives/vision-alignment-2026-04/audit/README.md`
 
 ---
 
-*End of Claude advisory review. Codex orchestrator: please read this document in full before deciding whether to amend `codex-call-2D.md`. Recommended disposition is Option A (launch as-is). When D4 completes, initiate the formal audit protocol at `claude-audit-requests/` rather than relying on advisory review for D4 acceptance — D4 is a scheduled high-stakes audit moment per `CODEX-ORCHESTRATOR-HANDOFF.md`.*
+*End of Claude advisory review. Codex orchestrator: please read this document in full before deciding whether to amend `spec-wave-2D-D4-deliberation-long-horizon-roadmap.md`. Recommended disposition is Option A (launch as-is). When D4 completes, initiate the formal audit protocol at `audit/` rather than relying on advisory review for D4 acceptance — D4 is a scheduled high-stakes audit moment per `handoff-codex-primary-orchestrator.md`.*

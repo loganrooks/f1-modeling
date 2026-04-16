@@ -1,8 +1,10 @@
 # Master Plan: Vision Alignment Initiative
 
+**Status note (2026-04-16):** Historical scaffolding snapshot. The initiative completed and its accepted planning outputs were applied on 2026-04-11. Use `README.md`, `SPEC-INDEX.md`, and `APPLICATION-LEDGER.md` for the current record view.
+
 **Target runtime:** Codex GPT-5.4 (mode varies by stage)
 **Required reading:** All Codex invocations MUST read `RESEARCH-PRINCIPLES.md` before beginning their task.
-**Primary orchestrator (as of 2026-04-11):** Codex GPT-5.4. See `CODEX-ORCHESTRATOR-HANDOFF.md` for the complete orchestration role and methodology. Waves 1 and 2A were orchestrated by Claude Opus 4.6; from Wave 2B-i forward, primary orchestration shifts to Codex for usage-budget reasons. Claude remains available as cross-model auditor at specific high-stakes moments and as user dialogue partner on request.
+**Primary orchestrator (as of 2026-04-11):** Codex GPT-5.4. See `handoff-codex-primary-orchestrator.md` for the complete orchestration role and methodology. Waves 1 and 2A were orchestrated by Claude Opus 4.6; from Wave 2B-i forward, primary orchestration shifts to Codex for usage-budget reasons. Claude remains available as cross-model auditor at specific high-stakes moments and as user dialogue partner on request.
 
 ---
 
@@ -73,7 +75,7 @@ Launch simultaneously as background processes.
 - 1B: user-facing surfaces with bidirectional coupling (viz capabilities ↔ education needs)
 - 1C: genuinely independent, smallest research scope, standalone call
 
-**Prompt files:** `codex-call-1A.md`, `codex-call-1B.md`, `codex-call-1C.md`
+**Prompt files:** `spec-wave-1A-R1-R4-research-compute-backends-and-streaming.md`, `spec-wave-1B-R2-R3-research-visualization-and-education.md`, `spec-wave-1C-R5-research-multi-regulation-typing.md`
 
 ### Review Gate 1
 
@@ -107,7 +109,7 @@ Triggered only if Review Gate 1 identifies specific unresolved questions worth f
 
 D1 goes alone because it's the foundation — its decision shapes D2 and D4. It cannot be drafted in parallel with D2/D3 because those depend on D1's decision anchor.
 
-**Prompt file:** `codex-call-2A.md` (written after Review Gate 1, informed by Wave 1 findings)
+**Prompt file:** `spec-wave-2A-D1-deliberation-backend-boundary-architecture.md` (written after Review Gate 1, informed by Wave 1 findings)
 
 ### Review Gate 2a
 
@@ -133,7 +135,7 @@ D2 (visualization architecture) and D3 (educational content architecture) have b
 - 2B-ii: D1 decision anchor, R3 research, D2 (from 2B-i)
 - 2B-iii: D2 (from 2B-i), D3 (from 2B-ii), specific surfaced requirements
 
-**Prompt files:** `codex-call-2B-i.md`, `codex-call-2B-ii.md`, `codex-call-2B-iii.md` (written after Review Gate 2a)
+**Prompt files:** `spec-wave-2B-i-D2-deliberation-visualization-architecture.md`, `spec-wave-2B-ii-D3-deliberation-educational-content-architecture.md`. Wave 2B-iii remained optional and was never authored because no separate D2 revision call was launched.
 
 ### Review Gate 2b
 
@@ -153,7 +155,7 @@ User reviews D2 and D3 together. Decides:
 
 D5 closes the **ontology** question R5 surfaced after D1 absorbed the execution-flow slice: what the primary regulation organizing axes should be, how schema versioning relates to semantic family identity, what cross-era comparability rules exist, and what override / semantic-identifier posture the project should adopt. It must consume D1's `ExecutionRegulationSnapshot` contract as a hard constraint rather than reopening it.
 
-**Prompt file:** `codex-call-2C.md` (written after Review Gate 2b)
+**Prompt file:** `spec-wave-2C-D5-deliberation-regulation-semantic-model.md` (written after Review Gate 2b)
 
 ### Review Gate 2c
 
@@ -172,7 +174,7 @@ User reviews D5. Decides:
 
 D4 is the hardest to do well because it synthesizes everything. It reads decision anchors (compact ~1-page summaries) from the prior deliberations rather than full files, preserving working context. D4 may recommend restructuring the project roadmap, propose new milestones, or defer long-horizon decisions with criteria for when they should be made.
 
-**Prompt file:** `codex-call-2D.md` (written after Review Gate 2c)
+**Prompt file:** `spec-wave-2D-D4-deliberation-long-horizon-roadmap.md` (written after Review Gate 2c)
 
 ### Review Gate 2d
 
@@ -187,7 +189,7 @@ User reviews D4. Stage 3 blocks until all deliberations have decision records ma
 
 3A must complete before 3B because the SUMMARY references the roadmap changes.
 
-**Prompt files:** `codex-call-3A.md`, `codex-call-3B.md` (written after Review Gate 2d)
+**Prompt files:** `spec-wave-3A-synthesis-roadmap-evolution-and-phase-insertions.md`, `spec-wave-3B-synthesis-guardrails-tech-debt-and-summary.md` (written after Review Gate 2d)
 
 ### Final Review
 
@@ -235,10 +237,10 @@ Do NOT set `-c model_context_window=1000000`. Use Codex defaults (~272K). All ca
 
 ## Invocation Pattern
 
-For each call, pipe the prompt file to `codex exec`:
+For each call, pipe the spec file to `codex exec`:
 
 ```bash
-cat .planning/initiatives/vision-alignment-2026-04/codex-call-<X>.md | \
+cat .planning/initiatives/vision-alignment-2026-04/specs/spec-wave-<X>.md | \
   codex exec -m gpt-5.4 \
   -c model_reasoning_effort=<high|xhigh> \
   -s danger-full-access -

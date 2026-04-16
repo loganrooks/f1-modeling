@@ -36,7 +36,7 @@ Shifting primary orchestration to Codex:
 - Lets Codex-native subagent launching handle the launch/verify/wait work that doesn't need model diversity
 - Maintains the human-in-the-loop review gate pattern that the initiative's methodology requires
 
-You earned this responsibility by producing high-quality work in the prior waves. The Claude session specifically noted in its handoff (see `CLAUDE-SESSION-HANDOFF.md`) that "the cross-model review showed Codex catching things Claude missed" and "if Codex can catch Claude's errors on that kind of work, it can do orchestration."
+You earned this responsibility by producing high-quality work in the prior waves. The Claude session specifically noted in its handoff (see `handoff-claude-fallback-session.md`) that "the cross-model review showed Codex catching things Claude missed" and "if Codex can catch Claude's errors on that kind of work, it can do orchestration."
 
 This is not a demotion of Claude or a promotion of Codex. It's a recognition that the initiative's methodology lives in documents, not in any specific model's memory, and that both models can execute it when properly onboarded. The shift optimizes for resource constraints while preserving quality.
 
@@ -64,8 +64,8 @@ Budget carefully. You need enough context to orchestrate well without burning yo
 
 ### Tier 1: Read before any task work (budget ~60-80K tokens)
 
-1. **This file** (`CODEX-ORCHESTRATOR-HANDOFF.md`) — you are reading it now. Re-read sections as needed.
-2. **`CLAUDE-SESSION-HANDOFF.md`** — the Claude-to-Claude handoff that was written before this one. It contains detailed context about decisions made in the prior session, pitfalls observed, and the full reasoning for why the initiative is structured the way it is. Read this thoroughly. Your job includes everything that handoff described, plus the Codex-specific guardrails and adaptations below.
+1. **This file** (`handoff-codex-primary-orchestrator.md`) — you are reading it now. Re-read sections as needed.
+2. **`handoff-claude-fallback-session.md`** — the Claude-to-Claude handoff that was written before this one. It contains detailed context about decisions made in the prior session, pitfalls observed, and the full reasoning for why the initiative is structured the way it is. Read this thoroughly. Your job includes everything that handoff described, plus the Codex-specific guardrails and adaptations below.
 3. **`README.md`** — initiative overview, methodological lineage, scope. Skim for orientation.
 4. **`PLAN.md`** — master wave plan with progress tracker. Read the full file. The progress tracker tells you exactly which waves are complete, which is drafted and awaiting launch, and which still need prompts written.
 5. **`RESEARCH-PRINCIPLES.md`** — the methodological manifesto. **NON-NEGOTIABLE.** Every action in this initiative operates under these principles. If you drift, re-read.
@@ -78,15 +78,15 @@ Budget carefully. You need enough context to orchestrate well without burning yo
 9. **`deliberations/01-decision-anchor.md`** — D1's compact summary (dense paragraphs). This is what subsequent deliberations consume. Read before drafting D2/D3/D5/D4.
 10. **`deliberations/01-backend-boundary-architecture.md`** — full D1 deliberation (708 lines). Read strategically — Question/Reframing sections, Contract 3 (artifact envelope) around line 382, Dependencies/Relations around line 627, filled Decision Record around line 684.
 11. **Wave 1 research files** (`research/01-06`) — read the file(s) relevant to the wave you're currently drafting. R1+R4 for backend context, R2 for D2 visualization, R3 for D3 education, R5 for D5 regulation and for D1's regulation flow, R6 for performance envelopes.
-12. **`wave-2-structure-review.md`** — the Codex GPT-5.4 xhigh cross-model review that triggered the shift from Option β to Option δ. Read this to understand why the initiative has the shape it does, why the boundary memo exists, and what the contract-vs-ontology distinction means. Pay special attention to your own model lineage's prior work here.
+12. **`review-wave-2-structure-decisions.md`** — the Codex GPT-5.4 xhigh cross-model review that triggered the shift from Option β to Option δ. Read this to understand why the initiative has the shape it does, why the boundary memo exists, and what the contract-vs-ontology distinction means. Pay special attention to your own model lineage's prior work here.
 
 ### Tier 3: Reference as needed
 
-13. **`codex-call-*.md`** — existing deliberation prompts. Use as templates when drafting new wave prompts.
+13. **`spec-wave-*.md`** — existing deliberation prompts. Use as templates when drafting new wave prompts.
 14. **`ORCHESTRATOR-HANDOFF.md`** — the Wave 1 orchestrator handoff. Older pattern; reference for comparison.
 15. **`ORCHESTRATOR-HANDOFF-wave-2B-i.md`** — narrow Wave 2B-i scoped orchestrator handoff. Obsolete given your expanded role but useful as a reference for the launch-wait-verify-report pattern.
 16. **`archive/`** — superseded earlier drafts with README explaining what changed
-17. **`wave-1-orchestrator-report.md`** — Wave 1 execution report including the `nohup` failure lesson
+17. **`report-wave-1-orchestrator-execution.md`** — Wave 1 execution report including the `nohup` failure lesson
 
 ---
 
@@ -103,7 +103,7 @@ The user launched the **Vision Alignment Initiative** to do the deep architectur
 - **Wave 2A (D1):** Backend boundary architecture deliberation. All 4 contracts addressed. C1 reframed with two-stage shape. C3 produced production-quality `ArtifactEnvelope` spec. C4 closed the regulation execution-flow slice.
 - **Review Gate 2a:** User accepted all 4 D1 contracts with full rationale. Decision Record filled in.
 - **Boundary memo expansion:** Three new cross-cutting constraints added (accessibility, thin-client responsive, honesty labeling visible in UI) based on UI gap discussion.
-- **Wave 2B-i prompt drafted:** `codex-call-2B-i.md` is ready to launch for D2 visualization architecture deliberation.
+- **Wave 2B-i prompt drafted:** `spec-wave-2B-i-D2-deliberation-visualization-architecture.md` is ready to launch for D2 visualization architecture deliberation.
 
 **Pending work:**
 - **Wave 2B-i (D2):** Visualization architecture deliberation. Prompt drafted. Awaiting your launch.
@@ -131,13 +131,13 @@ That's **6-10 more Codex calls** depending on whether Wave 2B-iii triggers and h
 Invocation (adapt to Codex-native subagent if you prefer that pattern over background bash):
 
 ```bash
-cat .planning/initiatives/vision-alignment-2026-04/codex-call-2B-i.md | \
+cat .planning/initiatives/vision-alignment-2026-04/specs/spec-wave-2B-i-D2-deliberation-visualization-architecture.md | \
   codex exec -m gpt-5.4 \
   -c model_reasoning_effort=xhigh \
   -s danger-full-access -
 ```
 
-Or launch as a Codex-native subagent with disjoint write scope, reading `codex-call-2B-i.md` as the task spec.
+Or launch as a Codex-native subagent with disjoint write scope, reading `spec-wave-2B-i-D2-deliberation-visualization-architecture.md` as the task spec.
 
 **Do NOT launch without explicit user authorization.** This is non-negotiable. The prior session failed here once and had to be corrected. Do not repeat.
 
@@ -185,7 +185,7 @@ Rather than add a new deliberation on "UI discipline" (which would have been res
 - **Cross-cutting 6:** Thin-client responsive rendering (apollo-over-Tailscale path is the real client baseline, not desktop-attached dionysus)
 - **Cross-cutting 7:** Honesty labeling visible in the UI (D1's `fidelityTier`/`validationState` fields must surface visibly in charts, not just metadata)
 
-**Why this matters:** the D2 prompt (`codex-call-2B-i.md`) has four explicit required subsections (D2.A workspace shell, D2.B design system, D2.C accessibility, D2.D cross-device) that operationalize these constraints for D2. D3's prompt (which you will draft) should similarly include treatment of these constraints for educational content.
+**Why this matters:** the D2 prompt (`spec-wave-2B-i-D2-deliberation-visualization-architecture.md`) has four explicit required subsections (D2.A workspace shell, D2.B design system, D2.C accessibility, D2.D cross-device) that operationalize these constraints for D2. D3's prompt (which you will draft) should similarly include treatment of these constraints for educational content.
 
 ### Decision 5: "Scaffolding not execution plan" is load-bearing
 
@@ -405,13 +405,13 @@ Your Codex session has a finite context budget. Quality degrades before hard lim
 
 When you hand off to a fresh Codex session, write a document at `.planning/initiatives/vision-alignment-2026-04/CODEX-HANDOFF-[date].md` that:
 
-1. References this file (`CODEX-ORCHESTRATOR-HANDOFF.md`) as required reading
+1. References this file (`handoff-codex-primary-orchestrator.md`) as required reading
 2. Summarizes what happened in your session
 3. Names any decisions made, any pitfalls observed, any methodological learnings
 4. Identifies the exact next action
 5. Names any context the committed files don't capture
 
-Essentially: write what the prior Claude session wrote in `CLAUDE-SESSION-HANDOFF.md`, but from your session, for the next Codex session.
+Essentially: write what the prior Claude session wrote in `handoff-claude-fallback-session.md`, but from your session, for the next Codex session.
 
 Then commit the handoff and stop. The user will start a fresh Codex session pointed at your handoff.
 
@@ -442,7 +442,7 @@ Request a Claude cross-model audit when:
 
 Do not try to spawn a Claude session from within your Codex session. Instead:
 
-1. Write an audit request document to `.planning/initiatives/vision-alignment-2026-04/claude-audit-requests/YYYY-MM-DD-[topic].md`
+1. Write an audit request document to `.planning/initiatives/vision-alignment-2026-04/audit/YYYY-MM-DD-[topic].md`
 2. Specify exactly what you want Claude to audit (specific files, specific questions)
 3. Specify what you want Claude NOT to do (e.g., "do not modify files, just audit and report")
 4. Present the request to the user and ask them to start a Claude session
@@ -453,8 +453,8 @@ The user is the bridge between Codex and Claude sessions. You cannot directly ca
 ### What to pass to Claude sessions
 
 A Claude session invoked for audit needs:
-- `CODEX-ORCHESTRATOR-HANDOFF.md` (this file, for the shared methodology)
-- `CLAUDE-SESSION-HANDOFF.md` (for context on the prior Claude work)
+- `handoff-codex-primary-orchestrator.md` (this file, for the shared methodology)
+- `handoff-claude-fallback-session.md` (for context on the prior Claude work)
 - The specific file(s) you want audited
 - Your audit request document specifying the question
 
@@ -666,7 +666,7 @@ When the user starts you:
 1. **Read this file completely.** Budget 5-10 minutes.
 2. **Read the Tier 1 required files** in order (CLAUDE-SESSION-HANDOFF, README, PLAN, RESEARCH-PRINCIPLES, BOUNDARY-CONTRACT-MEMO, VISION, audit-response-2026-04-10). Budget 20-30 minutes.
 3. **Read D1's decision anchor** (`deliberations/01-decision-anchor.md`). Budget 3 minutes.
-4. **Skim the D2 prompt** (`codex-call-2B-i.md`) to know what you'll be launching. Budget 10 minutes.
+4. **Skim the D2 prompt** (`spec-wave-2B-i-D2-deliberation-visualization-architecture.md`) to know what you'll be launching. Budget 10 minutes.
 5. **Check git status** — should be clean (no uncommitted changes) since the handoff was written when all work was committed.
 6. **Greet the user** with a state summary: "Fresh Codex session onboarded as primary orchestrator for the Vision Alignment Initiative. I've read the handoff, the principles, the boundary memo, and D1's decision anchor. Current state: D1 accepted (Review Gate 2a passed), D2 prompt drafted, awaiting launch. Ready to launch D2 when you authorize. Anything you want to review or adjust before I launch?"
 7. **Wait for explicit authorization** before doing anything.

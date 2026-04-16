@@ -3,15 +3,15 @@
 **Auditor:** Claude Opus 4.6 (1M)
 **Response date:** 2026-04-11
 **Request:** `2026-04-11-d4-acceptance-request.md` (same directory)
-**Scope:** Full D4 deliberation acceptance audit per the `claude-audit-requests/` protocol
+**Scope:** Full D4 deliberation acceptance audit per the `audit/` protocol
 
 ## Procedural Note — Important Context for This Audit
 
-**This audit was performed out of the protocol's intended order.** The correct sequence per `claude-audit-requests/README.md` is: Codex writes audit request → user relays to Claude → Claude audits → writes response → user reviews findings → user fills D4 Decision Record → commit.
+**This audit was performed out of the protocol's intended order.** The correct sequence per `audit/README.md` is: Codex writes audit request → user relays to Claude → Claude audits → writes response → user reviews findings → user fills D4 Decision Record → commit.
 
-The actual sequence on 2026-04-11 was: Codex wrote the audit request at ~17:39 local → user returned to Claude without checking `claude-audit-requests/` → Claude performed **advisory review** (not formal audit) of the D4 deliberation per the D2/D3/D5 advisory pattern → user authorized Decision Record fill based on advisory review → Claude wrote Decision Record and committed acceptance as `6050c50` → user pointed Claude at the audit request file → **this formal audit is happening after acceptance**.
+The actual sequence on 2026-04-11 was: Codex wrote the audit request at ~17:39 local → user returned to Claude without checking `audit/` → Claude performed **advisory review** (not formal audit) of the D4 deliberation per the D2/D3/D5 advisory pattern → user authorized Decision Record fill based on advisory review → Claude wrote Decision Record and committed acceptance as `6050c50` → user pointed Claude at the audit request file → **this formal audit is happening after acceptance**.
 
-**Root cause of the miss:** Claude did not check `claude-audit-requests/` at the start of the D4 review session. Claude's own D4 prompt review (committed as `72c0456`) had explicitly flagged that the formal audit protocol was the recommended path for D4 acceptance, yet Claude bypassed that path when the user returned with "D4 has finished" because Claude fell into the D2/D3/D5 advisory pattern reflexively rather than checking for a formal audit request first.
+**Root cause of the miss:** Claude did not check `audit/` at the start of the D4 review session. Claude's own D4 prompt review (committed as `72c0456`) had explicitly flagged that the formal audit protocol was the recommended path for D4 acceptance, yet Claude bypassed that path when the user returned with "D4 has finished" because Claude fell into the D2/D3/D5 advisory pattern reflexively rather than checking for a formal audit request first.
 
 **Consequence for this audit:** This audit cannot function as a pre-acceptance gate because acceptance has already happened. It functions instead as a post-hoc validation: if the audit finds problems, commit `6050c50` should be reverted and the Decision Record re-filled with corrections. If the audit validates the filled Decision Record, `6050c50` stands and the procedural slip is recorded here as a lesson without requiring rework.
 
@@ -37,7 +37,7 @@ D4 closes on the correct synthesis-shaped outputs without drifting into either r
 - D4.B identifies structural mis-cuts on Phases 4, 5, and 8 without writing the replacement boundary text (`:150-160`).
 - D4.C projects thematically with v2/v3/v4+ dependency arcs rather than writing phase plans (`:162-170`).
 - D4.D enumerates six deferrals, six revisit triggers, seven rewrite triggers, and four Stage 3 output types — all sequencing / handoff content, not roadmap diffs.
-- The "What You Are NOT Closing" discipline from the prompt (`codex-call-2D.md:74-82`) is honored: D4 does not modify `ROADMAP.md`, `PROJECT.md`, `CLAUDE.md`, or any phase context file; does not draft exact phase `PLAN.md` files; does not choose package names or schema file layouts.
+- The "What You Are NOT Closing" discipline from the prompt (`spec-wave-2D-D4-deliberation-long-horizon-roadmap.md:74-82`) is honored: D4 does not modify `ROADMAP.md`, `PROJECT.md`, `CLAUDE.md`, or any phase context file; does not draft exact phase `PLAN.md` files; does not choose package names or schema file layouts.
 - Path of Deliberation (`:233-240`) explicitly rejects the "note-level edits" branch as insufficient and the "folded into a renamed Phase 4 foundation wave" branch as recreating the label-trap at roadmap scale — these are synthesis-specific failure-mode guards.
 - Several conclusions are genuinely synthetic rather than recap: the three-insertion split with dependency edges (Insertion 1 → Insertion 2 → Insertion 3 → narrowed Phase 4), the "single-family engineering-and-education loop" as v1 organizing principle, and v3 as "comes into its own" threshold are all D4 originals that no D1/D2/D3/D5 deliberation produced.
 
@@ -220,7 +220,7 @@ D4.B's characterization of current Phase 4.1 as "EKF later" slightly misreads th
 
 1. **Do not revert commit `6050c50`.** The advisory-mode Decision Record fill committed as `6050c50` is substantively correct per this audit's findings. Reverting and re-filling would produce the same content with procedural rework but no substantive change.
 
-2. **Record the procedural slip as a lesson.** Future Claude advisory sessions should check `claude-audit-requests/` at the start of each review session, especially after any deliberation that the `CODEX-ORCHESTRATOR-HANDOFF.md` schedules as a formal audit trigger. D4 was specifically scheduled. Claude's own D4 prompt review (committed as `72c0456`) explicitly flagged the formal audit protocol as the recommended D4 acceptance path. Claude then bypassed its own recommendation by falling into the D2/D3/D5 advisory pattern reflexively when the user returned. The lesson is: check the audit request directory before performing any review, not after.
+2. **Record the procedural slip as a lesson.** Future Claude advisory sessions should check `audit/` at the start of each review session, especially after any deliberation that the `handoff-codex-primary-orchestrator.md` schedules as a formal audit trigger. D4 was specifically scheduled. Claude's own D4 prompt review (committed as `72c0456`) explicitly flagged the formal audit protocol as the recommended D4 acceptance path. Claude then bypassed its own recommendation by falling into the D2/D3/D5 advisory pattern reflexively when the user returned. The lesson is: check the audit request directory before performing any review, not after.
 
 3. **Commit this audit response file** (`2026-04-11-d4-acceptance-response.md`) as a separate atomic commit with message `docs(initiative): Claude formal audit response for D4 acceptance (post-hoc)`. The "post-hoc" in the commit message makes the procedural sequence visible in git history.
 
@@ -241,7 +241,7 @@ D4.B's characterization of current Phase 4.1 as "EKF later" slightly misreads th
 - **Minor finding 2 (`packages/visuals` zero-tests missing from D4.D rewrite triggers): high confidence.** Directly traceable to `audit-response-2026-04-10.md:311` tech debt registry content. The other 7 of 8 audit-response tech debt items are captured by D4; this one is not.
 - **Minor framing observation on Phase 4.1: high confidence.** Directly verifiable against current `ROADMAP.md:135-149` Phase 4.1 content. Phase 4.1 is not "EKF later" in the current ROADMAP — it already has three plans covering synthetic sensors, observer with EKF, and observer-aware learning views/timeline/sensitivity. The "broadened from EKF later" phrasing is a minor misreading.
 - **Judgment that the minor findings don't warrant revert: high confidence.** None of the three minor findings affect the D4 Decision Record correctness at the initiative-level. All three are Stage 3 scope-bounded reconciliation items that Stage 3B's tech-debt registry work will naturally address. Reverting `6050c50` to re-fill with corrections would produce no substantive change to the accepted content.
-- **Procedural slip assessment: high confidence** that it was a Claude-side reflexive pattern miss rather than a user-side or Codex-side error. The user followed the expected pattern of returning to Claude after D4 completed. Codex correctly wrote the formal audit request per the protocol. Claude failed to check `claude-audit-requests/` at session start.
+- **Procedural slip assessment: high confidence** that it was a Claude-side reflexive pattern miss rather than a user-side or Codex-side error. The user followed the expected pattern of returning to Claude after D4 completed. Codex correctly wrote the formal audit request per the protocol. Claude failed to check `audit/` at session start.
 
 ---
 

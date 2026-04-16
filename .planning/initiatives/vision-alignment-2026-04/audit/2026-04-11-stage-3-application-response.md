@@ -8,7 +8,7 @@
 
 ## Procedural Note
 
-This audit is in the **correct pre-application order.** Codex wrote the formal audit request before any application commits landed, the prior Claude session flagged the protocol moment rather than silently proceeding, the informal review was saved as a draft rather than applied, and the fresh session (this one) onboarded via `CLAUDE-HANDOFF-2026-04-11-stage3-audit.md` and checked `claude-audit-requests/` before doing any review work. The D4-slip lesson (signal `sig-2026-04-11-claude-bypassed-formal-audit-protocol.md`) was applied successfully.
+This audit is in the **correct pre-application order.** Codex wrote the formal audit request before any application commits landed, the prior Claude session flagged the protocol moment rather than silently proceeding, the informal review was saved as a draft rather than applied, and the fresh session (this one) onboarded via `handoff-claude-stage-3-formal-audit.md` and checked `audit/` before doing any review work. The D4-slip lesson (signal `sig-2026-04-11-claude-bypassed-formal-audit-protocol.md`) was applied successfully.
 
 ## Executive Summary
 
@@ -27,7 +27,7 @@ Confidence: **high** on application-readiness, **high** on the minor refinements
 - Phase 3.4 is packaged as a single phase, correctly deferring to D4's `[FOLLOW-AND-MARK]` gray area ("one phase vs two adjacent decimals") at `05-long-horizon-roadmap.md:90-94` and picking one of the two permitted shapes with explicit dual-lane plan breakdown (`phase-insertion-proposals.md:160-169`). No overreach.
 
 **Post-hoc audit Phase 4.1 correction → Stage 3A applies it verbatim.**
-- The D4 post-hoc audit at `claude-audit-requests/2026-04-11-d4-acceptance-response.md:115-123` corrected the "broadened from 'EKF later'" framing because current `ROADMAP.md:135-149` Phase 4.1 already has three plans spanning synthetic sensors, observer (EKF), and observer-aware learning views + timeline scrubbing + sensitivity workflows.
+- The D4 post-hoc audit at `audit/2026-04-11-d4-acceptance-response.md:115-123` corrected the "broadened from 'EKF later'" framing because current `ROADMAP.md:135-149` Phase 4.1 already has three plans spanning synthetic sensors, observer (EKF), and observer-aware learning views + timeline scrubbing + sensitivity workflows.
 - Stage 3A at `roadmap-evolution.md:98-111` explicitly states: *"the rewrite needed is not 'broaden Phase 4.1 from EKF later' / the rewrite needed is 'make Phase 4.1 consume D1 checkpointed artifacts, D2 linked temporal interaction, and D3 guided overlays'"*. The corrected framing is applied with the negation made explicit.
 - Verified against current ROADMAP: the three existing Phase 4.1 plans (`ROADMAP.md:147-149`) do indeed span the broader scope the correction describes. Stage 3A's framing is accurate.
 

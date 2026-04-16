@@ -282,6 +282,6 @@ If the memo is wrong about what Wave 1 surfaced, the right response is to fix th
 
 - All five Wave 1 research files in `research/`
 - `audit-response-2026-04-10.md` (consolidated audit findings)
-- `wave-2-structure-review.md` (Codex GPT-5.4 xhigh review of Wave 2 structure decisions, 2026-04-11) — origin of the contract-vs-ontology distinction, the artifact contract finding, and the label-trap warning
+- `review-wave-2-structure-decisions.md` (Codex GPT-5.4 xhigh review of Wave 2 structure decisions, 2026-04-11) — origin of the contract-vs-ontology distinction, the artifact contract finding, and the label-trap warning
 - `RESEARCH-PRINCIPLES.md` (methodological foundation for the initiative)
 - `VISION.md` (long-term platform vision — the anchor for everything)
