@@ -1,0 +1,28 @@
+{
+  "name": "@f1-modeling/future-aware-harness-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI for installing and reconciling the future-aware planning harness.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "fa-harness": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "generated-assets",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "sync-assets": "tsx src/syncRuntimeAssets.ts",
+    "prepack": "npm run sync-assets && npm run build"
+  }
+}

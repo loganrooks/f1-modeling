@@ -1,0 +1,73 @@
+{
+  "manifestVersion": 1,
+  "frameworkName": "future-aware-harness",
+  "frameworkVersion": "0.1.0",
+  "markerPath": ".planning/.future-aware-framework.json",
+  "receiptDirname": ".planning/.future-aware-receipts",
+  "managedFiles": [
+    {
+      "id": "long-arc",
+      "relativePath": ".planning/LONG-ARC.md",
+      "strategy": "create_if_missing",
+      "template": "long-arc.md",
+      "description": "Bootstrap-only long-arc doctrine scaffold."
+    },
+    {
+      "id": "planning-agents",
+      "relativePath": ".planning/AGENTS.md",
+      "strategy": "replace_if_framework_owned",
+      "template": "planning-agents.md",
+      "description": "Planning-agent contract."
+    },
+    {
+      "id": "workflow",
+      "relativePath": "WORKFLOW.md",
+      "strategy": "replace_if_framework_owned",
+      "template": "workflow.md",
+      "description": "Planning operating procedure."
+    },
+    {
+      "id": "artifact-governance",
+      "relativePath": ".planning/ARTIFACT-GOVERNANCE.md",
+      "strategy": "replace_if_framework_owned",
+      "template": "artifact-governance.md",
+      "description": "Artifact authority and supersession map."
+    },
+    {
+      "id": "root-agents-routing",
+      "relativePath": "AGENTS.md",
+      "strategy": "patch_managed_section",
+      "template": "root-agents-routing.md",
+      "sectionId": "root-planning-routing",
+      "description": "Managed repo-root planning router section."
+    },
+    {
+      "id": "audits-readme",
+      "relativePath": ".planning/audits/README.md",
+      "strategy": "replace_if_framework_owned",
+      "template": "audits-readme.md",
+      "description": "Formal audit workspace contract."
+    },
+    {
+      "id": "audit-request-template",
+      "relativePath": ".planning/audits/templates/audit-request-template.md",
+      "strategy": "replace_if_framework_owned",
+      "template": "audit-request-template.md",
+      "description": "Formal audit request template."
+    },
+    {
+      "id": "audit-response-template",
+      "relativePath": ".planning/audits/templates/audit-response-template.md",
+      "strategy": "replace_if_framework_owned",
+      "template": "audit-response-template.md",
+      "description": "Formal audit response template."
+    },
+    {
+      "id": "reviews-readme",
+      "relativePath": ".planning/reviews/README.md",
+      "strategy": "replace_if_framework_owned",
+      "template": "reviews-readme.md",
+      "description": "Advisory review workspace contract."
+    }
+  ]
+}
