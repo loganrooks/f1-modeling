@@ -1,6 +1,6 @@
 # Master Plan: Future-Aware Planning Harness Initiative
 
-**Status:** Proposed scaffold
+**Status:** Active through Stage 4 shaping
 **Date:** 2026-04-16
 **Target runtime:** Codex GPT-5.4
 
@@ -226,6 +226,11 @@ Current staged execution:
 - Wave `3B`: apply the approved repo-local overlay/bootstrap and core steering-chain patch (`discuss`, `research`, `plan`, `context`, `phase-prompt`)
 - Wave `3C`: apply the routing digest patch (`progress`, `resume`, `state`) now that `3B` is accepted
 
+Stage `3` outcome:
+- Accepted as complete after `3C` review and recheck
+- The repo now has a tracked overlay source of truth plus working install/restore/verify behavior
+- Future-aware steering and routing surfaces are now live, but Reflect-only subsystem adaptation is still open
+
 Review gate questions:
 - Is this really repo-local and reproducible?
 - Is the patch changing active behavior, not just template prose?
@@ -239,6 +244,11 @@ Purpose:
 Deliverables:
 - rules or schema adjustments for deliberations, audits, signals, progress/state, and initiative/debrief carry-forward
 - explicit acceptance/rejection decisions for each subsystem lane
+
+Current staged execution:
+- Wave `4A`: synthesize a single subsystem-adaptation policy matrix across deliberations/decision anchors, audits/cross-model review, signals/reflection, and initiative/debrief carry-forward
+- Review Gate `4`: decide which Stage 4 lanes are application-worthy now versus doctrine-only or later
+- Wave `4B`: reserved for the narrow accepted application subset after Gate `4`
 
 Review gate questions:
 - Which extra subsystems genuinely need enforcement versus just doctrine?
