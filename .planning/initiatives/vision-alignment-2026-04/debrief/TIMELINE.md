@@ -58,3 +58,9 @@ Each row should cite:
 - `Wave 2B-iii` was planned as an optional D2 revision branch but was not launched; `../SPEC-INDEX.md` says no separate spec was authored.
 - `Wave 1.5` was planned as `0-N` follow-up calls, but the evidence set only shows one executed R1.5 prompt, not multiple follow-up waves.
 - `../PLAN.md`'s Final Review text anticipated possible phase-template edits, but `../APPLICATION-LEDGER.md` records live-file application only to `.planning/ROADMAP.md`, `.planning/TECH-DEBT.md`, `CLAUDE.md`, and then `.planning/STATE.md`.
+
+## Follow-Up Chronology Caveats
+
+- `Review Gate 2b` was one gate, but not one undifferentiated event. D2 was accepted before the D3 prompt was drafted, which matters because D3 consumed accepted D2 outputs rather than a pending D2 draft. See the sweep follow-up in `runs/2026-04-16-llm-sweep/reports/A-timeline-and-event-alignment.md`.
+- The D4 formal-audit request existed in workflow before acceptance, but the current canonical `audit/` layout is a later record normalization. Readers should not infer from present-day file paths alone that no request existed before `6050c50`.
+- The current canonical directory layout is a later auditability cleanup, not the original 2026-04-11 runtime shape. The timeline is factual, but path-level chronology sometimes reflects later curation rather than same-day layout.

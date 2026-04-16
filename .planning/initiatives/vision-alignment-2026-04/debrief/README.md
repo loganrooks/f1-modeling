@@ -16,6 +16,7 @@ Its purpose is not to restate the initiative. Its purpose is to answer:
 - `SPEC-INDEX.md` — traceable map from debrief specs to original initiative waves, gates, and outputs
 - `EVIDENCE-INDEX.md` — the curated evidence set for the debrief
 - `CARRY-FORWARD-LEDGER.md` — where accepted lessons and actions should be recorded
+- `runs/2026-04-16-llm-sweep/` — bounded xhigh lane reports used to enrich the interaction and carry-forward synthesis
 
 ## Expected Outputs
 
@@ -33,6 +34,7 @@ The debrief should eventually produce:
 
 The bounded task contracts for producing those outputs live in `specs/`.
 Transcript extraction staging lives in `extracts/`.
+Parallel lane-run evidence lives in `runs/`.
 
 ## Ground Rule
 

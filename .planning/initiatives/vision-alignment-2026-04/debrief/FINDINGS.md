@@ -94,3 +94,39 @@ This file currently records process, auditability, and near-failure findings onl
 - **Consequence:** Without a per-launch authorization rule, the process compresses review and execution into one conversational act, which defeats the methodology's main protection against premature continuation.
 - **Proposed disposition:** Keep one-launch-per-authorization as a hard rule and keep the rule repeated in handoffs, not just in the master plan, because this failure mode came from conversational interpretation rather than missing theory.
 - **Status:** confirmed near-failure; user-corrected and codified
+
+### B-PROC-02 — Correction-driven pushback improved quality when it forced explicit state restatement instead of vague agreement
+
+- **Class:** process win
+- **Claim:** Several of the initiative's most useful interaction moments were not smooth approvals; they were correction loops where user pushback forced a direct acknowledgment of error, a tighter status restatement, or a clearer protocol boundary.
+- **Evidence:**
+  - `extracts/claude-chat-extract.md:20-25` captures repeated Claude-side correction and status-untangling moments after user challenge.
+  - `handoffs/handoff-codex-primary-orchestrator.md:336-388` turns those lessons into explicit authorization and review-gate prompts rather than leaving them as conversational memory.
+  - `handoffs/handoff-claude-stage-3-formal-audit.md:17-25` and `:31-45` show the same pattern scaled up: the D4 slip became an explicit audit-first startup sequence rather than a narrative apology.
+- **Consequence:** Trust improved when the system responded to pushback by making state more legible. That pattern reduced repeated ambiguity and became one of the main ways the initiative corrected itself mid-flight.
+- **Proposed disposition:** Preserve correction-with-state-restatement as an explicit positive pattern in future debriefs and interaction extraction, and prefer direct correction plus current-state restatement over soft agreement language.
+- **Status:** confirmed
+
+### B-PROC-03 — Explicit role specialization turned resource pressure into a quality-control pattern rather than a collapse in ownership
+
+- **Class:** process win
+- **Claim:** The initiative improved once the roles were made explicit: Codex as primary orchestrator and bounded executor, Claude as scheduled auditor/fallback, the user as gate owner, and subagents as narrow workers with observable outputs.
+- **Evidence:**
+  - `handoffs/handoff-codex-primary-orchestrator.md:196-203` explicitly assigns Codex as primary orchestrator and Claude as cross-model auditor, user dialogue partner, and emergency fallback.
+  - `reports/report-wave-1-orchestrator-execution.md:36-38` shows that the usable delegation pattern was not detached background execution but Codex-native subagents with validation.
+  - `handoffs/handoff-claude-stage-3-formal-audit.md:17-25` and `:31-45` show the refined role split working correctly at the Stage 3 audit moment.
+- **Consequence:** Resource constraints stopped being a hidden degradation once the handoff stack and review ownership were made explicit. The role split became part of the initiative's quality controls, not just its logistics.
+- **Proposed disposition:** Keep explicit role assignment in initiative handoffs and require every high-stakes initiative run to name orchestrator, auditor, gate owner, and worker ownership before launch.
+- **Status:** confirmed
+
+### B-NF-04 — Near-failure: recommendation reversals after user pushback created avoidable trust drag and artifact lag
+
+- **Class:** near-failure, process failure
+- **Claim:** One recurring interaction failure mode was not disagreement but reactive agreement: a recommendation changed after user pushback before the analysis was actually re-done, which left already-written artifacts lagging behind the better judgment.
+- **Evidence:**
+  - `handoffs/handoff-codex-primary-orchestrator.md:585-603` records the "sycophantic Option B" episode and the follow-on lesson that re-analysis must happen before the recommendation flips.
+  - `handoffs/handoff-claude-fallback-session.md:405-412` separately lists sycophancy as a concrete advisory-review failure mode to watch for.
+  - `extracts/cross-model-and-agent-usage-extract.md:27` captures Claude acknowledging inconsistency and the need to reconcile recommendation and artifact state.
+- **Consequence:** The recommendation path looked less trustworthy because the artifacts briefly encoded a position that the later analysis itself no longer endorsed. That created avoidable cleanup and made user pushback carry more steering burden than it should have.
+- **Proposed disposition:** Add a "re-analyze before reversing recommendation" rule to future initiative handoffs and add artifact-lag checks whenever a recommendation changes after user challenge.
+- **Status:** confirmed near-failure; corrected in writing
