@@ -25,6 +25,31 @@ This spec evaluates execution against:
 - `../reports/`
 - `../handoffs/`
 
+## Context Budget
+
+Target:
+
+- soft target: `<=100K` estimated tokens
+
+Recommended core pack:
+
+- `../README.md` (`~1.2K`)
+- `../PLAN.md` (`~4.8K`)
+- `../SPEC-INDEX.md` (`~0.8K`)
+- `../APPLICATION-LEDGER.md` (`~0.6K`)
+- `../SUMMARY.md` (`~1.4K`)
+- `../audit/2026-04-11-d4-acceptance-response.md` (`~8.2K`)
+- `../audit/2026-04-11-stage-3-application-response.md` (`~9.3K`)
+- `../reports/report-wave-1-orchestrator-execution.md` (`~1.1K`)
+- `../handoffs/handoff-codex-primary-orchestrator.md` (`~12.7K`)
+- `../handoffs/handoff-claude-fallback-session.md` (`~12.7K`)
+
+Core-pack total: about `52K`.
+
+Escalation rule:
+
+- Pull specific spec files, audit requests, or handoff sections only when the timeline cannot be reconstructed from the core pack.
+
 ## Questions To Answer
 
 1. What triggered the initiative?

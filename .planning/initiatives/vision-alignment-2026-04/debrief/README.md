@@ -23,6 +23,7 @@ The debrief should eventually produce:
 
 - `TIMELINE.md` — dated factual reconstruction of what happened
 - `FINDINGS.md` — evidence-backed wins, failures, near-failures, and overhead
+- `EPISTEMIC-AND-CONTRACT-REVIEW.md` — evaluation of research quality, deliberation reliability, traceability, and adherence to governing docs
 - `PATTERNS-TO-KEEP.md` — good practices worth standardizing
 - `CHANGES-BEFORE-NEXT-INITIATIVE.md` — the short operational change list for the next strategic initiative
 - `DEBRIEF-SUMMARY.md` — concise retrospective outcome

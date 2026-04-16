@@ -4,12 +4,13 @@
 
 Run a disciplined retrospective on the Vision Alignment Initiative that produces durable carry-forward changes rather than a one-off discussion.
 
-The debrief should evaluate four things separately:
+The debrief should evaluate five things separately:
 
 1. **Substantive outcome quality** — did the initiative improve the roadmap and architectural direction?
 2. **Process quality** — was the initiative run in a way that was efficient, legible, and correctable?
 3. **Auditability quality** — could an outsider reconstruct what happened and why?
 4. **Carry-forward quality** — were the lessons actually moved into live constraints, workflow, or backlog artifacts?
+5. **Methodological fidelity** — did the research and deliberations meet the epistemic, traceability, boundary-contract, and handoff obligations they were supposed to operate under?
 
 ## Non-Goals
 
@@ -32,8 +33,10 @@ Read in this order unless a specific question requires a narrower slice:
 9. `../reviews/review-wave-2-structure-decisions.md`
 10. `../reports/report-wave-1-orchestrator-execution.md`
 11. `../handoffs/`
-12. `../specs/`
-13. `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`
+12. `../RESEARCH-PRINCIPLES.md`
+13. `../BOUNDARY-CONTRACT-MEMO.md`
+14. `../specs/`
+15. `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`
 
 Then read specific research, deliberation, synthesis, or archive files only when a finding needs direct evidence.
 
@@ -46,6 +49,22 @@ The debrief should preserve the same discipline the initiative used:
 - every finding should cite specific source files, and where relevant, the exact original wave, review gate, or application step involved
 
 This is why the debrief has its own `SPEC-INDEX.md` and `specs/` directory rather than only freeform notes.
+
+## Context Budget Discipline
+
+Target per debrief lane:
+
+- soft target: about `<=100K` estimated tokens
+- acceptable stretch: about `<=115K` estimated tokens when the evidence requires it
+- anything above that should be treated as a design mistake in the spec lane unless explicitly justified
+
+Reading rules:
+
+- Do not bulk-read whole directories just because a spec mentions them.
+- Start with the core pack listed in the spec.
+- Escalate to full research or deliberation files only when an evidence gap requires it.
+- Prefer anchors, indexes, and synthesis summaries before full-file expansion.
+- If a lane stretches past the soft target, record why.
 
 ## Work Sequence
 
@@ -64,7 +83,21 @@ Output target:
 - `TIMELINE.md`
 - evidence coverage updates in `EVIDENCE-INDEX.md` when gaps are found
 
-### Phase 2: Evaluate what went well
+### Phase 2: Evaluate methodological fidelity and contract adherence
+
+Check explicitly:
+
+- epistemic quality and calibration of the research outputs
+- reliability and traceability of the deliberations
+- adherence to `RESEARCH-PRINCIPLES.md`
+- adherence to `BOUNDARY-CONTRACT-MEMO.md`
+- adherence to the original orchestration goals in the handoffs
+- where deviations occurred, whether they were justified, and what they cost
+
+Output target:
+- `EPISTEMIC-AND-CONTRACT-REVIEW.md`
+
+### Phase 3: Evaluate what went well
 
 Look for:
 
@@ -80,7 +113,7 @@ Output target:
 - substantive-win entries in `FINDINGS.md`
 - reusable entries in `PATTERNS-TO-KEEP.md`
 
-### Phase 3: Evaluate what went wrong or almost went wrong
+### Phase 4: Evaluate what went wrong or almost went wrong
 
 Separate failures by class:
 
@@ -98,7 +131,7 @@ Important distinction:
 Output target:
 - process, auditability, and near-failure entries in `FINDINGS.md`
 
-### Phase 4: Convert findings into carry-forward actions
+### Phase 5: Convert findings into carry-forward actions
 
 Every finding must end in one destination:
 
@@ -115,7 +148,7 @@ Output target:
 - `CHANGES-BEFORE-NEXT-INITIATIVE.md`
 - accepted items in `CARRY-FORWARD-LEDGER.md`
 
-### Phase 5: Close with disposition
+### Phase 6: Close with disposition
 
 Produce `DEBRIEF-SUMMARY.md` with:
 
@@ -132,11 +165,13 @@ Recommended bounded work split:
 1. `specs/spec-debrief-A-timeline-and-evidence-reconstruction.md`
 2. `specs/spec-debrief-B-process-and-auditability-review.md`
 3. `specs/spec-debrief-C-substantive-value-and-patterns-to-keep.md`
-4. `specs/spec-debrief-D-carry-forward-synthesis-and-next-initiative-changes.md`
+4. `specs/spec-debrief-E-epistemic-quality-and-contract-adherence.md`
+5. `specs/spec-debrief-D-carry-forward-synthesis-and-next-initiative-changes.md`
 
 Guidance:
 
-- Specs A, B, and C are good agent-sized evidence-gathering tasks.
+- Run Spec A first so the factual sequence is anchored.
+- Specs B, C, and E are good agent-sized evidence-gathering tasks once A is complete.
 - Spec D is synthesis and disposition work; keep final judgment local so one owner resolves contradictions and writes the final debrief.
 - If delegation is used, agent outputs should be treated as evidence drafts until reviewed against the source files.
 
@@ -150,8 +185,11 @@ Answer these explicitly:
 4. Did the spec/review/audit/handoff structure help or overcomplicate the work?
 5. Where did state drift or stale docs create avoidable confusion?
 6. Did the formal audit moments happen at the right times?
-7. What should become standard for future strategic initiatives in this repo?
-8. What should never be repeated in the same form?
+7. Did the research outputs actually meet the epistemic and methodological requirements they were given?
+8. Did the deliberations stay traceable, reliable, and boundary-contract compliant?
+9. Did the initiative meet the original goals of the orchestrator handoff, and where did it deviate?
+10. What should become standard for future strategic initiatives in this repo?
+11. What should never be repeated in the same form?
 
 ## Standards For Findings
 
@@ -179,6 +217,7 @@ Expected files in this directory:
 - `CARRY-FORWARD-LEDGER.md`
 - `TIMELINE.md`
 - `FINDINGS.md`
+- `EPISTEMIC-AND-CONTRACT-REVIEW.md`
 - `PATTERNS-TO-KEEP.md`
 - `CHANGES-BEFORE-NEXT-INITIATIVE.md`
 - `DEBRIEF-SUMMARY.md` once the debrief is run
@@ -188,9 +227,10 @@ Expected files in this directory:
 The debrief is complete when:
 
 1. `TIMELINE.md`, `FINDINGS.md`, `PATTERNS-TO-KEEP.md`, and `CHANGES-BEFORE-NEXT-INITIATIVE.md` are populated or intentionally marked not applicable
-2. `DEBRIEF-SUMMARY.md` exists
-3. all material findings have dispositions in `CARRY-FORWARD-LEDGER.md`
-4. any accepted immediate follow-ups have been created or linked
-5. any rejected findings have reasons recorded
+2. `EPISTEMIC-AND-CONTRACT-REVIEW.md` is populated
+3. `DEBRIEF-SUMMARY.md` exists
+4. all material findings have dispositions in `CARRY-FORWARD-LEDGER.md`
+5. any accepted immediate follow-ups have been created or linked
+6. any rejected findings have reasons recorded
 
 Until then, the debrief is in progress, not done.

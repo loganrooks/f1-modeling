@@ -23,6 +23,30 @@ This spec evaluates:
 - `../audit/`
 - `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md`
 
+## Context Budget
+
+Target:
+
+- soft target: `<=100K` estimated tokens
+
+Recommended core pack:
+
+- `../PLAN.md` (`~4.8K`)
+- `../reviews/review-wave-2-structure-decisions.md` (`~13.6K`)
+- `../reports/report-wave-1-orchestrator-execution.md` (`~1.1K`)
+- `../handoffs/handoff-codex-primary-orchestrator.md` (`~12.7K`)
+- `../handoffs/handoff-claude-fallback-session.md` (`~12.7K`)
+- `../handoffs/handoff-claude-stage-3-formal-audit.md` (`~8.2K`)
+- `../audit/2026-04-11-d4-acceptance-response.md` (`~8.2K`)
+- `../audit/2026-04-11-stage-3-application-response.md` (`~9.3K`)
+- `.planning/knowledge/signals/f1-modeling/2026-04-11-claude-bypassed-formal-audit-protocol.md` (`~3.1K`)
+
+Core-pack total: about `74K`.
+
+Escalation rule:
+
+- Read additional audit requests or older archive material only when the process question cannot be resolved from the core pack.
+
 ## Questions To Answer
 
 1. Which parts of the spec/review/audit/handoff structure added real value?

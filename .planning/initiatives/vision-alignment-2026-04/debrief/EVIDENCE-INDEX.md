@@ -13,6 +13,14 @@ This is the recommended evidence set for the Vision Alignment Initiative debrief
 - `../SUMMARY.md`
   - historical Stage 3 closeout snapshot
 
+## Governing Method And Contract Documents
+
+- `../RESEARCH-PRINCIPLES.md`
+- `../BOUNDARY-CONTRACT-MEMO.md`
+- `../PLAN.md`
+
+Use these to judge whether the initiative's research and deliberations met their stated epistemic, methodological, and contract-shaping obligations.
+
 ## Formal Audit Trail
 
 - `../audit/2026-04-11-d4-acceptance-request.md`
@@ -31,13 +39,20 @@ Use these to judge whether the formal audit machinery was helpful, mistimed, or 
 - `../handoffs/handoff-claude-fallback-session.md`
 - `../handoffs/handoff-claude-stage-3-formal-audit.md`
 
-Use these to assess orchestration overhead, handoff quality, and protocol clarity.
+Use these to assess orchestration overhead, handoff quality, protocol clarity, and whether the initiative met the goals of the original handoffs.
 
 ## Spec Layer
 
 - `../specs/`
 
 Use these to assess whether the initiative's executable-task-spec approach improved clarity and auditability or created unnecessary document sprawl.
+
+## Research And Deliberation Layers
+
+- `../research/`
+- `../deliberations/`
+
+Use these to assess research epistemic quality, deliberation traceability, adherence to the three-response framework, and conformance to the boundary-contract assignments.
 
 ## Decision Layer
 

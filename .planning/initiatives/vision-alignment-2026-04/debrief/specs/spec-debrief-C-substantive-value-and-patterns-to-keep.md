@@ -27,6 +27,33 @@ This spec evaluates the substance of:
 - `.planning/TECH-DEBT.md`
 - `CLAUDE.md`
 
+## Context Budget
+
+Target:
+
+- soft target: `<=100K` estimated tokens
+
+Recommended core pack:
+
+- `../SPEC-INDEX.md` (`~0.8K`)
+- `../APPLICATION-LEDGER.md` (`~0.6K`)
+- `../deliberations/01-decision-anchor.md` through `05-decision-anchor.md` (`~6.2K` total)
+- `../synthesis/roadmap-evolution.md` (`~3.4K`)
+- `../synthesis/phase-insertion-proposals.md` (`~2.6K`)
+- `../synthesis/guardrails-proposal.md` (`~2.7K`)
+- `../synthesis/tech-debt-registry.md` (`~2.2K`)
+- `.planning/ROADMAP.md` (`~6.8K`)
+- `.planning/STATE.md` (`~4.0K`)
+- `.planning/TECH-DEBT.md` (`~2.2K`)
+- `CLAUDE.md` (`~1.8K`)
+
+Core-pack total: about `33K`.
+
+Escalation rule:
+
+- Pull the specific full research or deliberation file tied to a claim only when the anchors or synthesis artifacts are insufficient.
+- Do not default to reading all of `research/` or all full deliberations.
+
 ## Questions To Answer
 
 1. Did the initiative correct the wrong-sized Phase 4 framing?
