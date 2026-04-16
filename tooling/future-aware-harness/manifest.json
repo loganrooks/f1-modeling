@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "name": "future-aware-harness",
-  "stage": "wave-3b-core-steering-chain",
+  "stage": "wave-3c-routing-digest",
   "created_at": "2026-04-16",
   "runtime_root_default": "$HOME/.codex/get-shit-done-reflect",
   "overlay_root": "tooling/future-aware-harness/overlay/get-shit-done-reflect",
@@ -36,6 +36,24 @@
       "role": "plan artifact contract",
       "expected_upstream_sha256": "540015a629219758cdd10db706ce1d8b3229545bc430cf593800a310844d2d4b",
       "overlay_sha256": "fce96cde04393e170b6d1b87466bc45f674ca8b3f4bff6fecc56c2c38cc89bdc"
+    },
+    {
+      "relative_path": "workflows/progress.md",
+      "role": "routing digest progress surface",
+      "expected_upstream_sha256": "0031a78c0f40db4a95373492ecf99a5861fc1125fc06ec9f6a9c64774e9309b0",
+      "overlay_sha256": "2c2ad31aefa44e73394b061f8a328ccb54366ad24334cab0d0104e277111ce16"
+    },
+    {
+      "relative_path": "workflows/resume-project.md",
+      "role": "routing digest resume surface",
+      "expected_upstream_sha256": "6fe0baecfe21d2b223407bb3eceeca660320ee2b7651308ba84ce5dd74859d0b",
+      "overlay_sha256": "8d41c23cca45ff821b6e65cf1de78cb20287d0736adc3111245cc968e3a5e249"
+    },
+    {
+      "relative_path": "templates/state.md",
+      "role": "compact routing digest state contract",
+      "expected_upstream_sha256": "d37e34834db6aa366fdf72258922dd13623d2e51f54f38ccc9d6463057d88f4d",
+      "overlay_sha256": "f4b028e29ebc67e5854f1c321db5dcc6efad07ff7df5feecc595c000b9e65373"
     }
   ]
 }

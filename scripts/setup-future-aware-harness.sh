@@ -78,6 +78,26 @@ for (const file of files) {
 NODE
 }
 
+resolve_backup_file_for_target() {
+  local receipt_dir="$1"
+  local preferred_backup_dir="$2"
+  local relative_path="$3"
+
+  if [[ -n "$preferred_backup_dir" && -f "${preferred_backup_dir}/${relative_path}" ]]; then
+    printf '%s\n' "${preferred_backup_dir}/${relative_path}"
+    return 0
+  fi
+
+  local backups_root="${receipt_dir}/backups"
+  [[ -d "$backups_root" ]] || return 1
+
+  local found
+  found="$(find "$backups_root" -type f -path "*/${relative_path}" | sort | tail -n 1 || true)"
+  [[ -n "$found" ]] || return 1
+
+  printf '%s\n' "$found"
+}
+
 emit_targets() {
   node - "$MANIFEST_PATH" <<'NODE'
 const fs = require("fs");
@@ -151,6 +171,7 @@ restore_last_install() {
   receipt_dirname="$(manifest_value receipt_dirname)"
   local receipt_dir="${RUNTIME_ROOT}/${receipt_dirname}"
   local stable_receipt="${receipt_dir}/install-receipt.json"
+  local receipts_dir="${receipt_dir}/receipts"
 
   [[ -f "$stable_receipt" ]] || fail "No install receipt found at ${stable_receipt}"
 
@@ -166,9 +187,10 @@ NODE
   [[ -d "$backup_dir" ]] || fail "Backup directory missing: ${backup_dir}"
 
   while IFS=$'\t' read -r relative_path _role _expected_upstream _overlay_hash; do
-    local backup_path="${backup_dir}/${relative_path}"
+    local backup_path
+    backup_path="$(resolve_backup_file_for_target "$receipt_dir" "$backup_dir" "$relative_path")" || \
+      fail "Missing backup for ${relative_path} in recorded backup history under ${receipt_dir}"
     local runtime_path="${RUNTIME_ROOT}/${relative_path}"
-    [[ -f "$backup_path" ]] || fail "Missing backup for ${relative_path} in ${backup_dir}"
     mkdir -p "$(dirname "$runtime_path")"
     cp "$backup_path" "$runtime_path"
     echo "restored ${relative_path}"

@@ -6,9 +6,9 @@ current_phase: 03.2
 current_phase_name: Backend Execution, Job Artifacts, and Regulation Execution Flow
 current_plan: 0
 status: ready_for_context
-stopped_at: Vision Alignment Initiative applied; next step is Phase 3.2 context and planning
-last_updated: "2026-04-11T23:30:00.000Z"
-last_activity: 2026-04-11
+stopped_at: Wave 3C routing digest uplift applied; next step is Phase 3.2 context and planning
+last_updated: "2026-04-16T18:56:49Z"
+last_activity: 2026-04-16
 progress:
   total_phases: 15
   completed_phases: 5
@@ -21,181 +21,62 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-19)
+See: .planning/PROJECT.md (updated 2026-03-26)
 
 **Core value:** Make F1 design and strategy legible by coupling editable models with visual explanations of why a result changed.
-**Current focus:** Vision Alignment Initiative has been applied to the live roadmap and planning policy. Phase 3.1 is complete; Phase 3.2 is next.
+**Current focus:** Phase 3.2 context and planning under the future-aware harness path.
 
 ## Current Position
 
 Phase: 03.2 of 15 (Backend Execution, Job Artifacts, and Regulation Execution Flow)
 Plan: 0 of 5
 
-**Current Phase:** 03.2
-**Current Phase Name:** Backend Execution, Job Artifacts, and Regulation Execution Flow
-**Total Phases:** 15
-**Current Plan:** 0
-**Total Plans in Phase:** 5
 **Status:** Ready for context gathering and planning
-**Last Activity:** 2026-04-11
-**Progress:** [███░░░░░░░] 34% (21/61 roadmap plans complete; next is Phase 3.2 planning)
+**Last Activity:** 2026-04-16 — Wave 3C applied the routing digest uplift; Phase 3.2 full-context planning remains next.
+**Progress:** [███░░░░░░░] 34% (21/61 roadmap plans complete)
 
-## Performance Metrics
+## Routing Digest
 
-**Velocity:**
+### Active Doctrine Refs
 
-- Total plans completed: 21
-- Average duration: 8.7 min
-- Total execution time: 3.05 hours
+- `.planning/LONG-ARC.md` — preserve the 3.2 -> 3.4 corridor, transport-neutral execution boundary, typed artifacts, and regulation-family-aware execution.
+- `.planning/initiatives/vision-alignment-2026-04/deliberations/01-decision-anchor.md` — Phase 3.2 is the D1 execution-boundary follow-through.
+- `.planning/initiatives/vision-alignment-2026-04/deliberations/05-decision-anchor.md` — regulation execution must stay compatible with the D5 semantic direction.
 
-**By Phase:**
+### Active Tech-Debt Ids
 
-| Phase | Plans | Total | Avg/Plan |
-|-------|-------|-------|----------|
-| Phase 01 | 9/9 | 68min | 7.6min |
-| Phase 02 | 3/3 | 51min | 17.0min |
-| Phase 02.1 | 1/1 | 12min | 12.0min |
-| Phase 03 | 4/4 | 27min | 6.8min |
-| Phase 03.1 | 4/4 | 25min | 6.3min |
+- `VA-TD-01` — split `runService.ts` while landing the backend boundary.
+- `VA-TD-02` — compile canonical regulation semantics into execution snapshots before later regulation families arrive.
+- `VA-TD-03` — replace the synchronous `SimulationHarness` contract with async job, progress, and artifact semantics.
 
-**Recent Trend:**
+### Active Carry-Forward
 
-- Last 5 plans: 6.8min
-- Trend: Down from the Phase 2 peak; recent execution stabilized in the 4-9 minute range
+- Phase 3.2 planning should clear the D1 execution-boundary corridor before Phases 3.3 and 3.4 consume it.
 
-| Phase 01 P01 | 5min | 1 tasks | 5 files |
-| Phase 01 P02 | 6min | 2 tasks | 13 files |
-| Phase 01 P03 | 4min | 2 tasks | 13 files |
-| Phase 01 P07 | 4min | 2 tasks | 6 files |
-| Phase 01 P04 | 6min | 2 tasks | 7 files |
-| Phase 01 P05 | 8min | 2 tasks | 15 files |
-| Phase 01 P06 | 10min | 2 tasks | 12 files |
-| Phase 01 P08 | 23min | 2 tasks | 13 files |
-| Phase 01 P09 | 2min | 1 tasks | 1 files |
-| Phase 02 P01 | 14min | 2 tasks | 22 files |
-| Phase 02 P02 | 9min | 2 tasks | 12 files |
-| Phase 02 P03 | 28min | 3 tasks | 10 files |
-| Phase 02.1 P01 | 12min | 3 tasks | 7 files |
-| Phase 03 P01 | 5min | 2 tasks | 11 files |
-| Phase 03 P02 | 4min | 2 tasks | 5 files |
-| Phase 03 P03 | 9min | 2 tasks | 16 files |
-| Phase 03 P04 | 9min | 2 tasks | 5 files |
-| Phase 03.1 P01 | 4min | 2 tasks | 9 files |
-| Phase 03.1 P02 | 7min | 2 tasks | 8 files |
-| Phase 03.1 P03 | 7min | 2 tasks | 5 files |
-| Phase 03.1 P04 | 7min | 2 tasks | 4 files |
+### Reduced-Guarantee Status
+
+- None active. The next valid path is full-context `03.2` discuss/plan work.
 
 ## Accumulated Context
 
-### Decisions
+### Decision Pointers
 
-Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
-
-- Initialization: quality profile intent for this repo is Codex-native GPT-5.4, not Claude-era labels
-- Initialization: reduced-order, explainable models come before high-fidelity simulation
-- Clarification: MPC is now the preferred serious control baseline before RL
-- Clarification: observer methods, including EKF-style estimation, are now explicitly in-scope on the roadmap
-- Deliberation: estimation and control should be taught and built as an explicit layered stack from observer to MPC to later RL
-- Initialization: RL is a future extension, but only after the simulator is credible enough to support policy learning
-- Deliberation: platform scope is eventual full-system F1 coverage with staged subsystem delivery; electrical is early but not the sole defining focus
-- Clarification: environment interaction should be treated as explicit system coupling, not only as weather or preset metadata
-- Deliberation: visualization should be a progressive, model-coupled learning surface rather than a disconnected later polish layer
-- Gap analysis (2026-03-26): added 8 new requirements (PLAT-04, VISU-05, STRA-04, STRA-05, CTRL-05, EDU-03, ESTM-04, DATA-04); refined MODL-01 and MODL-04
-- Gap analysis: expanded Phase 4 from 3 to 6 plans, Phase 5 from 4 to 5, Phase 6 from 4 to 5
-- Gap analysis: dev servers now support HOST env-var toggle for remote access from apollo over Tailscale
-- Gap analysis: FastF1 and OpenF1 API identified as primary data source targets (resolves open question)
-- Deliberation: dev/deployment architecture — env-var toggle recommended; SSH tunnel fallback if HMR unreliable
-- Deliberation: educational pedagogy — hybrid role-based entry points with concept-based depth modules; performance engineer as natural first role for robotics background
-- Deliberation: data source strategy — FastF1 (Python, telemetry-rich) + OpenF1 (REST, Node-native) via adapter interface; Python sidecar for FastF1
-- [Phase 01]: Reserve root dev/build/test/typecheck scripts at the repo root so later workspaces inherit a stable command surface.
-- [Phase 01]: Keep future workspace-data artifacts as local disk files that are git-ignored by default but still human-inspectable.
-- [Phase 01]: Use pinned localhost ports plus a Vite proxy so the browser and API shells can be smoke-tested deterministically.
-- [Phase 01]: Keep Fastify app construction separate from process startup so later plans can reuse the app instance cleanly.
-- [Phase 01]: Keep packages/domain and packages/visuals as explicit Phase 1 placeholders until schema and primitive plans land.
-- [Phase 01]: Use clearly labeled non-physical placeholder metrics in sim-core so wiring can progress without implying unsupported model fidelity.
-- [Phase 01]: Keep visuals package APIs presentation-only so later app shells provide data and control flow without deep private imports.
-- [Phase 01]: Encode honesty constraints directly in shared primitives, especially for provenance labeling and track-context placeholders.
-- [Phase 01]: Keep scenario documents and run records as separate versioned contracts, with scenario documents referencing presets instead of embedding one opaque workspace blob.
-- [Phase 01]: Represent future observer, controller, and imported-data surfaces as explicit placeholder sections with placeholder provenance instead of speculative Phase 1 config.
-- [Phase 01]: Make the canonical Phase 1 default scenario deterministic and validated at factory construction time.
-- [Phase 01]: Keep filesystem preset loading behind @f1-modeling/domain/node/preset-catalog so the package root remains browser-safe.
-- [Phase 01]: Run records must carry both stable preset references and resolved preset snapshots so historical runs stay reproducible after preset edits.
-- [Phase 01]: Default local API paths resolve repo-root presets and workspace-data locations, but app construction accepts explicit overrides for tests and alternate roots.
-- [Phase 01]: Run creation stays append-only by generating fresh run ids while delegating scenario snapshot and preset snapshot assembly to createRunRecord.
-- [Phase 01]: Centralize browser-side preset, scenario, and run I/O in a dedicated workspace API layer orchestrated by useWorkspace.
-- [Phase 01]: Keep the integrated workbench on shared visuals primitives and label all Phase 1 run outputs as placeholder surfaces.
-- [Phase 01]: Use a generic firstPreset<T> helper with runtime assertion rather than non-null assertions or type casts, preserving test safety under noUncheckedIndexedAccess.
-- [Phase 02]: sim-core now depends on @f1-modeling/domain for CircuitDocument type in lapSolver
-- [Phase 02]: Circuit presets use 5m curvature arrays with sine-ramped transitions and x/y from heading integration
-- [Phase 02]: SimulationRunSummary generalized to Phase1PlaceholderSummary | LapModelSummary discriminated union on harnessId
-- [Phase 02]: Default scenario circuit changed from silverstone-gp to monza to match available circuit presets
-- [Phase 02]: Run route uses harnessId-based routing with fallback: no harnessId tries lap model then falls back to placeholder on RunDependencyError
-- [Phase 02]: Speed profile stored sampled (every 10th point) in summaryMetrics, full profile in artifact data
-- [Phase 02]: Hand-rolled SVG for all visualizations (no charting library) consistent with project conventions
-- [Phase 02]: Track map x/y coordinates were known-inaccurate approximations; resolved in Phase 2.1 with real GPS geometry from TUMFTM and bacinger
-- [Phase 02]: Comparison mode uses comparisonRunId state with overlaid speed profiles and waterfall charts
-- [Phase 02.1]: Preserve hand-authored curvature arrays rather than re-deriving from GPS (noise produces implausible radii)
-- [Phase 02.1]: Cache external source data files in repo for offline reproducibility and data provenance
-- [Phase 02.1]: Python sidecar pipeline pattern established for heavyweight scientific computation consumed by TypeScript monorepo
-- [Phase 03]: Tire wear uses linear pre-cliff + quadratic post-cliff degradation with 0.3 grip floor to prevent solver collapse
-- [Phase 03]: Load transfer computed as distance-weighted average over previous lap profile rather than per-point during solve
-- [Phase 03]: 10% per-lap grip clamp enforced in resolveEffectiveVehicle, not in tire model, to preserve model purity
-- [Phase 03]: Fuel mass reduction modeled at 1.5 kg/lap with 95% minimum mass floor
-- [Phase 03]: Electrical power modifier scales proportionally with deployFraction * SoC/maxCapacity, capped at basePower + maxDeployPower
-- [Phase 03]: Wet harvest penalty uses linear 20% scaling factor per unit surfaceWetness
-- [Phase 03]: Aero factors pre-computed once before lap loop (zones static per stint)
-- [Phase 03]: Weather timeline uses deterministic linear interpolation between authored events (not stochastic)
-- [Phase 03]: Surface grip factor is piecewise linear: 1.0 - 0.45 * surfaceWetness, floored at 0.55
-- [Phase 03]: Rubber evolution starts at 0.95 (green track) with diminishing buildup toward 1.05 and rain washout above 0.3 wetness
-- [Phase 03]: Stint API includes four artifact types: stint-trace, tire-degradation-trace, electrical-state-trace, weather-evolution-trace
-- [Phase 03]: stintConfig on scenario is optional to preserve backward compatibility with all existing scenarios
-- [Phase 03]: Mock braking energy variants (moderate/heavy) for testing harvest cap vs efficiency differences
-- [Phase 03]: Two-tier coupling verification: precise ratio test at unit level + full pipeline wiring test at integration level
-- Audit (2026-04-07): Phase 4 split -- strategy/race sim stays in Phase 4; observer layer moves to Phase 4.1
-- Audit (2026-04-07): Visualization library adoption deliberation is prerequisite before Phase 4 planning
-- Audit (2026-04-07): Future Awareness convention added to CLAUDE.md for phase CONTEXT.md files
-- Audit (2026-04-07): ambientTemperatureC wired into tire cooling rate via environment model
-- [Phase 03.1]: All new race schema fields are optional to preserve backward compatibility with existing Phase 1-3 scenarios and run records
-- [Phase 03.1]: RaceTimelineEvent uses individual named interfaces per variant for clearer downstream consumption
-- [Phase 03.1]: StintSpec in race model takes resolved TireCompoundParams and ElectricalPolicy, not IDs -- resolution happens at config assembly
-- [Phase 03.1]: Extracted core lap loop into shared runStintLoop() helper rather than adding optional initialState param -- preserves existing runStint() signature
-- [Phase 03.1]: Interruption effects applied as post-hoc lap-time modifiers on stint runner output, keeping stint runner single-concern
-- [Phase 03.1]: Tire inventory validation duplicated as local adapter in runService.ts for worktree build compatibility; canonical source in sim-core/raceModel/tireInventory.ts
-- [Phase 03.1]: Per-stint artifacts use stint-index prefix (stint-0, stint-1) for unique artifact IDs within race simulation runs
-- [Phase 03.1]: Separate pitModel.test.ts and tireInventory.test.ts for focused unit testing, extending existing raceModel.test.ts for integration coverage
-- Vision Alignment Initiative (2026-04-11): accepted D1/D2/D3/D5 architecture and D4 roadmap consequences as binding inputs for future phase planning
-- Vision Alignment Initiative: inserted Phases 3.2, 3.3, and 3.4 before Phase 4; rewrote Phase 4 and 4.1 framing; split Phase 5 into 5 and 5.1; narrowed Phase 8
-- Vision Alignment Initiative: promoted `.planning/TECH-DEBT.md` as the living registry for rewrite triggers, benchmark obligations, and accepted transitional debt
+- Vision Alignment accepted the D1/D2/D3/D5 architecture and promoted `.planning/TECH-DEBT.md` as the live rewrite-trigger registry.
+- Phases 3.2, 3.3, and 3.4 were inserted before Phase 4; the later roadmap now depends on that corridor landing in order.
+- The current compute posture remains local-first, reduced-order, and TypeScript-bridge until measured rewrite triggers fire.
 
 ### Pending Todos
 
-1. Add context-appropriate comparison modes for same-track and cross-track analysis (MEDIUM, ui)
-
-### Roadmap Evolution
-
-- Phase 02.1 inserted after Phase 2: Circuit Geometry Pipeline (COMPLETE) — real GPS-derived track geometry from TUMFTM and bacinger sources
-- Phase 03.1 inserted after Phase 3: Race State, Typed Artifacts, and Branchable Runs — architectural bridge between single-stint simulation and race-level analysis
-- Vision Alignment Initiative applied (2026-04-11): inserted Phase 3.2 (D1 execution boundary), Phase 3.3 (D2 visualization substrate), and Phase 3.4 (D3 lesson foundation plus D5 minimal semantics) before Phase 4
-- Vision Alignment Initiative applied (2026-04-11): Phase 4 narrowed to Strategy Workbench and Session Workflows; Phase 4.1 reframed as Observer and Replay Workbench on top of D1/D2/D3 substrate
-- Vision Alignment Initiative applied (2026-04-11): Phase 5 split into Driver Style and Control Foundations plus Phase 5.1 Optimization-Backed Control and Trajectory Analysis; Phase 8 narrowed to the first honest regulation/design exploration wave
+- Add context-appropriate comparison modes for same-track and cross-track analysis (MEDIUM, ui)
 
 ### Blockers/Concerns
 
-- Shared GSD tooling still resolves quality profiles to Claude-era labels; project-level Codex intent is documented but global tooling may still need adaptation later.
-- STATE/ROADMAP/phase-directory alignment now expects new directories for Phases 3.2, 3.3, and 3.4; until those exist, GSD tooling will correctly route to planning but current-phase metadata must be kept honest manually.
-- The inserted pre-Phase-4 phases are not optional polish. They include deliberate refactor and retirement work against transitional seams already in the repo, especially `runService.ts`, synchronous harness contracts, the three-zone shell, and bespoke SVG panel growth.
-- `AccessibleChartContract` and `AnchorRegistry` remain explicit planning gates for Phase 3.3 and should not be allowed to drift into implementation-time guesswork.
-- Telemetry import path now targeted at FastF1 (Python) and OpenF1 API (REST); detailed integration architecture deferred to Phase 6 planning.
-- The minimum viable electrical state set and educational UX surface for v1 remain deferred to later roadmap phases and should not leak into early-phase execution.
-- The minimum viable environment-interaction model for v1 remains deferred to later roadmap phases and should not leak into early-phase execution.
-- The first observer targets and whether EKF is the right initial estimator for them remain deferred to Phase 4.1 planning.
-- The minimum viable plant model, horizon, and solver strategy for an initial MPC baseline remain deferred to Phase 5 planning.
-- Future milestone sequencing for non-electrical subsystem families is still thematic rather than detailed and should continue to be made explicit as the roadmap evolves.
-- Shared GSD roadmap parsing currently depends on `.planning/phases/` directories; inserted phases should be scaffolded there before automatic plan/execute routing can work cleanly.
+- Phase directories for 3.2, 3.3, and 3.4 still need scaffolding before automatic phase routing is fully clean.
+- `AccessibleChartContract` and `AnchorRegistry` remain explicit Phase 3.3 planning gates and must not drift into implementation-time guesswork.
+- Shared GSD tooling still resolves some quality-profile paths to Claude-era labels; repo intent remains Codex-native GPT-5.4.
 
 ## Session Continuity
 
-**Last session:** 2026-04-11T23:30:00.000Z
-**Stopped At:** Vision Alignment Initiative applied to live planning files. Phase 3.1 remains complete; next action is Phase 3.2 context and planning.
-**Resume File:** .planning/phases/03.2-backend-execution-job-artifacts-and-regulation-execution-flow/03.2-CONTEXT.md
+**Last session:** 2026-04-16T18:56:49Z
+**Stopped At:** Wave 3C routing digest uplift applied; next action is Phase 3.2 context and planning.
+**Resume File:** None yet — create Phase 3.2 context via `$gsdr-discuss-phase 3.2`.
