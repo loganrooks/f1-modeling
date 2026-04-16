@@ -159,6 +159,22 @@ Deliverables:
 - GSDR subsystem inventory
 - patch-surface inventory for this repo
 
+### Review Gate 1 — Mechanism and adaptation decisions
+
+Purpose:
+- review the Wave 1 research before doctrine or harness proposals are drafted
+- decide what is `borrow now`, `adapt now`, `later`, or `reject`
+- decide whether the initiative should stay unified or split by subsystem scope
+
+Primary review artifact:
+- `specs/spec-wave-1-review-gate-mechanism-and-adaptation-decisions.md`
+
+Review gate questions:
+- Which borrowed mechanisms are actually behavior-changing enough to justify adoption here?
+- Which ones need substantial adaptation because this repo is on GSDR?
+- Which Reflect-specific subsystems must be in-scope now?
+- Is Wave 2A still the right next step, or should the initiative be narrowed or split first?
+
 ### Stage 2 — Doctrine and governance package
 
 Purpose:
