@@ -51,3 +51,40 @@ Wave 2B also applied the required narrow root companion:
 - Formal audit preflight is now documented, but later waves still need to encode the operational enforcement path.
 - The root routing layer can only point to active phase files once those directories exist; until then, the initiative and review files remain the fallback planning carriers.
 - The doctrine shell is intentionally asymmetrical. If later work drifts toward schema cloning across anchors, audits, signals, or debriefs, this wave will need to be treated as the written boundary that was bypassed.
+
+## 7. Reconstructed Completion Output
+
+The worker completed the file application but did not return its final completion envelope. This is the reconstructed closeout for the wave:
+
+```text
+Wave 2B applied the reviewed doctrine and governance package as a narrow live shell.
+
+Summary:
+- Created `.planning/LONG-ARC.md` as the durable long-arc doctrine layer.
+- Created `.planning/AGENTS.md` as the planning-agent contract.
+- Created `WORKFLOW.md` as the planning operating procedure.
+- Created `.planning/ARTIFACT-GOVERNANCE.md` as the artifact authority/supersession map.
+- Created root `AGENTS.md` as a narrow planning router while preserving the repo’s active GSD workflow guidance.
+- Recorded the application in `synthesis/02-doctrine-and-governance-application.md`.
+
+Files changed:
+- `.planning/LONG-ARC.md`
+- `.planning/AGENTS.md`
+- `WORKFLOW.md`
+- `.planning/ARTIFACT-GOVERNANCE.md`
+- `AGENTS.md`
+- `.planning/initiatives/future-aware-planning-harness-2026-04/synthesis/02-doctrine-and-governance-application.md`
+
+Completeness:
+- Wave 2B is complete per spec.
+- No blocking gaps were found in review.
+- Remaining items (`STATE.md` uplift, audit enforcement, steering-chain schema, planner/checker enforcement) were intentionally deferred to later waves rather than missed in this one.
+
+Wave 2B complete.
+- .planning/LONG-ARC.md
+- .planning/AGENTS.md
+- WORKFLOW.md
+- .planning/ARTIFACT-GOVERNANCE.md
+- AGENTS.md
+- synthesis/02-doctrine-and-governance-application.md (81 lines)
+```
