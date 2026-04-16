@@ -1,0 +1,41 @@
+{
+  "manifest_version": 1,
+  "name": "future-aware-harness",
+  "stage": "wave-3b-core-steering-chain",
+  "created_at": "2026-04-16",
+  "runtime_root_default": "$HOME/.codex/get-shit-done-reflect",
+  "overlay_root": "tooling/future-aware-harness/overlay/get-shit-done-reflect",
+  "receipt_dirname": ".f1-modeling-future-aware-harness",
+  "targets": [
+    {
+      "relative_path": "workflows/discuss-phase.md",
+      "role": "context producer",
+      "expected_upstream_sha256": "71b9e9fa73de568d1520382b80ff6a45fdb8bedc99451a9171d78ec1f69754be",
+      "overlay_sha256": "b3169e95affa6288a0ff22f6c0728466cbf67e85bfa7c3d3f74d43bf916c47a9"
+    },
+    {
+      "relative_path": "workflows/research-phase.md",
+      "role": "research consumer",
+      "expected_upstream_sha256": "b52da22176d879972b5ae0aade6a4d065d6580e5bf2786472d9ce5b0661e4c97",
+      "overlay_sha256": "b4e19cc935025db15c4e8f8a04e2e043f5073b463c68b4239dfec9333da19c63"
+    },
+    {
+      "relative_path": "workflows/plan-phase.md",
+      "role": "planner and checker orchestration",
+      "expected_upstream_sha256": "d687fa67e5ff63cd28750c6e05991d3543f4a33ec50444e228237732249e0071",
+      "overlay_sha256": "b74949af50499c29631a1891431e74b394619c42803955b311e2f4e6b277b192"
+    },
+    {
+      "relative_path": "templates/context.md",
+      "role": "context contract",
+      "expected_upstream_sha256": "9995823cf77bc2f185986f85d5869a3fbbf92811b77c1ace69910bae2f07eab8",
+      "overlay_sha256": "afe9a2bd0d29691055acc9e9fe74ac41d90190bdd0e227201ff0c7422d01264a"
+    },
+    {
+      "relative_path": "templates/phase-prompt.md",
+      "role": "plan artifact contract",
+      "expected_upstream_sha256": "540015a629219758cdd10db706ce1d8b3229545bc430cf593800a310844d2d4b",
+      "overlay_sha256": "fce96cde04393e170b6d1b87466bc45f674ca8b3f4bff6fecc56c2c38cc89bdc"
+    }
+  ]
+}
