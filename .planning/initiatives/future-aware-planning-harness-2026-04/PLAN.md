@@ -175,6 +175,16 @@ Review gate questions:
 - Which Reflect-specific subsystems must be in-scope now?
 - Is Wave 2A still the right next step, or should the initiative be narrowed or split first?
 
+Outcome recorded in:
+- `reviews/review-wave-1-mechanism-and-adaptation-decisions.md`
+
+Gate result:
+- Proceed to Wave `2A` as planned
+- Keep the initiative unified
+- Treat phase steering, progress/resume/state, tech-debt, and formal audit preflight as the primary enforcement-now lanes
+- Treat deliberations/anchors, signals/reflection, and initiative carry-forward as bounded governance/interface lanes rather than schema-cloning targets
+- Defer a dedicated research-disposition mechanism until it is reconciled with GSDR `Genuine Gaps` and spike routing
+
 ### Stage 2 — Doctrine and governance package
 
 Purpose:
@@ -204,7 +214,7 @@ Deliverables:
 - normalized `Future Awareness` context shape
 - `future_preservation` plan shape
 - canonical-ref propagation mechanism
-- research disposition mechanism
+- optional research-disposition follow-on only if harmonized with GSDR `Genuine Gaps` and spike routing
 
 Review gate questions:
 - Is this really repo-local and reproducible?

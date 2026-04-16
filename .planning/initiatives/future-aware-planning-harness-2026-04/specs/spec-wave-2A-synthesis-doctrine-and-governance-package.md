@@ -18,6 +18,10 @@ Before doing anything else, read:
 
 Then read the Stage 1 outputs that this synthesis consumes.
 
+Then read the completed Wave 1 review-gate decision:
+
+5. `.planning/initiatives/future-aware-planning-harness-2026-04/reviews/review-wave-1-mechanism-and-adaptation-decisions.md`
+
 ---
 
 ## Synthesis question
@@ -25,6 +29,14 @@ Then read the Stage 1 outputs that this synthesis consumes.
 What doctrine and governance package should `f1-modeling` adopt so that future-aware planning has a durable repo-local home before harness behavior is patched further?
 
 This is a proposal-writing pass, not an implementation pass.
+
+The package must reflect the Wave 1 gate outcome:
+
+- the initiative remains unified
+- phase steering, progress/resume/state, tech-debt, and formal audit preflight are the primary enforcement-now lanes
+- deliberations/decision anchors, signals/reflection, and initiative carry-forward are governance/interface lanes, not schema-cloning targets
+- full artifact symmetry across Reflect surfaces is rejected
+- dedicated research-disposition mechanism is deferred until it is reconciled with GSDR `Genuine Gaps` and spike routing
 
 ---
 
@@ -54,10 +66,11 @@ The file must include:
 3. Doctrine stack recommendation
 4. Artifact role map
 5. Proposed file set and purpose of each file
-6. Draft content guidance or draft contents for each file
-7. Open decisions that should remain at review gate
-8. Risks / tradeoffs
-9. References to Stage 1 findings
+6. Proposed treatment for GSDR-only subsystem lanes at the doctrine/governance layer
+7. Draft content guidance or draft contents for each file
+8. Open decisions that should remain at review gate
+9. Risks / tradeoffs
+10. References to Stage 1 findings
 
 ## Completion signal
 
