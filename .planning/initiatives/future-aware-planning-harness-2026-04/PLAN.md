@@ -1,6 +1,6 @@
 # Master Plan: Future-Aware Planning Harness Initiative
 
-**Status:** Active through Stage 4 execution
+**Status:** Active post-Stage 4
 **Date:** 2026-04-16
 **Target runtime:** Codex GPT-5.4
 
@@ -255,6 +255,11 @@ Gate `4` outcome:
 - only the formal audit and review-gate lane remains application-worthy now
 - `4B` should stay repo-tracked and workspace-facing rather than patching the home-level `gsdr-audit` skill
 - deliberations/anchors, signals/reflection, and initiative/debrief remain governance-only at this stage
+
+Stage `4` outcome:
+- accepted as complete at the repo-tracked level after `4B`
+- repo-level formal audit and advisory review package now exists
+- global skill patching remains intentionally deferred unless a later enforcement review proves it necessary
 
 Review gate questions:
 - Which extra subsystems genuinely need enforcement versus just doctrine?

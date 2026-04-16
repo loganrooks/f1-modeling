@@ -17,14 +17,14 @@ The files in `specs/` are the initiative's canonical executable task contracts. 
 | `specs/spec-wave-3C-apply-routing-digest-patch.md` | Apply the routing-focused overlay extension and live state digest uplift | routing overlay targets, updated STATE.md, application summary | Completed |
 | `specs/spec-wave-4A-synthesis-gsdr-subsystem-adaptation-policy.md` | Synthesize the Stage 4 policy matrix for remaining GSDR-specific subsystem lanes | subsystem adaptation policy, lane classifications, candidate 4B patch surfaces | Completed |
 | `specs/spec-wave-4-review-gate-gsdr-subsystem-adaptation-decisions.md` | Human/orchestrator review gate after Wave 4A | review decisions on doctrine-only versus application-worthy subsystem lanes | Completed |
-| `specs/spec-wave-4B-apply-formal-gate-preflight-package.md` | Apply the narrow repo-level formal audit and review-gate preflight package | repo-level audit/review workspace docs, templates, initiative-local pointers, application summary | Proposed |
+| `specs/spec-wave-4B-apply-formal-gate-preflight-package.md` | Apply the narrow repo-level formal audit and review-gate preflight package | repo-level audit/review workspace docs, templates, initiative-local pointers, application summary | Completed |
 
 ## Current expectation
 
-This initiative has completed Stages `1` through `3`, completed Stage `4A`, and accepted the Gate `4` narrowing decision.
+This initiative has completed Stages `1` through `4` at the repo-tracked level.
 
 The current useful execution step is:
 
-1. apply the narrow repo-level formal gate preflight package in `4B`
-2. keep `verify/validate`, signal automation, global skill patching, and the `3.2` proving ground out of scope while `4B` lands
-3. review whether Stage `4` can close after that repo-level gate package or whether a later global-skill follow-on is still justified
+1. reassess whether Stage `5` still needs a narrow synthesis wave after the already-landed reduced-guarantee routing and formal-gate package
+2. keep `verify/validate`, signal automation, and global skill patching out of scope unless that reassessment proves them necessary
+3. move toward the `3.2` proving-ground application once the remaining enforcement question is honestly resolved
