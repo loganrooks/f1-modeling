@@ -24,6 +24,7 @@ The debrief should eventually produce:
 - `TIMELINE.md` — dated factual reconstruction of what happened
 - `FINDINGS.md` — evidence-backed wins, failures, near-failures, and overhead
 - `EPISTEMIC-AND-CONTRACT-REVIEW.md` — evaluation of research quality, deliberation reliability, traceability, and adherence to governing docs
+- `INTERACTION-REVIEW.md` — analysis of user/model interactions, frustration points, productive turns, model-role differences, and agent usage patterns
 - `PATTERNS-TO-KEEP.md` — good practices worth standardizing
 - `CHANGES-BEFORE-NEXT-INITIATIVE.md` — the short operational change list for the next strategic initiative
 - `DEBRIEF-SUMMARY.md` — concise retrospective outcome
@@ -31,6 +32,7 @@ The debrief should eventually produce:
 - new or updated signals / guardrails / planning docs when findings warrant them
 
 The bounded task contracts for producing those outputs live in `specs/`.
+Transcript extraction staging lives in `extracts/`.
 
 ## Ground Rule
 

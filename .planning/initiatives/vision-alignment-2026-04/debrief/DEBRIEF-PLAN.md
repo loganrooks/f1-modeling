@@ -4,13 +4,14 @@
 
 Run a disciplined retrospective on the Vision Alignment Initiative that produces durable carry-forward changes rather than a one-off discussion.
 
-The debrief should evaluate five things separately:
+The debrief should evaluate six things separately:
 
 1. **Substantive outcome quality** — did the initiative improve the roadmap and architectural direction?
 2. **Process quality** — was the initiative run in a way that was efficient, legible, and correctable?
 3. **Auditability quality** — could an outsider reconstruct what happened and why?
 4. **Carry-forward quality** — were the lessons actually moved into live constraints, workflow, or backlog artifacts?
 5. **Methodological fidelity** — did the research and deliberations meet the epistemic, traceability, boundary-contract, and handoff obligations they were supposed to operate under?
+6. **Interaction quality** — how did the user, Codex, Claude, and subagents actually interact across the initiative, where did those interactions help, and where did they create friction or confusion?
 
 ## Non-Goals
 
@@ -64,6 +65,7 @@ Reading rules:
 - Start with the core pack listed in the spec.
 - Escalate to full research or deliberation files only when an evidence gap requires it.
 - Prefer anchors, indexes, and synthesis summaries before full-file expansion.
+- For chat/session evidence, prefer targeted extraction into `extracts/` before any synthesis lane reads transcript material directly.
 - If a lane stretches past the soft target, record why.
 
 ## Work Sequence
@@ -97,7 +99,22 @@ Check explicitly:
 Output target:
 - `EPISTEMIC-AND-CONTRACT-REVIEW.md`
 
-### Phase 3: Evaluate what went well
+### Phase 3: Extract and review interaction evidence
+
+Check explicitly:
+
+- moments of frustration, ambiguity, or repeated clarification
+- moments where the interaction improved the work materially
+- authorization and delegation confusion
+- role shifts between Codex, Claude, and subagents
+- where cross-model interaction caught real blind spots
+- what the interaction history says about quality, not just artifacts
+
+Output target:
+- `extracts/`
+- `INTERACTION-REVIEW.md`
+
+### Phase 4: Evaluate what went well
 
 Look for:
 
@@ -113,7 +130,7 @@ Output target:
 - substantive-win entries in `FINDINGS.md`
 - reusable entries in `PATTERNS-TO-KEEP.md`
 
-### Phase 4: Evaluate what went wrong or almost went wrong
+### Phase 5: Evaluate what went wrong or almost went wrong
 
 Separate failures by class:
 
@@ -131,7 +148,7 @@ Important distinction:
 Output target:
 - process, auditability, and near-failure entries in `FINDINGS.md`
 
-### Phase 5: Convert findings into carry-forward actions
+### Phase 6: Convert findings into carry-forward actions
 
 Every finding must end in one destination:
 
@@ -148,7 +165,7 @@ Output target:
 - `CHANGES-BEFORE-NEXT-INITIATIVE.md`
 - accepted items in `CARRY-FORWARD-LEDGER.md`
 
-### Phase 6: Close with disposition
+### Phase 7: Close with disposition
 
 Produce `DEBRIEF-SUMMARY.md` with:
 
@@ -166,12 +183,16 @@ Recommended bounded work split:
 2. `specs/spec-debrief-B-process-and-auditability-review.md`
 3. `specs/spec-debrief-C-substantive-value-and-patterns-to-keep.md`
 4. `specs/spec-debrief-E-epistemic-quality-and-contract-adherence.md`
-5. `specs/spec-debrief-D-carry-forward-synthesis-and-next-initiative-changes.md`
+5. transcript extraction sublanes feeding `extracts/`
+6. `specs/spec-debrief-F-interaction-review.md`
+7. `specs/spec-debrief-D-carry-forward-synthesis-and-next-initiative-changes.md`
 
 Guidance:
 
 - Run Spec A first so the factual sequence is anchored.
 - Specs B, C, and E are good agent-sized evidence-gathering tasks once A is complete.
+- Run transcript extraction before Spec F so interaction analysis works from curated evidence rather than raw history sprawl.
+- For transcript extraction, prefer cheap models plus deterministic prefiltering over expensive models reading raw stores.
 - Spec D is synthesis and disposition work; keep final judgment local so one owner resolves contradictions and writes the final debrief.
 - If delegation is used, agent outputs should be treated as evidence drafts until reviewed against the source files.
 
@@ -188,8 +209,10 @@ Answer these explicitly:
 7. Did the research outputs actually meet the epistemic and methodological requirements they were given?
 8. Did the deliberations stay traceable, reliable, and boundary-contract compliant?
 9. Did the initiative meet the original goals of the orchestrator handoff, and where did it deviate?
-10. What should become standard for future strategic initiatives in this repo?
-11. What should never be repeated in the same form?
+10. What does the interaction history reveal about moments of frustration, productive collaboration, and authorization ambiguity?
+11. What does the interaction history reveal about Codex vs Claude roles, strengths, and blind spots in this initiative?
+12. What should become standard for future strategic initiatives in this repo?
+13. What should never be repeated in the same form?
 
 ## Standards For Findings
 
@@ -218,6 +241,7 @@ Expected files in this directory:
 - `TIMELINE.md`
 - `FINDINGS.md`
 - `EPISTEMIC-AND-CONTRACT-REVIEW.md`
+- `INTERACTION-REVIEW.md`
 - `PATTERNS-TO-KEEP.md`
 - `CHANGES-BEFORE-NEXT-INITIATIVE.md`
 - `DEBRIEF-SUMMARY.md` once the debrief is run
@@ -228,9 +252,10 @@ The debrief is complete when:
 
 1. `TIMELINE.md`, `FINDINGS.md`, `PATTERNS-TO-KEEP.md`, and `CHANGES-BEFORE-NEXT-INITIATIVE.md` are populated or intentionally marked not applicable
 2. `EPISTEMIC-AND-CONTRACT-REVIEW.md` is populated
-3. `DEBRIEF-SUMMARY.md` exists
-4. all material findings have dispositions in `CARRY-FORWARD-LEDGER.md`
-5. any accepted immediate follow-ups have been created or linked
-6. any rejected findings have reasons recorded
+3. `INTERACTION-REVIEW.md` is populated
+4. `DEBRIEF-SUMMARY.md` exists
+5. all material findings have dispositions in `CARRY-FORWARD-LEDGER.md`
+6. any accepted immediate follow-ups have been created or linked
+7. any rejected findings have reasons recorded
 
 Until then, the debrief is in progress, not done.

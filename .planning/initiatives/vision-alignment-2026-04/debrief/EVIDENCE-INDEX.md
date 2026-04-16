@@ -2,6 +2,11 @@
 
 This is the recommended evidence set for the Vision Alignment Initiative debrief.
 
+## Trigger / Origin Record
+
+- `.planning/audits/vision-audit-2026-04-08/audit-response-2026-04-10.md`
+  - use this before the initiative-local record when reconstructing Spec A from the original trigger; it names the initiating "wrong-sized question" problem and the proposed Stage 1-4 follow-up shape that the initiative later instantiated
+
 ## Primary Record
 
 - `../README.md`
@@ -39,7 +44,25 @@ Use these to judge whether the formal audit machinery was helpful, mistimed, or 
 - `../handoffs/handoff-claude-fallback-session.md`
 - `../handoffs/handoff-claude-stage-3-formal-audit.md`
 
-Use these to assess orchestration overhead, handoff quality, protocol clarity, and whether the initiative met the goals of the original handoffs.
+Use these to assess orchestration overhead, Gate 1 restructuring, handoff quality, protocol clarity, and whether the initiative met the goals of the original handoffs.
+
+## Chat / Session Evidence
+
+- `../logs/wave-1A.log`
+- `../logs/wave-1B.log`
+- `../logs/wave-1C.log`
+- `~/.claude/projects/-home-rookslog-workspace-projects-f1-modeling/*.jsonl`
+- `~/.claude/history.jsonl`
+- `~/.codex/history.jsonl`
+- `~/.codex/sessions/`
+
+Use these to reconstruct user/model interaction quality, frustration points, positive collaboration moments, authorization ambiguity, cross-model role shifts, and subagent usage patterns.
+
+Important:
+
+- Do not bulk-read these stores into a synthesis lane.
+- First extract targeted evidence into `extracts/`.
+- Prefer project-scoped session files and initiative-date slices before global history files.
 
 ## Spec Layer
 
