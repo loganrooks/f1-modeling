@@ -75,8 +75,25 @@ Plan: 0 of 5
 - `AccessibleChartContract` and `AnchorRegistry` remain explicit Phase 3.3 planning gates and must not drift into implementation-time guesswork.
 - Shared GSD tooling still resolves some quality-profile paths to Claude-era labels; repo intent remains Codex-native GPT-5.4.
 
+### GSD Ecosystem Pivot (2026-05-15)
+
+The Claude-side tooling layer was migrated from GSDR (loganrooks/get-shit-done-reflect, the user's fork) back to mainline classical GSD (`get-shit-done-cc` v1.42.2 from glittercowboy/TÂCHES). Concrete changes outside this repo:
+
+- Installed: GSD-1 1.42.2 globally at `~/.claude/get-shit-done/` with 67 skills and 33 subagents.
+- Pruned: 37 of 41 `gsdr:*` slash commands and 11 of 18 `gsdr-*` subagents. Kept only the reflection/knowledge-base surface that mainline GSD-1 does not provide.
+- Surviving GSDR surface: 4 slash commands (`gsdr:deliberate`, `gsdr:signal`, `gsdr:reflect`, `gsdr:collect-signals`) and 7 subagents (`gsdr-reflector`, `gsdr-signal-synthesizer`, plus 5 sensors: artifact, git, ci, log, patch). The `~/.claude/get-shit-done-reflect/` infrastructure dir is preserved intact for these commands.
+- Backups: `~/backups/gsd-cleanup-2026-05-15.tar.gz` (1.2M), `~/backups/gsd-cleanup-2026-05-15-aux.tar.gz` (116K), plus `/tmp/gsd-fossils-2026-05-15/` until /tmp is cleared.
+
+Repo-side consequences (intentional, not yet remediated):
+
+- `.planning/config.json:gsd_reflect_version: "1.18.3"` is now an orphan field (GSD-1 does not read it). Left in place; harmless.
+- `.planning/config.json:runtime.agent_overrides` references `gsdr-*` agents — most never existed (gsdr-planner, gsdr-roadmapper, gsdr-executor, gsdr-phase-researcher, gsdr-project-researcher, gsdr-research-synthesizer, gsdr-plan-checker) and the remaining four (debugger, codebase-mapper, verifier, integration-checker) were pruned today. The section is fully orphan but harmless; future config rewrites should drop it.
+- Strategic audit interventions INT-02 (`/gsdr:upgrade-project`), INT-04 (refresh KB index via `/gsdr:health`), INT-07 (`/gsdr:health-check`) are now N/A — those commands no longer exist locally.
+- The autonomous-goal-pilot-2026-05 initiative was built on Codex `/goal` plus a Codex-executes / Claude-audits architecture. The Claude-primary pivot plus GSDR retirement renders its hard-precondition list (INT-02 in particular) inapplicable. The initiative should be either re-aimed for Claude-primary `/goal` semantics or formally shelved before further investment.
+- Phase 3.2 CONTEXT.md uses GSDR 1.19.3+ typed-claim notation. The `gsdr-context-checker` agent that validated those claims has been pruned. Claims remain valid markdown but no longer have structural validation.
+
 ## Session Continuity
 
 **Last session:** 2026-04-16T18:56:49Z
 **Stopped At:** Wave 3C routing digest uplift applied; next action is Phase 3.2 context and planning.
-**Resume File:** None yet — create Phase 3.2 context via `$gsdr-discuss-phase 3.2`.
+**Resume File:** None yet — create Phase 3.2 context via `/gsd-discuss-phase 3.2` (mainline GSD-1 1.42.2 invocation; the prior `$gsdr-discuss-phase` syntax is no longer available locally).
