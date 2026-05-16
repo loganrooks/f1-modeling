@@ -56,7 +56,7 @@ Every plan execution must pass ALL of these before completion:
 1. **`npm run typecheck`** — must pass across all workspaces
 2. **`npm test` at project root** — must pass (not per-workspace, root catches cross-workspace regressions)
 3. **`npm run build`** — must pass
-4. **Phase verification** (gsdr-verifier) — must pass all success criteria
+4. **Phase verification** (gsd-verifier) — must pass all success criteria
 5. **Cross-phase regression** — after modifying shared browser/API code, verify prior phase tests still pass
 6. **Benchmark evidence when applicable** — any plan that changes visualization substrate, linked interaction behavior, or async execution cadence must attach benchmark output against the accepted envelope and note regressions explicitly.
 

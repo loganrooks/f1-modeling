@@ -6,6 +6,36 @@
 
 This document lists concrete interventions, each tagged with category, lift × cost, milestone fit, and companion dependencies. Use it as the menu the orchestrator and human collaborator can pick from.
 
+---
+
+## Status Update — 2026-05-15: GSD Ecosystem Pivot
+
+The Claude-side tooling layer was migrated from GSDR (`get-shit-done-reflect-cc`, loganrooks fork) back to mainline classical GSD-1 (`get-shit-done-cc` v1.42.2). See `.planning/STATE.md` § "GSD Ecosystem Pivot (2026-05-15)" for the full record. Concrete consequences for this intervention plan:
+
+**Done (committed 2026-05-15):**
+- **INT-01** — Pending planning state committed (`docs(planning): record GSD ecosystem pivot to mainline GSD-1` + `chore(measurement): checkpoint postlude telemetry through 2026-05-15`).
+
+**Hard N/A (referenced GSDR commands have been physically removed locally):**
+- **INT-02** — `/gsdr:upgrade-project` no longer exists. The 1.18.3 → 1.19.10 upgrade goal is moot; the runtime is now GSD-1 1.42.2.
+- **INT-04** — `/gsdr:health` indexer no longer exists. `.planning/knowledge/index.md` will need a hand re-run or a custom indexer.
+- **INT-07** — `/gsdr:health-check` no longer exists. Composite-score baseline cannot be established this way.
+
+**Re-aim required (the intent still holds, but the GSDR primitive named in the mechanism is gone):**
+- **INT-31, INT-32** (`/gsdr:spike` for AccessibleChartContract / AnchorRegistry) — spike command removed. Substitute: write the contracts directly as a Phase 3.3 planning gate document under `.planning/phases/03.3-*/contracts/`. The intent (define before code lands) is unchanged.
+- **INT-34** (`/gsdr:audit` for next cross-model audit) — audit command removed. Substitute: continue the manual `codex exec review` workflow already documented in CLAUDE.md and `~/.claude/projects/...memory/reference_codex_audits.md`.
+- **INT-39, INT-40, INT-41, INT-42, INT-43, INT-44** (`/gsdr:plant-seed` for v2 / future initiative seeds) — plant-seed removed. Substitute: hand-author each seed file directly at `.planning/initiatives/seeds/<slug>.md`.
+
+**Still valid (surviving GSDR surface):**
+- **INT-03** (`/gsdr:reflect` against the 21-signal corpus) — `gsdr:reflect` command preserved.
+- **INT-33** (`/gsdr:deliberate` for async-backend acceptance) — `gsdr:deliberate` command preserved.
+- **INT-38** (scheduled `/gsdr:deliberate` re-evaluation gate) — `gsdr:deliberate` command preserved.
+
+**Initiative consequence:** `.planning/initiatives/autonomous-goal-pilot-2026-05/` was structured on Codex-executes / Claude-audits + a hard precondition on INT-02. Both foundations are gone. The initiative has been archived (see ARCHIVED banner on its README.md and PLAN.md). Re-aim for Claude-primary `/goal` semantics if revived.
+
+The Section I sequencing block ("Day 2: INT-02, INT-03, INT-04, INT-07") is partially superseded: only INT-03 from that day's bundle remains actionable.
+
+---
+
 **Lift / Cost legend:** S (≤1 hour), M (1 day), L (multi-day). **Lift** is the size of the benefit; **cost** is the size of the work.
 
 **Milestone-fit legend:**

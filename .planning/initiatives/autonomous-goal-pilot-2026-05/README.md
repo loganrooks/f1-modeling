@@ -1,5 +1,16 @@
 # Autonomous `/goal` Pilot Initiative — 2026-05
 
+> **ARCHIVED 2026-05-15.** This initiative was structured on two foundations that no longer hold:
+> 1. **Codex-executes / Claude-audits architecture** — the project pivoted to Claude-primary on 2026-05-15 (see `.planning/STATE.md` § "GSD Ecosystem Pivot").
+> 2. **Hard precondition INT-02** (`/gsdr:upgrade-project` 1.18.3 → 1.19.10) — the GSDR command no longer exists locally; the runtime is now mainline GSD-1 v1.42.2.
+>
+> The strategic-audit finding it converts ("doctrine-without-enforcement is the #1 agential uplift gap") remains valid and worth pursuing. A future revival would need to:
+> - Re-aim for **Claude-primary** `/goal` semantics (sees only conversation transcript; evaluator is Haiku; modes are interactive / `--print` / `--mode rpc|json|mcp`).
+> - Drop the GSDR upgrade preconditions and re-express the audit gate against GSD-1 1.42.2 primitives plus the surviving `gsdr:deliberate` / `gsdr:signal` / `gsdr:reflect` / `gsdr:collect-signals` add-ons.
+> - Re-derive the cross-runtime audit independence story without the Codex executor leg.
+>
+> The PLAN.md remains on disk as a historical reference for the structural framing. Do not execute against it as-is.
+
 ## Initiative Class
 
 **Planning-system initiative.** Not a roadmap phase. Same shape as `vision-alignment-2026-04/` and `future-aware-planning-harness-2026-04/`.

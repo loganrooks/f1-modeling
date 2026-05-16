@@ -1,6 +1,13 @@
 ---
 document: AUTONOMOUS-GOAL-INIT-PLAN
-status: draft
+status: archived
+archived_date: 2026-05-15
+archived_reason: |
+  Structured on Codex-executes / Claude-audits architecture and a hard precondition
+  on INT-02 (/gsdr:upgrade-project). The project pivoted to Claude-primary on
+  2026-05-15 and the GSDR upgrade command no longer exists locally (runtime is now
+  mainline GSD-1 v1.42.2). See README.md ARCHIVED banner and .planning/STATE.md.
+  Retained on disk as historical reference; do not execute against this plan as-is.
 target_runtime: codex (primary executor), claude-code (primary auditor)
 execution_host: dionysus (linux ubuntu 24.04, xeon w-2125, gtx 1080 ti, tailscale 100.93.212.44)
 client_host: apollo (macbook air over tailscale; ssh-tunnel fallback)
