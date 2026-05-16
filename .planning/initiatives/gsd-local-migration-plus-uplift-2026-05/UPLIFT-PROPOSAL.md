@@ -3,7 +3,7 @@
 **Date:** 2026-05-16  
 **Target:** mainline GSD-1, upstream clone `/home/rookslog/workspace/projects/get-shit-done-upstream`, tag `v1.42.2`  
 **Installed local version checked:** `/home/rookslog/.claude/get-shit-done/VERSION` = `1.42.2`  
-**Proposal count:** 11 changes proposed across 10 audited surface families
+**Proposal count:** 13 changes proposed across 10 audited surface families plus source-layer propagation supports
 
 Citation note: upstream citations are relative to `/home/rookslog/workspace/projects/get-shit-done-upstream` unless a path starts with `.planning/` or `CLAUDE.md`, which refers to this repo. External product citations use their source URL.
 
@@ -11,7 +11,9 @@ Citation note: upstream citations are relative to `/home/rookslog/workspace/proj
 
 This proposal keeps the GSD-1 uplift narrow: make local phase planning aware of the F1 Modeling Lab doctrine files that already govern this repo, without converting mainline GSD into GSDR, without adding enforcement hooks, and without changing current upstream behavior for projects that do not opt in or do not have these files. The gap is not that GSD lacks planning structure. Upstream already carries CONTEXT, RESEARCH, PLAN, plan-check, execution, summary, and verification contracts. The gap is that those contracts stop at generic project context and per-phase decisions, while this repo now has load-bearing doctrine in `.planning/VISION.md`, `.planning/LONG-ARC.md`, `.planning/TECH-DEBT.md`, and `CLAUDE.md`.
 
-The proposed path adds an optional "project doctrine" lane that flows through existing GSD-1 surfaces. SDK init would discover the optional doctrine files. Discuss/context generation would capture protected seams, explicit non-decisions, current posture, and future shape notes. Research would treat doctrine constraints with the same seriousness it already gives `CLAUDE.md` and locked CONTEXT decisions. Pattern mapping would distinguish real code analogs from doctrine-carrying seams. Planning would emit explicit `future_preservation`, `tech_debt_disposition`, and `doctrine_alignment` records in PLAN frontmatter. Plan-check and verification would then validate that these obligations were translated and either delivered, intentionally deferred, or surfaced as gaps.
+The proposed path adds an optional "project doctrine" lane that flows through existing GSD-1 surfaces. CJS runtime init and SDK init would discover the optional doctrine files. Discuss/context generation would capture protected seams, explicit non-decisions, current posture, and future shape notes. Research would treat doctrine constraints with the same seriousness it already gives `CLAUDE.md` and locked CONTEXT decisions. Pattern mapping would distinguish real code analogs from doctrine-carrying seams. Planning would emit explicit `future_preservation`, `tech_debt_disposition`, and `doctrine_alignment` records in PLAN frontmatter. Plan-check and verification would then validate that these obligations were translated and either delivered, intentionally deferred, or surfaced as gaps.
+
+Revision D narrows the propagation model: installed workflows invoke the CJS runtime under `get-shit-done/bin/`, while the SDK TypeScript/dist path is a packaged CLI surface. UPLIFT-01 therefore patches both CJS init and SDK init, and the proposal adds two source-backed support UPLIFTs for config schema parity and canonical doctrine artifact recognition.
 
 The proposal also adds an optional Claude Design lane for UI-heavy phases. Claude Design can be useful for chat-to-canvas exploration, alternative layouts, inline design comments, exports, and Claude Code handoff, but in this workflow it should remain a design-prototype input. Accepted outputs become durable design briefs or canonical references in `.planning/`; they do not bypass discuss-phase, plan-phase, accessibility/performance planning, or verification.
 
@@ -42,6 +44,11 @@ The uplift is upstream-compatible if implemented as optional file-presence/confi
 | Searched upstream for local doctrine terms | No upstream source support found for `Vision Impact`, `Vision Alignment`, `LONG-ARC`, `VISION`, `Future Awareness`, `Honesty Surface`, `Accessibility and Thin-Client`, `Performance Budget`, `Migration Discipline`, `Phase-4`, `preserved_seam`, `future_preservation`, `tech_debt_disposition`, or `doctrine_alignment`, other than unrelated "Phase-4-Persistence" text and "REVISION" fixtures. | Search output, 2026-05-16 |
 | Compared local doctrine to upstream contract | Upstream has generic context/planning/verification lanes, but not the F1 doctrine fields. | See matrices and per-change records below |
 | Reviewed Claude Design fit | Claude Design is a research-preview Anthropic Labs tool for conversational design/prototype creation with canvas iteration, screenshots/codebase context, chat/comments, exports, sharing, and Claude Code handoff. The local briefing adds more operational guidance: design system setup is prerequisite work, dense prompts beat vague prompts, variations should precede refinement, Tweaks/comments/chat have different cost profiles, and Codex handoff is lower fidelity than Claude Code handoff. | `.planning/initiatives/gsd-local-migration-plus-uplift-2026-05/CLAUDE-DESIGN-GUIDE.md`; https://support.claude.com/en/articles/14604416-get-started-with-claude-design |
+| Reviewed build/install/update propagation | The npm package ships `sdk/src` and `sdk/dist`, builds SDK before publish/test, installs the runtime `get-shit-done/` payload, and explicitly does not install `sdk/` under the runtime config directory. | `package.json:10-24`, `package.json:60-75`, `sdk/package.json:36-45`, `bin/install.js:8359-8366`, `bin/install.js:10040-10227` |
+| Verified installed runtime command path | Installed user-scope GSD has `get-shit-done/bin/lib` but no `sdk/`; `gsd-sdk` resolves to npm cache, not the runtime directory. Runtime init commands route through CJS `get-shit-done/bin/gsd-tools.cjs` and `get-shit-done/bin/lib/init.cjs`. | Local filesystem checks, 2026-05-16; `get-shit-done/bin/gsd-tools.cjs:172-186`, `get-shit-done/bin/gsd-tools.cjs:829-837` |
+| Reviewed config schema propagation | Config keys are accepted only when registered in CJS schema, mirrored into SDK schema, and documented; missing keys make `config-set` reject documented behavior or fail parity tests. | `get-shit-done/bin/lib/config-schema.cjs:3-13`, `sdk/src/query/config-schema.ts:1-15`, `tests/config-schema-sdk-parity.test.cjs:58-74`, `tests/config-schema-docs-parity.test.cjs:29-44` |
+| Reviewed canonical artifact propagation | `gsd-health` uses the canonical artifact registry to flag unrecognized `.planning/` root files; proposed doctrine files are not currently canonical exact matches. | `get-shit-done/bin/lib/artifacts.cjs:1-9`, `get-shit-done/bin/lib/artifacts.cjs:13-26`, `get-shit-done/workflows/health.md:164-182` |
+| Reviewed patch reapply verifier | `verify-reapply-patches.cjs` verifies backed-up modified installed files from `gsd-local-patches/`; it is not an API for registering source patches or overlay adapters. | `get-shit-done/bin/verify-reapply-patches.cjs:10-24`, `get-shit-done/bin/verify-reapply-patches.cjs:192-247`, `get-shit-done/workflows/reapply-patches.md:121-173` |
 
 ## Doctrine coverage matrix
 
@@ -70,24 +77,24 @@ The uplift is upstream-compatible if implemented as optional file-presence/confi
 | 4. References | Agent contracts define handoffs `get-shit-done/references/agent-contracts.md:44-64`; artifact types define consumed-by relationships `get-shit-done/references/artifact-types.md:1-39`. | Touch references to define the optional doctrine contract and consumers. |
 | 5. Commands | Command stubs route to workflows and expose flags; plan-phase flag list is already dense `commands/gsd/plan-phase.md:1-16`, `commands/gsd/plan-phase.md:41-56`; discuss/execute/verify stubs resolve context inside workflows `commands/gsd/discuss-phase.md:41-45`, `commands/gsd/execute-phase.md:43-59`, `commands/gsd/verify-work.md:28-34`. | Avoid adding a new slash command. Optionally add one argument hint/config note only if implementation chooses explicit opt-in. |
 | 6. Contexts | Context profiles guide output style, not planning doctrine `get-shit-done/contexts/dev.md:1-21`, `get-shit-done/contexts/research.md:1-22`. | No runtime change. Keep doctrine in planning artifacts, not generic output profiles. |
-| 7. SDK | Phase init returns context/research paths but not doctrine paths `sdk/src/query/init.ts:500-539`, `sdk/src/types.ts:870-882`; execute init has the same artifact path pattern `sdk/src/query/init.ts:820-850`. | Touch SDK init/types and tests to expose optional `vision_path`, `long_arc_path`, and `tech_debt_path`. |
+| 7. SDK and CJS runtime utilities | Phase init returns context/research paths but not doctrine paths in both SDK and CJS runtime surfaces `sdk/src/query/init.ts:500-539`, `sdk/src/types.ts:870-882`, `get-shit-done/bin/lib/init.cjs:288-350`; execute/phase-op init has the same artifact path pattern `sdk/src/query/init.ts:820-850`, `get-shit-done/bin/lib/init.cjs:790-845`. Installed workflow commands route through CJS `gsd-tools.cjs`, while `sdk/dist` is the packaged SDK CLI path `get-shit-done/bin/gsd-tools.cjs:172-186`, `get-shit-done/bin/gsd-tools.cjs:829-837`, `bin/install.js:8359-8366`. | Touch CJS init, SDK init/types, generated `sdk/dist`, and tests to expose optional `vision_path`, `long_arc_path`, and `tech_debt_path`. Add CJS/SDK parity-oriented assertions so the installed runtime and SDK do not drift. |
 | 8. Hooks | Hooks are runtime guardrails such as context monitor warnings `hooks/gsd-context-monitor.js:3-18`. | No doctrine enforcement hook. Codex has no hook support in this repo runtime, and doctrine should flow through planning/verification artifacts. |
-| 9. Tests | Upstream has template tests `tests/template.test.cjs:6-11`, size-budget tests for agents/workflows `tests/agent-size-budget.test.cjs:6-20`, `tests/workflow-size-budget.test.cjs:5-21`, and context coverage tests `tests/bug-2492-context-coverage-gate.test.cjs` listed in the test surface. | Add targeted tests for doctrine paths, template sections, planner/plan-checker/verifier prompt coverage, design-brief ingestion, and budget compliance. |
-| 10. Docs | Upstream docs include command/config/user-guide surfaces; artifact and agent references are source-like docs. | Touch configuration/user guide/references only enough to document optional doctrine files, optional Claude Design/design-prototype input, the local Claude Design briefing, and the no-hook/no-command stance. |
+| 9. Tests | Upstream has template tests `tests/template.test.cjs:6-11`, size-budget tests for agents/workflows `tests/agent-size-budget.test.cjs:6-20`, `tests/workflow-size-budget.test.cjs:5-21`, context coverage tests `tests/bug-2492-context-coverage-gate.test.cjs`, CJS init path tests `tests/init.test.cjs:70-89`, config schema parity tests `tests/config-schema-sdk-parity.test.cjs:58-74`, and docs parity tests `tests/config-schema-docs-parity.test.cjs:29-44`. | Add targeted tests for doctrine paths across CJS and SDK, template sections, planner/plan-checker/verifier prompt coverage, design-brief ingestion, config docs/schema parity, canonical artifact recognition, and budget compliance. |
+| 10. Docs | Upstream docs include command/config/user-guide surfaces; artifact and agent references are source-like docs. Config docs must stay in lockstep with schema `tests/config-schema-docs-parity.test.cjs:7-14`. | Touch configuration/user guide/references only enough to document optional doctrine files, optional config keys, optional Claude Design/design-prototype input, the local Claude Design briefing, the canonical artifact role, and the no-hook/no-command stance. |
 
 ## Per-change records UPLIFT-01..N
 
-### UPLIFT-01 - Add optional doctrine artifact discovery to SDK init
+### UPLIFT-01 - Add optional doctrine artifact discovery to CJS and SDK init
 
-- **Surface:** SDK, workflows, tests.
-- **Current behavior with source citations:** `init.phase-op` and related init handlers expose phase paths such as `context_path`, `research_path`, `verification_path`, and `reviews_path`, but no project-doctrine paths `sdk/src/query/init.ts:500-539`, `sdk/src/query/init.ts:820-850`; SDK types include `context_path` and `research_path` but no doctrine path fields `sdk/src/types.ts:870-882`.
+- **Surface:** CJS runtime init, SDK init/types/dist, workflows, tests.
+- **Current behavior with source citations:** `init.phase-op` and related init handlers expose phase paths such as `context_path`, `research_path`, `verification_path`, and `reviews_path`, but no project-doctrine paths in SDK `sdk/src/query/init.ts:500-539`, `sdk/src/query/init.ts:820-850` or installed CJS runtime `get-shit-done/bin/lib/init.cjs:288-350`, `get-shit-done/bin/lib/init.cjs:790-845`; SDK types include `context_path` and `research_path` but no doctrine path fields `sdk/src/types.ts:870-882`. Installed workflow commands route through CJS `gsd-tools.cjs`, not through a runtime-local SDK directory `get-shit-done/bin/gsd-tools.cjs:172-186`, `get-shit-done/bin/gsd-tools.cjs:829-837`, `bin/install.js:8359-8366`.
 - **Proposed behavior:** Add optional `vision_path`, `long_arc_path`, and `tech_debt_path` to relevant init results when `.planning/VISION.md`, `.planning/LONG-ARC.md`, and `.planning/TECH-DEBT.md` exist. Add `doctrine_expected: true` when any of these files exist or `workflow.project_doctrine` is enabled.
 - **Doctrine requirement implemented with `CLAUDE.md` cite:** Enables the planning sections required by `CLAUDE.md:82-91` to receive their source artifacts instead of relying on a human to remember them.
-- **Patch sketch:** Update `sdk/src/query/init.ts` result assembly; update `sdk/src/types.ts`; add fixtures in `sdk/src/query/init.test.ts` and phase-runner type tests; in `plan-phase`, display a reduced-guarantee warning when doctrine is expected but absent.
-- **Contract dependencies:** Feeds UPLIFT-02 through UPLIFT-08.
+- **Patch sketch:** Update `get-shit-done/bin/lib/init.cjs` result assembly for installed workflow use; update `sdk/src/query/init.ts`, `sdk/src/types.ts`, and generated `sdk/dist` via `npm run build:sdk`; add fixtures in `tests/init.test.cjs`, `sdk/src/query/init.test.ts`, and phase-runner type tests; in `plan-phase`, display a reduced-guarantee warning when doctrine is expected but absent.
+- **Contract dependencies:** Depends on UPLIFT-12 for config activation semantics and UPLIFT-13 for canonical doctrine artifact status. Feeds UPLIFT-02 through UPLIFT-08.
 - **Upstream-compatible?** Configurable. Existing projects see null/absent fields unless files or config exist.
 - **Risk:** Low technical risk; medium prompt-budget risk if workflows inline too much doctrine.
-- **Testability:** Unit tests for init JSON with zero, one, and all doctrine files; snapshot/shape tests for type exports.
+- **Testability:** Unit tests for CJS init JSON and SDK init JSON with zero, one, and all doctrine files; snapshot/shape tests for type exports; build check that `sdk/dist` reflects the TypeScript changes.
 - **Rollback strategy:** Remove new fields and workflow references; existing context/research path behavior remains unchanged.
 
 ### UPLIFT-02 - Extend CONTEXT generation with Future-Aware Planning blocks
@@ -156,7 +163,7 @@ The uplift is upstream-compatible if implemented as optional file-presence/confi
   - Honesty Surface/Accessibility/Performance/Migration entries are either present or explicitly not applicable.
   - the Vision Alignment Checkpoint is present in CONTEXT and answered (one-line question + justification if milestone-only) whenever doctrine is expected.
 - **Doctrine requirement implemented with `CLAUDE.md` cite:** Converts `CLAUDE.md:82-91` from prose expectations into a pre-execution translation gate.
-- **Patch sketch:** Extend checker prompt and plan-phase checker prompt with doctrine paths; add SDK helper only if parsing frontmatter by shell becomes brittle; add `workflow.project_doctrine_gate` config defaulting to true only when doctrine files exist.
+- **Patch sketch:** Extend checker prompt and plan-phase checker prompt with doctrine paths; add SDK helper only if parsing frontmatter by shell becomes brittle; consume `workflow.project_doctrine_gate` from the schema/defaults added in UPLIFT-12, defaulting to active only when doctrine files exist or the user explicitly enables project doctrine.
 - **Contract dependencies:** Depends on UPLIFT-02 and UPLIFT-05; feeds UPLIFT-07 and UPLIFT-08.
 - **Upstream-compatible?** Configurable.
 - **Risk:** Medium-high if made blocking too broadly. Mitigate with file-presence/config activation and explicit no-context reduced-guarantee path.
@@ -236,9 +243,71 @@ The uplift is upstream-compatible if implemented as optional file-presence/confi
 - **Testability:** Template tests for DESIGN-SYSTEM, DESIGN-BRIEF, and DESIGN-HANDOFF; workflow test that a design brief appears in canonical refs; planner prompt test that handoff code is reference-only; negative test that raw design exports do not become executable PLAN authority; pilot checklist that validates the Codex handoff adaptation described in the local briefing.
 - **Rollback strategy:** Remove the optional design artifacts and docs. Existing phase CONTEXT/PLAN behavior remains unchanged. Keep the local research briefing as reference-only even if the workflow lane is removed.
 
+### UPLIFT-12 - Register project doctrine config keys across CJS, SDK, and docs parity
+
+- **Surface:** CJS config schema/defaults, SDK config schema/defaults, docs, tests.
+- **Current behavior with source citations:** `config-set` accepts only keys listed in the CJS schema, and adding a docs-only key makes runtime config reject it `get-shit-done/bin/lib/config-schema.cjs:3-13`, `get-shit-done/bin/lib/config-schema.cjs:15-84`. SDK has a mirrored config schema that must stay set-equal with CJS `sdk/src/query/config-schema.ts:1-15`, `tests/config-schema-sdk-parity.test.cjs:58-74`. Defaults exist separately in CJS and SDK config loaders `get-shit-done/bin/lib/core.cjs:284-312`, `sdk/src/config.ts:89-123`. Docs parity requires every exact CJS key to appear in `docs/CONFIGURATION.md` `tests/config-schema-docs-parity.test.cjs:29-44`.
+- **Proposed behavior:** Add `workflow.project_doctrine` and `workflow.project_doctrine_gate` as documented config keys in both CJS and SDK schemas. Use explicit `auto`/`true`/`false` semantics: `auto` activates discovery/section generation from file presence, `true` expects doctrine and warns when absent, and `false` disables the optional lane. Gate behavior should default to `auto`, with blocking only when doctrine files exist or the user explicitly opts in.
+- **Doctrine requirement implemented with `CLAUDE.md` cite:** Makes the optional planning doctrine lane configurable without relying on hidden local behavior, preserving the explicit planning expectations in `CLAUDE.md:82-91`.
+- **Patch sketch:** Update `get-shit-done/bin/lib/config-schema.cjs`, `sdk/src/query/config-schema.ts`, `get-shit-done/bin/lib/core.cjs`, `sdk/src/config.ts`, `docs/CONFIGURATION.md`, and any config-set help text. Add value validation if the existing config mutation path supports enum validation for workflow settings; otherwise document accepted values and add direct tests around load/interpretation.
+- **Contract dependencies:** Supports UPLIFT-01, UPLIFT-02, UPLIFT-06, UPLIFT-09, and UPLIFT-10. Must land before any workflow consumes `workflow.project_doctrine` or `workflow.project_doctrine_gate`.
+- **Upstream-compatible?** Yes. Defaults preserve no-op behavior for projects without doctrine files.
+- **Risk:** Low technical risk, medium semantics risk if `auto` is ambiguous. Mitigate with docs examples for absent files, file-present auto activation, explicit opt-in, and explicit opt-out.
+- **Testability:** Config schema parity, docs parity, config-set accept/reject tests, and config load tests for omitted, `auto`, `true`, and `false`.
+- **Rollback strategy:** Remove the two keys and make doctrine activation file-presence-only. Existing projects that never set the keys remain unaffected.
+
+### UPLIFT-13 - Register optional doctrine root artifacts as canonical planning files
+
+- **Surface:** Artifact registry, health workflow, docs, tests.
+- **Current behavior with source citations:** The canonical artifact registry is the source `gsd-health` uses for W019 unrecognized `.planning/` root-file warnings `get-shit-done/bin/lib/artifacts.cjs:1-9`. Its exact root list includes standard files such as PROJECT, ROADMAP, STATE, REQUIREMENTS, config, and CLAUDE, but not VISION, LONG-ARC, or TECH-DEBT `get-shit-done/bin/lib/artifacts.cjs:13-26`. Health documents W019 as "Unrecognized .planning/ root file - not a canonical GSD artifact" `get-shit-done/workflows/health.md:164-182`.
+- **Proposed behavior:** Register `VISION.md`, `LONG-ARC.md`, and `TECH-DEBT.md` as optional canonical doctrine artifacts when the project doctrine lane is present. Document that these files are broad planning doctrine consumed through CONTEXT/PLAN/verification, not automatic phase scope. Preserve W019 for unknown root files outside the canonical list.
+- **Doctrine requirement implemented with `CLAUDE.md` cite:** Prevents doctrine files needed for `CLAUDE.md:82-91` from being flagged as stale/misnamed noise by the health surface that agents use to judge planning directory integrity.
+- **Patch sketch:** Update `get-shit-done/bin/lib/artifacts.cjs`, health docs, artifact-type references, and tests covering canonical exact matches plus negative unknown-file behavior. If upstream prefers a single generic name, introduce `PROJECT-DOCTRINE.md` as an alternative canonical pattern while preserving F1-local files as config-documented conventions.
+- **Contract dependencies:** Supports UPLIFT-01, UPLIFT-02, UPLIFT-09, and UPLIFT-10. Should land before optional scaffolding or health checks advertise doctrine files.
+- **Upstream-compatible?** Yes. It only changes root-file recognition for named optional doctrine artifacts and keeps health warnings for unknown files.
+- **Risk:** Low. The main risk is canonicalizing too many local artifact names. Mitigate by limiting the exact list to files that have named consumers in this proposal.
+- **Testability:** Artifact registry unit tests; health fixture with VISION/LONG-ARC/TECH-DEBT accepted; health fixture with an unrelated root file still reports W019.
+- **Rollback strategy:** Remove the optional artifact names from the registry and docs. The doctrine lane can still operate by explicit config, but health may warn on local root files again.
+
+## Catalog — observed but not proposed as UPLIFT
+
+### CATALOG-01 — Reapply verifier is not a patch-registration API
+
+- **Surface:** `get-shit-done/bin/verify-reapply-patches.cjs:10-24`, `get-shit-done/bin/verify-reapply-patches.cjs:192-247`
+- **Observation:** `verify-reapply-patches.cjs` deterministically verifies backed-up installed-file patches from `gsd-local-patches/`; it does not register external source patches or overlay adapters.
+- **Why it's not an UPLIFT:** Fails Bar 1 for this proposal because D-5 recommends source-first propagation and uses the existing installer/reapply path only for emergency in-place runtime patches. No verifier API change is required.
+- **Severity:** Medium
+- **Effort to address if revisited:** Days
+- **Trigger to revisit:** A future implementation requires durable installed-file overlays rather than source patches plus local install validation.
+
+### CATALOG-02 — SDK dist ships in npm package but not runtime config installs
+
+- **Surface:** `package.json:10-24`, `bin/install.js:8359-8366`, local filesystem check 2026-05-16
+- **Observation:** The npm package ships `sdk/dist`, but runtime installs copy `get-shit-done/` and not `sdk/`; the installed user-scope runtime likewise has no `sdk/` directory.
+- **Why it's not an UPLIFT:** The finding is already absorbed into UPLIFT-01 by changing its surface from SDK-only to CJS-plus-SDK. A separate UPLIFT would duplicate the same propagation correction.
+- **Severity:** High
+- **Effort to address if revisited:** Hours
+- **Trigger to revisit:** A later execution plan tries to validate runtime behavior by editing only `sdk/src` or `sdk/dist`.
+
+### CATALOG-03 — Structural drift detection does not cover doctrine-artifact drift
+
+- **Surface:** `get-shit-done/bin/lib/drift.cjs:1-14`, `get-shit-done/bin/lib/drift.cjs:36-45`
+- **Observation:** Drift detection currently detects structural codebase drift categories, not doctrine-artifact drift across CONTEXT, PLAN, SUMMARY, and VERIFICATION.
+- **Why it's not an UPLIFT:** Fails Bar 3 for this round because it is useful future work but not load-bearing for UPLIFT-01..13 to land. Health canonicalization and plan-check/verification coverage address the immediate risk.
+- **Severity:** Low
+- **Effort to address if revisited:** Days
+- **Trigger to revisit:** Doctrine fields begin drifting across artifacts despite UPLIFT-06 and UPLIFT-08 checks.
+
 ## Contract dependency graph
 
 ```text
+UPLIFT-10 reference/docs/test contract skeleton
+        |
+        +--> UPLIFT-12 config schema/defaults register project-doctrine toggles
+        |
+        +--> UPLIFT-13 artifact registry accepts optional doctrine root files
+                    |
+                    v
 Optional doctrine inputs
   .planning/VISION.md
   .planning/LONG-ARC.md
@@ -246,7 +315,7 @@ Optional doctrine inputs
   CLAUDE.md
         |
         v
-UPLIFT-01 SDK init discovers doctrine paths
+UPLIFT-01 CJS + SDK init discover doctrine paths
         |
         v
 UPLIFT-02 discuss/context captures phase-relevant doctrine
@@ -280,21 +349,25 @@ UPLIFT-11 reviewed design brief feeds CONTEXT canonical refs, PLAN UI/spec conte
 ## Implementation order
 
 1. Add UPLIFT-10 reference skeleton first, because prompt growth must cite shared doctrine contract instead of duplicating prose.
-2. Add UPLIFT-01 SDK path discovery and type/tests.
-3. Add UPLIFT-02 CONTEXT template/discuss changes.
-4. Add UPLIFT-11 design-brief intake, because it is easiest to wire as canonical CONTEXT input before planner semantics harden.
-5. Add UPLIFT-03 researcher changes.
-6. Add UPLIFT-04 pattern-mapper changes.
-7. Add UPLIFT-05 planner/template changes.
-8. Add UPLIFT-06 plan-checker gate after PLAN schema exists.
-9. Add UPLIFT-07 SUMMARY closeout.
-10. Add UPLIFT-08 verification only after PLAN and SUMMARY semantics are stable.
-11. Add UPLIFT-09 optional new-project/add-phase docs last, because it is a project-bootstrap convenience, not required for this local migration.
+2. Add UPLIFT-12 config schema/default/docs parity before any workflow consumes `workflow.project_doctrine` or `workflow.project_doctrine_gate`.
+3. Add UPLIFT-13 canonical artifact recognition so health does not label doctrine files stale or misnamed.
+4. Add UPLIFT-01 CJS and SDK path discovery, type/build output, and tests.
+5. Add UPLIFT-02 CONTEXT template/discuss changes.
+6. Add UPLIFT-11 design-brief intake, because it is easiest to wire as canonical CONTEXT input before planner semantics harden.
+7. Add UPLIFT-03 researcher changes.
+8. Add UPLIFT-04 pattern-mapper changes.
+9. Add UPLIFT-05 planner/template changes.
+10. Add UPLIFT-06 plan-checker gate after PLAN schema exists.
+11. Add UPLIFT-07 SUMMARY closeout.
+12. Add UPLIFT-08 verification only after PLAN and SUMMARY semantics are stable.
+13. Add UPLIFT-09 optional new-project/add-phase docs last, because it is a project-bootstrap convenience, not required for this local migration.
 
 ## Test plan
 
 - Baseline already run against upstream tag `v1.42.2`: `npm install` succeeded and `npm test` passed 9211/9211 tests.
-- SDK tests: `sdk/src/query/init.test.ts`, phase-runner type tests, and config schema parity tests for optional doctrine paths.
+- CJS/SDK init tests: `tests/init.test.cjs`, `sdk/src/query/init.test.ts`, phase-runner type tests, and build output checks for optional doctrine paths.
+- Config tests: CJS schema, SDK schema parity, docs parity, config-set acceptance, and defaults/interpreter tests for `workflow.project_doctrine` and `workflow.project_doctrine_gate`.
+- Health/artifact tests: canonical artifact registry tests and health fixtures proving VISION/LONG-ARC/TECH-DEBT do not trigger W019 while unrelated root files still do.
 - Template tests: CONTEXT, PLAN, SUMMARY, and VERIFICATION template assertions for doctrine sections when enabled and absence when disabled.
 - Workflow tests: discuss-phase generated CONTEXT; plan-phase prompt assembly; decision/doctrine coverage gate behavior; execute-phase prompt preservation; verify-phase report section.
 - Agent prompt tests: planner, plan-checker, phase-researcher, pattern-mapper, executor, verifier include only reference links plus concise obligations.
@@ -308,6 +381,8 @@ UPLIFT-11 reviewed design brief feeds CONTEXT canonical refs, PLAN UI/spec conte
 **Upstream-compatible:**
 
 - Optional doctrine path discovery with absent-file no-op behavior.
+- Optional project-doctrine config keys/defaults with schema, SDK, and docs parity.
+- Canonical recognition of optional doctrine root artifacts consumed by the proposal.
 - Generic terms like project doctrine, protected seams, explicit non-decisions, future shape notes, and tech-debt disposition.
 - Template and verification fields that are optional unless doctrine is configured or present.
 - Optional design-system, design-brief, and design-handoff intake for external prototypes, including Claude Design, as reviewed phase input.
@@ -324,7 +399,42 @@ UPLIFT-11 reviewed design brief feeds CONTEXT canonical refs, PLAN UI/spec conte
 
 ## Rollback strategy overall
 
-Implement in separable commits by dependency layer. If the uplift causes prompt bloat or false positives, disable `workflow.project_doctrine_gate` first while leaving optional artifact discovery and docs intact. If SDK fields cause compatibility issues, remove only the optional doctrine fields and keep the docs as future reference. If planner/verifier behavior becomes too subjective, retain CONTEXT/PLAN schema but downgrade verification from blocking to warning until evidence-class tests are stronger. Hooks and generic context profiles stay outside the rollback path because they should not be changed for doctrine enforcement.
+Implement in separable commits by dependency layer. If the uplift causes prompt bloat or false positives, disable `workflow.project_doctrine_gate` first while leaving optional artifact discovery and docs intact. If config semantics cause user confusion, fall back from `auto`/`true`/`false` to file-presence-only discovery plus one explicit gate toggle. If CJS/SDK init fields cause compatibility issues, remove only the optional doctrine fields from both runtime paths and keep the docs as future reference. If planner/verifier behavior becomes too subjective, retain CONTEXT/PLAN schema but downgrade verification from blocking to warning until evidence-class tests are stronger. Hooks and generic context profiles stay outside the rollback path because they should not be changed for doctrine enforcement.
+
+## Revision D — SDK propagation path
+
+### Current state observed
+
+- Build and package: the parent package exports installer and SDK shims as bins and ships `sdk/src`, `sdk/dist`, and the runtime payload `get-shit-done/` in the npm package `package.json:5-24`. SDK build is TypeScript-to-`dist` with declarations/source maps `sdk/package.json:36-45`, `sdk/tsconfig.json:1-20`; parent `prepublishOnly` and `pretest` run `npm run build:sdk` `package.json:60-75`.
+- Install layout: installer materializes the runtime payload by copying `get-shit-done/`; it explicitly notes the install does not copy `sdk/` and instead copies only the model catalog into `get-shit-done/bin/shared` for CJS runtime resolution `bin/install.js:8359-8366`. The local user-scope install checked on 2026-05-16 matches that shape: it has `get-shit-done/bin/lib` and no `sdk/`.
+- Runtime command path: workflow init commands use `get-shit-done/bin/gsd-tools.cjs`, which imports CJS `./lib/init.cjs` and routes `init` commands to it `get-shit-done/bin/gsd-tools.cjs:172-186`, `get-shit-done/bin/gsd-tools.cjs:829-837`. SDK `init.ts` changes alone would not affect installed workflow init JSON.
+- Update/reapply behavior: update warns that managed GSD directories are wiped and replaced, backs up modified GSD files to `gsd-local-patches/`, and tells users to run `/gsd:update --reapply` when patches are found `get-shit-done/workflows/update.md:394-409`, `get-shit-done/workflows/update.md:613-625`. The installer saves modified manifest-managed files before wipe and populates `gsd-pristine/` when possible for three-way verification `bin/install.js:7468-7550`, `bin/install.js:7552-7658`, `bin/install.js:7834-7843`.
+- Reapply verifier: `verify-reapply-patches.cjs` takes `--patches-dir`, `--config-dir`, optional `--pristine-dir`, and verifies user-added lines from backed-up files; it exports helper functions but no registration/overlay API `get-shit-done/bin/verify-reapply-patches.cjs:10-24`, `get-shit-done/bin/verify-reapply-patches.cjs:87-100`, `get-shit-done/bin/verify-reapply-patches.cjs:192-247`.
+
+### Options evaluated
+
+| Option | Scope of work | Fragility | `gsd-update` survival | Upstream compatibility | Rollback shape |
+| --- | --- | --- | --- | --- | --- |
+| D-1 fork-then-build | Patch upstream source, build SDK, and install from the patched source or fork. | Medium if source patches include both CJS runtime and SDK; high if treated as SDK-only. | Survives only while the local install is refreshed from the fork/source build; ordinary upstream update overwrites it. | Good if patches are upstream-shaped and PR-ready. | Reinstall released upstream, or reset fork/source patches and reinstall. |
+| D-2 in-place CJS patch | Patch files directly under `~/.claude/get-shit-done/` or repo-local runtime. | High because installed files become the authority and can drift from source/tests. | Overwritten by update, but manifest-backed changes can be backed up and reapplied through `/gsd:update --reapply`. | Weak unless the same patch is also ported to source. | Restore from new install or remove the backed-up local patch before reapply. |
+| D-3 overlay adapter | Add a local wrapper/adapter around `gsd-tools` or SDK output. | Very high because it creates a second authority path around installed behavior. | Survives only if installed outside managed GSD directories; otherwise update can wipe it. | Weak; unlikely to be acceptable upstream without redesign. | Delete the overlay and return to shipped runtime behavior. |
+| D-4 upstream-PR-first | Only change canonical upstream and wait for release before local adoption. | Low once merged; high schedule risk before merge/release. | Strong after release because updates carry the behavior normally. | Strongest. | Revert upstream PR or pin/rollback package version. |
+| D-5 hybrid | Patch upstream source across CJS runtime, SDK TS, generated SDK dist, docs, and tests; install locally for validation; use reapply only for emergency in-place patches. | Medium; requires CJS/SDK synchronization discipline but keeps source as authority. | Local source installs survive local refreshes; ordinary `gsd-update` still overwrites emergency installed-file patches unless reapply is used. | Strong if the source patch remains PR-shaped and optional. | Reinstall released upstream, or remove source patch layers by dependency layer. |
+
+### Recommendation
+
+Use D-5 hybrid. The implementation source of truth should be the upstream checkout, not `~/.claude/get-shit-done/` and not an overlay adapter. Patch CJS runtime files under `get-shit-done/bin/lib/` for installed workflow behavior, patch SDK TypeScript/types for CLI/package parity, rebuild `sdk/dist`, and install from that source for local validation. Use in-place installed-file edits only as an emergency diagnostic path, and then rely on the existing manifest-backed `gsd-local-patches/` and `/gsd:update --reapply` flow to keep them visible rather than silently durable.
+
+### Implications for existing UPLIFTs
+
+- UPLIFT-01 is no longer SDK-only. Its surface and patch sketch now include `get-shit-done/bin/lib/init.cjs`, `sdk/src/query/init.ts`, `sdk/src/types.ts`, generated `sdk/dist`, CJS tests, and SDK tests.
+- UPLIFT-06 should not invent an ad hoc config knob inside the checker prompt. It consumes `workflow.project_doctrine_gate` from UPLIFT-12.
+- UPLIFT-09 optional scaffolding is misleading unless UPLIFT-13 prevents health from flagging the generated doctrine root files as unrecognized artifacts.
+- UPLIFT-10 must document both runtime paths: installed CJS workflow behavior and SDK/package behavior.
+
+### `verify-reapply-patches.cjs` integration answer
+
+Do not extend `verify-reapply-patches.cjs` for this proposal. It is already the correct safety net for direct installed-file modifications: installer detects manifest-managed modified files, backs them up to `gsd-local-patches/backup-meta.json`, creates `gsd-pristine/` when possible, and `/gsd:update --reapply` invokes deterministic verification. The proposal should instead keep durable changes in upstream source. If an emergency in-place CJS patch is used, it must touch a manifest-managed installed file so the existing update/reapply path can see it; otherwise it is just a local overlay and should be documented as temporary.
 
 ## Open questions
 
