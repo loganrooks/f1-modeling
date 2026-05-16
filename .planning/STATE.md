@@ -2,19 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 03.2
-current_phase_name: Backend Execution, Job Artifacts, and Regulation Execution Flow
-current_plan: 0
-status: ready_for_context
-stopped_at: Wave 3C routing digest uplift applied; next step is Phase 3.2 context and planning
-last_updated: "2026-04-16T18:56:49Z"
-last_activity: 2026-04-16
+status: planning
+stopped_at: Phase 3.2 context refreshed for strategic-audit absorption and GSD pivot; ready for plan-phase replan
+last_updated: "2026-05-16T02:27:48.727Z"
+last_activity: 2026-04-16 — Wave 3C applied the routing digest uplift; Phase 3.2 full-context planning remains next.
 progress:
   total_phases: 15
   completed_phases: 5
-  total_plans: 61
+  total_plans: 26
   completed_plans: 21
-  percent: 34
+  percent: 33
 ---
 
 # Project State
@@ -94,6 +91,6 @@ Repo-side consequences (intentional, not yet remediated):
 
 ## Session Continuity
 
-**Last session:** 2026-04-16T18:56:49Z
-**Stopped At:** Wave 3C routing digest uplift applied; next action is Phase 3.2 context and planning.
-**Resume File:** None yet — create Phase 3.2 context via `/gsd-discuss-phase 3.2` (mainline GSD-1 1.42.2 invocation; the prior `$gsdr-discuss-phase` syntax is no longer available locally).
+**Last session:** 2026-05-16T02:27:48.707Z
+**Stopped At:** Phase 3.2 context refreshed for strategic-audit absorption and GSD pivot; ready for plan-phase replan
+**Resume File:** .planning/phases/03.2-backend-execution-job-artifacts-and-regulation-execution-flow/03.2-CONTEXT.md
