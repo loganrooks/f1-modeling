@@ -262,3 +262,40 @@ When an educational platform's user asks "teach me to be X," the pedagogical str
 
 **Superseded by:** Not superseded
 **Reason:** N/A.
+
+---
+
+## Amendment 2026-05-15: Implicit primary + explicit optional puzzle layer
+
+**Not a supersession.** The original implicit-pedagogy choice still holds for the **primary** mode of the platform. This amendment adds a layered optional explicit mode without changing that choice.
+
+### What changed
+
+The original deliberation framed implicit vs. explicit pedagogy as a binary trade-off (line 209: *"Implicit pedagogy (teaching by structure) is harder to design than explicit pedagogy (lessons and quizzes) but better matches the user's self-directed learning style and engineering background."*) and chose implicit.
+
+The 2026-05-15 vision expansion (`.planning/VISION.md` § Skill Practice & Puzzle Mode) reframes this as **implicit primary + explicit optional**:
+
+- **Implicit primary** — the simulator and its visualizations remain the main teaching surface. A learner who never opens puzzle mode still learns by structure. The original deliberation's Recommendation §§1-7 are unchanged.
+- **Explicit optional layer** — for learners who want drill, and for educators who want a checkpoint before a lesson advances, a chess.com-style puzzle/practice mode adds structured-practice that consumes the same artifacts the implicit pedagogy already produces.
+
+### Why this isn't a contradiction
+
+The original deliberation's argument for implicit pedagogy rested on the user's self-directed learning style and engineering background. That argument is intact: implicit pedagogy remains the right primary mode. The argument *against* explicit pedagogy was its higher design cost and weaker fit for the user — not a categorical rejection. Adding an explicit layer that:
+
+1. Consumes the same artifacts (no parallel data path),
+2. Sits beside, not in place of, the structural learning surface,
+3. Targets pattern-recognition skill (where drill *does* help even for engineers — chess players are engineers too),
+
+does not contradict the implicit-primary choice. It complements it.
+
+### Architectural consequence
+
+Puzzle mode is not a Phase-4+ surface-only feature. It has real implications for the 3.2 → 3.3 → 3.4 corridor (artifact-envelope masking slots, scoring artifact roles, lesson-schema puzzle-body variant, visualization-substrate hide-and-reveal interaction). The corridor must **preserve these seams** without delivering puzzle mode itself. See:
+
+- `.planning/LONG-ARC.md` § Protected Seams (added 2026-05-15)
+- `.planning/initiatives/seeds/puzzle-mode-pedagogy.md` (seed; not an active initiative)
+
+### Revisit triggers
+
+Puzzle-mode delivery becomes an active initiative when one of the revisit triggers in the seed file fires. Until then: design for it, don't build it.
+

@@ -3,7 +3,7 @@ document: LONG-ARC
 status: canonical
 type: strategy-doctrine
 scope: Durable long-arc product, architecture, modeling, compute, and governance doctrine that current planning must preserve without widening active phase scope.
-last_updated: 2026-04-16
+last_updated: 2026-05-15
 related_documents:
   - .planning/VISION.md
   - .planning/PROJECT.md
@@ -12,6 +12,8 @@ related_documents:
   - .planning/TECH-DEBT.md
   - .planning/initiatives/vision-alignment-2026-04/deliberations/01-decision-anchor.md
   - .planning/initiatives/vision-alignment-2026-04/deliberations/05-decision-anchor.md
+  - .planning/initiatives/seeds/puzzle-mode-pedagogy.md
+  - .planning/deliberations/educational-pedagogy-and-learning-paths.md
 ---
 
 # Long-Arc Planning Doctrine
@@ -30,6 +32,7 @@ This file ratifies the durable planning doctrine that sits between `.planning/VI
 - Preserve regulation-family-aware execution and semantics; do not let 2026-specific assumptions harden into the long-lived runtime path.
 - Preserve typed artifacts with lineage, provenance, fidelity, validation, and comparability state as first-class product surfaces.
 - Preserve the educational coupling between artifacts, anchors, lessons, and visual surfaces; education is not a disconnected presentation layer.
+- Preserve artifact-envelope, lesson-schema, and visualization-substrate **slots for puzzle / skill-practice mode** — selective artifact masking, scoring / judgment / reconstruction artifact roles, difficulty metadata, and an explicit-pedagogy lesson-body variant — so the 3.2 → 3.3 → 3.4 corridor design does not force a retrofit when puzzle-mode delivery later begins. Puzzle mode is an optional explicit layer on top of the primary implicit pedagogy; both must coexist (see `.planning/VISION.md` § Skill Practice & Puzzle Mode and `.planning/initiatives/seeds/puzzle-mode-pedagogy.md`).
 - Preserve the explicit layered stack of plant and sensor model -> observer -> model-based control -> later RL.
 - Preserve honesty labeling, thin-client responsiveness, and accessibility as architectural obligations, not optional polish.
 
@@ -54,6 +57,7 @@ This file ratifies the durable planning doctrine that sits between `.planning/VI
 - Observer-aware replay remains a preserved future shape.
 - MPC-ready control seams remain a preserved future shape.
 - Later RL work remains a preserved future shape after the simulator and control baselines are credible.
+- Puzzle / skill-practice mode (chess.com-shaped, single-player, built on existing artifacts) remains a preserved future shape; the 3.2/3.3/3.4 corridor protects its required slots without delivering them. Revisit triggers are recorded in `.planning/initiatives/seeds/puzzle-mode-pedagogy.md`.
 
 These are future directions that current planning must preserve. They are not immediate scope imports.
 

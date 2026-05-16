@@ -32,6 +32,38 @@ The platform should serve someone who wants to *understand* F1 engineering at th
 
 These aren't separate products — they're the same platform with educational scaffolding that can be toggled.
 
+## Skill Practice & Puzzle Mode
+
+Added 2026-05-15. The platform should support a **chess.com-style structured-practice layer** on top of (not instead of) the implicit pedagogy of "teaching by structure." Lessons and tutorials remain primary; puzzles are an **optional explicit layer** that uses the same simulation artifacts to test recognition, recall, judgment, and pattern fluency under controlled conditions.
+
+### Why this belongs in the vision
+
+- The simulator already generates the ground truth that good F1 puzzles need: deterministic stints under known parameters, real telemetry once Phase 6 ingest lands, race scenarios with known optimal answers.
+- F1 engineering, like chess, has a large body of **pattern-recognition skill** that benefits from drill more than from passive exposure: reading a degradation curve, recognizing a deployment strategy, identifying a circuit from telemetry, spotting a missed apex from a speed trace.
+- Skill practice is one of the strongest learning surfaces a serious platform can offer — and one that distinguishes a "lab" from a "calculator." It is also one of the strongest competitive moats against generic F1 strategy tools that stop at pace prediction.
+- Both/and, not either/or: the 2026-04-08 educational-pedagogy deliberation chose implicit > explicit pedagogy. That choice still holds for the **primary** mode — structure-driven learning through inspectable simulation. Puzzle/practice mode is an **optional** explicit layer that depends on, not replaces, the structural pedagogy. See `.planning/deliberations/educational-pedagogy-and-learning-paths.md` § Amendment 2026-05-15.
+
+### Mechanic families (illustrative, not exhaustive)
+
+- **Recognition** — "which circuit is this telemetry from?" / "which compound started this stint?" / "which weather state matches this grip evolution?"
+- **Judgment** — "given this race state, when should the next pit stop happen?" / "this deployment policy or that one — which wins?" / "which setup change caused this lap-time delta?"
+- **Spot-the-difference** — "where in this stint could the driver have saved time?" / "this stint and that stint differ by one parameter — which one?"
+- **Reconstruction** — "you see the lap-time outcome; rebuild the deployment policy that produced it" (small inverse problem against the simulator).
+- **Match-the-strategy** — "this race ended with these gaps to leader; match the strategy to the team" (post-race forensics shape).
+
+### Difficulty progression
+
+- **Beginner:** small candidate set (3-4 options), high-contrast distinguishing features, fully labeled context.
+- **Intermediate:** larger candidate set, partially masked context, time pressure optional.
+- **Advanced:** near-twin candidates (same era, similar circuits), heavily masked context, no labels, scoring includes confidence calibration.
+- **Daily / ranked:** spaced-repetition rotation; per-mechanic skill rating; optional persistent ranking once the simulator and calibration baseline are credible enough that the ground truth deserves a leaderboard.
+
+### Scope boundaries
+
+- **Single-player.** No synchronous multiplayer. Async ranked / shared-position-of-the-day is acceptable but not in early scope.
+- **Built on existing artifacts.** Puzzles consume the same `ArtifactEnvelope` shapes that lessons and analysis views consume; they are not a parallel data path. The simulator generates puzzle scenarios deterministically from regulation/scenario parameters.
+- **Educational primary.** Puzzles are a teaching tool first, a game second. Scoring exists to drive spaced repetition and skill progression, not to displace the simulation/lesson surface.
+
 ## Visualization Vision
 
 Visualization is **the product surface**, not decoration. The visualization layer must:
@@ -86,6 +118,8 @@ These are not immediate blockers but should be revisited as the platform matures
 | How should multi-regulation presets be versioned and organized? | Current preset system works for 2026; multi-era needs thought |
 | What's the right abstraction boundary for compute backend flexibility? | Determines where the "simulation API" cleanly separates from the "UI client" |
 | Should the platform eventually support collaborative/multi-user scenarios? | Currently scoped as single-user, but the vision hints at broader use |
+| When does puzzle/practice mode justify dedicated implementation work vs. remaining a deferred future? | The 3.2/3.3/3.4 corridor should preserve seams (artifact masking, scoring artifact role, difficulty metadata) but full puzzle delivery likely waits until after Phase 4 lessons land and Phase 6 telemetry import gives a credible ground-truth source. The seed file at `.planning/initiatives/seeds/puzzle-mode-pedagogy.md` tracks the revisit triggers. |
+| Should puzzle skill ratings be persistent across sessions, and if so, where do they live? | Persistence implies a per-user store the platform doesn't currently have. Could initially be local-disk only; a multi-user back end would only matter once the platform itself goes multi-user. |
 
 ---
 *This document captures the broader vision beyond the current v1 milestone. It should inform roadmap decisions, architectural choices, and audit evaluations.*
